@@ -1,4 +1,39 @@
+# Project Lebanon
+
+## Intro
+
+Welcome to Project Lebanon (official name tbd). This README will serve as a high level guide for how to contribute to the project.
+
+- [Project Description](#project-description)
+- [Project Team](#project-team)
+- [Live Site URLs](#live-site-urls)
+- [Cloud Architecture](#cloud-architecture)
+- [Directory Structure](#directory-structure)
+- [Available Scripts](#available-scripts)
+- [Git Commit Convention](#git-commit-convention)
+- [Key Links](#key-links)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Description
+
+tbd
+
+## Project Team
+
+tbd
+
+## Live site URLs
+
+tbd
+
+## Cloud Architecture
+
+tbd
+
+## Directory Structure
+
+tbd
 
 ## Available Scripts
 
@@ -37,32 +72,51 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Git Commit Convention
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The following is the recommended and preferred format for git commit messages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Commit Message Format
 
-### Code Splitting
+Each commit message starts with a type, a scope, and a subject.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Below that, the commit message has a body:
 
-### Analyzing the Bundle Size
+- **type**: what type of change this commit contains.
+- **scope**: what item of code this commit is changing.
+- **subject**: a short description of the changes.
+- **body** (optional): a more in-depth description of the changes, only if required
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+```
 
-### Making a Progressive Web App
+### Type
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Is recommended to be one of the below items:
 
-### Advanced Configuration
+- **feat**: A new feature
+- **fix**: A bug fix
+- **docs**: Documentation only changes e.g. README
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug or adds a feature
+- **test**: Adding missing tests
+- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation e.g. package dependencies, webpack changes, etc.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Scope
 
-### Deployment
+The scope could be anything specifying the place of the commit change. For example `$location`, `$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Subject
 
-### `yarn build` fails to minify
+The subject contains succinct description of the change:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- use the imperative, present tense: "change" not "changed" nor "changes"
+- don't capitalize first letter
+- no dot (.) at the end
+
+## Key Links
+
+tbd
