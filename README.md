@@ -1,8 +1,11 @@
-# Project Lebanon
+# Lebanon Relief Network
+![LRN_logo](images/LRN_logo.png)
+
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://al-wasal-connect.eu-gb.mybluemix.net/)
 
 ## Intro
 
-Welcome to Project Lebanon (official name tbd). This README will serve as a high level guide for how to contribute to the project.
+Welcome to Lebanon Relief Network. This README will serve as a high level guide for how to contribute to the project.
 
 - [Project Description](#project-description)
 - [Project Team](#project-team)
@@ -17,7 +20,21 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Description
 
-tbd
+A traumatic event like the Beirut explosion of August, 4th is bound to have repercussions on the mental health of those directly and indirectly affected. UNICEF estimates that 600,000 children could be in need of psychosocial support.
+
+The mission of the Lebanon Relief Network is to raise awareness and connect individuals affected by trauma with mental health support networks, independently of religious views and political affiliations.
+
+The Lebanon Relief Network platform will:
+- Connect individuals suffering from trauma - inside and outside Lebanon - with local and international trauma relief organizations, independent professionals, and volunteers.
+- Raise awareness and create a forum for professionals working in the field of psychotrauma to share ideas and knowledge relevant to their work in the field.
+
+The Lebanon Relief Network focusses on help requests and offers related to trauma, and effects of trauma on mental health.
+
+The platform will address:
+- Lebanese citizens that were affected by the explosion on August, 4th, 2020
+- Individuals outside of Lebanon that were affected by the event (Lebanese diaspora)
+- Associations, organizations, NGOs, academic institutions and experts with specific psychotrauma experience
+- International Volunteers
 
 ## Project Team
 
@@ -29,7 +46,23 @@ tbd
 
 ## Cloud Architecture
 
-tbd
+The solution is a web-based platform.
+- The front and back ends are coded primarily in Node.JS / React
+- Data and metadata stores use Cloudant
+- Content is stored in Object Storage
+- Personal and Sensitive Information is encrypted at rest
+- Email notifications and calendar invites are sent via SMTP
+
+![architecture](images/LRN_architecture.png)
+
+### IBM Cloud Services
+* [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview)
+* [IBM Toolchain](https://cloud.ibm.com/devops/create)
+* [IBM Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
+* [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage)
+* [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
+* [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
+* [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
 
 ## Directory Structure
 
@@ -120,3 +153,11 @@ The subject contains succinct description of the change:
 ## Key Links
 
 tbd
+
+## Version
+
+v0.1
+
+## License
+
+This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
