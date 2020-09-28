@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Description
 
-tbd
+This is a test
 
 ## Project Team
 
