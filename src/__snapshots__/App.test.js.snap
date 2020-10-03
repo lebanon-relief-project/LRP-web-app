@@ -21,9 +21,11 @@ exports[`renders learn react link 1`] = `
         </li>
       </ul>
     </nav>
-    <h2>
-      Home Page
-    </h2>
+    <div>
+      <h2>
+        Home Page
+      </h2>
+    </div>
   </div>
 </div>
 `;
