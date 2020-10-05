@@ -105,6 +105,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `yarn install`
+
+If you see the following error, you must first run `yarn install`:
+
+```
+yarn run v1.22.5
+$ react-scripts start
+/bin/sh: react-scripts: command not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+This will install the required packages so that you can test locally.
+
 ## Git Commit Convention
 
 The following is the recommended and preferred format for git commit messages:
