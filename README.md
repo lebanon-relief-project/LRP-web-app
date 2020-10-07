@@ -42,7 +42,8 @@ tbd
 
 ## Live site URLs
 
-tbd
+- Dev app: https://lrn-dev.eu-de.mybluemix.net/
+- Test app: https://lrn-test.eu-de.mybluemix.net/
 
 ## Cloud Architecture
 
@@ -175,6 +176,3 @@ v0.1
 ## License
 
 This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
-
-
-
