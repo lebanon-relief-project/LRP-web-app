@@ -5,12 +5,12 @@ import Card from "./Card";
 describe("the Card component", () => {
   let container;
   it("should match the snapshot", () => {
-    ({ container } = renderNavbar());
+    ({ container } = renderCard());
 
     expect(container).toMatchSnapshot();
   });
 });
 
-const renderNavbar = () => {
+const renderCard = () => {
   return render(<Card />);
 };

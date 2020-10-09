@@ -6,12 +6,12 @@ import FooterImageLink from "./FooterImageLink";
 describe("the Card component", () => {
   let container;
   it("should match the snapshot", () => {
-    ({ container } = renderNavbar());
+    ({ container } = renderFooterImageLink());
 
     expect(container).toMatchSnapshot();
   });
 });
 
-const renderNavbar = () => {
+const renderFooterImageLink = () => {
   return render(<FooterImageLink />);
 };

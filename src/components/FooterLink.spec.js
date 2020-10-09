@@ -5,12 +5,12 @@ import FooterLink from "./FooterLink";
 describe("the Card component", () => {
   let container;
   it("should match the snapshot", () => {
-    ({ container } = renderNavbar());
+    ({ container } = renderFooterLink());
 
     expect(container).toMatchSnapshot();
   });
 });
 
-const renderNavbar = () => {
+const renderFooterLink = () => {
   return render(<FooterLink title="testTitle" links={["link1", "link2"]} />);
 };
