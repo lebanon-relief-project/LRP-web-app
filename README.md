@@ -30,6 +30,8 @@ The Lebanon Relief Network platform will:
 
 The Lebanon Relief Network focusses on help requests and offers related to trauma, and effects of trauma on mental health.
 
+![LRN platform](images/LRN_scope.png)
+
 The platform will address:
 - Lebanese citizens that were affected by the explosion on August, 4th, 2020
 - Individuals outside of Lebanon that were affected by the event (Lebanese diaspora)
