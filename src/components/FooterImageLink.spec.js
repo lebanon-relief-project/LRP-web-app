@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import Card from "./Card";
 import FooterImageLink from "./FooterImageLink";
 
-describe("the Card component", () => {
+describe("the FooterImageLink component", () => {
   let container;
   it("should match the snapshot", () => {
     ({ container } = renderFooterImageLink());

@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import FooterLink from "./FooterLink";
 
-describe("the Card component", () => {
+describe("the FooterLink component", () => {
   let container;
   it("should match the snapshot", () => {
     ({ container } = renderFooterLink());
