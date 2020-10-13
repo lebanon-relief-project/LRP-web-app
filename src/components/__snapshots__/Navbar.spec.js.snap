@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Navbar component should match the snapshot 1`] = `
+<div>
+  <nav
+    class="sc-iemXMA embpoE"
+  >
+    <div
+      class="sc-hHEjAm lofWGw"
+    >
+      <img
+        alt="Logo"
+        class="sc-dIvqjp cEvzjq"
+        src="logo.png"
+      />
+    </div>
+    <ul
+      class="sc-dlMBXb htbhGx"
+    >
+      <li
+        class="sc-kfYqjs jFMrcj"
+      >
+        <div
+          data-testid="link_/"
+        />
+      </li>
+      <li
+        class="sc-kfYqjs jFMrcj"
+      >
+        <div
+          data-testid="link_/"
+        />
+      </li>
+      <li
+        class="sc-kfYqjs jFMrcj"
+      >
+        <div
+          data-testid="link_/"
+        />
+      </li>
+      <li
+        class="sc-kfYqjs jFMrcj"
+      >
+        <div
+          data-testid="link_/about"
+        />
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render about page 1`] = `
+<div>
+  <div>
+    About page
+  </div>
+</div>
+`;
+
+exports[`render home page 1`] = `
+<div>
+  <div>
+    Home page
+  </div>
+</div>
+`;
