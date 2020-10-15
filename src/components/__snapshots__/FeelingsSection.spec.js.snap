@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the OurMission component should match the snapshot 1`] = `
+<div>
+  <section
+    class="sc-gtssRu jGobNw"
+  >
+    <div
+      class="sc-bdnylx icjZAh"
+    >
+      <h2
+        class="sc-dlnjPT hxnyXJ"
+      >
+        Learn more and select the ones that you have experienced
+      </h2>
+      <p
+        class="sc-hKFyIo jEDpVH"
+      >
+        Below are flashcards with the most common presentations of traumatic stress. Click on those that you have experienced to learn more about your reaction and ways to manage.
+      </p>
+    </div>
+  </section>
+</div>
+`;

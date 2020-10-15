@@ -5,10 +5,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/homePage";
 import AboutPage from "./pages/aboutPage";
+import HelpPage from "./pages/helpPage";
 
 export const Routes = {
   HOME: "/",
   ABOUT: "/about",
+  HELP: "/help"
 };
 
 export const Pages = () => {
@@ -17,6 +19,7 @@ export const Pages = () => {
       <Switch>
         <Route path={Routes.ABOUT} component={AboutPage} />
         <Route path={Routes.HOME} component={HomePage} />
+        <Route path={Routes.HELP} component={HelpPage} />
       </Switch>
     </>
   );
