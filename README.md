@@ -62,7 +62,7 @@ We are a group international volunteers, working in design and development.
 - [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
 - [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
 - [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
-- Sanchit Sharma
+- [Sanchit Sharma] (https://puppykit.org.uk/)
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
 
 ### Architects
