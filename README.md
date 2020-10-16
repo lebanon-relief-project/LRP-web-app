@@ -3,18 +3,19 @@
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-test.eu-de.mybluemix.net/)
 
-## Intro
+## Introduction
 
 Welcome to Lebanon Relief Network. This README will serve as a high level guide for how to contribute to the project.
 
-- [Project Description](#project-description)
-- [Project Team](#project-team)
-- [Live Site URLs](#live-site-urls)
-- [Cloud Architecture](#cloud-architecture)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [Git Commit Convention](#git-commit-convention)
-- [Key Links](#key-links)
+1. [Introduction](#introduction)
+1. [Project Description](#project-description)
+1. [Team](#team)
+1. [Live Site URLs](#live-site-urls)
+1. [Cloud Architecture](#cloud-architecture)
+1. [Directory Structure](#directory-structure)
+1. [Available Scripts](#available-scripts)
+1. [Git Commit Convention](#git-commit-convention)
+1. [Key Links](#key-links)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,9 +45,30 @@ After the initial development and hosting provided by IBM and IBM Corporate Soci
 
 ![Sustainability Plan](images/LRN_sustainability.png)
 
-## Project Team
+## Teams
 
-tbd
+We are a group international volunteers, working in design and development.
+
+### Designers
+- [Lama Halwaji](https://www.linkedin.com/in/lamahalwaji/)
+- [Kira Madsen Lorenzen](https://www.linkedin.com/in/kiramlo/)
+- [Mia Chkaibane](https://www.linkedin.com/in/mia-chkaibane-a8905364/)
+- [Milly Longbottom](https://www.linkedin.com/in/milly-longbottom/)
+
+### Developers
+- [Antonio D'aria](https://www.linkedin.com/in/antonio-d-aria-59383046/)
+- [Jeremy Beucler](https://www.linkedin.com/in/jeremy-beucler-86263370/)
+- [Mark Moloney](https://www.linkedin.com/in/1markmoloney/)
+- [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
+- [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
+- [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
+- Sanchit Sharma
+- [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
+
+### Architects
+- [Brian Say](https://www.linkedin.com/in/brian-say/)
+- [Claudio Tag](https://www.linkedin.com/in/claudiotagliabue)
+- [Steve Arnold](https://www.linkedin.com/in/sarnoldatwork/)
 
 ## Live site URLs
 
@@ -72,10 +94,6 @@ The solution is a web-based platform.
 * [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
 * [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
 * [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
-
-## Directory Structure
-
-tbd
 
 ## Available Scripts
 
@@ -172,10 +190,6 @@ The subject contains succinct description of the change:
 - use the imperative, present tense: "change" not "changed" nor "changes"
 - don't capitalize first letter
 - no dot (.) at the end
-
-## Key Links
-
-tbd
 
 ## Version
 
