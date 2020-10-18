@@ -6,22 +6,37 @@ const OurMission = () => {
   return (
     <StyledSection>
       <Wrapper>
-        <StyledHeader>Learn more and select the ones that you have experienced</StyledHeader>
-        <StyledParagraph>
-            Below are flashcards with the most common presentations of traumatic stress.
-            Click on those that you have experienced to learn more about your reaction and ways to
-            manage.
-        </StyledParagraph>
+        <StyledHeader>Learn more about trauma</StyledHeader>
+        <TextWrapper>
+          <StyledParagraph>
+            Below are flashcards with the most common presentations of traumatic
+            stress.
+          </StyledParagraph>
+          <StyledParagraph>
+            Click on those that you have experienced to learn more about your
+            reaction and ways to manage, then select the ones that apply.
+          </StyledParagraph>
+        </TextWrapper>
       </Wrapper>
     </StyledSection>
   );
 };
 
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  width: 50%;
+`;
+
 const Wrapper = styled.div`
   width: 50%;
-  padding: 5rem 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   margin: 0 12rem;
   background: inherit;
+  background-color: yellow;
 `;
 
 const StyledSection = styled.section`
@@ -33,13 +48,12 @@ const StyledSection = styled.section`
 
 const StyledHeader = styled.h2`
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 `;
 
 const StyledParagraph = styled.p`
   margin: 0;
-  font-size: 14px;
-  
+  font-size: 16px;
 `;
 
 export default OurMission;

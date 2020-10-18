@@ -8,6 +8,14 @@ exports[`render about page 1`] = `
 </div>
 `;
 
+exports[`render help page 1`] = `
+<div>
+  <div>
+    Help page
+  </div>
+</div>
+`;
+
 exports[`render home page 1`] = `
 <div>
   <div>

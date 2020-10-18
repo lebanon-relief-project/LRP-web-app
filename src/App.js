@@ -10,7 +10,7 @@ import HelpPage from "./pages/helpPage";
 export const Routes = {
   HOME: "/",
   ABOUT: "/about",
-  HELP: "/help"
+  HELP: "/help",
 };
 
 export const Pages = () => {
@@ -18,8 +18,8 @@ export const Pages = () => {
     <>
       <Switch>
         <Route path={Routes.ABOUT} component={AboutPage} />
-        <Route path={Routes.HOME} component={HomePage} />
         <Route path={Routes.HELP} component={HelpPage} />
+        <Route path={Routes.HOME} component={HomePage} />
       </Switch>
     </>
   );

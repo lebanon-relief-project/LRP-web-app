@@ -3,21 +3,30 @@
 exports[`the OurMission component should match the snapshot 1`] = `
 <div>
   <section
-    class="sc-gtssRu jGobNw"
+    class="sc-dlnjPT dHbets"
   >
     <div
-      class="sc-bdnylx icjZAh"
+      class="sc-gtssRu cBBsev"
     >
       <h2
-        class="sc-dlnjPT hxnyXJ"
+        class="sc-hKFyIo gFJHSb"
       >
-        Learn more and select the ones that you have experienced
+        Learn more about trauma
       </h2>
-      <p
-        class="sc-hKFyIo jEDpVH"
+      <div
+        class="sc-bdnylx gEpTgr"
       >
-        Below are flashcards with the most common presentations of traumatic stress. Click on those that you have experienced to learn more about your reaction and ways to manage.
-      </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          Below are flashcards with the most common presentations of traumatic stress.
+        </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
+        </p>
+      </div>
     </div>
   </section>
 </div>

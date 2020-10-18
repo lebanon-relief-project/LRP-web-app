@@ -3,21 +3,35 @@
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
 <div>
   <section
-    class="sc-gtssRu bgKeKC"
+    class="sc-dlnjPT fMUoGW"
   >
     <div
-      class="sc-bdnylx icjZAh"
+      class="sc-gtssRu izBLZi"
     >
       <h2
-        class="sc-dlnjPT iGXfwf"
+        class="sc-hKFyIo ihyCEX"
       >
         Traumatic Events
       </h2>
-      <p
-        class="sc-hKFyIo hqFVHM"
+      <div
+        class="sc-bdnylx krmaPa"
       >
-        The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected. All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it. Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
-      </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+        </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+        </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+        </p>
+      </div>
     </div>
   </section>
 </div>

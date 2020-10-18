@@ -3,39 +3,62 @@
 exports[`the HelpPage component should match the snapshot 1`] = `
 <div>
   <section
-    class="sc-gtssRu bgKeKC"
+    class="sc-dlnjPT fMUoGW"
   >
     <div
-      class="sc-bdnylx icjZAh"
+      class="sc-gtssRu izBLZi"
     >
       <h2
-        class="sc-dlnjPT iGXfwf"
+        class="sc-hKFyIo ihyCEX"
       >
         Traumatic Events
       </h2>
-      <p
-        class="sc-hKFyIo hqFVHM"
+      <div
+        class="sc-bdnylx krmaPa"
       >
-        The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected. All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it. Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
-      </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+        </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+        </p>
+        <p
+          class="sc-eCApGN geRIAP"
+        >
+          Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+        </p>
+      </div>
     </div>
   </section>
   <section
-    class="sc-jSFkmK cfRFjW"
+    class="sc-iCoHVE hANwrK"
   >
     <div
-      class="sc-eCApGN fBkfZy"
+      class="sc-gKAblj cZHHtS"
     >
       <h2
-        class="sc-gKAblj fMgLRk"
+        class="sc-fujyUd kgedsY"
       >
-        Learn more and select the ones that you have experienced
+        Learn more about trauma
       </h2>
-      <p
-        class="sc-iCoHVE fnKoXf"
+      <div
+        class="sc-jSFkmK gIbJTA"
       >
-        Below are flashcards with the most common presentations of traumatic stress. Click on those that you have experienced to learn more about your reaction and ways to manage.
-      </p>
+        <p
+          class="sc-pNWxx iREAHs"
+        >
+          Below are flashcards with the most common presentations of traumatic stress.
+        </p>
+        <p
+          class="sc-pNWxx iREAHs"
+        >
+          Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
+        </p>
+      </div>
     </div>
   </section>
 </div>
