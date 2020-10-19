@@ -1,20 +1,21 @@
 # Lebanon Relief Network
 ![LRN_logo](images/LRN_logo.png)
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://al-wasal-connect.eu-gb.mybluemix.net/)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-test.eu-de.mybluemix.net/)
 
-## Intro
+## Introduction
 
 Welcome to Lebanon Relief Network. This README will serve as a high level guide for how to contribute to the project.
 
-- [Project Description](#project-description)
-- [Project Team](#project-team)
-- [Live Site URLs](#live-site-urls)
-- [Cloud Architecture](#cloud-architecture)
-- [Directory Structure](#directory-structure)
-- [Available Scripts](#available-scripts)
-- [Git Commit Convention](#git-commit-convention)
-- [Key Links](#key-links)
+1. [Introduction](#introduction)
+1. [Project Description](#project-description)
+1. [Team](#team)
+1. [Live Site URLs](#live-site-urls)
+1. [Cloud Architecture](#cloud-architecture)
+1. [Directory Structure](#directory-structure)
+1. [Available Scripts](#available-scripts)
+1. [Git Commit Convention](#git-commit-convention)
+1. [Key Links](#key-links)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -30,19 +31,49 @@ The Lebanon Relief Network platform will:
 
 The Lebanon Relief Network focusses on help requests and offers related to trauma, and effects of trauma on mental health.
 
+![LRN platform](images/LRN_scope.png)
+
 The platform will address:
 - Lebanese citizens that were affected by the explosion on August, 4th, 2020
 - Individuals outside of Lebanon that were affected by the event (Lebanese diaspora)
 - Associations, organizations, NGOs, academic institutions and experts with specific psychotrauma experience
 - International Volunteers
 
-## Project Team
+#### Sustainability Plan
+LRN founders are dedicated to their mission of raising awareness and connecting individuals affected by trauma with mental health support networks.
+After the initial development and hosting provided by IBM and IBM Corporate Social Responsibility, we plan to offer part ownership of the platform to organizations whose missions complement that of LRN. In parallel, we will be working on a contingency plan to fully sustain the platform until such partnership(s) are concluded.
 
-tbd
+![Sustainability Plan](images/LRN_sustainability.png)
+
+## Teams
+
+We are a group international volunteers, working in design and development.
+
+### Designers
+- [Lama Halwaji](https://www.linkedin.com/in/lamahalwaji/)
+- [Kira Madsen Lorenzen](https://www.linkedin.com/in/kiramlo/)
+- [Mia Chkaibane](https://www.linkedin.com/in/mia-chkaibane-a8905364/)
+- [Milly Longbottom](https://www.linkedin.com/in/milly-longbottom/)
+
+### Developers
+- [Antonio D'aria](https://www.linkedin.com/in/antonio-d-aria-59383046/)
+- [Jeremy Beucler](https://www.linkedin.com/in/jeremy-beucler-86263370/)
+- [Mark Moloney](https://www.linkedin.com/in/1markmoloney/)
+- [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
+- [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
+- [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
+- [Sanchit Sharma] (https://puppykit.org.uk/)
+- [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
+
+### Architects
+- [Brian Say](https://www.linkedin.com/in/brian-say/)
+- [Claudio Tag](https://www.linkedin.com/in/claudiotagliabue)
+- [Steve Arnold](https://www.linkedin.com/in/sarnoldatwork/)
 
 ## Live site URLs
 
-tbd
+- Dev app: https://lrn-dev.eu-de.mybluemix.net/
+- Test app: https://lrn-test.eu-de.mybluemix.net/
 
 ## Cloud Architecture
 
@@ -63,10 +94,6 @@ The solution is a web-based platform.
 * [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
 * [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
 * [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
-
-## Directory Structure
-
-tbd
 
 ## Available Scripts
 
@@ -104,6 +131,20 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### `yarn install`
+
+If you see the following error, you must first run `yarn install`:
+
+```
+yarn run v1.22.5
+$ react-scripts start
+/bin/sh: react-scripts: command not found
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+This will install the required packages so that you can test locally.
 
 ## Git Commit Convention
 
@@ -149,10 +190,6 @@ The subject contains succinct description of the change:
 - use the imperative, present tense: "change" not "changed" nor "changes"
 - don't capitalize first letter
 - no dot (.) at the end
-
-## Key Links
-
-tbd
 
 ## Version
 
