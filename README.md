@@ -1,7 +1,7 @@
 # Lebanon Relief Network
 ![LRN_logo](images/LRN_logo.png)
 
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-test.eu-de.mybluemix.net/)
+[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-dev.eu-de.mybluemix.net/)
 
 ## Introduction
 
@@ -62,7 +62,7 @@ We are a group international volunteers, working in design and development.
 - [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
 - [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
 - [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
-- [Sanchit Sharma] (https://puppykit.org.uk/)
+- [Sanchit Sharma](https://puppykit.org.uk/)
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
 
 ### Architects
