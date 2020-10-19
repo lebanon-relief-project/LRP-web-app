@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the FlashCard component should match the snapshot 1`] = `
+<div>
+  <div
+    class="sc-gtssRu bnuozO"
+  >
+    <div
+      class="sc-bdnylx jeWZUd"
+    >
+      title 1
+      <img
+        alt="PlusCircleIcon"
+        class="sc-hKFyIo kbJumJ"
+        height="32"
+        src="PlusCircle.svg"
+        width="32"
+      />
+    </div>
+    <div
+      class="sc-dlnjPT goxHCw"
+    >
+      <img
+        class="sc-eCApGN bjZePm"
+        src="SampleCardPicture.png"
+      />
+    </div>
+  </div>
+</div>
+`;

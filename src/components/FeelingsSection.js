@@ -36,7 +36,6 @@ const Wrapper = styled.div`
   padding-bottom: 2rem;
   margin: 0 12rem;
   background: inherit;
-  background-color: yellow;
 `;
 
 const StyledSection = styled.section`

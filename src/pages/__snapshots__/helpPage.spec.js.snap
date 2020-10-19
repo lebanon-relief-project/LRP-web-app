@@ -38,7 +38,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
     class="sc-iCoHVE hANwrK"
   >
     <div
-      class="sc-gKAblj cZHHtS"
+      class="sc-gKAblj iFhBQX"
     >
       <h2
         class="sc-fujyUd kgedsY"
@@ -58,6 +58,134 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
         </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="sc-bqGHjH kjInOi"
+  >
+    <div
+      class="sc-ksluoS bJtgxg"
+    >
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI fffaTb"
+        >
+          title 1
+          <img
+            alt="PlusCircleIcon"
+            class="sc-crzoUp dwTFmi"
+            height="32"
+            src="PlusCircle.svg"
+            width="32"
+          />
+        </div>
+        <div
+          class="sc-iqAbSa jYxHrZ"
+        >
+          <img
+            class="sc-dIsAE gcaYom"
+            src="SampleCardPicture.png"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI fffaTb"
+        >
+          title 2
+          <img
+            alt="PlusCircleIcon"
+            class="sc-crzoUp dwTFmi"
+            height="32"
+            src="PlusCircle.svg"
+            width="32"
+          />
+        </div>
+        <div
+          class="sc-iqAbSa jYxHrZ"
+        >
+          <img
+            class="sc-dIsAE gcaYom"
+            src="SampleCardPicture.png"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI fffaTb"
+        >
+          title 3
+          <img
+            alt="PlusCircleIcon"
+            class="sc-crzoUp dwTFmi"
+            height="32"
+            src="PlusCircle.svg"
+            width="32"
+          />
+        </div>
+        <div
+          class="sc-iqAbSa jYxHrZ"
+        >
+          <img
+            class="sc-dIsAE gcaYom"
+            src="SampleCardPicture.png"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI fffaTb"
+        >
+          title 4
+          <img
+            alt="PlusCircleIcon"
+            class="sc-crzoUp dwTFmi"
+            height="32"
+            src="PlusCircle.svg"
+            width="32"
+          />
+        </div>
+        <div
+          class="sc-iqAbSa jYxHrZ"
+        >
+          <img
+            class="sc-dIsAE gcaYom"
+            src="SampleCardPicture.png"
+          />
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI fffaTb"
+        >
+          title 5
+          <img
+            alt="PlusCircleIcon"
+            class="sc-crzoUp dwTFmi"
+            height="32"
+            src="PlusCircle.svg"
+            width="32"
+          />
+        </div>
+        <div
+          class="sc-iqAbSa jYxHrZ"
+        >
+          <img
+            class="sc-dIsAE gcaYom"
+            src="SampleCardPicture.png"
+          />
+        </div>
       </div>
     </div>
   </section>

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the FlashCardsSection component should match the snapshot 1`] = `
+<div>
+  <section
+    class="sc-bdnylx dHonQR"
+  >
+    <div
+      class="sc-gtssRu cFAxaR"
+    >
+      <div>
+        flash card 
+        title 1
+      </div>
+      <div>
+        flash card 
+        title 2
+      </div>
+      <div>
+        flash card 
+        title 3
+      </div>
+      <div>
+        flash card 
+        title 4
+      </div>
+      <div>
+        flash card 
+        title 5
+      </div>
+    </div>
+  </section>
+</div>
+`;
