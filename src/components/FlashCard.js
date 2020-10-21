@@ -25,7 +25,10 @@ const FlashCard = ({ card }) => {
           alt="PlusCircleIcon"
         />
       </StyledHeader>
-      <ImageWrapper onClick={() => set((state) => !state)}>
+      <ImageWrapper
+        onMouseEnter={() => set((state) => !state)}
+        onMouseLeave={() => set((state) => !state)}
+      >
         <a.div
           className="c back"
           style={{
