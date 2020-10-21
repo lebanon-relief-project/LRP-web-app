@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test --watchAll=false"
+      "pre-commit": "npm test -- --watchAll=false"
     }
   }
 }
