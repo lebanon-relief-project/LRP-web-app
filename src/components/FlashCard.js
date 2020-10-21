@@ -6,7 +6,7 @@ import SampleCardPicture from "../assets/images/SampleCardPicture.png";
 import { useSpring, animated as a } from "react-spring";
 
 const FlashCard = ({ card }) => {
-  const [flipped, set] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
@@ -26,11 +26,11 @@ const FlashCard = ({ card }) => {
         />
       </StyledHeader>
       <ImageWrapper
-        onMouseEnter={() => set((state) => !state)}
-        onMouseLeave={() => set((state) => !state)}
+        onMouseEnter={() => setFlipped((state) => !state)}
+        onMouseLeave={() => setFlipped((state) => !state)}
       >
+        {/* Front of card */}
         <a.div
-          className="c back"
           style={{
             opacity: opacity.interpolate((o) => 1 - o),
             transform,
@@ -43,8 +43,9 @@ const FlashCard = ({ card }) => {
         >
           <FlashCardImage src={SampleCardPicture} />
         </a.div>
+
+        {/* Back of card */}
         <a.div
-          className="c front"
           style={{
             opacity,
             transform: transform.interpolate((t) => `${t} rotateY(180deg)`),
@@ -55,7 +56,9 @@ const FlashCard = ({ card }) => {
             position: "absolute",
           }}
         >
-          front
+          Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam
+          elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum
+          neque praesen
         </a.div>
       </ImageWrapper>
     </Wrapper>
@@ -64,7 +67,6 @@ const FlashCard = ({ card }) => {
 
 const StyledHeader = styled.div`
   font-size: 1rem;
-
   display: flex;
   height: 3.5rem;
   padding: 0.25rem 0.5rem;

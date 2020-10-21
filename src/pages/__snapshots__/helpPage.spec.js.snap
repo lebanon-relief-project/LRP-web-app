@@ -71,7 +71,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-kEqYlL jJlmcM"
       >
         <div
-          class="sc-jrsJCI fffaTb"
+          class="sc-jrsJCI iwuEvl"
         >
           title 1
           <img
@@ -86,7 +86,6 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-iqAbSa cGJTQz"
         >
           <div
-            class="c back"
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
             <img
@@ -95,10 +94,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="c front"
             style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            front
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
           </div>
         </div>
       </div>
@@ -106,7 +104,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-kEqYlL jJlmcM"
       >
         <div
-          class="sc-jrsJCI fffaTb"
+          class="sc-jrsJCI iwuEvl"
         >
           title 2
           <img
@@ -121,7 +119,6 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-iqAbSa cGJTQz"
         >
           <div
-            class="c back"
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
             <img
@@ -130,10 +127,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="c front"
             style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            front
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
           </div>
         </div>
       </div>
@@ -141,7 +137,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-kEqYlL jJlmcM"
       >
         <div
-          class="sc-jrsJCI fffaTb"
+          class="sc-jrsJCI iwuEvl"
         >
           title 3
           <img
@@ -156,7 +152,6 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-iqAbSa cGJTQz"
         >
           <div
-            class="c back"
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
             <img
@@ -165,10 +160,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="c front"
             style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            front
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
           </div>
         </div>
       </div>
@@ -176,7 +170,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-kEqYlL jJlmcM"
       >
         <div
-          class="sc-jrsJCI fffaTb"
+          class="sc-jrsJCI iwuEvl"
         >
           title 4
           <img
@@ -191,7 +185,6 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-iqAbSa cGJTQz"
         >
           <div
-            class="c back"
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
             <img
@@ -200,10 +193,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="c front"
             style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            front
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
           </div>
         </div>
       </div>
@@ -211,7 +203,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-kEqYlL jJlmcM"
       >
         <div
-          class="sc-jrsJCI fffaTb"
+          class="sc-jrsJCI iwuEvl"
         >
           title 5
           <img
@@ -226,7 +218,6 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-iqAbSa cGJTQz"
         >
           <div
-            class="c back"
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
             <img
@@ -235,10 +226,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="c front"
             style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            front
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
           </div>
         </div>
       </div>
