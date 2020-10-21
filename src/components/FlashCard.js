@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import SampleCardPicture from "../assets/images/SampleCardPicture.png";
+import { useSpring, animated as a } from "react-spring";
 
 const FlashCard = ({ card }) => {
+  const [flipped, set] = useState(false);
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
+
   return (
     <Wrapper>
       <StyledHeader>
@@ -17,8 +25,35 @@ const FlashCard = ({ card }) => {
           alt="PlusCircleIcon"
         />
       </StyledHeader>
-      <ImageWrapper>
-        <FlashCardImage src={SampleCardPicture} />
+      <ImageWrapper onClick={() => set((state) => !state)}>
+        <a.div
+          className="c back"
+          style={{
+            opacity: opacity.interpolate((o) => 1 - o),
+            transform,
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            position: "absolute",
+          }}
+        >
+          <FlashCardImage src={SampleCardPicture} />
+        </a.div>
+        <a.div
+          className="c front"
+          style={{
+            opacity,
+            transform: transform.interpolate((t) => `${t} rotateY(180deg)`),
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            position: "absolute",
+          }}
+        >
+          front
+        </a.div>
       </ImageWrapper>
     </Wrapper>
   );
@@ -46,6 +81,7 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   flex: 1;
+  position: relative;
 `;
 
 const CircleIcon = styled.img`

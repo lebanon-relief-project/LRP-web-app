@@ -18,12 +18,23 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       />
     </div>
     <div
-      class="sc-dlnjPT goxHCw"
+      class="sc-dlnjPT gmgAzC"
     >
-      <img
-        class="sc-eCApGN bjZePm"
-        src="SampleCardPicture.png"
-      />
+      <div
+        class="c back"
+        style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        <img
+          class="sc-eCApGN bjZePm"
+          src="SampleCardPicture.png"
+        />
+      </div>
+      <div
+        class="c front"
+        style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        front
+      </div>
     </div>
   </div>
 </div>
