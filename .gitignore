@@ -1,16 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
 /web-app/node_modules
+/data-service/node_modules
 /.pnp
 .pnp.js
+/web-app/.pnp
+/web-app/.pnp.js
 
 # testing
 /coverage
+/data-service/coverage
+/web-app/coverage
+/data-service/test-report.xml
 
 # production
 /build
+/web-app/build
+/data-service/build
 
 # misc
 .DS_Store
@@ -19,6 +26,12 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/web-app/npm-debug.log*
+/web-app/yarn-debug.log*
+/web-app/yarn-error.log*
+/data-service/npm-debug.log*
+/data-service/yarn-debug.log*
+/data-service/yarn-error.log*
+
+/data-service/dist
+/data-service/logs
