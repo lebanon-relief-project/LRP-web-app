@@ -1,0 +1,7 @@
+---
+applications:
+- name: Web App
+  path: ./web-app
+- name: Data Service
+  path: ./data-service
+  no-route: true
