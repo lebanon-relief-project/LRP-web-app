@@ -18,7 +18,5 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: cd web-app && npm ci
-      - run: cd web-app && npm test -- --watchAll=false
-      - run: cd data-service && npm ci
-      - run: cd data-service && npm test -- --watchAll=false
+      - run: npm ci
+      - run: npm test -- --watchAll=false
