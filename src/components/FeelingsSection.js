@@ -27,14 +27,13 @@ const TextWrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 1rem;
-  width: 50%;
 `;
 
 const Wrapper = styled.div`
   width: 50%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 12rem;
+  margin: 0 16.7%;
   background: inherit;
 `;
 

@@ -40,7 +40,7 @@ const Wrapper = styled.div`
   width: 50%;
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
-  margin: 0 12rem;
+  margin: 0 16.7%;
   background: inherit;
 `;
 
