@@ -10,11 +10,11 @@ exports[`the FlashCard component should match the snapshot 1`] = `
     >
       title 1
       <button
-        class="sc-hKFyIo rlrGx"
+        class="sc-hKFyIo idyquw"
       >
         <img
           alt="PlusCircleIcon"
-          class="sc-eCApGN dIIjnd"
+          class="sc-eCApGN eMbdpd"
           height="32"
           src="PlusCircle.svg"
           width="32"

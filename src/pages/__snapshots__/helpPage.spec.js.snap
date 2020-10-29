@@ -62,7 +62,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
     </div>
   </section>
   <section
-    class="sc-ksluoS jEqTTK"
+    class="sc-ksluoS cDTEre"
   >
     <div
       class="sc-hBMVcZ gUAlsn"
@@ -75,11 +75,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 1
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -112,11 +112,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 2
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -149,11 +149,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 3
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -186,11 +186,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 4
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -223,11 +223,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 5
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -260,11 +260,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 6
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -297,11 +297,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 7
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -334,11 +334,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 8
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -371,11 +371,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 9
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -408,11 +408,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 10
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -445,11 +445,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 11
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -482,11 +482,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 12
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -519,11 +519,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 13
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -556,11 +556,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         >
           title 14
           <button
-            class="sc-crzoUp frdSZa"
+            class="sc-crzoUp jBhFcL"
           >
             <img
               alt="PlusCircleIcon"
-              class="sc-dIsAE imCvqd"
+              class="sc-dIsAE httDkd"
               height="32"
               src="PlusCircle.svg"
               width="32"
@@ -587,7 +587,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
       </div>
     </div>
     <button
-      class="sc-fnVYJo fIfISN"
+      class="sc-fnVYJo gJjpxR"
     >
       Next
     </button>

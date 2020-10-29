@@ -112,9 +112,13 @@ const FlashCardButton = styled.button`
   padding: 0;
   border: none;
   background: none;
+  outline: none;
 `;
 const CircleIcon = styled.img`
   align-self: center;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 const FlashCardImage = styled.div`

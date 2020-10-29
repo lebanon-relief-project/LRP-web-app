@@ -74,7 +74,22 @@ const flashCard14 = {
   image: "image url",
 };
 
-const flashCards = [flashCard1, flashCard2, flashCard3, flashCard4, flashCard5, flashCard6, flashCard7, flashCard8, flashCard9,flashCard10,flashCard11,flashCard12,flashCard13,flashCard14];
+const flashCards = [
+  flashCard1,
+  flashCard2,
+  flashCard3,
+  flashCard4,
+  flashCard5,
+  flashCard6,
+  flashCard7,
+  flashCard8,
+  flashCard9,
+  flashCard10,
+  flashCard11,
+  flashCard12,
+  flashCard13,
+  flashCard14,
+];
 
 const FlashCardsSection = (props) => {
   return (
@@ -85,10 +100,8 @@ const FlashCardsSection = (props) => {
             <FlashCard key={`${flashCard.title}_${index}`} card={flashCard} />
           );
         })}
-         
       </Wrapper>
       <NextButton>Next</NextButton>
-
     </StyledSection>
   );
 };
@@ -98,9 +111,9 @@ const StyledSection = styled.section`
   margin: 0;
   padding: 0;
   width: 100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Wrapper = styled.div`
@@ -123,6 +136,13 @@ const NextButton = styled.button`
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
   border-radius: 2px;
   outline: none;
+  border: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+  }
 `;
 
 export default FlashCardsSection;
