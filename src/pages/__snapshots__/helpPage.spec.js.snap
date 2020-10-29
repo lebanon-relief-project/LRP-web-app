@@ -3,13 +3,13 @@
 exports[`the HelpPage component should match the snapshot 1`] = `
 <div>
   <section
-    class="sc-dlnjPT fMUoGW"
+    class="sc-dlnjPT iBjBtg"
   >
     <div
       class="sc-gtssRu dPrDvI"
     >
       <h2
-        class="sc-hKFyIo ihyCEX"
+        class="sc-hKFyIo IfuPR"
       >
         Traumatic Events
       </h2>
@@ -17,17 +17,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         class="sc-bdnylx krmaPa"
       >
         <p
-          class="sc-eCApGN geRIAP"
+          class="sc-eCApGN dNsoMV"
         >
           The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
         </p>
         <p
-          class="sc-eCApGN geRIAP"
+          class="sc-eCApGN dNsoMV"
         >
           All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
         </p>
         <p
-          class="sc-eCApGN geRIAP"
+          class="sc-eCApGN dNsoMV"
         >
           Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
         </p>
@@ -62,10 +62,10 @@ exports[`the HelpPage component should match the snapshot 1`] = `
     </div>
   </section>
   <section
-    class="sc-bqGHjH YMWbN"
+    class="sc-ksluoS jEqTTK"
   >
     <div
-      class="sc-ksluoS fCZdia"
+      class="sc-hBMVcZ gUAlsn"
     >
       <div
         class="sc-kEqYlL jJlmcM"
@@ -74,13 +74,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 1
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -88,8 +92,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -107,13 +111,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 2
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -121,8 +129,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -140,13 +148,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 3
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -154,8 +166,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -173,13 +185,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 4
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -187,8 +203,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -206,13 +222,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 5
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -220,8 +240,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -239,13 +259,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 6
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -253,8 +277,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -272,13 +296,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 7
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -286,8 +314,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -305,13 +333,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 8
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -319,8 +351,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -338,13 +370,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 9
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -352,8 +388,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -371,13 +407,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 10
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -385,8 +425,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -404,13 +444,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 11
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -418,8 +462,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -437,13 +481,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 12
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -451,8 +499,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -470,13 +518,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 13
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -484,8 +536,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -503,13 +555,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           class="sc-jrsJCI iwuEvl"
         >
           title 14
-          <img
-            alt="PlusCircleIcon"
-            class="sc-crzoUp dwTFmi"
-            height="32"
-            src="PlusCircle.svg"
-            width="32"
-          />
+          <button
+            class="sc-crzoUp frdSZa"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE imCvqd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
         </div>
         <div
           class="sc-iqAbSa cGJTQz"
@@ -517,8 +573,8 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           <div
             style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
           >
-            <img
-              class="sc-dIsAE gcaYom"
+            <div
+              class="sc-bqGHjH kbYewP"
               src="SampleCardPicture.png"
             />
           </div>
@@ -531,7 +587,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
       </div>
     </div>
     <button
-      class="sc-hBMVcZ bDGjlr"
+      class="sc-fnVYJo fIfISN"
     >
       Next
     </button>

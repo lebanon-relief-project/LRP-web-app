@@ -2,33 +2,52 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import PlusCircleIcon from "../assets/images/PlusCircle.svg";
+import TickCircleIcon from "../assets/images/TickCircle.svg";
 import SampleCardPicture from "../assets/images/SampleCardPicture.png";
 import { useSpring, animated as a } from "react-spring";
 
 const FlashCard = ({ card }) => {
   const [flipped, setFlipped] = useState(false);
+  const [selected, setSelected] = useState(false);
+
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
 
+  // Function to calculate the card selection logic (card stays flipped if selected)
+  const cardSelectHandler = () => {
+    if (selected) return;
+
+    setFlipped(() => !flipped);
+  };
+
   return (
-    <Wrapper>
+    <Wrapper onMouseEnter={cardSelectHandler} onMouseLeave={cardSelectHandler}>
+      {/* Card title and button */}
       <StyledHeader>
         {card.title}
-
-        <CircleIcon
-          height={32}
-          width={32}
-          src={PlusCircleIcon}
-          alt="PlusCircleIcon"
-        />
+        <FlashCardButton onClick={() => setSelected(!selected)}>
+          {selected ? (
+            <CircleIcon
+              height={32}
+              width={32}
+              src={TickCircleIcon}
+              alt="TickCircleIcon"
+            />
+          ) : (
+            <CircleIcon
+              height={32}
+              width={32}
+              src={PlusCircleIcon}
+              alt="PlusCircleIcon"
+            />
+          )}
+        </FlashCardButton>
       </StyledHeader>
-      <ImageWrapper
-        onMouseEnter={() => setFlipped((state) => !state)}
-        onMouseLeave={() => setFlipped((state) => !state)}
-      >
+
+      <ImageWrapper>
         {/* Front of card */}
         <a.div
           style={{
@@ -89,13 +108,21 @@ const ImageWrapper = styled.div`
   position: relative;
 `;
 
+const FlashCardButton = styled.button`
+  padding: 0;
+  border: none;
+  background: none;
+`;
 const CircleIcon = styled.img`
   align-self: center;
 `;
 
-const FlashCardImage = styled.img`
+const FlashCardImage = styled.div`
   display: flex;
   flex: 1;
+  width: 13.875rem;
+  height: 17.75rem;
+  background-color: ${colours.lightBlue};
 `;
 
 export default FlashCard;

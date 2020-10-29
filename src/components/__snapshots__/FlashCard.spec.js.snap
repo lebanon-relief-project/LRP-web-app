@@ -9,13 +9,17 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       class="sc-bdnylx iIRCcz"
     >
       title 1
-      <img
-        alt="PlusCircleIcon"
-        class="sc-hKFyIo kbJumJ"
-        height="32"
-        src="PlusCircle.svg"
-        width="32"
-      />
+      <button
+        class="sc-hKFyIo rlrGx"
+      >
+        <img
+          alt="PlusCircleIcon"
+          class="sc-eCApGN dIIjnd"
+          height="32"
+          src="PlusCircle.svg"
+          width="32"
+        />
+      </button>
     </div>
     <div
       class="sc-dlnjPT gmgAzC"
@@ -23,8 +27,8 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       <div
         style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
       >
-        <img
-          class="sc-eCApGN bjZePm"
+        <div
+          class="sc-jSFkmK eUNsxH"
           src="SampleCardPicture.png"
         />
       </div>

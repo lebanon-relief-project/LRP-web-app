@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 `;
 
 const StyledSection = styled.section`
-  background: ${colours.lightGrey};
+  background: ${colours.darkBlue};
   margin: 0;
   padding: 0;
 `;
@@ -54,11 +54,13 @@ const StyledHeader = styled.h2`
   font-weight: bold;
   font-size: 38px;
   margin: 0;
+  color: ${colours.white};
 `;
 
 const StyledParagraph = styled.p`
   margin: 0;
   font-size: 16px;
+  color: ${colours.white};
 `;
 
 export default WhatHappened;

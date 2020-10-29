@@ -123,6 +123,6 @@ const NextButton = styled.button`
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
   border-radius: 2px;
   outline: none;
-`
+`;
 
 export default FlashCardsSection;

@@ -3,43 +3,43 @@
 exports[`the Navbar component should match the snapshot 1`] = `
 <div>
   <nav
-    class="sc-gXfWUo bOZBtB"
+    class="sc-cBoprd cZCHgZ"
   >
     <div
-      class="sc-ciSmjq cbsDoY"
+      class="sc-jcwofb buLOdK"
     >
       <img
         alt="Logo"
-        class="sc-cBoprd jyrzvy"
+        class="sc-ciSmjq fWixMd"
         src="logo.png"
       />
     </div>
     <ul
-      class="sc-jcwofb irhwtZ"
+      class="sc-carGAA gBgEhH"
     >
       <li
-        class="sc-carGAA ijVlBE"
+        class="sc-iTVIwl jXlxqu"
       >
         <div
           data-testid="link_/"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="sc-iTVIwl jXlxqu"
       >
         <div
           data-testid="link_/help"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="sc-iTVIwl jXlxqu"
       >
         <div
           data-testid="link_/"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="sc-iTVIwl jXlxqu"
       >
         <div
           data-testid="link_/about"
