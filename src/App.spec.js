@@ -11,6 +11,10 @@ jest.mock("./pages/aboutPage", (props) => {
   return (props) => <div>About page</div>;
 });
 
+jest.mock("./pages/helpPage", (props) => {
+  return (props) => <div>Help page</div>;
+});
+
 afterEach(() => {
   jest.clearAllMocks();
 });
@@ -22,6 +26,11 @@ test("render home page", () => {
 
 test("render about page", () => {
   const { container } = renderApp("/about");
+  expect(container).toMatchSnapshot();
+});
+
+test("render help page", () => {
+  const { container } = renderApp("/help");
   expect(container).toMatchSnapshot();
 });
 

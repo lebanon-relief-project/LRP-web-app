@@ -1,0 +1,596 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the HelpPage component should match the snapshot 1`] = `
+<div>
+  <section
+    class="sc-dlnjPT iBjBtg"
+  >
+    <div
+      class="sc-gtssRu dPrDvI"
+    >
+      <h2
+        class="sc-hKFyIo IfuPR"
+      >
+        Traumatic Events
+      </h2>
+      <div
+        class="sc-bdnylx krmaPa"
+      >
+        <p
+          class="sc-eCApGN dNsoMV"
+        >
+          The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+        </p>
+        <p
+          class="sc-eCApGN dNsoMV"
+        >
+          All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+        </p>
+        <p
+          class="sc-eCApGN dNsoMV"
+        >
+          Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="sc-iCoHVE hANwrK"
+  >
+    <div
+      class="sc-gKAblj HOwCB"
+    >
+      <h2
+        class="sc-fujyUd kgedsY"
+      >
+        Learn more about trauma
+      </h2>
+      <div
+        class="sc-jSFkmK ccHrrF"
+      >
+        <p
+          class="sc-pNWxx iREAHs"
+        >
+          Below are flashcards with the most common presentations of traumatic stress.
+        </p>
+        <p
+          class="sc-pNWxx iREAHs"
+        >
+          Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="sc-ksluoS cDTEre"
+  >
+    <div
+      class="sc-hBMVcZ gUAlsn"
+    >
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 1
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 2
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 3
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 4
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 5
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 6
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 7
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 8
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 9
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 10
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 11
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 12
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 13
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+      <div
+        class="sc-kEqYlL jJlmcM"
+      >
+        <div
+          class="sc-jrsJCI iwuEvl"
+        >
+          title 14
+          <button
+            class="sc-crzoUp jBhFcL"
+          >
+            <img
+              alt="PlusCircleIcon"
+              class="sc-dIsAE httDkd"
+              height="32"
+              src="PlusCircle.svg"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="sc-iqAbSa cGJTQz"
+        >
+          <div
+            style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            <div
+              class="sc-bqGHjH kbYewP"
+              src="SampleCardPicture.png"
+            />
+          </div>
+          <div
+            style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+          >
+            Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="sc-fnVYJo gJjpxR"
+    >
+      Next
+    </button>
+  </section>
+</div>
+`;

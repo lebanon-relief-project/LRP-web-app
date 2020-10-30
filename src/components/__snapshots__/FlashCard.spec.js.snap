@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the FlashCard component should match the snapshot 1`] = `
+<div>
+  <div
+    class="sc-gtssRu bnuozO"
+  >
+    <div
+      class="sc-bdnylx iIRCcz"
+    >
+      title 1
+      <button
+        class="sc-hKFyIo idyquw"
+      >
+        <img
+          alt="PlusCircleIcon"
+          class="sc-eCApGN eMbdpd"
+          height="32"
+          src="PlusCircle.svg"
+          width="32"
+        />
+      </button>
+    </div>
+    <div
+      class="sc-dlnjPT gmgAzC"
+    >
+      <div
+        style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        <div
+          class="sc-jSFkmK eUNsxH"
+          src="SampleCardPicture.png"
+        />
+      </div>
+      <div
+        style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+      </div>
+    </div>
+  </div>
+</div>
+`;

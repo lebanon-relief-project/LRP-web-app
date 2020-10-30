@@ -17,7 +17,7 @@ const Navbar = () => {
           <StyledLink to={Routes.HOME}>Home</StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink to={Routes.HOME}>I’m looking for help</StyledLink>
+          <StyledLink to={Routes.HELP}>I’m looking for help</StyledLink>
         </StyledLi>
         <StyledLi>
           <StyledLink to={Routes.HOME}>I’d like to help</StyledLink>

@@ -1,4 +1,5 @@
 # Lebanon Relief Network
+
 ![LRN_logo](images/LRN_logo.png)
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-dev.eu-de.mybluemix.net/)
@@ -26,6 +27,7 @@ A traumatic event like the Beirut explosion of August, 4th is bound to have repe
 The mission of the Lebanon Relief Network is to raise awareness and connect individuals affected by trauma with mental health support networks, independently of religious views and political affiliations.
 
 The Lebanon Relief Network platform will:
+
 - Connect individuals suffering from trauma - inside and outside Lebanon - with local and international trauma relief organizations, independent professionals, and volunteers.
 - Raise awareness and create a forum for professionals working in the field of psychotrauma to share ideas and knowledge relevant to their work in the field.
 
@@ -34,12 +36,14 @@ The Lebanon Relief Network focusses on help requests and offers related to traum
 ![LRN platform](images/LRN_scope.png)
 
 The platform will address:
+
 - Lebanese citizens that were affected by the explosion on August, 4th, 2020
 - Individuals outside of Lebanon that were affected by the event (Lebanese diaspora)
 - Associations, organizations, NGOs, academic institutions and experts with specific psychotrauma experience
 - International Volunteers
 
 #### Sustainability Plan
+
 LRN founders are dedicated to their mission of raising awareness and connecting individuals affected by trauma with mental health support networks.
 After the initial development and hosting provided by IBM and IBM Corporate Social Responsibility, we plan to offer part ownership of the platform to organizations whose missions complement that of LRN. In parallel, we will be working on a contingency plan to fully sustain the platform until such partnership(s) are concluded.
 
@@ -50,12 +54,14 @@ After the initial development and hosting provided by IBM and IBM Corporate Soci
 We are a group international volunteers, working in design and development.
 
 ### Designers
+
 - [Lama Halwaji](https://www.linkedin.com/in/lamahalwaji/)
 - [Kira Madsen Lorenzen](https://www.linkedin.com/in/kiramlo/)
 - [Mia Chkaibane](https://www.linkedin.com/in/mia-chkaibane-a8905364/)
 - [Milly Longbottom](https://www.linkedin.com/in/milly-longbottom/)
 
 ### Developers
+
 - [Antonio D'aria](https://www.linkedin.com/in/antonio-d-aria-59383046/)
 - [Jeremy Beucler](https://www.linkedin.com/in/jeremy-beucler-86263370/)
 - [Mark Moloney](https://www.linkedin.com/in/1markmoloney/)
@@ -66,6 +72,7 @@ We are a group international volunteers, working in design and development.
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
 
 ### Architects
+
 - [Brian Say](https://www.linkedin.com/in/brian-say/)
 - [Claudio Tag](https://www.linkedin.com/in/claudiotagliabue)
 - [Steve Arnold](https://www.linkedin.com/in/sarnoldatwork/)
@@ -78,6 +85,7 @@ We are a group international volunteers, working in design and development.
 ## Cloud Architecture
 
 The solution is a web-based platform.
+
 - The front and back ends are coded primarily in Node.JS / React
 - Data and metadata stores use Cloudant
 - Content is stored in Object Storage
@@ -87,13 +95,14 @@ The solution is a web-based platform.
 ![architecture](images/LRN_architecture.png)
 
 ### IBM Cloud Services
-* [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview)
-* [IBM Toolchain](https://cloud.ibm.com/devops/create)
-* [IBM Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
-* [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage)
-* [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
-* [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
-* [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
+
+- [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview)
+- [IBM Toolchain](https://cloud.ibm.com/devops/create)
+- [IBM Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
+- [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage)
+- [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
+- [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
+- [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
 
 ## Available Scripts
 
