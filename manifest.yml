@@ -1,6 +1,6 @@
 ---
 applications:
-- name: Web App
+- name: LRN Web App
   path: ./web-app
 - name: Data Service
   path: ./data-service
