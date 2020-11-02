@@ -6,7 +6,7 @@ import TickCircleIcon from "../assets/images/TickCircle.svg";
 import SampleCardPicture from "../assets/images/SampleCardPicture.png";
 import { useSpring, animated as a } from "react-spring";
 
-const FlashCard = ({ card }) => {
+const FlashCard = ({card, id}) => {
   const [flipped, setFlipped] = useState(false);
   const [selected, setSelected] = useState(false);
 
@@ -16,19 +16,33 @@ const FlashCard = ({ card }) => {
     config: { mass: 5, tension: 500, friction: 80 },
   });
 
-  // Function to calculate the card selection logic (card stays flipped if selected)
-  const cardSelectHandler = () => {
+  // This function is called on both mouse enter and mouse leave.
+  // It calculates the card selection logic (card stays flipped if selected)
+  const cardFlipHandler = () => {
     if (selected) return;
 
     setFlipped(() => !flipped);
   };
 
+  // This function is called when the user clicks the plus or tick button
+  // The conditional logic is reversed because useState is async
+  const cardSelectHandler = (
+  ) => {
+    if (!selected) {
+      sessionStorage.setItem(id, card.title);
+    } else {
+      sessionStorage.removeItem(id);
+    }
+    setSelected(!selected);
+  }
+
+
   return (
-    <Wrapper onMouseEnter={cardSelectHandler} onMouseLeave={cardSelectHandler}>
+    <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
       {/* Card title and button */}
       <StyledHeader>
         {card.title}
-        <FlashCardButton onClick={() => setSelected(!selected)}>
+        <FlashCardButton onClick={() => cardSelectHandler()}>
           {selected ? (
             <CircleIcon
               height={32}
