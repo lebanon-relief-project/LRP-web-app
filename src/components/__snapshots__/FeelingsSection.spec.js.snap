@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the OurMission component should match the snapshot 1`] = `
+exports[`the FeelingsSection component should match the snapshot 1`] = `
 <div>
   <section
     class="sc-dlnjPT dHbets"
