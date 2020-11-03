@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 
-const OurMission = () => {
+const FeelingsSection = () => {
   return (
     <StyledSection>
       <Wrapper>
@@ -54,4 +54,4 @@ const StyledParagraph = styled.p`
   font-size: 16px;
 `;
 
-export default OurMission;
+export default FeelingsSection;
