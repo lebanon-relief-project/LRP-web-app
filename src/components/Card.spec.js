@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Card from "./Card";
+import { MemoryRouter } from "react-router-dom";
 
 describe("the Card component", () => {
   let container;
@@ -12,5 +13,9 @@ describe("the Card component", () => {
 });
 
 const renderCard = () => {
-  return render(<Card />);
+  return render(
+    <MemoryRouter>
+      <Card title="test title" text="test text" path="/test" />
+    </MemoryRouter>
+  );
 };
