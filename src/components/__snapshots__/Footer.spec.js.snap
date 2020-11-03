@@ -3,99 +3,92 @@
 exports[`the Footer component should match the snapshot 1`] = `
 <div>
   <section
-    class="sc-fujyUd kUeWrN"
+    class="sc-iCoHVE jAMKrk"
   >
     <div
-      class="sc-gKAblj cyuFLz"
+      class="sc-gKAblj jWlcXc"
     >
       <div
-        class="sc-iCoHVE fSGdCz"
+        class="sc-gtssRu hNSdtc"
       >
-        <div
-          class="sc-gtssRu PuCqs"
+        <h2
+          class="sc-bdnylx gpJKAy"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
-          >
-            I’m looking for help
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
-          >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Terms & Conditions
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Privacy policy
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-gtssRu PuCqs"
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="sc-dlnjPT cQMtRp"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
+          <li
+            class="sc-hKFyIo igLYdx"
           >
-            About us
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
+            Terms & Conditions
+          </li>
+          <li
+            class="sc-hKFyIo igLYdx"
           >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              What we do
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Contact us
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-gtssRu PuCqs"
+            Privacy policy
+          </li>
+        </ul>
+      </div>
+      <div
+        class="sc-gtssRu hNSdtc"
+      >
+        <h2
+          class="sc-bdnylx gpJKAy"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
-          >
-            Partnerships
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
-          >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              How to partner with us
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Working with us
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-eCApGN kpYBjI"
+          About us
+        </h2>
+        <ul
+          class="sc-dlnjPT cQMtRp"
         >
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <p>
-            Lorem lobortis aliquam leo nisi vita
-          </p>
-        </div>
+          <li
+            class="sc-hKFyIo igLYdx"
+          >
+            What we do
+          </li>
+          <li
+            class="sc-hKFyIo igLYdx"
+          >
+            Contact us
+          </li>
+        </ul>
+      </div>
+      <div
+        class="sc-gtssRu hNSdtc"
+      >
+        <h2
+          class="sc-bdnylx gpJKAy"
+        >
+          Partnerships
+        </h2>
+        <ul
+          class="sc-dlnjPT cQMtRp"
+        >
+          <li
+            class="sc-hKFyIo igLYdx"
+          >
+            How to partner with us
+          </li>
+          <li
+            class="sc-hKFyIo igLYdx"
+          >
+            Working with us
+          </li>
+        </ul>
+      </div>
+      <div
+        class="sc-jSFkmK dzlDOT"
+      >
+        <span
+          class="sc-eCApGN byfgNG"
+        />
+        <span
+          class="sc-eCApGN byfgNG"
+        />
+        <span
+          class="sc-eCApGN byfgNG"
+        />
       </div>
     </div>
   </section>
