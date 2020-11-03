@@ -42,7 +42,10 @@ const FlashCard = ({card, id}) => {
       {/* Card title and button */}
       <StyledHeader>
         {card.title}
-        <FlashCardButton onClick={() => cardSelectHandler()}>
+        <FlashCardButton 
+        data-testid="button"
+        onClick={() => cardSelectHandler()}
+        >
           {selected ? (
             <CircleIcon
               height={32}

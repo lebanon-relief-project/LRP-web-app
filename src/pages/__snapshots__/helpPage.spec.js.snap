@@ -76,6 +76,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 1
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -113,6 +114,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 2
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -150,6 +152,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 3
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -187,6 +190,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 4
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -224,6 +228,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 5
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -261,6 +266,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 6
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -298,6 +304,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 7
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -335,6 +342,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 8
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -372,6 +380,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 9
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -409,6 +418,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 10
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -446,6 +456,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 11
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -483,6 +494,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 12
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -520,6 +532,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 13
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
@@ -557,6 +570,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 14
           <button
             class="sc-crzoUp jBhFcL"
+            data-testid="button"
           >
             <img
               alt="PlusCircleIcon"
