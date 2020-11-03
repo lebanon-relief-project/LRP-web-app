@@ -5,9 +5,9 @@ import logo from "../assets/images/logo.png";
 import { Routes } from "../App.js";
 import colours from "../styles/Colours";
 
-const Navbar = () => {
+const Navbar = ({ open }) => {
   return (
-    <StyledNav>
+    <StyledNav open={open}>
       <StyledDiv>
         <LogoImage src={logo} alt="Logo" />
       </StyledDiv>
@@ -32,6 +32,33 @@ const Navbar = () => {
 
 const StyledNav = styled.nav`
   display: flex;
+
+  @media (max-width: 576px) {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+
+    a {
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: bold;
+      letter-spacing: 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s linear;
+    }
+  }
 `;
 
 const LogoImage = styled.img`
@@ -48,6 +75,9 @@ const StyledDiv = styled.div`
 
 const StyledUl = styled.ul`
   display: flex;
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
   list-style-type: none;
   margin: 0;
   padding: 0;
