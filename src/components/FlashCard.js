@@ -43,7 +43,7 @@ const FlashCard = ({card, id}) => {
       <StyledHeader>
         {card.title}
         <FlashCardButton 
-        data-testid="button"
+        data-testid={card.title}
         onClick={() => cardSelectHandler()}
         >
           {selected ? (

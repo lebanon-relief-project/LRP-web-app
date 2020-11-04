@@ -11,7 +11,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       title 1
       <button
         class="sc-hKFyIo idyquw"
-        data-testid="button"
+        data-testid="title 1"
       >
         <img
           alt="PlusCircleIcon"

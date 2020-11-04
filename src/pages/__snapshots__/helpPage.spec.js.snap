@@ -76,7 +76,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 1
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 1"
           >
             <img
               alt="PlusCircleIcon"
@@ -114,7 +114,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 2
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 2"
           >
             <img
               alt="PlusCircleIcon"
@@ -152,7 +152,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 3
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 3"
           >
             <img
               alt="PlusCircleIcon"
@@ -190,7 +190,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 4
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 4"
           >
             <img
               alt="PlusCircleIcon"
@@ -228,7 +228,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 5
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 5"
           >
             <img
               alt="PlusCircleIcon"
@@ -266,7 +266,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 6
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 6"
           >
             <img
               alt="PlusCircleIcon"
@@ -304,7 +304,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 7
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 7"
           >
             <img
               alt="PlusCircleIcon"
@@ -342,7 +342,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 8
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 8"
           >
             <img
               alt="PlusCircleIcon"
@@ -380,7 +380,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 9
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 9"
           >
             <img
               alt="PlusCircleIcon"
@@ -418,7 +418,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 10
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 10"
           >
             <img
               alt="PlusCircleIcon"
@@ -456,7 +456,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 11
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 11"
           >
             <img
               alt="PlusCircleIcon"
@@ -494,7 +494,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 12
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 12"
           >
             <img
               alt="PlusCircleIcon"
@@ -532,7 +532,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 13
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 13"
           >
             <img
               alt="PlusCircleIcon"
@@ -570,7 +570,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           title 14
           <button
             class="sc-crzoUp jBhFcL"
-            data-testid="button"
+            data-testid="title 14"
           >
             <img
               alt="PlusCircleIcon"

@@ -22,7 +22,7 @@ describe("the FlashCard component", () => {
 
   it('should call the setItem method of session function ', () => {
     ({ container, getByTestId } = renderFlashCard());
-    let Button = getByTestId("button");
+    let Button = getByTestId("title 1");
 
     act(() => {
       fireEvent.click(Button);
@@ -33,7 +33,7 @@ describe("the FlashCard component", () => {
 
   it('should call the RemoveItem method of session function ', () => {
     ({ container, getByTestId } = renderFlashCard());
-    let Button = getByTestId("button");
+    let Button = getByTestId("title 1");
 
     act(() => {
       fireEvent.click(Button);
