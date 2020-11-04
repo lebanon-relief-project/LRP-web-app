@@ -97,7 +97,7 @@ const FlashCardsSection = (props) => {
       <Wrapper>
         {flashCards.map((flashCard, index) => {
           return (
-            <FlashCard key={`${flashCard.title}_${index}`} card={flashCard} />
+            <FlashCard id={`${flashCard.title}_${index}`} key={`${flashCard.title}_${index}`} card={flashCard} />
           );
         })}
       </Wrapper>
