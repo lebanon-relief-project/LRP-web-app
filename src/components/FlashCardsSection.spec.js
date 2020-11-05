@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import FlashCardsSection from "./FlashCardsSection";
+import "jest-styled-components";
 
 jest.mock("./FlashCard", (props) => {
   return (props) => <div>flash card {props.card.title}</div>;

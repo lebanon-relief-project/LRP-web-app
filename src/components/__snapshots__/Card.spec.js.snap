@@ -1,12 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Card component should match the snapshot 1`] = `
+.c1 {
+  font-weight: bold;
+}
+
+.c0 {
+  border: 1px solid grey;
+  width: 25%;
+  padding: 1rem;
+  margin: 3rem 0;
+}
+
 <div>
   <div
-    class="sc-gtssRu bccJvf"
+    class="c0"
   >
     <h2
-      class="sc-bdnylx gpJKAy"
+      class="c1"
     >
       test title
     </h2>

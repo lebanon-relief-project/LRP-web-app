@@ -1,45 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Navbar component should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  width: 20%;
+  height: auto;
+}
+
+.c1 {
+  min-width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 50%;
+}
+
+.c4 {
+  padding: 1rem;
+  width: 100%;
+}
+
 <div>
   <nav
-    class="sc-gXfWUo bOZBtB"
+    class="c0"
   >
     <div
-      class="sc-ciSmjq cbsDoY"
+      class="c1"
     >
       <img
         alt="Logo"
-        class="sc-cBoprd jyrzvy"
+        class="c2"
         src="logo.png"
       />
     </div>
     <ul
-      class="sc-jcwofb irhwtZ"
+      class="c3"
     >
       <li
-        class="sc-carGAA ijVlBE"
+        class="c4"
       >
         <div
           data-testid="link_/"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="c4"
       >
         <div
           data-testid="link_/help"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="c4"
       >
         <div
           data-testid="link_/"
         />
       </li>
       <li
-        class="sc-carGAA ijVlBE"
+        class="c4"
       >
         <div
           data-testid="link_/about"

@@ -1,25 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FooterLink component should match the snapshot 1`] = `
+.c1 {
+  font-weight: bold;
+}
+
+.c0 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c2 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c3 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+@media (max-width:576px) {
+  .c0 {
+    width: 75%;
+  }
+}
+
 <div>
   <div
-    class="sc-gtssRu hNSdtc"
+    class="c0"
   >
     <h2
-      class="sc-bdnylx gpJKAy"
+      class="c1"
     >
       testTitle
     </h2>
     <ul
-      class="sc-dlnjPT cQMtRp"
+      class="c2"
     >
       <li
-        class="sc-hKFyIo igLYdx"
+        class="c3"
       >
         link1
       </li>
       <li
-        class="sc-hKFyIo igLYdx"
+        class="c3"
       >
         link2
       </li>
