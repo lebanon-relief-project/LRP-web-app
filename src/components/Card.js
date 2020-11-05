@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Card = (props) => {
   return (
     <StyledCard>
       <CardTitle>{props.title}</CardTitle>
       <p>{props.text}</p>
-      <button>Learn More</button>
+      <Link to={props.path}>Learn More</Link>
     </StyledCard>
   );
 };

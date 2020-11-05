@@ -1,14 +1,49 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent, } from "@testing-library/react";
 import FlashCard from "./FlashCard";
+import { act } from "react-dom/test-utils";
+
+
+
 
 describe("the FlashCard component", () => {
   let container;
+  let getByTestId;
+
+  const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
+  const removeItemSpy = jest.spyOn(Storage.prototype, 'removeItem');
+
   it("should match the snapshot", () => {
     ({ container } = renderFlashCard());
 
     expect(container).toMatchSnapshot();
   });
+
+
+  it('should call the setItem method of session function ', () => {
+    ({ container, getByTestId } = renderFlashCard());
+    let Button = getByTestId("title 1");
+
+    act(() => {
+      fireEvent.click(Button);
+    });
+  
+    expect(setItemSpy).toHaveBeenCalled()
+  });
+
+  it('should call the RemoveItem method of session function ', () => {
+    ({ container, getByTestId } = renderFlashCard());
+    let Button = getByTestId("title 1");
+
+    act(() => {
+      fireEvent.click(Button);
+    });
+    act(() => {
+      fireEvent.click(Button);
+    });
+    expect(removeItemSpy).toHaveBeenCalled()
+  });
+
 });
 
 const renderFlashCard = () => {

@@ -7,11 +7,17 @@ exports[`the Card component should match the snapshot 1`] = `
   >
     <h2
       class="sc-bdnylx gpJKAy"
-    />
-    <p />
-    <button>
+    >
+      test title
+    </h2>
+    <p>
+      test text
+    </p>
+    <a
+      href="/test"
+    >
       Learn More
-    </button>
+    </a>
   </div>
 </div>
 `;

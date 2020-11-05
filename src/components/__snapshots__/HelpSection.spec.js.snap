@@ -1,17 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the HelpSection component should match the snapshot 1`] = `
-.c3 {
-  font-weight: bold;
-}
-
-.c2 {
-  border: 1px solid grey;
-  width: 25%;
-  padding: 1rem;
-  margin: 3rem 0;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -40,35 +29,11 @@ exports[`the HelpSection component should match the snapshot 1`] = `
     <div
       class="c1"
     >
-      <div
-        class="c2"
-      >
-        <h2
-          class="c3"
-        >
-          I’m looking for help
-        </h2>
-        <p>
-          Lorem lobortis aliquam leo nisi vitae egestas elit. Tellus ultrices et velit luctus. 
-        </p>
-        <button>
-          Learn More
-        </button>
+      <div>
+        I’m looking for help
       </div>
-      <div
-        class="c2"
-      >
-        <h2
-          class="c3"
-        >
-          I’d like to help
-        </h2>
-        <p>
-          Lorem lobortis aliquam leo nisi vitae egestas elit. Tellus ultrices et velit luctus. 
-        </p>
-        <button>
-          Learn More
-        </button>
+      <div>
+        I’d like to help
       </div>
     </div>
   </section>

@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import FeelinsSection from "./FeelingsSection";
+import FeelingsSection from "./FeelingsSection";
 
-describe("the OurMission component", () => {
+describe("the FeelingsSection component", () => {
   let container;
   it("should match the snapshot", () => {
     ({ container } = renderFeelingsSection());
@@ -12,5 +12,5 @@ describe("the OurMission component", () => {
 });
 
 const renderFeelingsSection = () => {
-  return render(<FeelinsSection />);
+  return render(<FeelingsSection />);
 };
