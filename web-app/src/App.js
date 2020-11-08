@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -26,6 +26,15 @@ export const Pages = () => {
 };
 
 const App = () => {
+  const getList = () => {
+    fetch("/health")
+      .then((res) => res.json())
+      .then((list) => console.log(list));
+  };
+
+  useEffect(() => {
+    getList();
+  }, []);
   return (
     <>
       <Router>
