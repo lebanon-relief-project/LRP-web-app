@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import Navbar from "./Navbar";
+import "jest-styled-components";
 
 jest.mock("react-router-dom", () => ({
   Link: ({ to }) => <div data-testid={`link_${to}`}></div>,

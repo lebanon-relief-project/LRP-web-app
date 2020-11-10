@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import App, { Pages } from "./App";
 import { MemoryRouter } from "react-router-dom";
+import "jest-styled-components";
 
 jest.mock("./pages/homePage", (props) => {
   return (props) => <div>Home page</div>;

@@ -1,20 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
+.c1 {
+  width: 50%;
+  padding: 5rem 1rem;
+  margin: 0 12rem;
+  background: inherit;
+}
+
+.c0 {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.c2 {
+  font-weight: bold;
+}
+
+.c3 {
+  margin: 0;
+}
+
 <div>
   <section
-    class="sc-gtssRu bgKeKC"
+    class="c0"
   >
     <div
-      class="sc-bdnylx icjZAh"
+      class="c1"
     >
       <h2
-        class="sc-dlnjPT iGXfwf"
+        class="c2"
       >
         What Happened
       </h2>
       <p
-        class="sc-hKFyIo hqFVHM"
+        class="c3"
       >
         On August 4 an explosion shook Beirut. It was the largest non-nuclear explosion ever recorded. That day 200 people died, 6,500 were injured, and 300,000 were left homeless. This project was developed to support those affected and provide a platform for the community to come together and help each other heal.
       </p>

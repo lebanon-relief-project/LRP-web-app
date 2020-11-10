@@ -23,7 +23,7 @@
   },
   "include": [
     "src/**/*",
-    "test/**/*"
+    "test/**/*", "web-app/styles", "web-app/src/styles/Devices.js"
   ],
   "exclude": [
     "node_modules"

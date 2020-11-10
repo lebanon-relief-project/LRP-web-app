@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import FooterLink from "./FooterLink";
+import "jest-styled-components";
 
 describe("the FooterLink component", () => {
   let container;

@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Card from "./Card";
 import { MemoryRouter } from "react-router-dom";
+import "jest-styled-components";
 
 describe("the Card component", () => {
   let container;

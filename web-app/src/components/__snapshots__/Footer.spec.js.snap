@@ -1,101 +1,169 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Footer component should match the snapshot 1`] = `
+.c3 {
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c4 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c5 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.c7 {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.c0 {
+  background: #f0f0f0;
+  margin: 0;
+  min-height: 5%;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 75%;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 <div>
   <section
-    class="sc-fujyUd kUeWrN"
+    class="c0"
   >
     <div
-      class="sc-gKAblj cyuFLz"
+      class="c1"
     >
       <div
-        class="sc-iCoHVE fSGdCz"
+        class="c2"
       >
-        <div
-          class="sc-gtssRu PuCqs"
+        <h2
+          class="c3"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
-          >
-            I’m looking for help
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
-          >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Terms & Conditions
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Privacy policy
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-gtssRu PuCqs"
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="c4"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
+          <li
+            class="c5"
           >
-            About us
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
+            Terms & Conditions
+          </li>
+          <li
+            class="c5"
           >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              What we do
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Contact us
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-gtssRu PuCqs"
+            Privacy policy
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
         >
-          <h2
-            class="sc-bdnylx gpJKAy"
-          >
-            Partnerships
-          </h2>
-          <ul
-            class="sc-dlnjPT cQMtRp"
-          >
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              How to partner with us
-            </li>
-            <li
-              class="sc-hKFyIo igLYdx"
-            >
-              Working with us
-            </li>
-          </ul>
-        </div>
-        <div
-          class="sc-eCApGN kpYBjI"
+          About us
+        </h2>
+        <ul
+          class="c4"
         >
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <span
-            class="sc-jSFkmK fwHbma"
-          />
-          <p>
-            Lorem lobortis aliquam leo nisi vita
-          </p>
-        </div>
+          <li
+            class="c5"
+          >
+            What we do
+          </li>
+          <li
+            class="c5"
+          >
+            Contact us
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
+        >
+          Partnerships
+        </h2>
+        <ul
+          class="c4"
+        >
+          <li
+            class="c5"
+          >
+            How to partner with us
+          </li>
+          <li
+            class="c5"
+          >
+            Working with us
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c6"
+      >
+        <span
+          class="c7"
+        />
+        <span
+          class="c7"
+        />
+        <span
+          class="c7"
+        />
       </div>
     </div>
   </section>

@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import FeelingsSection from "./FeelingsSection";
+import "jest-styled-components";
 
 describe("the FeelingsSection component", () => {
   let container;

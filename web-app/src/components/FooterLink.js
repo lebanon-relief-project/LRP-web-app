@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import devices from "../styles/Devices";
 
 const FooterLink = (props) => {
   const links = props.links.map((link, index) => (
@@ -18,9 +19,11 @@ const FooterLinkTitle = styled.h2`
 `;
 
 const StyledFooterLink = styled.div`
-  width: 25%;
   padding: 1rem;
   margin: 2rem 0;
+  @media (max-width: ${devices.mobile}) {
+    width: 75%;
+  }
 `;
 
 const StyledList = styled.ul`
