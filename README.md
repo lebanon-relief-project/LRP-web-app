@@ -110,20 +110,31 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the server<br />
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
-The page will reload if you make edits.<br />
+To make edits to the React app you will need to run the server and the app separately
+
+For the server run:
+### `npm start`
+For the react app run:
+### `cd web-app && npm start` 
+
+The page will reload if you make edits to the code inside `web-app` folder.<br />
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode for the express server.<br />
+
+### `cd web-app && npm test`
+
+Launches the test runner in the interactive watch mode for the react app.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the app for production to the `dist` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
