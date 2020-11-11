@@ -6,7 +6,7 @@ applications:
   timeout: 180
   buildpack: sdk-for-nodejs
   disk_quota: 1G
-  memory: 256MB
+  memory: 1G
   domain: eu-de.mybluemix.net
   services:
     - LRN-Cloudant
