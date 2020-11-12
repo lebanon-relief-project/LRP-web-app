@@ -37,7 +37,8 @@
     "rxjs": "^6.5.2",
     "superagent": "^5.2.2",
     "tslib": "^1.11.1",
-    "typedi": "^0.8.0"
+    "typedi": "^0.8.0",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -63,7 +64,6 @@
     "jest-sonar-reporter": "^2.0.0",
     "npm-check": "^5.9.2",
     "pino-pretty": "^3.6.1",
-    "rimraf": "^3.0.2",
     "sonarqube-scanner": "^2.6.0",
     "supertest": "^4.0.2",
     "ts-jest": "^25.3.0",
