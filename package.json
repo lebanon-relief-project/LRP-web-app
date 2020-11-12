@@ -19,8 +19,7 @@
     "start": "npm run serve",
     "serve": "node dist/src",
     "start:dev": "ts-node src | pino-pretty",
-    "upgrade-interactive": "npm-check --update",
-    "rimraf": "./node_modules/rimraf/bin.js"
+    "upgrade-interactive": "npm-check --update"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
