@@ -1,7 +1,7 @@
 ---
 applications:
 - name: LRN-Web-App
-  path: .
+  path: ./web-app
   instances: 1
   timeout: 180
   buildpack: sdk-for-nodejs
