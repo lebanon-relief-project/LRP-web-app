@@ -15,10 +15,8 @@
     "prebuild": "npm run clean",
     "build": "tsc && cd web-app && npm run build && cd .. && cp -R web-app/build/ dist/src/web-app/",
     "swagger": "swaggerGen -c ./swagger.config.json",
-    "prestart:dev": "npm run build",
     "start": "npm run serve",
     "serve": "node dist/src",
-    "start:dev": "ts-node src | pino-pretty",
     "upgrade-interactive": "npm-check --update"
   },
   "dependencies": {
@@ -40,7 +38,6 @@
     "typedi": "^0.8.0"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",
@@ -64,6 +61,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "npm-check": "^5.9.2",
     "pino-pretty": "^3.6.1",
+    "rimraf": "^3.0.2",
     "sonarqube-scanner": "^2.6.0",
     "supertest": "^4.0.2",
     "ts-jest": "^25.3.0",
