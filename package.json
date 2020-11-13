@@ -5,7 +5,7 @@
   "config": {
     "protocol": "http",
     "host": "localhost",
-    "port": 3001,
+    "port": 3000,
     "contextRoot": ""
   },
   "scripts": {
@@ -15,10 +15,8 @@
     "prebuild": "npm run clean",
     "build": "tsc && cd web-app && npm run build && cd .. && cp -R web-app/build/ dist/src/web-app/",
     "swagger": "swaggerGen -c ./swagger.config.json",
-    "prestart": "npm run build",
     "start": "npm run serve",
     "serve": "node dist/src",
-    "start:dev": "ts-node src | pino-pretty",
     "upgrade-interactive": "npm-check --update"
   },
   "dependencies": {
