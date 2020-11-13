@@ -108,15 +108,15 @@ The solution is a web-based platform.
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run build && npm start`
 
 Runs the server<br />
-Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 To make edits to the React app you will need to run the server and the app separately
 
 For the server run:
-### `npm start`
+### `npm run build && npm start`
 For the react app run:
 ### `cd web-app && npm start` 
 
