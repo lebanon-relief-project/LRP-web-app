@@ -37,7 +37,9 @@
     "rxjs": "^6.5.2",
     "superagent": "^5.2.2",
     "tslib": "^1.11.1",
-    "typedi": "^0.8.0",
+    "typedi": "^0.8.0"
+  },
+  "devDependencies": {
     "rimraf": "^3.0.2",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
