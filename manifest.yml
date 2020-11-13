@@ -2,7 +2,7 @@
 applications:
 - name: LRN-Web-App
   instances: 1
-  timeout: 180
+  timeout: 1800
   buildpack: sdk-for-nodejs
   disk_quota: 1G
   memory: 1024MB
