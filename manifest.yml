@@ -1,12 +1,11 @@
 ---
 applications:
-- name: LRN-Web-App
-  instances: 1
-  timeout: 600
-  buildpack: sdk-for-nodejs
-  disk_quota: 1G
-  memory: 1024MB
-  domain: eu-de.mybluemix.net
-  services:
-    - LRN-Cloudant
-
+  - name: LRN-Web-App
+    instances: 1
+    timeout: 180
+    buildpack: sdk-for-nodejs
+    disk_quota: 1G
+    memory: 1024MB
+    domain: eu-de.mybluemix.net
+    services:
+      - LRN-Cloudant
