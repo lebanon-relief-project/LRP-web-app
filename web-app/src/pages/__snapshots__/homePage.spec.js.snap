@@ -2,14 +2,18 @@
 
 exports[`the HomePage component should match the snapshot 1`] = `
 <div>
-  <div>
-    What happened section
-  </div>
-  <div>
-    Our Mission section
-  </div>
-  <div>
-    Help section
+  <div
+    class="sc-bdnylx cKaIKX"
+  >
+    <div>
+      What happened section
+    </div>
+    <div>
+      Our Mission section
+    </div>
+    <div>
+      Help section
+    </div>
   </div>
 </div>
 `;

@@ -1,44 +1,67 @@
 import React from "react";
 import styled from "styled-components";
-import colours from "../styles/Colours";
+import devices from "../styles/Devices";
+
+import {
+  ResponsiveStyledHeader,
+  StyledParagraph,
+  StyledSection,
+  StyledTextArea,
+  ReversableFlexContainer,
+  FlexContainer,
+} from "../styles/GlobalStyles";
+import Hands from "../assets/images/Hands.png";
 
 const OurMission = () => {
   return (
     <StyledSection>
-      <Wrapper>
-        <StyledHeader>Our mission</StyledHeader>
-        <StyledParagraph>
-          Lorem lobortis aliquam leo nisi vitae egestas elit. Tellus ultrices et
-          velit luctus. Justo, in mauris pulvinar cursus velit at sollicitudin.
-          Eget pretium nunc placerat sed at eget est. Exercitation veniam
-          consequat sunt nostrud amet. Pretium nunc placerat sed at eget est.
-          Exercitation veniam consequat sunt nostrud amet.
-        </StyledParagraph>
-      </Wrapper>
+      <FlexContainer>
+        <OrderedStyledTextArea>
+          <ResponsiveStyledHeader>Our mission</ResponsiveStyledHeader>
+          <StyledParagraph>
+            Our mission is to help the residents of Lebanon and individuals from
+            the Lebanese diaspora who experienced a traumatic event regardless
+            of their political and religious affiliations by connecting them to
+            volunteers, to professionals and to each other while suggesting
+            tools that can help them get the support and care they need. Through
+            our platform, we aim to create a healthier, more trauma-informed and
+            resilient Lebanon where those who need help can access self-help
+            solutions and connect with professionals and available support
+            systems..
+          </StyledParagraph>
+        </OrderedStyledTextArea>
+        <ReversableFlexContainer reverse>
+          <ResponsiveStyledHeader mobile isLeft>
+            Our Mission
+          </ResponsiveStyledHeader>
+          <StyledHands src={Hands} alt="Hands" />
+        </ReversableFlexContainer>
+      </FlexContainer>
     </StyledSection>
   );
 };
 
-const Wrapper = styled.div`
-  width: 50%;
-  padding: 5rem 1rem;
-  margin: 0 12rem;
-  background: inherit;
+const OrderedStyledTextArea = styled(StyledTextArea)`
+  @media (max-width: ${devices.mobile}) {
+    order: 2;
+  }
 `;
 
-const StyledSection = styled.section`
-  background: ${colours.white};
-  margin: 0;
-  padding: 0;
-  width: 100%;
-`;
+const StyledHands = styled.img`
+  object-fit: contain;
+  @media (max-width: ${devices.mobile}) {
+    margin-right: 0rem;
+    max-width: 100%;
+    width: 50%;
+    padding-left: 0rem;
+  }
 
-const StyledHeader = styled.h2`
-  font-weight: bold;
-`;
-
-const StyledParagraph = styled.p`
-  margin: 0;
+  @media (max-width: ${devices.ipad}) {
+    width: 80%;
+  }
+  @media (max-width: ${devices.mobile}) {
+    width: 50%;
+  }
 `;
 
 export default OurMission;

@@ -23,6 +23,11 @@ exports[`the FooterLink component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c0 {
     width: 75%;
+    padding: 0;
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
