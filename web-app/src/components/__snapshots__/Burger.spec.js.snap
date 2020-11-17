@@ -22,7 +22,7 @@ exports[`the Burger component should match the snapshot when open is set to fals
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 101;
 }
 
 .c0 span {
@@ -79,7 +79,7 @@ exports[`the Burger component should match the snapshot when open is set to fals
 
 exports[`the Burger component should match the snapshot when open is set to true 1`] = `
 .c0 {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 2rem;
   display: -webkit-box;
@@ -99,7 +99,7 @@ exports[`the Burger component should match the snapshot when open is set to true
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 101;
 }
 
 .c0 span {

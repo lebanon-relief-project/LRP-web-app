@@ -35,16 +35,16 @@ const StyledNav = styled.nav`
 
   @media (max-width: 576px) {
     width: 100%;
-
+    z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: white;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-    height: 100vh;
+    height: 100%;
     text-align: left;
     padding: 2rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transition: transform 0.3s ease-in-out;

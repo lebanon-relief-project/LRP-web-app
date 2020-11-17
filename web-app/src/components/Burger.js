@@ -31,7 +31,7 @@ const StyledBurger = styled.button`
     display: none;
   }
 
-  position: absolute;
+  position: ${({ open }) => (open ? "fixed" : "absolute")};
   top: 5%;
   right: 2rem;
   display: flex;
@@ -43,7 +43,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 101;
   span {
     width: 2rem;
     height: 0.25rem;
