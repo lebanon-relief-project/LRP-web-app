@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { bool, func } from "prop-types";
+import devices from "../styles/Devices";
 
 const Burger = ({ open, setOpen, ...props }) => {
   const isExpanded = open ? true : false;
@@ -27,11 +28,11 @@ Burger.propTypes = {
 };
 
 const StyledBurger = styled.button`
-  @media (min-width: 576px) {
+  @media (min-width: ${devices.mobile}) {
     display: none;
   }
 
-  position: ${({ open }) => (open ? "fixed" : "absolute")};
+  position: fixed;
   top: 5%;
   right: 2rem;
   display: flex;

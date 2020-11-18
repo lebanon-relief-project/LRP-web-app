@@ -2,7 +2,7 @@
 
 exports[`the Burger component should match the snapshot when open is set to false 1`] = `
 .c0 {
-  position: absolute;
+  position: fixed;
   top: 5%;
   right: 2rem;
   display: -webkit-box;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import { Routes } from "../App.js";
 import colours from "../styles/Colours";
+import devices from "../styles/Devices";
 
 const Navbar = ({ open }) => {
   return (
@@ -33,20 +34,17 @@ const Navbar = ({ open }) => {
 const StyledNav = styled.nav`
   display: flex;
 
-  @media (max-width: 576px) {
+  @media (max-width: ${devices.mobile}) {
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: white;
+    background: ${colours.white};;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     height: 100%;
-    text-align: left;
     padding: 2rem;
     position: fixed;
-    top: 0;
-    left: 0;
     transition: transform 0.3s ease-in-out;
 
     a {
@@ -75,7 +73,7 @@ const StyledDiv = styled.div`
 
 const StyledUl = styled.ul`
   display: flex;
-  @media (max-width: 576px) {
+  @media (max-width: ${devices.mobile}) {
     flex-direction: column;
   }
   list-style-type: none;
