@@ -9,13 +9,18 @@ jest.mock("react-router-dom", () => ({
 
 describe("the Navbar component", () => {
   let container;
-  it("should match the snapshot", () => {
-    ({ container } = renderNavbar());
+  it("should match the snapshot when open is true", () => {
+    ({ container } = renderNavbar(true));
+
+    expect(container).toMatchSnapshot();
+  });
+  it("should match the snapshot when open is false", () => {
+    ({ container } = renderNavbar(false));
 
     expect(container).toMatchSnapshot();
   });
 });
 
-const renderNavbar = () => {
-  return render(<Navbar />);
+const renderNavbar = (open) => {
+  return render(<Navbar open={open} />);
 };
