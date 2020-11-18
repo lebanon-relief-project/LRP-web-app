@@ -17,7 +17,8 @@
     "swagger": "swaggerGen -c ./swagger.config.json",
     "start": "npm run serve",
     "serve": "node dist/src",
-    "upgrade-interactive": "npm-check --update"
+    "upgrade-interactive": "npm-check --update",
+    "clear_jest": "jest --clearCache"
   },
   "dependencies": {
     "@cloudant/cloudant": "^4.3.0",

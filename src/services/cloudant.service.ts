@@ -1,20 +1,24 @@
-import { LoggerApi } from "../logger";
-import { Inject, Service } from "typedi";
-import { CloudantServiceApi } from "./cloudant.service.api";
-import { FlashCardsResponse } from "../types/FlashCard";
-import { sampleFlashCardsResponse } from "../types/sampleData/FlashCardSampleData";
+import { DocumentScope, ServerScope } from "@cloudant/cloudant";
+import * as Cloudant from "@cloudant/cloudant";
+import { Service } from "typedi";
 
+import { CloudantCredentials } from "../types/Cloudant";
+import { getCredentials } from "../util/cloudantCreds";
+
+/*
+  This service is to be used internally and does not talk directly to the internet
+*/
 @Service()
-export class CloudantService implements CloudantServiceApi {
-  constructor(@Inject("logger") private logger: LoggerApi) {
-    this.logger = logger.child("CloudantService");
+export class CloudantService {
+  private connection: ServerScope;
+
+  constructor() {
+    const creds: CloudantCredentials = getCredentials();
+    const cloudant = Cloudant(creds);
+    this.connection = cloudant;
   }
 
-  async getFlashCards(): Promise<FlashCardsResponse> {
-    this.logger.info(`getFlashCards(): Getting flashcards from cloudant`);
-
-    const sampleResponse = sampleFlashCardsResponse;
-
-    return sampleResponse;
+  use<T>(database: string): DocumentScope<T> {
+    return this.connection.use(database);
   }
 }
