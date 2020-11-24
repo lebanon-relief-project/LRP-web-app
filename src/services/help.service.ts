@@ -7,6 +7,7 @@ import { sampleFlashCardsResponse } from "../types/sampleData/FlashCardSampleDat
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { CloudantService } from ".";
 import { InternalServerError } from "routing-controllers";
+import { CLOUDANT_FLASHCARD_DB_DEV } from "../statics";
 
 @Service()
 export class HelpService implements HelpServiceApi {
@@ -21,7 +22,7 @@ export class HelpService implements HelpServiceApi {
     this.logger = logger.child("HelpService");
 
     try {
-      this.flashCardDb = cloudant.use("flashcards");
+      this.flashCardDb = cloudant.use(CLOUDANT_FLASHCARD_DB_DEV);
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerError("Service unavailable");
@@ -32,7 +33,9 @@ export class HelpService implements HelpServiceApi {
     this.logger.info(`getFlashCards(): Getting flashcards from cloudant`);
 
     try {
-      // const dbResponse = await this.flashCardDb.list({ include_docs: true });
+      const dbResponse = await this.flashCardDb.list({ include_docs: true });
+
+      console.log("----------------", dbResponse);
 
       const sampleResponse = sampleFlashCardsResponse;
 

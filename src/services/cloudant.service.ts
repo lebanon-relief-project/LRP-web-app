@@ -6,7 +6,8 @@ import { CloudantCredentials } from "../types/Cloudant";
 import { getCredentials } from "../util/cloudantCreds";
 
 /*
-  This service is to be used internally and does not talk directly to the internet
+  This service is used internally to provide cloudant database operations to other services
+  It does not talk directly to the front end (API)
 */
 @Service()
 export class CloudantService {
