@@ -113,12 +113,9 @@ In the project directory, you can run:
 Runs the server<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-To make edits to the React app you will need to run the server and the app separately
+To make edits to the React app you will need to run the server and the app using the following command
 
-For the server run:
-### `npm run build && npm start`
-For the react app run:
-### `cd web-app && npm start` 
+### `npm run dev`
 
 The page will reload if you make edits to the code inside `web-app` folder.<br />
 You will also see any lint errors in the console.
