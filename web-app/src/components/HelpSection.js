@@ -31,8 +31,10 @@ const HelpSection = () => {
 };
 
 const StyledIllustration = styled(Illustration3)`
+  margin-left: 13rem;
   @media (max-width: ${devices.mobile}) {
     max-width: 100%;
+    margin-left: 0rem;
   }
 `;
 
@@ -49,7 +51,7 @@ const CardWrapper = styled.div`
   }
   position: absolute;
   z-index: 1;
-  margin-top: 5rem;
+  margin-top: 12rem;
 `;
 
 const FlexContainer = styled.div`
@@ -60,9 +62,10 @@ const FlexContainer = styled.div`
 `;
 
 const StyledSection = styled.section`
-  margin: 0;
-  padding: 0;
   min-height: 10%;
+  @media (max-width: ${devices.mobile}) {
+   
+  }
 `;
 
 export default HelpSection;

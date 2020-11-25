@@ -18,7 +18,7 @@ const HomePage = () => {
 const StyledPage = styled.div`
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
-    padding: 0px;
+    padding: 5%;
   }
 `;
 

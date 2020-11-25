@@ -12,12 +12,13 @@ const OurMission = () => {
           <StyledTextArea>
             <StyledHeader>Our mission</StyledHeader>
             <StyledParagraph>
-              Lorem lobortis aliquam leo nisi vitae egestas elit. Tellus
-              ultrices et velit luctus. Justo, in mauris pulvinar cursus velit
-              at sollicitudin. Eget pretium nunc placerat sed at eget est.
-              Exercitation veniam consequat sunt nostrud amet. Pretium nunc
-              placerat sed at eget est. Exercitation veniam consequat sunt
-              nostrud amet.
+              Our mission is to help the residents of Lebanon and individuals 
+              from the Lebanese diaspora who experienced a traumatic event regardless 
+              of their political and religious affiliations by connecting them to volunteers, 
+              to professionals and to each other while suggesting tools that can help them get 
+              the support and care they need. Through our platform, we aim to create a healthier, 
+              more trauma-informed and resilient Lebanon where those who need help can access 
+              self-help solutions and connect with professionals and available support systems..
             </StyledParagraph>
           </StyledTextArea>
           <div>
@@ -30,13 +31,18 @@ const OurMission = () => {
 };
 
 const StyledTextArea = styled.div`
+  max-width: 40rem;   
   @media (max-width: ${devices.mobile}) {
     order: 2;
+   max-width: 100%;
   }
+
 `;
 
 const StyledIllustration = styled(Illustration2)`
+  margin-right: 20rem;
   @media (max-width: ${devices.mobile}) {
+    margin-right: 0rem;
     max-width: 100%;
     order: 1;
   }
@@ -49,8 +55,10 @@ const Wrapper = styled.div`
 const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
+  padding-left: 23rem;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
+    padding-left: 0rem;
   }
 `;
 
@@ -62,11 +70,22 @@ const StyledSection = styled.section`
 `;
 
 const StyledHeader = styled.h2`
-  font-weight: bold;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: ${colours.black};
 `;
 
 const StyledParagraph = styled.p`
   margin: 0;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: ${colours.black};
 `;
 
 export default OurMission;
