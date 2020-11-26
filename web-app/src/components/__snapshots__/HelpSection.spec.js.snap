@@ -1,8 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the HelpSection component should match the snapshot 1`] = `
+.c3 {
+  padding: 0 3rem;
+}
+
+.c4 {
+  max-width: 100%;
+  margin-left: 0rem;
+}
+
+.c5 {
+  position: absolute;
+  min-width: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 2rem;
+  right: 15rem;
+}
+
 .c2 {
-  margin-left: 13rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 .c1 {
@@ -10,27 +38,40 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   margin-top: 12rem;
 }
 
-.c0 {
-  min-height: 10%;
+@media (max-width:576px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (min-width:576px) {
+  .c4 {
+    display: none;
+  }
 }
 
 @media (max-width:576px) {
-  .c2 {
-    max-width: 100%;
-    margin-left: 0rem;
+  .c5 {
+    display: none;
+  }
+}
+
+@media (max-width:1025px) {
+  .c5 {
+    right: 0;
   }
 }
 
@@ -46,7 +87,13 @@ exports[`the HelpSection component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-
+  .c0 {
+    margin-right: 0rem;
+    max-width: 100%;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
 }
 
 <div>
@@ -57,18 +104,32 @@ exports[`the HelpSection component should match the snapshot 1`] = `
       class="c1"
     >
       <div>
-        I’m looking for help
-      </div>
-      <div>
         I’d like to help
       </div>
+      <div>
+        I’m looking for help
+      </div>
     </div>
-    <div>
+    <div
+      class="c2"
+    >
       <svg
-        class="c2"
+        class="c3"
       >
         Illustration3.svg
       </svg>
+      <svg
+        class="c4"
+      >
+        Illustration4.svg
+      </svg>
+      <div
+        class="c5"
+      >
+        <div>
+          Try our 7 days challenge
+        </div>
+      </div>
     </div>
   </section>
 </div>

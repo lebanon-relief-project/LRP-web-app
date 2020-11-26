@@ -12,17 +12,19 @@ const OurMission = () => {
           <StyledTextArea>
             <StyledHeader>Our mission</StyledHeader>
             <StyledParagraph>
-              Our mission is to help the residents of Lebanon and individuals 
-              from the Lebanese diaspora who experienced a traumatic event regardless 
-              of their political and religious affiliations by connecting them to volunteers, 
-              to professionals and to each other while suggesting tools that can help them get 
-              the support and care they need. Through our platform, we aim to create a healthier, 
-              more trauma-informed and resilient Lebanon where those who need help can access 
-              self-help solutions and connect with professionals and available support systems..
+              Our mission is to help the residents of Lebanon and individuals
+              from the Lebanese diaspora who experienced a traumatic event
+              regardless of their political and religious affiliations by
+              connecting them to volunteers, to professionals and to each other
+              while suggesting tools that can help them get the support and care
+              they need. Through our platform, we aim to create a healthier,
+              more trauma-informed and resilient Lebanon where those who need
+              help can access self-help solutions and connect with professionals
+              and available support systems..
             </StyledParagraph>
           </StyledTextArea>
           <div>
-            <StyledIllustration />
+            <StyledIllustration2 />
           </div>
         </FlexContainer>
       </Wrapper>
@@ -31,16 +33,14 @@ const OurMission = () => {
 };
 
 const StyledTextArea = styled.div`
-  max-width: 40rem;   
+  width: 40%;
   @media (max-width: ${devices.mobile}) {
     order: 2;
-   max-width: 100%;
+    width: 100%;
   }
-
 `;
 
-const StyledIllustration = styled(Illustration2)`
-  margin-right: 20rem;
+const StyledIllustration2 = styled(Illustration2)`
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;
@@ -55,7 +55,6 @@ const Wrapper = styled.div`
 const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-left: 23rem;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
     padding-left: 0rem;
@@ -65,8 +64,11 @@ const FlexContainer = styled.div`
 const StyledSection = styled.section`
   background: ${colours.white};
   margin: 0;
-  padding: 0;
+  padding: 0 3rem;
   width: 100%;
+  @media (max-width: ${devices.mobile}) {
+    padding: 0;
+  }
 `;
 
 const StyledHeader = styled.h2`

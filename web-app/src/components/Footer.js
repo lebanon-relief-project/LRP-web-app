@@ -17,6 +17,7 @@ const Footer = () => {
           title="Partnerships"
           links={["How to partner with us", "Working with us"]}
         />
+
         <CircularLinkWrapper>
           <CircularLink />
           <CircularLink />
@@ -40,6 +41,9 @@ const CircularLinkWrapper = styled.div`
   display: flex;
   padding: 1rem;
   margin: 2rem 0;
+  @media (max-width: ${devices.mobile}) {
+    order: 1;
+  }
 `;
 
 const CardWrapper = styled.div`

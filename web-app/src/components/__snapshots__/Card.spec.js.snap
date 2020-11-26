@@ -18,17 +18,25 @@ exports[`the Card component should match the snapshot 1`] = `
 }
 
 .c1 {
+  font-family: Playfair Display;
   font-weight: bold;
+  font-size: 24px;
   width: auto;
   padding: 0 0.5rem;
 }
 
 .c0 {
   border: 1px solid #003A8C;
-  width: 25%;
+  width: 30%;
   padding: 1rem;
   margin: 3rem 1rem;
   height: 20%;
+}
+
+@media (max-width:1025px) {
+  .c0 {
+    width: 30%;
+  }
 }
 
 @media (max-width:576px) {
@@ -41,21 +49,18 @@ exports[`the Card component should match the snapshot 1`] = `
 <div>
   <fieldset
     class="c0"
+    title="test title"
   >
     <legend
       class="c1"
+      title="test title"
     >
       test title
     </legend>
-    <p>
-      test text
-    </p>
     <a
       class="c2"
       href="/test"
-    >
-      Learn More
-    </a>
+    />
   </fieldset>
 </div>
 `;

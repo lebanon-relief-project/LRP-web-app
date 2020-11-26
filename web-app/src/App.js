@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/homePage";
 import AboutPage from "./pages/aboutPage";
 import HelpPage from "./pages/helpPage";
-import { Burger } from "./components";
+import MobileNavbar from "./components/MobileNavBar";
 
 export const Routes = {
   HOME: "/",
@@ -45,9 +45,8 @@ const App = () => {
     <>
       <Router>
         <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
+          <MobileNavbar open={open} setOpen={setOpen} />
         </div>
-
         <Navbar open={open} setOpen={setOpen} />
         <Pages />
       </Router>

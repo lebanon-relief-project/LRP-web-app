@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo.svg";
 import { Routes } from "../App.js";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
@@ -33,6 +33,7 @@ const Navbar = ({ open }) => {
 
 const StyledNav = styled.nav`
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
   @media (max-width: ${devices.mobile}) {
     width: 100%;
@@ -40,7 +41,7 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: ${colours.white};;
+    background: ${colours.white};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     height: 100%;
     padding: 2rem;
@@ -61,7 +62,7 @@ const StyledNav = styled.nav`
 
 const LogoImage = styled.img`
   width: 20%;
-  height: auto;
+  height: 90%;
 `;
 
 const StyledDiv = styled.div`
@@ -89,6 +90,11 @@ const StyledLi = styled.li`
 
 const StyledLink = styled(Link)`
   color: ${colours.black};
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
 `;
 
 export default Navbar;

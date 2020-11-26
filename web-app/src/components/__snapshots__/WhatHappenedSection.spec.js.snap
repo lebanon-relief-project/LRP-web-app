@@ -1,13 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
-.c4 {
-  margin-top: 10rem;
-  max-width: 30rem;
+.c5 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
 }
 
-.c3 {
-  padding-left: 10rem;
+.c4 {
+  margin-top: 10rem;
+  width: 40%;
 }
 
 .c2 {
@@ -22,21 +27,11 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 
 .c1 {
   background: inherit;
-  padding-left: 10rem;
 }
 
 .c0 {
   margin: 0;
-  padding: 0;
-}
-
-.c5 {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 46px;
-  color: #000000;
+  padding: 0 3rem;
 }
 
 .c6 {
@@ -54,7 +49,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c4 {
     margin-top: 0rem;
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -76,6 +71,12 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c1 {
     padding-left: 0rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c0 {
+    padding: 0;
   }
 }
 

@@ -13,7 +13,7 @@ const WhatHappened = () => {
           <div>
             <StyledIllustration />
           </div>
-          <StyledTitleTextContainer>
+          <StyledTextArea>
             <StyledHeader>What happened</StyledHeader>
             <StyledParagraph>
               On August 4 an explosion shook Beirut. It was the largest
@@ -22,29 +22,32 @@ const WhatHappened = () => {
               was developed to support those affected and provide a platform for
               the community to come together and help each other heal.
             </StyledParagraph>
-          </StyledTitleTextContainer>
+          </StyledTextArea>
         </FlexContainer>
       </Wrapper>
     </StyledSection>
   );
 };
 
-
-const StyledTitleTextContainer = styled.div`
-  margin-top: 10rem;
-  max-width: 30rem;
-  @media (max-width: ${devices.mobile}) {
-    margin-top: 0rem ;
-    max-width: 100%;
-  }
+const StyledHeader = styled.h2`
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: ${colours.black};
 `;
 
 const StyledTextArea = styled.div`
-  margin:-top: 6rem;
+  margin-top: 10rem;
+  width: 40%;
+  @media (max-width: ${devices.mobile}) {
+    margin-top: 0rem;
+    width: 100%;
+  }
 `;
 
 const StyledIllustration = styled(Illustration1)`
-  padding-left: 10rem;
   @media (max-width: ${devices.mobile}) {
     max-width: 100%;
     padding-left: 0rem;
@@ -61,7 +64,6 @@ const FlexContainer = styled.div`
 
 const Wrapper = styled.div`
   background: inherit;
-  padding-left: 10rem;
   @media (max-width: ${devices.mobile}) {
     padding-left: 0rem;
   }
@@ -69,16 +71,10 @@ const Wrapper = styled.div`
 
 const StyledSection = styled.section`
   margin: 0;
-  padding: 0;
-`;
-
-const StyledHeader = styled.h2`
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 46px;
-  color: ${colours.black};
+  padding: 0 3rem;
+  @media (max-width: ${devices.mobile}) {
+    padding: 0;
+  }
 `;
 
 const StyledParagraph = styled.p`

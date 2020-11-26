@@ -6,10 +6,10 @@ import colours from "../styles/Colours";
 
 const Card = (props) => {
   return (
-    <StyledCard>
-      <CardTitle>{props.title}</CardTitle>
-      <p>{props.text}</p>
-      <StyledLink to={props.path}>Learn More</StyledLink>
+    <StyledCard {...props}>
+      <CardTitle {...props}>{props.title}</CardTitle>
+      {props.children}
+      <StyledLink to={props.path}>{props.buttonText}</StyledLink>
     </StyledCard>
   );
 };
@@ -25,17 +25,23 @@ const StyledLink = styled(Link)`
 `;
 
 const CardTitle = styled.legend`
-  font-weight: bold;
+  font-family: Playfair Display;
+  font-weight: ${(props) => (props.secondary ? 900 : "bold")};
+  font-size: ${(props) => (props.secondary ? "38px" : "24px")};
   width: auto;
-  padding 0 0.5rem;
+  padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
 `;
 
 const StyledCard = styled.fieldset`
-  border: 1px solid ${colours.blue};
-  width: 25%;
+  border: ${(props) =>
+    props.secondary ? "none" : `1px solid ${colours.blue}`};
+  width: ${(props) => (props.secondary ? "40%" : "30%")};
   padding: 1rem;
   margin: 3rem 1rem;
   height: 20%;
+  @media (max-width: ${devices.tablet}) {
+    width: ${(props) => (props.secondary ? "50%" : "30%")};
+  }
   @media (max-width: ${devices.mobile}) {
     width: 90%;
     margin: 1rem auto;

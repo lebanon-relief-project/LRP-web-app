@@ -6,11 +6,12 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .c2 {
   width: 20%;
-  height: auto;
+  height: 90%;
 }
 
 .c1 {
@@ -106,7 +107,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
       <img
         alt="Logo"
         class="c2"
-        src="logo.png"
+        src="logo.svg"
       />
     </div>
     <ul
@@ -151,11 +152,12 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
 
 .c2 {
   width: 20%;
-  height: auto;
+  height: 90%;
 }
 
 .c1 {
@@ -252,7 +254,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
       <img
         alt="Logo"
         class="c2"
-        src="logo.png"
+        src="logo.svg"
       />
     </div>
     <ul

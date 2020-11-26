@@ -23,6 +23,9 @@ const StyledFooterLink = styled.div`
   margin: 2rem 0;
   @media (max-width: ${devices.mobile}) {
     width: 75%;
+    padding: 0;
+    margin: 0;
+    order: 2;
   }
 `;
 
