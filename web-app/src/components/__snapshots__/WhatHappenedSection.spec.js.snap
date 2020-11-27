@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
-.c5 {
+.c4 {
+  display: none;
   font-family: Playfair Display;
   font-style: normal;
   font-weight: 900;
@@ -10,12 +11,39 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   color: #000000;
 }
 
-.c4 {
+.c6 {
+  display: block;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.c7 {
+  margin: 0;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.c0 {
+  background: #ffffff;
+  margin: 0;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.c5 {
   margin-top: 10rem;
   width: 40%;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,43 +53,57 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   flex-direction: row;
 }
 
-.c1 {
-  background: inherit;
-}
-
-.c0 {
-  margin: 0;
-  padding: 0 3rem;
-}
-
-.c6 {
-  margin: 0;
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000000;
 }
 
 @media (max-width:576px) {
   .c4 {
+    display: block;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    font-weight: 900;
+    font-size: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    display: none;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    font-weight: 900;
+    font-size: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .c0 {
+    padding: 0;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c5 {
     margin-top: 0rem;
     width: 100%;
   }
 }
 
 @media (max-width:576px) {
-  .c3 {
-    max-width: 100%;
-    padding-left: 0rem;
-  }
-}
-
-@media (max-width:576px) {
-  .c2 {
+  .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -69,14 +111,10 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c1 {
+  .c3 {
+    width: 50%;
+    max-width: 100%;
     padding-left: 0rem;
-  }
-}
-
-@media (max-width:576px) {
-  .c0 {
-    padding: 0;
   }
 }
 
@@ -90,27 +128,30 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
       <div
         class="c2"
       >
-        <div>
-          <svg
-            class="c3"
-          >
-            Illustration1.svg
-          </svg>
-        </div>
-        <div
+        <img
+          alt="City"
+          class="c3"
+          src="City.png"
+        />
+        <h2
           class="c4"
         >
-          <h2
-            class="c5"
-          >
-            What happened
-          </h2>
-          <p
-            class="c6"
-          >
-            On August 4 an explosion shook Beirut. It was the largest non-nuclear explosion ever recorded. That day 200 people died, 6,500 were injured, and 300,000 were left homeless. This project was developed to support those affected and provide a platform for the community to come together and help each other heal.
-          </p>
-        </div>
+          What happened
+        </h2>
+      </div>
+      <div
+        class="c5"
+      >
+        <h2
+          class="c6"
+        >
+          What happened
+        </h2>
+        <p
+          class="c7"
+        >
+          On August 4 an explosion shook Beirut. It was the largest non-nuclear explosion ever recorded. That day 200 people died, 6,500 were injured, and 300,000 were left homeless. This project was developed to support those affected and provide a platform for the community to come together and help each other heal.
+        </p>
       </div>
     </div>
   </section>

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { bool, func } from "prop-types";
 
 const Burger = ({ open, setOpen, ...props }) => {
   const isExpanded = open ? true : false;
