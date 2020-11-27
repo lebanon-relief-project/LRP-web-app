@@ -47,7 +47,7 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   justify-content: center;
   width: 100%;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   margin-top: 12rem;
 }
 

@@ -121,7 +121,7 @@ const CardWrapper = styled.div`
     margin: 0;
   }
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   margin-top: 12rem;
 `;
 

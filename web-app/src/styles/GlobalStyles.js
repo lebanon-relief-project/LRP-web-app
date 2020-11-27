@@ -36,6 +36,7 @@ export const StyledSection = styled.section`
   margin: 0;
   padding: 0 3rem;
   width: 100%;
+  padding-top: 1rem;
   @media (max-width: ${devices.mobile}) {
     padding: 0;
     margin-top: ${(props) => (props.padded ? "5rem" : "0")};

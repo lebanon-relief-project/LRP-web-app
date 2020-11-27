@@ -36,6 +36,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   margin: 0;
   padding: 0 3rem;
   width: 100%;
+  padding-top: 1rem;
 }
 
 .c5 {

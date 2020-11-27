@@ -29,7 +29,7 @@ const StyledNav = styled.nav`
 
   height: 10vh;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 `;
 
 const LogoImage = styled.img`
