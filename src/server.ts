@@ -16,7 +16,7 @@ import {
 const config = npmPackage.config || {
   protocol: "http",
   host: "localhost",
-  port: 3001,
+  port: 3000,
   "context-root": "/",
 };
 const configApiContext = config["context-root"];
@@ -42,11 +42,13 @@ export class ApiServer {
     });
     this.logger.apply(this.app);
 
-    this.app.use(express.static(path.join(__dirname, "web-app/")));
+    if (!process.env.DEV) {
+      this.app.use(express.static(path.join(__dirname, "web-app/")));
 
-    this.app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname + "/web-app/index.html"));
-    });
+      this.app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname + "/web-app/index.html"));
+      });
+    }
   }
 
   /**

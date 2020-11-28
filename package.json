@@ -18,7 +18,8 @@
     "start": "npm run serve",
     "serve": "node dist/src",
     "upgrade-interactive": "npm-check --update",
-    "clear_jest": "jest --clearCache"
+    "clear_jest": "jest --clearCache",
+    "dev": "concurrently --kill-others \"DEV=true ts-node src/\" \"cd web-app && npm start\""
   },
   "dependencies": {
     "@cloudant/cloudant": "^4.3.0",
@@ -26,6 +27,7 @@
     "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
     "cls-hooked": "^4.2.2",
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "express-pino-logger": "^4.0.0",
     "jaeger-client": "^3.18.0",
