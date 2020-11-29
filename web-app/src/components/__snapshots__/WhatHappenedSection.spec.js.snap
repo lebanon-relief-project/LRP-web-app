@@ -62,7 +62,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  width: 60%;
+  width: 50%;
 }
 
 .c2 {
@@ -116,6 +116,12 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    width: 60%;
   }
 }
 

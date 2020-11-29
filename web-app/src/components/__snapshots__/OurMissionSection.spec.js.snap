@@ -62,7 +62,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  width: 60%;
+  width: 50%;
 }
 
 .c8 {
@@ -112,6 +112,12 @@ exports[`the OurMission component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width:768px) {
+  .c6 {
+    width: 60%;
   }
 }
 

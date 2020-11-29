@@ -64,7 +64,10 @@ export const ReversableFlexContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
-  width: 60%;
+  width: 50%;
+  @media (max-width: ${devices.ipad}) {
+    width: 60%;
+  }
   @media (max-width: ${devices.mobile}) {
     width: 100%;
   }
