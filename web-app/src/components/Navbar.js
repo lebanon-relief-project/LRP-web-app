@@ -46,7 +46,9 @@ const StyledNav = styled.nav`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   z-index: 2;
-  padding: 1rem 0;
+  @media (max-width: ${devices.ipad}) {
+    padding: 1rem 0;
+  }
   @media (max-width: ${devices.mobile}) {
     width: 100%;
     z-index: 1;
