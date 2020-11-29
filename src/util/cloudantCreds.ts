@@ -11,7 +11,7 @@ export function getCredentials(): CloudantCredentials {
   const host = VCAP.cloudantNoSQLDB[0].credentials.url;
 
   return {
-    url: `${host}`,
-    apiKey: `${apiKey}`,
+    url: host,
+    apiKey: apiKey,
   };
 }

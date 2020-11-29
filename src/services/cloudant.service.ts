@@ -15,7 +15,12 @@ export class CloudantService {
 
   constructor() {
     const creds: CloudantCredentials = getCredentials();
-    const cloudant = Cloudant(creds);
+    const cloudant = Cloudant({
+      url: creds.url,
+      plugins: {
+        iamauth: { iamApiKey: creds.apiKey },
+      },
+    });
     this.connection = cloudant;
   }
 
