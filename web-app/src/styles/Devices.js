@@ -1,4 +1,5 @@
 export default {
   mobile: "576px",
-  tablet: "1025px",
+  ipad: "768px",
+  ipadpro: "1025px",
 };

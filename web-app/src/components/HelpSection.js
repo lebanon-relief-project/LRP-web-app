@@ -12,18 +12,6 @@ const HelpSection = () => {
       <StyledSection>
         <CardWrapper>
           <Card
-            title="I’d like to help"
-            path={Routes.HELP}
-            buttonText="Learn More"
-          >
-            <p>
-              Do you have a close one who underwent trauma, but you need
-              direction on how to help, what to say, what to do and how to
-              protect yourself? Or do you want to help those who are undergoing
-              trauma and looking for opportunities to do so?
-            </p>
-          </Card>
-          <Card
             title="I’m looking for help"
             path={Routes.HELP}
             buttonText="Learn More"
@@ -31,9 +19,26 @@ const HelpSection = () => {
             <p>
               Everyone deals with trauma differently. Every experience is
               different, and everyone copes differently. There isn’t a “one fits
-              all solution” when it comes to healing. Our ambition is to help
-              deal with trauma through surfacing the right tools based on each
-              person’s needs.
+              all solution” when it comes to healing.
+            </p>
+            <p>
+              Our ambition is to help deal with trauma through surfacing the
+              right tools based on each person’s needs.
+            </p>
+          </Card>
+          <Card
+            title="I’d like to help"
+            path={Routes.HELP}
+            buttonText="Learn More"
+          >
+            <p>
+              Do you have a close one who underwent trauma, but you need
+              direction on how to help, what to say, what to do and how to
+              protect yourself?
+            </p>
+            <p>
+              Or do you want to help those who are undergoing trauma and looking
+              for opportunities to do so?
             </p>
           </Card>
         </CardWrapper>
@@ -90,8 +95,6 @@ const StyledIllustration4 = styled(Illustration4)`
 
 const ChallengeCard = styled.div`
   position: absolute;
-  min-width: 100%;
-  justify-content: flex-end;
   display: flex;
   bottom: 2rem;
   right: 15rem;
@@ -99,7 +102,8 @@ const ChallengeCard = styled.div`
   @media (max-width: ${devices.mobile}) {
     display: none;
   }
-  @media (max-width: ${devices.tablet}) {
+
+  @media (max-width: ${devices.ipadpro}) {
     right: 0;
   }
 `;
@@ -126,6 +130,7 @@ const CardWrapper = styled.div`
 `;
 
 const StyledSection = styled.section`
+  position: relative;
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;

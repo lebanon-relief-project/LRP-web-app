@@ -35,12 +35,13 @@ const CardTitle = styled.legend`
 const StyledCard = styled.fieldset`
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
-  width: ${(props) => (props.secondary ? "40%" : "30%")};
+  width: ${(props) => (props.secondary ? "100%" : "30%")};
   padding: 1rem;
   margin: 3rem 1rem;
   height: 20%;
-  @media (max-width: ${devices.tablet}) {
-    width: ${(props) => (props.secondary ? "50%" : "30%")};
+  background-color: white;
+  @media (max-width: ${devices.ipadpro}) {
+    width: ${(props) => (props.secondary ? "100%" : "40%")};
   }
   @media (max-width: ${devices.mobile}) {
     width: 90%;

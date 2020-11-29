@@ -35,8 +35,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
   background: #ffffff;
   margin: 0;
   padding: 0 3rem;
-  width: 100%;
-  padding-top: 1rem;
+  max-width: 100%;
 }
 
 .c2 {
@@ -63,6 +62,11 @@ exports[`the OurMission component should match the snapshot 1`] = `
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  width: 60%;
+}
+
+.c8 {
+  object-fit: contain;
 }
 
 @media (max-width:576px) {
@@ -112,6 +116,12 @@ exports[`the OurMission component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
+  .c6 {
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
   .c3 {
     -webkit-order: 2;
     -ms-flex-order: 2;
@@ -125,6 +135,18 @@ exports[`the OurMission component should match the snapshot 1`] = `
     max-width: 100%;
     width: 50%;
     padding-left: 0rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c8 {
+    width: 80%;
+  }
+}
+
+@media (max-width:576px) {
+  .c8 {
+    width: 50%;
   }
 }
 

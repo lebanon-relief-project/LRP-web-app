@@ -48,11 +48,19 @@ const OrderedStyledTextArea = styled(StyledTextArea)`
 `;
 
 const StyledHands = styled.img`
+  object-fit: contain;
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;
     width: 50%;
     padding-left: 0rem;
+  }
+
+  @media (max-width: ${devices.ipad}) {
+    width: 80%;
+  }
+  @media (max-width: ${devices.mobile}) {
+    width: 50%;
   }
 `;
 

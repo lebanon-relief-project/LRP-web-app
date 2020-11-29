@@ -14,7 +14,7 @@ import {
 const WhatHappened = () => {
   return (
     <StyledSection padded>
-      <FlexContainer>
+      <StyledFlexContainer>
         <ReversableFlexContainer>
           <StyledCity src={City} alt="City" />
           <ResponsiveStyledHeader mobile>What happened</ResponsiveStyledHeader>
@@ -29,12 +29,27 @@ const WhatHappened = () => {
             community to come together and help each other heal.
           </StyledParagraph>
         </StyledTextArea>
-      </FlexContainer>
+      </StyledFlexContainer>
     </StyledSection>
   );
 };
 
+const StyledFlexContainer = styled(FlexContainer)`
+  padding-top: 7rem;
+  @media (max-width: ${devices.ipad}) {
+    padding-top: 3rem;
+  }
+  @media (max-width: ${devices.mobile}) {
+    padding-top: 0;
+  }
+`;
+
 const StyledCity = styled.img`
+  object-fit: contain;
+
+  @media (max-width: ${devices.ipad}) {
+    width: 80%;
+  }
   @media (max-width: ${devices.mobile}) {
     width: 50%;
     max-width: 100%;

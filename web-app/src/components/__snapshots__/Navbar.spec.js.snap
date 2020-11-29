@@ -11,6 +11,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
   z-index: 2;
+  padding: 1rem 0;
 }
 
 .c2 {
@@ -101,6 +102,16 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   }
 }
 
+@media (max-width:768px) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
 <div>
   <nav
     class="c0"
@@ -121,28 +132,28 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/help"
+          data-testid="navlink_/help"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/about"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/about"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>
@@ -161,6 +172,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
   z-index: 2;
+  padding: 1rem 0;
 }
 
 .c2 {
@@ -251,6 +263,16 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   }
 }
 
+@media (max-width:768px) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
 <div>
   <nav
     class="c0"
@@ -272,28 +294,28 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/help"
+          data-testid="navlink_/help"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/about"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/about"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>

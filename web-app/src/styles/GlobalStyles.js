@@ -35,8 +35,8 @@ export const StyledSection = styled.section`
   background: ${colours.white};
   margin: 0;
   padding: 0 3rem;
-  width: 100%;
-  padding-top: 1rem;
+  max-width: 100%;
+
   @media (max-width: ${devices.mobile}) {
     padding: 0;
     margin-top: ${(props) => (props.padded ? "5rem" : "0")};
@@ -64,4 +64,8 @@ export const ReversableFlexContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
+  width: 60%;
+  @media (max-width: ${devices.mobile}) {
+    width: 100%;
+  }
 `;
