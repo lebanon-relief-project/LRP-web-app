@@ -1,4 +1,7 @@
-import { sampleFlashCards } from "../types/sampleData/FlashCardSampleData";
+import {
+  sampleFlashCards,
+  sampleFlashCardsCloudantResponse,
+} from "../types/sampleData/FlashCardSampleData";
 import Container from "typedi";
 import { CloudantService, HelpService } from ".";
 
@@ -24,6 +27,7 @@ describe("The help service", () => {
 
   describe("the getFlashCards() function", () => {
     beforeEach(async () => {
+      mockList.mockResolvedValue(sampleFlashCardsCloudantResponse);
       result = await helpService.getFlashCards();
     });
 
@@ -32,7 +36,61 @@ describe("The help service", () => {
     });
 
     it("should return a flashcard from the cloudant database", async () => {
-      expect(result.cards).toEqual(sampleFlashCards);
+      expect(result).toEqual({
+        cards: [
+          {
+            _id: "some random _id 1",
+            title: "some random title 1",
+            body: "some random body 1",
+          },
+          {
+            _id: "some random _id 2",
+            title: "some random title 2",
+            body: "some random body 2",
+          },
+        ],
+      });
+    });
+
+    it("should return empty array if no flash cards are retrieved", async () => {
+      mockList.mockResolvedValue({ total_rows: 0, rows: [] });
+      result = await helpService.getFlashCards();
+
+      expect(result.cards).toEqual([]);
+    });
+
+    it("should skip flashcard if the cloudant doc is undefined", async () => {
+      mockList.mockResolvedValue({
+        total_rows: 2,
+        offset: 0,
+        rows: [
+          {
+            id: "some random id 1",
+            key: "some random key 1",
+            value: {},
+            doc: undefined,
+          },
+          {
+            id: "some random id 2",
+            key: "some random key 2",
+            value: {},
+            doc: {
+              _id: "some random _id 2",
+              title: "some random title 2",
+              body: "some random body 2",
+            },
+          },
+        ],
+      });
+      result = await helpService.getFlashCards();
+
+      expect(result.cards).toEqual([
+        {
+          _id: "some random _id 2",
+          title: "some random title 2",
+          body: "some random body 2",
+        },
+      ]);
     });
 
     it("should throw an error if the db connection fails", async () => {

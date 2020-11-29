@@ -34,12 +34,14 @@ export class HelpService implements HelpServiceApi {
 
     try {
       const dbResponse = await this.flashCardDb.list({ include_docs: true });
+      const response = { cards: [] };
 
-      console.log("----------------", dbResponse);
+      // _rev should not be returned to client
+      dbResponse.rows.forEach((row) => {
+        if (row.doc) response.cards.push(row.doc);
+      });
 
-      const sampleResponse = sampleFlashCardsResponse;
-
-      return sampleResponse;
+      return response;
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerError(
