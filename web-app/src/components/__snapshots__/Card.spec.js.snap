@@ -23,6 +23,7 @@ exports[`the Card component should match the snapshot 1`] = `
   font-size: 24px;
   width: auto;
   padding: 0 0.5rem;
+  text-align: center;
 }
 
 .c0 {

@@ -30,6 +30,7 @@ const CardTitle = styled.legend`
   font-size: ${(props) => (props.secondary ? "38px" : "24px")};
   width: auto;
   padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
+  text-align: ${(props) => (props.secondary ? "left" : "center")};
 `;
 
 const StyledCard = styled.fieldset`
