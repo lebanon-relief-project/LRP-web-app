@@ -106,7 +106,9 @@ The solution is a web-based platform.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In order to run the backend locally you need to export the VCAP_SERVICES environment variable which can be found in the team slack channel.
+
+After you have done this in the project directory, you can run:
 
 ### `npm run build && npm start`
 
