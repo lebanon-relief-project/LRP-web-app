@@ -1,44 +1,60 @@
 import React from "react";
-
 import styled from "styled-components";
-import colours from "../styles/Colours";
+import devices from "../styles/Devices";
+import City from "../assets/images/City.png";
+import {
+  ResponsiveStyledHeader,
+  StyledParagraph,
+  StyledSection,
+  StyledTextArea,
+  ReversableFlexContainer,
+  FlexContainer,
+} from "../styles/GlobalStyles";
 
 const WhatHappened = () => {
   return (
-    <StyledSection>
-      <Wrapper>
-        <StyledHeader>What Happened</StyledHeader>
-        <StyledParagraph>
-          On August 4 an explosion shook Beirut. It was the largest non-nuclear
-          explosion ever recorded. That day 200 people died, 6,500 were injured,
-          and 300,000 were left homeless. This project was developed to support
-          those affected and provide a platform for the community to come
-          together and help each other heal.
-        </StyledParagraph>
-      </Wrapper>
+    <StyledSection padded>
+      <StyledFlexContainer>
+        <ReversableFlexContainer>
+          <StyledCity src={City} alt="City" />
+          <ResponsiveStyledHeader mobile>What happened</ResponsiveStyledHeader>
+        </ReversableFlexContainer>
+        <StyledTextArea>
+          <ResponsiveStyledHeader>What happened</ResponsiveStyledHeader>
+          <StyledParagraph>
+            On August 4 an explosion shook Beirut. It was the largest
+            non-nuclear explosion ever recorded. That day 200 people died, 6,500
+            were injured, and 300,000 were left homeless. This project was
+            developed to support those affected and provide a platform for the
+            community to come together and help each other heal.
+          </StyledParagraph>
+        </StyledTextArea>
+      </StyledFlexContainer>
     </StyledSection>
   );
 };
 
-const Wrapper = styled.div`
-  width: 50%;
-  padding: 5rem 1rem;
-  margin: 0 12rem;
-  background: inherit;
+const StyledFlexContainer = styled(FlexContainer)`
+  padding-top: 7rem;
+  @media (max-width: ${devices.ipad}) {
+    padding-top: 3rem;
+  }
+  @media (max-width: ${devices.mobile}) {
+    padding-top: 0;
+  }
 `;
 
-const StyledSection = styled.section`
-  background: ${colours.lightGrey};
-  margin: 0;
-  padding: 0;
-`;
+const StyledCity = styled.img`
+  object-fit: contain;
 
-const StyledHeader = styled.h2`
-  font-weight: bold;
-`;
-
-const StyledParagraph = styled.p`
-  margin: 0;
+  @media (max-width: ${devices.ipad}) {
+    width: 80%;
+  }
+  @media (max-width: ${devices.mobile}) {
+    width: 50%;
+    max-width: 100%;
+    padding-left: 0rem;
+  }
 `;
 
 export default WhatHappened;

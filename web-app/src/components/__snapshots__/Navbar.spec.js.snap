@@ -2,15 +2,20 @@
 
 exports[`the Navbar component should match the snapshot when open is false 1`] = `
 .c0 {
+  position: fixed;
+  min-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  z-index: 2;
 }
 
 .c2 {
   width: 20%;
-  height: auto;
+  height: 90%;
 }
 
 .c1 {
@@ -45,10 +50,16 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   width: 100%;
 }
 
+@media (max-width:768px) {
+  .c0 {
+    padding: 1rem 0;
+  }
+}
+
 @media (max-width:576px) {
   .c0 {
     width: 100%;
-    z-index: 10;
+    z-index: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -96,6 +107,16 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   }
 }
 
+@media (max-width:768px) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
 <div>
   <nav
     class="c0"
@@ -106,7 +127,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
       <img
         alt="Logo"
         class="c2"
-        src="logo.png"
+        src="logo.svg"
       />
     </div>
     <ul
@@ -116,28 +137,28 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/help"
+          data-testid="navlink_/help"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/about"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/about"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>
@@ -147,15 +168,20 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 
 exports[`the Navbar component should match the snapshot when open is true 1`] = `
 .c0 {
+  position: fixed;
+  min-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  z-index: 2;
 }
 
 .c2 {
   width: 20%;
-  height: auto;
+  height: 90%;
 }
 
 .c1 {
@@ -190,10 +216,16 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   width: 100%;
 }
 
+@media (max-width:768px) {
+  .c0 {
+    padding: 1rem 0;
+  }
+}
+
 @media (max-width:576px) {
   .c0 {
     width: 100%;
-    z-index: 10;
+    z-index: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -241,6 +273,16 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   }
 }
 
+@media (max-width:768px) {
+  .c4 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
 <div>
   <nav
     class="c0"
@@ -252,7 +294,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
       <img
         alt="Logo"
         class="c2"
-        src="logo.png"
+        src="logo.svg"
       />
     </div>
     <ul
@@ -262,28 +304,28 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/help"
+          data-testid="navlink_/help"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/"
+          data-testid="navlink_/about"
         />
       </li>
       <li
         class="c4"
       >
         <div
-          data-testid="link_/about"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { bool, func } from "prop-types";
-import devices from "../styles/Devices";
 
 const Burger = ({ open, setOpen, ...props }) => {
   const isExpanded = open ? true : false;
@@ -22,36 +20,28 @@ const Burger = ({ open, setOpen, ...props }) => {
   );
 };
 
-Burger.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired,
-};
-
 const StyledBurger = styled.button`
-  @media (min-width: ${devices.mobile}) {
-    display: none;
-  }
-
-  position: fixed;
-  top: 5%;
-  right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  position: fixed;
+  top: 3%;
+  right: 2rem;
   width: 2rem;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 101;
+
   span {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "black" : "black")};
+    background: black;
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
+
     transform-origin: 1px;
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};

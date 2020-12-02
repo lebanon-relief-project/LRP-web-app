@@ -5,6 +5,7 @@ import "jest-styled-components";
 
 jest.mock("react-router-dom", () => ({
   Link: ({ to }) => <div data-testid={`link_${to}`}></div>,
+  NavLink: ({ to }) => <div data-testid={`navlink_${to}`}></div>,
 }));
 
 describe("the Navbar component", () => {

@@ -6,5 +6,7 @@ export default {
   lightestGrey: "#F5F5F5",
   gold: "#FFD666",
   lightBlue: "#BAE7FF",
-  darkBlue: "#002766"
+  blue: "#003A8C",
+  darkBlue: "#002766",
+  yellow: "#FFD666",
 };

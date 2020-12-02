@@ -2,9 +2,6 @@
 
 exports[`the Burger component should match the snapshot when open is set to false 1`] = `
 .c0 {
-  position: fixed;
-  top: 5%;
-  right: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,13 +13,15 @@ exports[`the Burger component should match the snapshot when open is set to fals
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
+  position: fixed;
+  top: 3%;
+  right: 2rem;
   width: 2rem;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 101;
 }
 
 .c0 span {
@@ -57,12 +56,6 @@ exports[`the Burger component should match the snapshot when open is set to fals
   transform: rotate(0);
 }
 
-@media (min-width:576px) {
-  .c0 {
-    display: none;
-  }
-}
-
 <div>
   <button
     aria-expanded="false"
@@ -79,9 +72,6 @@ exports[`the Burger component should match the snapshot when open is set to fals
 
 exports[`the Burger component should match the snapshot when open is set to true 1`] = `
 .c0 {
-  position: fixed;
-  top: 5%;
-  right: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,13 +83,15 @@ exports[`the Burger component should match the snapshot when open is set to true
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
+  position: fixed;
+  top: 3%;
+  right: 2rem;
   width: 2rem;
   height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 101;
 }
 
 .c0 span {
@@ -132,12 +124,6 @@ exports[`the Burger component should match the snapshot when open is set to true
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-}
-
-@media (min-width:576px) {
-  .c0 {
-    display: none;
-  }
 }
 
 <div>
