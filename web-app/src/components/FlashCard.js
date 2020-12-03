@@ -6,7 +6,7 @@ import TickCircleIcon from "../assets/images/TickCircle.svg";
 import SampleCardPicture from "../assets/images/SampleCardPicture.png";
 import { useSpring, animated as a } from "react-spring";
 
-const FlashCard = ({card, id}) => {
+const FlashCard = ({ card, id }) => {
   const [flipped, setFlipped] = useState(false);
   const [selected, setSelected] = useState(false);
 
@@ -26,25 +26,23 @@ const FlashCard = ({card, id}) => {
 
   // This function is called when the user clicks the plus or tick button
   // The conditional logic is reversed because useState is async
-  const cardSelectHandler = (
-  ) => {
+  const cardSelectHandler = () => {
     if (!selected) {
       sessionStorage.setItem(id, card.title);
     } else {
       sessionStorage.removeItem(id);
     }
     setSelected(!selected);
-  }
-
+  };
 
   return (
     <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
       {/* Card title and button */}
       <StyledHeader>
         {card.title}
-        <FlashCardButton 
-        data-testid={card.title}
-        onClick={() => cardSelectHandler()}
+        <FlashCardButton
+          data-testid={card.title}
+          onClick={() => cardSelectHandler()}
         >
           {selected ? (
             <CircleIcon
@@ -92,9 +90,7 @@ const FlashCard = ({card, id}) => {
             position: "absolute",
           }}
         >
-          Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam
-          elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum
-          neque praesen
+          {card.body}
         </a.div>
       </ImageWrapper>
     </Wrapper>

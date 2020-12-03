@@ -106,7 +106,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       <div
         style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
       >
-        Ut quam turpis diam sed lacus, id nibh mauris etiam. Aenean nullam elementum laoreet laoreet nec, amet lacus, sed. Libero erat vestibulum neque praesen
+        text 1
       </div>
     </div>
   </div>

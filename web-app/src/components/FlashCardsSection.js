@@ -1,103 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
-
-const flashCard1 = {
-  title: "title 1",
-  text: "text 1",
-  image: "image url",
-};
-const flashCard2 = {
-  title: "title 2",
-  text: "text 2",
-  image: "image url",
-};
-const flashCard3 = {
-  title: "title 3",
-  text: "text 3",
-  image: "image url",
-};
-const flashCard4 = {
-  title: "title 4",
-  text: "text 4",
-  image: "image url",
-};
-const flashCard5 = {
-  title: "title 5",
-  text: "text 5",
-  image: "image url",
-};
-const flashCard6 = {
-  title: "title 6",
-  text: "text 6",
-  image: "image url",
-};
-const flashCard7 = {
-  title: "title 7",
-  text: "text 7",
-  image: "image url",
-};
-const flashCard8 = {
-  title: "title 8",
-  text: "text 8",
-  image: "image url",
-};
-const flashCard9 = {
-  title: "title 9",
-  text: "text 9",
-  image: "image url",
-};
-const flashCard10 = {
-  title: "title 10",
-  text: "text 10",
-  image: "image url",
-};
-const flashCard11 = {
-  title: "title 11",
-  text: "text 11",
-  image: "image url",
-};
-const flashCard12 = {
-  title: "title 12",
-  text: "text 12",
-  image: "image url",
-};
-const flashCard13 = {
-  title: "title 13",
-  text: "text 13",
-  image: "image url",
-};
-const flashCard14 = {
-  title: "title 14",
-  text: "text 14",
-  image: "image url",
-};
-
-const flashCards = [
-  flashCard1,
-  flashCard2,
-  flashCard3,
-  flashCard4,
-  flashCard5,
-  flashCard6,
-  flashCard7,
-  flashCard8,
-  flashCard9,
-  flashCard10,
-  flashCard11,
-  flashCard12,
-  flashCard13,
-  flashCard14,
-];
+import { getFlashCards } from "../services/flashCards.service";
 
 const FlashCardsSection = (props) => {
+  const [flashCards, setFlashCards] = useState([]);
+  const fetchFlashCards = async () => {
+    let response = await getFlashCards();
+
+    setFlashCards(response.cards);
+  };
+
+  useEffect(() => {
+    fetchFlashCards();
+  }, []);
+
   return (
     <StyledSection>
       <Wrapper>
         {flashCards.map((flashCard, index) => {
           return (
-            <FlashCard id={`${flashCard.title}_${index}`} key={`${flashCard.title}_${index}`} card={flashCard} />
+            <FlashCard
+              id={`${flashCard._id}`}
+              key={`${flashCard._id}_${index}`}
+              card={flashCard}
+            />
           );
         })}
       </Wrapper>

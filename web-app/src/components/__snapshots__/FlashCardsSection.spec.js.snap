@@ -69,59 +69,7 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
     >
       <div>
         flash card 
-        title 1
-      </div>
-      <div>
-        flash card 
-        title 2
-      </div>
-      <div>
-        flash card 
-        title 3
-      </div>
-      <div>
-        flash card 
-        title 4
-      </div>
-      <div>
-        flash card 
-        title 5
-      </div>
-      <div>
-        flash card 
-        title 6
-      </div>
-      <div>
-        flash card 
-        title 7
-      </div>
-      <div>
-        flash card 
-        title 8
-      </div>
-      <div>
-        flash card 
-        title 9
-      </div>
-      <div>
-        flash card 
-        title 10
-      </div>
-      <div>
-        flash card 
-        title 11
-      </div>
-      <div>
-        flash card 
-        title 12
-      </div>
-      <div>
-        flash card 
-        title 13
-      </div>
-      <div>
-        flash card 
-        title 14
+        random title
       </div>
     </div>
     <button
