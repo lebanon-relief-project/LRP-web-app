@@ -45,7 +45,7 @@ describe("the FlashCard component", () => {
 const renderFlashCard = () => {
   const flashCard1 = {
     title: "title 1",
-    text: "text 1",
+    body: "text 1",
     image: "image url",
   };
   return render(<FlashCard card={flashCard1} />);
