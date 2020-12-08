@@ -101,6 +101,10 @@ const StyledLi = styled.li`
   padding: 1rem;
   width: 100%;
 
+  @media (max-width: ${devices.mobile}) {
+    margin: 10px 0;
+  }
+
   @media (max-width: ${devices.ipad}) {
     padding: 0 0.5rem;
   }

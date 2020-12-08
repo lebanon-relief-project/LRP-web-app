@@ -107,6 +107,12 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   }
 }
 
+@media (max-width:576px) {
+  .c4 {
+    margin: 10px 0;
+  }
+}
+
 @media (max-width:768px) {
   .c4 {
     padding: 0 0.5rem;
@@ -270,6 +276,12 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    margin: 10px 0;
   }
 }
 
