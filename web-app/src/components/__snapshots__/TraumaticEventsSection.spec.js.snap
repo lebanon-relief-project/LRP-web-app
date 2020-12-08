@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the TraumaticEvents component should match the snapshot 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+.c1 {
+  width: 50%;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c0 {
+  background: #002766;
+  margin: 0;
+  padding: 0;
+}
+
+.c2 {
+  font-weight: bold;
+  font-size: 38px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.c4 {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h2
+        class="c2"
+      >
+        Traumatic Events
+      </h2>
+      <div
+        class="c3"
+      >
+        <p
+          class="c4"
+        >
+          The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+        </p>
+        <p
+          class="c4"
+        >
+          All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+        </p>
+        <p
+          class="c4"
+        >
+          Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

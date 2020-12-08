@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the FlashCard component should match the snapshot 1`] = `
+.c1 {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.5rem;
+  padding: 0.25rem 0.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 {
+  background-color: #F5F5F5;
+  width: 13.875rem;
+  height: 17.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.c2 {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.c3 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c3:hover {
+  opacity: 0.8;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 13.875rem;
+  height: 17.75rem;
+  background-color: #BAE7FF;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      title 1
+      <button
+        class="c2"
+        data-testid="title 1"
+      >
+        <img
+          alt="PlusCircleIcon"
+          class="c3"
+          height="32"
+          src="PlusCircle.svg"
+          width="32"
+        />
+      </button>
+    </div>
+    <div
+      class="c4"
+    >
+      <div
+        style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        <div
+          class="c5"
+          src="SampleCardPicture.png"
+        />
+      </div>
+      <div
+        style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
+      >
+        text 1
+      </div>
+    </div>
+  </div>
+</div>
+`;

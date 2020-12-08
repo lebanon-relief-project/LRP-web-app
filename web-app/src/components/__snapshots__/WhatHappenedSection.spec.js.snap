@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the WhatHappened component should match the snapshot 1`] = `
+.c5 {
+  display: none;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.c7 {
+  display: block;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.c8 {
+  margin: 0;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.c0 {
+  background: #ffffff;
+  margin: 0;
+  padding: 0 3rem;
+  max-width: 100%;
+}
+
+.c6 {
+  margin-top: 10rem;
+  width: 40%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 50%;
+}
+
+.c2 {
+  padding-top: 7rem;
+}
+
+.c4 {
+  object-fit: contain;
+}
+
+@media (max-width:576px) {
+  .c5 {
+    display: block;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    font-weight: 900;
+    font-size: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .c7 {
+    display: none;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    font-weight: 900;
+    font-size: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .c0 {
+    padding: 0;
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    margin-top: 0rem;
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    width: 60%;
+  }
+}
+
+@media (max-width:576px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 {
+    padding-top: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c4 {
+    width: 80%;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    width: 50%;
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3"
+      >
+        <img
+          alt="City"
+          class="c4"
+          src="City.png"
+        />
+        <h2
+          class="c5"
+        >
+          What happened
+        </h2>
+      </div>
+      <div
+        class="c6"
+      >
+        <h2
+          class="c7"
+        >
+          What happened
+        </h2>
+        <p
+          class="c8"
+        >
+          On August 4 an explosion shook Beirut. It was the largest non-nuclear explosion ever recorded. That day 200 people died, 6,500 were injured, and 300,000 were left homeless. This project was developed to support those affected and provide a platform for the community to come together and help each other heal.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Card component should match the snapshot 1`] = `
+.c2 {
+  background-color: #FFD666;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0.5rem 6rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 24px;
+  width: auto;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.c0 {
+  border: 1px solid #003A8C;
+  width: 30%;
+  padding: 1rem;
+  margin: 3rem 1rem;
+  height: 20%;
+  background-color: white;
+}
+
+@media (max-width:1025px) {
+  .c0 {
+    width: 40%;
+  }
+}
+
+@media (max-width:576px) {
+  .c0 {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+
+<div>
+  <fieldset
+    class="c0"
+    title="test title"
+  >
+    <legend
+      class="c1"
+      title="test title"
+    >
+      test title
+    </legend>
+    <a
+      class="c2"
+      href="/test"
+    />
+  </fieldset>
+</div>
+`;
