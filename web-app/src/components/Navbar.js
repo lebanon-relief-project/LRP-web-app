@@ -124,6 +124,10 @@ const StyledLink = styled(NavLink)`
   @media (max-width: ${devices.ipad}) {
     font-size: 9px;
     line-height: 11px;
+    &.active {
+      font-weight: bold;
+      border-bottom: none;
+    }
   }
 `;
 
