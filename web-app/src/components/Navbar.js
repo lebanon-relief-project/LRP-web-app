@@ -101,6 +101,10 @@ const StyledLi = styled.li`
   padding: 1rem;
   width: 100%;
 
+  @media (max-width: ${devices.mobile}) {
+    margin: 10px 0;
+  }
+
   @media (max-width: ${devices.ipad}) {
     padding: 0 0.5rem;
   }
@@ -120,6 +124,10 @@ const StyledLink = styled(NavLink)`
   @media (max-width: ${devices.ipad}) {
     font-size: 9px;
     line-height: 11px;
+    &.active {
+      font-weight: bold;
+      border-bottom: none;
+    }
   }
 `;
 
