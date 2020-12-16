@@ -1,6 +1,6 @@
 # Lebanon Relief Network
 
-![LRN_logo](images/LRN_logo.png)
+<img src="https://github.com/lebanon-relief-project/LRP-web-app/blob/dev/images/LRN_logo_2.svg" width=50% height=50%>
 
 [![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://lrn-dev.eu-de.mybluemix.net/)
 
@@ -33,7 +33,7 @@ The Lebanon Relief Network platform will:
 
 The Lebanon Relief Network focusses on help requests and offers related to trauma, and effects of trauma on mental health.
 
-![LRN platform](images/LRN_scope.png)
+![LRN platform](images/LRN_scope_2.png)
 
 The platform will address:
 
