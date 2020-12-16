@@ -33,7 +33,7 @@ The Lebanon Relief Network platform will:
 
 The Lebanon Relief Network focusses on help requests and offers related to trauma, and effects of trauma on mental health.
 
-![LRN platform](images/LRN_scope.png)
+![LRN platform](images/LRN_scope_2.png)
 
 The platform will address:
 
