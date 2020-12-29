@@ -141,51 +141,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Git Commit Convention
-
-The following is the recommended and preferred format for git commit messages:
-
-### Commit Message Format
-
-Each commit message starts with a type, a scope, and a subject.
-
-Below that, the commit message has a body:
-
-- **type**: what type of change this commit contains.
-- **scope**: what item of code this commit is changing.
-- **subject**: a short description of the changes.
-- **body** (optional): a more in-depth description of the changes, only if required
-
-```
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-```
-
-### Type
-
-Is recommended to be one of the below items:
-
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes e.g. README
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- **refactor**: A code change that neither fixes a bug or adds a feature
-- **test**: Adding missing tests
-- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation e.g. package dependencies, webpack changes, etc.
-
-### Scope
-
-The scope could be anything specifying the place of the commit change. For example `$location`, `$browser`, `$compile`, `$rootScope`, `ngHref`, `ngClick`, `ngView`, etc...
-
-### Subject
-
-The subject contains succinct description of the change:
-
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize first letter
-- no dot (.) at the end
-
 ## Version
 
 v0.1
