@@ -20,20 +20,20 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             Traumatic Events
           </h2>
           <div
-            class="sc-bdnylx krmaPa"
+            class="sc-bdnylx kgNiQD"
           >
             <p
-              class="sc-eCApGN dNsoMV"
+              class="sc-eCApGN fCJVDN"
             >
               The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
             </p>
             <p
-              class="sc-eCApGN dNsoMV"
+              class="sc-eCApGN fCJVDN"
             >
               All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
             </p>
             <p
-              class="sc-eCApGN dNsoMV"
+              class="sc-eCApGN fCJVDN"
             >
               Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
             </p>
@@ -52,15 +52,15 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             Learn more about trauma
           </h2>
           <div
-            class="sc-jSFkmK ccHrrF"
+            class="sc-jSFkmK wZTrU"
           >
             <p
-              class="sc-pNWxx iREAHs"
+              class="sc-pNWxx IEUcs"
             >
               Below are flashcards with the most common presentations of traumatic stress.
             </p>
             <p
-              class="sc-pNWxx iREAHs"
+              class="sc-pNWxx IEUcs"
             >
               Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
             </p>
