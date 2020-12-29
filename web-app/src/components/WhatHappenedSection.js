@@ -6,7 +6,6 @@ import {
   ResponsiveStyledHeader,
   StyledParagraph,
   StyledSection,
-  StyledTextArea,
   ReversableFlexContainer,
   FlexContainer,
 } from "../styles/GlobalStyles";
@@ -33,6 +32,20 @@ const WhatHappened = () => {
     </StyledSection>
   );
 };
+
+const StyledTextArea = styled.div`
+  position: relative;
+  margin-top: 12%;
+  right: 15%;
+  width: 40%;
+  @media (max-width: ${devices.ipad}) {
+    right: 10%;
+  }
+  @media (max-width: ${devices.mobile}) {
+    right: 0;
+    width: 100%;
+  }
+`;
 
 const StyledFlexContainer = styled(FlexContainer)`
   padding-top: 7rem;
