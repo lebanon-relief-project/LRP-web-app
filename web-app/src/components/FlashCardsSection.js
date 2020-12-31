@@ -50,8 +50,6 @@ const Wrapper = styled.div`
   background: inherit;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 1.4375rem;
-  row-gap: 1.4375rem;
 `;
 
 const NextButton = styled.button`

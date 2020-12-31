@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 
-const WhatHappened = () => {
+const TraumaticEvents = () => {
   return (
     <StyledSection>
       <Wrapper>
@@ -33,7 +33,6 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  row-gap: 1rem;
 `;
 
 const Wrapper = styled.div`
@@ -59,8 +58,9 @@ const StyledHeader = styled.h2`
 
 const StyledParagraph = styled.p`
   margin: 0;
+  margin-bottom: 1rem;
   font-size: 16px;
   color: ${colours.white};
 `;
 
-export default WhatHappened;
+export default TraumaticEvents;
