@@ -138,7 +138,7 @@ const CircleIcon = styled.img`
 const FlashCardImage = styled.div`
   display: flex;
   flex: 1;
-  width: 13.875rem;
+  width: 100%;
   height: 17.75rem;
   background-color: ${colours.lightBlue};
 `;
