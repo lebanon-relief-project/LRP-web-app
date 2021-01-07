@@ -9,7 +9,9 @@ const Card = (props) => {
     <StyledCard {...props}>
       <CardTitle {...props}>{props.title}</CardTitle>
       {props.children}
-      <StyledLink to={props.path}>{props.buttonText}</StyledLink>
+      <StyledLink {...props} to={props.path}>
+        {props.buttonText}
+      </StyledLink>
     </StyledCard>
   );
 };
@@ -19,9 +21,10 @@ const StyledLink = styled(Link)`
   color: black;
   font-style: normal;
   font-weight: bold;
-  padding: 0.5rem 6rem;
+  padding: 0.5rem;
   justify-content: center;
   display: flex;
+  width: ${(props) => (props.secondary ? "30%" : "100%")};
 `;
 
 const CardTitle = styled.legend`
@@ -31,13 +34,14 @@ const CardTitle = styled.legend`
   width: auto;
   padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
   text-align: ${(props) => (props.secondary ? "left" : "center")};
+  margin-bottom: 0;
 `;
 
 const StyledCard = styled.fieldset`
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
-  width: ${(props) => (props.secondary ? "100%" : "30%")};
-  padding: 1rem;
+  width: ${(props) => (props.secondary ? "100%" : "25%")};
+  padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.5rem")};
   margin: 3rem 1rem;
   height: 20%;
   background-color: white;

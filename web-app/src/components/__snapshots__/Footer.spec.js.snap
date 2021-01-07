@@ -21,12 +21,8 @@ exports[`the Footer component should match the snapshot 1`] = `
 }
 
 .c7 {
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0.5rem;
+  width: 20%;
+  height: 40%;
 }
 
 .c6 {
@@ -34,7 +30,14 @@ exports[`the Footer component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
   margin: 2rem 0;
 }
 
@@ -46,10 +49,10 @@ exports[`the Footer component should match the snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
 .c0 {
@@ -71,6 +74,8 @@ exports[`the Footer component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c6 {
+    padding: 0;
+    margin: 1rem 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
@@ -120,63 +125,26 @@ exports[`the Footer component should match the snapshot 1`] = `
         </ul>
       </div>
       <div
-        class="c2"
-      >
-        <h2
-          class="c3"
-        >
-          About us
-        </h2>
-        <ul
-          class="c4"
-        >
-          <li
-            class="c5"
-          >
-            What we do
-          </li>
-          <li
-            class="c5"
-          >
-            Contact us
-          </li>
-        </ul>
-      </div>
-      <div
-        class="c2"
-      >
-        <h2
-          class="c3"
-        >
-          Partnerships
-        </h2>
-        <ul
-          class="c4"
-        >
-          <li
-            class="c5"
-          >
-            How to partner with us
-          </li>
-          <li
-            class="c5"
-          >
-            Working with us
-          </li>
-        </ul>
-      </div>
-      <div
         class="c6"
       >
-        <span
+        <img
+          alt="Instagram"
           class="c7"
+          src="Instagram.png"
         />
-        <span
+        <img
+          alt="Facebook"
           class="c7"
+          src="Facebook.png"
         />
-        <span
+        <img
+          alt="Twitter"
           class="c7"
+          src="Twitter.png"
         />
+        <p>
+          hello@lrn.com
+        </p>
       </div>
     </div>
   </section>

@@ -42,11 +42,10 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-width: 50%;
+  min-width: 40%;
 }
 
 .c4 {
-  padding: 1rem;
   width: 100%;
 }
 
@@ -100,6 +99,12 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:576px) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (max-width:576px) {
   .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -120,6 +125,10 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:768px) {
+
+}
+
+@media (max-width:576px) {
 
 }
 
@@ -151,13 +160,6 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
       >
         <div
           data-testid="navlink_/help"
-        />
-      </li>
-      <li
-        class="c4"
-      >
-        <div
-          data-testid="navlink_/about"
         />
       </li>
       <li
@@ -214,11 +216,10 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-width: 50%;
+  min-width: 40%;
 }
 
 .c4 {
-  padding: 1rem;
   width: 100%;
 }
 
@@ -272,6 +273,12 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:576px) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (max-width:576px) {
   .c3 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -292,6 +299,10 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:768px) {
+
+}
+
+@media (max-width:576px) {
 
 }
 
@@ -324,13 +335,6 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
       >
         <div
           data-testid="navlink_/help"
-        />
-      </li>
-      <li
-        class="c4"
-      >
-        <div
-          data-testid="navlink_/about"
         />
       </li>
       <li

@@ -3,6 +3,9 @@ import styled from "styled-components";
 import FooterLink from "./FooterLink";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
+import Instagram from "../assets/images/Instagram.png";
+import Facebook from "../assets/images/Facebook.png";
+import Twitter from "../assets/images/Twitter.png";
 
 const Footer = () => {
   return (
@@ -12,36 +15,32 @@ const Footer = () => {
           title="Lebanon Relief Network"
           links={["Terms & Conditions", "Privacy policy"]}
         />
-        <FooterLink title="About us" links={["What we do", "Contact us"]} />
-        <FooterLink
-          title="Partnerships"
-          links={["How to partner with us", "Working with us"]}
-        />
 
         <CircularLinkWrapper>
-          <CircularLink />
-          <CircularLink />
-          <CircularLink />
+          <StyledImage src={Instagram} alt="Instagram" />
+          <StyledImage src={Facebook} alt="Facebook" />
+          <StyledImage src={Twitter} alt="Twitter" />
+          <p>hello@lrn.com</p>
         </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
   );
 };
 
-const CircularLink = styled.span`
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0.5rem;
+const StyledImage = styled.img`
+  width: 20%;
+  height: 40%;
 `;
 
 const CircularLinkWrapper = styled.div`
   display: flex;
-  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem 0;
   margin: 2rem 0;
   @media (max-width: ${devices.mobile}) {
+    padding: 0;
+    margin: 1rem 0;
     order: 1;
   }
 `;
@@ -49,7 +48,7 @@ const CircularLinkWrapper = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
