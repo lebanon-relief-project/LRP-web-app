@@ -38,11 +38,6 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   max-width: 100%;
 }
 
-.c6 {
-  margin-top: 10rem;
-  width: 40%;
-}
-
 .c1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,6 +58,13 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   width: 50%;
+}
+
+.c6 {
+  position: relative;
+  margin-top: 12%;
+  right: 15%;
+  width: 40%;
 }
 
 .c2 {
@@ -105,13 +107,6 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
-    margin-top: 0rem;
-    width: 100%;
-  }
-}
-
-@media (max-width:576px) {
   .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -127,6 +122,19 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c3 {
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .c6 {
+    right: 10%;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    right: 0;
     width: 100%;
   }
 }

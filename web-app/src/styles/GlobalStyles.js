@@ -43,15 +43,6 @@ export const StyledSection = styled.section`
   }
 `;
 
-export const StyledTextArea = styled.div`
-  margin-top: 10rem;
-  width: 40%;
-  @media (max-width: ${devices.mobile}) {
-    margin-top: 0rem;
-    width: 100%;
-  }
-`;
-
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;

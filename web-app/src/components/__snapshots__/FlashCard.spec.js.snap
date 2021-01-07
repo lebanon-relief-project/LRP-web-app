@@ -28,6 +28,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
+  margin: 1.4375rem;
 }
 
 .c4 {

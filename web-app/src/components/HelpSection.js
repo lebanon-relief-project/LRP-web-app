@@ -14,32 +14,32 @@ const HelpSection = () => {
           <Card
             title="I’m looking for help"
             path={Routes.HELP}
-            buttonText="Learn More"
+            buttonText="Give me advice"
           >
-            <p>
+            <Paragraph>
               Everyone deals with trauma differently. Every experience is
               different, and everyone copes differently. There isn’t a “one fits
               all solution” when it comes to healing.
-            </p>
-            <p>
+            </Paragraph>
+            <Paragraph>
               Our ambition is to help deal with trauma through surfacing the
               right tools based on each person’s needs.
-            </p>
+            </Paragraph>
           </Card>
           <Card
             title="I’d like to help"
             path={Routes.HELP}
-            buttonText="Learn More"
+            buttonText="Contact me"
           >
-            <p>
+            <Paragraph>
               Do you have a close one who underwent trauma, but you need
               direction on how to help, what to say, what to do and how to
               protect yourself?
-            </p>
-            <p>
+            </Paragraph>
+            <Paragraph>
               Or do you want to help those who are undergoing trauma and looking
               for opportunities to do so?
-            </p>
+            </Paragraph>
           </Card>
         </CardWrapper>
         <IllustrationAndCard>
@@ -48,9 +48,9 @@ const HelpSection = () => {
           <ChallengeCard>
             <Card
               secondary
-              title="Try our 7 days challenge"
+              title="Try our 7 days of Wellbeing"
               path={Routes.HOME}
-              buttonText="View challenge"
+              buttonText="Sign me up"
             >
               <p>If you are: </p>
               <StyledUnorderedList>
@@ -68,6 +68,15 @@ const HelpSection = () => {
     </>
   );
 };
+
+const Paragraph = styled.p`
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  color: #262626;
+`;
 
 const StyledUnorderedList = styled.ul`
   li::before {
@@ -97,7 +106,7 @@ const ChallengeCard = styled.div`
   position: absolute;
   display: flex;
   bottom: 2rem;
-  right: 15rem;
+  right: 23%;
 
   @media (max-width: ${devices.mobile}) {
     display: none;
@@ -126,15 +135,17 @@ const CardWrapper = styled.div`
   }
   position: absolute;
   z-index: 1;
-  margin-top: 12rem;
+  margin-top: 8rem;
 `;
 
 const StyledSection = styled.section`
   position: relative;
+  margin-top: -8%;
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;
     order: 1;
+    margin-top: 0;
   }
 `;
 

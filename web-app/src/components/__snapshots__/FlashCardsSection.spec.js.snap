@@ -32,9 +32,6 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-column-gap: 1.4375rem;
-  column-gap: 1.4375rem;
-  row-gap: 1.4375rem;
 }
 
 .c2 {

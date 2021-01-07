@@ -29,11 +29,6 @@ const Navbar = ({ open }) => {
             I’d like to help
           </StyledLink>
         </StyledLi>
-        <StyledLi>
-          <StyledLink exact to={Routes.ABOUT}>
-            About us
-          </StyledLink>
-        </StyledLi>
       </StyledUl>
     </StyledNav>
   );
@@ -77,6 +72,9 @@ const StyledNav = styled.nav`
 const LogoImage = styled.img`
   width: 20%;
   height: 90%;
+  @media (max-width: ${devices.mobile}) {
+    display: none;
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -94,11 +92,10 @@ const StyledUl = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-width: 50%;
+  min-width: 40%;
 `;
 
 const StyledLi = styled.li`
-  padding: 1rem;
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
@@ -111,6 +108,11 @@ const StyledLi = styled.li`
 `;
 
 const StyledLink = styled(NavLink)`
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   color: ${colours.black};
   font-family: Raleway;
   font-style: normal;
@@ -122,8 +124,11 @@ const StyledLink = styled(NavLink)`
     border-bottom: 2px solid ${colours.yellow};
   }
   @media (max-width: ${devices.ipad}) {
-    font-size: 9px;
+    font-size: 12px;
     line-height: 11px;
+  }
+  @media (max-width: ${devices.mobile}) {
+    position: relative;
     &.active {
       font-weight: bold;
       border-bottom: none;

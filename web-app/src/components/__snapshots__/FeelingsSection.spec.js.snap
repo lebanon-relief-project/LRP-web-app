@@ -12,7 +12,6 @@ exports[`the FeelingsSection component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 1rem;
 }
 
 .c1 {
@@ -37,6 +36,7 @@ exports[`the FeelingsSection component should match the snapshot 1`] = `
 
 .c4 {
   margin: 0;
+  margin-bottom: 1rem;
   font-size: 16px;
 }
 
