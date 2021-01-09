@@ -53,7 +53,7 @@ const Wrapper = styled.div`
 `;
 
 const NextButton = styled.button`
-  background-color: ${colours.gold};
+  background-color: ${colours.yellow};
   width: 13.875rem;
   height: 2.625rem;
   font-size: 1rem;
