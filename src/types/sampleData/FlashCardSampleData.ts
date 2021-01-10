@@ -4,6 +4,8 @@ export const sampleFlashCard: FlashCard = {
   _id: "bauysdbiuyasd",
   title: "sample title",
   body: "sample body",
+  cosUri: "test",
+  image: "test image",
 };
 
 export const sampleFlashCards: FlashCard[] = [sampleFlashCard];
@@ -24,6 +26,8 @@ export const sampleFlashCardsCloudantResponse: FlashCardsCloudantResponse = {
         _id: "some random _id 1",
         title: "some random title 1",
         body: "some random body 1",
+        cosUri: "test",
+        image: "random image",
       },
     },
     {
@@ -34,6 +38,8 @@ export const sampleFlashCardsCloudantResponse: FlashCardsCloudantResponse = {
         _id: "some random _id 2",
         title: "some random title 2",
         body: "some random body 2",
+        cosUri: "test",
+        image: "random image",
       },
     },
   ],

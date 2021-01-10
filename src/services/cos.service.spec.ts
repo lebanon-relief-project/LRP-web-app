@@ -38,14 +38,14 @@ Container.set("logger", new MockLogger());
 
 let cosService: CosService = Container.get(CosService);
 
-describe("getFlashcardImage", () => {
+describe("getImage", () => {
   const imageId = "1234.jpg";
   let response: S3.GetObjectOutput;
 
   describe("the COS call was successful", () => {
     beforeEach(async () => {
       mockGetObjectPromise.mockResolvedValue({ Body: fakeImageData });
-      response = await cosService.getFlashcardImage(imageId);
+      response = await cosService.getImage(imageId, COS_FLASHCARD_IMAGE_BUCKET);
     });
 
     it("should call getObject on ibm-cos-sdk with the correct key and bucket", () => {
@@ -59,14 +59,18 @@ describe("getFlashcardImage", () => {
     });
 
     it("should return the response from COS", () => {
-      expect(response).toEqual({ Body: fakeImageData });
+      expect(response).toEqual(fakeImageData);
     });
   });
 
   describe("the COS call is unsuccessful", () => {
     it("should throw an InternalServerError", async () => {
       mockGetObjectPromise.mockRejectedValue("");
-      await expect(cosService.getFlashcardImage(imageId)).rejects.toThrow(
+      await expect(
+        
+        cosService.getImage(imageId, COS_FLASHCARD_IMAGE_BUCKET)
+      
+      ).rejects.toThrow(
         new InternalServerError(
           `Retrieving images from Cloud Object Store has failed`
         )
