@@ -3,6 +3,7 @@ import styled from "styled-components";
 import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
 import { getFlashCards } from "../services/flashCards.service";
+import devices from "../styles/Devices";
 
 const FlashCardsSection = (props) => {
   const [flashCards, setFlashCards] = useState([]);
@@ -45,11 +46,15 @@ const StyledSection = styled.section`
 `;
 
 const Wrapper = styled.div`
-  flex: 1;
-  margin: 0 16.7%;
+  width: 60%;
+  margin: 0 auto;
   background: inherit;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  @media (max-width: ${devices.ipadpro}) {
+    width: 100%;
+  }
 `;
 
 const NextButton = styled.button`

@@ -1,7 +1,7 @@
 import React from "react";
-
 import styled from "styled-components";
 import colours from "../styles/Colours";
+import devices from "../styles/Devices";
 
 const TraumaticEvents = () => {
   return (
@@ -37,10 +37,16 @@ const TextWrapper = styled.div`
 
 const Wrapper = styled.div`
   width: 50%;
-  padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   margin: 0 16.7%;
+  padding-top: 5%;
   background: inherit;
+  @media (max-width: ${devices.ipad}) {
+    padding-top: 10%;
+  }
+  @media (max-width: ${devices.mobile}) {
+    padding-top: 20%;
+  }
 `;
 
 const StyledSection = styled.section`
