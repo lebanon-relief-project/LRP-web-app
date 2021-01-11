@@ -7,7 +7,7 @@ export function getCosCredentials(): CosCredentials {
       throw new Error("COS credentials missing");
     }
     
-    const endpoint = VCAP["cloud-object-storage"][0].credentials.url;
+    const endpoint = process.env.COS_URL;
     const apikey = VCAP["cloud-object-storage"][0].credentials.apikey;
     const resourceInstanceId =
       VCAP["cloud-object-storage"][0].credentials["resource_instance_id"];
