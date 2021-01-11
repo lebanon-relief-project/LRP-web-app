@@ -1,7 +1,4 @@
-import {
-  sampleFlashCards,
-  sampleFlashCardsCloudantResponse,
-} from "../types/sampleData/FlashCardSampleData";
+import { sampleFlashCardsCloudantResponse } from "../types/sampleData/FlashCardSampleData";
 import Container from "typedi";
 import { CloudantService, HelpService } from ".";
 

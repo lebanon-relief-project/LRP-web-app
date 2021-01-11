@@ -7,7 +7,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 3.5rem;
+  height: 80px;
   padding: 0.25rem 0.5rem;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -17,7 +17,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
 
 .c0 {
   background-color: #F5F5F5;
-  width: 13.875rem;
+  width: 222px;
   height: 17.75rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -67,9 +67,6 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  width: 13.875rem;
-  height: 17.75rem;
-  background-color: #BAE7FF;
 }
 
 <div>
@@ -99,9 +96,9 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       <div
         style="opacity: 1; transform: perspective(600px) rotateY(0deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute;"
       >
-        <div
+        <img
           class="c5"
-          src="SampleCardPicture.png"
+          src="data:image/svg+xml;base64,aW1hZ2UgdXJs"
         />
       </div>
       <div

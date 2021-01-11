@@ -22,10 +22,10 @@ export class HelpService implements HelpServiceApi {
     cos: CosService
   ) {
     this.logger = logger.child("HelpService");
-    this.cos = cos;
 
     try {
       this.flashCardDb = cloudant.use(CLOUDANT_FLASHCARD_DB_DEV);
+      this.cos = cos;
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerError("Cloudant unavailable");
@@ -41,18 +41,23 @@ export class HelpService implements HelpServiceApi {
       const dbResponse = await this.flashCardDb.list({ include_docs: true });
       response = { cards: [] };
 
-      await Promise.all(dbResponse.rows.map(async (row) => { // use Promise.all() with map to wait for all async before moving on
-        if (row.doc) {
-          // get image using cosUri
-          let img = await this.cos.getImage(row.doc.cosUri, COS_FLASHCARD_IMAGE_BUCKET)
-          
-          // add svg to card
-          row.doc.image = img;
+      await Promise.all(
+        dbResponse.rows.map(async (row) => {
+          // use Promise.all() with map to wait for all async before moving on
+          if (row.doc) {
+            // get image using cosUri
+            let img = await this.cos.getImage(
+              row.doc.cosUri,
+              COS_FLASHCARD_IMAGE_BUCKET
+            );
 
-          response.cards.push(row.doc);
-        } 
-        return;
-      }));
+            // add svg to card
+            row.doc.image = img;
+
+            response.cards.push(row.doc);
+          }
+        })
+      );
 
       return response;
     } catch (err) {

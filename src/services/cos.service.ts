@@ -13,20 +13,22 @@ import { InternalServerError } from "routing-controllers";
 export class CosService {
   private logger: LoggerApi;
   private cos: S3;
-  private creds: CosCredentials;
+  private config: CosCredentials;
 
   constructor(
     @Inject("logger")
     logger: LoggerApi
   ) {
     this.logger = logger.child("CosService");
-    this.creds = getCosCredentials();
-    this.cos = new S3(this.creds);
+    this.config = getCosCredentials();
+    this.cos = new S3(this.config);
   }
 
   // ANY FOR NOW
   async getImage(imageId: string, bucket: string): Promise<any> {
-    this.logger.info(`getFlashcardImage(): Getting flashcards image from cos`);
+    this.logger.info(
+      `getFlashcardImage(): Getting flashcards image (${imageId}) from cos (${bucket})`
+    );
 
     try {
       const cosImage = await this.cos
