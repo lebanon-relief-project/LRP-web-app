@@ -8,7 +8,7 @@ import { ReactComponent as Illustration4 } from "../assets/images/Illustration4.
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
-  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(true);
+  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
     <>
       <StyledSection>
