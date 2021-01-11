@@ -139,6 +139,7 @@ const CircleIcon = styled.img`
 const FlashCardImage = styled.img`
   display: flex;
   flex: 1;
+  width: 100%;
 `;
 
 export default FlashCard;
