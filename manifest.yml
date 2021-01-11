@@ -9,4 +9,5 @@ applications:
   domain: eu-de.mybluemix.net
   services:
     - LRN-Cloudant
+    - LRN-COS
 
