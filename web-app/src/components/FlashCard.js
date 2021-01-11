@@ -3,7 +3,9 @@ import styled from "styled-components";
 import colours from "../styles/Colours";
 import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import TickCircleIcon from "../assets/images/TickCircle.svg";
+import SampleCardPicture from "../assets/images/SampleCardPicture.png";
 import { useSpring, animated as a } from "react-spring";
+import { getSvgImageFromArrayBuffer } from "../util/imageUtil";
 
 const FlashCard = ({ card, id }) => {
   const [flipped, setFlipped] = useState(false);
@@ -74,7 +76,7 @@ const FlashCard = ({ card, id }) => {
             position: "absolute",
           }}
         >
-          <FlashCardImage src={card.image} />
+          <FlashCardImage src={getSvgImageFromArrayBuffer(card.image)} />
         </a.div>
 
         {/* Back of card */}
