@@ -11,10 +11,21 @@ export function getCosCredentials(): CosCredentials {
     const apikey = VCAP["cloud-object-storage"][0].credentials.apikey;
     const resourceInstanceId =
       VCAP["cloud-object-storage"][0].credentials["resource_instance_id"];
+    const accessKeyId =
+      VCAP["cloud-object-storage"][0].credentials["cos_hmac_keys"][
+        "access_key_id"
+      ];
+    const secretAccessKey =
+      VCAP["cloud-object-storage"][0].credentials["cos_hmac_keys"][
+        "secret_access_key"
+      ];
 
     return {
-        endpoint: endpoint,
-        apiKeyId: apikey,
-        serviceInstanceId: resourceInstanceId
-    }
+      endpoint: endpoint,
+      apiKeyId: apikey,
+      serviceInstanceId: resourceInstanceId,
+      signatureVersion: "v4",
+      accessKeyId: accessKeyId,
+      secretAccessKey: secretAccessKey,
+    };
 }

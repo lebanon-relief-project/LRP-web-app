@@ -31,6 +31,9 @@ getCredentialsMock.mockImplementation(() => {
     endpoint: "test.com",
     apiKeyId: "test",
     serviceInstanceId: "test",
+    signatureVersion: "test",
+    accessKeyId: "test",
+    secretAccessKey: "test",
   };
 });
 
