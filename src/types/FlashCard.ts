@@ -3,6 +3,8 @@ import { BaseCloudantDocument } from "./Cloudant";
 export interface FlashCard extends BaseCloudantDocument {
   title: string;
   body: string;
+  image: string;
+  cosUri: string;
 }
 
 export interface FlashCardsResponse {
