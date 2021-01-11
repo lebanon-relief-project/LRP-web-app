@@ -1,5 +1,4 @@
 import { Inject, Service } from "typedi";
-
 import { HelpServiceApi } from "./help.service.api";
 import { LoggerApi } from "../logger";
 import { FlashCard, FlashCardsResponse } from "../types/FlashCard";
@@ -46,13 +45,13 @@ export class HelpService implements HelpServiceApi {
           // use Promise.all() with map to wait for all async before moving on
           if (row.doc) {
             // get image using cosUri
-            let img = await this.cos.getImage(
+            let img = await this.cos.getPreSignedUrl(
               row.doc.cosUri,
               COS_FLASHCARD_IMAGE_BUCKET
             );
 
             // add svg to card
-            row.doc.image = img;
+            row.doc.image = img.preSignedUrl;
 
             response.cards.push(row.doc);
           }

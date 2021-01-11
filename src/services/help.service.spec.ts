@@ -9,14 +9,14 @@ import { CosService } from "./cos.service";
 import { help } from "yargs";
 
 const mockList = jest.fn();
-const mockGetImage = jest.fn();
+const mockGetPreSignedUrl = jest.fn();
 class MockDb implements Partial<DocumentScope<any>> {
   list = mockList;
 }
 
 Container.set("logger", new MockLogger());
 Container.set(CloudantService, { use: () => new MockDb() });
-Container.set(CosService, { getImage: mockGetImage });
+Container.set(CosService, { getPreSignedUrl: mockGetPreSignedUrl });
 let helpService: HelpService = Container.get(HelpService);
 
 describe("The help service", () => {
@@ -29,7 +29,7 @@ describe("The help service", () => {
   describe("the getFlashCards() function", () => {
     beforeEach(async () => {
       mockList.mockResolvedValue(sampleFlashCardsCloudantResponse);
-      mockGetImage.mockResolvedValue("sample image");
+      mockGetPreSignedUrl.mockResolvedValue({ preSignedUrl: "sample image" });
       result = await helpService.getFlashCards();
     });
 
@@ -59,7 +59,7 @@ describe("The help service", () => {
     });
 
     it("should call the content store", () => {
-      expect(mockGetImage).toHaveBeenCalled();
+      expect(mockGetPreSignedUrl).toHaveBeenCalled();
     });
 
     it("should return empty array if no flash cards are retrieved", async () => {
@@ -95,7 +95,7 @@ describe("The help service", () => {
         ],
       });
 
-      mockGetImage.mockResolvedValue("sample image");
+      mockGetPreSignedUrl.mockResolvedValue({ preSignedUrl: "sample image" });
 
       const expected = {
         cards: [
@@ -127,7 +127,7 @@ describe("The help service", () => {
     });
 
     it("should throw an error if the COS operation fails", async () => {
-      mockGetImage.mockImplementation(() => {
+      mockGetPreSignedUrl.mockImplementation(() => {
         throw new Error("ERROR");
       });
 
