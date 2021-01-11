@@ -19,7 +19,7 @@
     "serve": "node dist/src",
     "upgrade-interactive": "npm-check --update",
     "clear_jest": "jest --clearCache",
-    "dev": "concurrently --kill-others \"DEV=true ts-node src/\" \"cd web-app && npm start\""
+    "dev": "concurrently --kill-others \"nodemon\" \"cd web-app && npm start\""
   },
   "dependencies": {
     "@cloudant/cloudant": "^4.3.0",
@@ -65,6 +65,7 @@
     "jest": "^25.2.4",
     "jest-plugin-context": "^2.9.0",
     "jest-sonar-reporter": "^2.0.0",
+    "nodemon": "^2.0.7",
     "npm-check": "^5.9.2",
     "pino-pretty": "^3.6.1",
     "rimraf": "^3.0.2",
