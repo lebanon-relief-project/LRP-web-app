@@ -99,7 +99,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       >
         <img
           class="c5"
-          src="test image"
+          src="image url"
         />
       </div>
       <div

@@ -6,3 +6,8 @@ export interface CosCredentials {
   accessKeyId: string;
   secretAccessKey: string;
 }
+
+export interface PreSignedUrlResponse {
+  cosUri: string;
+  preSignedUrl: string;
+}
