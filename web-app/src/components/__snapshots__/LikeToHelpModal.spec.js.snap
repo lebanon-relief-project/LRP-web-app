@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the LikeToHelpModal component should match the snapshot 1`] = `
+.c3 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.c4 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.c5 {
+  font-weight: bold;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c6 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px 16px;
+  width: 100%;
+  background: #FFD666;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.043);
+  border-radius: 2px;
+}
+
+.c0 {
+  background: rgba(67,67,67,0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.c1 {
+  position: absolute;
+  left: 28.06%;
+  right: 28.06%;
+  top: 38.28%;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: 3%;
+}
+
+.c2 {
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 4%;
+  height: auto;
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    left: 15%;
+    right: 15%;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 6%;
+    height: auto;
+    top: 10%;
+    right: 8%;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <img
+        alt="Close Button"
+        class="c2"
+        src="CloseButton.svg"
+      />
+      <h2
+        class="c3"
+      >
+        I’d like to help
+      </h2>
+      <p
+        class="c4"
+      >
+        Great news! Please drop us an email at 
+        <span
+          class="c5"
+        >
+          hello@lrn.com
+        </span>
+         
+        with details about who you are and we will get back to you shortly.
+         
+      </p>
+      <button
+        class="c6"
+      >
+        Ok, thanks
+      </button>
+    </div>
+  </div>
+</div>
+`;

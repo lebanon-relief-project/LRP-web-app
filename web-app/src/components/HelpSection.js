@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
 import { ReactComponent as Illustration3 } from "../assets/images/Illustration3.svg";
 import { ReactComponent as Illustration4 } from "../assets/images/Illustration4.svg";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
+  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
     <>
       <StyledSection>
@@ -28,8 +30,10 @@ const HelpSection = () => {
           </Card>
           <Card
             title="I’d like to help"
-            path={Routes.HELP}
             buttonText="Contact me"
+            onClick={() => {
+              setLikeToHelpModalVisible(true);
+            }}
           >
             <Paragraph>
               Do you have a close one who underwent trauma, but you need
@@ -65,6 +69,13 @@ const HelpSection = () => {
           </ChallengeCard>
         </IllustrationAndCard>
       </StyledSection>
+      {likeToHelpModalVisible && (
+        <LikeToHelpModal
+          closeModal={() => {
+            setLikeToHelpModalVisible(false);
+          }}
+        />
+      )}
     </>
   );
 };
