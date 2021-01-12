@@ -6,11 +6,11 @@ exports[`the HelpPage component should match the snapshot 1`] = `
     class="sc-jrsJCI dvFVdg"
   >
     <div>
-      <section
-        class="sc-dlnjPT iBjBtg"
+      <div
+        class="sc-dlnjPT erARxr"
       >
         <div
-          class="sc-gtssRu llOpQM"
+          class="sc-gtssRu emobNl"
         >
           <h2
             class="sc-hKFyIo IfuPR"
@@ -37,7 +37,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             </p>
           </div>
         </div>
-      </section>
+      </div>
       <section
         class="sc-iCoHVE hANwrK"
       >

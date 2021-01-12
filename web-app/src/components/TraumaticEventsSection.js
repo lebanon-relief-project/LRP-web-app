@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
+import TraumaticEventsBackground from "../assets/images/TraumaticEventsBackground.svg";
 
 const TraumaticEvents = () => {
   return (
@@ -39,8 +40,7 @@ const Wrapper = styled.div`
   width: 50%;
   padding-bottom: 2.4rem;
   margin: 0 16.7%;
-  padding-top: 5%;
-  background: inherit;
+  padding-top: 7.5%;
   @media (max-width: ${devices.ipad}) {
     padding-top: 10%;
   }
@@ -49,8 +49,9 @@ const Wrapper = styled.div`
   }
 `;
 
-const StyledSection = styled.section`
+const StyledSection = styled.div`
   background: ${colours.darkBlue};
+  background-image: url(${TraumaticEventsBackground});
   margin: 0;
   padding: 0;
 `;

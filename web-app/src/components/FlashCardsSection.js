@@ -30,7 +30,7 @@ const FlashCardsSection = (props) => {
           );
         })}
       </Wrapper>
-      <NextButton>Next</NextButton>
+      <NextButton>Give me advice</NextButton>
     </StyledSection>
   );
 };
@@ -46,12 +46,12 @@ const StyledSection = styled.section`
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   background: inherit;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   @media (max-width: ${devices.ipadpro}) {
     width: 100%;
   }
