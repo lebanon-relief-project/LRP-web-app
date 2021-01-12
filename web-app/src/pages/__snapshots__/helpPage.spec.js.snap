@@ -5,7 +5,9 @@ exports[`the HelpPage component should match the snapshot 1`] = `
   <div
     class="sc-jrsJCI dvFVdg"
   >
-    <div>
+    <div
+      class="sc-kEqYlL dpnDMM"
+    >
       <div
         class="sc-dlnjPT erARxr"
       >

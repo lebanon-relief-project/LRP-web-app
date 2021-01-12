@@ -1,17 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 import TraumaticEventsSection from "../components/TraumaticEventsSection";
 import FeelingsSection from "../components/FeelingsSection";
 import FlashCardsSection from "../components/FlashCardsSection";
-import styled from "styled-components";
 
 const HelpPage = () => {
   return (
     <StyledPage>
-      <div>
+      <PageContainer>
         <TraumaticEventsSection />
         <FeelingsSection />
         <FlashCardsSection />
-      </div>
+      </PageContainer>
     </StyledPage>
   );
 };
@@ -19,6 +19,10 @@ const HelpPage = () => {
 const StyledPage = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const PageContainer = styled.div`
+  max-width: 1440px;
 `;
 
 export default HelpPage;

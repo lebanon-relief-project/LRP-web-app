@@ -112,7 +112,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin: 1.4375rem;
+  margin: 0.8rem;
 `;
 
 const ImageWrapper = styled.div`
