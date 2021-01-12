@@ -23,3 +23,23 @@ export interface FlashCardCloudant {
   value: object;
   doc: FlashCard;
 }
+
+export interface SelectedFlashCards {
+  cards: string[];
+}
+
+export interface Recommendation {
+  title: string;
+  body: string;
+}
+
+export interface Result extends BaseCloudantDocument {
+  expl_title: string;
+  expl_body: string;
+  image: string;
+  recommendations: Recommendation[];
+}
+
+export interface ResultsResponse {
+  results: Result[];
+}
