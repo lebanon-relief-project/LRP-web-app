@@ -106,7 +106,7 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
       <img
         alt="Close Button"
         class="c2"
-        src="CloseButton.png"
+        src="CloseButton.svg"
       />
       <h2
         class="c3"

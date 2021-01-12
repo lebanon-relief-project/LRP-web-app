@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CloseButton from "../assets/images/CloseButton.png";
+import CloseButton from "../assets/images/CloseButton.svg";
 import devices from "../styles/Devices";
 import colours from "../styles/Colours";
 
