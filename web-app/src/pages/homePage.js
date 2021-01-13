@@ -7,13 +7,15 @@ import HelpSection from "../components/HelpSection";
 
 const HomePage = () => {
   return (
-    <StyledPage>
-      <PageContainer>
-        <WhatHappened />
-        <OurMission />
-        <HelpSection />
-      </PageContainer>
-    </StyledPage>
+    <>
+      <StyledPage>
+        <PageContainer>
+          <WhatHappened />
+          <OurMission />
+          <HelpSection />
+        </PageContainer>
+      </StyledPage>
+    </>
   );
 };
 
