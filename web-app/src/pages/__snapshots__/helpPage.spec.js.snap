@@ -3,62 +3,84 @@
 exports[`the HelpPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-jrsJCI dvFVdg"
+    class="sc-bqGHjH jWuxPJ"
   >
     <div>
       <div
-        class="sc-dlnjPT erARxr"
+        class="sc-iCoHVE dOFqSs"
       >
         <div
-          class="sc-gtssRu emobNl"
+          class="sc-eCApGN lofxnN"
         >
-          <h2
-            class="sc-hKFyIo IfuPR"
-          >
-            Traumatic Events
-          </h2>
           <div
-            class="sc-bdnylx kgNiQD"
+            class="sc-jSFkmK kfMmHn"
           >
-            <p
-              class="sc-eCApGN fCJVDN"
+            <img
+              src="HelpPageLeftBackground.svg"
+            />
+          </div>
+          <div
+            class="sc-gKAblj eXwOzH"
+          >
+            <img
+              src="HelpPageRightBackground.svg"
+            />
+          </div>
+        </div>
+        <div
+          class="sc-gtssRu bNoyUR"
+        >
+          <div
+            class="sc-dlnjPT hpuugW"
+          >
+            <h2
+              class="sc-fujyUd dPTygC"
             >
-              The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
-            </p>
-            <p
-              class="sc-eCApGN fCJVDN"
+              Traumatic Events
+            </h2>
+            <div
+              class="sc-bdnylx kgNiQD"
             >
-              All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
-            </p>
-            <p
-              class="sc-eCApGN fCJVDN"
-            >
-              Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
-            </p>
+              <p
+                class="sc-pNWxx lloaym"
+              >
+                The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+              </p>
+              <p
+                class="sc-pNWxx lloaym"
+              >
+                All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+              </p>
+              <p
+                class="sc-pNWxx lloaym"
+              >
+                Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <section
-        class="sc-iCoHVE hANwrK"
+        class="sc-iqAbSa ffSjdd"
       >
         <div
-          class="sc-gKAblj HOwCB"
+          class="sc-kEqYlL jaBPuQ"
         >
           <h2
-            class="sc-fujyUd kgedsY"
+            class="sc-crzoUp fCmkpo"
           >
             Learn more about trauma
           </h2>
           <div
-            class="sc-jSFkmK wZTrU"
+            class="sc-jrsJCI iYdzzN"
           >
             <p
-              class="sc-pNWxx IEUcs"
+              class="sc-dIsAE bDlWsb"
             >
               Below are flashcards with the most common presentations of traumatic stress.
             </p>
             <p
-              class="sc-pNWxx IEUcs"
+              class="sc-dIsAE bDlWsb"
             >
               Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
             </p>

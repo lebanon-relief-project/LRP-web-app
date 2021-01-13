@@ -4,13 +4,14 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 .c0 {
   position: fixed;
   min-width: 100%;
+  max-height: 64px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
-  z-index: 2;
+  z-index: 100;
 }
 
 .c2 {
@@ -178,13 +179,14 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 .c0 {
   position: fixed;
   min-width: 100%;
+  max-height: 64px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
-  z-index: 2;
+  z-index: 100;
 }
 
 .c2 {
