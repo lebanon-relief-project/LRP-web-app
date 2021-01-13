@@ -43,6 +43,7 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
@@ -54,6 +55,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   @media (max-width: ${devices.ipadpro}) {
     width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -73,6 +75,11 @@ const NextButton = styled.button`
   }
   &:active {
     opacity: 1;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 3.375rem 0;
+    align-self: center;
   }
 `;
 

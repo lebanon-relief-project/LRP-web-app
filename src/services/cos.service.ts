@@ -25,8 +25,7 @@ export class CosService {
     this.cos = new S3(this.config);
   }
 
-  // ANY FOR NOW
-  async getImage(imageId: string, bucket: string): Promise<any> {
+  async getImage(imageId: string, bucket: string): Promise<S3.GetObjectOutput> {
     this.logger.info(
       `getFlashcardImage(): Getting flashcards image (${imageId}) from cos (${bucket})`
     );
