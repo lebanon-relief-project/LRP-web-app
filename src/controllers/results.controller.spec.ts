@@ -1,7 +1,7 @@
 import { ResultsController } from "./results.controller";
 import Container from "typedi";
 import { MockLogger } from "../util/test-util";
-import { SelectedFlashCards, ResultsResponse } from "../types/FlashCard";
+import { ResultsResponse } from "../types/FlashCard";
 import { ResultsService } from "../services";
 import { BadRequestError, InternalServerError } from "routing-controllers";
 
@@ -20,7 +20,7 @@ afterEach(() => {
 
 describe("The Results Controller", () => {
   let controller: ResultsController;
-  let flashCardIds: SelectedFlashCards = { cards: ["test id 1", "test id 2"] };
+  let flashCardIds = ["test id 1", "test id 2"];
 
   beforeEach(() => {
     controller = Container.get(ResultsController);
@@ -77,17 +77,7 @@ describe("The Results Controller", () => {
   });
 
   it("should return Bad request error if arg is not correctly defined", async () => {
-    const functionToThrow = async () =>
-      await controller.getResults({ cards: undefined });
-
-    await expect(functionToThrow()).rejects.toThrow(
-      new BadRequestError(`Bad argument`)
-    );
-  });
-
-  it("should return Bad request error if arg is not correctly defined", async () => {
-    const functionToThrow = async () =>
-      await controller.getResults({ cards: [] });
+    const functionToThrow = async () => await controller.getResults(undefined);
 
     await expect(functionToThrow()).rejects.toThrow(
       new BadRequestError(`Bad argument`)

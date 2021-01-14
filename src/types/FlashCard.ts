@@ -24,10 +24,6 @@ export interface FlashCardCloudant {
   doc: FlashCard;
 }
 
-export interface SelectedFlashCards {
-  cards: string[];
-}
-
 export interface Recommendation {
   title: string;
   body: string;
@@ -38,6 +34,19 @@ export interface Result extends BaseCloudantDocument {
   expl_body: string;
   image: string;
   recommendations: Recommendation[];
+}
+
+export interface ResultsCloudant {
+  id: string;
+  key: string;
+  value: object;
+  doc: Result;
+}
+
+export interface ResultsResponseCloudantResponse {
+  total_rows: number;
+  offset?: number;
+  rows: ResultsCloudant[];
 }
 
 export interface ResultsResponse {

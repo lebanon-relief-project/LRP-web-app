@@ -1,14 +1,14 @@
 import {
   Get,
   JsonController,
-  BodyParam,
   BadRequestError,
   InternalServerError,
+  QueryParam,
 } from "routing-controllers";
 import { LoggerApi } from "../logger";
 import { HelpService, ResultsService } from "../services";
 import { Inject } from "typedi";
-import { ResultsResponse, SelectedFlashCards } from "src/types/FlashCard";
+import { ResultsResponse } from "src/types/FlashCard";
 
 @JsonController("/api/results")
 export class ResultsController {
@@ -24,17 +24,13 @@ export class ResultsController {
 
   @Get()
   async getResults(
-    @BodyParam("selectedFlashCards") selectedFlashCards: SelectedFlashCards
+    @QueryParam("selectedFlashCards") selectedFlashCards: string[]
   ): Promise<ResultsResponse> {
-    if (
-      !selectedFlashCards ||
-      !selectedFlashCards.cards ||
-      selectedFlashCards.cards.length === 0
-    )
+    if (!selectedFlashCards || selectedFlashCards.length === 0)
       throw new BadRequestError(`Bad argument`);
 
     try {
-      return this.service.getResults(selectedFlashCards.cards);
+      return this.service.getResults(selectedFlashCards);
     } catch (exception) {
       throw new InternalServerError(`failed to get results`);
     }
