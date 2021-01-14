@@ -5,7 +5,10 @@ import { FlashCard, FlashCardsResponse } from "../types/FlashCard";
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { CloudantService } from ".";
 import { InternalServerError } from "routing-controllers";
-import { CLOUDANT_FLASHCARD_DB_DEV, COS_FLASHCARD_IMAGE_BUCKET } from "../statics";
+import {
+  CLOUDANT_FLASHCARD_DB_DEV,
+  COS_FLASHCARD_IMAGE_BUCKET,
+} from "../statics";
 import { CosService } from "./cos.service";
 
 @Service()
