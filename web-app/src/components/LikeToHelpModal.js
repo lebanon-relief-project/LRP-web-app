@@ -15,7 +15,7 @@ const LikeToHelpModal = (props) => {
         />
         <Title>I’d like to help</Title>
         <Text>
-          Great news! Please drop us an email at
+          Great news! Please drop us an email at{" "}
           <Email>support@lebanonreliefnetwork.org</Email> with details about who
           you are and we will get back to you shortly.
         </Text>
