@@ -59,7 +59,8 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 @media (max-width:576px) {
   .c0 {
     width: 100%;
-    z-index: 1;
+    max-height: 100%;
+    z-index: 99;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -234,7 +235,8 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 @media (max-width:576px) {
   .c0 {
     width: 100%;
-    z-index: 1;
+    max-height: 100%;
+    z-index: 99;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

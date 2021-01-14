@@ -27,7 +27,8 @@ const StyledNav = styled.nav`
     display: none;
   }
 
-  height: 10vh;
+
+  height: 64px;
   max-height: 64px;
   width: 100%;
   z-index: 100;

@@ -47,7 +47,8 @@ const StyledNav = styled.nav`
   }
   @media (max-width: ${devices.mobile}) {
     width: 100%;
-    z-index: 1;
+    max-height: 100%;
+    z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;
