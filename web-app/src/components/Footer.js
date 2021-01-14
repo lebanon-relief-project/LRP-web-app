@@ -3,9 +3,9 @@ import styled from "styled-components";
 import FooterLink from "./FooterLink";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
-import Instagram from "../assets/images/Instagram.png";
-import Facebook from "../assets/images/Facebook.png";
-import Twitter from "../assets/images/Twitter.png";
+import Instagram from "../assets/images/Instagram.svg";
+import Facebook from "../assets/images/Facebook.svg";
+import Twitter from "../assets/images/Twitter.svg";
 
 const Footer = () => {
   return (
@@ -17,19 +17,41 @@ const Footer = () => {
         />
 
         <CircularLinkWrapper>
-          <StyledImage src={Instagram} alt="Instagram" />
-          <StyledImage src={Facebook} alt="Facebook" />
-          <StyledImage src={Twitter} alt="Twitter" />
-          <p>hello@lrn.com</p>
+          <StyledAnchor
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src={Instagram} alt="Instagram" />
+          </StyledAnchor>
+          <StyledAnchor
+            href="https://www.facebook.com/Lebanonreliefnetwork"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src={Facebook} alt="Facebook" />
+          </StyledAnchor>
+          <StyledAnchor
+            href="https://twitter.com/LebReliefNet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src={Twitter} alt="Twitter" />
+          </StyledAnchor>
+          <p>support@lebanonreliefnetwork.org</p>
         </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
   );
 };
 
+const StyledAnchor = styled.a`
+  margin: 5%;
+`;
+
 const StyledImage = styled.img`
-  width: 20%;
-  height: 40%;
+  width: 100%;
+  height: auto;
 `;
 
 const CircularLinkWrapper = styled.div`
@@ -37,7 +59,7 @@ const CircularLinkWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 1rem 0;
-  margin: 2rem 0;
+  margin: 2rem;
   @media (max-width: ${devices.mobile}) {
     padding: 0;
     margin: 1rem 0;

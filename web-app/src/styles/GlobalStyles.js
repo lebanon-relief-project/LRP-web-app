@@ -22,13 +22,15 @@ export const ResponsiveStyledHeader = styled.h2`
 `;
 
 export const StyledParagraph = styled.p`
+  position: relative;
   margin: 0;
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: ${colours.black};
+  z-index: 1;
 `;
 
 export const StyledSection = styled.section`

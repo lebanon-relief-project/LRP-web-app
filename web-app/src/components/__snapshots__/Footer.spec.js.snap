@@ -21,8 +21,12 @@ exports[`the Footer component should match the snapshot 1`] = `
 }
 
 .c7 {
-  width: 20%;
-  height: 40%;
+  margin: 5%;
+}
+
+.c8 {
+  width: 100%;
+  height: auto;
 }
 
 .c6 {
@@ -38,7 +42,7 @@ exports[`the Footer component should match the snapshot 1`] = `
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   padding: 1rem 0;
-  margin: 2rem 0;
+  margin: 2rem;
 }
 
 .c1 {
@@ -127,23 +131,44 @@ exports[`the Footer component should match the snapshot 1`] = `
       <div
         class="c6"
       >
-        <img
-          alt="Instagram"
+        <a
           class="c7"
-          src="Instagram.png"
-        />
-        <img
-          alt="Facebook"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
           class="c7"
-          src="Facebook.png"
-        />
-        <img
-          alt="Twitter"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
           class="c7"
-          src="Twitter.png"
-        />
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
         <p>
-          hello@lrn.com
+          support@lebanonreliefnetwork.org
         </p>
       </div>
     </div>

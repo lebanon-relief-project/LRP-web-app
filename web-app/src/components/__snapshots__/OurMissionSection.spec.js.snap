@@ -22,13 +22,15 @@ exports[`the OurMission component should match the snapshot 1`] = `
 }
 
 .c4 {
+  position: relative;
   margin: 0;
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  z-index: 1;
 }
 
 .c0 {
@@ -133,6 +135,12 @@ exports[`the OurMission component should match the snapshot 1`] = `
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
+  }
+}
+
+@media (max-width:1025px) {
+  .c7 {
+    top: 10%;
   }
 }
 

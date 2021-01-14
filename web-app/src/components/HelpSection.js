@@ -30,6 +30,7 @@ const HelpSection = () => {
           </Card>
           <Card
             title="I’d like to help"
+            path={"#"}
             buttonText="Contact me"
             onClick={() => {
               setLikeToHelpModalVisible(true);
@@ -51,10 +52,11 @@ const HelpSection = () => {
           <StyledIllustration4 />
           <ChallengeCard>
             <Card
-              secondary
-              title="Try our 7 days of Wellbeing"
+              secondary="true"
+              disabled
+              title="Try our 14 days of Wellbeing"
               path={Routes.HOME}
-              buttonText="Sign me up"
+              buttonText="Coming soon"
             >
               <p>If you are: </p>
               <StyledUnorderedList>
@@ -83,7 +85,7 @@ const HelpSection = () => {
 const Paragraph = styled.p`
   font-family: Raleway;
   font-style: normal;
-  font-weight: bold;
+
   font-size: 16px;
   line-height: 150%;
   color: #262626;

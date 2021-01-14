@@ -132,9 +132,9 @@ exports[`the HelpSection component should match the snapshot 1`] = `
         class="c5"
       >
         <div
-          data-testid="Try our 7 days of Wellbeing"
+          data-testid="Try our 14 days of Wellbeing"
         >
-          Try our 7 days of Wellbeing
+          Try our 14 days of Wellbeing
         </div>
       </div>
     </div>
