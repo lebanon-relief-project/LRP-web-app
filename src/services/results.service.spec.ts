@@ -3,18 +3,15 @@ import { ResultsService, CloudantService } from ".";
 import Container from "typedi";
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { MockLogger } from "../util/test-util";
-import { CosService } from "./cos.service";
 import { InternalServerError } from "routing-controllers";
 
 const mockList = jest.fn();
-const mockGetImage = jest.fn();
 class MockDb implements Partial<DocumentScope<any>> {
   list = mockList;
 }
 
 Container.set("logger", new MockLogger());
 Container.set(CloudantService, { use: () => new MockDb() });
-Container.set(CosService, { getImage: mockGetImage });
 let resultsService: ResultsService = Container.get(ResultsService);
 
 describe("The result service", () => {
@@ -27,7 +24,6 @@ describe("The result service", () => {
   describe("the getResults() function", () => {
     beforeEach(async () => {
       mockList.mockResolvedValue(sampleResultsCloudantResponse);
-      mockGetImage.mockResolvedValue("sample image");
       result = await resultsService.getResults(["test_id_1"]);
     });
 
