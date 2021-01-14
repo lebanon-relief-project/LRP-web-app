@@ -5,13 +5,14 @@ import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import TickCircleIcon from "../assets/images/TickCircle.svg";
 import { useSpring, animated as a } from "react-spring";
 import devices from "../styles/Devices";
+import { deviceSize } from "../util/deviceUtil"
 
 const FlashCard = ({ card, id }) => {
   const [flipped, setFlipped] = useState(false);
   const [selected, setSelected] = useState(false);
 
   const { transform, opacity } = useSpring({
-    opacity: flipped ? 0.8 : 0,
+    opacity: flipped ? 0.92 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
@@ -35,9 +36,10 @@ const FlashCard = ({ card, id }) => {
     setSelected(!selected);
   };
 
-  return (
-    <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
-      {/* Card title and button */}
+  const renderCard = () => {
+    return (
+      <>
+          {/* Card title and button */}
       <StyledHeader>
         {card.title}
         <FlashCardButton
@@ -88,12 +90,30 @@ const FlashCard = ({ card, id }) => {
             left: 0,
             right: 0,
             position: "absolute",
+            paddingLeft: "8px",
+            paddingRight: "8px",
           }}
         >
           {card.body}
         </a.div>
       </ImageWrapper>
-    </Wrapper>
+      </>
+    );
+  };
+
+  return (
+    <>
+    {(window.screen.width <= deviceSize.ipadpro) ? (
+      <Wrapper onClick={cardFlipHandler}>
+        {renderCard()}
+      </Wrapper>
+
+    ) : (
+      <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
+        {renderCard()}
+      </Wrapper>
+    )}
+    </>
   );
 };
 
