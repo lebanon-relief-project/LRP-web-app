@@ -30,7 +30,7 @@ const FlashCardsSection = (props) => {
           );
         })}
       </Wrapper>
-      <NextButton>Next</NextButton>
+      <NextButton>Give me advice</NextButton>
     </StyledSection>
   );
 };
@@ -43,17 +43,19 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   background: inherit;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   @media (max-width: ${devices.ipadpro}) {
     width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -73,6 +75,11 @@ const NextButton = styled.button`
   }
   &:active {
     opacity: 1;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 3.375rem 0;
+    align-self: center;
   }
 `;
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
+import devices from "../styles/Devices";
 
 const FeelingsSection = () => {
   return (
@@ -34,6 +35,13 @@ const Wrapper = styled.div`
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
 `;
 
 const StyledSection = styled.section`

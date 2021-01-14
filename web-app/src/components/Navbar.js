@@ -37,16 +37,18 @@ const Navbar = ({ open }) => {
 const StyledNav = styled.nav`
   position: fixed;
   min-width: 100%;
+  max-height: 64px;
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
-  z-index: 2;
+  z-index: 100;
   @media (max-width: ${devices.ipad}) {
     padding: 1rem 0;
   }
   @media (max-width: ${devices.mobile}) {
     width: 100%;
-    z-index: 1;
+    max-height: 100%;
+    z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;

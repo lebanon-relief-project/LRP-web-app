@@ -4,13 +4,14 @@ import colours from "../styles/Colours";
 import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import TickCircleIcon from "../assets/images/TickCircle.svg";
 import { useSpring, animated as a } from "react-spring";
+import devices from "../styles/Devices";
 
 const FlashCard = ({ card, id }) => {
   const [flipped, setFlipped] = useState(false);
   const [selected, setSelected] = useState(false);
 
   const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
+    opacity: flipped ? 0.8 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
@@ -102,6 +103,10 @@ const StyledHeader = styled.div`
   height: 80px;
   padding: 0.25rem 0.5rem;
   justify-content: space-between;
+  @media (max-width: ${devices.mobile}) {
+    height: 58px;
+    font-size: 14px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -112,7 +117,12 @@ const Wrapper = styled.div`
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin: 1.4375rem;
+  margin: 12px;
+
+  @media (max-width: ${devices.mobile}) {
+    height: 288px;
+    width: 339px;
+  }
 `;
 
 const ImageWrapper = styled.div`
