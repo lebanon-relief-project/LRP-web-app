@@ -4,13 +4,6 @@ import FlashCard from "./FlashCard";
 import { act } from "react-dom/test-utils";
 import "jest-styled-components";
 
-jest.mock("../util/imageUtil", () => {
-  return {
-    getSvgImageFromArrayBuffer: jest.fn().mockReturnValue("test image"),
-  };
-});
-
-
 describe("the FlashCard component", () => {
   let container;
   let getByTestId;
