@@ -11,14 +11,14 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
 
 .c4 {
   font-family: Raleway;
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
 
 .c5 {
-  font-weight: bold;
+  font-weight: 700;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -116,15 +116,13 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
       <p
         class="c4"
       >
-        Great news! Please drop us an email at 
+        Great news! Please drop us an email at
         <span
           class="c5"
         >
-          hello@lrn.com
+          support@lebanonreliefnetwork.org
         </span>
-         
-        with details about who you are and we will get back to you shortly.
-         
+         with details about who you are and we will get back to you shortly.
       </p>
       <button
         class="c6"

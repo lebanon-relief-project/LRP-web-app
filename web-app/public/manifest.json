@@ -3,19 +3,12 @@
   "name": "Lebanon Relief Network",
   "icons": [
     {
-      "src": "logo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "src": "LRN_logo_square.svg",
+      "sizes": "58x58"
     },
     {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "LRN_logo_square_big.svg",
+      "sizes": "144x144"
     }
   ],
   "start_url": ".",

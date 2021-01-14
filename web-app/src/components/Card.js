@@ -5,19 +5,21 @@ import devices from "../styles/Devices";
 import colours from "../styles/Colours";
 
 const Card = (props) => {
+  const { children, title, path, buttonText, ...rest } = props;
   return (
-    <StyledCard {...props}>
-      <CardTitle {...props}>{props.title}</CardTitle>
-      {props.children}
-      <StyledLink {...props} to={props.path}>
-        {props.buttonText}
+    <StyledCard {...rest}>
+      <CardTitle {...rest}>{title}</CardTitle>
+      {children}
+      <StyledLink {...rest} to={path}>
+        {buttonText}
       </StyledLink>
     </StyledCard>
   );
 };
 
 const StyledLink = styled(Link)`
-  background-color: ${colours.yellow};
+  background-color: ${(props) =>
+    props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
   font-style: normal;
   font-weight: bold;
@@ -41,9 +43,17 @@ const StyledCard = styled.fieldset`
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
   width: ${(props) => (props.secondary ? "100%" : "25%")};
-  padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.5rem")};
+  padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.2rem")};
   margin: 3rem 1rem;
   height: 20%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
   background-color: white;
   @media (max-width: ${devices.ipadpro}) {
     width: ${(props) => (props.secondary ? "100%" : "40%")};
