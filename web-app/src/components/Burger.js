@@ -25,7 +25,7 @@ const StyledBurger = styled.button`
   flex-direction: column;
   justify-content: space-around;
   position: fixed;
-  top: 3%;
+
   right: 2rem;
   width: 2rem;
   height: 2rem;

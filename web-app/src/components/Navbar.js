@@ -38,6 +38,7 @@ const StyledNav = styled.nav`
   position: fixed;
   min-width: 100%;
   max-height: 64px;
+  height: 64px;
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
@@ -51,7 +52,7 @@ const StyledNav = styled.nav`
     z-index: 99;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background: ${colours.white};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     height: 100%;
@@ -60,13 +61,17 @@ const StyledNav = styled.nav`
     transition: transform 0.3s ease-in-out;
 
     a {
-      font-size: 2rem;
-      text-transform: uppercase;
-      padding: 2rem 0;
-      font-weight: bold;
+      font-family: Playfair Display;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 38px;
+      letter-spacing: 0em;
+      text-align: left;
       letter-spacing: 0.5rem;
       text-decoration: none;
       transition: color 0.3s linear;
+      color: #002766;
     }
   }
 `;
@@ -89,6 +94,7 @@ const StyledDiv = styled.div`
 const StyledUl = styled.ul`
   display: flex;
   @media (max-width: ${devices.mobile}) {
+    margin-top: 104px;
     flex-direction: column;
   }
   list-style-type: none;
@@ -98,10 +104,10 @@ const StyledUl = styled.ul`
 `;
 
 const StyledLi = styled.li`
-  width: 100%;
-
+  max-width: 100%;
+  min-width: 50%;
   @media (max-width: ${devices.mobile}) {
-    margin: 10px 0;
+    margin-bottom: 60px;
   }
 
   @media (max-width: ${devices.ipad}) {
@@ -131,9 +137,9 @@ const StyledLink = styled(NavLink)`
   }
   @media (max-width: ${devices.mobile}) {
     position: relative;
+    top: 0;
     &.active {
       font-weight: bold;
-      border-bottom: none;
     }
   }
 `;
