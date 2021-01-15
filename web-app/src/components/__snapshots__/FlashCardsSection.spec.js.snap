@@ -1,6 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardsSection component should match the snapshot 1`] = `
+.c3 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+.c3:focus,
+.c3:hover,
+.c3:visited,
+.c3:link,
+.c3:active {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
 .c0 {
   background: inherit;
   margin: 0;
@@ -97,7 +117,12 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
     <button
       class="c2"
     >
-      Give me advice
+      <a
+        class="c3"
+        href="/results"
+      >
+        Give me advice
+      </a>
     </button>
   </section>
 </div>
