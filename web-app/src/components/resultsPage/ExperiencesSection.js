@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import colours from "../styles/Colours";
-import devices from "../styles/Devices";
-import ResultsPageLeftBackground from "../assets/images/background/ResultsPageLeftBackground.svg";
-import ResultsPageRightBackground from "../assets/images/background/ResultsPageRightBackground.svg";
-import ResultsPagePeopleIcons from "../assets/images/background/ResultsPagePeopleIcons.svg";
-import ResultsPageStatistics from "../assets/images/background/ResultsPageStatistics.svg";
+import colours from "../../styles/Colours";
+import devices from "../../styles/Devices";
+import ResultsPageLeftBackground from "../../assets/images/background/ResultsPageLeftBackground.svg";
+import ResultsPageRightBackground from "../../assets/images/background/ResultsPageRightBackground.svg";
+import ResultsPagePeopleIcons from "../../assets/images/background/ResultsPagePeopleIcons.svg";
+import ResultsPageStatistics from "../../assets/images/background/ResultsPageStatistics.svg";
 
 const ExperiencesSection = () => {
   return (

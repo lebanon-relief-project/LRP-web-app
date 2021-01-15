@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import devices from "../styles/Devices";
-import ExperiencesSection from "../components/ExperiencesSection";
-import ResultsSection from "../components/ResultsSection";
+import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
+import ResultsSection from "../components/resultsPage/ResultsSection";
 
 const ResultsPage = () => {
   useEffect(() => {

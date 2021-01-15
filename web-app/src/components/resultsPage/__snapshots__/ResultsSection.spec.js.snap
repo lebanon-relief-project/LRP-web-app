@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the TraumaticEvents component should match the snapshot 1`] = `
+.c6 {
+  box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  Offset: 0px,1px rgba(0,0,0,0.25) border-radius:10px;
+  padding: 6px;
+  margin: 10px;
+  min-height: 174px;
+}
+
+.c4 {
+  max-width: 632;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 24px;
+  min-width: 270px;
+  text-align: left;
+  padding-left: 24px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 652px;
+  min-width: 960px;
+}
+
+.c1 {
+  width: 60%;
+  min-width: 960px;
+  min-height: 730px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c0 {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.c2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width:576px) {
+  .c1 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+      id="wrapper"
+    >
+      <h2
+        class="c2"
+      >
+        Here’s some things that can help
+      </h2>
+      <div
+        class="c3"
+        id="content"
+      >
+        <div
+          class="c4"
+        >
+          <div>
+            <img
+              src="resultsPageLoadingBar.svg"
+            />
+          </div>
+        </div>
+        <div>
+          <h2
+            class="c5"
+          >
+            Feeling guilty
+          </h2>
+        </div>
+        <div
+          class="c4"
+        >
+          <div
+            class="c6"
+          >
+            <div
+              id="result card"
+            >
+              <h4>
+                <b>
+                  Allow yourself to feel
+                </b>
+              </h4>
+              <p>
+                As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c6"
+          >
+            <div
+              id="result card"
+            >
+              <h4>
+                <b>
+                  Talk about it
+                </b>
+              </h4>
+              <p>
+                Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
+              </p>
+            </div>
+          </div>
+          <div
+            class="c6"
+          >
+            <div
+              id="result card"
+            >
+              <h4>
+                <b>
+                  Try these excercises
+                </b>
+              </h4>
+              <p>
+                Lorem ipsum...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
