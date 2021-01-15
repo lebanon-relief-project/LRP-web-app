@@ -3,26 +3,28 @@
 exports[`the HelpPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-bqGHjH jWuxPJ"
+    class="sc-dIsAE hKpbCJ"
   >
     <div>
       <div
-        class="sc-iCoHVE dOFqSs"
+        class="sc-gKAblj erfarb"
       >
         <div
-          class="sc-eCApGN lofxnN"
+          class="sc-hKFyIo fLBvJZ"
         >
           <div
-            class="sc-jSFkmK kfMmHn"
+            class="sc-eCApGN jgPuuD"
           >
             <img
+              alt="background"
               src="HelpPageLeftBackground.svg"
             />
           </div>
           <div
-            class="sc-gKAblj eXwOzH"
+            class="sc-jSFkmK ijxrYw"
           >
             <img
+              alt="background"
               src="HelpPageRightBackground.svg"
             />
           </div>
@@ -34,7 +36,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             class="sc-dlnjPT hpuugW"
           >
             <h2
-              class="sc-fujyUd dPTygC"
+              class="sc-iCoHVE bortUZ"
             >
               Traumatic Events
             </h2>
@@ -42,17 +44,17 @@ exports[`the HelpPage component should match the snapshot 1`] = `
               class="sc-bdnylx kgNiQD"
             >
               <p
-                class="sc-pNWxx lloaym"
+                class="sc-fujyUd gdPIDW"
               >
                 The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
               </p>
               <p
-                class="sc-pNWxx lloaym"
+                class="sc-fujyUd gdPIDW"
               >
                 All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
               </p>
               <p
-                class="sc-pNWxx lloaym"
+                class="sc-fujyUd gdPIDW"
               >
                 Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
               </p>
@@ -61,26 +63,26 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         </div>
       </div>
       <section
-        class="sc-iqAbSa ffSjdd"
+        class="sc-kEqYlL dYVMvC"
       >
         <div
-          class="sc-kEqYlL jaBPuQ"
+          class="sc-jrsJCI bBxvhR"
         >
           <h2
-            class="sc-crzoUp fCmkpo"
+            class="sc-iqAbSa gOlslw"
           >
             Learn more about trauma
           </h2>
           <div
-            class="sc-jrsJCI iYdzzN"
+            class="sc-pNWxx cidOWP"
           >
             <p
-              class="sc-dIsAE bDlWsb"
+              class="sc-crzoUp jNsjMQ"
             >
               Below are flashcards with the most common presentations of traumatic stress.
             </p>
             <p
-              class="sc-dIsAE bDlWsb"
+              class="sc-crzoUp jNsjMQ"
             >
               Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
             </p>

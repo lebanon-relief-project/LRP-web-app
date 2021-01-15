@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import devices from "../styles/Devices";
+import ExperiencesSection from "../components/ExperiencesSection";
+import ResultsSection from "../components/ResultsSection";
 
 const ResultsPage = () => {
   useEffect(() => {
@@ -9,9 +11,12 @@ const ResultsPage = () => {
   }, []);
 
   return (
-    <>
-      <h1>Results!</h1>
-    </>
+    <StyledPage>
+      <div style={{ width: "100%" }}>
+        <ExperiencesSection />
+        <ResultsSection />
+      </div>
+    </StyledPage>
   );
 };
 

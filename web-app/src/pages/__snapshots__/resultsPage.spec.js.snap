@@ -2,8 +2,91 @@
 
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
-  <h1>
-    Results!
-  </h1>
+  <div
+    class="sc-dIsAE fCFzGc"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        class="sc-gKAblj erfarb"
+      >
+        <div
+          class="sc-hKFyIo USffH"
+        >
+          <div
+            class="sc-eCApGN BJKYF"
+          >
+            <img
+              alt="background"
+              src="ResultsPageLeftBackground.svg"
+            />
+          </div>
+          <div
+            class="sc-jSFkmK cbZMZO"
+          >
+            <img
+              alt="background"
+              src="ResultsPageRightBackground.svg"
+            />
+          </div>
+        </div>
+        <div
+          class="sc-gtssRu gyrDgB"
+        >
+          <div
+            class="sc-dlnjPT kAoRzN"
+          >
+            <h2
+              class="sc-iCoHVE kAmBOd"
+            >
+              From the experiences you've shared...
+            </h2>
+            <div
+              class="sc-bdnylx kgNiQD"
+            >
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
+              </p>
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                <img
+                  alt="76%"
+                  src="ResultsPagePeopleIcons.svg"
+                />
+              </p>
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                <img
+                  alt="people"
+                  src="ResultsPageStatistics.svg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="sc-kEqYlL dYVMvC"
+      >
+        <div
+          class="sc-jrsJCI bBxvhR"
+        >
+          <h2
+            class="sc-iqAbSa gOlslw"
+          >
+            Here’s some things that can help
+          </h2>
+          <div
+            class="sc-pNWxx kAFFDp"
+          />
+        </div>
+      </section>
+    </div>
+  </div>
 </div>
 `;

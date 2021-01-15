@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the TraumaticEvents component should match the snapshot 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 652px;
+}
+
+.c1 {
+  width: 50%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c0 {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.c2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width:576px) {
+  .c1 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h2
+        class="c2"
+      >
+        Here’s some things that can help
+      </h2>
+      <div
+        class="c3"
+      />
+    </div>
+  </section>
+</div>
+`;
