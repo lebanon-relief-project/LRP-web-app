@@ -21,6 +21,7 @@ exports[`the Burger component should match the snapshot when open is set to fals
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
 .c0 span {
@@ -90,6 +91,7 @@ exports[`the Burger component should match the snapshot when open is set to true
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
 .c0 span {

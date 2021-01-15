@@ -33,6 +33,7 @@ const StyledBurger = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 
   span {
     width: 2rem;

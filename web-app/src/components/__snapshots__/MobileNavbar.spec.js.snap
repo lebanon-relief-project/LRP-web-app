@@ -21,6 +21,7 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
 .c4 span {
