@@ -5,7 +5,7 @@ import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import TickCircleIcon from "../assets/images/TickCircle.svg";
 import { useSpring, animated as a } from "react-spring";
 import devices from "../styles/Devices";
-import { deviceSize } from "../util/deviceUtil"
+import { deviceSize } from "../util/deviceUtil";
 
 const FlashCard = ({ card, id }) => {
   const [flipped, setFlipped] = useState(false);
@@ -21,7 +21,6 @@ const FlashCard = ({ card, id }) => {
   // It calculates the card selection logic (card stays flipped if selected)
   const cardFlipHandler = () => {
     if (selected) return;
-
     setFlipped(() => !flipped);
   };
 
@@ -30,6 +29,9 @@ const FlashCard = ({ card, id }) => {
   const cardSelectHandler = () => {
     if (!selected) {
       sessionStorage.setItem(id, card.title);
+      if (window.screen.width <= deviceSize.ipadpro){
+        setFlipped(true);
+      }
     } else {
       sessionStorage.removeItem(id);
     }
@@ -39,80 +41,77 @@ const FlashCard = ({ card, id }) => {
   const renderCard = () => {
     return (
       <>
-          {/* Card title and button */}
-      <StyledHeader>
-        {card.title}
-        <FlashCardButton
-          data-testid={card.title}
-          onClick={() => cardSelectHandler()}
-        >
-          {selected ? (
-            <CircleIcon
-              height={32}
-              width={32}
-              src={TickCircleIcon}
-              alt="TickCircleIcon"
-            />
-          ) : (
-            <CircleIcon
-              height={32}
-              width={32}
-              src={PlusCircleIcon}
-              alt="PlusCircleIcon"
-            />
-          )}
-        </FlashCardButton>
-      </StyledHeader>
+        {/* Card title and button */}
+        <StyledHeader>
+          {card.title}
+          <FlashCardButton
+            data-testid={card.title}
+            onClick={() => cardSelectHandler()}
+          >
+            {selected ? (
+              <CircleIcon
+                height={32}
+                width={32}
+                src={TickCircleIcon}
+                alt="TickCircleIcon"
+              />
+            ) : (
+              <CircleIcon
+                height={32}
+                width={32}
+                src={PlusCircleIcon}
+                alt="PlusCircleIcon"
+              />
+            )}
+          </FlashCardButton>
+        </StyledHeader>
 
-      <ImageWrapper>
-        {/* Front of card */}
-        <a.div
-          style={{
-            opacity: opacity.interpolate((o) => 1 - o),
-            transform,
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            position: "absolute",
-          }}
-        >
-          <FlashCardImage src={card.image} />
-        </a.div>
+        <ImageWrapper onClick={ window.screen.width <= deviceSize.ipadpro ? cardFlipHandler : () => {}}>
+          {/* Picture side of card */}
+          <a.div
+            style={{
+              opacity: opacity.interpolate((o) => 1 - o),
+              transform,
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              position: "absolute",
+            }}
+          >
+            <FlashCardImage src={card.image} />
+          </a.div>
 
-        {/* Back of card */}
-        <a.div
-          style={{
-            opacity,
-            transform: transform.interpolate((t) => `${t} rotateY(180deg)`),
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            position: "absolute",
-            paddingLeft: "8px",
-            paddingRight: "8px",
-          }}
-        >
-          {card.body}
-        </a.div>
-      </ImageWrapper>
+          {/* Text side of card */}
+          <a.div
+            style={{
+              opacity,
+              transform: transform.interpolate((t) => `${t} rotateY(180deg)`),
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              position: "absolute",
+              paddingLeft: "8px",
+              paddingRight: "8px",
+            }}
+          >
+            {card.body}
+          </a.div>
+        </ImageWrapper>
       </>
     );
   };
 
   return (
     <>
-    {(window.screen.width <= deviceSize.ipadpro) ? (
-      <Wrapper onClick={cardFlipHandler}>
-        {renderCard()}
-      </Wrapper>
-
-    ) : (
-      <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
-        {renderCard()}
-      </Wrapper>
-    )}
+      {window.screen.width <= deviceSize.ipadpro ? (
+        <Wrapper >{renderCard()}</Wrapper>
+      ) : (
+        <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
+          {renderCard()}
+        </Wrapper>
+      )}
     </>
   );
 };
