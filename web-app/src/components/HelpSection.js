@@ -122,7 +122,7 @@ const ChallengeCard = styled.div`
   right: 23%;
 
   @media (max-width: ${devices.mobile}) {
-    display: none;
+    position: static;
   }
 
   @media (max-width: ${devices.ipadpro}) {
@@ -131,8 +131,10 @@ const ChallengeCard = styled.div`
 `;
 
 const IllustrationAndCard = styled.div`
-  display: flex;
-  position: relative;
+  @media (min-width: ${devices.mobile}) {
+    display: flex;
+    position: relative;
+  }
 `;
 
 const CardWrapper = styled.div`

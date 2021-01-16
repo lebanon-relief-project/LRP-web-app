@@ -27,6 +27,9 @@ const StyledLink = styled(Link)`
   justify-content: center;
   display: flex;
   width: ${(props) => (props.secondary ? "30%" : "100%")};
+  @media (max-width: ${devices.mobile}) {
+    width: ${(props) => (props.secondary ? "50%" : "100%")};
+  }
 `;
 
 const CardTitle = styled.legend`
@@ -37,6 +40,10 @@ const CardTitle = styled.legend`
   padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
   text-align: ${(props) => (props.secondary ? "left" : "center")};
   margin-bottom: 0;
+  @media (max-width: ${devices.mobile}) {
+    font-size: 30px;
+    line-height: 38px;
+  }
 `;
 
 const StyledCard = styled.fieldset`
