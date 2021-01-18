@@ -14,3 +14,19 @@ export const getCardIdsFromSessionStorage = () => {
 
   return cardIds;
 };
+
+export const getCardTitleFromSessionStorage = (id) => {
+  let card = "";
+  const numberOfCards = sessionStorage.length;
+
+  for (let i = 0; i < numberOfCards; i++) {
+    let key = sessionStorage.key(i);
+
+    // Should regex this to match flashcard id patterns
+    if (key === id) {
+      card = sessionStorage.getItem(key);
+    }
+  }
+
+  return card;
+};

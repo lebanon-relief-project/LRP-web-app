@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
-.c6 {
+.c8 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -11,7 +11,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   min-height: 174px;
 }
 
-.c4 {
+.c7 {
   max-width: 632;
 }
 
@@ -21,6 +21,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+}
+
+.c6 {
+  font-weight: bold;
+  font-size: 24px;
+  min-width: 270px;
+  text-align: left;
+  padding-left: 24px;
+  opacity: 0.3;
+}
+
+.c4 {
+  max-width: 632;
 }
 
 .c3 {
@@ -99,15 +112,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
         <div>
           <h2
             class="c5"
-          >
-            Feeling guilty
-          </h2>
+          />
+          <h2
+            class="c6"
+          />
+          <h2
+            class="c6"
+          />
         </div>
         <div
-          class="c4"
+          class="c7"
         >
           <div
-            class="c6"
+            class="c8"
           >
             <div
               id="result card"
@@ -123,7 +140,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
             </div>
           </div>
           <div
-            class="c6"
+            class="c8"
           >
             <div
               id="result card"
@@ -139,7 +156,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
             </div>
           </div>
           <div
-            class="c6"
+            class="c8"
           >
             <div
               id="result card"

@@ -2,25 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
-import { ResultCard } from "./ResultCard";
 import resultsPageLoadingBar from "../../assets/images/resultsPageLoadingBar.svg";
+import {FlashCardResultContainer} from "./FlashCardResultContainer"
 
-const tempCards = [
+const tempCards = { results: [
   {
+    _id: "9851d5f91b9f896b097acdd32a5dfed8",
     title: "Allow yourself to feel",
     body:
       "As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.",
   },
   {
+    _id: "b5f070b7a6567c96432f9668f6d72046",
     title: "Talk about it",
     body:
       "Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.",
   },
   {
+    _id: "e5e8bcbdabeef5bc57de9213dde014ad",
     title: "Try these excercises",
     body: "Lorem ipsum...",
   },
-];
+]};
 
 const ResultsSection = () => {
   return (
@@ -35,15 +38,8 @@ const ResultsSection = () => {
             </div>
           </ResultCardWrapper>
 
-          <div>
-            <StyledFlashCardTitle>Feeling guilty</StyledFlashCardTitle>
-          </div>
+          <FlashCardResultContainer results={tempCards}/>
 
-          <ResultCardWrapper>
-            <ResultCard title={tempCards[0].title} body={tempCards[0].body} />
-            <ResultCard title={tempCards[1].title} body={tempCards[1].body} />
-            <ResultCard title={tempCards[2].title} body={tempCards[2].body} />
-          </ResultCardWrapper>
         </ContentWrapper>
       </Wrapper>
     </StyledSection>
@@ -52,14 +48,6 @@ const ResultsSection = () => {
 
 const ResultCardWrapper = styled.div`
   max-width: 632;
-`;
-
-const StyledFlashCardTitle = styled.h2`
-  font-weight: bold;
-  font-size: 24px;
-  min-width: 270px;
-  text-align: left;
-  padding-left: 24px;
 `;
 
 const ContentWrapper = styled.div`

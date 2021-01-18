@@ -3,7 +3,7 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-ksluoS fbxyhP"
+    class="sc-fnVYJo iOsRFU"
   >
     <div
       style="width: 100%;"
@@ -71,23 +71,23 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         </div>
       </div>
       <section
-        class="sc-dIsAE hKXgzi"
+        class="sc-ksluoS fdyOUJ"
       >
         <div
-          class="sc-crzoUp fvdGIu"
+          class="sc-bqGHjH jqBEFx"
           id="wrapper"
         >
           <h2
-            class="sc-bqGHjH ikPqqf"
+            class="sc-hBMVcZ elXjJN"
           >
             Here’s some things that can help
           </h2>
           <div
-            class="sc-iqAbSa hXQbdf"
+            class="sc-dIsAE hhTdhg"
             id="content"
           >
             <div
-              class="sc-jrsJCI jxTYNX"
+              class="sc-crzoUp jdXtoV"
             >
               <div>
                 <img
@@ -98,9 +98,13 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             <div>
               <h2
                 class="sc-kEqYlL ertHDr"
-              >
-                Feeling guilty
-              </h2>
+              />
+              <h2
+                class="sc-iqAbSa cGICVj"
+              />
+              <h2
+                class="sc-iqAbSa cGICVj"
+              />
             </div>
             <div
               class="sc-jrsJCI jxTYNX"

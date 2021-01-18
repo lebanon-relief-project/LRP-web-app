@@ -31,6 +31,10 @@ describe("The result service", () => {
       expect(mockList).toHaveBeenCalled();
     });
 
+    it.todo(
+      "should return the most popular flashcard results if no id's are passed in"
+    );
+
     it("should throw an error if the db connection fails", async () => {
       mockList.mockImplementation(() => {
         throw new Error("Ugly error");

@@ -1,3 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the FlashCardResultContainer component should match the snapshot 1`] = `<div />`;
+exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
+.c2 {
+  box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  Offset: 0px,1px rgba(0,0,0,0.25) border-radius:10px;
+  padding: 6px;
+  margin: 10px;
+  min-height: 174px;
+}
+
+.c1 {
+  max-width: 632;
+}
+
+.c0 {
+  font-weight: bold;
+  font-size: 24px;
+  min-width: 270px;
+  text-align: left;
+  padding-left: 24px;
+}
+
+<div>
+  <div>
+    <h2
+      class="c0"
+    />
+  </div>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        id="result card"
+      >
+        <h4>
+          <b />
+        </h4>
+        <p />
+      </div>
+    </div>
+  </div>
+</div>
+`;

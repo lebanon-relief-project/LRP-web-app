@@ -1,4 +1,7 @@
-import { getCardIdsFromSessionStorage } from "./util";
+import {
+  getCardIdsFromSessionStorage,
+  getCardTitleFromSessionStorage,
+} from "./util";
 
 describe("the getCardIdsFromSessionStorage", () => {
   beforeEach(() => {
@@ -28,5 +31,20 @@ describe("the getCardIdsFromSessionStorage", () => {
     const result = getCardIdsFromSessionStorage();
 
     expect(result).toEqual(["key1", "key2"]);
+  });
+});
+
+describe("the getCardTitleFromSessionStorage function", () => {
+  it("should return the card's title if the card is in session storage", () => {
+    sessionStorage.setItem("key1", "value1");
+    const result = getCardTitleFromSessionStorage("key1");
+
+    expect(result).toEqual("value1");
+  });
+
+  it("should return an empty string if the flashcard is not in session storage", () => {
+    const result = getCardTitleFromSessionStorage();
+
+    expect(result).toEqual("");
   });
 });
