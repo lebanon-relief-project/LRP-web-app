@@ -11,12 +11,18 @@ const MobileNavbar = ({ open, setOpen }) => {
       <StyledDiv>
         <LogoImage src={logo} alt="Logo" />
       </StyledDiv>
-      <div ref={node}>
+      <BurgerWrapper ref={node}>
         <Burger open={open} setOpen={setOpen} />
-      </div>
+      </BurgerWrapper>
     </StyledNav>
   );
 };
+
+const BurgerWrapper = styled.nav`
+  display: flex;
+  flex: 1;
+  align-items: center;
+`;
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -26,7 +32,6 @@ const StyledNav = styled.nav`
   @media (min-width: ${devices.mobile}) {
     display: none;
   }
-
 
   height: 64px;
   max-height: 64px;

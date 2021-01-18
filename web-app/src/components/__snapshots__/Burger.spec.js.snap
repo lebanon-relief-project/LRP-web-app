@@ -14,7 +14,6 @@ exports[`the Burger component should match the snapshot when open is set to fals
   -ms-flex-pack: space-around;
   justify-content: space-around;
   position: fixed;
-  top: 3%;
   right: 2rem;
   width: 2rem;
   height: 2rem;
@@ -22,6 +21,7 @@ exports[`the Burger component should match the snapshot when open is set to fals
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
 .c0 span {
@@ -84,7 +84,6 @@ exports[`the Burger component should match the snapshot when open is set to true
   -ms-flex-pack: space-around;
   justify-content: space-around;
   position: fixed;
-  top: 3%;
   right: 2rem;
   width: 2rem;
   height: 2rem;
@@ -92,6 +91,7 @@ exports[`the Burger component should match the snapshot when open is set to true
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
 .c0 span {
