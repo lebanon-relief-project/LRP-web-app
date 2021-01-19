@@ -16,20 +16,34 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 .c5 {
+  color: #002766;
   font-weight: bold;
   font-size: 24px;
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .c6 {
+  color: #002766;
   font-weight: bold;
   font-size: 24px;
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   opacity: 0.3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .c4 {
@@ -110,14 +124,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
           </div>
         </div>
         <div>
-          <h2
+          <button
             class="c5"
+            data-testid="flashcardTitleButton_0"
           />
-          <h2
+          <button
             class="c6"
-          />
-          <h2
-            class="c6"
+            data-testid="flashcardTitleButton_1"
           />
         </div>
         <div

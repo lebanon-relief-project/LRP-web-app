@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
-.c2 {
+.c3 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -11,37 +11,101 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   min-height: 174px;
 }
 
-.c1 {
+.c2 {
   max-width: 632;
 }
 
 .c0 {
+  color: #002766;
   font-weight: bold;
   font-size: 24px;
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.c1 {
+  color: #002766;
+  font-weight: bold;
+  font-size: 24px;
+  min-width: 270px;
+  text-align: left;
+  padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  opacity: 0.3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
 }
 
 <div>
   <div>
-    <h2
+    <button
       class="c0"
+      data-testid="flashcardTitleButton_0"
+    />
+    <button
+      class="c1"
+      data-testid="flashcardTitleButton_1"
     />
   </div>
   <div
-    class="c1"
+    class="c2"
   >
     <div
-      class="c2"
+      class="c3"
     >
       <div
         id="result card"
       >
         <h4>
-          <b />
+          <b>
+            Allow yourself to feel
+          </b>
         </h4>
-        <p />
+        <p>
+          As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        id="result card"
+      >
+        <h4>
+          <b>
+            Talk about it
+          </b>
+        </h4>
+        <p>
+          Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
+        </p>
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        id="result card"
+      >
+        <h4>
+          <b>
+            Try these excercises
+          </b>
+        </h4>
+        <p>
+          Lorem ipsum...
+        </p>
       </div>
     </div>
   </div>

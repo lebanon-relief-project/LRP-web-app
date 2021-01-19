@@ -1,27 +1,33 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import FlashCardResultContainer from "./FlashCardResultContainer";
+import { sampleResultsResponse } from "../../sampleData";
 import "jest-styled-components";
 
 describe("the FlashCardResultContainer component", () => {
   let container;
-  let results = {
-    results: [
-      {
-        _id: "test ID",
-        expl_title: "test",
-        expl_body: "test",
-        image: "test",
-        recommendations: [{ title: "test", body: "test" }],
-      },
-    ],
-  };
+  let getByTestId;
 
   it("should match the snapshot", () => {
-    ({ container } = render(<FlashCardResultContainer results={results} />));
+    ({ container } = render(
+      <FlashCardResultContainer results={sampleResultsResponse} />
+    ));
 
     expect(container).toMatchSnapshot();
   });
 
-  it.todo("should render the selected flashcards recommendations only");
+  it("should render the selected flashcards recommendations only", () => {
+    ({ container, getByTestId } = render(
+      <FlashCardResultContainer results={sampleResultsResponse} />
+    ));
+
+    let Button = getByTestId("flashcardTitleButton_1");
+
+    act(() => {
+      fireEvent.click(Button);
+    });
+
+    expect(container).not.toContain("Talk about it");
+  });
 });

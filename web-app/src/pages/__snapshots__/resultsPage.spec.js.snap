@@ -96,14 +96,13 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               </div>
             </div>
             <div>
-              <h2
-                class="sc-kEqYlL ertHDr"
+              <button
+                class="sc-kEqYlL dkHSaT"
+                data-testid="flashcardTitleButton_0"
               />
-              <h2
-                class="sc-iqAbSa cGICVj"
-              />
-              <h2
-                class="sc-iqAbSa cGICVj"
+              <button
+                class="sc-iqAbSa hDRsrj"
+                data-testid="flashcardTitleButton_1"
               />
             </div>
             <div

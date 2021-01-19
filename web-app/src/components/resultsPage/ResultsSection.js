@@ -4,26 +4,7 @@ import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import resultsPageLoadingBar from "../../assets/images/resultsPageLoadingBar.svg";
 import {FlashCardResultContainer} from "./FlashCardResultContainer"
-
-const tempCards = { results: [
-  {
-    _id: "9851d5f91b9f896b097acdd32a5dfed8",
-    title: "Allow yourself to feel",
-    body:
-      "As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.",
-  },
-  {
-    _id: "b5f070b7a6567c96432f9668f6d72046",
-    title: "Talk about it",
-    body:
-      "Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.",
-  },
-  {
-    _id: "e5e8bcbdabeef5bc57de9213dde014ad",
-    title: "Try these excercises",
-    body: "Lorem ipsum...",
-  },
-]};
+import { sampleResultsResponse } from "../../sampleData";
 
 const ResultsSection = () => {
   return (
@@ -38,8 +19,7 @@ const ResultsSection = () => {
             </div>
           </ResultCardWrapper>
 
-          <FlashCardResultContainer results={tempCards}/>
-
+          <FlashCardResultContainer results={sampleResultsResponse} />
         </ContentWrapper>
       </Wrapper>
     </StyledSection>

@@ -3,38 +3,18 @@ import styled from "styled-components";
 
 import { ResultCard } from "./ResultCard";
 import { getCardTitleFromSessionStorage } from "../../util/util";
+import Colours from "../../styles/Colours";
 
-/*
-  Result extends BaseCloudantDocument {
-    _id: string;
-    _rev: string;
-    expl_title: string;
-    expl_body: string;
-    image: string;
-    recommendations: Recommendation[];
-  }
-
-  Recommendation {
-    title: string;
-    body: string;
-  }
-
-  */
-
-// Render all titles, if selected make title bold and render that cards recommendations
-/*
-    - get flashcard title from session storage using _id of result
-    
-  */
 
 // @param results: ResultsResponse
 export const FlashCardResultContainer = ({ results }) => {
-  const resultsArray = results.results;
+  const resultsResponseArray = results.results;
 
-  const setInitialState = (resultsArray) => {
+  // Setup state to display first flashcards recommendations
+  const setInitialState = (resultsResponseArray) => {
     let initialState = [];
 
-    resultsArray.forEach((result, index) => {
+    resultsResponseArray.forEach((result, index) => {
       if (index === 0) {
         initialState.push({ id: result._id, selected: true });
       } else {
@@ -45,21 +25,37 @@ export const FlashCardResultContainer = ({ results }) => {
     return initialState;
   };
 
-  const [selectedCardState, setSelectedCardState] = useState(
-    setInitialState(resultsArray)
+  const [selectedFlashCardState, setSelectedFlashCardState] = useState(
+    setInitialState(resultsResponseArray)
   );
 
+  // If a new flashcard is clicked update state to render that cards recommendations
+  const updateSelectedFlashCardState = (id) => {
+    let updatedState = [];
+
+    selectedFlashCardState.forEach((result) => {
+       if (result.id === id) {
+        updatedState.push({ id: result.id, selected: true })
+      } else {
+        updatedState.push({ id: result.id, selected: false })
+      }
+    });
+
+    setSelectedFlashCardState(updatedState);
+  }
+
+  // If card is selected make title bold
   const renderTitles = () => {
-    return selectedCardState.map((card, index) => {
+    return selectedFlashCardState.map((card, index) => {
       if (card.selected) {
         return (
-          <SelectedStyledFlashCardTitle key={`flashcardTitle_${index}`}>
+          <SelectedStyledFlashCardTitle data-testid={`flashcardTitleButton_${index}`} key={`flashcardTitleButton_${index}`} onClick={() => updateSelectedFlashCardState(card.id)}>
             {getCardTitleFromSessionStorage(card.id)}
           </SelectedStyledFlashCardTitle>
         );
       } else {
         return (
-          <UnSelectedStyledFlashCardTitle key={`flashcardTitle_${index}`}>
+          <UnSelectedStyledFlashCardTitle data-testid={`flashcardTitleButton_${index}`} key={`flashcardTitleButton_${index}`} onClick={() => updateSelectedFlashCardState(card.id)}>
             {getCardTitleFromSessionStorage(card.id)}
           </UnSelectedStyledFlashCardTitle>
         );
@@ -67,27 +63,34 @@ export const FlashCardResultContainer = ({ results }) => {
     });
   };
 
+  // Only render the selected cards recommendations
   const renderRecommendations = () => {
-    // Loop through all cards selected
-    return selectedCardState.map((card) => {
-      if(card.selected) { // If the card is selected we render its recommendations
+    return selectedFlashCardState.map((card) => {
+      if (card.selected) {
         return (
-          <ResultCardWrapper key={`resultCard_wrapper`}>
-            {resultsArray.map((result, index) => {
-              return (
-                <ResultCard
-                  title={result.title}
-                  body={result.body}
-                  key={`flashcard_result_${index}`}
-                />
-              );
+          <ResultCardsWrapper key={`resultCards_wrapper`}>
+            {resultsResponseArray.map((result) => {
+              if (result._id === card.id) {
+                return (
+                  result.recommendations.map((recommendation, index) => {
+                    return (
+                      <ResultCard
+                        title={recommendation.title}
+                        body={recommendation.body}
+                        key={`flashcard_result_${index}`}
+                        data-testid={`${recommendation.title}_flashcard_result_${index}`}
+                      />
+                    )
+                  })
+                );
+              }
             })}
-      </ResultCardWrapper>
-        )
+          </ResultCardsWrapper>
+        );
       } else {
         return;
       }
-    })
+    });
   };
 
   return (
@@ -95,30 +98,44 @@ export const FlashCardResultContainer = ({ results }) => {
       <div>
         {renderTitles()}
       </div>
-
+      
       {renderRecommendations()}
     </>
   );
 };
 
-const ResultCardWrapper = styled.div`
+const ResultCardsWrapper = styled.div`
   max-width: 632;
 `;
 
-const SelectedStyledFlashCardTitle = styled.h2`
+const SelectedStyledFlashCardTitle = styled.button`
+  color: ${Colours.darkBlue};
   font-weight: bold;
   font-size: 24px;
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: none;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
 `;
-const UnSelectedStyledFlashCardTitle = styled.h2`
+const UnSelectedStyledFlashCardTitle = styled.button`
+  color: ${Colours.darkBlue};
   font-weight: bold;
   font-size: 24px;
   min-width: 270px;
   text-align: left;
   padding-left: 24px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   opacity: 0.3;
+  background: none;
+	border: none;
+	cursor: pointer;
+	outline: inherit;
 `;
 
 export default FlashCardResultContainer;
