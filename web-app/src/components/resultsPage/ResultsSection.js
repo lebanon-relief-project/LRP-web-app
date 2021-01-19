@@ -3,7 +3,7 @@ import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import resultsPageLoadingBar from "../../assets/images/resultsPageLoadingBar.svg";
-import {FlashCardResultContainer} from "./FlashCardResultContainer"
+import { FlashCardResultContainer } from "./FlashCardResultContainer";
 import { sampleResultsResponse } from "../../sampleData";
 
 const ResultsSection = () => {
@@ -13,12 +13,6 @@ const ResultsSection = () => {
         <StyledHeader>Here’s some things that can help</StyledHeader>
 
         <ContentWrapper id={"content"}>
-          <ResultCardWrapper>
-            <div>
-              <img src={resultsPageLoadingBar} />
-            </div>
-          </ResultCardWrapper>
-
           <FlashCardResultContainer results={sampleResultsResponse} />
         </ContentWrapper>
       </Wrapper>

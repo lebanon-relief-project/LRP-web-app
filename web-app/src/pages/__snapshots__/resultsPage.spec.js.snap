@@ -3,7 +3,7 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-fnVYJo iOsRFU"
+    class="sc-dIvqjp bDdiuO"
   >
     <div
       style="width: 100%;"
@@ -71,89 +71,93 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         </div>
       </div>
       <section
-        class="sc-ksluoS fdyOUJ"
+        class="sc-bkbjAj egwZwe"
       >
         <div
-          class="sc-bqGHjH jqBEFx"
+          class="sc-fFSRdu fmmrrj"
           id="wrapper"
         >
           <h2
-            class="sc-hBMVcZ elXjJN"
+            class="sc-iemXMA kZgKE"
           >
             Here’s some things that can help
           </h2>
           <div
-            class="sc-dIsAE hhTdhg"
+            class="sc-fnVYJo lomFUs"
             id="content"
           >
             <div
-              class="sc-crzoUp jdXtoV"
+              class="sc-crzoUp eyhFvl"
             >
-              <div>
-                <img
-                  src="resultsPageLoadingBar.svg"
+              <div
+                class="sc-iqAbSa jgTIVG"
+              >
+                <div
+                  class="sc-kEqYlL gUlysm"
                 />
-              </div>
-            </div>
-            <div>
-              <button
-                class="sc-kEqYlL jyWjAq"
-                data-testid="flashcardTitleButton_0"
-              />
-              <button
-                class="sc-iqAbSa hDRsrj"
-                data-testid="flashcardTitleButton_1"
-              />
-            </div>
-            <div
-              class="sc-jrsJCI jxTYNX"
-            >
-              <div
-                class="sc-pNWxx hnBTfQ"
-              >
                 <div
-                  id="result card"
+                  class="sc-jrsJCI iakJXr"
                 >
-                  <h4>
-                    <b>
-                      Allow yourself to feel
-                    </b>
-                  </h4>
-                  <p>
-                    As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
-                  </p>
+                  <button
+                    class="sc-bqGHjH yUfeW"
+                    data-testid="flashcardTitleButton_0"
+                  />
+                  <button
+                    class="sc-ksluoS jHkYCY"
+                    data-testid="flashcardTitleButton_1"
+                  />
                 </div>
               </div>
               <div
-                class="sc-pNWxx hnBTfQ"
+                class="sc-dIsAE HfCkj"
               >
                 <div
-                  id="result card"
+                  class="sc-pNWxx hnBTfQ"
                 >
-                  <h4>
-                    <b>
-                      Talk about it
-                    </b>
-                  </h4>
-                  <p>
-                    Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
-                  </p>
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Allow yourself to feel
+                      </b>
+                    </h4>
+                    <p>
+                      As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="sc-pNWxx hnBTfQ"
-              >
                 <div
-                  id="result card"
+                  class="sc-pNWxx hnBTfQ"
                 >
-                  <h4>
-                    <b>
-                      Try these excercises
-                    </b>
-                  </h4>
-                  <p>
-                    Lorem ipsum...
-                  </p>
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Talk about it
+                      </b>
+                    </h4>
+                    <p>
+                      Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="sc-pNWxx hnBTfQ"
+                >
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Try these excercises
+                      </b>
+                    </h4>
+                    <p>
+                      Lorem ipsum...
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -5,7 +5,6 @@ import { ResultCard } from "./ResultCard";
 import { getCardTitleFromSessionStorage } from "../../util/util";
 import Colours from "../../styles/Colours";
 
-
 // @param results: ResultsResponse
 export const FlashCardResultContainer = ({ results }) => {
   const resultsResponseArray = results.results;
@@ -34,28 +33,36 @@ export const FlashCardResultContainer = ({ results }) => {
     let updatedState = [];
 
     selectedFlashCardState.forEach((result) => {
-       if (result.id === id) {
-        updatedState.push({ id: result.id, selected: true })
+      if (result.id === id) {
+        updatedState.push({ id: result.id, selected: true });
       } else {
-        updatedState.push({ id: result.id, selected: false })
+        updatedState.push({ id: result.id, selected: false });
       }
     });
 
     setSelectedFlashCardState(updatedState);
-  }
+  };
 
   // If card is selected make title bold
   const renderTitles = () => {
     return selectedFlashCardState.map((card, index) => {
       if (card.selected) {
         return (
-          <SelectedStyledFlashCardTitle data-testid={`flashcardTitleButton_${index}`} key={`flashcardTitleButton_${index}`} onClick={() => updateSelectedFlashCardState(card.id)}>
+          <SelectedStyledFlashCardTitle
+            data-testid={`flashcardTitleButton_${index}`}
+            key={`flashcardTitleButton_${index}`}
+            onClick={() => updateSelectedFlashCardState(card.id)}
+          >
             {getCardTitleFromSessionStorage(card.id)}
           </SelectedStyledFlashCardTitle>
         );
       } else {
         return (
-          <UnSelectedStyledFlashCardTitle data-testid={`flashcardTitleButton_${index}`} key={`flashcardTitleButton_${index}`} onClick={() => updateSelectedFlashCardState(card.id)}>
+          <UnSelectedStyledFlashCardTitle
+            data-testid={`flashcardTitleButton_${index}`}
+            key={`flashcardTitleButton_${index}`}
+            onClick={() => updateSelectedFlashCardState(card.id)}
+          >
             {getCardTitleFromSessionStorage(card.id)}
           </UnSelectedStyledFlashCardTitle>
         );
@@ -93,16 +100,53 @@ export const FlashCardResultContainer = ({ results }) => {
   };
 
   return (
-    <>
-      <div>{renderTitles()}</div>
-
+    <Container>
+      <TitlesContainer>
+        <Background />
+        <TitlesForeground>{renderTitles()}</TitlesForeground>
+      </TitlesContainer>
       {renderRecommendations()}
-    </>
+    </Container>
   );
 };
 
+const TitlesForeground = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  flex-direction: column;
+`;
+
+const Background = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-left: 6px solid rgba(255, 197, 61, 0.2);
+  position: absolute;
+`;
+
+const TitlesContainer = styled.div`
+  width: 100%;
+  max-width: 270px;
+  height: 100%;
+  position: relative;
+  display: flex;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
 const ResultCardsWrapper = styled.div`
   max-width: 632;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 `;
 
 const SelectedStyledFlashCardTitle = styled.button`
@@ -133,9 +177,13 @@ const UnSelectedStyledFlashCardTitle = styled.button`
   padding-bottom: 30px;
   opacity: 0.3;
   background: none;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border: none;
+  border-left: solid;
+  border-left-color: transparent;
+  border-left-width: 6px;
 `;
 
 export default FlashCardResultContainer;

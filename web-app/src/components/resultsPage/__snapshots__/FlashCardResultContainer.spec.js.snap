@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
-.c3 {
+.c7 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -11,11 +11,67 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   min-height: 174px;
 }
 
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .c2 {
-  max-width: 632;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border-left: 6px solid rgba(255,197,61,0.2);
+  position: absolute;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 270px;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c6 {
+  max-width: 632;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.c4 {
   color: #002766;
   font-weight: bold;
   font-size: 24px;
@@ -33,7 +89,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   outline: inherit;
 }
 
-.c1 {
+.c5 {
   color: #002766;
   font-weight: bold;
   font-size: 24px;
@@ -47,68 +103,85 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   border: none;
   cursor: pointer;
   outline: inherit;
+  border: none;
+  border-left: solid;
+  border-left-color: transparent;
+  border-left-width: 6px;
 }
 
 <div>
-  <div>
-    <button
-      class="c0"
-      data-testid="flashcardTitleButton_0"
-    />
-    <button
-      class="c1"
-      data-testid="flashcardTitleButton_1"
-    />
-  </div>
   <div
-    class="c2"
+    class="c0"
   >
     <div
-      class="c3"
+      class="c1"
     >
       <div
-        id="result card"
+        class="c2"
+      />
+      <div
+        class="c3"
       >
-        <h4>
-          <b>
-            Allow yourself to feel
-          </b>
-        </h4>
-        <p>
-          As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
-        </p>
+        <button
+          class="c4"
+          data-testid="flashcardTitleButton_0"
+        />
+        <button
+          class="c5"
+          data-testid="flashcardTitleButton_1"
+        />
       </div>
     </div>
     <div
-      class="c3"
+      class="c6"
     >
       <div
-        id="result card"
+        class="c7"
       >
-        <h4>
-          <b>
-            Talk about it
-          </b>
-        </h4>
-        <p>
-          Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
-        </p>
+        <div
+          id="result card"
+        >
+          <h4>
+            <b>
+              Allow yourself to feel
+            </b>
+          </h4>
+          <p>
+            As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
+          </p>
+        </div>
       </div>
-    </div>
-    <div
-      class="c3"
-    >
       <div
-        id="result card"
+        class="c7"
       >
-        <h4>
-          <b>
-            Try these excercises
-          </b>
-        </h4>
-        <p>
-          Lorem ipsum...
-        </p>
+        <div
+          id="result card"
+        >
+          <h4>
+            <b>
+              Talk about it
+            </b>
+          </h4>
+          <p>
+            Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
+          </p>
+        </div>
+      </div>
+      <div
+        class="c7"
+      >
+        <div
+          id="result card"
+        >
+          <h4>
+            <b>
+              Try these excercises
+            </b>
+          </h4>
+          <p>
+            Lorem ipsum...
+          </p>
+        </div>
       </div>
     </div>
   </div>
