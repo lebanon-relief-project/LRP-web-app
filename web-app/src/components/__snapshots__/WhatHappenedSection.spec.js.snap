@@ -2,16 +2,6 @@
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
 .c5 {
-  display: none;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 46px;
-  color: #000000;
-}
-
-.c7 {
   display: block;
   font-family: Playfair Display;
   font-style: normal;
@@ -21,7 +11,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   color: #000000;
 }
 
-.c8 {
+.c6 {
   position: relative;
   margin: 0;
   font-family: Raleway;
@@ -50,22 +40,10 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   flex-direction: row;
 }
 
-.c3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  width: 50%;
-}
-
-.c6 {
+.c4 {
   position: relative;
   margin-top: 12%;
-  right: 15%;
+  right: 10%;
   width: 40%;
 }
 
@@ -73,32 +51,8 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   padding-top: 7rem;
 }
 
-.c4 {
+.c3 {
   object-fit: contain;
-}
-
-@media (max-width:576px) {
-  .c5 {
-    display: block;
-    position: absolute;
-    width: 50%;
-    bottom: 0;
-    right: 0;
-    font-weight: 900;
-    font-size: 30px;
-  }
-}
-
-@media (max-width:576px) {
-  .c7 {
-    display: none;
-    position: absolute;
-    width: 50%;
-    bottom: 0;
-    right: 0;
-    font-weight: 900;
-    font-size: 30px;
-  }
 }
 
 @media (max-width:576px) {
@@ -117,25 +71,13 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 }
 
 @media (max-width:768px) {
-  .c3 {
-    width: 60%;
-  }
-}
-
-@media (max-width:576px) {
-  .c3 {
-    width: 100%;
-  }
-}
-
-@media (max-width:768px) {
-  .c6 {
+  .c4 {
     right: 10%;
   }
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c4 {
     right: 0;
     width: 100%;
   }
@@ -154,14 +96,14 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 }
 
 @media (max-width:768px) {
-  .c4 {
+  .c3 {
     width: 80%;
   }
 }
 
 @media (max-width:576px) {
-  .c4 {
-    width: 50%;
+  .c3 {
+    width: 100%;
     max-width: 100%;
     padding-left: 0rem;
   }
@@ -174,30 +116,21 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
     <div
       class="c1 c2"
     >
-      <div
+      <img
+        alt="City"
         class="c3"
+        src="City.png"
+      />
+      <div
+        class="c4"
       >
-        <img
-          alt="City"
-          class="c4"
-          src="City.png"
-        />
         <h2
           class="c5"
         >
           What happened
         </h2>
-      </div>
-      <div
-        class="c6"
-      >
-        <h2
-          class="c7"
-        >
-          What happened
-        </h2>
         <p
-          class="c8"
+          class="c6"
         >
           On August 4 an explosion shook Beirut. It was the largest non-nuclear explosion ever recorded. That day 200 people died, 6,500 were injured, and 300,000 were left homeless. This project was developed to support those affected and provide a platform for the community to come together and help each other heal.
         </p>

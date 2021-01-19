@@ -2,16 +2,7 @@ import styled from "styled-components";
 import colours from "./Colours";
 import devices from "./Devices";
 
-export const ResponsiveStyledHeader = styled.h2`
-  @media (max-width: ${devices.mobile}) {
-    display: ${(props) => (props.mobile ? "block" : "none")};
-    position: absolute;
-    width: 50%;
-    bottom: 0;
-    right: ${(props) => (props.isLeft ? "50%" : "0")};
-    font-weight: 900;
-    font-size: 30px;
-  }
+export const StyledHeader = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
   font-family: Playfair Display;
   font-style: normal;
@@ -50,18 +41,5 @@ export const FlexContainer = styled.div`
   flex-direction: row;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
-  }
-`;
-
-export const ReversableFlexContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
-  width: 50%;
-  @media (max-width: ${devices.ipad}) {
-    width: 60%;
-  }
-  @media (max-width: ${devices.mobile}) {
-    width: 100%;
   }
 `;

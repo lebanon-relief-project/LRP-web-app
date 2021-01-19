@@ -3,20 +3,20 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 
 import {
-  ResponsiveStyledHeader,
+  StyledHeader,
   StyledParagraph,
   StyledSection,
-  ReversableFlexContainer,
   FlexContainer,
 } from "../styles/GlobalStyles";
 import Hands from "../assets/images/Hands.png";
+import Swirl from "../assets/images/Swirl.png";
 
 const OurMission = () => {
   return (
     <StyledSection>
       <FlexContainer>
         <OrderedStyledTextArea>
-          <ResponsiveStyledHeader>Our mission</ResponsiveStyledHeader>
+          <StyledHeader>Our mission</StyledHeader>
           <StyledParagraph>
             <span>
               Our mission is to help the residents of Lebanon and individuals
@@ -35,13 +35,9 @@ const OurMission = () => {
             </span>
           </StyledParagraph>
         </OrderedStyledTextArea>
-        <ReversableFlexContainer reverse>
-          <ResponsiveStyledHeader mobile isLeft>
-            Our Mission
-          </ResponsiveStyledHeader>
-          <StyledHands src={Hands} alt="Hands" />
-        </ReversableFlexContainer>
+        <StyledHands src={Hands} alt="Hands" />
       </FlexContainer>
+      <StyledSwirl src={Swirl} alt="Swirl" />
     </StyledSection>
   );
 };
@@ -64,7 +60,6 @@ const OrderedStyledTextArea = styled.div`
 const StyledHands = styled.img`
   object-fit: contain;
   position: relative;
-  right: 10%;
 
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;
@@ -77,8 +72,15 @@ const StyledHands = styled.img`
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;
-    width: 50%;
+    width: 100%;
     padding-left: 0rem;
+  }
+`;
+
+const StyledSwirl = styled.img`
+  margin: 40px 0;
+  @media (min-width: ${devices.mobile}) {
+    display: none;
   }
 `;
 

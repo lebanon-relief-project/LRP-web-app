@@ -5,6 +5,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   position: fixed;
   min-width: 100%;
   max-height: 64px;
+  height: 64px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,7 +48,8 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 .c4 {
-  width: 100%;
+  max-width: 100%;
+  min-width: 50%;
 }
 
 @media (max-width:768px) {
@@ -68,10 +70,10 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     background: #ffffff;
     -webkit-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
@@ -85,10 +87,16 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   }
 
   .c0 a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 38px;
+    -webkit-letter-spacing: 0em;
+    -moz-letter-spacing: 0em;
+    -ms-letter-spacing: 0em;
+    letter-spacing: 0em;
+    text-align: left;
     -webkit-letter-spacing: 0.5rem;
     -moz-letter-spacing: 0.5rem;
     -ms-letter-spacing: 0.5rem;
@@ -97,6 +105,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
     transition: color 0.3s linear;
+    color: #002766;
   }
 }
 
@@ -108,6 +117,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 
 @media (max-width:576px) {
   .c3 {
+    margin-top: 104px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -116,7 +126,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 
 @media (max-width:576px) {
   .c4 {
-    margin: 10px 0;
+    margin-bottom: 60px;
   }
 }
 
@@ -181,6 +191,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   position: fixed;
   min-width: 100%;
   max-height: 64px;
+  height: 64px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -223,7 +234,8 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 .c4 {
-  width: 100%;
+  max-width: 100%;
+  min-width: 50%;
 }
 
 @media (max-width:768px) {
@@ -244,10 +256,10 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     background: #ffffff;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -261,10 +273,16 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   }
 
   .c0 a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 38px;
+    -webkit-letter-spacing: 0em;
+    -moz-letter-spacing: 0em;
+    -ms-letter-spacing: 0em;
+    letter-spacing: 0em;
+    text-align: left;
     -webkit-letter-spacing: 0.5rem;
     -moz-letter-spacing: 0.5rem;
     -ms-letter-spacing: 0.5rem;
@@ -273,6 +291,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
     transition: color 0.3s linear;
+    color: #002766;
   }
 }
 
@@ -284,6 +303,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 
 @media (max-width:576px) {
   .c3 {
+    margin-top: 104px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -292,7 +312,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 
 @media (max-width:576px) {
   .c4 {
-    margin: 10px 0;
+    margin-bottom: 60px;
   }
 }
 
