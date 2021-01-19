@@ -11,24 +11,16 @@ exports[`the OurMission component should match the snapshot 1`] = `
   color: #000000;
 }
 
-.c6 {
-  display: none;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 46px;
-  color: #000000;
-}
-
 .c4 {
+  position: relative;
   margin: 0;
   font-family: Raleway;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  z-index: 1;
 }
 
 .c0 {
@@ -48,18 +40,6 @@ exports[`the OurMission component should match the snapshot 1`] = `
   flex-direction: row;
 }
 
-.c5 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  width: 50%;
-}
-
 .c2 {
   position: relative;
   margin-top: 2%;
@@ -67,34 +47,13 @@ exports[`the OurMission component should match the snapshot 1`] = `
   width: 50%;
 }
 
-.c7 {
+.c5 {
   object-fit: contain;
   position: relative;
-  right: 10%;
 }
 
-@media (max-width:576px) {
-  .c3 {
-    display: none;
-    position: absolute;
-    width: 50%;
-    bottom: 0;
-    right: 0;
-    font-weight: 900;
-    font-size: 30px;
-  }
-}
-
-@media (max-width:576px) {
-  .c6 {
-    display: block;
-    position: absolute;
-    width: 50%;
-    bottom: 0;
-    right: 50%;
-    font-weight: 900;
-    font-size: 30px;
-  }
+.c6 {
+  margin: 40px 0;
 }
 
 @media (max-width:576px) {
@@ -112,18 +71,6 @@ exports[`the OurMission component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:768px) {
-  .c5 {
-    width: 60%;
-  }
-}
-
-@media (max-width:576px) {
-  .c5 {
-    width: 100%;
-  }
-}
-
 @media (max-width:576px) {
   .c2 {
     position: relative;
@@ -136,19 +83,31 @@ exports[`the OurMission component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:1025px) {
+  .c5 {
+    top: 10%;
+  }
+}
+
 @media (max-width:768px) {
-  .c7 {
+  .c5 {
     width: 80%;
     right: 0;
   }
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c5 {
     margin-right: 0rem;
     max-width: 100%;
-    width: 50%;
+    width: 100%;
     padding-left: 0rem;
+  }
+}
+
+@media (min-width:576px) {
+  .c6 {
+    display: none;
   }
 }
 
@@ -181,21 +140,17 @@ exports[`the OurMission component should match the snapshot 1`] = `
           </span>
         </p>
       </div>
-      <div
+      <img
+        alt="Hands"
         class="c5"
-      >
-        <h2
-          class="c6"
-        >
-          Our Mission
-        </h2>
-        <img
-          alt="Hands"
-          class="c7"
-          src="Hands.png"
-        />
-      </div>
+        src="Hands.png"
+      />
     </div>
+    <img
+      alt="Swirl"
+      class="c6"
+      src="Swirl.png"
+    />
   </section>
 </div>
 `;

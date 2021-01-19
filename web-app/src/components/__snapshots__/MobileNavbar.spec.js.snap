@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the MobileNavBar component should match the snapshot 1`] = `
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -14,7 +14,6 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   -ms-flex-pack: space-around;
   justify-content: space-around;
   position: fixed;
-  top: 3%;
   right: 2rem;
   width: 2rem;
   height: 2rem;
@@ -22,9 +21,10 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   border: none;
   cursor: pointer;
   padding: 0;
+  outline: none;
 }
 
-.c3 span {
+.c4 span {
   width: 2rem;
   height: 0.25rem;
   background: black;
@@ -37,23 +37,37 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   transform-origin: 1px;
 }
 
-.c3 span:first-child {
+.c4 span:first-child {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
 
-.c3 span:nth-child(2) {
+.c4 span:nth-child(2) {
   opacity: 1;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
-.c3 span:nth-child(3) {
+.c4 span:nth-child(3) {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 {
@@ -64,9 +78,10 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
-  height: 10vh;
+  height: 64px;
+  max-height: 64px;
   width: 100%;
-  z-index: 2;
+  z-index: 100;
 }
 
 .c2 {
@@ -108,18 +123,20 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
         src="logo.svg"
       />
     </div>
-    <div>
+    <nav
+      class="c3"
+    >
       <button
         aria-expanded="false"
         aria-label="Toggle menu"
-        class="c3"
+        class="c4"
         data-testid="burgerButton"
       >
         <span />
         <span />
         <span />
       </button>
-    </div>
+    </nav>
   </nav>
 </div>
 `;

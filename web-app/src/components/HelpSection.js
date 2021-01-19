@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
 import { ReactComponent as Illustration3 } from "../assets/images/Illustration3.svg";
 import { ReactComponent as Illustration4 } from "../assets/images/Illustration4.svg";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
+  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
     <>
       <StyledSection>
@@ -28,8 +30,11 @@ const HelpSection = () => {
           </Card>
           <Card
             title="I’d like to help"
-            path={Routes.HELP}
+            path={"#"}
             buttonText="Contact me"
+            onClick={() => {
+              setLikeToHelpModalVisible(true);
+            }}
           >
             <Paragraph>
               Do you have a close one who underwent trauma, but you need
@@ -47,10 +52,11 @@ const HelpSection = () => {
           <StyledIllustration4 />
           <ChallengeCard>
             <Card
-              secondary
-              title="Try our 7 days of Wellbeing"
+              secondary="true"
+              disabled
+              title="Try our 14 days of Wellbeing"
               path={Routes.HOME}
-              buttonText="Sign me up"
+              buttonText="Coming soon"
             >
               <p>If you are: </p>
               <StyledUnorderedList>
@@ -65,6 +71,13 @@ const HelpSection = () => {
           </ChallengeCard>
         </IllustrationAndCard>
       </StyledSection>
+      {likeToHelpModalVisible && (
+        <LikeToHelpModal
+          closeModal={() => {
+            setLikeToHelpModalVisible(false);
+          }}
+        />
+      )}
     </>
   );
 };
@@ -72,7 +85,7 @@ const HelpSection = () => {
 const Paragraph = styled.p`
   font-family: Raleway;
   font-style: normal;
-  font-weight: bold;
+
   font-size: 16px;
   line-height: 150%;
   color: #262626;
@@ -109,7 +122,7 @@ const ChallengeCard = styled.div`
   right: 23%;
 
   @media (max-width: ${devices.mobile}) {
-    display: none;
+    position: static;
   }
 
   @media (max-width: ${devices.ipadpro}) {
@@ -118,8 +131,10 @@ const ChallengeCard = styled.div`
 `;
 
 const IllustrationAndCard = styled.div`
-  display: flex;
-  position: relative;
+  @media (min-width: ${devices.mobile}) {
+    display: flex;
+    position: relative;
+  }
 `;
 
 const CardWrapper = styled.div`

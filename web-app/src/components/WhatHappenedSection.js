@@ -3,10 +3,9 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import City from "../assets/images/City.png";
 import {
-  ResponsiveStyledHeader,
+  StyledHeader,
   StyledParagraph,
   StyledSection,
-  ReversableFlexContainer,
   FlexContainer,
 } from "../styles/GlobalStyles";
 
@@ -14,12 +13,9 @@ const WhatHappened = () => {
   return (
     <StyledSection padded>
       <StyledFlexContainer>
-        <ReversableFlexContainer>
-          <StyledCity src={City} alt="City" />
-          <ResponsiveStyledHeader mobile>What happened</ResponsiveStyledHeader>
-        </ReversableFlexContainer>
+        <StyledCity src={City} alt="City" />
         <StyledTextArea>
-          <ResponsiveStyledHeader>What happened</ResponsiveStyledHeader>
+          <StyledHeader>What happened</StyledHeader>
           <StyledParagraph>
             On August 4 an explosion shook Beirut. It was the largest
             non-nuclear explosion ever recorded. That day 200 people died, 6,500
@@ -36,7 +32,7 @@ const WhatHappened = () => {
 const StyledTextArea = styled.div`
   position: relative;
   margin-top: 12%;
-  right: 15%;
+  right: 10%;
   width: 40%;
   @media (max-width: ${devices.ipad}) {
     right: 10%;
@@ -64,7 +60,7 @@ const StyledCity = styled.img`
     width: 80%;
   }
   @media (max-width: ${devices.mobile}) {
-    width: 50%;
+    width: 100%;
     max-width: 100%;
     padding-left: 0rem;
   }

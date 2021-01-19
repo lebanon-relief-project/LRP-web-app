@@ -3,6 +3,7 @@ import styled from "styled-components";
 import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
 import { getFlashCards } from "../services/flashCards.service";
+import devices from "../styles/Devices";
 
 const FlashCardsSection = (props) => {
   const [flashCards, setFlashCards] = useState([]);
@@ -29,7 +30,7 @@ const FlashCardsSection = (props) => {
           );
         })}
       </Wrapper>
-      <NextButton>Next</NextButton>
+      <NextButton>Give me advice</NextButton>
     </StyledSection>
   );
 };
@@ -42,18 +43,24 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
-  flex: 1;
-  margin: 0 16.7%;
+  width: 70%;
+  margin: 0 auto;
   background: inherit;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  @media (max-width: ${devices.ipadpro}) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const NextButton = styled.button`
-  background-color: ${colours.gold};
+  background-color: ${colours.yellow};
   width: 13.875rem;
   height: 2.625rem;
   font-size: 1rem;
@@ -68,6 +75,11 @@ const NextButton = styled.button`
   }
   &:active {
     opacity: 1;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 3.375rem 0;
+    align-self: center;
   }
 `;
 

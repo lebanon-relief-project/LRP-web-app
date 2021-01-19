@@ -7,18 +7,14 @@ import styled from "styled-components";
 const HelpPage = () => {
   return (
     <StyledPage>
-      <PageContainer>
+      <div>
         <TraumaticEventsSection />
         <FeelingsSection />
         <FlashCardsSection />
-      </PageContainer>
+      </div>
     </StyledPage>
   );
 };
-
-const PageContainer = styled.div`
-  max-width: 1440px;
-`;
 
 const StyledPage = styled.div`
   display: flex;

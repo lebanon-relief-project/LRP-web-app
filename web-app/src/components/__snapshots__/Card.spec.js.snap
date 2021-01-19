@@ -31,10 +31,33 @@ exports[`the Card component should match the snapshot 1`] = `
 .c0 {
   border: 1px solid #003A8C;
   width: 25%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.2rem;
   margin: 3rem 1rem;
   height: 20%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: left;
   background-color: white;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 
 @media (max-width:1025px) {
@@ -53,20 +76,16 @@ exports[`the Card component should match the snapshot 1`] = `
 <div>
   <fieldset
     class="c0"
-    title="test title"
   >
     <legend
       class="c1"
-      title="test title"
     >
       test title
     </legend>
     <a
       class="c2"
       href="/test"
-      path="/test"
       text="test text"
-      title="test title"
     />
   </fieldset>
 </div>
