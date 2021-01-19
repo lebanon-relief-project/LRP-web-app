@@ -95,10 +95,8 @@ export const FlashCardResultContainer = ({ results }) => {
 
   return (
     <>
-      <div>
-        {renderTitles()}
-      </div>
-      
+      <div>{renderTitles()}</div>
+
       {renderRecommendations()}
     </>
   );
@@ -118,9 +116,12 @@ const SelectedStyledFlashCardTitle = styled.button`
   padding-top: 30px;
   padding-bottom: 30px;
   background: none;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
+  border: none;
+  border-left: solid;
+  border-left-color: ${Colours.gold};
+  border-left-width: 6px;
+  cursor: pointer;
+  outline: inherit;
 `;
 const UnSelectedStyledFlashCardTitle = styled.button`
   color: ${Colours.darkBlue};
