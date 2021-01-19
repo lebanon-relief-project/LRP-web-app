@@ -2,7 +2,7 @@ import { InternalServerError } from "routing-controllers";
 import Container from "typedi";
 import { PercentageService } from "../services";
 import { MockLogger } from "../util/test-util";
-import { PercentageController } from "./Percentage.controller";
+import { PercentageController } from "./percentage.controller";
 
 Container.set("logger", new MockLogger());
 
