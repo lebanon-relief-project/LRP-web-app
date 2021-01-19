@@ -1,6 +1,7 @@
 // DATABASE
 export const CLOUDANT_FLASHCARD_DB_DEV = "dev_flashcard";
 export const CLOUDANT_RESULTS_DB_DEV = "flashcard_results";
+export const CLOUDANT_PERCENTAGE_DB_DEV = "experience_percentages";
 
 // CONTENT
 export const COS_FLASHCARD_IMAGE_BUCKET = "lrn-flashcard-images";
