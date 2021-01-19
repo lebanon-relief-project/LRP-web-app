@@ -97,7 +97,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             </div>
             <div>
               <button
-                class="sc-kEqYlL dkHSaT"
+                class="sc-kEqYlL jyWjAq"
                 data-testid="flashcardTitleButton_0"
               />
               <button

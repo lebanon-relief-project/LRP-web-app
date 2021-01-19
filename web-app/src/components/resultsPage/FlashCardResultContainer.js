@@ -68,21 +68,20 @@ export const FlashCardResultContainer = ({ results }) => {
     return selectedFlashCardState.map((card) => {
       if (card.selected) {
         return (
+          // RENDER IMAGE HERE
           <ResultCardsWrapper key={`resultCards_wrapper`}>
             {resultsResponseArray.map((result) => {
               if (result._id === card.id) {
-                return (
-                  result.recommendations.map((recommendation, index) => {
-                    return (
-                      <ResultCard
-                        title={recommendation.title}
-                        body={recommendation.body}
-                        key={`flashcard_result_${index}`}
-                        data-testid={`${recommendation.title}_flashcard_result_${index}`}
-                      />
-                    )
-                  })
-                );
+                return result.recommendations.map((recommendation, index) => {
+                  return (
+                    <ResultCard
+                      title={recommendation.title}
+                      body={recommendation.body}
+                      key={`flashcard_result_${index}`}
+                      data-testid={`${recommendation.title}_flashcard_result_${index}`}
+                    />
+                  );
+                });
               }
             })}
           </ResultCardsWrapper>

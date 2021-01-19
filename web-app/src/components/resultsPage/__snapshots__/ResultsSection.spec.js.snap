@@ -26,6 +26,9 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   padding-bottom: 30px;
   background: none;
   border: none;
+  border-left: solid;
+  border-left-color: #FFC53D;
+  border-left-width: 6px;
   cursor: pointer;
   outline: inherit;
 }
