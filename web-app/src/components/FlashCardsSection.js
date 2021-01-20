@@ -4,6 +4,7 @@ import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
 import { getFlashCards } from "../services/flashCards.service";
 import devices from "../styles/Devices";
+import { Link } from "react-router-dom";
 
 const FlashCardsSection = (props) => {
   const [flashCards, setFlashCards] = useState([]);
@@ -30,10 +31,29 @@ const FlashCardsSection = (props) => {
           );
         })}
       </Wrapper>
-      <NextButton>Give me advice</NextButton>
+
+      <NextButton>
+        <StyledLink to={"/results"}>Give me advice</StyledLink>
+      </NextButton>
     </StyledSection>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+    text-decoration: inherit;
+  }
+`;
 
 const StyledSection = styled.section`
   background: inherit;

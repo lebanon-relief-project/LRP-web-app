@@ -10,11 +10,11 @@ const TraumaticEvents = () => {
     <StyledSection>
       <HeaderWrapper>
         <HeaderLeftImageWrapper>
-          <img src={HelpPageLeftBackground} />
+          <img src={HelpPageLeftBackground} alt={"background"}/>
         </HeaderLeftImageWrapper>
         
         <HeaderRightImageWrapper>
-          <img src={HelpPageRightBackground} />
+          <img src={HelpPageRightBackground} alt={"background"}/>
         </HeaderRightImageWrapper>
       </HeaderWrapper>
 
@@ -76,19 +76,6 @@ const CentralContentWrapper = styled.div`
 
   @media (max-width: ${devices.mobile}) {
     margin-left:18px;
-  }
-`;
-
-const Wrapper = styled.div`
-  width: 50%;
-  padding-bottom: 2.4rem;
-  margin: 0 16.7%;
-  padding-top: 7.5%;
-  @media (max-width: ${devices.ipad}) {
-    padding-top: 10%;
-  }
-  @media (max-width: ${devices.mobile}) {
-    padding-top: 20%;
   }
 `;
 

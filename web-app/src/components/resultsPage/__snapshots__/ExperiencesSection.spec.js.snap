@@ -50,7 +50,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   flex-direction: column;
   background-color: transparent;
   margin-left: 16.7%;
-  max-width: 632px;
+  max-width: 765px;
 }
 
 .c1 {
@@ -122,6 +122,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   font-weight: bold;
   font-size: 38px;
   margin: 0;
+  width: inherit;
   color: #ffffff;
 }
 
@@ -175,7 +176,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
       >
         <img
           alt="background"
-          src="HelpPageLeftBackground.svg"
+          src="ResultsPageLeftBackground.svg"
         />
       </div>
       <div
@@ -183,7 +184,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
       >
         <img
           alt="background"
-          src="HelpPageRightBackground.svg"
+          src="ResultsPageRightBackground.svg"
         />
       </div>
     </div>
@@ -196,7 +197,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
         <h2
           class="c6"
         >
-          Traumatic Events
+          From the experiences you've shared...
         </h2>
         <div
           class="c7"
@@ -204,17 +205,23 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
           <p
             class="c8"
           >
-            The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
+            We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
           </p>
           <p
             class="c8"
           >
-            All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
+            <img
+              alt="76%"
+              src="ResultsPagePeopleIcons.svg"
+            />
           </p>
           <p
             class="c8"
           >
-            Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
+            <img
+              alt="people"
+              src="ResultsPageStatistics.svg"
+            />
           </p>
         </div>
       </div>

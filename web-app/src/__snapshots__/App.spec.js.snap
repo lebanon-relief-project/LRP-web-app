@@ -23,3 +23,11 @@ exports[`render home page 1`] = `
   </div>
 </div>
 `;
+
+exports[`render results page 1`] = `
+<div>
+  <div>
+    Results page
+  </div>
+</div>
+`;

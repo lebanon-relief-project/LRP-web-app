@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ResultsPage component should match the snapshot 1`] = `
+<div>
+  <div
+    class="sc-dIvqjp bDdiuO"
+  >
+    <div
+      style="width: 100%;"
+    >
+      <div
+        class="sc-gKAblj erfarb"
+      >
+        <div
+          class="sc-hKFyIo USffH"
+        >
+          <div
+            class="sc-eCApGN BJKYF"
+          >
+            <img
+              alt="background"
+              src="ResultsPageLeftBackground.svg"
+            />
+          </div>
+          <div
+            class="sc-jSFkmK cbZMZO"
+          >
+            <img
+              alt="background"
+              src="ResultsPageRightBackground.svg"
+            />
+          </div>
+        </div>
+        <div
+          class="sc-gtssRu gyrDgB"
+        >
+          <div
+            class="sc-dlnjPT kAoRzN"
+          >
+            <h2
+              class="sc-iCoHVE kAmBOd"
+            >
+              From the experiences you've shared...
+            </h2>
+            <div
+              class="sc-bdnylx kgNiQD"
+            >
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
+              </p>
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                <img
+                  alt="76%"
+                  src="ResultsPagePeopleIcons.svg"
+                />
+              </p>
+              <p
+                class="sc-fujyUd gdPIDW"
+              >
+                <img
+                  alt="people"
+                  src="ResultsPageStatistics.svg"
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="sc-bkbjAj egwZwe"
+      >
+        <div
+          class="sc-fFSRdu fmmrrj"
+          id="wrapper"
+        >
+          <h2
+            class="sc-iemXMA kZgKE"
+          >
+            Here’s some things that can help
+          </h2>
+          <div
+            class="sc-fnVYJo lomFUs"
+            id="content"
+          >
+            <div
+              class="sc-crzoUp eyhFvl"
+            >
+              <div
+                class="sc-iqAbSa jgTIVG"
+              >
+                <div
+                  class="sc-kEqYlL gUlysm"
+                />
+                <div
+                  class="sc-jrsJCI iakJXr"
+                >
+                  <button
+                    class="sc-bqGHjH yUfeW"
+                    data-testid="flashcardTitleButton_0"
+                  >
+                    Feeling Guilty
+                  </button>
+                  <button
+                    class="sc-ksluoS jHkYCY"
+                    data-testid="flashcardTitleButton_1"
+                  >
+                    Unexplained aches and pains
+                  </button>
+                  <button
+                    class="sc-ksluoS jHkYCY"
+                    data-testid="flashcardTitleButton_2"
+                  >
+                    Sleep difficulties and nightmares
+                  </button>
+                </div>
+              </div>
+              <div
+                class="sc-dIsAE HfCkj"
+              >
+                <div
+                  class="sc-pNWxx hnBTfQ"
+                >
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Allow yourself to feel
+                      </b>
+                    </h4>
+                    <p>
+                      It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="sc-pNWxx hnBTfQ"
+                >
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Talk about it
+                      </b>
+                    </h4>
+                    <p>
+                      Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="sc-pNWxx hnBTfQ"
+                >
+                  <div
+                    id="result card"
+                  >
+                    <h4>
+                      <b>
+                        Try these excercises
+                      </b>
+                    </h4>
+                    <p>
+                      Lorem ipsum...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
