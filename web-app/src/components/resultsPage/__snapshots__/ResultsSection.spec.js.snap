@@ -188,11 +188,21 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
               <button
                 class="c8"
                 data-testid="flashcardTitleButton_0"
-              />
+              >
+                Feeling Guilty
+              </button>
               <button
                 class="c9"
                 data-testid="flashcardTitleButton_1"
-              />
+              >
+                Unexplained aches and pains
+              </button>
+              <button
+                class="c9"
+                data-testid="flashcardTitleButton_2"
+              >
+                Sleep difficulties and nightmares
+              </button>
             </div>
           </div>
           <div
@@ -210,7 +220,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
                   </b>
                 </h4>
                 <p>
-                  As hard as this might sound, the healthiest way to deal with feelings is to notice them, accept them as a reaction to what has happened, and let them be. Emotions are like waves, they subside once they peak, let them do so, or else they will keep trying to resurface.
+                  It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
                 </p>
               </div>
             </div>
