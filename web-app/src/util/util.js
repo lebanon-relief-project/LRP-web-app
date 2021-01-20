@@ -22,11 +22,25 @@ export const getCardTitleFromSessionStorage = (id) => {
   for (let i = 0; i < numberOfCards; i++) {
     let key = sessionStorage.key(i);
 
-    // Should regex this to match flashcard id patterns
     if (key === id) {
       card = sessionStorage.getItem(key);
     }
   }
 
   return card;
+};
+
+export const checkIfCardIsInSessionStorage = (id) => {
+  let response = false;
+  const numberOfCards = sessionStorage.length;
+
+  for (let i = 0; i < numberOfCards; i++) {
+    let key = sessionStorage.key(i);
+
+    if (key === id) {
+      response = true;
+    }
+  }
+
+  return response;
 };

@@ -1,13 +1,14 @@
 import {
   getCardIdsFromSessionStorage,
   getCardTitleFromSessionStorage,
+  checkIfCardIsInSessionStorage,
 } from "./util";
 
-describe("the getCardIdsFromSessionStorage", () => {
-  beforeEach(() => {
-    sessionStorage.clear();
-  });
+beforeEach(() => {
+  sessionStorage.clear();
+});
 
+describe("the getCardIdsFromSessionStorage", () => {
   it("should return all card id's that are in session storage", () => {
     sessionStorage.setItem("key1", "value1");
     sessionStorage.setItem("key2", "value2");
@@ -46,5 +47,27 @@ describe("the getCardTitleFromSessionStorage function", () => {
     const result = getCardTitleFromSessionStorage();
 
     expect(result).toEqual("");
+  });
+});
+
+describe("The checkIfCardIsInSessionStorage function", () => {
+  it("should return false if the card is not in session storage", () => {
+    const result = checkIfCardIsInSessionStorage("key1");
+
+    expect(result).toEqual(false);
+  });
+
+  it("should return true if the card is in session storage", () => {
+    sessionStorage.setItem("key1", "value1");
+    const result = checkIfCardIsInSessionStorage("key1");
+
+    expect(result).toEqual(true);
+  });
+
+  it("should return false if an invalid card id is passed in", () => {
+    sessionStorage.setItem("key1", "value1");
+    const result = checkIfCardIsInSessionStorage(undefined);
+
+    expect(result).toEqual(false);
   });
 });

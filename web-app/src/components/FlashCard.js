@@ -6,10 +6,11 @@ import TickCircleIcon from "../assets/images/TickCircle.svg";
 import { useSpring, animated as a } from "react-spring";
 import devices from "../styles/Devices";
 import { deviceSize } from "../util/deviceUtil";
+import { checkIfCardIsInSessionStorage } from "../util/util";
 
 const FlashCard = ({ card, id }) => {
-  const [flipped, setFlipped] = useState(false);
-  const [selected, setSelected] = useState(false);
+  const [flipped, setFlipped] = useState(checkIfCardIsInSessionStorage(id));
+  const [selected, setSelected] = useState(checkIfCardIsInSessionStorage(id));
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 0.92 : 0,
