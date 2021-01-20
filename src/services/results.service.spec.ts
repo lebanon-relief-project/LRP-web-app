@@ -4,14 +4,17 @@ import Container from "typedi";
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { MockLogger } from "../util/test-util";
 import { InternalServerError } from "routing-controllers";
+import { CosService } from "./cos.service";
 
 const mockList = jest.fn();
+const mockGetPreSignedUrl = jest.fn();
 class MockDb implements Partial<DocumentScope<any>> {
   list = mockList;
 }
 
 Container.set("logger", new MockLogger());
 Container.set(CloudantService, { use: () => new MockDb() });
+Container.set(CosService, { getPreSignedUrl: mockGetPreSignedUrl });
 let resultsService: ResultsService = Container.get(ResultsService);
 
 describe("The result service", () => {
@@ -24,6 +27,9 @@ describe("The result service", () => {
   describe("the getResults() function", () => {
     beforeEach(async () => {
       mockList.mockResolvedValue(sampleResultsCloudantResponse);
+      mockGetPreSignedUrl.mockResolvedValue({
+        preSignedUrl: "sample pre-signed url",
+      });
       result = await resultsService.getResults(["test_id_1"]);
     });
 
@@ -34,6 +40,10 @@ describe("The result service", () => {
     it.todo(
       "should return the most popular flashcard results if no id's are passed in"
     );
+
+    it("should call the content store", () => {
+      expect(mockGetPreSignedUrl).toHaveBeenCalled();
+    });
 
     it("should throw an error if the db connection fails", async () => {
       mockList.mockImplementation(() => {
@@ -48,6 +58,19 @@ describe("The result service", () => {
       );
     });
 
+    it("should throw an error if the COS operation fails", async () => {
+      mockGetPreSignedUrl.mockImplementation(() => {
+        throw new Error("ERROR");
+      });
+
+      const functionToThrow = async () =>
+        await resultsService.getResults(["test_id_1"]);
+
+      await expect(functionToThrow()).rejects.toThrow(
+        new InternalServerError(`getResults: Failed to retrieve results`)
+      );
+    });
+
     it("should filter results by Ids passed in", () => {
       expect(result).toEqual({
         results: [
@@ -56,7 +79,7 @@ describe("The result service", () => {
             _rev: "test_rev_1",
             expl_title: "some title 1",
             expl_body: "some body 1",
-            image: "some image 1",
+            image: "sample pre-signed url",
             recommendations: [
               {
                 title: "some recommendation title 1",
