@@ -3,9 +3,10 @@ import { render } from "@testing-library/react";
 import MobileNavBar from "./MobileNavBar";
 import "jest-styled-components";
 
-jest.mock("./Card", (props) => {
-  return (props) => <div>{props.title}</div>;
-});
+jest.mock("react-router-dom", () => ({
+  Link: ({ to }) => <div data-testid={`link_${to}`}></div>,
+  NavLink: ({ to }) => <div data-testid={`navlink_${to}`}></div>,
+}));
 
 describe("the MobileNavBar component", () => {
   let container;
