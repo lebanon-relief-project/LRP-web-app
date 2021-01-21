@@ -110,6 +110,10 @@ In order to run the backend locally you need to export the VCAP_SERVICES environ
 
 After you have done this in the project directory, you can run:
 
+### `npm run install_all`
+
+Installs packages in both server and web-app
+
 ### `npm run build && npm start`
 
 Runs the server<br />
