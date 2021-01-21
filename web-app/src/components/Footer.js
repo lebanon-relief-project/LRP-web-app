@@ -6,6 +6,7 @@ import devices from "../styles/Devices";
 import Instagram from "../assets/images/Instagram.svg";
 import Facebook from "../assets/images/Facebook.svg";
 import Twitter from "../assets/images/Twitter.svg";
+var platform = require('platform');
 
 const Footer = () => {
   return (
@@ -24,13 +25,7 @@ const Footer = () => {
           >
             <StyledImage src={Instagram} alt="Instagram" />
           </StyledAnchor>
-          <StyledAnchor
-            href="https://www.facebook.com/Lebanonreliefnetwork"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <StyledImage src={Facebook} alt="Facebook" />
-          </StyledAnchor>
+          <FBAnchor />
           <StyledAnchor
             href="https://twitter.com/LebReliefNet"
             target="_blank"
@@ -44,6 +39,60 @@ const Footer = () => {
     </StyledSection>
   );
 };
+
+const FBAnchor = () => {
+  const os = platform.os.toString();
+  const isAndroid = os.match(/android/i);
+  const isIOS = os.match(/iOS/i);
+  if (isIOS){
+    return(
+      <StyledAnchor
+        href="fb://page/?id=100368885336321";
+        onClick={handleFbClick}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StyledImage src={Facebook} alt="Facebook" />
+      </StyledAnchor>
+    );
+  } else if (isAndroid){
+      return(
+        <StyledAnchor
+          href="intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end";
+          onClick={handleFbClick}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StyledImage src={Facebook} alt="Facebook" />
+        </StyledAnchor>
+      );
+  } else {
+      return(
+        <StyledAnchor
+          href="https://www.facebook.com/Lebanonreliefnetwork";
+          onClick={handleFbClick}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <StyledImage src={Facebook} alt="Facebook" />
+        </StyledAnchor>
+      );
+  }
+}
+
+const handleFbClick = (e) => {
+  e.preventDefault();
+  const os = platform.os.toString();
+  const isAndroid = os.match(/android/i);
+  const isIOS = os.match(/iOS/i);
+  if (isIOS){
+    window.location = "fb://page/?id=100368885336321";
+  } else if (isAndroid){
+      window.location = "intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end";
+  } else {
+      window.location = "https://www.facebook.com/Lebanonreliefnetwork";
+  }
+}
 
 const StyledAnchor = styled.a`
   margin: 5%;
