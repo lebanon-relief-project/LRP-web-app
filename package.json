@@ -19,7 +19,8 @@
     "serve": "node dist/src",
     "upgrade-interactive": "npm-check --update",
     "clear_jest": "jest --clearCache",
-    "dev": "concurrently --kill-others \"nodemon\" \"cd web-app && npm start\""
+    "dev": "concurrently --kill-others \"nodemon\" \"cd web-app && npm start\"",
+    "install_all": "npm i && cd web-app && npm i"
   },
   "dependencies": {
     "@cloudant/cloudant": "^4.3.0",
