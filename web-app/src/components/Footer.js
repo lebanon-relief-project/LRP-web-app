@@ -38,7 +38,7 @@ const Footer = () => {
           >
             <StyledImage src={Twitter} alt="Twitter" />
           </StyledAnchor>
-          <p>support@lebanonreliefnetwork.org</p>
+          <p>contact@lebanonreliefnetwork.org</p>
         </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
