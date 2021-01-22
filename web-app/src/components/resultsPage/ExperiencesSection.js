@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import ResultsPageLeftBackground from "../../assets/images/background/ResultsPageLeftBackground.svg";
 import ResultsPageRightBackground from "../../assets/images/background/ResultsPageRightBackground.svg";
-import ResultsPagePeopleIcons from "../../assets/images/background/ResultsPagePeopleIcons.svg";
-import ResultsPageStatistics from "../../assets/images/background/ResultsPageStatistics.svg";
+import FilledPerson from "../../assets/images/FilledPerson.svg";
+import EmptyPerson from "../../assets/images/EmptyPerson.svg";
+import { getPercentage } from "../../services/results.service";
 
 const ExperiencesSection = () => {
+  const [percentage, setPercentage] = useState();
+  const [peopleData, setPeopleData] = useState([]);
+
+  const getFullToEmptyPeopleRatio = (roundedFullPeople, roundedEmptyPeople) => {
+    const peopleData = [];
+    for (let i = 0; i < roundedFullPeople; i++) {
+      peopleData.push({ src: FilledPerson, alt: "Filled Person" });
+    }
+    for (let i = 0; i < roundedEmptyPeople; i++) {
+      peopleData.push({ src: EmptyPerson, alt: "Empty Person" });
+    }
+    return peopleData;
+  };
+
+  useEffect(() => {
+    const fetchPercentage = async () => {
+      let response = await getPercentage();
+      setPercentage(response.default_percentage * 100);
+      const roundedFullPeople = (response.default_percentage * 10).toFixed(0);
+      const roundedEmptyPeople = 10 - roundedFullPeople;
+      const peopleData = getFullToEmptyPeopleRatio(
+        roundedFullPeople,
+        roundedEmptyPeople
+      );
+
+      setPeopleData(peopleData);
+    };
+    fetchPercentage();
+  }, []);
   return (
     <StyledSection>
       <HeaderWrapper>
@@ -24,22 +54,65 @@ const ExperiencesSection = () => {
         <CentralContentWrapper>
           <StyledHeader>From the experiences you've shared...</StyledHeader>
           <TextWrapper>
-            <StyledParagraph>
+            <StyledDiv>
               We have pulled together some tailored advice and exercises to help
               you cope with trauma and how you are feeling.
-            </StyledParagraph>
-            <StyledParagraph>
-              <img src={ResultsPagePeopleIcons} alt={"76%"} />
-            </StyledParagraph>
-            <StyledParagraph>
-              <img src={ResultsPageStatistics} alt={"people"} />
-            </StyledParagraph>
+            </StyledDiv>
+            <StyledDiv>
+              {peopleData.map((person, i) => (
+                <Person
+                  key={i}
+                  src={person.src}
+                  alt={person.alt}
+                  data-testid={`resultsPercentage_image_${i}`}
+                />
+              ))}
+            </StyledDiv>
+            <StyledDiv>
+              <FlexBox>
+                <PercentageNumber>{percentage}%</PercentageNumber>
+                <PercentageText>
+                  of people affected by this experience feel like ictum nullam
+                  ligula lorem ut vitae. Purus blandit imperdiet nibh amet.
+                </PercentageText>
+              </FlexBox>
+            </StyledDiv>
           </TextWrapper>
         </CentralContentWrapper>
       </CentralWrapper>
     </StyledSection>
   );
 };
+
+const Person = styled.img`
+  margin-right: 20px;
+`;
+
+const PercentageNumber = styled.div`
+  font-family: Raleway;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 2%;
+`;
+
+const PercentageText = styled.div`
+  width: 60%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+`;
+
+const FlexBox = styled.div`
+  display: flex;
+`;
 
 const TextWrapper = styled.div`
   display: flex;
@@ -129,7 +202,7 @@ const StyledHeader = styled.h2`
   color: ${colours.white};
 `;
 
-const StyledParagraph = styled.p`
+const StyledDiv = styled.div`
   margin: 0;
   margin-bottom: 1rem;
   font-size: 16px;

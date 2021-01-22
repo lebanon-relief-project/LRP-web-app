@@ -4,6 +4,10 @@ import ResultsPage from "./resultsPage";
 
 jest.mock("../services/results.service.js");
 
+jest.mock("../components/resultsPage/ExperiencesSection", () => {
+  return () => <div>Experiences Section</div>;
+});
+
 describe("the ResultsPage component", () => {
   beforeEach(() => {
     sessionStorage.clear();
