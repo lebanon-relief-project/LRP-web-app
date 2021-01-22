@@ -15,7 +15,6 @@ Welcome to Lebanon Relief Network. This README will serve as a high level guide 
 1. [Cloud Architecture](#cloud-architecture)
 1. [Directory Structure](#directory-structure)
 1. [Available Scripts](#available-scripts)
-1. [Git Commit Convention](#git-commit-convention)
 1. [Key Links](#key-links)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
