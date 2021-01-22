@@ -25,7 +25,7 @@ const ExperiencesSection = () => {
 
   useEffect(() => {
     const fetchPercentage = async () => {
-      let response = await getPercentage();
+      const response = await getPercentage();
       setPercentage(response.default_percentage * 100);
       const roundedFullPeople = (response.default_percentage * 10).toFixed(0);
       const roundedEmptyPeople = 10 - roundedFullPeople;
