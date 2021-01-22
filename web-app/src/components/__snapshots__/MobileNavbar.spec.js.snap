@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the MobileNavBar component should match the snapshot 1`] = `
-.c4 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,7 +24,7 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   outline: none;
 }
 
-.c4 span {
+.c2 span {
   width: 2rem;
   height: 0.25rem;
   background: black;
@@ -37,26 +37,26 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   transform-origin: 1px;
 }
 
-.c4 span:first-child {
+.c2 span:first-child {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
 
-.c4 span:nth-child(2) {
+.c2 span:nth-child(2) {
   opacity: 1;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
-.c4 span:nth-child(3) {
+.c2 span:nth-child(3) {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
 
-.c3 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,26 +84,6 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   z-index: 100;
 }
 
-.c2 {
-  max-height: 80%;
-}
-
-.c1 {
-  min-width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 @media (min-width:576px) {
   .c0 {
     display: none;
@@ -115,21 +95,15 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
     class="c0"
   >
     <div
-      class="c1"
-    >
-      <img
-        alt="Logo"
-        class="c2"
-        src="logo.svg"
-      />
-    </div>
+      data-testid="navlink_/"
+    />
     <nav
-      class="c3"
+      class="c1"
     >
       <button
         aria-expanded="false"
         aria-label="Toggle menu"
-        class="c4"
+        class="c2"
         data-testid="burgerButton"
       >
         <span />
