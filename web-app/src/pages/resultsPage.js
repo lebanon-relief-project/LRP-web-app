@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { getCardIdsFromSessionStorage } from "../util/util";
 import devices from "../styles/Devices";
 import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
 import ResultsSection from "../components/resultsPage/ResultsSection";
 
 const ResultsPage = () => {
-  useEffect(() => {
-    const ids = getCardIdsFromSessionStorage();
-  }, []);
-
   return (
     <StyledPage>
       <div style={{ width: "100%" }}>

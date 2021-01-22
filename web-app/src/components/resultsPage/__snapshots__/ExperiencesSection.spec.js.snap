@@ -1,6 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
+.c9 {
+  margin-right: 20px;
+}
+
+.c11 {
+  font-family: Raleway;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 46px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-right: 2%;
+}
+
+.c12 {
+  width: 60%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c7 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,27 +241,94 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
         <div
           class="c7"
         >
-          <p
+          <div
             class="c8"
           >
             We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
-          </p>
-          <p
+          </div>
+          <div
             class="c8"
           >
             <img
-              alt="76%"
-              src="ResultsPagePeopleIcons.svg"
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_0"
+              src="FilledPerson.svg"
             />
-          </p>
-          <p
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_1"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_2"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_3"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_4"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_5"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_6"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Filled Person"
+              class="c9"
+              data-testid="resultsPercentage_image_7"
+              src="FilledPerson.svg"
+            />
+            <img
+              alt="Empty Person"
+              class="c9"
+              data-testid="resultsPercentage_image_8"
+              src="EmptyPerson.svg"
+            />
+            <img
+              alt="Empty Person"
+              class="c9"
+              data-testid="resultsPercentage_image_9"
+              src="EmptyPerson.svg"
+            />
+          </div>
+          <div
             class="c8"
           >
-            <img
-              alt="people"
-              src="ResultsPageStatistics.svg"
-            />
-          </p>
+            <div
+              class="c10"
+            >
+              <div
+                class="c11"
+              >
+                76
+                %
+              </div>
+              <div
+                class="c12"
+              >
+                of people affected by this experience feel like ictum nullam ligula lorem ut vitae. Purus blandit imperdiet nibh amet.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

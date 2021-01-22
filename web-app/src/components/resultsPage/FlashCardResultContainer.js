@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
 import { ResultCard } from "./ResultCard";
-import { getCardTitleFromSessionStorage } from "../../util/util";
 import Colours from "../../styles/Colours";
 
 // @param results: ResultsResponse
@@ -51,10 +49,10 @@ export const FlashCardResultContainer = ({ results }) => {
     let response;
 
     resultsResponseArray.forEach((result) => {
-      if (result._id == cardId) {
+      if (result._id === cardId) {
         response = result.expl_title;
       }
-    })
+    });
 
     return response;
   };
@@ -70,9 +68,9 @@ export const FlashCardResultContainer = ({ results }) => {
             onClick={() => updateSelectedFlashCardState(card.id)}
           >
             {/* {getCardTitleFromSessionStorage(card.id)} */}
-            
+
             {/* TEMP FUNCTION*/}
-            {getCardTitleFromResultsResponse(card.id)} 
+            {getCardTitleFromResultsResponse(card.id)}
           </SelectedStyledFlashCardTitle>
         );
       } else {
@@ -94,13 +92,15 @@ export const FlashCardResultContainer = ({ results }) => {
 
   // Only render the selected cards recommendations
   const renderRecommendations = () => {
-    return selectedFlashCardState.map((card) => {
-      if (card.selected) {
+    return selectedFlashCardState
+      .filter((card) => card.selected)
+      .map((card) => {
         return (
           // RENDER IMAGE HERE
           <ResultCardsWrapper key={`resultCards_wrapper`}>
-            {resultsResponseArray.map((result) => {
-              if (result._id === card.id) {
+            {resultsResponseArray
+              .filter((result) => result._id === card.id)
+              .map((result) => {
                 return result.recommendations.map((recommendation, index) => {
                   return (
                     <ResultCard
@@ -111,14 +111,10 @@ export const FlashCardResultContainer = ({ results }) => {
                     />
                   );
                 });
-              }
-            })}
+              })}
           </ResultCardsWrapper>
         );
-      } else {
-        return;
-      }
-    });
+      });
   };
 
   return (

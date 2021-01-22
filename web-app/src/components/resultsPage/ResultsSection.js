@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
-import resultsPageLoadingBar from "../../assets/images/resultsPageLoadingBar.svg";
 import { FlashCardResultContainer } from "./FlashCardResultContainer";
 import { sampleResultsResponse } from "../../sampleData";
 
@@ -19,10 +18,6 @@ const ResultsSection = () => {
     </StyledSection>
   );
 };
-
-const ResultCardWrapper = styled.div`
-  max-width: 632;
-`;
 
 const ContentWrapper = styled.div`
   display: flex;

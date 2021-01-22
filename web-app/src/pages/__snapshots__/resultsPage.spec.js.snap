@@ -3,115 +3,56 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-dIvqjp bDdiuO"
+    class="sc-iqAbSa jbnWsz"
   >
     <div
       style="width: 100%;"
     >
-      <div
-        class="sc-gKAblj erfarb"
-      >
-        <div
-          class="sc-hKFyIo USffH"
-        >
-          <div
-            class="sc-eCApGN BJKYF"
-          >
-            <img
-              alt="background"
-              src="ResultsPageLeftBackground.svg"
-            />
-          </div>
-          <div
-            class="sc-jSFkmK cbZMZO"
-          >
-            <img
-              alt="background"
-              src="ResultsPageRightBackground.svg"
-            />
-          </div>
-        </div>
-        <div
-          class="sc-gtssRu gyrDgB"
-        >
-          <div
-            class="sc-dlnjPT kAoRzN"
-          >
-            <h2
-              class="sc-iCoHVE kAmBOd"
-            >
-              From the experiences you've shared...
-            </h2>
-            <div
-              class="sc-bdnylx kgNiQD"
-            >
-              <p
-                class="sc-fujyUd gdPIDW"
-              >
-                We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
-              </p>
-              <p
-                class="sc-fujyUd gdPIDW"
-              >
-                <img
-                  alt="76%"
-                  src="ResultsPagePeopleIcons.svg"
-                />
-              </p>
-              <p
-                class="sc-fujyUd gdPIDW"
-              >
-                <img
-                  alt="people"
-                  src="ResultsPageStatistics.svg"
-                />
-              </p>
-            </div>
-          </div>
-        </div>
+      <div>
+        Experiences Section
       </div>
       <section
-        class="sc-bkbjAj egwZwe"
+        class="sc-jrsJCI jdMXof"
       >
         <div
-          class="sc-fFSRdu fmmrrj"
+          class="sc-pNWxx iNpZHW"
           id="wrapper"
         >
           <h2
-            class="sc-iemXMA kZgKE"
+            class="sc-kEqYlL fvqFQf"
           >
             Here’s some things that can help
           </h2>
           <div
-            class="sc-fnVYJo lomFUs"
+            class="sc-fujyUd fOsDkX"
             id="content"
           >
             <div
-              class="sc-crzoUp eyhFvl"
+              class="sc-eCApGN bjZePm"
             >
               <div
-                class="sc-iqAbSa jgTIVG"
+                class="sc-hKFyIo jLSxt"
               >
                 <div
-                  class="sc-kEqYlL gUlysm"
+                  class="sc-dlnjPT gXtPrw"
                 />
                 <div
-                  class="sc-jrsJCI iakJXr"
+                  class="sc-gtssRu hWvnrM"
                 >
                   <button
-                    class="sc-bqGHjH yUfeW"
+                    class="sc-gKAblj fHJkqN"
                     data-testid="flashcardTitleButton_0"
                   >
                     Feeling Guilty
                   </button>
                   <button
-                    class="sc-ksluoS jHkYCY"
+                    class="sc-iCoHVE cCnVzD"
                     data-testid="flashcardTitleButton_1"
                   >
                     Unexplained aches and pains
                   </button>
                   <button
-                    class="sc-ksluoS jHkYCY"
+                    class="sc-iCoHVE cCnVzD"
                     data-testid="flashcardTitleButton_2"
                   >
                     Sleep difficulties and nightmares
@@ -119,10 +60,10 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="sc-dIsAE HfCkj"
+                class="sc-jSFkmK kjyviP"
               >
                 <div
-                  class="sc-pNWxx hnBTfQ"
+                  class="sc-bdnylx geSJnE"
                 >
                   <div
                     id="result card"
@@ -138,7 +79,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="sc-pNWxx hnBTfQ"
+                  class="sc-bdnylx geSJnE"
                 >
                   <div
                     id="result card"
@@ -154,7 +95,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  class="sc-pNWxx hnBTfQ"
+                  class="sc-bdnylx geSJnE"
                 >
                   <div
                     id="result card"
