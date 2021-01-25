@@ -135,6 +135,7 @@ const TitlesForeground = styled.div`
   z-index: 1;
   position: absolute;
   flex-direction: column;
+  overflow: auto;
 `;
 
 const Background = styled.div`
