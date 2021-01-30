@@ -3,7 +3,7 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-iqAbSa jbnWsz"
+    class="sc-bdnylx dQBmin"
   >
     <div
       style="width: 100%;"
@@ -11,110 +11,9 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
       <div>
         Experiences Section
       </div>
-      <section
-        class="sc-jrsJCI jdMXof"
-      >
-        <div
-          class="sc-pNWxx iNpZHW"
-          id="wrapper"
-        >
-          <h2
-            class="sc-kEqYlL fvqFQf"
-          >
-            Here’s some things that can help
-          </h2>
-          <div
-            class="sc-fujyUd fOsDkX"
-            id="content"
-          >
-            <div
-              class="sc-eCApGN bjZePm"
-            >
-              <div
-                class="sc-hKFyIo jLSxt"
-              >
-                <div
-                  class="sc-dlnjPT gXtPrw"
-                />
-                <div
-                  class="sc-gtssRu hWvnrM"
-                >
-                  <button
-                    class="sc-gKAblj fHJkqN"
-                    data-testid="flashcardTitleButton_0"
-                  >
-                    Feeling Guilty
-                  </button>
-                  <button
-                    class="sc-iCoHVE cCnVzD"
-                    data-testid="flashcardTitleButton_1"
-                  >
-                    Unexplained aches and pains
-                  </button>
-                  <button
-                    class="sc-iCoHVE cCnVzD"
-                    data-testid="flashcardTitleButton_2"
-                  >
-                    Sleep difficulties and nightmares
-                  </button>
-                </div>
-              </div>
-              <div
-                class="sc-jSFkmK kjyviP"
-              >
-                <div
-                  class="sc-bdnylx geSJnE"
-                >
-                  <div
-                    id="result card"
-                  >
-                    <h4>
-                      <b>
-                        Allow yourself to feel
-                      </b>
-                    </h4>
-                    <p>
-                      It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="sc-bdnylx geSJnE"
-                >
-                  <div
-                    id="result card"
-                  >
-                    <h4>
-                      <b>
-                        Talk about it
-                      </b>
-                    </h4>
-                    <p>
-                      Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="sc-bdnylx geSJnE"
-                >
-                  <div
-                    id="result card"
-                  >
-                    <h4>
-                      <b>
-                        Try these excercises
-                      </b>
-                    </h4>
-                    <p>
-                      Lorem ipsum...
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div>
+        Results Section
+      </div>
     </div>
   </div>
 </div>

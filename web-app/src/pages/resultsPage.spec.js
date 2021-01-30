@@ -13,6 +13,10 @@ jest.mock("../components/resultsPage/ExperiencesSection", () => {
   return () => <div>Experiences Section</div>;
 });
 
+jest.mock("../components/resultsPage/ResultsSection", () => {
+  return () => <div>Results Section</div>;
+});
+
 const getResultsSpy = jest.spyOn(resultsService, "getResults");
 const getCardIdsFromSessionStorageSpy = jest.spyOn(
   util,
@@ -24,15 +28,7 @@ describe("the ResultsPage component", () => {
     sessionStorage.clear();
     sessionStorage.setItem("key1", "value1");
     sessionStorage.setItem("key2", "value2");
-  });
 
-  it("should match the snapshot", async () => {
-    const { container } = renderWithRouter(<ResultsPage />);
-    await wait();
-    expect(container).toMatchSnapshot();
-  });
-
-  it("should call the results service with card id's that are in session storage", async () => {
     getCardIdsFromSessionStorageSpy.mockReturnValue(["key1", "key2"]);
     getResultsSpy.mockReturnValue({
       results: [
@@ -51,6 +47,15 @@ describe("the ResultsPage component", () => {
         },
       ],
     });
+  });
+
+  it("should match the snapshot", async () => {
+    const { container } = renderWithRouter(<ResultsPage />);
+    await wait();
+    expect(container).toMatchSnapshot();
+  });
+
+  it("should call the results service with card id's that are in session storage", async () => {
     const { container } = renderWithRouter(<ResultsPage />);
 
     await wait();

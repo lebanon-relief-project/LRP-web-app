@@ -12,7 +12,7 @@ const ResultsPage = () => {
     let ids = getCardIdsFromSessionStorage();
     let response = await getResults(ids);
 
-    setResults(response ? response.results : undefined);
+    setResults(response ? response : undefined);
   };
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const ResultsPage = () => {
     <StyledPage>
       <div style={{ width: "100%" }}>
         <ExperiencesSection />
-        <ResultsSection />
+        {results ? <ResultsSection results={results} /> : <></>}
       </div>
     </StyledPage>
   );
