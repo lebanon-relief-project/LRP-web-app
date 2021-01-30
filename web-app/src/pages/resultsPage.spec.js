@@ -14,7 +14,7 @@ jest.mock("../components/resultsPage/ExperiencesSection", () => {
 });
 
 jest.mock("../components/resultsPage/ResultsSection", () => {
-  return () => <div>Results Section</div>;
+  return () => <div data-testid="results_section">Results Section</div>;
 });
 
 const getResultsSpy = jest.spyOn(resultsService, "getResults");
@@ -62,5 +62,17 @@ describe("the ResultsPage component", () => {
 
     expect(getCardIdsFromSessionStorageSpy).toHaveBeenCalled();
     expect(getResultsSpy).toHaveBeenCalledWith(["key1", "key2"]);
+  });
+
+  it("should handle error response from getResults", async () => {
+    getResultsSpy.mockImplementation(() => {
+      throw new Error("some ugly error");
+    });
+
+    const { container, queryByTestId } = renderWithRouter(<ResultsPage />);
+
+    await wait();
+
+    expect(queryByTestId("results_section")).toBeFalsy();
   });
 });

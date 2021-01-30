@@ -10,9 +10,14 @@ const ResultsPage = () => {
   const [results, setResults] = useState(undefined);
   const fetchResults = async () => {
     let ids = getCardIdsFromSessionStorage();
-    let response = await getResults(ids);
+    let response = undefined;
 
-    setResults(response ? response : undefined);
+    try {
+      response = await getResults(ids);
+      setResults(response ? response : undefined);
+    } catch (exception) {
+      // do nothing
+    }
   };
 
   useEffect(() => {
