@@ -23,3 +23,13 @@ export async function getPercentage() {
     throw new Error("Failed to fetch percentage");
   }
 }
+
+export async function getUsefulTips() {
+  try {
+    const response = await axios.get("/api/useful-tips");
+
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to fetch Useful Tips");
+  }
+}

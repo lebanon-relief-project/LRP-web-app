@@ -3,6 +3,7 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
 import ResultsSection from "../components/resultsPage/ResultsSection";
+import UsefulTipsSection from "../components/resultsPage/UsefulTipsSection";
 
 const ResultsPage = () => {
   return (
@@ -10,6 +11,7 @@ const ResultsPage = () => {
       <div style={{ width: "100%" }}>
         <ExperiencesSection />
         <ResultsSection />
+        <UsefulTipsSection />
       </div>
     </StyledPage>
   );

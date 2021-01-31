@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ResultsSection from "./ResultsSection";
+import UsefulTipsSection from "./UsefulTipsSection";
 import "jest-styled-components";
 
-describe("the ResultsSection component", () => {
+describe("the UsefulTipsSection component", () => {
   let container;
 
   it("should match the snapshot", () => {
-    ({ container } = render(<ResultsSection />));
+    ({ container } = render(<UsefulTipsSection />));
 
     expect(container).toMatchSnapshot();
   });

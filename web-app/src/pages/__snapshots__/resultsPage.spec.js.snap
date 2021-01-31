@@ -3,7 +3,7 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 <div>
   <div
-    class="sc-iqAbSa jbnWsz"
+    class="sc-bqGHjH kBoSHI"
   >
     <div
       style="width: 100%;"
@@ -115,6 +115,27 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
           </div>
         </div>
       </section>
+      <div
+        class="sc-iqAbSa fIIcmK"
+      >
+        <div
+          class="sc-crzoUp kIKKwz"
+        >
+          <div>
+            <h2
+              class="sc-dIsAE cIddOW"
+            >
+              A few more useful tips
+            </h2>
+          </div>
+          <div>
+            <img
+              alt="Person Taking Care"
+              src="PersonTakingCare.svg"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
