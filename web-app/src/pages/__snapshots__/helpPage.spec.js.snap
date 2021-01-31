@@ -1,19 +1,240 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the HelpPage component should match the snapshot 1`] = `
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  z-index: 2;
+  background-color: transparent;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  height: 363px;
+  width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 16.7%;
+  max-width: 632px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  z-index: 1;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #002766;
+  margin: 0;
+  margin-top: 64px;
+  padding: 0;
+  width: 100%;
+  height: 363px;
+  z-index: 0;
+}
+
+.c7 {
+  font-weight: bold;
+  font-size: 38px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.c9 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c11 {
+  width: 50%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c10 {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.c12 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.c14 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width:576px) {
+  .c5 {
+    margin-top: 20px;
+    height: 371px;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c3 {
+    display: none;
+  }
+}
+
+@media (max-width:1025px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    height: 416px;
+  }
+}
+
+@media (max-width:576px) {
+  .c11 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
 <div>
   <div
-    class="sc-dIsAE hKpbCJ"
+    class="c0"
   >
     <div>
       <div
-        class="sc-gKAblj erfarb"
+        class="c1"
       >
         <div
-          class="sc-hKFyIo fLBvJZ"
+          class="c2"
         >
           <div
-            class="sc-eCApGN jgPuuD"
+            class="c3"
           >
             <img
               alt="background"
@@ -21,7 +242,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
             />
           </div>
           <div
-            class="sc-jSFkmK ijxrYw"
+            class="c4"
           >
             <img
               alt="background"
@@ -30,31 +251,31 @@ exports[`the HelpPage component should match the snapshot 1`] = `
           </div>
         </div>
         <div
-          class="sc-gtssRu bNoyUR"
+          class="c5"
         >
           <div
-            class="sc-dlnjPT hpuugW"
+            class="c6"
           >
             <h2
-              class="sc-iCoHVE bortUZ"
+              class="c7"
             >
               Traumatic Events
             </h2>
             <div
-              class="sc-bdnylx kgNiQD"
+              class="c8"
             >
               <p
-                class="sc-fujyUd gdPIDW"
+                class="c9"
               >
                 The explosion is a traumatic event. It affected those that were in Beirut at the time, people all over Lebanon, the Lebanese abroad, and those who know someone that was affected.
               </p>
               <p
-                class="sc-fujyUd gdPIDW"
+                class="c9"
               >
                 All these individuals, regardless of whether they were in Beirut at the time of the explosion or whether they were directly impacted by the explosion can experience traumatic stress as a result of it.
               </p>
               <p
-                class="sc-fujyUd gdPIDW"
+                class="c9"
               >
                 Traumatic stress is changes in how one feels, thinks, or behaves as a result of trauma. It is a normal reaction to an abnormal event.
               </p>
@@ -63,26 +284,26 @@ exports[`the HelpPage component should match the snapshot 1`] = `
         </div>
       </div>
       <section
-        class="sc-kEqYlL dYVMvC"
+        class="c10"
       >
         <div
-          class="sc-jrsJCI bBxvhR"
+          class="c11"
         >
           <h2
-            class="sc-iqAbSa gOlslw"
+            class="c12"
           >
             Learn more about trauma
           </h2>
           <div
-            class="sc-pNWxx cidOWP"
+            class="c13"
           >
             <p
-              class="sc-crzoUp jNsjMQ"
+              class="c14"
             >
               Below are flashcards with the most common presentations of traumatic stress.
             </p>
             <p
-              class="sc-crzoUp jNsjMQ"
+              class="c14"
             >
               Click on those that you have experienced to learn more about your reaction and ways to manage, then select the ones that apply.
             </p>
