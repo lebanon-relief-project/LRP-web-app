@@ -148,6 +148,34 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   font-size: 24px;
 }
 
+.c13 {
+  width: 60%;
+  min-width: 960px;
+  min-height: 730px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 5%;
+}
+
+.c15 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -165,6 +193,23 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c13 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
+@media (max-widthL 576px) {
+  .c14 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -292,14 +337,14 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         </div>
       </section>
       <div
-        class="sc-iqAbSa fIIcmK"
+        class="c13"
       >
         <div
-          class="sc-crzoUp kIKKwz"
+          class="c14"
         >
           <div>
             <h2
-              class="sc-dIsAE cIddOW"
+              class="c15"
             >
               A few more useful tips
             </h2>
