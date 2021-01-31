@@ -1,6 +1,7 @@
 import React from "react";
 import { renderWithRouter } from "../util/testUtils";
 import ResultsPage from "./resultsPage";
+import "jest-styled-components";
 
 jest.mock("../services/results.service.js");
 
