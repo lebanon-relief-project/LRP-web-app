@@ -3,7 +3,6 @@ import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import { FlashCardResultContainer } from "./FlashCardResultContainer";
-import { sampleResultsResponse } from "../../sampleData";
 
 const ResultsSection = (params) => {
   return (
