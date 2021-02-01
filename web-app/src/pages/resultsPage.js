@@ -16,7 +16,7 @@ const ResultsPage = () => {
       response = await getResults(ids);
       setResults(response ? response : undefined);
     } catch (exception) {
-      // do nothing
+      console.log("failed to fetch results");
     }
   };
 
