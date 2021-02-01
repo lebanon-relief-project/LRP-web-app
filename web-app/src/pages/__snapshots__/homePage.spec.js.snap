@@ -1,12 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the HomePage component should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  max-width: 1440px;
+}
+
+@media (max-width:576px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5%;
+  }
+}
+
 <div>
   <div
-    class="sc-bdnylx dQBmin"
+    class="c0"
   >
     <div
-      class="sc-gtssRu bFiIem"
+      class="c1"
     >
       <div>
         What happened section

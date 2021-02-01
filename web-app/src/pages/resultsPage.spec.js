@@ -1,6 +1,7 @@
 import React from "react";
 import { renderWithRouter } from "../util/testUtils";
 import ResultsPage from "./resultsPage";
+import "jest-styled-components";
 
 import * as resultsService from "../services/results.service.js";
 import * as util from "../util/util.js";

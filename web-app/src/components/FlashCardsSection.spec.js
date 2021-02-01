@@ -3,6 +3,7 @@ import { wait } from "@testing-library/react";
 import FlashCardsSection from "./FlashCardsSection";
 import "jest-styled-components";
 import { renderWithRouter } from "../util/testUtils";
+import "jest-styled-components";
 
 jest.mock("./FlashCard", (props) => {
   return (props) => <div>flash card {props.card.title}</div>;
@@ -32,4 +33,3 @@ describe("the FlashCardsSection component", () => {
 
   it.todo("a flashcard should stay flipped round if it has been selected");
 });
-
