@@ -1,18 +1,26 @@
 import { COS_URL } from "../statics";
-import { CosCredentials } from "../types/Cos";
+import { CosCredentials, RawCosCredentials } from "../types/Cos";
 
 export function getCosCredentials(): CosCredentials {
-  const COS_CREDS = JSON.parse(process.env.COS_CREDS);
+  let jsonCosCreds: RawCosCredentials;
 
-  if (!COS_CREDS) {
+  try {
+    // The COS_CREDS should be a stringified JSON object when running locally
+    jsonCosCreds = JSON.parse(process.env.COS_CREDS);
+  } catch (error) {
+    // If we get here then we are in the CF instance, the COS_CREDS should be a JSON object already
+    jsonCosCreds = process.env.COS_CREDS as unknown as RawCosCredentials;
+  }
+
+  if (!jsonCosCreds) {
     throw new Error("COS credentials missing");
   }
 
   const endpoint = COS_URL;
-  const apikey = COS_CREDS.apiKey;
-  const resourceInstanceId = COS_CREDS.resourceInstanceId;
-  const accessKeyId = COS_CREDS.accessKeyId;
-  const secretAccessKey = COS_CREDS.secretAccessKey;
+  const apikey = jsonCosCreds.apiKey;
+  const resourceInstanceId = jsonCosCreds.resourceInstanceId;
+  const accessKeyId = jsonCosCreds.accessKeyId;
+  const secretAccessKey = jsonCosCreds.secretAccessKey;
 
   return {
     endpoint: endpoint,
