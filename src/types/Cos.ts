@@ -11,3 +11,10 @@ export interface PreSignedUrlResponse {
   cosUri: string;
   preSignedUrl: string;
 }
+
+export interface RawCosCredentials {
+  apiKey: string;
+  resourceInstanceId: string;
+  accessKeyId: string;
+  secretAccessKey: string;
+}
