@@ -3,7 +3,7 @@ import axios from "axios";
 export async function getResults(selectedFlashCardIds) {
   try {
     const config = {
-      params: { selectedFlashCards: [selectedFlashCardIds] },
+      params: { selectedFlashCards: selectedFlashCardIds },
     };
 
     const response = await axios.get("/api/results", config);

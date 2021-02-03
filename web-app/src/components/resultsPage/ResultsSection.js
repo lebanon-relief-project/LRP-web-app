@@ -3,16 +3,19 @@ import styled from "styled-components";
 import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import { FlashCardResultContainer } from "./FlashCardResultContainer";
-import { sampleResultsResponse } from "../../sampleData";
 
-const ResultsSection = () => {
+const ResultsSection = (params) => {
   return (
     <StyledSection>
       <Wrapper id={"wrapper"}>
         <StyledHeader>Here’s some things that can help</StyledHeader>
 
         <ContentWrapper id={"content"}>
-          <FlashCardResultContainer results={sampleResultsResponse} />
+          {params.results ? (
+            <FlashCardResultContainer results={params.results} />
+          ) : (
+            <></>
+          )}
         </ContentWrapper>
       </Wrapper>
     </StyledSection>
