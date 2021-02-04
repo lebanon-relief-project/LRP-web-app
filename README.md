@@ -69,6 +69,7 @@ We are a group international volunteers, working in design and development.
 - [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
 - [Sanchit Sharma](https://puppykit.org.uk/)
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
+- [Zack Dove] (https://www.linkedin.com/in/zack-dove-533ab692/)
 
 ### Architects
 
