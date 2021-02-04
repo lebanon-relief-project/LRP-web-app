@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
 import { ResultCard } from "./ResultCard";
+import { getCardTitleFromSessionStorage } from "../../util/util";
 import Colours from "../../styles/Colours";
 
 // @param results: ResultsResponse
@@ -41,22 +43,6 @@ export const FlashCardResultContainer = ({ results }) => {
     setSelectedFlashCardState(updatedState);
   };
 
-  /*
-    TEMP FUNCTION!!!
-    This will be removed once we are pulling results from the Database
-  */
-  const getCardTitleFromResultsResponse = (cardId) => {
-    let response;
-
-    resultsResponseArray.forEach((result) => {
-      if (result._id === cardId) {
-        response = result.expl_title;
-      }
-    });
-
-    return response;
-  };
-
   // If card is selected make title bold
   const renderTitles = () => {
     return selectedFlashCardState.map((card, index) => {
@@ -67,10 +53,7 @@ export const FlashCardResultContainer = ({ results }) => {
             key={`flashcardTitleButton_${index}`}
             onClick={() => updateSelectedFlashCardState(card.id)}
           >
-            {/* {getCardTitleFromSessionStorage(card.id)} */}
-
-            {/* TEMP FUNCTION*/}
-            {getCardTitleFromResultsResponse(card.id)}
+            {getCardTitleFromSessionStorage(card.id)}
           </SelectedStyledFlashCardTitle>
         );
       } else {
@@ -80,10 +63,7 @@ export const FlashCardResultContainer = ({ results }) => {
             key={`flashcardTitleButton_${index}`}
             onClick={() => updateSelectedFlashCardState(card.id)}
           >
-            {/* {getCardTitleFromSessionStorage(card.id)} */}
-
-            {/* TEMP FUNCTION*/}
-            {getCardTitleFromResultsResponse(card.id)}
+            {getCardTitleFromSessionStorage(card.id)}
           </UnSelectedStyledFlashCardTitle>
         );
       }

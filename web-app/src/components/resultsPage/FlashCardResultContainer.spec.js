@@ -5,6 +5,10 @@ import FlashCardResultContainer from "./FlashCardResultContainer";
 import { sampleResultsResponse } from "../../sampleData";
 import "jest-styled-components";
 
+jest.mock("../../util/util", () => ({
+  getCardTitleFromSessionStorage: () => "test title"
+}));
+
 describe("the FlashCardResultContainer component", () => {
   let container;
   let getByTestId;

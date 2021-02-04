@@ -4,6 +4,10 @@ import ResultsSection from "./ResultsSection";
 import "jest-styled-components";
 import { sampleResultsResponse } from "../../sampleData";
 
+jest.mock("../../util/util", () => ({
+  getCardTitleFromSessionStorage: () => "test title"
+}));
+
 describe("the ResultsSection component", () => {
   let container;
 
