@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ActionsSection component should match the snapshot 1`] = `
+.c0 {
+  width: 60%;
+  min-width: 960px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c1 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (max-width:576px) {
+  .c0 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <h2
+      class="c1"
+    >
+      Some actions you can take
+    </h2>
+    <div
+      class="c2"
+    >
+      <div
+        data-testid="Support"
+      >
+        Support
+      </div>
+      <div
+        data-testid="Useful exercise"
+      >
+        Useful exercise
+      </div>
+      <div
+        data-testid="14 days of wellbeing"
+      >
+        14 days of wellbeing
+      </div>
+    </div>
+  </div>
+</div>
+`;

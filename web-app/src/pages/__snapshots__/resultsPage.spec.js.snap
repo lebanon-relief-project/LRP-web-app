@@ -29,6 +29,124 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
+.c11 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  background-color: #FFD666;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.c12 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  background-color: #f0f0f0;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 90%;
+  max-width: 90%;
+  margin-bottom: 5%;
+  height: 30rem;
+  padding: 0.5rem;
+}
+
+.c9 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 24px;
+  min-width: auto;
+  padding: 0 0.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.c7 {
+  position: relative;
+  border: 1px solid #003A8C;
+  width: 25%;
+  padding: 1rem 1.2rem;
+  margin: 3rem 1rem;
+  height: 20%;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: white;
+}
+
+.c10 {
+  min-height: 7rem;
+}
+
+.c4 {
+  width: 60%;
+  min-width: 960px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c5 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+.c8 {
+  height: auto;
+  width: 30%;
+  margin: 5% 0;
+}
+
+.c8 legend {
+  min-width: 100%;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,6 +172,47 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width:576px) {
+  .c11 {
+    width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c12 {
+    width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c9 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c7 {
+    width: 40%;
+  }
+}
+
+@media (max-width:576px) {
+  .c7 {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
   }
 }
 
@@ -100,6 +259,86 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               src="PersonTakingCare.svg"
             />
           </div>
+        </div>
+      </div>
+      <div
+        class="c4"
+      >
+        <h2
+          class="c5"
+        >
+          Some actions you can take
+        </h2>
+        <div
+          class="c6"
+        >
+          <fieldset
+            class="c7 c8"
+          >
+            <legend
+              class="c9 c8"
+            >
+              Support
+            </legend>
+            <p
+              class="c10"
+            >
+              Surround yourself with supportive individuals. You can always reach out ...
+            </p>
+            <a
+              class="c11"
+              href="https://embracelebanon.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Visit Embrace
+            </a>
+          </fieldset>
+          <fieldset
+            class="c7 c8"
+          >
+            <legend
+              class="c9 c8"
+            >
+              Useful exercise
+            </legend>
+            <p
+              class="c10"
+            >
+              Exercing helps...Here are some exercises that you can do on your own to help yourself manage.
+            </p>
+            <a
+              class="c11"
+              href="temp.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View exercises
+            </a>
+          </fieldset>
+          <fieldset
+            class="c7 c8"
+            disabled=""
+          >
+            <legend
+              class="c9 c8"
+              disabled=""
+            >
+              14 days of wellbeing
+            </legend>
+            <p
+              class="c10"
+            >
+              We put together a 14 day plan to ...
+            </p>
+            <a
+              class="c12 c8"
+              disabled=""
+              href="/help"
+            >
+              Coming Soon
+            </a>
+          </fieldset>
         </div>
       </div>
     </div>
