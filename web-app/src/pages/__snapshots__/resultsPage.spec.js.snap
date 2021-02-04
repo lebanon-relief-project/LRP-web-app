@@ -1,6 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ResultsPage component should match the snapshot 1`] = `
+.c1 {
+  width: 60%;
+  min-width: 960px;
+  min-height: 730px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 16.7%;
+  background: inherit;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 5%;
+}
+
+.c3 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -10,6 +38,23 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+@media (max-width:576px) {
+  .c1 {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
+  }
+}
+
+@media (max-widthL 576px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media (max-width:576px) {
@@ -35,6 +80,27 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         data-testid="results_section"
       >
         Results Section
+      </div>
+      <div
+        class="c1"
+      >
+        <div
+          class="c2"
+        >
+          <div>
+            <h2
+              class="c3"
+            >
+              A few more useful tips
+            </h2>
+          </div>
+          <div>
+            <img
+              alt="Person Taking Care"
+              src="PersonTakingCare.svg"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

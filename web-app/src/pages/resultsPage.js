@@ -3,8 +3,10 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
 import ResultsSection from "../components/resultsPage/ResultsSection";
+import UsefulTipsSection from "../components/resultsPage/UsefulTipsSection";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import { getResults } from "../services/results.service";
+
 
 const ResultsPage = () => {
   const [results, setResults] = useState(undefined);
@@ -28,6 +30,7 @@ const ResultsPage = () => {
       <div style={{ width: "100%" }}>
         <ExperiencesSection />
         {results ? <ResultsSection results={results} /> : <></>}
+        <UsefulTipsSection />
       </div>
     </StyledPage>
   );

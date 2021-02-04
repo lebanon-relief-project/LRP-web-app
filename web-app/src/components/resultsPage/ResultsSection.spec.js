@@ -4,7 +4,7 @@ import ResultsSection from "./ResultsSection";
 import "jest-styled-components";
 import { sampleResultsResponse } from "../../sampleData";
 
-describe("the TraumaticEvents component", () => {
+describe("the ResultsSection component", () => {
   let container;
 
   it("should match the snapshot", () => {
