@@ -1,24 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardsSection component should match the snapshot 1`] = `
-.c3 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c2 {
   color: inherit;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
+  padding: 0.5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFD666;
+  width: 13.875rem;
+  height: 2.625rem;
+  font-size: 1rem;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 3.375rem 16.7%;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.043);
+  border-radius: 2px;
+  outline: none;
+  border: none;
 }
 
-.c3:focus,
-.c3:hover,
-.c3:visited,
-.c3:link,
-.c3:active {
+.c2:focus,
+.c2:visited,
+.c2:link {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
+}
+
+.c2:hover {
+  opacity: 0.8;
+}
+
+.c2:active {
+  opacity: 1;
 }
 
 .c0 {
@@ -60,27 +83,13 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   justify-content: flex-start;
 }
 
-.c2 {
-  background-color: #FFD666;
-  width: 13.875rem;
-  height: 2.625rem;
-  font-size: 1rem;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin: 3.375rem 16.7%;
-  box-shadow: 0px 2px 0px rgba(0,0,0,0.043);
-  border-radius: 2px;
-  outline: none;
-  border: none;
-}
-
-.c2:hover {
-  opacity: 0.8;
-}
-
-.c2:active {
-  opacity: 1;
+@media (max-width:576px) {
+  .c2 {
+    margin: 3.375rem 0;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
 }
 
 @media (max-width:1025px) {
@@ -90,15 +99,6 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (max-width:576px) {
-  .c2 {
-    margin: 3.375rem 0;
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
   }
 }
 
@@ -114,16 +114,12 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
         random title
       </div>
     </div>
-    <button
+    <a
       class="c2"
+      href="/results"
     >
-      <a
-        class="c3"
-        href="/results"
-      >
-        Give me advice
-      </a>
-    </button>
+      Give me advice
+    </a>
   </section>
 </div>
 `;

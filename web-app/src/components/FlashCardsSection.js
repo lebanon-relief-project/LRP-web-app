@@ -32,26 +32,44 @@ const FlashCardsSection = (props) => {
         })}
       </Wrapper>
 
-      <NextButton>
+  
         <StyledLink to={"/results"}>Give me advice</StyledLink>
-      </NextButton>
+ 
     </StyledSection>
   );
 };
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
   color: inherit;
   text-decoration: inherit;
-
   &:focus,
-  &:hover,
   &:visited,
-  &:link,
-  &:active {
+  &:link {
     text-decoration: none;
     color: inherit;
-    text-decoration: inherit;
+  }
+  padding: 0.5rem;
+  justify-content: center;
+  display: flex;
+  background-color: ${colours.yellow};
+  width: 13.875rem;
+  height: 2.625rem;
+  font-size: 1rem;
+  align-self: flex-end;
+  margin: 3.375rem 16.7%;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+  }
+  @media (max-width: ${devices.mobile}) {
+    margin: 3.375rem 0;
+    align-self: center;
   }
 `;
 
@@ -79,28 +97,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const NextButton = styled.button`
-  background-color: ${colours.yellow};
-  width: 13.875rem;
-  height: 2.625rem;
-  font-size: 1rem;
-  align-self: flex-end;
-  margin: 3.375rem 16.7%;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
-  border-radius: 2px;
-  outline: none;
-  border: none;
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: 1;
-  }
 
-  @media (max-width: ${devices.mobile}) {
-    margin: 3.375rem 0;
-    align-self: center;
-  }
-`;
 
 export default FlashCardsSection;
