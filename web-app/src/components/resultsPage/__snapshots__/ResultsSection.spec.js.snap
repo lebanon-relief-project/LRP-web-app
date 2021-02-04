@@ -190,19 +190,19 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
                 class="c8"
                 data-testid="flashcardTitleButton_0"
               >
-                Feeling Guilty
+                test title
               </button>
               <button
                 class="c9"
                 data-testid="flashcardTitleButton_1"
               >
-                Unexplained aches and pains
+                test title
               </button>
               <button
                 class="c9"
                 data-testid="flashcardTitleButton_2"
               >
-                Sleep difficulties and nightmares
+                test title
               </button>
             </div>
           </div>
