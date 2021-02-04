@@ -4,6 +4,7 @@ import devices from "../styles/Devices";
 import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
 import ResultsSection from "../components/resultsPage/ResultsSection";
 import UsefulTipsSection from "../components/resultsPage/UsefulTipsSection";
+import ActionsSection from "../components/resultsPage/ActionsSection";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import { getResults } from "../services/results.service";
 
@@ -31,6 +32,7 @@ const ResultsPage = () => {
         <ExperiencesSection />
         {results ? <ResultsSection results={results} /> : <></>}
         <UsefulTipsSection />
+        <ActionsSection />
       </div>
     </StyledPage>
   );

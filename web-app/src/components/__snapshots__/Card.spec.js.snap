@@ -2,11 +2,14 @@
 
 exports[`the Card component should match the snapshot 1`] = `
 .c2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
   background-color: #FFD666;
   color: black;
   font-style: normal;
   font-weight: bold;
-  padding: 0.5rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -15,20 +18,25 @@ exports[`the Card component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  min-width: 90%;
+  max-width: 90%;
+  margin-bottom: 5%;
+  height: 30rem;
+  padding: 0.5rem;
 }
 
 .c1 {
   font-family: Playfair Display;
   font-weight: bold;
   font-size: 24px;
-  width: auto;
+  min-width: auto;
   padding: 0 0.5rem;
   text-align: center;
   margin-bottom: 0;
 }
 
 .c0 {
+  position: relative;
   border: 1px solid #003A8C;
   width: 25%;
   padding: 1rem 1.2rem;
@@ -49,7 +57,7 @@ exports[`the Card component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c2 {
-    width: 100%;
+    width: 90%;
   }
 }
 
