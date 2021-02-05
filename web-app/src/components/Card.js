@@ -67,7 +67,6 @@ const StyledLink = styled(Link)`
     width: ${(props) => (props.secondary ? "50%" : "90%")};
   }
   margin-bottom: 5%;
-  height: 30rem;
   padding: 0.5rem;
 `;
 

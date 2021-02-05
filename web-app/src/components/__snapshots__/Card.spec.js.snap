@@ -21,7 +21,6 @@ exports[`the Card component should match the snapshot 1`] = `
   min-width: 90%;
   max-width: 90%;
   margin-bottom: 5%;
-  height: 30rem;
   padding: 0.5rem;
 }
 
