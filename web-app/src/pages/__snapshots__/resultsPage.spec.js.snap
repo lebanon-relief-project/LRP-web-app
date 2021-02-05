@@ -3,12 +3,11 @@
 exports[`the ResultsPage component should match the snapshot 1`] = `
 .c1 {
   width: 60%;
-  min-width: 960px;
-  min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+  background: #fafafa;
 }
 
 .c2 {
@@ -16,7 +15,6 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #fafafa;
   border-radius: 8px;
   padding: 5%;
 }
@@ -148,6 +146,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 .c0 {
+  max-width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -158,20 +157,26 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   justify-content: center;
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c1 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
-@media (max-widthL 576px) {
+@media (max-width:1025px) {
   .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 16px;
   }
 }
 
@@ -207,12 +212,27 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c4 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    min-width: 0;
+  }
+}
+
+@media (max-width:576px) {
+  .c8 {
+    width: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -221,7 +241,6 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 5%;
   }
 }
 

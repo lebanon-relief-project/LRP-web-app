@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import devices from "../../styles/Devices";
 import { ResultCard } from "./ResultCard";
 import { getCardTitleFromSessionStorage } from "../../util/util";
 import Colours from "../../styles/Colours";
@@ -116,6 +116,10 @@ const TitlesForeground = styled.div`
   position: absolute;
   flex-direction: column;
   overflow: auto;
+  @media (max-width: ${devices.ipadpro}) {
+    flex-direction: row;
+    overflow: visible;
+  }
 `;
 
 const Background = styled.div`
@@ -125,6 +129,11 @@ const Background = styled.div`
   z-index: 0;
   border-left: 6px solid rgba(255, 197, 61, 0.2);
   position: absolute;
+
+  @media (max-width: ${devices.ipadpro}) {
+    border: none;
+    border-top: 4px solid rgba(255, 197, 61, 0.2);
+  }
 `;
 
 const TitlesContainer = styled.div`
@@ -133,19 +142,31 @@ const TitlesContainer = styled.div`
   height: 100%;
   position: relative;
   display: flex;
+
+  @media (max-width: ${devices.ipadpro}) {
+    max-width: 100%;
+    height: 78px;
+    overflow: auto;
+    white-space: nowrap;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
   flex: 1;
+  @media (max-width: ${devices.ipadpro}) {
+    flex-direction: column;
+  }
 `;
 
 const ResultCardsWrapper = styled.div`
-  max-width: 632;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  @media (max-width: ${devices.ipadpro}) {
+    max-width: 100%;
+  }
 `;
 
 const SelectedStyledFlashCardTitle = styled.button`
@@ -164,6 +185,13 @@ const SelectedStyledFlashCardTitle = styled.button`
   border-left-width: 6px;
   cursor: pointer;
   outline: inherit;
+  @media (max-width: ${devices.ipadpro}) {
+    border: none;
+    border-top: solid;
+    border-top-color: ${Colours.gold};
+    border-top-height: 4px;
+    max-width: 100%;
+  }
 `;
 const UnSelectedStyledFlashCardTitle = styled.button`
   color: ${Colours.darkBlue};
@@ -183,6 +211,13 @@ const UnSelectedStyledFlashCardTitle = styled.button`
   border-left: solid;
   border-left-color: transparent;
   border-left-width: 6px;
+  @media (max-width: ${devices.ipadpro}) {
+    border: none;
+    border-top: solid;
+    border-top-color: transparent;
+    border-top-height: 4px;
+    max-width: 100%;
+  }
 `;
 
 export default FlashCardResultContainer;

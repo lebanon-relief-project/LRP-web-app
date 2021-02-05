@@ -40,29 +40,34 @@ export const UsefulTipsSection = () => {
 
 const Wrapper = styled.div`
   width: 60%;
-  min-width: 960px;
-  min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+  background: ${colours.lightGrey};
 
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipadpro}) {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const StyledDiv = styled.div`
   display: flex;
-  @media (max-widthL ${devices.mobile}) {
-    flex-direction: column;
-  }
-  background: ${colours.lightGrey};
   border-radius: 8px;
   padding: 5%;
+
+  @media (max-width: ${devices.ipadpro}) {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 16px;
+  }
 `;
 
 const Title = styled.h2`

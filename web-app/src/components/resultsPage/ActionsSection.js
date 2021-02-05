@@ -58,11 +58,12 @@ const Wrapper = styled.div`
   margin: 0 16.7%;
   background: inherit;
 
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipadpro}) {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    min-width: 0;
   }
 `;
 
@@ -81,11 +82,17 @@ const StyledCard = styled(Card)`
   legend {
     min-width: 100%;
   }
+  @media (max-width: ${devices.mobile}) {
+    width: 100%;
+  }
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${devices.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export default ActionSection;

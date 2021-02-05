@@ -27,23 +27,30 @@ const ContentWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   min-height: 652px;
-  min-width: 960px;
+  width: 960px;
+  max-width: 100%;
 `;
 
 const Wrapper = styled.div`
   width: 60%;
-  min-width: 960px;
   min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
 
-  @media (max-width: ${devices.mobile}) {
-    margin: 25px 18px;
+  @media (max-width: ${devices.ipadpro}) {
     padding-top: 0px;
     padding-bottom: 0px;
-    width: auto;
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
   }
 `;
 
@@ -55,8 +62,12 @@ const StyledSection = styled.section`
 `;
 
 const StyledHeader = styled.h2`
+  font-family: Playfair Display;
+  font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 38px;
+  margin: 25px 18px;
 `;
 
 export default ResultsSection;
