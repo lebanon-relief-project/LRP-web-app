@@ -10,14 +10,29 @@ const Card = (props) => {
     <StyledCard {...rest}>
       <CardTitle {...rest}>{title}</CardTitle>
       {children}
-      <StyledLink {...rest} to={path}>
-        {buttonText}
-      </StyledLink>
+
+      {props.externalPath ? (
+        <StyledAnchor
+          href={props.externalPath}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {buttonText}
+        </StyledAnchor>
+      ) : (
+        <StyledLink {...rest} to={path}>
+          {buttonText}
+        </StyledLink>
+      )}
     </StyledCard>
   );
 };
 
-const StyledLink = styled(Link)`
+const StyledAnchor = styled.a`
+  position: ${(props) => (props.secondary ? "static" : "absolute")};
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -26,17 +41,40 @@ const StyledLink = styled(Link)`
   padding: 0.5rem;
   justify-content: center;
   display: flex;
-  width: ${(props) => (props.secondary ? "30%" : "100%")};
+  width: ${(props) => (props.secondary ? "30%" : "90%")};
   @media (max-width: ${devices.mobile}) {
-    width: ${(props) => (props.secondary ? "50%" : "100%")};
+    width: ${(props) => (props.secondary ? "50%" : "90%")};
   }
+  margin-bottom: 5%;
+`;
+
+const StyledLink = styled(Link)`
+  position: ${(props) => (props.secondary ? "static" : "absolute")};
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
+  background-color: ${(props) =>
+    props.disabled ? `${colours.grey}` : `${colours.yellow}`};
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+
+  min-width: ${(props) => (props.secondary ? "30%" : "90%")};
+  max-width: ${(props) => (props.secondary ? "30%" : "90%")};
+  @media (max-width: ${devices.mobile}) {
+    width: ${(props) => (props.secondary ? "50%" : "90%")};
+  }
+  margin-bottom: 5%;
+  padding: 0.5rem;
 `;
 
 const CardTitle = styled.legend`
   font-family: Playfair Display;
   font-weight: ${(props) => (props.secondary ? 900 : "bold")};
   font-size: ${(props) => (props.secondary ? "38px" : "24px")};
-  width: auto;
+  min-width: auto;
   padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
   text-align: ${(props) => (props.secondary ? "left" : "center")};
   margin-bottom: 0;
@@ -47,6 +85,8 @@ const CardTitle = styled.legend`
 `;
 
 const StyledCard = styled.fieldset`
+  position: relative;
+
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
   width: ${(props) => (props.secondary ? "100%" : "25%")};

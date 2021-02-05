@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Card from "./Card";
 import FooterImageLink from "./FooterImageLink";
+import "jest-styled-components";
 
 describe("the FooterImageLink component", () => {
   let container;

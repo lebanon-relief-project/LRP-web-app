@@ -9,9 +9,9 @@ import devices from "../styles/Devices";
 const Navbar = ({ open }) => {
   return (
     <StyledNav open={open}>
-      <StyledDiv>
+      <LogoLink exact to={Routes.HOME}>
         <LogoImage src={logo} alt="Logo" />
-      </StyledDiv>
+      </LogoLink>
 
       <StyledUl>
         <StyledLi>
@@ -84,7 +84,7 @@ const LogoImage = styled.img`
   }
 `;
 
-const StyledDiv = styled.div`
+const LogoLink = styled(NavLink)`
   min-width: 50%;
   display: flex;
   align-items: center;

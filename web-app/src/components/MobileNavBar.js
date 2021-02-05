@@ -3,14 +3,16 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.svg";
 import devices from "../styles/Devices";
 import Burger from "./Burger";
+import { Routes } from "../App.js";
+import { NavLink } from "react-router-dom";
 
 const MobileNavbar = ({ open, setOpen }) => {
   const node = useRef();
   return (
     <StyledNav open={open}>
-      <StyledDiv>
+      <LogoLink exact to={Routes.HOME}>
         <LogoImage src={logo} alt="Logo" />
-      </StyledDiv>
+      </LogoLink>
       <BurgerWrapper ref={node}>
         <Burger open={open} setOpen={setOpen} />
       </BurgerWrapper>
@@ -43,7 +45,7 @@ const LogoImage = styled.img`
   max-height: 80%;
 `;
 
-const StyledDiv = styled.div`
+const LogoLink = styled(NavLink)`
   min-width: 50%;
   display: flex;
   align-items: center;

@@ -121,7 +121,7 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
         <span
           class="c5"
         >
-          support@lebanonreliefnetwork.org
+          contact@lebanonreliefnetwork.org
         </span>
          with details about who you are and we will get back to you shortly.
       </p>

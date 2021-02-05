@@ -174,6 +174,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
         class="c2"
       >
         <img
+          alt="background"
           src="HelpPageLeftBackground.svg"
         />
       </div>
@@ -181,6 +182,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
         class="c3"
       >
         <img
+          alt="background"
           src="HelpPageRightBackground.svg"
         />
       </div>

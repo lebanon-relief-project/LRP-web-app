@@ -15,7 +15,6 @@ Welcome to Lebanon Relief Network. This README will serve as a high level guide 
 1. [Cloud Architecture](#cloud-architecture)
 1. [Directory Structure](#directory-structure)
 1. [Available Scripts](#available-scripts)
-1. [Git Commit Convention](#git-commit-convention)
 1. [Key Links](#key-links)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,6 +69,7 @@ We are a group international volunteers, working in design and development.
 - [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
 - [Sanchit Sharma](https://puppykit.org.uk/)
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
+- [Zack Dove](https://www.linkedin.com/in/zack-dove-533ab692/)
 
 ### Architects
 
@@ -109,6 +109,10 @@ The solution is a web-based platform.
 In order to run the backend locally you need to export the VCAP_SERVICES environment variable which can be found in the team slack channel.
 
 After you have done this in the project directory, you can run:
+
+### `npm run install_all`
+
+Installs packages in both server and web-app
 
 ### `npm run build && npm start`
 

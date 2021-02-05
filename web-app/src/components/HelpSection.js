@@ -18,15 +18,17 @@ const HelpSection = () => {
             path={Routes.HELP}
             buttonText="Give me advice"
           >
-            <Paragraph>
-              Everyone deals with trauma differently. Every experience is
-              different, and everyone copes differently. There isn’t a “one fits
-              all solution” when it comes to healing.
-            </Paragraph>
-            <Paragraph>
-              Our ambition is to help deal with trauma through surfacing the
-              right tools based on each person’s needs.
-            </Paragraph>
+            <StyledBody>
+              <Paragraph>
+                Everyone deals with trauma differently. Every experience is
+                different, and everyone copes differently. There isn’t a “one
+                fits all solution” when it comes to healing.
+              </Paragraph>
+              <Paragraph>
+                Our ambition is to help deal with trauma through surfacing the
+                right tools based on each person’s needs.
+              </Paragraph>
+            </StyledBody>
           </Card>
           <Card
             title="I’d like to help"
@@ -36,15 +38,17 @@ const HelpSection = () => {
               setLikeToHelpModalVisible(true);
             }}
           >
-            <Paragraph>
-              Do you have a close one who underwent trauma, but you need
-              direction on how to help, what to say, what to do and how to
-              protect yourself?
-            </Paragraph>
-            <Paragraph>
-              Or do you want to help those who are undergoing trauma and looking
-              for opportunities to do so?
-            </Paragraph>
+            <StyledBody>
+              <Paragraph>
+                Do you have a close one who underwent trauma, but you need
+                direction on how to help, what to say, what to do and how to
+                protect yourself?
+              </Paragraph>
+              <Paragraph>
+                Or do you want to help those who are undergoing trauma and
+                looking for opportunities to do so?
+              </Paragraph>
+            </StyledBody>
           </Card>
         </CardWrapper>
         <IllustrationAndCard>
@@ -81,6 +85,10 @@ const HelpSection = () => {
     </>
   );
 };
+
+const StyledBody = styled.div`
+  min-height: 17rem;
+`;
 
 const Paragraph = styled.p`
   font-family: Raleway;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ResultCard component should match the snapshot 1`] = `
+.c0 {
+  box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  Offset: 0px,1px rgba(0,0,0,0.25) border-radius:10px;
+  padding: 6px;
+  margin: 10px;
+  min-height: 174px;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      id="result card"
+    >
+      <h4>
+        <b>
+          Test title
+        </b>
+      </h4>
+      <p>
+        test body
+      </p>
+    </div>
+  </div>
+</div>
+`;

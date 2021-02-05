@@ -19,7 +19,8 @@
     "serve": "node dist/src",
     "upgrade-interactive": "npm-check --update",
     "clear_jest": "jest --clearCache",
-    "dev": "concurrently --kill-others \"nodemon\" \"cd web-app && npm start\""
+    "dev": "concurrently --kill-others \"nodemon\" \"cd web-app && npm start\"",
+    "install_all": "npm i && cd web-app && npm i"
   },
   "dependencies": {
     "@cloudant/cloudant": "^4.3.0",
@@ -63,6 +64,7 @@
     "babel-jest": "^25.2.4",
     "husky": "^4.3.0",
     "jest": "^25.2.4",
+    "jest-localstorage-mock": "^2.4.6",
     "jest-plugin-context": "^2.9.0",
     "jest-sonar-reporter": "^2.0.0",
     "nodemon": "^2.0.7",
