@@ -163,7 +163,8 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c6 {
     border: none;
-    border-top: 4px solid rgba(255,197,61,0.2);
+    opacity: 0.3;
+    border-top: 4px solid #FFC53D;
   }
 }
 
@@ -206,6 +207,8 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
     border-top: solid;
     border-top-color: transparent;
     border-top-height: 4px;
+    opacity: 0.3;
+    border-top: 4px solid #FFC53D;
     max-width: 100%;
   }
 }

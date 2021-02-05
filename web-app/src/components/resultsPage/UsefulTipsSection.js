@@ -67,6 +67,12 @@ const StyledDiv = styled.div`
     padding: 0;
     border-radius: 0;
     margin: 0 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    width: 90%;
   }
 `;
 

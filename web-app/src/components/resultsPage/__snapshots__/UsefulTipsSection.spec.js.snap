@@ -47,6 +47,14 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
     padding: 0;
     border-radius: 0;
     margin: 0 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    width: 90%;
   }
 }
 

@@ -132,7 +132,8 @@ const Background = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     border: none;
-    border-top: 4px solid rgba(255, 197, 61, 0.2);
+    opacity: 0.3;
+    border-top: 4px solid ${Colours.gold};
   }
 `;
 
@@ -216,6 +217,8 @@ const UnSelectedStyledFlashCardTitle = styled.button`
     border-top: solid;
     border-top-color: transparent;
     border-top-height: 4px;
+    opacity: 0.3;
+    border-top: 4px solid ${Colours.gold};
     max-width: 100%;
   }
 `;
