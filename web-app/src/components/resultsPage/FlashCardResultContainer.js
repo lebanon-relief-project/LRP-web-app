@@ -110,15 +110,17 @@ export const FlashCardResultContainer = ({ results }) => {
 
 const TitlesForeground = styled.div`
   display: flex;
-  width: 100%;
+  width: auto;
   height: 100%;
   z-index: 1;
   position: absolute;
   flex-direction: column;
   overflow: auto;
+
   @media (max-width: ${devices.ipadpro}) {
     flex-direction: row;
-    overflow: visible;
+    padding: 0 16px;
+    white-space: nowrap;
   }
 `;
 
@@ -132,8 +134,8 @@ const Background = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     border: none;
-    opacity: 0.3;
-    border-top: 4px solid ${Colours.gold};
+    width: 1000px;
+    border-top: 4px solid rgba(255, 197, 61, 0.2);
   }
 `;
 
@@ -146,9 +148,9 @@ const TitlesContainer = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     max-width: 100%;
+    width: auto;
     height: 78px;
     overflow: auto;
-    white-space: nowrap;
   }
 `;
 
@@ -188,38 +190,21 @@ const SelectedStyledFlashCardTitle = styled.button`
   outline: inherit;
   @media (max-width: ${devices.ipadpro}) {
     border: none;
-    border-top: solid;
-    border-top-color: ${Colours.gold};
-    border-top-height: 4px;
-    max-width: 100%;
-  }
-`;
-const UnSelectedStyledFlashCardTitle = styled.button`
-  color: ${Colours.darkBlue};
-  font-weight: bold;
-  font-size: 24px;
-  min-width: 270px;
-  text-align: left;
-  padding-left: 24px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  opacity: 0.3;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
-  border: none;
-  border-left: solid;
-  border-left-color: transparent;
-  border-left-width: 6px;
-  @media (max-width: ${devices.ipadpro}) {
-    border: none;
-    border-top: solid;
-    border-top-color: transparent;
-    border-top-height: 4px;
-    opacity: 0.3;
     border-top: 4px solid ${Colours.gold};
     max-width: 100%;
+    padding: 0;
+    min-width: auto;
+    margin-right: 30px;
+  }
+`;
+const UnSelectedStyledFlashCardTitle = styled(SelectedStyledFlashCardTitle)`
+  opacity: 0.3;
+  border-left-color: transparent;
+  @media (max-width: ${devices.ipadpro}) {
+    opacity: 0.3;
+    border-top: 4px solid transparent;
+    max-width: 100%;
+    padding: 0;
   }
 `;
 

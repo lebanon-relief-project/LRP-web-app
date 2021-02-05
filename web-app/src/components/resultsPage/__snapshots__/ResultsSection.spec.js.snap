@@ -16,7 +16,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: auto;
   height: 100%;
   z-index: 1;
   position: absolute;
@@ -90,23 +90,8 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 }
 
 .c9 {
-  color: #002766;
-  font-weight: bold;
-  font-size: 24px;
-  min-width: 270px;
-  text-align: left;
-  padding-left: 24px;
-  padding-top: 30px;
-  padding-bottom: 30px;
   opacity: 0.3;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
-  border: none;
-  border-left: solid;
   border-left-color: transparent;
-  border-left-width: 6px;
 }
 
 .c3 {
@@ -156,24 +141,25 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    overflow: visible;
+    padding: 0 16px;
+    white-space: nowrap;
   }
 }
 
 @media (max-width:1025px) {
   .c6 {
     border: none;
-    opacity: 0.3;
-    border-top: 4px solid #FFC53D;
+    width: 1000px;
+    border-top: 4px solid rgba(255,197,61,0.2);
   }
 }
 
 @media (max-width:1025px) {
   .c5 {
     max-width: 100%;
+    width: auto;
     height: 78px;
     overflow: auto;
-    white-space: nowrap;
   }
 }
 
@@ -194,22 +180,20 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c8 {
     border: none;
-    border-top: solid;
-    border-top-color: #FFC53D;
-    border-top-height: 4px;
+    border-top: 4px solid #FFC53D;
     max-width: 100%;
+    padding: 0;
+    min-width: auto;
+    margin-right: 30px;
   }
 }
 
 @media (max-width:1025px) {
   .c9 {
-    border: none;
-    border-top: solid;
-    border-top-color: transparent;
-    border-top-height: 4px;
     opacity: 0.3;
-    border-top: 4px solid #FFC53D;
+    border-top: 4px solid transparent;
     max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -267,13 +251,13 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
                 test title
               </button>
               <button
-                class="c9"
+                class="c8 c9"
                 data-testid="flashcardTitleButton_1"
               >
                 test title
               </button>
               <button
-                class="c9"
+                class="c8 c9"
                 data-testid="flashcardTitleButton_2"
               >
                 test title
