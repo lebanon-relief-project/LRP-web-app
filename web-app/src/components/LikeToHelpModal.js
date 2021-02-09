@@ -16,8 +16,10 @@ const LikeToHelpModal = (props) => {
         <Title>I’d like to help</Title>
         <Text>
           Great news! Please drop us an email at{" "}
-          <Email>contact@lebanonreliefnetwork.org</Email> with details about who
-          you are and we will get back to you shortly.
+          <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
+            contact@lebanonreliefnetwork.org
+          </Email>{" "}
+          with details about who you are and we will get back to you shortly.
         </Text>
         <StyledButton onClick={props.closeModal}>Ok, thanks</StyledButton>
       </Card>
@@ -41,9 +43,10 @@ const Text = styled.p`
   line-height: 24px;
 `;
 
-const Email = styled.span`
+const Email = styled.a`
   font-weight: 700;
   text-decoration: underline;
+  color: ${colours.black};
 `;
 
 const StyledButton = styled.button`

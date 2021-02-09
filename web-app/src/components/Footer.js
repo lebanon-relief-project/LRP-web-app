@@ -33,7 +33,9 @@ const Footer = () => {
           >
             <StyledImage src={Twitter} alt="Twitter" />
           </StyledAnchor>
-          <p>contact@lebanonreliefnetwork.org</p>
+          <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
+            contact@lebanonreliefnetwork.org
+          </Email>
         </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
@@ -77,6 +79,9 @@ const FBAnchor = () => {
   }
 }
 
+const Email = styled.a`
+  color: ${colours.black};
+`;
 
 const StyledAnchor = styled.a`
   margin: 5%;
