@@ -20,6 +20,10 @@ exports[`the Footer component should match the snapshot 1`] = `
   text-decoration-line: underline;
 }
 
+.c9 {
+  color: #000000;
+}
+
 .c7 {
   margin: 5%;
 }
@@ -167,9 +171,13 @@ exports[`the Footer component should match the snapshot 1`] = `
             src="Twitter.svg"
           />
         </a>
-        <p>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
           contact@lebanonreliefnetwork.org
-        </p>
+        </a>
       </div>
     </div>
   </section>

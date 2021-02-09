@@ -21,6 +21,7 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
   font-weight: 700;
   -webkit-text-decoration: underline;
   text-decoration: underline;
+  color: #000000;
 }
 
 .c6 {
@@ -118,12 +119,15 @@ exports[`the LikeToHelpModal component should match the snapshot 1`] = `
       >
         Great news! Please drop us an email at
          
-        <span
+        <a
           class="c5"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
         >
           contact@lebanonreliefnetwork.org
-        </span>
-         with details about who you are and we will get back to you shortly.
+        </a>
+         
+        with details about who you are and we will get back to you shortly.
       </p>
       <button
         class="c6"
