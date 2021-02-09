@@ -16,7 +16,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: auto;
   height: 100%;
   z-index: 1;
   position: absolute;
@@ -60,7 +60,6 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 }
 
 .c10 {
-  max-width: 632;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,23 +90,8 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 }
 
 .c9 {
-  color: #002766;
-  font-weight: bold;
-  font-size: 24px;
-  min-width: 270px;
-  text-align: left;
-  padding-left: 24px;
-  padding-top: 30px;
-  padding-bottom: 30px;
   opacity: 0.3;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
-  border: none;
-  border-left: solid;
   border-left-color: transparent;
-  border-left-width: 6px;
 }
 
 .c3 {
@@ -123,12 +107,12 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 652px;
-  min-width: 960px;
+  width: 960px;
+  max-width: 100%;
 }
 
 .c1 {
   width: 60%;
-  min-width: 960px;
   min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -144,16 +128,90 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 }
 
 .c2 {
+  font-family: Playfair Display;
+  font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 38px;
+  margin: 25px 18px;
+}
+
+@media (max-width:1025px) {
+  .c7 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:1025px) {
+  .c6 {
+    border: none;
+    width: 1000px;
+    border-top: 4px solid rgba(255,197,61,0.2);
+  }
+}
+
+@media (max-width:1025px) {
+  .c5 {
+    max-width: 100%;
+    width: auto;
+    height: 78px;
+    overflow: auto;
+  }
+}
+
+@media (max-width:1025px) {
+  .c4 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1025px) {
+  .c10 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:1025px) {
+  .c8 {
+    border: none;
+    border-top: 4px solid #FFC53D;
+    max-width: 100%;
+    padding: 0;
+    min-width: auto;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c9 {
+    opacity: 0.3;
+    border-top: 4px solid transparent;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 80%;
+    margin: 0 10%;
+  }
 }
 
 @media (max-width:576px) {
   .c1 {
-    margin: 25px 18px;
+    margin: 0;
     padding-top: 0px;
     padding-bottom: 0px;
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -193,13 +251,13 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
                 test title
               </button>
               <button
-                class="c9"
+                class="c8 c9"
                 data-testid="flashcardTitleButton_1"
               >
                 test title
               </button>
               <button
-                class="c9"
+                class="c8 c9"
                 data-testid="flashcardTitleButton_2"
               >
                 test title

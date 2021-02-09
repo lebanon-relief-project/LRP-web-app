@@ -173,9 +173,32 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
+  .c9 {
+    margin-right: 10px;
+    width: 25px;
+  }
+}
+
+@media (max-width:576px) {
+  .c11 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 40px;
+  }
+}
+
+@media (max-width:576px) {
+  .c12 {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+@media (max-width:576px) {
   .c4 {
-    margin-top: 20px;
-    height: 371px;
+    height: 366px;
   }
 }
 
@@ -199,7 +222,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c0 {
-    height: 416px;
+    height: 366px;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    font-size: 30px;
   }
 }
 
@@ -325,7 +354,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
               <div
                 class="c12"
               >
-                of people affected by this experience feel like ictum nullam ligula lorem ut vitae. Purus blandit imperdiet nibh amet.
+                of people affected by this experience feel like ictum nullam ligula lorem ut vitae.
               </div>
             </div>
           </div>

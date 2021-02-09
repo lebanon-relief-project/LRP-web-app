@@ -73,7 +73,7 @@ const ExperiencesSection = () => {
                 <PercentageNumber>{percentage}%</PercentageNumber>
                 <PercentageText>
                   of people affected by this experience feel like ictum nullam
-                  ligula lorem ut vitae. Purus blandit imperdiet nibh amet.
+                  ligula lorem ut vitae.
                 </PercentageText>
               </FlexBox>
             </StyledDiv>
@@ -86,6 +86,10 @@ const ExperiencesSection = () => {
 
 const Person = styled.img`
   margin-right: 20px;
+  @media (max-width: ${devices.mobile}) {
+    margin-right: 10px;
+    width: 25px;
+  }
 `;
 
 const PercentageNumber = styled.div`
@@ -97,6 +101,10 @@ const PercentageNumber = styled.div`
   letter-spacing: 0em;
   text-align: left;
   margin-right: 2%;
+  @media (max-width: ${devices.mobile}) {
+    align-self: center;
+    font-size: 40px;
+  }
 `;
 
 const PercentageText = styled.div`
@@ -108,6 +116,9 @@ const PercentageText = styled.div`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  @media (max-width: ${devices.mobile}) {
+    flex: 1;
+  }
 `;
 
 const FlexBox = styled.div`
@@ -133,8 +144,7 @@ const CentralWrapper = styled.div`
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    margin-top: 20px;
-    height: 371px;
+    height: 366px;
   }
 `;
 
@@ -190,7 +200,7 @@ const StyledSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 416px;
+    height: 366px;
   }
 `;
 
@@ -200,6 +210,10 @@ const StyledHeader = styled.h2`
   margin: 0;
   width: inherit;
   color: ${colours.white};
+
+  @media (max-width: ${devices.mobile}) {
+    font-size: 30px;
+  }
 `;
 
 const StyledDiv = styled.div`

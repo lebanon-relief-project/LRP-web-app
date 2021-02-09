@@ -8,7 +8,6 @@ import ActionsSection from "../components/resultsPage/ActionsSection";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import { getResults } from "../services/results.service";
 
-
 const ResultsPage = () => {
   const [results, setResults] = useState(undefined);
   const fetchResults = async () => {
@@ -39,11 +38,11 @@ const ResultsPage = () => {
 };
 
 const StyledPage = styled.div`
+  max-width: 100%;
   display: flex;
   justify-content: center;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
-    padding: 5%;
   }
 `;
 
