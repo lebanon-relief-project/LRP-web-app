@@ -18,12 +18,16 @@ exports[`the ResultCard component should match the snapshot 1`] = `
     <div
       id="result card"
     >
-      <h4>
+      <h4
+        style="margin: 10px;"
+      >
         <b>
           Test title
         </b>
       </h4>
-      <p>
+      <p
+        style="margin: 10px;"
+      >
         test body
       </p>
     </div>
