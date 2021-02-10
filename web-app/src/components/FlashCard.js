@@ -30,7 +30,7 @@ const FlashCard = ({ card, id }) => {
   const cardSelectHandler = () => {
     if (!selected) {
       sessionStorage.setItem(id, card.title);
-      if (window.screen.width <= deviceSize.ipadpro){
+      if (window.screen.width <= deviceSize.ipadpro) {
         setFlipped(true);
       }
     } else {
@@ -67,7 +67,13 @@ const FlashCard = ({ card, id }) => {
           </FlashCardButton>
         </StyledHeader>
 
-        <ImageWrapper onClick={ window.screen.width <= deviceSize.ipadpro ? cardFlipHandler : () => {}}>
+        <ImageWrapper
+          onClick={
+            window.screen.width <= deviceSize.ipadpro
+              ? cardFlipHandler
+              : () => {}
+          }
+        >
           {/* Picture side of card */}
           <a.div
             style={{
@@ -95,6 +101,7 @@ const FlashCard = ({ card, id }) => {
               position: "absolute",
               paddingLeft: "8px",
               paddingRight: "8px",
+              fontSize: 18,
             }}
           >
             {card.body}
@@ -107,7 +114,7 @@ const FlashCard = ({ card, id }) => {
   return (
     <>
       {window.screen.width <= deviceSize.ipadpro ? (
-        <Wrapper >{renderCard()}</Wrapper>
+        <Wrapper>{renderCard()}</Wrapper>
       ) : (
         <Wrapper onMouseEnter={cardFlipHandler} onMouseLeave={cardFlipHandler}>
           {renderCard()}
@@ -125,7 +132,7 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   @media (max-width: ${devices.mobile}) {
     height: 58px;
-    font-size: 14px;
+    font-size: 18px;
   }
 `;
 
