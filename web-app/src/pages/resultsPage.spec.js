@@ -24,8 +24,18 @@ const getCardIdsFromSessionStorageSpy = jest.spyOn(
   "getCardIdsFromSessionStorage"
 );
 
+const mockHistoryPush = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useHistory: () => ({
+    push: mockHistoryPush,
+  }),
+}));
+
 describe("the ResultsPage component", () => {
   beforeEach(() => {
+    jest.clearAllMocks();
     sessionStorage.clear();
     sessionStorage.setItem("key1", "value1");
     sessionStorage.setItem("key2", "value2");
@@ -57,7 +67,7 @@ describe("the ResultsPage component", () => {
   });
 
   it("should call the results service with card id's that are in session storage", async () => {
-    const { container } = renderWithRouter(<ResultsPage />);
+    renderWithRouter(<ResultsPage />);
 
     await wait();
 
@@ -70,10 +80,20 @@ describe("the ResultsPage component", () => {
       throw new Error("some ugly error");
     });
 
-    const { container, queryByTestId } = renderWithRouter(<ResultsPage />);
+    const { queryByTestId } = renderWithRouter(<ResultsPage />);
 
     await wait();
 
     expect(queryByTestId("results_section")).toBeFalsy();
+  });
+
+  it("should redirect to help page if session storage empty", async () => {
+    getCardIdsFromSessionStorageSpy.mockReturnValue([]);
+    renderWithRouter(<ResultsPage />);
+
+    await wait();
+
+    expect(mockHistoryPush).toHaveBeenCalledWith("/help");
+    expect(getResultsSpy).not.toHaveBeenCalled();
   });
 });
