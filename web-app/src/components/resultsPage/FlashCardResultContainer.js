@@ -70,28 +70,35 @@ export const FlashCardResultContainer = ({ results }) => {
     });
   };
 
-  // Only render the selected cards recommendations
+  // Only render the selected cards recommendations and image
   const renderRecommendations = () => {
     return selectedFlashCardState
       .filter((card) => card.selected)
       .map((card) => {
+        const selectedFlashcardResult = resultsResponseArray.filter(
+          (result) => result._id === card.id
+        );
         return (
-          // RENDER IMAGE HERE
           <ResultCardsWrapper key={`resultCards_wrapper`}>
-            {resultsResponseArray
-              .filter((result) => result._id === card.id)
-              .map((result) => {
-                return result.recommendations.map((recommendation, index) => {
-                  return (
-                    <ResultCard
-                      title={recommendation.title}
-                      body={recommendation.body}
-                      key={`flashcard_result_${index}`}
-                      data-testid={`${recommendation.title}_flashcard_result_${index}`}
-                    />
-                  );
-                });
-              })}
+            <ResultCardImage src={selectedFlashcardResult[0].image} />
+            <h1 style={{ marginLeft: "10px" }}>
+              {selectedFlashcardResult[0].expl_title}
+            </h1>
+            <p style={{ margin: "10px" }}>
+              {selectedFlashcardResult[0].expl_body}
+            </p>
+            {selectedFlashcardResult[0].recommendations.map(
+              (recommendation, index) => {
+                return (
+                  <ResultCard
+                    title={recommendation.title}
+                    body={recommendation.body}
+                    key={`flashcard_result_${index}`}
+                    data-testid={`${recommendation.title}_flashcard_result_${index}`}
+                  />
+                );
+              }
+            )}
           </ResultCardsWrapper>
         );
       });
@@ -170,6 +177,12 @@ const ResultCardsWrapper = styled.div`
   @media (max-width: ${devices.ipadpro}) {
     max-width: 100%;
   }
+`;
+
+const ResultCardImage = styled.img`
+  height: 100px;
+  width: 244px;
+  margin: 10px;
 `;
 
 const SelectedStyledFlashCardTitle = styled.button`

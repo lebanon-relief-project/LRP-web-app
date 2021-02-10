@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
-.c7 {
+.c8 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -69,6 +69,12 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.c7 {
+  height: 100px;
+  width: 244px;
+  margin: 10px;
 }
 
 .c4 {
@@ -191,50 +197,74 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
     <div
       class="c6"
     >
-      <div
+      <img
         class="c7"
+        src="feeling-guilty.svg"
+      />
+      <h1
+        style="margin-left: 10px;"
+      >
+        Feeling Guilty
+      </h1>
+      <p
+        style="margin: 10px;"
+      />
+      <div
+        class="c8"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px;"
+          >
             <b>
               Allow yourself to feel
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px;"
+          >
             It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
           </p>
         </div>
       </div>
       <div
-        class="c7"
+        class="c8"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px;"
+          >
             <b>
               Talk about it
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px;"
+          >
             Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
           </p>
         </div>
       </div>
       <div
-        class="c7"
+        class="c8"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px;"
+          >
             <b>
               Try these excercises
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px;"
+          >
             Lorem ipsum...
           </p>
         </div>
