@@ -11,12 +11,12 @@ Please note we have a code of conduct, please follow it in all your interactions
 1. Create a new branch (from dev) for your change.
 2. Make your changes, and add any unit tests you deem useful.
 3. Ensure that your changes work locally, and all tests pass.
-4. Open a pull request to the `dev` branch of this repo. [^1]
-5. Request reviews from the community. [^2]
+4. Open a pull request to the `dev` branch of this repo. [1]
+5. Request reviews from the community. [2]
 6. When the PR is accepted, merge the request. It will go through CI and you will be able to view the new build online at: http://lrn-dev.eu-de.mybluemix.net
 
-[^1] If you need to make changes to the CI/CD process, you can contact Steve Arnold (@Steve Arnold or arnoldst) or Sanchit Sharma (@Sanchit or Sandvich).  
-[^2] Note that at this stage, this process will be faster if you ask an IBMer to review the code for you. We are working on removing this dependency.
+[1] If you need to make changes to the CI/CD process, you can contact Steve Arnold (@Steve Arnold or arnoldst) or Sanchit Sharma (@Sanchit or Sandvich).  
+[2] Note that at this stage, this process will be faster if you ask an IBMer to review the code for you. We are working on removing this dependency.
 
 ## Code of Conduct
 
