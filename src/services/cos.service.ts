@@ -23,7 +23,6 @@ export class CosService {
     this.logger = logger.child("CosService");
     try {
       this.config = getCosCredentials();
-      this.logger.info(`CONFIG: ${this.config}`)
       this.cos = new S3(this.config);
     } catch (err) {
       this.logger.error(`COS FAILED: ${err}`);
