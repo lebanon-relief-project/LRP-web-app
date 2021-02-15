@@ -50,14 +50,15 @@ const StyledTextArea = styled.div`
 
 const StyledHands = styled.img`
   object-fit: contain;
-
+  position: relative;
+  width: auto;
+  max-wodth: 100%;
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;
   }
 
   @media (max-width: ${devices.ipad}) {
-    width: 80%;
-    right: 0;
+    width: 60%;
   }
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;

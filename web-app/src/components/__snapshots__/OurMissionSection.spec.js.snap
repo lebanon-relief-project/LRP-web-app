@@ -50,6 +50,9 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 .c5 {
   object-fit: contain;
+  position: relative;
+  width: auto;
+  max-wodth: 100%;
 }
 
 .c6 {
@@ -91,8 +94,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c5 {
-    width: 80%;
-    right: 0;
+    width: 60%;
   }
 }
 
