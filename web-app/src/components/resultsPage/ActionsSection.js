@@ -3,7 +3,7 @@ import styled from "styled-components";
 import devices from "../../styles/Devices";
 import { Routes } from "../../App.js";
 import Card from "../Card";
-import PDF from "../../assets/downloads/temp.pdf";
+import PDF from "../../assets/downloads/Self-Help_Exercises.pdf";
 
 export const ActionSection = () => {
   return (
@@ -12,12 +12,12 @@ export const ActionSection = () => {
       <CardWrapper>
         <StyledCard
           title="Support"
-          buttonText="Visit Embrace"
+          buttonText="Reach Out"
           externalPath="https://embracelebanon.org/"
         >
           <StyledParagraph>
-            Surround yourself with supportive individuals. You can always reach
-            out ...
+            Surround yourself with friends and family. And remember, you can
+            always reach out…
           </StyledParagraph>
         </StyledCard>
         <StyledCard
@@ -26,8 +26,8 @@ export const ActionSection = () => {
           externalPath={PDF}
         >
           <StyledParagraph>
-            Exercing helps...Here are some exercises that you can do on your own
-            to help yourself manage.
+            Here are some exercises to reduce stress and regain control over
+            your actions and thoughts.
           </StyledParagraph>
         </StyledCard>
         <StyledCard

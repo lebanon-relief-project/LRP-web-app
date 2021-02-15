@@ -6,7 +6,7 @@ import devices from "../styles/Devices";
 import Instagram from "../assets/images/Instagram.svg";
 import Facebook from "../assets/images/Facebook.svg";
 import Twitter from "../assets/images/Twitter.svg";
-var platform = require('platform');
+var platform = require("platform");
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
       <CardWrapper>
         <FooterLink
           title="Lebanon Relief Network"
-          links={["Terms & Conditions", "Privacy policy"]}
+          links={["Terms of Use", "Privacy policy"]}
         />
 
         <CircularLinkWrapper>
@@ -46,8 +46,8 @@ const FBAnchor = () => {
   const os = platform.os.toString();
   const isAndroid = os.match(/android/i);
   const isIOS = os.match(/iOS/i);
-  if (isIOS){
-    return(
+  if (isIOS) {
+    return (
       <StyledAnchor
         href="fb://page/?id=100368885336321"
         target="_blank"
@@ -56,28 +56,28 @@ const FBAnchor = () => {
         <StyledImage src={Facebook} alt="Facebook" />
       </StyledAnchor>
     );
-  } else if (isAndroid){
-      return(
-        <StyledAnchor
-          href="intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <StyledImage src={Facebook} alt="Facebook" />
-        </StyledAnchor>
-      );
+  } else if (isAndroid) {
+    return (
+      <StyledAnchor
+        href="intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StyledImage src={Facebook} alt="Facebook" />
+      </StyledAnchor>
+    );
   } else {
-      return(
-        <StyledAnchor
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <StyledImage src={Facebook} alt="Facebook" />
-        </StyledAnchor>
-      );
+    return (
+      <StyledAnchor
+        href="https://www.facebook.com/Lebanonreliefnetwork"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StyledImage src={Facebook} alt="Facebook" />
+      </StyledAnchor>
+    );
   }
-}
+};
 
 const Email = styled.a`
   color: ${colours.black};
