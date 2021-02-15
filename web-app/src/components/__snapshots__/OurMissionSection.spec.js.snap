@@ -45,11 +45,11 @@ exports[`the OurMission component should match the snapshot 1`] = `
   margin-top: 2%;
   left: 12%;
   width: 50%;
+  min-width: 50%;
 }
 
 .c5 {
   object-fit: contain;
-  position: relative;
 }
 
 .c6 {

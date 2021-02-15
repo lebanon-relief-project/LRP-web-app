@@ -15,7 +15,7 @@ const OurMission = () => {
   return (
     <StyledSection>
       <FlexContainer>
-        <OrderedStyledTextArea>
+        <StyledTextArea>
           <StyledHeader>Our mission</StyledHeader>
           <StyledParagraph>
             Our mission is to support the residents of Lebanon and individuals
@@ -25,7 +25,7 @@ const OurMission = () => {
             Our dream is to help build a healthier, more resilient and
             trauma-aware Lebanese community.
           </StyledParagraph>
-        </OrderedStyledTextArea>
+        </StyledTextArea>
         <StyledHands src={Hands} alt="Hands" />
       </FlexContainer>
       <StyledSwirl src={Swirl} alt="Swirl" />
@@ -33,12 +33,12 @@ const OurMission = () => {
   );
 };
 
-const OrderedStyledTextArea = styled.div`
+const StyledTextArea = styled.div`
   position: relative;
   margin-top: 2%;
   left: 12%;
   width: 50%;
-
+  min-width: 50%;
   @media (max-width: ${devices.mobile}) {
     position: relative;
     top: 0;
@@ -50,7 +50,6 @@ const OrderedStyledTextArea = styled.div`
 
 const StyledHands = styled.img`
   object-fit: contain;
-  position: relative;
 
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;

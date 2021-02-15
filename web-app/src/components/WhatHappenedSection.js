@@ -33,7 +33,7 @@ const StyledTextArea = styled.div`
   position: relative;
   margin-top: 12%;
   right: 10%;
-  width: 40%;
+  min-width: 40%;
   @media (max-width: ${devices.ipad}) {
     right: 10%;
   }
