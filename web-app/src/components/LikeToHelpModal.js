@@ -15,11 +15,12 @@ const LikeToHelpModal = (props) => {
         />
         <Title>I’d like to help</Title>
         <Text>
-          Great news! Please drop us an email at{" "}
+          You’ve come to the right place! The page will be available soon. In
+          the meantime, we’d love to hear from you: please drop us an email at{" "}
           <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
             contact@lebanonreliefnetwork.org
           </Email>{" "}
-          with details about who you are and we will get back to you shortly.
+          and we will get back to you shortly.
         </Text>
         <StyledButton onClick={props.closeModal}>Ok, thanks</StyledButton>
       </Card>

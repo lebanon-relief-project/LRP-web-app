@@ -15,26 +15,17 @@ const OurMission = () => {
   return (
     <StyledSection>
       <FlexContainer>
-        <OrderedStyledTextArea>
+        <StyledTextArea>
           <StyledHeader>Our mission</StyledHeader>
           <StyledParagraph>
-            <span>
-              Our mission is to help the residents of Lebanon and individuals
-              from the Lebanese diaspora who experienced a traumatic event
-              regardless of their political and religious affiliations by
-              connecting them to volunteers, to professionals and to each other
-              while suggesting tools that can help them get the support and care
-              they need.
-            </span>
-            <br /> <br />
-            <span>
-              Through our platform, we aim to create a healthier, more
-              trauma-informed and resilient Lebanon where those who need help
-              can access self-help solutions and connect with professionals and
-              available support systems.
-            </span>
+            Our mission is to support the residents of Lebanon and individuals
+            from the Lebanese diaspora who experienced a traumatic event by
+            connecting them to professionals, to volunteers and to each other,
+            while helping them get the support and care they need. <br /> <br />{" "}
+            Our dream is to help build a healthier, more resilient and
+            trauma-aware Lebanese community.
           </StyledParagraph>
-        </OrderedStyledTextArea>
+        </StyledTextArea>
         <StyledHands src={Hands} alt="Hands" />
       </FlexContainer>
       <StyledSwirl src={Swirl} alt="Swirl" />
@@ -42,12 +33,12 @@ const OurMission = () => {
   );
 };
 
-const OrderedStyledTextArea = styled.div`
+const StyledTextArea = styled.div`
   position: relative;
   margin-top: 2%;
   left: 12%;
   width: 50%;
-
+  min-width: 50%;
   @media (max-width: ${devices.mobile}) {
     position: relative;
     top: 0;
@@ -60,14 +51,14 @@ const OrderedStyledTextArea = styled.div`
 const StyledHands = styled.img`
   object-fit: contain;
   position: relative;
-
+  width: auto;
+  max-wodth: 100%;
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;
   }
 
   @media (max-width: ${devices.ipad}) {
-    width: 80%;
-    right: 0;
+    width: 60%;
   }
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
