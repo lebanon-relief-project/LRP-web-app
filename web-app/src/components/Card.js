@@ -65,6 +65,7 @@ const StyledLink = styled(Link)`
   max-width: ${(props) => (props.secondary ? "30%" : "90%")};
   @media (max-width: ${devices.mobile}) {
     width: ${(props) => (props.secondary ? "50%" : "90%")};
+    max-width: ${(props) => (props.secondary ? "100%" : "90%")};
   }
   margin-bottom: 5%;
   padding: 0.5rem;

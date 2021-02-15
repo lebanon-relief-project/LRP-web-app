@@ -57,6 +57,7 @@ exports[`the Card component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c2 {
     width: 90%;
+    max-width: 90%;
   }
 }
 

@@ -196,6 +196,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c12 {
     width: 90%;
+    max-width: 90%;
   }
 }
 
@@ -309,7 +310,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             <p
               class="c10"
             >
-              Surround yourself with supportive individuals. You can always reach out ...
+              Surround yourself with friends and family. And remember, you can always reach out…
             </p>
             <a
               class="c11"
@@ -317,7 +318,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               rel="noopener noreferrer"
               target="_blank"
             >
-              Visit Embrace
+              Reach Out
             </a>
           </fieldset>
           <fieldset
@@ -331,11 +332,11 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             <p
               class="c10"
             >
-              Exercing helps...Here are some exercises that you can do on your own to help yourself manage.
+              Here are some exercises to reduce stress and regain control over your actions and thoughts.
             </p>
             <a
               class="c11"
-              href="temp.pdf"
+              href="Self-Help_Exercises.pdf"
               rel="noopener noreferrer"
               target="_blank"
             >

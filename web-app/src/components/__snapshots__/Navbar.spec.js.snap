@@ -84,7 +84,6 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
     transition: color 0.3s linear;
-    color: #002766;
   }
 }
 
@@ -107,6 +106,14 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   .c2 {
     padding: 0 0.5rem;
   }
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:576px) {
+
 }
 
 @media (max-width:768px) {
@@ -237,7 +244,6 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
     transition: color 0.3s linear;
-    color: #002766;
   }
 }
 
@@ -260,6 +266,14 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   .c2 {
     padding: 0 0.5rem;
   }
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:576px) {
+
 }
 
 @media (max-width:768px) {

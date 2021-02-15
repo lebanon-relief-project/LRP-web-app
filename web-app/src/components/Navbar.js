@@ -25,8 +25,8 @@ const Navbar = ({ open }) => {
           </StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink exact to={Routes.ABOUT}>
-            I’d like to help
+          <StyledLink disabled exact to={Routes.ABOUT}>
+            I’d like to help <br /> (coming soon)
           </StyledLink>
         </StyledLi>
       </StyledUl>
@@ -71,7 +71,6 @@ const StyledNav = styled.nav`
       letter-spacing: 0.5rem;
       text-decoration: none;
       transition: color 0.3s linear;
-      color: #002766;
     }
   }
 `;
@@ -136,6 +135,7 @@ const StyledLink = styled(NavLink)`
     line-height: 11px;
   }
   @media (max-width: ${devices.mobile}) {
+    color: ${(props) => (props.disabled ? `${colours.grey}` : `#002766`)};
     position: relative;
     top: 0;
     &.active {

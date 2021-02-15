@@ -123,7 +123,7 @@ exports[`the Footer component should match the snapshot 1`] = `
           <li
             class="c5"
           >
-            Terms & Conditions
+            Terms of Use
           </li>
           <li
             class="c5"
