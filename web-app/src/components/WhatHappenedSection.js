@@ -17,11 +17,11 @@ const WhatHappened = () => {
         <StyledTextArea>
           <StyledHeader>What happened</StyledHeader>
           <StyledParagraph>
-            On August 4 an explosion shook Beirut. It was the largest
-            non-nuclear explosion ever recorded. That day 200 people died, 6,500
-            were injured, and 300,000 were left homeless. This project was
-            developed to support those affected and provide a platform for the
-            community to come together and help each other heal.
+            On August 4th, 2020 a massive explosion shook the port of Beirut in
+            Lebanon. 170 people died. Thousands were injured. Even more were
+            traumatized. <br /> <br /> Lebanon Relief Network was founded in the
+            aftermath of the explosion to improve the lives of people affected
+            by all type of trauma.
           </StyledParagraph>
         </StyledTextArea>
       </StyledFlexContainer>

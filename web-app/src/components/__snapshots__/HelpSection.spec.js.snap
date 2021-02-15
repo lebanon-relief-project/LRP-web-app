@@ -18,6 +18,7 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   display: flex;
   bottom: 2rem;
   right: 23%;
+  width: 40%;
 }
 
 .c1 {
@@ -55,15 +56,17 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c5 {
-    position: static;
+    width: 70%;
+    right: 0;
   }
 }
 
-@media (max-width:1025px) {
+@media (max-width:576px) {
   .c5 {
-    right: 0;
+    position: static;
+    width: 100%;
   }
 }
 
@@ -134,9 +137,9 @@ exports[`the HelpSection component should match the snapshot 1`] = `
         class="c5"
       >
         <div
-          data-testid="Try our 14 days of Wellbeing"
+          data-testid="Try our 14 days of wellbeing"
         >
-          Try our 14 days of Wellbeing
+          Try our 14 days of wellbeing
         </div>
       </div>
     </div>

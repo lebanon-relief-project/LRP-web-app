@@ -20,13 +20,13 @@ const HelpSection = () => {
           >
             <StyledBody>
               <Paragraph>
-                Everyone deals with trauma differently. Every experience is
-                different, and everyone copes differently. There isn’t a “one
-                fits all solution” when it comes to healing.
+                Everyone reacts differently to trauma, and not everyone recovers
+                from a traumatic experience in the same way or time. There is no
+                one solution to heal from it.
               </Paragraph>
               <Paragraph>
-                Our ambition is to help deal with trauma through surfacing the
-                right tools based on each person’s needs.
+                Here you can find personalized recommendations, tips and tools
+                to help you cope with trauma.
               </Paragraph>
             </StyledBody>
           </Card>
@@ -40,13 +40,13 @@ const HelpSection = () => {
           >
             <StyledBody>
               <Paragraph>
-                Do you have a close one who underwent trauma, but you need
-                direction on how to help, what to say, what to do and how to
+                Do you have a close one who underwent trauma? Do you need
+                direction on how to help, what to say, what to do, and how to
                 protect yourself?
               </Paragraph>
               <Paragraph>
-                Or do you want to help those who are undergoing trauma and
-                looking for opportunities to do so?
+                Or do you want to help those who are dealing with trauma, and
+                are looking for opportunities to do so?
               </Paragraph>
             </StyledBody>
           </Card>
@@ -58,19 +58,16 @@ const HelpSection = () => {
             <Card
               secondary="true"
               disabled
-              title="Try our 14 days of Wellbeing"
+              title="Try our 14 days of wellbeing"
               path={Routes.HOME}
               buttonText="Coming soon"
             >
-              <p>If you are: </p>
-              <StyledUnorderedList>
-                <li>Struggling to manage </li>
-                <li>Struggling to function as you used to </li>
-                <li>
-                  At risk of using negative coping skills like: drugs, alcohol,
-                  self harm...
-                </li>
-              </StyledUnorderedList>
+              <Paragraph>
+                Keep your mind and body engaged by joining our 14 days of
+                wellbeing. Created by our team of mental health experts, these
+                exercises offer simple daily goals which will help you manage
+                negative emotions and reach a more relaxed and positive mindset.
+              </Paragraph>
             </Card>
           </ChallengeCard>
         </IllustrationAndCard>
@@ -128,13 +125,14 @@ const ChallengeCard = styled.div`
   display: flex;
   bottom: 2rem;
   right: 23%;
-
+  width: 40%;
+  @media (max-width: ${devices.ipadpro}) {
+    width: 70%;
+    right: 0;
+  }
   @media (max-width: ${devices.mobile}) {
     position: static;
-  }
-
-  @media (max-width: ${devices.ipadpro}) {
-    right: 0;
+    width: 100%;
   }
 `;
 
