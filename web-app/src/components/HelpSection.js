@@ -96,14 +96,6 @@ const Paragraph = styled.p`
   color: #262626;
 `;
 
-const StyledUnorderedList = styled.ul`
-  li::before {
-    content: "– ";
-  }
-  list-style-type: none;
-  padding: 0;
-`;
-
 const StyledIllustration3 = styled(Illustration3)`
   padding 0 3rem;
   @media (max-width: ${devices.mobile}) {
