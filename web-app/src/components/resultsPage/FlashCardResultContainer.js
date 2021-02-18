@@ -146,7 +146,7 @@ const Background = styled.div`
   }
 `;
 
-const TitlesContainer = styled.div`
+const TitlesContainer = styled.h1`
   width: 100%;
   max-width: 270px;
   height: 100%;
