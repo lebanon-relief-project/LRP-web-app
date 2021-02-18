@@ -165,7 +165,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   <div
     class="c0"
   >
-    <div
+    <h1
       class="c1"
     >
       <div
@@ -193,7 +193,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
           test title
         </button>
       </div>
-    </div>
+    </h1>
     <div
       class="c6"
     >

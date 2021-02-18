@@ -152,7 +152,6 @@ const TitlesContainer = styled.h1`
   height: 100%;
   position: relative;
   display: flex;
-
   @media (max-width: ${devices.ipadpro}) {
     max-width: 100%;
     width: auto;

@@ -241,7 +241,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
         <div
           class="c4"
         >
-          <div
+          <h1
             class="c5"
           >
             <div
@@ -269,7 +269,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
                 test title
               </button>
             </div>
-          </div>
+          </h1>
           <div
             class="c10"
           >
