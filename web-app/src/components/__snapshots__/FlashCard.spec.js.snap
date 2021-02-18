@@ -94,7 +94,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   <div
     class="c0"
   >
-    <div
+    <h1
       class="c1"
     >
       title 1
@@ -110,7 +110,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
           width="32"
         />
       </button>
-    </div>
+    </h1>
     <div
       class="c4"
     >
