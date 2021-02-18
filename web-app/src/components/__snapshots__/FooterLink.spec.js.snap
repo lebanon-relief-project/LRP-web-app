@@ -46,12 +46,16 @@ exports[`the FooterLink component should match the snapshot 1`] = `
       <li
         class="c3"
       >
-        link1
+        <a
+          style="text-decoration: none;"
+        />
       </li>
       <li
         class="c3"
       >
-        link2
+        <a
+          style="text-decoration: none;"
+        />
       </li>
     </ul>
   </div>
