@@ -603,6 +603,7 @@ export const TermsPage = () => {
 const StyledPage = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 `;
 
 /*
@@ -612,7 +613,7 @@ const StyledBodySection = styled.div`
   background-color: transparent;
   margin-left: 16.7%;
   margin-right: 16.7%;
-  margin-top: 40px;
+  // margin-top: 40px;
 `;
 const P = styled.p`
   font-family: Raleway;
