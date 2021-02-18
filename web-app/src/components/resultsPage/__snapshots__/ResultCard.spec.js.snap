@@ -19,14 +19,14 @@ exports[`the ResultCard component should match the snapshot 1`] = `
       id="result card"
     >
       <h4
-        style="margin: 10px;"
+        style="margin: 10px; font-family: Playfair Display; font-size: 16px; font-weight: bold;"
       >
         <b>
           Test title
         </b>
       </h4>
       <p
-        style="margin: 10px;"
+        style="margin: 10px; font-family: Rleway; font-size: 16px;"
       >
         test body
       </p>

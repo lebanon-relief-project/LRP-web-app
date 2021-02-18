@@ -202,12 +202,12 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
         src="feeling-guilty.svg"
       />
       <h1
-        style="margin-left: 10px;"
+        style="margin-left: 10px; font-family: Playfair Display; font-weight: bold;"
       >
         Feeling Guilty
       </h1>
       <p
-        style="margin: 10px;"
+        style="margin: 10px; font-size: 16px; font-family: Raleway;"
       />
       <div
         class="c8"
@@ -216,14 +216,14 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
           id="result card"
         >
           <h4
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Playfair Display; font-size: 16px; font-weight: bold;"
           >
             <b>
               Allow yourself to feel
             </b>
           </h4>
           <p
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Rleway; font-size: 16px;"
           >
             It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
           </p>
@@ -236,14 +236,14 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
           id="result card"
         >
           <h4
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Playfair Display; font-size: 16px; font-weight: bold;"
           >
             <b>
               Talk about it
             </b>
           </h4>
           <p
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Rleway; font-size: 16px;"
           >
             Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
           </p>
@@ -256,14 +256,14 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
           id="result card"
         >
           <h4
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Playfair Display; font-size: 16px; font-weight: bold;"
           >
             <b>
               Try these excercises
             </b>
           </h4>
           <p
-            style="margin: 10px;"
+            style="margin: 10px; font-family: Rleway; font-size: 16px;"
           >
             Lorem ipsum...
           </p>

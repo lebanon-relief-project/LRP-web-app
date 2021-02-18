@@ -65,7 +65,7 @@ const StyledHeader = styled.h2`
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 38px;
   margin: 25px 18px;
 `;
