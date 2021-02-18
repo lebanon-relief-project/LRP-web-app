@@ -101,10 +101,9 @@ const FlashCard = ({ card, id }) => {
               position: "absolute",
               paddingLeft: "8px",
               paddingRight: "8px",
-              fontSize: 18,
             }}
           >
-            {card.body}
+            <CardTextWrapper>{card.body}</CardTextWrapper>
           </a.div>
         </ImageWrapper>
       </>
