@@ -617,7 +617,6 @@ const StyledBodySection = styled.div`
     margin-left: 18px;
     margin-right: 18px;
     flex: 1;
-    margin-top: 20px;
   }
 `;
 const P = styled.p`
