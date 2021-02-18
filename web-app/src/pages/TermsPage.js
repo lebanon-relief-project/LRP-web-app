@@ -613,7 +613,12 @@ const StyledBodySection = styled.div`
   background-color: transparent;
   margin-left: 16.7%;
   margin-right: 16.7%;
-  // margin-top: 40px;
+  @media (max-width: ${devices.mobile}) {
+    margin-left: 18px;
+    margin-right: 18px;
+    flex: 1;
+    margin-top: 20px;
+  }
 `;
 const P = styled.p`
   font-family: Raleway;
@@ -639,7 +644,7 @@ const StyledHeaderSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 482px;
+    height: 122px;
   }
 `;
 const CentralContentWrapper = styled.div`
