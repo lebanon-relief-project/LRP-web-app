@@ -124,8 +124,9 @@ const FlashCard = ({ card, id }) => {
   );
 };
 
-const StyledHeader = styled.div`
-  font-size: 1rem;
+const StyledHeader = styled.h1`
+  font-size: 1.5rem;
+  font-weight: bold;
   display: flex;
   height: 80px;
   padding: 0.25rem 0.5rem;
