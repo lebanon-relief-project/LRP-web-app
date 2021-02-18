@@ -14,7 +14,10 @@ const Footer = () => {
       <CardWrapper>
         <FooterLink
           title="Lebanon Relief Network"
-          links={["Terms of Use", "Privacy policy"]}
+          links={[
+            { title: "Terms of Use", href: "/terms" },
+            { title: "Privacy policy", href: "/privacy" },
+          ]}
         />
 
         <CircularLinkWrapper>

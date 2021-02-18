@@ -14,6 +14,8 @@ import AboutPage from "./pages/aboutPage";
 import HelpPage from "./pages/helpPage";
 import MobileNavbar from "./components/MobileNavBar";
 import ResultsPage from "./pages/resultsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +32,8 @@ export const Routes = {
   ABOUT: "/about",
   HELP: "/help",
   RESULTS: "/results",
+  PRIVACY: "/privacy",
+  TERMS: "/terms"
 };
 
 export const Pages = () => {
@@ -39,6 +43,8 @@ export const Pages = () => {
         <Route path={Routes.ABOUT} component={AboutPage} />
         <Route path={Routes.HELP} component={HelpPage} />
         <Route path={Routes.RESULTS} component={ResultsPage} />
+        <Route path={Routes.PRIVACY} component={PrivacyPage} />
+        <Route path={Routes.TERMS} component={TermsPage} />
         <Route path={Routes.HOME} component={HomePage} />
       </Switch>
     </>
