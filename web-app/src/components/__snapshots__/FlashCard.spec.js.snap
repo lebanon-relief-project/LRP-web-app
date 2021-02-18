@@ -71,6 +71,12 @@ exports[`the FlashCard component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
+  .c6 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:576px) {
   .c1 {
     height: 58px;
     font-size: 18px;
@@ -117,9 +123,13 @@ exports[`the FlashCard component should match the snapshot 1`] = `
         />
       </div>
       <div
-        style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute; padding-left: 8px; padding-right: 8px; font-size: 18px;"
+        style="opacity: 0; transform: perspective(600px) rotateY(0deg) rotateY(180deg); top: 0px; bottom: 0px; left: 0px; right: 0px; position: absolute; padding-left: 8px; padding-right: 8px;"
       >
-        text 1
+        <div
+          class="c6"
+        >
+          text 1
+        </div>
       </div>
     </div>
   </div>
