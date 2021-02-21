@@ -129,7 +129,7 @@ const CardTextWrapper = styled.div`
   }
 `;
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.h1`
   font-size: 1rem;
   display: flex;
   height: 80px;

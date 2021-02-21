@@ -146,13 +146,12 @@ const Background = styled.div`
   }
 `;
 
-const TitlesContainer = styled.div`
+const TitlesContainer = styled.h1`
   width: 100%;
   max-width: 270px;
   height: 100%;
   position: relative;
   display: flex;
-
   @media (max-width: ${devices.ipadpro}) {
     max-width: 100%;
     width: auto;
