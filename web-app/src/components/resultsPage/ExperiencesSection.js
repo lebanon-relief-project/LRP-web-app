@@ -72,8 +72,8 @@ const ExperiencesSection = () => {
               <FlexBox>
                 <PercentageNumber>{percentage}%</PercentageNumber>
                 <PercentageText>
-                  of people affected by this experience feel like ictum nullam
-                  ligula lorem ut vitae.
+                  of Lebanese residents and expatriates are estimated to have
+                  experienced traumatic symptoms after the 4th of August blast.
                 </PercentageText>
               </FlexBox>
             </StyledDiv>
