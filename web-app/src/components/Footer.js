@@ -17,6 +17,11 @@ const Footer = () => {
           links={[
             { title: "Terms of Use", href: "/terms" },
             { title: "Privacy policy", href: "/privacy" },
+            {
+              title: "Code Contribution",
+              href:
+                "https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md",
+            },
           ]}
         />
 
