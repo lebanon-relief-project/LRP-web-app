@@ -4,9 +4,14 @@ import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
 import { getFlashCards } from "../services/flashCards.service";
 import devices from "../styles/Devices";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import NoCardSelectedModal from "./NoCardSelectedModal";
 
 const FlashCardsSection = (props) => {
+  const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] = useState(
+    false
+  );
+  let history = useHistory();
   const [flashCards, setFlashCards] = useState([]);
   const fetchFlashCards = async () => {
     let response = await getFlashCards();
@@ -18,28 +23,44 @@ const FlashCardsSection = (props) => {
     fetchFlashCards();
   }, []);
 
-  return (
-    <StyledSection>
-      <Wrapper>
-        {flashCards.map((flashCard, index) => {
-          return (
-            <FlashCard
-              id={`${flashCard._id}`}
-              key={`${flashCard._id}_${index}`}
-              card={flashCard}
-            />
-          );
-        })}
-      </Wrapper>
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (sessionStorage.length === 0) {
+      setNoCardSelectedModalVisible(true);
+    } else {
+      history.push("/results");
+    }
+  };
 
-  
-        <StyledLink to={"/results"}>Give me advice</StyledLink>
- 
-    </StyledSection>
+  return (
+    <>
+      <StyledSection>
+        <Wrapper>
+          {flashCards.map((flashCard, index) => {
+            return (
+              <FlashCard
+                id={`${flashCard._id}`}
+                key={`${flashCard._id}_${index}`}
+                card={flashCard}
+              />
+            );
+          })}
+        </Wrapper>
+
+        <StyledLink onClick={handleClick}>Give me advice</StyledLink>
+      </StyledSection>
+      {noCardSelectedModalVisible && (
+        <NoCardSelectedModal
+          closeModal={() => {
+            setNoCardSelectedModalVisible(false);
+          }}
+        />
+      )}
+    </>
   );
 };
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.button`
   color: inherit;
   text-decoration: inherit;
   &:focus,
@@ -96,7 +117,5 @@ const Wrapper = styled.div`
     justify-content: center;
   }
 `;
-
-
 
 export default FlashCardsSection;
