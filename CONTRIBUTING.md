@@ -1,10 +1,10 @@
 # Contributing
 
-If you are interesting in helping out with development of this project, please start by joining our [Slack workspace](lebanonreliefnetwork.slack.com). This way, we can help guide you to good issues to work on, and help you join the community.
+If you are interested in helping out with development of this project, please start by contacting us our IT team at admin@lebanonreliefnetwork.org and joining our [Slack workspace](https://lebanonreliefnetwork.slack.com). This way, we can help you join our community, and get you started on features to work on.
 
-If you are interested in helping with other parts of the project, you will be able to find people to guide you in the same Slack workspace. However, this document is aimed at development contributions.
+This document is aimed at development contributions. However, if you are interested in helping with other parts of the project, you can send us an email at contact@lebanonreliefnetwork.org, and you will also be able to find people to guide you in the same Slack workspace.
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Please note we have a code of conduct: please follow it in all your interactions with the project.
 
 ## Pull Request Process
 
@@ -13,7 +13,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 3. Ensure that your changes work locally, and all tests pass.
 4. Open a pull request to the `dev` branch of this repo. [1]
 5. Request reviews from the community. [2]
-6. When the PR is accepted, merge the request. It will go through CI and you will be able to view the new build online at: http://lrn-dev.eu-de.mybluemix.net
+6. When the PR is accepted, merge the request. It will go through CI and you will be able to view the new build online at: https://lrn-dev.eu-de.mybluemix.net
 
 [1] If you need to make changes to the CI/CD process, you can contact Steve Arnold (@Steve Arnold or arnoldst) or Sanchit Sharma (@Sanchit or Sandvich).  
 [2] Note that at this stage, this process will be faster if you ask an IBMer to review the code for you. We are working on removing this dependency.
@@ -59,4 +59,4 @@ Project maintainers who do not follow or enforce the Code of Conduct in good fai
 
 ### Attribution
 
-This Code of Conduct is adapted from the Contributor Covenant, version 1.4, available at http://contributor-covenant.org/version/1/4
+This Code of Conduct is adapted from the Contributor Covenant, version 1.4, available at https://contributor-covenant.org/version/1/4
