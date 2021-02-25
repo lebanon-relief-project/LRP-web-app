@@ -5,7 +5,12 @@ import devices from "../styles/Devices";
 const FooterLink = (props) => {
   const links = props.links.map((link, index) => (
     <StyledListLink key={index}>
-      <a href={link.href} style={{textDecoration: "none", color: "inherit" }}>
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
         {link.title}
       </a>
     </StyledListLink>
