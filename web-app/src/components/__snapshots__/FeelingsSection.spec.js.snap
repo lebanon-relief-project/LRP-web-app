@@ -49,6 +49,12 @@ exports[`the FeelingsSection component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c1 {
+    margin-left: 30px;
+  }
+}
+
 <div>
   <section
     class="c0"

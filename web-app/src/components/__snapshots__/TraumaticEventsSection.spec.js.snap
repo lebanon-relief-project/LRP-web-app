@@ -155,6 +155,12 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c5 {
+    margin-left: 30px;
+  }
+}
+
 @media (max-width:1025px) {
   .c2 {
     display: none;
@@ -221,7 +227,17 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
           <p
             class="c8"
           >
-            Trauma derives from an exposure to an event that can result in changes in feelings, thoughts and/or behaviors. These emotional and physical changes that accompany the symptoms of a traumatic experience constitute a normal reaction to an abnormal event. A trauma is unique, and any distressing event can result in one. It can be widespread, and it can be personal, varying from pandemics, to economic crises, death and abuse. Trauma can also be experienced by watching or helping someone who has been affected by a traumatic event. Each person lives trauma differently, and symptoms or modifications in thoughts, behaviors and emotions vary from one person to another.
+            Trauma derives from an exposure to an event resulting in changes of feelings, thoughts or behaviors. These emotional and physical changes accompanying the symptoms of a traumatic experience constitute a normal reaction to an abnormal event.
+          </p>
+          <p
+            class="c8"
+          >
+            Trauma is unique, and any distressing event can result in it. It can be widespread, and it can be personal, varying from pandemics, to economic crises, death and abuse.
+          </p>
+          <p
+            class="c8"
+          >
+            Trauma can also be experienced by watching or helping someone who has been affected by a traumatic event. Each person lives trauma differently, and symptoms or modifications in thoughts, behaviors and emotions vary from one person to another.
           </p>
         </div>
       </div>

@@ -44,6 +44,10 @@ const Wrapper = styled.div`
     padding-bottom: 0px;
     width: auto;
   }
+
+  @media (max-width: ${devices.ipad}) {
+    margin-left: 30px;
+  }
 `;
 
 const StyledSection = styled.section`
