@@ -6,10 +6,10 @@ export const ResultCard = ({ title, body, id = "result card" }) => {
     <>
       <Card>
         <div id={id}>
-          <h4 style={{margin: "10px"}}>
+          <h4 style={{ margin: "10px", fontSize: 20 }}>
             <b>{title}</b>
           </h4>
-          <p style={{margin: "10px"}}>{body}</p>
+          <p style={{ margin: "10px", fontSize: 16 }}>{body}</p>
         </div>
       </Card>
     </>
