@@ -81,10 +81,10 @@ export const FlashCardResultContainer = ({ results }) => {
         return (
           <ResultCardsWrapper key={`resultCards_wrapper`}>
             <ResultCardImage src={selectedFlashcardResult[0].image} />
-            <h1 style={{ marginLeft: "10px" }}>
+            <h1 style={{ marginLeft: "10px", fontSize: 20 }}>
               {selectedFlashcardResult[0].expl_title}
             </h1>
-            <p style={{ margin: "10px" }}>
+            <p style={{ margin: "10px", fontSize: 16 }}>
               {selectedFlashcardResult[0].expl_body}
             </p>
             {selectedFlashcardResult[0].recommendations.map(
