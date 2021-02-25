@@ -49,7 +49,8 @@ const LogoLink = styled(NavLink)`
   min-width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  margin-left: 18px;
 `;
 
 export default MobileNavbar;
