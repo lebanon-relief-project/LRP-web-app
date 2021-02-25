@@ -588,7 +588,7 @@ export const TermsPage = () => {
           <P>
             If you have any questions regarding the meaning of the application
             of the ToU, please direct such questions to
-            <a href="mailto:contact@lebanonreliefnetwork.org" target="_blank" style={{color: "inherit"}}> <u>contact@lebanonreliefnetwork.org</u></a>
+            <a href="mailto:contact@lebanonreliefnetwork.org" target="_blank" rel="noopener noreferrer" style={{color: "inherit"}}> <u>contact@lebanonreliefnetwork.org</u></a>
             <br /> Please note that e-mail
             communications will not necessarily be secure; accordingly, you
             should not include any sensitive information in your e-mail
