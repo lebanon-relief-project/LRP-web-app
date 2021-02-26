@@ -101,10 +101,9 @@ const FlashCard = ({ card, id }) => {
               position: "absolute",
               paddingLeft: "8px",
               paddingRight: "8px",
-              fontSize: 18,
             }}
           >
-            {card.body}
+            <CardTextWrapper>{card.body}</CardTextWrapper>
           </a.div>
         </ImageWrapper>
       </>
@@ -124,7 +123,13 @@ const FlashCard = ({ card, id }) => {
   );
 };
 
-const StyledHeader = styled.div`
+const CardTextWrapper = styled.div`
+  @media (max-width: ${devices.mobile}) {
+    font-size: 18px;
+  }
+`;
+
+const StyledHeader = styled.h1`
   font-size: 1rem;
   display: flex;
   height: 80px;

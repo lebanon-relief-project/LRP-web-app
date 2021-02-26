@@ -81,24 +81,8 @@ export const FlashCardResultContainer = ({ results }) => {
         return (
           <ResultCardsWrapper key={`resultCards_wrapper`}>
             <ResultCardImage src={selectedFlashcardResult[0].image} />
-            <H1
-              style={{
-                marginLeft: "10px",
-                fontFamily: "Playfair Display",
-                fontWeight: "bold",
-              }}
-            >
-              {selectedFlashcardResult[0].expl_title}
-            </H1>
-            <P
-              style={{
-                margin: "10px",
-                fontSize: "16px",
-                fontFamily: "Raleway",
-              }}
-            >
-              {selectedFlashcardResult[0].expl_body}
-            </P>
+            <H1>{selectedFlashcardResult[0].expl_title}</H1>
+            <P>{selectedFlashcardResult[0].expl_body}</P>
             {selectedFlashcardResult[0].recommendations.map(
               (recommendation, index) => {
                 return (
@@ -134,7 +118,7 @@ const H1 = styled.h1`
 const P = styled.p`
   margin: 10px;
   font-size: 16px;
-`
+`;
 
 const TitlesForeground = styled.div`
   display: flex;
@@ -167,13 +151,12 @@ const Background = styled.div`
   }
 `;
 
-const TitlesContainer = styled.div`
+const TitlesContainer = styled.h1`
   width: 100%;
   max-width: 270px;
   height: 100%;
   position: relative;
   display: flex;
-
   @media (max-width: ${devices.ipadpro}) {
     max-width: 100%;
     width: auto;

@@ -123,12 +123,38 @@ exports[`the Footer component should match the snapshot 1`] = `
           <li
             class="c5"
           >
-            Terms of Use
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
           </li>
           <li
             class="c5"
           >
-            Privacy policy
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
           </li>
         </ul>
       </div>

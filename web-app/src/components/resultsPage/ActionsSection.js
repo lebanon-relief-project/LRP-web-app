@@ -1,47 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import devices from "../../styles/Devices";
 import { Routes } from "../../App.js";
 import Card from "../Card";
 import PDF from "../../assets/downloads/Self-Help_Exercises.pdf";
+import ReachOutModal from "./ReachOutModal";
 
 export const ActionSection = () => {
+  const [reachOutModalVisible, setReachOutModalVisible] = useState(false);
   return (
-    <Wrapper>
-      <Title>Some actions you can take</Title>
-      <CardWrapper>
-        <StyledCard
-          title="Support"
-          buttonText="Reach Out"
-          externalPath="https://embracelebanon.org/"
-        >
-          <StyledParagraph>
-            Surround yourself with friends and family. And remember, you can
-            always reach out…
-          </StyledParagraph>
-        </StyledCard>
-        <StyledCard
-          title="Useful exercise"
-          buttonText="View exercises"
-          externalPath={PDF}
-        >
-          <StyledParagraph>
-            Here are some exercises to reduce stress and regain control over
-            your actions and thoughts.
-          </StyledParagraph>
-        </StyledCard>
-        <StyledCard
-          title="14 days of wellbeing"
-          disabled
-          path={Routes.HELP}
-          buttonText="Coming Soon"
-        >
-          <StyledParagraph>
-            We put together a 14 day plan to ...
-          </StyledParagraph>
-        </StyledCard>
-      </CardWrapper>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Title>Some actions you can take</Title>
+        <CardWrapper>
+          <StyledCard
+            title="Support"
+            buttonText="Reach Out"
+            path="#"
+            onClick={() => {
+              setReachOutModalVisible(true);
+            }}
+          >
+            <StyledParagraph>
+              Surround yourself with friends and family. And remember, you can
+              always reach out…
+            </StyledParagraph>
+          </StyledCard>
+          <StyledCard
+            title="Useful exercise"
+            buttonText="View exercises"
+            externalPath={PDF}
+          >
+            <StyledParagraph>
+              Here are some exercises to reduce stress and regain control over
+              your actions and thoughts.
+            </StyledParagraph>
+          </StyledCard>
+          <StyledCard
+            title="14 days of wellbeing"
+            disabled
+            path={Routes.HELP}
+            buttonText="Coming Soon"
+          >
+            <StyledParagraph>
+              We put together a 14 day plan to ...
+            </StyledParagraph>
+          </StyledCard>
+        </CardWrapper>
+      </Wrapper>
+      {reachOutModalVisible && (
+        <ReachOutModal
+          closeModal={() => {
+            setReachOutModalVisible(false);
+          }}
+        />
+      )}
+    </>
   );
 };
 
