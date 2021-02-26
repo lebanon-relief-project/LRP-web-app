@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the UsefulTipsSection component should match the snapshot 1`] = `
+.c3 {
+  margin-left: 20px;
+}
+
 .c0 {
   width: 60%;
   padding-top: 2rem;
@@ -25,6 +29,18 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
   font-weight: bold;
   font-size: 30px;
   line-height: 38px;
+}
+
+@media (max-width:1025px) {
+  .c3 {
+    magin-left: 0px;
+  }
+}
+
+@media (max-width:576px) {
+  .c3 {
+    magin-left: 0px;
+  }
 }
 
 @media (max-width:1025px) {
@@ -72,7 +88,9 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
           A few more useful tips
         </h2>
       </div>
-      <div>
+      <div
+        class="c3"
+      >
         <img
           alt="Person Taking Care"
           src="PersonTakingCare.svg"

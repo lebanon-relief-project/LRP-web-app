@@ -30,13 +30,23 @@ export const UsefulTipsSection = () => {
               </div>
             ))}
         </div>
-        <div>
+        <ImageDiv>
           <img src={PersonTakingCare} alt={"Person Taking Care"} />
-        </div>
+        </ImageDiv>
       </StyledDiv>
     </Wrapper>
   );
 };
+
+const ImageDiv = styled.div`
+  margin-left: 20px;
+  @media (max-width: ${devices.ipadpro}) {
+    magin-left: 0px;
+  }
+  @media (max-width: ${devices.mobile}) {
+    magin-left: 0px;
+  }
+`;
 
 const Wrapper = styled.div`
   width: 60%;
