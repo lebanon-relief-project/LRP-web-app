@@ -73,7 +73,6 @@ const StyledNav = styled.nav`
     background: ${colours.white};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     height: 100%;
-    padding: 2rem;
     position: fixed;
     transition: transform 0.3s ease-in-out;
 
@@ -83,9 +82,7 @@ const StyledNav = styled.nav`
       font-style: normal;
       font-weight: normal;
       line-height: 38px;
-      letter-spacing: 0em;
       text-align: left;
-      letter-spacing: 0.5rem;
       text-decoration: none;
       transition: color 0.3s linear;
     }
@@ -111,10 +108,10 @@ const StyledUl = styled.ul`
   display: flex;
   @media (max-width: ${devices.mobile}) {
     margin-top: 104px;
+    margin-left: 20px;
     flex-direction: column;
   }
   list-style-type: none;
-  margin: 0;
   padding: 0;
   min-width: 40%;
 `;
