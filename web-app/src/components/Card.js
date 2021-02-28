@@ -61,8 +61,8 @@ const StyledLink = styled(Link)`
   justify-content: center;
   display: flex;
 
-  min-width: ${(props) => (props.secondary ? "30%" : "90%")};
-  max-width: ${(props) => (props.secondary ? "30%" : "90%")};
+  min-width: ${(props) => (props.secondary ? "45%" : "90%")};
+  max-width: ${(props) => (props.secondary ? "45%" : "90%")};
   @media (max-width: ${devices.mobile}) {
     width: ${(props) => (props.secondary ? "50%" : "90%")};
     max-width: ${(props) => (props.secondary ? "100%" : "90%")};
@@ -76,6 +76,7 @@ const CardTitle = styled.legend`
   font-weight: ${(props) => (props.secondary ? 900 : "bold")};
   font-size: ${(props) => (props.secondary ? "38px" : "24px")};
   min-width: auto;
+  line-height: 100%;
   padding: ${(props) => (props.secondary ? "0" : "0 0.5rem")};
   text-align: ${(props) => (props.secondary ? "left" : "center")};
   margin-bottom: 0;
@@ -87,7 +88,6 @@ const CardTitle = styled.legend`
 
 const StyledCard = styled.fieldset`
   position: relative;
-
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
   width: ${(props) => (props.secondary ? "100%" : "25%")};
