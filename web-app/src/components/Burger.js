@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import colours from "../styles/Colours";
 
 const Burger = ({ open, setOpen, ...props }) => {
   const isExpanded = open ? true : false;
@@ -38,7 +39,7 @@ const StyledBurger = styled.button`
   span {
     width: 2rem;
     height: 0.25rem;
-    background: black;
+    background: ${colours.darkBlue};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
