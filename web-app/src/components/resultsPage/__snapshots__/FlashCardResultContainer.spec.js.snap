@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
-.c8 {
+.c10 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -9,6 +9,16 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   padding: 6px;
   margin: 10px;
   min-height: 174px;
+}
+
+.c8 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.c9 {
+  margin: 10px;
+  font-size: 16px;
 }
 
 .c3 {
@@ -202,15 +212,15 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
         src="feeling-guilty.svg"
       />
       <h1
-        style="margin-left: 10px; font-size: 20px;"
+        class="c8"
       >
         Feeling Guilty
       </h1>
       <p
-        style="margin: 10px; font-size: 16px;"
+        class="c9"
       />
       <div
-        class="c8"
+        class="c10"
       >
         <div
           id="result card"
@@ -230,7 +240,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
         </div>
       </div>
       <div
-        class="c8"
+        class="c10"
       >
         <div
           id="result card"
@@ -250,7 +260,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
         </div>
       </div>
       <div
-        class="c8"
+        class="c10"
       >
         <div
           id="result card"

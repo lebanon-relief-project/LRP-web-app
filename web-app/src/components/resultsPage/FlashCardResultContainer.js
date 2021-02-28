@@ -81,12 +81,8 @@ export const FlashCardResultContainer = ({ results }) => {
         return (
           <ResultCardsWrapper key={`resultCards_wrapper`}>
             <ResultCardImage src={selectedFlashcardResult[0].image} />
-            <h1 style={{ marginLeft: "10px", fontSize: 20 }}>
-              {selectedFlashcardResult[0].expl_title}
-            </h1>
-            <p style={{ margin: "10px", fontSize: 16 }}>
-              {selectedFlashcardResult[0].expl_body}
-            </p>
+            <H1>{selectedFlashcardResult[0].expl_title}</H1>
+            <P>{selectedFlashcardResult[0].expl_body}</P>
             {selectedFlashcardResult[0].recommendations.map(
               (recommendation, index) => {
                 return (
@@ -114,6 +110,15 @@ export const FlashCardResultContainer = ({ results }) => {
     </Container>
   );
 };
+
+const H1 = styled.h1`
+  margin-left: 10px;
+  font-weight: bold;
+`;
+const P = styled.p`
+  margin: 10px;
+  font-size: 16px;
+`;
 
 const TitlesForeground = styled.div`
   display: flex;
