@@ -24,7 +24,7 @@ const Card = styled.div`
   border-radius: 10px;
   padding: 6px;
   margin: 10px;
-  min-height: 174px;
+  
 `;
 
 export default ResultCard;
