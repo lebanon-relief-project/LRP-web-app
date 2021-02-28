@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the ResultsPage component should match the snapshot 1`] = `
+.c4 {
+  margin-left: 20px;
+}
+
 .c1 {
   width: 60%;
   padding-top: 2rem;
@@ -27,7 +31,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c12 {
+.c13 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -49,7 +53,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   margin-bottom: 5%;
 }
 
-.c11 {
+.c12 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -72,7 +76,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   padding: 0.5rem;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -95,7 +99,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   padding: 0.5rem;
 }
 
-.c9 {
+.c10 {
   font-family: Playfair Display;
   font-weight: bold;
   font-size: 24px;
@@ -105,7 +109,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.c7 {
+.c8 {
   position: relative;
   border: 1px solid #003A8C;
   width: 25%;
@@ -125,11 +129,11 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   background-color: white;
 }
 
-.c10 {
+.c11 {
   min-height: 7rem;
 }
 
-.c4 {
+.c5 {
   width: 60%;
   min-width: 960px;
   padding-top: 2rem;
@@ -138,7 +142,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   background: inherit;
 }
 
-.c5 {
+.c6 {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
@@ -146,17 +150,17 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c8 {
+.c9 {
   height: auto;
   width: 30%;
   margin: 5% 0;
 }
 
-.c8 legend {
+.c9 legend {
   min-width: 100%;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,6 +181,18 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+@media (max-width:1025px) {
+  .c4 {
+    magin-left: 0px;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    magin-left: 0px;
+  }
 }
 
 @media (max-width:1025px) {
@@ -211,47 +227,47 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c12 {
-    width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c11 {
-    width: 90%;
-    max-width: 90%;
-  }
-}
-
-@media (max-width:576px) {
   .c13 {
     width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c12 {
+    width: 90%;
     max-width: 90%;
   }
 }
 
 @media (max-width:576px) {
-  .c9 {
+  .c14 {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c10 {
     font-size: 30px;
     line-height: 38px;
   }
 }
 
 @media (max-width:1025px) {
-  .c7 {
+  .c8 {
     width: 40%;
   }
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c8 {
     width: 90%;
     margin: 1rem auto;
   }
 }
 
 @media (max-width:1025px) {
-  .c4 {
+  .c5 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -261,13 +277,13 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c8 {
+  .c9 {
     width: 100%;
   }
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -310,7 +326,9 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               A few more useful tips
             </h2>
           </div>
-          <div>
+          <div
+            class="c4"
+          >
             <img
               alt="Person Taking Care"
               src="PersonTakingCare.svg"
@@ -319,51 +337,51 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="c4"
+        class="c5"
       >
         <h2
-          class="c5"
+          class="c6"
         >
           Some actions you can take
         </h2>
         <div
-          class="c6"
+          class="c7"
         >
           <fieldset
-            class="c7 c8"
+            class="c8 c9"
           >
             <legend
-              class="c9 c8"
+              class="c10 c9"
             >
               Support
             </legend>
             <p
-              class="c10"
+              class="c11"
             >
               Surround yourself with friends and family. And remember, you can always reach out…
             </p>
             <a
-              class="c11 c8"
+              class="c12 c9"
               href="/"
             >
               Reach Out
             </a>
           </fieldset>
           <fieldset
-            class="c7 c8"
+            class="c8 c9"
           >
             <legend
-              class="c9 c8"
+              class="c10 c9"
             >
               Useful exercise
             </legend>
             <p
-              class="c10"
+              class="c11"
             >
               Here are some exercises to reduce stress and regain control over your actions and thoughts.
             </p>
             <a
-              class="c12"
+              class="c13"
               href="Self-Help_Exercises.pdf"
               rel="noopener noreferrer"
               target="_blank"
@@ -372,22 +390,22 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             </a>
           </fieldset>
           <fieldset
-            class="c7 c8"
+            class="c8 c9"
             disabled=""
           >
             <legend
-              class="c9 c8"
+              class="c10 c9"
               disabled=""
             >
               14 days of wellbeing
             </legend>
             <p
-              class="c10"
+              class="c11"
             >
               We put together a 14 day plan to ...
             </p>
             <a
-              class="c13 c8"
+              class="c14 c9"
               disabled=""
               href="/help"
             >
