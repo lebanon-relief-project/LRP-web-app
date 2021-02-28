@@ -174,7 +174,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c9 {
-    margin-right: 10px;
+    margin-right: 0;
     width: 25px;
   }
 }
@@ -229,6 +229,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c6 {
     font-size: 30px;
+  }
+}
+
+@media (max-width:576px) {
+  .c8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
   }
 }
 
