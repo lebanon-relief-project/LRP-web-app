@@ -117,7 +117,7 @@ const ChallengeCard = styled.div`
   right: 23%;
   width: 40%;
   @media (max-width: ${devices.ipadpro}) {
-    width: 70%;
+    width: 40%;
     right: 0;
   }
   @media (max-width: ${devices.mobile}) {
