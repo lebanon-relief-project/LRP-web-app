@@ -40,12 +40,6 @@ const Text = styled.p`
   line-height: 24px;
 `;
 
-const Email = styled.a`
-  font-weight: 700;
-  text-decoration: underline;
-  color: ${colours.black};
-`;
-
 const StyledButton = styled.button`
   cursor: pointer;
   display: flex;
