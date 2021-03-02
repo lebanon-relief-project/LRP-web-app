@@ -64,7 +64,9 @@ const HelpSection = () => {
             >
               <Paragraph>
                 Keep your mind and body engaged by joining our 14 days of
-                wellbeing.
+                wellbeing. Created by our team of mental health experts, these
+                exercises offer simple daily goals which will help you manage
+                negative emotions and reach a more relaxed and positive mindset.
               </Paragraph>
             </Card>
           </ChallengeCard>
@@ -117,7 +119,7 @@ const ChallengeCard = styled.div`
   right: 23%;
   width: 40%;
   @media (max-width: ${devices.ipadpro}) {
-    width: 40%;
+    width: 50%;
     right: 0;
   }
   @media (max-width: ${devices.mobile}) {

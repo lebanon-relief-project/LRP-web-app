@@ -43,7 +43,8 @@ export const ActionSection = () => {
             buttonText="Coming Soon"
           >
             <StyledParagraph>
-              We put together a 14 day plan to ...
+              Keep your mind and body engaged by joining our 14 days of
+              wellbeing.
             </StyledParagraph>
           </StyledCard>
         </CardWrapper>
