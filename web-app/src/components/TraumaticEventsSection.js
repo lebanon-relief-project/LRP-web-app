@@ -68,7 +68,7 @@ const CentralWrapper = styled.div`
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    height: 482px;
+    height: 542px;
   }
 `;
 
@@ -79,15 +79,15 @@ const CentralContentWrapper = styled.div`
   margin-left: 16.7%;
   max-width: 632px;
 
+  @media (max-width: ${devices.ipad}) {
+    margin-left: 30px;
+  }
+
   @media (max-width: ${devices.mobile}) {
     margin-left: 18px;
     margin-right: 18px;
     flex: 1;
     margin-top: 20px;
-  }
-
-  @media (max-width: ${devices.ipad}) {
-    margin-left: 30px;
   }
 `;
 
@@ -131,7 +131,7 @@ const StyledSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 482px;
+    height: 542px;
   }
 `;
 

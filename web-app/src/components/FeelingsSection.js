@@ -38,19 +38,19 @@ const Wrapper = styled.div`
   margin: 0 16.7%;
   background: inherit;
 
-  @media (max-width: ${devices.mobile}) {
-    margin: 25px 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    width: auto;
-  }
-
   @media (max-width: ${devices.ipadpro}) {
     width: auto;
   }
 
   @media (max-width: ${devices.ipad}) {
     margin: 0 30px;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 25px 18px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: auto;
   }
 `;
 
@@ -68,7 +68,7 @@ const StyledHeader = styled.h2`
 
 const StyledParagraph = styled.p`
   margin: 0;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
   font-size: 16px;
 `;
 
