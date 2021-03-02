@@ -58,7 +58,7 @@ exports[`the HelpSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c5 {
-    width: 40%;
+    width: 50%;
     right: 0;
   }
 }
