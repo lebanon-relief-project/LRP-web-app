@@ -245,9 +245,15 @@ exports[`the HelpPage component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:1025px) {
+  .c11 {
+    width: auto;
+  }
+}
+
 @media (max-width:768px) {
   .c11 {
-    margin-left: 30px;
+    margin: 0 30px;
   }
 }
 

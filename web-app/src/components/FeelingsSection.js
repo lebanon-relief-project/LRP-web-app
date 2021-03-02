@@ -45,8 +45,12 @@ const Wrapper = styled.div`
     width: auto;
   }
 
+  @media (max-width: ${devices.ipadpro}) {
+    width: auto;
+  }
+
   @media (max-width: ${devices.ipad}) {
-    margin-left: 30px;
+    margin: 0 30px;
   }
 `;
 
