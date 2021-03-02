@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import CloseButton from "../assets/images/CloseButton.svg";
-import devices from "../styles/Devices";
-import colours from "../styles/Colours";
+import CloseButton from "../../assets/images/CloseButton.svg";
+import devices from "../../styles/Devices";
+import colours from "../../styles/Colours";
 
-const LikeToHelpModal = (props) => {
+const ReachOutModal = (props) => {
   return (
     <ModalWrapper>
       <Card>
@@ -13,16 +13,13 @@ const LikeToHelpModal = (props) => {
           alt="Close Button"
           onClick={props.closeModal}
         />
-        <Title>I’d like to help</Title>
+        <Title>Support</Title>
         <Text>
-          You’ve come to the right place! The page will be available soon. In
-          the meantime, we’d love to hear from you: please drop us an email at{" "}
-          <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
-            contact@lebanonreliefnetwork.org
-          </Email>{" "}
-          and we will get back to you shortly.
+          A directory of mental health professionals will soon be available. If
+          you seek immediate assistance, don’t wait! If you're in Lebanon, call
+          our partner Embrace at 1564.
         </Text>
-        <StyledButton onClick={props.closeModal}>Ok, thanks</StyledButton>
+        <StyledButton onClick={props.closeModal}>OK</StyledButton>
       </Card>
     </ModalWrapper>
   );
@@ -42,12 +39,6 @@ const Text = styled.p`
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
-`;
-
-const Email = styled.a`
-  font-weight: 700;
-  text-decoration: underline;
-  color: ${colours.black};
 `;
 
 const StyledButton = styled.button`
@@ -106,4 +97,4 @@ const StyledCloseButton = styled.img`
   }
 `;
 
-export default LikeToHelpModal;
+export default ReachOutModal;

@@ -1,36 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+
 import logo from "../assets/images/logo.svg";
 import { Routes } from "../App.js";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
+import LikeToHelpModal from "./LikeToHelpModal";
 
 const Navbar = ({ open }) => {
+  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
-    <StyledNav open={open}>
-      <LogoLink exact to={Routes.HOME}>
-        <LogoImage src={logo} alt="Logo" />
-      </LogoLink>
+    <>
+      <StyledNav open={open}>
+        <LogoLink exact to={Routes.HOME}>
+          <LogoImage src={logo} alt="Logo" />
+        </LogoLink>
 
-      <StyledUl>
-        <StyledLi>
-          <StyledLink exact to={Routes.HOME}>
-            Home
-          </StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink exact to={Routes.HELP}>
-            I’m looking for help
-          </StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink exact to={Routes.ABOUT}>
-            I’d like to help
-          </StyledLink>
-        </StyledLi>
-      </StyledUl>
-    </StyledNav>
+        <StyledUl>
+          <StyledLi>
+            <StyledLink exact to={Routes.HOME}>
+              Home
+            </StyledLink>
+          </StyledLi>
+          <StyledLi>
+            <StyledLink exact to={Routes.HELP}>
+              I’m looking for help
+            </StyledLink>
+          </StyledLi>
+          <StyledLi>
+            <StyledButton
+              exact
+              to={"#"}
+              onClick={() => setLikeToHelpModalVisible(true)}
+              data-testid={"id-like-to-help"}
+            >
+              I’d like to help
+            </StyledButton>
+          </StyledLi>
+        </StyledUl>
+      </StyledNav>
+      {likeToHelpModalVisible && (
+        <LikeToHelpModal
+          closeModal={() => {
+            setLikeToHelpModalVisible(false);
+          }}
+        />
+      )}
+    </>
   );
 };
 
@@ -56,7 +73,6 @@ const StyledNav = styled.nav`
     background: ${colours.white};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     height: 100%;
-    padding: 2rem;
     position: fixed;
     transition: transform 0.3s ease-in-out;
 
@@ -66,12 +82,9 @@ const StyledNav = styled.nav`
       font-style: normal;
       font-weight: normal;
       line-height: 38px;
-      letter-spacing: 0em;
       text-align: left;
-      letter-spacing: 0.5rem;
       text-decoration: none;
       transition: color 0.3s linear;
-      color: #002766;
     }
   }
 `;
@@ -95,10 +108,10 @@ const StyledUl = styled.ul`
   display: flex;
   @media (max-width: ${devices.mobile}) {
     margin-top: 104px;
+    margin-left: 20px;
     flex-direction: column;
   }
   list-style-type: none;
-  margin: 0;
   padding: 0;
   min-width: 40%;
 `;
@@ -112,6 +125,31 @@ const StyledLi = styled.li`
 
   @media (max-width: ${devices.ipad}) {
     padding: 0 0.5rem;
+  }
+`;
+
+const StyledButton = styled(NavLink)`
+  border: none;
+  background: none;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: ${colours.black};
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  @media (max-width: ${devices.ipad}) {
+    font-size: 12px;
+    line-height: 11px;
+  }
+  @media (max-width: ${devices.mobile}) {
+    color: ${(props) => (props.disabled ? `${colours.grey}` : `#002766`)};
+    position: relative;
+    top: 0;
   }
 `;
 
@@ -136,6 +174,7 @@ const StyledLink = styled(NavLink)`
     line-height: 11px;
   }
   @media (max-width: ${devices.mobile}) {
+    color: ${(props) => (props.disabled ? `${colours.grey}` : `#002766`)};
     position: relative;
     top: 0;
     &.active {

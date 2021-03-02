@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
-import HelpPageLeftBackground from "../assets/images/background/HelpPageLeftBackground.svg"
-import HelpPageRightBackground from "../assets/images/background/HelpPageRightBackground.svg"
+import HelpPageLeftBackground from "../assets/images/background/HelpPageLeftBackground.svg";
+import HelpPageRightBackground from "../assets/images/background/HelpPageRightBackground.svg";
 
 const TraumaticEvents = () => {
   return (
     <StyledSection>
       <HeaderWrapper>
         <HeaderLeftImageWrapper>
-          <img src={HelpPageLeftBackground} alt={"background"}/>
+          <img src={HelpPageLeftBackground} alt={"background"} />
         </HeaderLeftImageWrapper>
-        
+
         <HeaderRightImageWrapper>
-          <img src={HelpPageRightBackground} alt={"background"}/>
+          <img src={HelpPageRightBackground} alt={"background"} />
         </HeaderRightImageWrapper>
       </HeaderWrapper>
 
@@ -22,22 +22,21 @@ const TraumaticEvents = () => {
         <CentralContentWrapper>
           <StyledHeader>Traumatic Events</StyledHeader>
           <TextWrapper>
-              <StyledParagraph>
-                The explosion is a traumatic event. It affected those that were in
-                Beirut at the time, people all over Lebanon, the Lebanese abroad,
-                and those who know someone that was affected.
-              </StyledParagraph>
-              <StyledParagraph>
-                All these individuals, regardless of whether they were in Beirut at
-                the time of the explosion or whether they were directly impacted by
-                the explosion can experience traumatic stress as a result of it.
-              </StyledParagraph>
-              <StyledParagraph>
-                Traumatic stress is changes in how one feels, thinks, or behaves as
-                a result of trauma. It is a normal reaction to an abnormal event.
-              </StyledParagraph>
-            </TextWrapper>
-        </CentralContentWrapper> 
+            <StyledParagraph>
+              Trauma derives from an exposure to an event that can result in
+              changes in feelings, thoughts and/or behaviors. These emotional
+              and physical changes that accompany the symptoms of a traumatic
+              experience constitute a normal reaction to an abnormal event. A
+              trauma is unique, and any distressing event can result in one. It
+              can be widespread, and it can be personal, varying from pandemics,
+              to economic crises, death and abuse. Trauma can also be
+              experienced by watching or helping someone who has been affected
+              by a traumatic event. Each person lives trauma differently, and
+              symptoms or modifications in thoughts, behaviors and emotions vary
+              from one person to another.
+            </StyledParagraph>
+          </TextWrapper>
+        </CentralContentWrapper>
       </CentralWrapper>
     </StyledSection>
   );
@@ -47,44 +46,55 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  @media (max-width: ${devices.mobile}) {
+    margin-top: 15px;
+  }
 `;
 
 const CentralWrapper = styled.div`
-  display: flex; 
-  flex-direction: column; 
-  flex: 1; 
-  z-index: 2; 
-  background-color: transparent; 
-  justify-content: center; 
-  position: absolute; 
-  align-items: flex-start; 
-  height: 363px; 
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  z-index: 2;
+  background-color: transparent;
+  justify-content: center;
+  position: absolute;
+  align-items: flex-start;
+  height: 363px;
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    margin-top: 20px;
-    height: 371px; 
+    height: 482px;
   }
 `;
 
 const CentralContentWrapper = styled.div`
-  display: flex; 
-  flex-direction: column; 
-  background-color: transparent; 
-  margin-left: 16.7%; 
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin-left: 16.7%;
   max-width: 632px;
 
   @media (max-width: ${devices.mobile}) {
-    margin-left:18px;
+    margin-left: 18px;
+    margin-right: 18px;
+    flex: 1;
+    margin-top: 20px;
   }
 `;
 
 const HeaderWrapper = styled.div`
-  display: flex; flex: 1; z-index: 1; justify-content: space-between;
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  justify-content: space-between;
 `;
 
 const HeaderLeftImageWrapper = styled.div`
-  display: flex; flex: 1; justify-content: flex-start; align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
     display: none;
@@ -92,7 +102,10 @@ const HeaderLeftImageWrapper = styled.div`
 `;
 
 const HeaderRightImageWrapper = styled.div`
-  display: flex; flex: 1; justify-content: flex-end; align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
     display: none;
@@ -110,7 +123,7 @@ const StyledSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 416px;
+    height: 482px;
   }
 `;
 
@@ -119,6 +132,10 @@ const StyledHeader = styled.h2`
   font-size: 38px;
   margin: 0;
   color: ${colours.white};
+  @media (max-width: ${devices.mobile}) {
+    font-size: 30px;
+    line-height: 38px;
+  }
 `;
 
 const StyledParagraph = styled.p`

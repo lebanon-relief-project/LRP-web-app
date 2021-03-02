@@ -29,12 +29,25 @@ exports[`the ActionsSection component should match the snapshot 1`] = `
   justify-content: space-between;
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c0 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    min-width: 0;
+  }
+}
+
+@media (max-width:576px) {
+
+}
+
+@media (max-width:576px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 

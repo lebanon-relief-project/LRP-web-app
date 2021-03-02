@@ -2,25 +2,17 @@ import { COS_URL } from "../statics";
 import { CosCredentials } from "../types/Cos";
 
 export function getCosCredentials(): CosCredentials {
-
   const VCAP = JSON.parse(process.env.VCAP_SERVICES);
 
-  if (!VCAP || !VCAP["cloud-object-storage"]) {
+  if (!VCAP) {
     throw new Error("COS credentials missing");
   }
-  
+
   const endpoint = COS_URL;
-  const apikey = VCAP["cloud-object-storage"][0].credentials.apikey;
-  const resourceInstanceId =
-    VCAP["cloud-object-storage"][0].credentials["resource_instance_id"];
-  const accessKeyId =
-    VCAP["cloud-object-storage"][0].credentials["cos_hmac_keys"][
-      "access_key_id"
-    ];
-  const secretAccessKey =
-    VCAP["cloud-object-storage"][0].credentials["cos_hmac_keys"][
-      "secret_access_key"
-    ];
+  const apikey = process.env.COS_CREDS_APIKEY;
+  const resourceInstanceId = process.env.COS_CREDS_RESOURCEINSTANCEID;
+  const accessKeyId = process.env.COS_CREDS_ACCESSKEYID;
+  const secretAccessKey = process.env.COS_CREDS_SECRETACCESSKEY;
 
   return {
     endpoint: endpoint,

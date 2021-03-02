@@ -20,6 +20,10 @@ exports[`the Footer component should match the snapshot 1`] = `
   text-decoration-line: underline;
 }
 
+.c9 {
+  color: #000000;
+}
+
 .c7 {
   margin: 5%;
 }
@@ -119,12 +123,38 @@ exports[`the Footer component should match the snapshot 1`] = `
           <li
             class="c5"
           >
-            Terms & Conditions
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
           </li>
           <li
             class="c5"
           >
-            Privacy policy
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
           </li>
         </ul>
       </div>
@@ -167,9 +197,13 @@ exports[`the Footer component should match the snapshot 1`] = `
             src="Twitter.svg"
           />
         </a>
-        <p>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
           contact@lebanonreliefnetwork.org
-        </p>
+        </a>
       </div>
     </div>
   </section>

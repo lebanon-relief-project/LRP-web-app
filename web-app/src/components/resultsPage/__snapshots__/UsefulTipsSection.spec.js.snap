@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the UsefulTipsSection component should match the snapshot 1`] = `
+.c3 {
+  margin-left: 20px;
+}
+
 .c0 {
   width: 60%;
-  min-width: 960px;
-  min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+  background: #fafafa;
 }
 
 .c1 {
@@ -16,7 +19,6 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: #fafafa;
   border-radius: 8px;
   padding: 5%;
 }
@@ -29,20 +31,46 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
+@media (max-width:1025px) {
+  .c3 {
+    magin-left: 0px;
+  }
+}
+
 @media (max-width:576px) {
+  .c3 {
+    magin-left: 0px;
+  }
+}
+
+@media (max-width:1025px) {
   .c0 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
-@media (max-widthL 576px) {
+@media (max-width:1025px) {
   .c1 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    width: 90%;
   }
 }
 
@@ -60,7 +88,9 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
           A few more useful tips
         </h2>
       </div>
-      <div>
+      <div
+        class="c3"
+      >
         <img
           alt="Person Taking Care"
           src="PersonTakingCare.svg"

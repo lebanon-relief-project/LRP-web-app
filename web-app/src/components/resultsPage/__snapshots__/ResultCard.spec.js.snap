@@ -8,7 +8,6 @@ exports[`the ResultCard component should match the snapshot 1`] = `
   Offset: 0px,1px rgba(0,0,0,0.25) border-radius:10px;
   padding: 6px;
   margin: 10px;
-  min-height: 174px;
 }
 
 <div>
@@ -18,12 +17,16 @@ exports[`the ResultCard component should match the snapshot 1`] = `
     <div
       id="result card"
     >
-      <h4>
+      <h4
+        style="margin: 10px; font-size: 20px;"
+      >
         <b>
           Test title
         </b>
       </h4>
-      <p>
+      <p
+        style="margin: 10px; font-size: 16px;"
+      >
         test body
       </p>
     </div>

@@ -6,7 +6,7 @@ import devices from "../styles/Devices";
 import Instagram from "../assets/images/Instagram.svg";
 import Facebook from "../assets/images/Facebook.svg";
 import Twitter from "../assets/images/Twitter.svg";
-var platform = require('platform');
+var platform = require("platform");
 
 const Footer = () => {
   return (
@@ -14,7 +14,15 @@ const Footer = () => {
       <CardWrapper>
         <FooterLink
           title="Lebanon Relief Network"
-          links={["Terms & Conditions", "Privacy policy"]}
+          links={[
+            { title: "Terms of Use", href: "/terms" },
+            { title: "Privacy policy", href: "/privacy" },
+            {
+              title: "Code Contribution",
+              href:
+                "https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md",
+            },
+          ]}
         />
 
         <CircularLinkWrapper>
@@ -33,7 +41,9 @@ const Footer = () => {
           >
             <StyledImage src={Twitter} alt="Twitter" />
           </StyledAnchor>
-          <p>contact@lebanonreliefnetwork.org</p>
+          <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
+            contact@lebanonreliefnetwork.org
+          </Email>
         </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
@@ -44,8 +54,8 @@ const FBAnchor = () => {
   const os = platform.os.toString();
   const isAndroid = os.match(/android/i);
   const isIOS = os.match(/iOS/i);
-  if (isIOS){
-    return(
+  if (isIOS) {
+    return (
       <StyledAnchor
         href="fb://page/?id=100368885336321"
         target="_blank"
@@ -54,29 +64,32 @@ const FBAnchor = () => {
         <StyledImage src={Facebook} alt="Facebook" />
       </StyledAnchor>
     );
-  } else if (isAndroid){
-      return(
-        <StyledAnchor
-          href="intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <StyledImage src={Facebook} alt="Facebook" />
-        </StyledAnchor>
-      );
+  } else if (isAndroid) {
+    return (
+      <StyledAnchor
+        href="intent://page/100368885336321?referrer=app_link#Intent;package=com.facebook.katana;scheme=fb;end"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StyledImage src={Facebook} alt="Facebook" />
+      </StyledAnchor>
+    );
   } else {
-      return(
-        <StyledAnchor
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <StyledImage src={Facebook} alt="Facebook" />
-        </StyledAnchor>
-      );
+    return (
+      <StyledAnchor
+        href="https://www.facebook.com/Lebanonreliefnetwork"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <StyledImage src={Facebook} alt="Facebook" />
+      </StyledAnchor>
+    );
   }
-}
+};
 
+const Email = styled.a`
+  color: ${colours.black};
+`;
 
 const StyledAnchor = styled.a`
   margin: 5%;

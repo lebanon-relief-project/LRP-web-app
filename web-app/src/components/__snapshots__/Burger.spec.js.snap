@@ -27,7 +27,7 @@ exports[`the Burger component should match the snapshot when open is set to fals
 .c0 span {
   width: 2rem;
   height: 0.25rem;
-  background: black;
+  background: #002766;
   border-radius: 10px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -97,7 +97,7 @@ exports[`the Burger component should match the snapshot when open is set to true
 .c0 span {
   width: 2rem;
   height: 0.25rem;
-  background: black;
+  background: #002766;
   border-radius: 10px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;

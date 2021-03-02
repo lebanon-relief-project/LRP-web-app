@@ -6,10 +6,10 @@ export const ResultCard = ({ title, body, id = "result card" }) => {
     <>
       <Card>
         <div id={id}>
-          <h4>
+          <h4 style={{ margin: "10px", fontSize: 20 }}>
             <b>{title}</b>
           </h4>
-          <p>{body}</p>
+          <p style={{ margin: "10px", fontSize: 16 }}>{body}</p>
         </div>
       </Card>
     </>
@@ -24,7 +24,7 @@ const Card = styled.div`
   border-radius: 10px;
   padding: 6px;
   margin: 10px;
-  min-height: 174px;
+  
 `;
 
 export default ResultCard;

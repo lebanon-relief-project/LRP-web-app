@@ -30,39 +30,60 @@ export const UsefulTipsSection = () => {
               </div>
             ))}
         </div>
-        <div>
+        <ImageDiv>
           <img src={PersonTakingCare} alt={"Person Taking Care"} />
-        </div>
+        </ImageDiv>
       </StyledDiv>
     </Wrapper>
   );
 };
 
+const ImageDiv = styled.div`
+  margin-left: 20px;
+  @media (max-width: ${devices.ipadpro}) {
+    magin-left: 0px;
+  }
+  @media (max-width: ${devices.mobile}) {
+    magin-left: 0px;
+  }
+`;
+
 const Wrapper = styled.div`
   width: 60%;
-  min-width: 960px;
-  min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+  background: ${colours.lightGrey};
 
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipadpro}) {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 const StyledDiv = styled.div`
   display: flex;
-  @media (max-widthL ${devices.mobile}) {
-    flex-direction: column;
-  }
-  background: ${colours.lightGrey};
   border-radius: 8px;
   padding: 5%;
+
+  @media (max-width: ${devices.ipadpro}) {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    margin: 0 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h2`

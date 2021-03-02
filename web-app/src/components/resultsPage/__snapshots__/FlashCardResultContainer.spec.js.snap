@@ -1,14 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCardResultContainer component should match the snapshot 1`] = `
-.c7 {
+.c10 {
   box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   Offset: 0px,1px rgba(0,0,0,0.25) border-radius:10px;
   padding: 6px;
   margin: 10px;
-  min-height: 174px;
+}
+
+.c8 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.c9 {
+  margin: 10px;
+  font-size: 16px;
 }
 
 .c3 {
@@ -16,7 +25,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: auto;
   height: 100%;
   z-index: 1;
   position: absolute;
@@ -60,7 +69,6 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
 }
 
 .c6 {
-  max-width: 632;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,6 +78,12 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.c7 {
+  height: 100px;
+  width: 244px;
+  margin: 10px;
 }
 
 .c4 {
@@ -91,30 +105,76 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
 }
 
 .c5 {
-  color: #002766;
-  font-weight: bold;
-  font-size: 24px;
-  min-width: 270px;
-  text-align: left;
-  padding-left: 24px;
-  padding-top: 30px;
-  padding-bottom: 30px;
   opacity: 0.3;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: inherit;
-  border: none;
-  border-left: solid;
   border-left-color: transparent;
-  border-left-width: 6px;
+}
+
+@media (max-width:1025px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:1025px) {
+  .c2 {
+    border: none;
+    width: 1000px;
+    border-top: 4px solid rgba(255,197,61,0.2);
+  }
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    max-width: 100%;
+    width: auto;
+    height: 78px;
+    overflow: auto;
+  }
+}
+
+@media (max-width:1025px) {
+  .c0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1025px) {
+  .c6 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width:1025px) {
+  .c4 {
+    border: none;
+    border-top: 4px solid #FFC53D;
+    max-width: 100%;
+    padding: 0;
+    min-width: auto;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c5 {
+    opacity: 0.3;
+    border-top: 4px solid transparent;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 <div>
   <div
     class="c0"
   >
-    <div
+    <h1
       class="c1"
     >
       <div
@@ -130,66 +190,90 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
           test title
         </button>
         <button
-          class="c5"
+          class="c4 c5"
           data-testid="flashcardTitleButton_1"
         >
           test title
         </button>
         <button
-          class="c5"
+          class="c4 c5"
           data-testid="flashcardTitleButton_2"
         >
           test title
         </button>
       </div>
-    </div>
+    </h1>
     <div
       class="c6"
     >
-      <div
+      <img
         class="c7"
+        src="feeling-guilty.svg"
+      />
+      <h1
+        class="c8"
+      >
+        Feeling Guilty
+      </h1>
+      <p
+        class="c9"
+      />
+      <div
+        class="c10"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px; font-size: 20px;"
+          >
             <b>
               Allow yourself to feel
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px; font-size: 16px;"
+          >
             It can be helpful for you to accept the feelings that surface by allowing yourself time to process the guilt. This could be achieved by accepting that you are not in control of the event; acknowledging  how you reacted at the time of the event; and understanding that you acted to the best of your ability.
           </p>
         </div>
       </div>
       <div
-        class="c7"
+        class="c10"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px; font-size: 20px;"
+          >
             <b>
               Talk about it
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px; font-size: 16px;"
+          >
             Share your experience, thoughts, and feelings. It's important that you only do so when you feel ready to. This can be a gradual process. Take your time and do it at whatever pace feels comfortable for you.
           </p>
         </div>
       </div>
       <div
-        class="c7"
+        class="c10"
       >
         <div
           id="result card"
         >
-          <h4>
+          <h4
+            style="margin: 10px; font-size: 20px;"
+          >
             <b>
               Try these excercises
             </b>
           </h4>
-          <p>
+          <p
+            style="margin: 10px; font-size: 16px;"
+          >
             Lorem ipsum...
           </p>
         </div>

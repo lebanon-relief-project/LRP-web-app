@@ -4,6 +4,8 @@ import FlashCardsSection from "./FlashCardsSection";
 import "jest-styled-components";
 import { renderWithRouter } from "../util/testUtils";
 import "jest-styled-components";
+import { fireEvent } from "@testing-library/dom";
+import { act } from "react-dom/test-utils";
 
 jest.mock("./FlashCard", (props) => {
   return (props) => <div>flash card {props.card.title}</div>;
@@ -23,6 +25,14 @@ jest.mock("../services/flashCards.service", () => {
   };
 });
 
+jest.mock("./NoCardSelectedModal", () => {
+  return () => <div data-testid="modal">No Card Selected Modal</div>;
+});
+
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe("the FlashCardsSection component", () => {
   let container;
   it("should match the snapshot", async () => {
@@ -30,6 +40,23 @@ describe("the FlashCardsSection component", () => {
     await wait();
     expect(container).toMatchSnapshot();
   });
+
+  it("should open Modal when a card is not selected", async () => {
+    let queryByTestId, getByText;
+    ({ container, queryByTestId, getByText } = renderWithRouter(
+      <FlashCardsSection />
+    ));
+    await wait();
+    expect(queryByTestId("modal")).toBeFalsy();
+
+    act(() => {
+      fireEvent.click(getByText("Give me advice"));
+    });
+
+    expect(queryByTestId("modal")).toBeTruthy();
+  });
+
+  it.todo("should not open Modal when a card is selected");
 
   it.todo("a flashcard should stay flipped round if it has been selected");
 });

@@ -21,8 +21,12 @@ export class CosService {
     logger: LoggerApi
   ) {
     this.logger = logger.child("CosService");
-    this.config = getCosCredentials();
-    this.cos = new S3(this.config);
+    try {
+      this.config = getCosCredentials();
+      this.cos = new S3(this.config);
+    } catch (err) {
+      this.logger.error(`COS FAILED: ${err}`);
+    }
   }
 
   async getImage(imageId: string, bucket: string): Promise<S3.GetObjectOutput> {
