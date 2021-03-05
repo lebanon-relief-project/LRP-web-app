@@ -32,7 +32,7 @@ const TextWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 50%;
+  width: 60%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
@@ -40,10 +40,12 @@ const Wrapper = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     width: auto;
+    width: 75%;
   }
 
   @media (max-width: ${devices.ipad}) {
     margin: 0 30px;
+    width: 90%;
   }
 
   @media (max-width: ${devices.mobile}) {

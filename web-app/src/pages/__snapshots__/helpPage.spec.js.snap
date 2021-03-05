@@ -146,7 +146,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
 }
 
 .c11 {
-  width: 50%;
+  width: 60%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
@@ -238,12 +238,14 @@ exports[`the HelpPage component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c11 {
     width: auto;
+    width: 75%;
   }
 }
 
 @media (max-width:768px) {
   .c11 {
     margin: 0 30px;
+    width: 90%;
   }
 }
 
