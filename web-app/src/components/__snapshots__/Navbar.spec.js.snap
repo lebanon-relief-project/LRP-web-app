@@ -21,7 +21,6 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   min-width: 40%;
 }
@@ -58,7 +57,6 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     -ms-transform: translateX(-100%);
     transform: translateX(-100%);
     height: 100%;
-    padding: 2rem;
     position: fixed;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     -webkit-transition: transform 0.3s ease-in-out;
@@ -71,15 +69,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     font-style: normal;
     font-weight: normal;
     line-height: 38px;
-    -webkit-letter-spacing: 0em;
-    -moz-letter-spacing: 0em;
-    -ms-letter-spacing: 0em;
-    letter-spacing: 0em;
     text-align: left;
-    -webkit-letter-spacing: 0.5rem;
-    -moz-letter-spacing: 0.5rem;
-    -ms-letter-spacing: 0.5rem;
-    letter-spacing: 0.5rem;
     -webkit-text-decoration: none;
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
@@ -90,6 +80,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 @media (max-width:576px) {
   .c1 {
     margin-top: 104px;
+    margin-left: 20px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -181,7 +172,6 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0;
   padding: 0;
   min-width: 40%;
 }
@@ -218,7 +208,6 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     -ms-transform: translateX(0);
     transform: translateX(0);
     height: 100%;
-    padding: 2rem;
     position: fixed;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     -webkit-transition: transform 0.3s ease-in-out;
@@ -231,15 +220,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     font-style: normal;
     font-weight: normal;
     line-height: 38px;
-    -webkit-letter-spacing: 0em;
-    -moz-letter-spacing: 0em;
-    -ms-letter-spacing: 0em;
-    letter-spacing: 0em;
     text-align: left;
-    -webkit-letter-spacing: 0.5rem;
-    -moz-letter-spacing: 0.5rem;
-    -ms-letter-spacing: 0.5rem;
-    letter-spacing: 0.5rem;
     -webkit-text-decoration: none;
     text-decoration: none;
     -webkit-transition: color 0.3s linear;
@@ -250,6 +231,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 @media (max-width:576px) {
   .c1 {
     margin-top: 104px;
+    margin-left: 20px;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;

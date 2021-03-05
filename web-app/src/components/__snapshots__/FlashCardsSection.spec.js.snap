@@ -114,12 +114,11 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
         random title
       </div>
     </div>
-    <a
+    <button
       class="c2"
-      href="/results"
     >
       Give me advice
-    </a>
+    </button>
   </section>
 </div>
 `;

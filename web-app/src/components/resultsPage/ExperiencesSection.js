@@ -87,7 +87,7 @@ const ExperiencesSection = () => {
 const Person = styled.img`
   margin-right: 20px;
   @media (max-width: ${devices.mobile}) {
-    margin-right: 10px;
+    margin-right: 0;
     width: 25px;
   }
 `;
@@ -221,6 +221,11 @@ const StyledDiv = styled.div`
   margin-bottom: 1rem;
   font-size: 16px;
   color: ${colours.white};
+
+  @media (max-width: ${devices.mobile}) {
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 
 export default ExperiencesSection;

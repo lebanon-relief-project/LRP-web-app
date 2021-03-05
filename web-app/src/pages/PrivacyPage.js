@@ -476,6 +476,7 @@ export const PrivacyPage = () => {
             <a
               href="mailto:contact@lebanonreliefnetwork.org"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "inherit" }}
             >
               {" "}
@@ -502,6 +503,7 @@ export const PrivacyPage = () => {
             <a
               href="mailto:contact@lebanonreliefnetwork.org"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "inherit" }}
             >
               {" "}
@@ -572,6 +574,7 @@ export const PrivacyPage = () => {
             <a
               href="mailto:contact@lebanonreliefnetwork.org"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "inherit" }}
             >
               {" "}
@@ -632,6 +635,7 @@ export const PrivacyPage = () => {
             <a
               href="mailto:contact@lebanonreliefnetwork.org"
               target="_blank"
+              rel="noopener noreferrer"
               style={{ color: "inherit" }}
             >
               {" "}
