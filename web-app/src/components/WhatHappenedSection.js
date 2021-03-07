@@ -21,7 +21,7 @@ const WhatHappened = () => {
             Lebanon. 170 people died. Thousands were injured. Even more were
             traumatized. <br /> <br /> Lebanon Relief Network was founded in the
             aftermath of the explosion to improve the lives of people affected
-            by all type of trauma.
+            by all types of trauma.
           </StyledParagraph>
         </StyledTextArea>
       </StyledFlexContainer>

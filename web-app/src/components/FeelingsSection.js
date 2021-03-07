@@ -12,7 +12,7 @@ const FeelingsSection = () => {
           <StyledParagraph>
             If you feel that you are experiencing emotional and physical changes
             since a distressing event, know that you are not alone, and that it
-            is normal to wanting to understand your changes after a traumatic
+            is normal to be wanting to understand your changes after a traumatic
             event. The cards below give you a brief description of what you may
             be experiencing. Please read them and select those that apply to
             you. Once you are done, and want to know more about why you are
