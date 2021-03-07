@@ -8,7 +8,7 @@ const ResultsSection = (params) => {
   return (
     <StyledSection>
       <Wrapper id={"wrapper"}>
-        <StyledHeader>Here’s some things that can help</StyledHeader>
+        <StyledHeader>Here are some things that can help</StyledHeader>
 
         <ContentWrapper id={"content"}>
           {params.results ? (
