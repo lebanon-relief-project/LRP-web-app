@@ -70,7 +70,6 @@ const StyledHeader = styled.h2`
 
 const StyledParagraph = styled.p`
   margin: 0;
-  // margin-bottom: 1rem;
   font-size: 16px;
 `;
 
