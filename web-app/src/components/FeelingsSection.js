@@ -32,11 +32,21 @@ const TextWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 50%;
+  width: 60%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
+
+  @media (max-width: ${devices.ipadpro}) {
+    width: auto;
+    width: 75%;
+  }
+
+  @media (max-width: ${devices.ipad}) {
+    margin: 0 30px;
+    width: 90%;
+  }
 
   @media (max-width: ${devices.mobile}) {
     margin: 25px 18px;
@@ -60,7 +70,6 @@ const StyledHeader = styled.h2`
 
 const StyledParagraph = styled.p`
   margin: 0;
-  margin-bottom: 1rem;
   font-size: 16px;
 `;
 

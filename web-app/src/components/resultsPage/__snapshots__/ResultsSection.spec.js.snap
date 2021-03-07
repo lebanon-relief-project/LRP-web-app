@@ -241,7 +241,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
       <h2
         class="c2"
       >
-        Here’s some things that can help
+        Here are some things that can help
       </h2>
       <div
         class="c3"
