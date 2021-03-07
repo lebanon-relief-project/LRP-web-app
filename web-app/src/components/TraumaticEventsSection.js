@@ -23,17 +23,21 @@ const TraumaticEvents = () => {
           <StyledHeader>Traumatic Events</StyledHeader>
           <TextWrapper>
             <StyledParagraph>
-              Trauma derives from an exposure to an event that can result in
-              changes in feelings, thoughts and/or behaviors. These emotional
-              and physical changes that accompany the symptoms of a traumatic
-              experience constitute a normal reaction to an abnormal event. A
-              trauma is unique, and any distressing event can result in one. It
+              Trauma derives from an exposure to an event resulting in changes
+              of feelings, thoughts or behaviors. These emotional and physical
+              changes accompanying the symptoms of a traumatic experience
+              constitute a normal reaction to an abnormal event.
+            </StyledParagraph>
+            <StyledParagraph>
+              Trauma is unique, and any distressing event can result in it. It
               can be widespread, and it can be personal, varying from pandemics,
-              to economic crises, death and abuse. Trauma can also be
-              experienced by watching or helping someone who has been affected
-              by a traumatic event. Each person lives trauma differently, and
-              symptoms or modifications in thoughts, behaviors and emotions vary
-              from one person to another.
+              to economic crises, death and abuse.
+            </StyledParagraph>
+            <StyledParagraph>
+              Trauma can also be experienced by watching or helping someone who
+              has been affected by a traumatic event. Each person lives trauma
+              differently, and symptoms or modifications in thoughts, behaviors
+              and emotions vary from one person to another.
             </StyledParagraph>
           </TextWrapper>
         </CentralContentWrapper>
@@ -64,7 +68,7 @@ const CentralWrapper = styled.div`
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    height: 482px;
+    height: 542px;
   }
 `;
 
@@ -74,6 +78,10 @@ const CentralContentWrapper = styled.div`
   background-color: transparent;
   margin-left: 16.7%;
   max-width: 632px;
+
+  @media (max-width: ${devices.ipad}) {
+    margin-left: 30px;
+  }
 
   @media (max-width: ${devices.mobile}) {
     margin-left: 18px;
@@ -123,7 +131,7 @@ const StyledSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 482px;
+    height: 542px;
   }
 `;
 
