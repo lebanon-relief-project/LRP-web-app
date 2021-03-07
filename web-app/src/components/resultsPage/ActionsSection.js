@@ -27,7 +27,7 @@ export const ActionSection = () => {
             </StyledParagraph>
           </StyledCard>
           <StyledCard
-            title="Useful exercise"
+            title="Useful exercises"
             buttonText="View exercises"
             externalPath={PDF}
           >

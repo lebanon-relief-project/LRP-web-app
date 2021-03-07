@@ -69,9 +69,9 @@ exports[`the ActionsSection component should match the snapshot 1`] = `
         Support
       </div>
       <div
-        data-testid="Useful exercise"
+        data-testid="Useful exercises"
       >
-        Useful exercise
+        Useful exercises
       </div>
       <div
         data-testid="14 days of wellbeing"

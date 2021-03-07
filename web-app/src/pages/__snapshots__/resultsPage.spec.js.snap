@@ -374,7 +374,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             <legend
               class="c10 c9"
             >
-              Useful exercise
+              Useful exercises
             </legend>
             <p
               class="c11"
