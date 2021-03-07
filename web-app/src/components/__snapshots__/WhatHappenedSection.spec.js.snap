@@ -44,7 +44,6 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   position: relative;
   margin-top: 12%;
   right: 10%;
-  min-width: 40%;
 }
 
 .c2 {

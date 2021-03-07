@@ -33,7 +33,6 @@ const StyledTextArea = styled.div`
   position: relative;
   margin-top: 12%;
   right: 10%;
-  min-width: 40%;
   @media (max-width: ${devices.ipad}) {
     right: 10%;
   }
@@ -55,7 +54,6 @@ const StyledFlexContainer = styled(FlexContainer)`
 
 const StyledCity = styled.img`
   object-fit: contain;
-
   @media (max-width: ${devices.ipad}) {
     width: 80%;
   }

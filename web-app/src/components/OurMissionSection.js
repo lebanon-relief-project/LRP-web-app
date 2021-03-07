@@ -38,7 +38,6 @@ const StyledTextArea = styled.div`
   margin-top: 2%;
   left: 12%;
   width: 50%;
-  min-width: 50%;
   @media (max-width: ${devices.mobile}) {
     position: relative;
     top: 0;
