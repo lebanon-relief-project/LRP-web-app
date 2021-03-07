@@ -180,9 +180,6 @@ const FlashCardImage = styled.img`
   display: flex;
   flex: 1;
   width: 100%;
-  @media (max-width: ${devices.mobile}) {
-    height: 100%;
-  }
 `;
 
 export default FlashCard;
