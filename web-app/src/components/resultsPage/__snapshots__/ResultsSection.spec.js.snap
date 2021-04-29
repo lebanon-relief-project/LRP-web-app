@@ -152,6 +152,18 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 }
 
 @media (max-width:1025px) {
+  .c12 {
+    margin: 18px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c13 {
+    margin: 18px;
+  }
+}
+
+@media (max-width:1025px) {
   .c7 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -189,6 +201,12 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c10 {
     max-width: 100%;
+  }
+}
+
+@media (max-width:1025px) {
+  .c11 {
+    margin: 18px;
   }
 }
 

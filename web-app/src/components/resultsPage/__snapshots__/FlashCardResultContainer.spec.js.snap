@@ -110,6 +110,18 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
 }
 
 @media (max-width:1025px) {
+  .c8 {
+    margin: 18px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c9 {
+    margin: 18px;
+  }
+}
+
+@media (max-width:1025px) {
   .c3 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -147,6 +159,12 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
 @media (max-width:1025px) {
   .c6 {
     max-width: 100%;
+  }
+}
+
+@media (max-width:1025px) {
+  .c7 {
+    margin: 18px;
   }
 }
 
