@@ -23,6 +23,17 @@ const configApiContext = config["context-root"];
 
 const path = require("path");
 
+function requireHTTPS(req, res, next) {
+  if (
+    !req.secure &&
+    req.get("x-forwarded-proto") !== "https" &&
+    !process.env.DEV
+  ) {
+    return res.redirect("https://" + req.get("host") + req.url);
+  }
+  next();
+}
+
 export class ApiServer {
   private readonly app: express.Application;
   private server: http.Server = null;
@@ -41,6 +52,8 @@ export class ApiServer {
       controllers: controllers,
     });
     this.logger.apply(this.app);
+
+    this.app.use(requireHTTPS);
 
     if (!process.env.DEV) {
       this.app.use(express.static(path.join(__dirname, "web-app/")));
