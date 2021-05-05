@@ -109,13 +109,13 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   border-left-color: transparent;
 }
 
-@media (max-width:1025px) {
+@media (max-width:576px) {
   .c8 {
     margin: 18px;
   }
 }
 
-@media (max-width:1025px) {
+@media (max-width:576px) {
   .c9 {
     margin: 18px;
   }
@@ -162,7 +162,7 @@ exports[`the FlashCardResultContainer component should match the snapshot 1`] = 
   }
 }
 
-@media (max-width:1025px) {
+@media (max-width:576px) {
   .c7 {
     margin: 18px;
   }
