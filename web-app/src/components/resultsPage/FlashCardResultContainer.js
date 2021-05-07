@@ -114,10 +114,18 @@ export const FlashCardResultContainer = ({ results }) => {
 const H1 = styled.h1`
   margin-left: 10px;
   font-weight: bold;
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 18px;
+  }
 `;
 const P = styled.p`
   margin: 10px;
   font-size: 16px;
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 18px;
+  }
 `;
 
 const TitlesForeground = styled.div`
@@ -187,6 +195,10 @@ const ResultCardImage = styled.img`
   height: 100px;
   width: 244px;
   margin: 10px;
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 18px;
+  }
 `;
 
 const SelectedStyledFlashCardTitle = styled.button`
