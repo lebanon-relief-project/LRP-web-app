@@ -158,7 +158,8 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 .c9 legend {
-  min-width: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 
 .c7 {
