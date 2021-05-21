@@ -11,6 +11,10 @@ jest.mock("./FlashCard", (props) => {
   return (props) => <div>flash card {props.card.title}</div>;
 });
 
+jest.mock("./LoadingSpinner", () => {
+  return () => <div data-testid="spinner">Loading...</div>;
+});
+
 jest.mock("../services/flashCards.service", () => {
   return {
     getFlashCards: jest.fn().mockResolvedValue({
@@ -54,6 +58,14 @@ describe("the FlashCardsSection component", () => {
     });
 
     expect(queryByTestId("modal")).toBeTruthy();
+  });
+
+  it("should show Spinner when flashcards are loading", async () => {
+    let queryByTestId;
+    ({ container, queryByTestId } = renderWithRouter(<FlashCardsSection />));
+    expect(queryByTestId("spinner")).toBeTruthy();
+    await wait();
+    expect(queryByTestId("spinner")).toBeFalsy();
   });
 
   it.todo("should not open Modal when a card is selected");
