@@ -62,7 +62,7 @@ describe("the FlashCardsSection component", () => {
 
   it("should show Spinner when flashcards are loading", async () => {
     let queryByTestId;
-    ({ container, queryByTestId } = renderWithRouter(<FlashCardsSection />));
+    ({ queryByTestId } = renderWithRouter(<FlashCardsSection />));
     expect(queryByTestId("spinner")).toBeTruthy();
     await wait();
     expect(queryByTestId("spinner")).toBeFalsy();
