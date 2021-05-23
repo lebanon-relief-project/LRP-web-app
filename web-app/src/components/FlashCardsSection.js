@@ -2,20 +2,23 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
+import LoadingSpinner from "./LoadingSpinner";
 import { getFlashCards } from "../services/flashCards.service";
 import devices from "../styles/Devices";
 import { useHistory } from "react-router-dom";
 import NoCardSelectedModal from "./NoCardSelectedModal";
 
 const FlashCardsSection = (props) => {
-  const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] = useState(
-    false
-  );
+  const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] =
+    useState(false);
+
+  const [loading, isLoading] = useState(true);
+
   let history = useHistory();
   const [flashCards, setFlashCards] = useState([]);
   const fetchFlashCards = async () => {
     let response = await getFlashCards();
-
+    isLoading(false);
     setFlashCards(response.cards);
   };
 
@@ -35,20 +38,24 @@ const FlashCardsSection = (props) => {
   return (
     <>
       <StyledSection>
-        <Wrapper>
-          {flashCards.map((flashCard, index) => {
-            return (
-              <FlashCard
-                id={`${flashCard._id}`}
-                key={`${flashCard._id}_${index}`}
-                card={flashCard}
-              />
-            );
-          })}
-        </Wrapper>
-
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          <Wrapper>
+            {flashCards.map((flashCard, index) => {
+              return (
+                <FlashCard
+                  id={`${flashCard._id}`}
+                  key={`${flashCard._id}_${index}`}
+                  card={flashCard}
+                />
+              );
+            })}
+          </Wrapper>
+        )}
         <StyledLink onClick={handleClick}>Give me advice</StyledLink>
       </StyledSection>
+
       {noCardSelectedModalVisible && (
         <NoCardSelectedModal
           closeModal={() => {

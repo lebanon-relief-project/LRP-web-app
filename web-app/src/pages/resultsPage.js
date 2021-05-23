@@ -5,6 +5,7 @@ import ExperiencesSection from "../components/resultsPage/ExperiencesSection";
 import ResultsSection from "../components/resultsPage/ResultsSection";
 import UsefulTipsSection from "../components/resultsPage/UsefulTipsSection";
 import ActionsSection from "../components/resultsPage/ActionsSection";
+import LoadingSpinner from "../components/LoadingSpinner";
 import { getCardIdsFromSessionStorage } from "../util/util";
 import { getResults } from "../services/results.service";
 import { useHistory } from "react-router-dom";
@@ -43,7 +44,13 @@ const ResultsPage = () => {
         <div style={{ width: "100%" }}>
           <ExperiencesSection />
 
-          {results ? <ResultsSection results={results} /> : <></>}
+          {results ? (
+            <ResultsSection results={results} />
+          ) : (
+            <SpinnerWrapper>
+              <LoadingSpinner />
+            </SpinnerWrapper>
+          )}
           <UsefulTipsSection />
           <ActionsSection />
         </div>
@@ -61,6 +68,12 @@ const StyledPage = styled.div`
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
   }
+`;
+
+const SpinnerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default ResultsPage;
