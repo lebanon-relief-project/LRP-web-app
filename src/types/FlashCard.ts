@@ -52,3 +52,8 @@ export interface ResultsResponseCloudantResponse {
 export interface ResultsResponse {
   results: Result[];
 }
+
+export interface FlashCardSelection {
+  selected: string[];
+  timeStamp: Date;
+}
