@@ -5,6 +5,7 @@ import { Service, Inject } from "typedi";
 import { CloudantService } from ".";
 import { FlashCardServiceApi } from "./flashcard.service.api";
 import { FlashCardSelection } from "../types/FlashCard";
+import { CLOUDANT_FLASHCARD_SELECT_DB_DEV } from "../statics";
 
 @Service()
 export class FlashCardService implements FlashCardServiceApi {
@@ -19,7 +20,9 @@ export class FlashCardService implements FlashCardServiceApi {
     this.logger = logger.child("HelpService");
 
     try {
-      this.flashCardSelectionsDb = cloudant.use("dev_flashcard_select");
+      this.flashCardSelectionsDb = cloudant.use(
+        CLOUDANT_FLASHCARD_SELECT_DB_DEV
+      );
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerError("Cloudant unavailable");
