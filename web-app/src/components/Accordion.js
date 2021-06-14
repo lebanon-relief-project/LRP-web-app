@@ -40,10 +40,7 @@ const Flexbox = styled.div`
 
 const Chevron = styled.div`
   transform: ${({ expanded }) => (expanded ? "rotate(90deg)" : "rotate(0)")};
-
   margin-top: 10px;
-  width: 0;
-  height: 0;
   border-top: 10px solid transparent;
   border-left: 10px solid black;
   border-bottom: 10px solid transparent;
