@@ -74,6 +74,7 @@ const StyledButton = styled.button`
 
     :hover{
         background: ${colours.blue};
+        cursor:pointer;
     }
 
     display: flex;

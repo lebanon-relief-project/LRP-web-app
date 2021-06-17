@@ -74,6 +74,7 @@ exports[`the ContactUsSection component should match the snapshot 1`] = `
 
 .c3:hover {
   background: #003A8C;
+  cursor: pointer;
 }
 
 @media (max-width:576px) {

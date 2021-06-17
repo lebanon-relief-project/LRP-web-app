@@ -243,6 +243,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
 
 .c18:hover {
   background: #003A8C;
+  cursor: pointer;
 }
 
 .c0 {
