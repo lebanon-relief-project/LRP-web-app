@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ContactUsSection component should match the snapshot 1`] = `
+.c2 {
+  padding: 30px;
+  -webkit-flex-basis: 90%;
+  -ms-flex-preferred-size: 90%;
+  flex-basis: 90%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 10%;
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+  max-height: 120px;
+  max-width: 120px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-right: 30px;
+}
+
+.c1 {
+  width: 70%;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 {
+  margin: 29px 0px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c3 {
+  background: #002766;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.043);
+  border-radius: 2px;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.c3:hover {
+  background: #003A8C;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-top: -40px;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 12px;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h3>
+          Feel like we've missed something?
+        </h3>
+        <p>
+          Get in contact with us and we will do our best to support you with how you’re feeling.
+        </p>
+        <button
+          class="c3"
+        >
+          Contact Us
+        </button>
+      </div>
+      <div
+        class="c4"
+      >
+        <svg
+          style="height: auto; width: auto;"
+        >
+          Illustration4.svg
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

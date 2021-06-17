@@ -5,6 +5,7 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   color: inherit;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
+  margin-top: 12px;
   padding: 0.5rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -15,13 +16,12 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   background-color: #FFD666;
-  width: 13.875rem;
+  width: 70%;
   height: 2.625rem;
   font-size: 1rem;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin: 3.375rem 16.7%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
   box-shadow: 0px 2px 0px rgba(0,0,0,0.043);
   border-radius: 2px;
   outline: none;
@@ -74,6 +74,9 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -89,16 +92,21 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+    margin: 0px 12px;
   }
 }
 
-@media (max-width:1025px) {
+@media (max-width:768px) {
   .c1 {
     width: 100%;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    max-height: unset !important;
   }
 }
 
