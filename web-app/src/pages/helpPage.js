@@ -2,6 +2,7 @@ import React from "react";
 import TraumaticEventsSection from "../components/TraumaticEventsSection";
 import FeelingsSection from "../components/FeelingsSection";
 import FlashCardsSection from "../components/FlashCardsSection";
+import ContactUsSection from "../components/ContactUsSection";
 import styled from "styled-components";
 
 const HelpPage = () => {
@@ -11,6 +12,7 @@ const HelpPage = () => {
         <TraumaticEventsSection />
         <FeelingsSection />
         <FlashCardsSection />
+        <ContactUsSection />
       </div>
     </StyledPage>
   );

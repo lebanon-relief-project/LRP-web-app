@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import colours from "../styles/Colours";
 import FlashCard from "./FlashCard";
@@ -7,12 +7,16 @@ import { getFlashCards } from "../services/flashCards.service";
 import devices from "../styles/Devices";
 import { useHistory } from "react-router-dom";
 import NoCardSelectedModal from "./NoCardSelectedModal";
+import { consoleTestResultHandler } from "tslint/lib/test";
 
 const FlashCardsSection = (props) => {
   const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] =
     useState(false);
 
   const [loading, isLoading] = useState(true);
+
+  const [cardWrapperHeight, setCardWrapperHeight] = useState("100%")
+  const cardWrapperRef = useRef(null)
 
   let history = useHistory();
   const [flashCards, setFlashCards] = useState([]);
@@ -35,13 +39,35 @@ const FlashCardsSection = (props) => {
     }
   };
 
+  //Calculate height of the card container div
+  useEffect(() => {
+    function setHeight(){
+      setCardWrapperHeight(undefined);
+      let height =  cardWrapperRef?.current?.getBoundingClientRect()?.height
+
+      if(height > 0){
+        if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadpro.replace("px","") ){
+          console.log("2 Columns")
+          setCardWrapperHeight(height*0.6)
+        }else{
+          console.log("3 Columns")
+          setCardWrapperHeight(height*0.4)
+        }
+        
+      }
+
+    }
+    setHeight();
+    window.addEventListener('resize',  setHeight);
+  }, [flashCards]);
+
   return (
     <>
       <StyledSection>
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <Wrapper>
+          <Wrapper style={{maxHeight: cardWrapperHeight}} ref={cardWrapperRef}>
             {flashCards.map((flashCard, index) => {
               return (
                 <FlashCard
@@ -76,15 +102,15 @@ const StyledLink = styled.button`
     text-decoration: none;
     color: inherit;
   }
+  margin-top: 12px;
   padding: 0.5rem;
   justify-content: center;
   display: flex;
   background-color: ${colours.yellow};
-  width: 13.875rem;
+  width: 70%;
   height: 2.625rem;
   font-size: 1rem;
-  align-self: flex-end;
-  margin: 3.375rem 16.7%;
+  align-self: center;
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
   border-radius: 2px;
   outline: none;
@@ -98,6 +124,8 @@ const StyledLink = styled.button`
   @media (max-width: ${devices.mobile}) {
     margin: 3.375rem 0;
     align-self: center;
+    width: fill-available;
+    margin: 0px 12px;
   }
 `;
 
@@ -117,11 +145,13 @@ const Wrapper = styled.div`
   margin: 0 auto;
   background: inherit;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  @media (max-width: ${devices.ipadpro}) {
+  @media (max-width: ${devices.ipad}) {
     width: 100%;
     justify-content: center;
+    max-height:  unset !important
   }
 `;
 
