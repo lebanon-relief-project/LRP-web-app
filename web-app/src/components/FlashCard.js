@@ -115,6 +115,10 @@ const Wrapper = styled.div`
 
   padding-bottom:30px;
 
+  @media (min-width: ${devices.ipad}) and (max-width: ${devices.ipadpro}) {
+    width: 50%;
+  }
+
   @media (max-width: ${devices.ipad}) {
     width: unset;
   }
@@ -141,6 +145,7 @@ const FlashCardImage = styled.img`
   flex: 1;*/
   /*width: 100%;*/;
   height: 100%;
+  max-width: 80%;
   padding-left: 30px;
   padding-top: 30px;
 
