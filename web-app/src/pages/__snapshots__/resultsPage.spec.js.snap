@@ -2,7 +2,7 @@
 
 exports[`the ResultsPage component should match the snapshot 1`] = `
 .c4 {
-  padding: 0 1%;
+  padding: 0 12px;
 }
 
 .c3 {

@@ -29,7 +29,7 @@ const Accordion = (props) => {
 };
 
 const StyledDiv = styled.div`
-  padding: 0 1%;
+  padding: 0 12px;
 `;
 
 const Flexbox = styled.div`
