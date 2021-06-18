@@ -46,10 +46,10 @@ export const UsefulTipsSection = () => {
 const ImageDiv = styled.div`
   margin-left: 20px;
   @media (max-width: ${devices.ipadpro}) {
-    magin-left: 0px;
+    margin-left: 0px;
   }
   @media (max-width: ${devices.mobile}) {
-    magin-left: 0px;
+    margin-left: 0px;
   }
 `;
 
