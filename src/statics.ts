@@ -4,6 +4,8 @@ export const CLOUDANT_RESULTS_DB_DEV = "flashcard_results";
 export const CLOUDANT_PERCENTAGE_DB_DEV = "experience_percentages";
 export const CLOUDANT_USEFUL_TIPS_DB_DEV = "useful_tips";
 export const CLOUDANT_FLASHCARD_SELECT_DB_DEV = "dev_flashcard_select";
+export const CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV =
+  "dev_flashcard_select_counts";
 
 // CONTENT
 export const COS_FLASHCARD_IMAGE_BUCKET = "lrn-flashcard-images";

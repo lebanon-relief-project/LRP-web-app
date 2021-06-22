@@ -8,7 +8,10 @@ import {
   FlashCardSelection,
   FlashCardSelectionCloudant,
 } from "../types/FlashCard";
-import { CLOUDANT_FLASHCARD_SELECT_DB_DEV } from "../statics";
+import {
+  CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV,
+  CLOUDANT_FLASHCARD_SELECT_DB_DEV,
+} from "../statics";
 
 @Service("FlashCardService")
 export class FlashCardService implements FlashCardServiceApi {
@@ -28,7 +31,7 @@ export class FlashCardService implements FlashCardServiceApi {
         CLOUDANT_FLASHCARD_SELECT_DB_DEV
       );
       this.flashCardSelectionsCountsDb = cloudant.use(
-        "dev_flashcard_select_counts"
+        CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV
       );
     } catch (err) {
       this.logger.error(err);
