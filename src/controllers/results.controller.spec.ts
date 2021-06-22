@@ -18,7 +18,7 @@ class MockFlashCardService {
 }
 
 Container.set(ResultsService, new MockResultsService());
-Container.set(FlashCardService, new MockFlashCardService());
+Container.set("FlashCardService", new MockFlashCardService());
 
 afterEach(() => {
   jest.clearAllMocks();

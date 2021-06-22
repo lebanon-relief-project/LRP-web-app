@@ -6,8 +6,12 @@ import { FlashCardService } from ".";
 import { FlashCardSelection } from "../types/FlashCard";
 
 const mockResponse = jest.fn();
+const mockGet = jest.fn();
+const mockList = jest.fn();
 class MockDb implements Partial<DocumentScope<FlashCardSelection>> {
   insert = mockResponse;
+  get = mockGet;
+  list = mockList;
 }
 
 Container.set("logger", new MockLogger());
@@ -66,6 +70,114 @@ describe("The Flashcard service", () => {
       });
 
       result = await flashcardService.storeSelections(sampleSelections);
+
+      expect(result).toEqual(false);
+    });
+  });
+
+  describe("the countSelections function", () => {
+    beforeEach(() => {
+      mockResponse.mockResolvedValue(undefined);
+      mockGet.mockResolvedValue({
+        _id: "some id",
+        _rev: "some rev",
+        counts: {
+          id1: 10,
+          id2: 20,
+        },
+      });
+      mockList.mockResolvedValue({
+        rows: [
+          {
+            doc: {
+              selected: ["id1", "id2"],
+              counted: false,
+            },
+          },
+          {
+            doc: {
+              selected: ["id3", "id4"],
+              counted: false,
+            },
+          },
+        ],
+      });
+      process.env.FLASHCARD_COUNTS_DB_DOC_ID = "test id";
+    });
+
+    it("should get object that stores count results", async () => {
+      result = await flashcardService.countSelections();
+
+      expect(mockGet).toHaveBeenCalledWith("test id");
+    });
+
+    it("should get all the flashCard selections", async () => {
+      result = await flashcardService.countSelections();
+
+      expect(mockList).toHaveBeenCalledTimes(1);
+    });
+
+    it("should try to update selection when its counted", async () => {
+      result = await flashcardService.countSelections();
+
+      expect(mockResponse).toHaveBeenNthCalledWith(1, {
+        selected: ["id1", "id2"],
+        counted: true,
+      });
+
+      expect(mockResponse).toHaveBeenNthCalledWith(2, {
+        selected: ["id3", "id4"],
+        counted: true,
+      });
+    });
+
+    it("should store the counts in database", async () => {
+      result = await flashcardService.countSelections();
+
+      expect(mockResponse).toHaveBeenNthCalledWith(3, {
+        _id: "some id",
+        _rev: "some rev",
+        counts: {
+          id1: 11,
+          id2: 21,
+          id3: 1,
+          id4: 1,
+        },
+      });
+    });
+
+    it("should return true if everything was successfull", async () => {
+      result = await flashcardService.countSelections();
+
+      expect(result).toEqual(true);
+    });
+
+    it("should return false when getting count object has failed", async () => {
+      mockGet.mockImplementation(() => {
+        throw new Error("some ugly get error");
+      });
+
+      result = await flashcardService.countSelections();
+
+      expect(result).toEqual(false);
+    });
+
+    it("should return false when listing selections has failed", async () => {
+      mockList.mockImplementation(() => {
+        throw new Error("some ugly list error");
+      });
+
+      result = await flashcardService.countSelections();
+
+      expect(result).toEqual(false);
+    });
+
+    it("should return false when inserting records into the database fails", async () => {
+      mockResponse.mockImplementation(() => {
+        throw new Error("some ugly list error");
+      });
+
+      result = await flashcardService.countSelections();
 
       expect(result).toEqual(false);
     });

@@ -15,7 +15,7 @@ export class ResultsController {
   @Inject()
   service: ResultsService;
 
-  @Inject()
+  @Inject("FlashCardService")
   flashcardService: FlashCardService;
 
   @Inject("logger")
