@@ -7,6 +7,7 @@ import { FlashCardServiceApi } from "./flashcard.service.api";
 import {
   FlashCardSelection,
   FlashCardSelectionCloudant,
+  FlashCardSelectionCount,
 } from "../types/FlashCard";
 import {
   CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV,
@@ -17,7 +18,7 @@ import {
 export class FlashCardService implements FlashCardServiceApi {
   private logger: LoggerApi;
   private flashCardSelectionsDb: DocumentScope<FlashCardSelection>;
-  private flashCardSelectionsCountsDb: DocumentScope<any>;
+  private flashCardSelectionsCountsDb: DocumentScope<FlashCardSelectionCount>;
 
   constructor(
     @Inject("logger")

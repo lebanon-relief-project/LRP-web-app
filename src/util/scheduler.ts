@@ -6,10 +6,11 @@ var CronJob = require("cron").CronJob;
 var flashCardService: FlashCardService = Container.get("FlashCardService");
 
 export function scheduleJob(): void {
+  
   var job = new CronJob(
     "00 00 * * *",
     async function () {
-      console.log("You will see this message every second!!!");
+      console.log("counting started");
       try {
         let result = await flashCardService.countSelections();
         if (result) {
@@ -24,4 +25,5 @@ export function scheduleJob(): void {
     "Europe/London"
   );
   job.start();
+  console.log("job was scheduled successfully");
 }

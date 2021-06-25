@@ -62,3 +62,11 @@ export interface FlashCardSelection {
 export interface FlashCardSelectionCloudant
   extends BaseCloudantDocument,
     FlashCardSelection {}
+
+export interface FlashCardSelectionCount {
+  counts: { [key: string]: number };
+}
+
+export interface FlashCardSelectionCountCloudant
+  extends BaseCloudantDocument,
+    FlashCardSelectionCount {}
