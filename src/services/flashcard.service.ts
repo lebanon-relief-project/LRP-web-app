@@ -61,8 +61,6 @@ export class FlashCardService implements FlashCardServiceApi {
         process.env.FLASHCARD_COUNTS_DB_DOC_ID
       );
 
-      console.log(JSON.stringify(temp, null, 4));
-
       if (!temp) {
         throw new Error();
       }
@@ -95,7 +93,7 @@ export class FlashCardService implements FlashCardServiceApi {
             await this.flashCardSelectionsDb.insert(entry);
           }
         }
-        console.log("counted: " + i);
+
         await timer(200);
       }
 
@@ -114,7 +112,7 @@ export class FlashCardService implements FlashCardServiceApi {
 
       return true;
     } catch (error) {
-      console.error(error);
+      this.logger.error("FlashCardService: " + error);
       return false;
     }
   }
