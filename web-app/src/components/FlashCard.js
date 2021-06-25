@@ -11,8 +11,6 @@ import { checkIfCardIsInSessionStorage } from "../util/util";
 const FlashCard = ({ card, id }) => {
   const [selected, setSelected] = useState(checkIfCardIsInSessionStorage(id));
 
-  const { transform, opacity } = {transform: undefined, opacity: 1}
-
   // This function is called when the user clicks the plus or tick button
   // The conditional logic is reversed because useState is async
   const cardSelectHandler = () => {
@@ -60,7 +58,7 @@ const FlashCard = ({ card, id }) => {
           }}
         >
           <CardTitleWrapper>{card.title}</CardTitleWrapper>
-          <CardTextWrapper>{card.body}</CardTextWrapper>
+          <CardTextWrapper selected={selected}>{card.body}</CardTextWrapper>
         </a.div>
       </>
     );
@@ -76,14 +74,14 @@ const FlashCard = ({ card, id }) => {
 };
 
 const CardTextWrapper = styled.div`
-  @media (max-width: ${devices.mobile}) {
-    font-size: 18px;
-  }
+  font-size: 16px;
+
+  font-weight: ${props => props.selected == true ? "600" : "initial"};
 `;
 
 const CardTitleWrapper = styled.h3`
   font-size:  24px;
-  
+  font-weight: 700;
 `;
 
 const StyledHeader = styled.h1`
