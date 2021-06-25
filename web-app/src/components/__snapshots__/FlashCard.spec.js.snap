@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCard component should match the snapshot 1`] = `
-
 .c6 {
   font-size: 16px;
   font-weight: initial;
@@ -70,13 +69,6 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   padding-left: 30px;
   padding-top: 30px;
 }
-
-@media (max-width:576px) {
-  .c1 {
-    font-size: 18px;
-  }
-}
-
 
 @media (max-width:576px) {
   .c1 {

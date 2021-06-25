@@ -84,11 +84,6 @@ const CardTitleWrapper = styled.h3`
   font-weight: 700;
 `;
 
-const CardTitleWrapper = styled.h3`
-  font-size:  24px;
-  
-`;
-
 const StyledHeader = styled.h1`
   font-size: 1rem;
   display: flex;
