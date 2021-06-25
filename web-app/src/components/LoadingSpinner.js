@@ -9,6 +9,7 @@ const LoadingSpinner = () => {
 const StyledLoadingSpinner = styled.img`
   heigth: auto;
   width: 10%;
+  align-self: center;
 `;
 
 export default LoadingSpinner;
