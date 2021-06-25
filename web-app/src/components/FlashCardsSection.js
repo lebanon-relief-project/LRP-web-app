@@ -149,6 +149,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
+
   @media (max-width: ${devices.ipad}) {
     width: 100%;
     justify-content: center;

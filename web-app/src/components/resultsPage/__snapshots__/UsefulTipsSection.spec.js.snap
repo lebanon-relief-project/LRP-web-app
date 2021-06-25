@@ -2,13 +2,33 @@
 
 exports[`the UsefulTipsSection component should match the snapshot 1`] = `
 .c3 {
-  margin-left: 20px;
+  padding: 0 12px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.c4 {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  margin-top: 10px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid black;
+  border-bottom: 10px solid transparent;
 }
 
 .c0 {
   width: 60%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
   background: #fafafa;
@@ -20,10 +40,10 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
-  padding: 5%;
+  padding: 3%;
 }
 
-.c2 {
+.c5 {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
@@ -32,22 +52,9 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
 }
 
 @media (max-width:1025px) {
-  .c3 {
-    magin-left: 0px;
-  }
-}
-
-@media (max-width:576px) {
-  .c3 {
-    magin-left: 0px;
-  }
-}
-
-@media (max-width:1025px) {
   .c0 {
     margin: 25px 18px;
     padding-top: 0px;
-    padding-bottom: 0px;
     width: auto;
     max-width: 100%;
     padding: 0;
@@ -81,20 +88,31 @@ exports[`the UsefulTipsSection component should match the snapshot 1`] = `
     <div
       class="c1"
     >
-      <div>
-        <h2
-          class="c2"
-        >
-          A few more useful tips
-        </h2>
-      </div>
       <div
-        class="c3"
+        class="c2"
       >
-        <img
-          alt="Person Taking Care"
-          src="PersonTakingCare.svg"
-        />
+        <div
+          class="c3"
+        >
+          <div
+            class="c4"
+            data-testid="chevron"
+          />
+        </div>
+        <div
+          class="c3"
+        >
+          <h2
+            class="c5"
+          >
+            A few more useful tips
+          </h2>
+          <p
+            data-testid="arrowText"
+          >
+            Click the arrow to show more things you can do.
+          </p>
+        </div>
       </div>
     </div>
   </div>

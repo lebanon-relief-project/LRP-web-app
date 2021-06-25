@@ -4,6 +4,7 @@ import colours from "../../styles/Colours";
 import devices from "../../styles/Devices";
 import PersonTakingCare from "../../assets/images/PersonTakingCare.svg";
 import { getUsefulTips } from "../../services/results.service";
+import Accordion from "../Accordion";
 
 export const UsefulTipsSection = () => {
   const [usefulTips, setUsefulTips] = useState();
@@ -20,19 +21,23 @@ export const UsefulTipsSection = () => {
   return (
     <Wrapper>
       <StyledDiv>
-        <div>
-          <Title>A few more useful tips</Title>
-          {usefulTips &&
+        <Accordion
+          title={<Title>A few more useful tips</Title>}
+          content={
+            usefulTips &&
             usefulTips.usefulTips.map((tip, i) => (
               <div key={i}>
                 <h3>{tip.title}</h3>
                 <p>{tip.body}</p>
               </div>
-            ))}
-        </div>
-        <ImageDiv>
-          <img src={PersonTakingCare} alt={"Person Taking Care"} />
-        </ImageDiv>
+            ))
+          }
+          image={
+            <ImageDiv>
+              <img src={PersonTakingCare} alt={"Person Taking Care"} />
+            </ImageDiv>
+          }
+        />
       </StyledDiv>
     </Wrapper>
   );
@@ -41,17 +46,16 @@ export const UsefulTipsSection = () => {
 const ImageDiv = styled.div`
   margin-left: 20px;
   @media (max-width: ${devices.ipadpro}) {
-    magin-left: 0px;
+    margin-left: 0px;
   }
   @media (max-width: ${devices.mobile}) {
-    magin-left: 0px;
+    margin-left: 0px;
   }
 `;
 
 const Wrapper = styled.div`
   width: 60%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
   background: ${colours.lightGrey};
@@ -59,7 +63,6 @@ const Wrapper = styled.div`
   @media (max-width: ${devices.ipadpro}) {
     margin: 25px 18px;
     padding-top: 0px;
-    padding-bottom: 0px;
     width: auto;
     max-width: 100%;
     padding: 0;
@@ -70,7 +73,7 @@ const Wrapper = styled.div`
 const StyledDiv = styled.div`
   display: flex;
   border-radius: 8px;
-  padding: 5%;
+  padding: 3%;
 
   @media (max-width: ${devices.ipadpro}) {
     flex-direction: column;
