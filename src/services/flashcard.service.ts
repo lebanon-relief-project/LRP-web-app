@@ -72,7 +72,7 @@ export class FlashCardService implements FlashCardServiceApi {
       );
 
       if (!results || !counterObjectDB) {
-        throw new Error();
+        throw new Error("failed to get database objects");
       }
 
       const timer = (ms) => new Promise((res) => setTimeout(res, ms));
