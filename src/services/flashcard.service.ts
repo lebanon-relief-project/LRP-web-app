@@ -14,6 +14,10 @@ import {
   CLOUDANT_FLASHCARD_SELECT_DB_DEV,
 } from "../statics";
 
+const insertInterval: number = 200;
+const viewName: string = "selections_by_counted";
+const designName: string = "selections_by_counted";
+
 @Service("FlashCardService")
 export class FlashCardService implements FlashCardServiceApi {
   private logger: LoggerApi;
@@ -57,19 +61,17 @@ export class FlashCardService implements FlashCardServiceApi {
     try {
       let countObj: { [key: string]: number } = {};
 
-      let temp = await this.flashCardSelectionsCountsDb.get(
+      let counterObjectDB = await this.flashCardSelectionsCountsDb.get(
         process.env.FLASHCARD_COUNTS_DB_DOC_ID
       );
 
-      if (!temp) {
-        throw new Error();
-      }
+      let results = await this.flashCardSelectionsDb.view(
+        designName,
+        viewName,
+        { include_docs: true }
+      );
 
-      let results = await this.flashCardSelectionsDb.list({
-        include_docs: true,
-      });
-
-      if (!results) {
+      if (!results || !counterObjectDB) {
         throw new Error();
       }
 
@@ -94,21 +96,21 @@ export class FlashCardService implements FlashCardServiceApi {
           }
         }
 
-        await timer(200);
+        await timer(insertInterval);
       }
 
       for (var key in countObj) {
         if (countObj.hasOwnProperty(key)) {
-          if (!temp.counts) {
-            temp.counts = {};
+          if (!counterObjectDB.counts) {
+            counterObjectDB.counts = {};
           }
-          temp.counts[key] = temp.counts[key]
-            ? temp.counts[key] + countObj[key]
+          counterObjectDB.counts[key] = counterObjectDB.counts[key]
+            ? counterObjectDB.counts[key] + countObj[key]
             : countObj[key];
         }
       }
 
-      await this.flashCardSelectionsCountsDb.insert(temp);
+      await this.flashCardSelectionsCountsDb.insert(counterObjectDB);
 
       return true;
     } catch (error) {

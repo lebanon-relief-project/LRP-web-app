@@ -7,11 +7,11 @@ import { FlashCardSelection } from "../types/FlashCard";
 
 const mockResponse = jest.fn();
 const mockGet = jest.fn();
-const mockList = jest.fn();
+const mockView = jest.fn();
 class MockDb implements Partial<DocumentScope<FlashCardSelection>> {
   insert = mockResponse;
   get = mockGet;
-  list = mockList;
+  view = mockView;
 }
 
 Container.set("logger", new MockLogger());
@@ -86,7 +86,7 @@ describe("The Flashcard service", () => {
           id2: 20,
         },
       });
-      mockList.mockResolvedValue({
+      mockView.mockResolvedValue({
         rows: [
           {
             doc: {
@@ -114,7 +114,12 @@ describe("The Flashcard service", () => {
     it("should get all the flashCard selections", async () => {
       result = await flashcardService.countSelections();
 
-      expect(mockList).toHaveBeenCalledTimes(1);
+      expect(mockView).toHaveBeenCalledTimes(1);
+      expect(mockView).toHaveBeenCalledWith(
+        "selections_by_counted",
+        "selections_by_counted",
+        { include_docs: true }
+      );
     });
 
     it("should try to update selection when its counted", async () => {
@@ -163,7 +168,7 @@ describe("The Flashcard service", () => {
     });
 
     it("should return false when listing selections has failed", async () => {
-      mockList.mockImplementation(() => {
+      mockView.mockImplementation(() => {
         throw new Error("some ugly list error");
       });
 
