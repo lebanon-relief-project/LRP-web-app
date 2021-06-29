@@ -1,7 +1,6 @@
 import Container from "typedi";
 import { CloudantService, FlashCardService } from "../services";
-
-var CronJob = require("cron").CronJob;
+import { CronJob } from "cron";
 
 var flashCardService: FlashCardService = Container.get("FlashCardService");
 
