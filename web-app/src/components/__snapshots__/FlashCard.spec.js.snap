@@ -1,9 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the FlashCard component should match the snapshot 1`] = `
+.c7 {
+  height: 0px;
+}
+
 .c6 {
   font-size: 16px;
   font-weight: initial;
+}
+
+.c6:after {
+  display: block;
+  content: "text 1";
+  font-weight: bold;
+  overflow: visible;
+  visibility: hidden;
 }
 
 .c5 {
@@ -31,7 +43,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
 
 .c0 {
   background-color: #ffffff;
-  width: 30%;
+  width: calc(33% - 12px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,7 +53,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin: 12px;
+  margin: 12px 0px;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
   padding-bottom: 30px;
 }
@@ -78,6 +90,7 @@ exports[`the FlashCard component should match the snapshot 1`] = `
 
 @media (min-width:768px) and (max-width:1025px) {
   .c0 {
+    margin-right: 12px;
     width: 50%;
   }
 }
@@ -123,7 +136,11 @@ exports[`the FlashCard component should match the snapshot 1`] = `
       <div
         class="c6"
       >
-        text 1
+        <p
+          class="c7"
+        >
+          text 1
+        </p>
       </div>
     </div>
   </div>

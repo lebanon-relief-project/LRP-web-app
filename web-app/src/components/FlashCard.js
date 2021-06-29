@@ -58,7 +58,9 @@ const FlashCard = ({ card, id }) => {
           }}
         >
           <CardTitleWrapper>{card.title}</CardTitleWrapper>
-          <CardTextWrapper selected={selected}>{card.body}</CardTextWrapper>
+          <CardTextWrapper selected={selected}  cardText={card.body}>
+            <CardTextHolder>{card.body}</CardTextHolder>
+          </CardTextWrapper>
         </a.div>
       </>
     );
@@ -73,10 +75,23 @@ const FlashCard = ({ card, id }) => {
   );
 };
 
+const CardTextHolder =  styled.p`
+  height:  0px;
+`
+
 const CardTextWrapper = styled.div`
   font-size: 16px;
 
   font-weight: ${props => props.selected == true ? "600" : "initial"};
+
+  /* Pseudo Div to take up  space of the bold text */
+  :after{
+    display:block;
+    content: "${props => props.cardText}";
+    font-weight: bold;
+    overflow:  visible;
+    visibility: hidden;
+  }
 `;
 
 const CardTitleWrapper = styled.h3`
@@ -99,12 +114,12 @@ const StyledHeader = styled.h1`
 
 const Wrapper = styled.div`
   background-color: ${colours.white};
-  width: 30%;
+  width: calc(33% - 12px);
   display: flex;
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin: 12px;
+  margin: 12px 0px;
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   :hover{
@@ -114,6 +129,7 @@ const Wrapper = styled.div`
   padding-bottom:30px;
 
   @media (min-width: ${devices.ipad}) and (max-width: ${devices.ipadpro}) {
+    margin-right: 12px;
     width: 50%;
   }
 
