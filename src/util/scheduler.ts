@@ -6,9 +6,8 @@ var CronJob = require("cron").CronJob;
 var flashCardService: FlashCardService = Container.get("FlashCardService");
 
 export function scheduleJob(): void {
-  
   var job = new CronJob(
-    "00 00 * * *",
+    "* 22 2 * * *",
     async function () {
       console.log("counting started");
       try {
