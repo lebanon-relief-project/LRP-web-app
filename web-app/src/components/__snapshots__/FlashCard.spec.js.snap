@@ -88,10 +88,9 @@ exports[`the FlashCard component should match the snapshot 1`] = `
   }
 }
 
-@media (min-width:768px) and (max-width:1025px) {
+@media (min-width:768px) and (max-width:1366px) {
   .c0 {
-    margin-right: 12px;
-    width: 50%;
+    width: calc(50% - 12px);
   }
 }
 

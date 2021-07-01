@@ -167,9 +167,21 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:1366px) {
+  .c2 {
+    opacity: 0.3;
+  }
+}
+
 @media (max-width:1025px) {
   .c3 {
     display: none;
+  }
+}
+
+@media (max-width:1366px) {
+  .c3 {
+    opacity: 0.3;
   }
 }
 
