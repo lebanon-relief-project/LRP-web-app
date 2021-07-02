@@ -11,8 +11,6 @@ import { checkIfCardIsInSessionStorage } from "../util/util";
 const FlashCard = ({ card, id }) => {
   const [selected, setSelected] = useState(checkIfCardIsInSessionStorage(id));
 
-  const { transform, opacity } = {transform: undefined, opacity: 1}
-
   // This function is called when the user clicks the plus or tick button
   // The conditional logic is reversed because useState is async
   const cardSelectHandler = () => {
@@ -60,7 +58,9 @@ const FlashCard = ({ card, id }) => {
           }}
         >
           <CardTitleWrapper>{card.title}</CardTitleWrapper>
-          <CardTextWrapper>{card.body}</CardTextWrapper>
+          <CardTextWrapper selected={selected}  cardText={card.body}>
+            <CardTextHolder>{card.body}</CardTextHolder>
+          </CardTextWrapper>
         </a.div>
       </>
     );
@@ -75,15 +75,28 @@ const FlashCard = ({ card, id }) => {
   );
 };
 
+const CardTextHolder =  styled.p`
+  height:  0px;
+`
+
 const CardTextWrapper = styled.div`
-  @media (max-width: ${devices.mobile}) {
-    font-size: 18px;
+  font-size: 16px;
+
+  font-weight: ${props => props.selected == true ? "600" : "initial"};
+
+  /* Pseudo Div to take up  space of the bold text */
+  :after{
+    display:block;
+    content: "${props => props.cardText}";
+    font-weight: bold;
+    overflow:  visible;
+    visibility: hidden;
   }
 `;
 
 const CardTitleWrapper = styled.h3`
   font-size:  24px;
-  
+  font-weight: 700;
 `;
 
 const StyledHeader = styled.h1`
@@ -101,12 +114,12 @@ const StyledHeader = styled.h1`
 
 const Wrapper = styled.div`
   background-color: ${colours.white};
-  width: 30%;
+  width: calc(33% - 12px);
   display: flex;
   flex-direction: column;
   border-radius: 0.375rem;
   overflow: hidden;
-  margin: 12px;
+  margin: 12px 0px;
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   :hover{
@@ -115,8 +128,8 @@ const Wrapper = styled.div`
 
   padding-bottom:30px;
 
-  @media (min-width: ${devices.ipad}) and (max-width: ${devices.ipadpro}) {
-    width: 50%;
+  @media (min-width: ${devices.ipad}) and (max-width: ${devices.ipadprolandscape}) {
+    width: calc(50% - 12px);
   }
 
   @media (max-width: ${devices.ipad}) {

@@ -105,7 +105,11 @@ const HeaderLeftImageWrapper = styled.div`
   align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
-    display: none;
+    display:none
+  }
+
+  @media (max-width: ${devices.ipadprolandscape}) {
+    opacity: 0.3;
   }
 `;
 
@@ -116,8 +120,13 @@ const HeaderRightImageWrapper = styled.div`
   align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
-    display: none;
+    display:none
   }
+
+  @media (max-width: ${devices.ipadprolandscape}) {
+    opacity: 0.3;
+  }
+
 `;
 
 const StyledSection = styled.div`

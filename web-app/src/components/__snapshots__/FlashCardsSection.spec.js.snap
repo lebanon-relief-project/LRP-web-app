@@ -60,15 +60,15 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
 }
 
 .c1 {
-  width: 70%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 0 16.7%;
   background: inherit;
   display: -webkit-box;
   display: -webkit-flex;
@@ -84,6 +84,9 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
 }
 
 @media (max-width:576px) {
@@ -107,6 +110,12 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
     -ms-flex-pack: center;
     justify-content: center;
     max-height: unset !important;
+  }
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    width: 70%;
   }
 }
 

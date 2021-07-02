@@ -46,7 +46,7 @@ const FlashCardsSection = (props) => {
       let height =  cardWrapperRef?.current?.getBoundingClientRect()?.height
 
       if(height > 0){
-        if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadpro.replace("px","") ){
+        if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadprolandscape.replace("px","") ){
           console.log("2 Columns")
           setCardWrapperHeight(height*0.6)
         }else{
@@ -137,21 +137,27 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const Wrapper = styled.div`
-  width: 70%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 0 16.7%;
   background: inherit;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: space-between;
+
   @media (max-width: ${devices.ipad}) {
     width: 100%;
     justify-content: center;
     max-height:  unset !important
+  }
+
+  @media (max-width: ${devices.ipadpro}) {
+    width: 70%;
   }
 `;
 
