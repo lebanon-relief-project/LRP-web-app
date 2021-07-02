@@ -56,4 +56,17 @@ export interface ResultsResponse {
 export interface FlashCardSelection {
   selected: string[];
   timeStamp: Date;
+  counted?: boolean;
 }
+
+export interface FlashCardSelectionCloudant
+  extends BaseCloudantDocument,
+    FlashCardSelection {}
+
+export interface FlashCardSelectionCount {
+  counts: { [key: string]: number };
+}
+
+export interface FlashCardSelectionCountCloudant
+  extends BaseCloudantDocument,
+    FlashCardSelectionCount {}
