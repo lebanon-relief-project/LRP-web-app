@@ -7,7 +7,6 @@ import { getFlashCards } from "../services/flashCards.service";
 import devices from "../styles/Devices";
 import { useHistory } from "react-router-dom";
 import NoCardSelectedModal from "./NoCardSelectedModal";
-import { consoleTestResultHandler } from "tslint/lib/test";
 
 const FlashCardsSection = (props) => {
   const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] =
