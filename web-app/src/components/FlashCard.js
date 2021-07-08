@@ -3,9 +3,8 @@ import styled from "styled-components";
 import colours from "../styles/Colours";
 import PlusCircleIcon from "../assets/images/PlusCircle.svg";
 import TickCircleIcon from "../assets/images/TickCircle.svg";
-import { useSpring, animated as a } from "react-spring";
+import { animated as a } from "react-spring";
 import devices from "../styles/Devices";
-import { deviceSize } from "../util/deviceUtil";
 import { checkIfCardIsInSessionStorage } from "../util/util";
 
 const FlashCard = ({ card, id }) => {
@@ -82,7 +81,7 @@ const CardTextHolder =  styled.p`
 const CardTextWrapper = styled.div`
   font-size: 16px;
 
-  font-weight: ${props => props.selected == true ? "600" : "initial"};
+  font-weight: ${props => props.selected === true ? "600" : "initial"};
 
   /* Pseudo Div to take up  space of the bold text */
   :after{
