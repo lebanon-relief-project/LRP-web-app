@@ -16,7 +16,7 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   background-color: #FFD666;
-  width: 70%;
+  width: 60%;
   height: 2.625rem;
   font-size: 1rem;
   -webkit-align-self: center;
@@ -68,7 +68,7 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
 
 .c1 {
   width: 60%;
-  margin: 0 16.7%;
+  margin: 0 20%;
   background: inherit;
   display: -webkit-box;
   display: -webkit-flex;
@@ -102,6 +102,12 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:1025px) {
+  .c2 {
+    width: 75%;
+  }
+}
+
 @media (max-width:768px) {
   .c1 {
     width: 100%;
@@ -115,7 +121,8 @@ exports[`the FlashCardsSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c1 {
-    width: 70%;
+    margin: 0 12.5%;
+    width: 75%;
   }
 }
 

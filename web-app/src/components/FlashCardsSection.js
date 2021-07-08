@@ -107,7 +107,7 @@ const StyledLink = styled.button`
   justify-content: center;
   display: flex;
   background-color: ${colours.yellow};
-  width: 70%;
+  width: 60%;
   height: 2.625rem;
   font-size: 1rem;
   align-self: center;
@@ -127,6 +127,10 @@ const StyledLink = styled.button`
     width: fill-available;
     margin: 0px 12px;
   }
+
+  @media (max-width: ${devices.ipadpro}){
+    width: 75%;
+  }
 `;
 
 const StyledSection = styled.section`
@@ -142,7 +146,7 @@ const StyledSection = styled.section`
 
 const Wrapper = styled.div`
   width: 60%;
-  margin: 0 16.7%;
+  margin: 0 20%;
   background: inherit;
   display: flex;
   flex-direction: column;
@@ -157,7 +161,8 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: ${devices.ipadpro}) {
-    width: 70%;
+    margin: 0 12.5%;
+    width: 75%;
   }
 `;
 

@@ -144,7 +144,7 @@ const CentralWrapper = styled.div`
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    height: 366px;
+    min-height: 366px;
   }
 `;
 
@@ -152,11 +152,15 @@ const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin-left: 16.7%;
+  margin: 0 20%;
   max-width: 765px;
 
   @media (max-width: ${devices.mobile}) {
-    margin-left: 18px;
+    margin: 0 18px;
+  }
+
+  @media (max-width: ${devices.ipadpro}) {
+    margin: 0 10%;
   }
 `;
 
@@ -176,6 +180,10 @@ const HeaderLeftImageWrapper = styled.div`
   @media (max-width: ${devices.ipadpro}) {
     display: none;
   }
+
+  @media (max-width: ${devices.ipadprolandscape}) {
+    opacity: 0.3;
+  }
 `;
 
 const HeaderRightImageWrapper = styled.div`
@@ -186,6 +194,10 @@ const HeaderRightImageWrapper = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     display: none;
+  }
+
+  @media (max-width: ${devices.ipadprolandscape}) {
+    opacity: 0.3;
   }
 `;
 

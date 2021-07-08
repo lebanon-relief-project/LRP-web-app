@@ -128,6 +128,10 @@ const Wrapper = styled.div`
 
   padding-bottom:30px;
 
+  @media (max-width: ${devices.ipadpro}) {
+    width: calc(50% - 12px);
+  }
+
   @media (min-width: ${devices.ipad}) and (max-width: ${devices.ipadprolandscape}) {
     width: calc(50% - 12px);
   }

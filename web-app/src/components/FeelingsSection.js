@@ -35,12 +35,13 @@ const Wrapper = styled.div`
   width: 60%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 16.7%;
+  margin: 0 20%;
   background: inherit;
 
   @media (max-width: ${devices.ipadpro}) {
     width: auto;
     width: 75%;
+    margin: 0 12.5%
   }
 
   @media (max-width: ${devices.ipad}) {

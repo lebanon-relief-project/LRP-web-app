@@ -47,7 +47,7 @@ const RightContainer = styled.div`
 `
 
 const StyledContactUs = styled.div`
-    width: 70%;
+    width: 60%;
     background-color: ${colours.grey};
     //background-color: pink;
     display: flex;
@@ -55,6 +55,9 @@ const StyledContactUs = styled.div`
         flex-direction: column;
         width: 100%;
         margin: 0px 12px;
+    }
+    @media (max-width: ${devices.ipadpro}){
+        width: 75%;
     }
 
 `;
