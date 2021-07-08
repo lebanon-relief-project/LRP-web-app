@@ -95,7 +95,8 @@ const StyledCard = styled(Card)`
   width: 30%;
   margin: 5% 0;
   legend {
-    min-width: 100%;
+    width: auto;
+    margin: 0 auto;
   }
   @media (max-width: ${devices.mobile}) {
     width: 100%;

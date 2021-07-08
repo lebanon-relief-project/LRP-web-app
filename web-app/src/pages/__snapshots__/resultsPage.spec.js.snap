@@ -2,13 +2,33 @@
 
 exports[`the ResultsPage component should match the snapshot 1`] = `
 .c4 {
-  margin-left: 20px;
+  padding: 0 12px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  margin-top: 10px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid black;
+  border-bottom: 10px solid transparent;
 }
 
 .c1 {
   width: 60%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
   margin: 0 16.7%;
   background: inherit;
   background: #fafafa;
@@ -20,10 +40,10 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   border-radius: 8px;
-  padding: 5%;
+  padding: 3%;
 }
 
-.c3 {
+.c6 {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
@@ -31,7 +51,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c13 {
+.c15 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -53,7 +73,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   margin-bottom: 5%;
 }
 
-.c12 {
+.c14 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -76,7 +96,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   padding: 0.5rem;
 }
 
-.c14 {
+.c16 {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -99,7 +119,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   padding: 0.5rem;
 }
 
-.c10 {
+.c12 {
   font-family: Playfair Display;
   font-weight: bold;
   font-size: 24px;
@@ -110,7 +130,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.c8 {
+.c10 {
   position: relative;
   border: 1px solid #003A8C;
   width: 25%;
@@ -130,11 +150,11 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   background-color: white;
 }
 
-.c11 {
+.c13 {
   min-height: 7rem;
 }
 
-.c5 {
+.c7 {
   width: 60%;
   min-width: 960px;
   padding-top: 2rem;
@@ -143,7 +163,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   background: inherit;
 }
 
-.c6 {
+.c8 {
   font-family: Playfair Display;
   font-style: normal;
   font-weight: bold;
@@ -151,17 +171,18 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c9 {
+.c11 {
   height: auto;
   width: 30%;
   margin: 5% 0;
 }
 
-.c9 legend {
-  min-width: 100%;
+.c11 legend {
+  width: auto;
+  margin: 0 auto;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -185,22 +206,9 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:1025px) {
-  .c4 {
-    magin-left: 0px;
-  }
-}
-
-@media (max-width:576px) {
-  .c4 {
-    magin-left: 0px;
-  }
-}
-
-@media (max-width:1025px) {
   .c1 {
     margin: 25px 18px;
     padding-top: 0px;
-    padding-bottom: 0px;
     width: auto;
     max-width: 100%;
     padding: 0;
@@ -228,15 +236,8 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c13 {
+  .c15 {
     width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c12 {
-    width: 90%;
-    max-width: 90%;
   }
 }
 
@@ -248,27 +249,34 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c10 {
+  .c16 {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c12 {
     font-size: 30px;
     line-height: 38px;
   }
 }
 
 @media (max-width:1025px) {
-  .c8 {
+  .c10 {
     width: 40%;
   }
 }
 
 @media (max-width:576px) {
-  .c8 {
+  .c10 {
     width: 90%;
     margin: 1rem auto;
   }
 }
 
 @media (max-width:1025px) {
-  .c5 {
+  .c7 {
     margin: 25px 18px;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -278,13 +286,13 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c9 {
+  .c11 {
     width: 100%;
   }
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c9 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -320,69 +328,80 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         <div
           class="c2"
         >
-          <div>
-            <h2
-              class="c3"
-            >
-              A few more useful tips
-            </h2>
-          </div>
           <div
-            class="c4"
+            class="c3"
           >
-            <img
-              alt="Person Taking Care"
-              src="PersonTakingCare.svg"
-            />
+            <div
+              class="c4"
+            >
+              <div
+                class="c5"
+                data-testid="chevron"
+              />
+            </div>
+            <div
+              class="c4"
+            >
+              <h2
+                class="c6"
+              >
+                A few more useful tips
+              </h2>
+              <p
+                data-testid="arrowText"
+              >
+                Click the arrow to show more things you can do.
+              </p>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="c5"
+        class="c7"
       >
         <h2
-          class="c6"
+          class="c8"
         >
           Some actions you can take
         </h2>
         <div
-          class="c7"
+          class="c9"
         >
           <fieldset
-            class="c8 c9"
+            class="c10 c11"
           >
             <legend
-              class="c10 c9"
+              class="c12 c11"
             >
               Support
             </legend>
             <p
-              class="c11"
+              class="c13"
             >
               Surround yourself with friends and family. And remember, you can always reach out…
             </p>
             <a
-              class="c12 c9"
+              class="c14 c11"
               href="/"
             >
               Reach Out
             </a>
           </fieldset>
           <fieldset
-            class="c8 c9"
+            class="c10 c11"
           >
             <legend
-              class="c10 c9"
+              class="c12 c11"
             >
               Useful exercises
             </legend>
             <p
-              class="c11"
+              class="c13"
             >
               Here are some exercises to reduce stress and regain control over your actions and thoughts.
             </p>
             <a
-              class="c13"
+              class="c15"
               href="Self-Help_Exercises.pdf"
               rel="noopener noreferrer"
               target="_blank"
@@ -391,22 +410,22 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             </a>
           </fieldset>
           <fieldset
-            class="c8 c9"
+            class="c10 c11"
             disabled=""
           >
             <legend
-              class="c10 c9"
+              class="c12 c11"
               disabled=""
             >
               14 days of wellbeing
             </legend>
             <p
-              class="c11"
+              class="c13"
             >
               Keep your mind and body engaged by joining our 14 days of wellbeing.
             </p>
             <a
-              class="c14 c9"
+              class="c16 c11"
               disabled=""
               href="/help"
             >

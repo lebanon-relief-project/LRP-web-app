@@ -8,12 +8,21 @@ export function getCosCredentials(): CosCredentials {
     throw new Error("COS credentials missing");
   }
 
-  const endpoint = COS_URL;
-  const apikey = process.env.COS_CREDS_APIKEY;
-  const resourceInstanceId = process.env.COS_CREDS_RESOURCEINSTANCEID;
-  const accessKeyId = process.env.COS_CREDS_ACCESSKEYID;
-  const secretAccessKey = process.env.COS_CREDS_SECRETACCESSKEY;
+  let endpoint;
+  let apikey;
+  let resourceInstanceId;
+  let accessKeyId;
+  let secretAccessKey;
 
+  try {
+    endpoint = COS_URL; 
+    apikey = VCAP["cloud-object-storage"][0].credentials.apikey;
+    resourceInstanceId = VCAP["cloud-object-storage"][0].credentials.resource_instance_id;
+    accessKeyId = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.access_key_id;
+    secretAccessKey = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.secret_access_key;
+  } catch (error) {
+    console.error(error);
+  }
   return {
     endpoint: endpoint,
     apiKeyId: apikey,

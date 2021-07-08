@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the LoadingSpinner component should match the snapshot 1`] = `
+.c0 {
+  heigth: auto;
+  width: 10%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+<div>
+  <img
+    alt="loading..."
+    class="c0"
+    src="LoadingSpinner.gif"
+  />
+</div>
+`;

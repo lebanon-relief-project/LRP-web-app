@@ -2,7 +2,6 @@ import React from "react";
 import { renderWithRouter } from "../util/testUtils";
 import ResultsPage from "./resultsPage";
 import "jest-styled-components";
-
 import * as resultsService from "../services/results.service.js";
 import * as util from "../util/util.js";
 import { wait } from "@testing-library/react";
@@ -32,6 +31,10 @@ jest.mock("react-router-dom", () => ({
     push: mockHistoryPush,
   }),
 }));
+
+jest.mock("../components/LoadingSpinner", () => {
+  return () => <div data-testid="spinner">Loading...</div>;
+});
 
 describe("the ResultsPage component", () => {
   beforeEach(() => {
@@ -95,5 +98,12 @@ describe("the ResultsPage component", () => {
 
     expect(mockHistoryPush).toHaveBeenCalledWith("/help");
     expect(getResultsSpy).not.toHaveBeenCalled();
+  });
+  it("should show Spinner when results are loading", async () => {
+    let queryByTestId;
+    ({ queryByTestId } = renderWithRouter(<ResultsPage />));
+    expect(queryByTestId("spinner")).toBeTruthy();
+    await wait();
+    expect(queryByTestId("spinner")).toBeFalsy();
   });
 });
