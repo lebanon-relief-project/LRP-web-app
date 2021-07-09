@@ -47,10 +47,8 @@ const FlashCardsSection = (props) => {
 
       if(height > 0){
         if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadprolandscape.replace("px","") ){
-          console.log("2 Columns")
           setCardWrapperHeight(height*0.6)
         }else{
-          console.log("3 Columns")
           setCardWrapperHeight(height*0.4)
         }
         
