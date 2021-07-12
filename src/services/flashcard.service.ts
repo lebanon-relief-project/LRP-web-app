@@ -29,7 +29,7 @@ export class FlashCardService implements FlashCardServiceApi {
     logger: LoggerApi,
     cloudant: CloudantService
   ) {
-    this.logger = logger.child("HelpService");
+    this.logger = logger.child("FlashCardService");
 
     try {
       this.flashCardSelectionsDb = cloudant.use(
@@ -114,7 +114,7 @@ export class FlashCardService implements FlashCardServiceApi {
 
       return true;
     } catch (error) {
-      this.logger.error("FlashCardService: " + error);
+      this.logger.error(error);
       return false;
     }
   }
