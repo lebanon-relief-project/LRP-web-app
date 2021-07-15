@@ -46,10 +46,8 @@ const FlashCardsSection = (props) => {
 
       if(height > 0){
         if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadprolandscape.replace("px","") ){
-          console.log("2 Columns")
           setCardWrapperHeight(height*0.6)
         }else{
-          console.log("3 Columns")
           setCardWrapperHeight(height*0.4)
         }
         
@@ -106,7 +104,7 @@ const StyledLink = styled.button`
   justify-content: center;
   display: flex;
   background-color: ${colours.yellow};
-  width: 70%;
+  width: 60%;
   height: 2.625rem;
   font-size: 1rem;
   align-self: center;
@@ -120,11 +118,17 @@ const StyledLink = styled.button`
   &:active {
     opacity: 1;
   }
+  
+
+  @media (max-width: ${devices.ipadpro}){
+    width: 75%;
+  }
+
   @media (max-width: ${devices.mobile}) {
-    margin: 3.375rem 0;
     align-self: center;
     width: fill-available;
-    margin: 0px 12px;
+    margin: 0px 18px;
+    margin-top: 6px;
   }
 `;
 
@@ -141,7 +145,7 @@ const StyledSection = styled.section`
 
 const Wrapper = styled.div`
   width: 60%;
-  margin: 0 16.7%;
+  margin: 0 20%;
   background: inherit;
   display: flex;
   flex-direction: column;
@@ -156,7 +160,13 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: ${devices.ipadpro}) {
-    width: 70%;
+    margin: 0 12.5%;
+    width: 75%;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 0 18px;
+    width: calc(100% - 36px);
   }
 `;
 
