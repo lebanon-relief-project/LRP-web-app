@@ -60,6 +60,11 @@ const StyledContactUs = styled.div`
         width: 75%;
     }
 
+    @media (max-width: ${devices.mobile}){
+        width: 100%;
+        margin: 0 18px;
+    }
+
 `;
 
 const ContactUsWrapper = styled.div`

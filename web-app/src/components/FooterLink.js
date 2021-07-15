@@ -28,7 +28,7 @@ const FooterLinkTitle = styled.h2`
 `;
 
 const StyledFooterLink = styled.div`
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 2rem 0;
   @media (max-width: ${devices.mobile}) {
     width: 75%;

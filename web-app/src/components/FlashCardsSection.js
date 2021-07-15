@@ -119,15 +119,17 @@ const StyledLink = styled.button`
   &:active {
     opacity: 1;
   }
-  @media (max-width: ${devices.mobile}) {
-    margin: 3.375rem 0;
-    align-self: center;
-    width: fill-available;
-    margin: 0px 12px;
-  }
+  
 
   @media (max-width: ${devices.ipadpro}){
     width: 75%;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    align-self: center;
+    width: fill-available;
+    margin: 0px 18px;
+    margin-top: 6px;
   }
 `;
 
@@ -161,6 +163,11 @@ const Wrapper = styled.div`
   @media (max-width: ${devices.ipadpro}) {
     margin: 0 12.5%;
     width: 75%;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 0 18px;
+    width: calc(100% - 36px);
   }
 `;
 
