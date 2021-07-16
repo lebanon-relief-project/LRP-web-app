@@ -62,11 +62,9 @@ We are a group international volunteers, working in design and development.
 ### Developers
 
 - [Antonio D'aria](https://www.linkedin.com/in/antonio-d-aria-59383046/)
-- [Jeremy Beucler](https://www.linkedin.com/in/jeremy-beucler-86263370/)
-- [Mark Moloney](https://www.linkedin.com/in/1markmoloney/)
 - [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
 - [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
-- [Nicolas Ayoub](https://www.linkedin.com/in/nicolas-ayoub0/)
+- [Piers Walter](https://www.linkedin.com/in/piers-walter/)
 - [Sanchit Sharma](https://puppykit.org.uk/)
 - [Tom Madelin](https://www.linkedin.com/in/tom-madelin-4bb510147/)
 - [Zack Dove](https://www.linkedin.com/in/zack-dove-533ab692/)
