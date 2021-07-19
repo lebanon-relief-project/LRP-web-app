@@ -76,16 +76,11 @@ const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
+  margin-left: 16.7%;
   max-width: 632px;
-
-  @media (max-width: ${devices.ipadpro}){
-    margin: 0 12.5%;
-  }
 
   @media (max-width: ${devices.ipad}) {
     margin-left: 30px;
-    margin-right: 30px;
   }
 
   @media (max-width: ${devices.mobile}) {

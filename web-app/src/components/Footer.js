@@ -24,29 +24,27 @@ const Footer = () => {
             },
           ]}
         />
-        <RightHandWrapper>
-          <CircularLinkWrapper>
-            <StyledAnchor
-              href="https://www.instagram.com/lebanonreliefnetwork"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledImage src={Instagram} alt="Instagram" />
-            </StyledAnchor>
-            <FBAnchor />
-            <StyledAnchor
-              href="https://twitter.com/LebReliefNet"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <StyledImage src={Twitter} alt="Twitter" />
-            </StyledAnchor>
-            
-          </CircularLinkWrapper>
+
+        <CircularLinkWrapper>
+          <StyledAnchor
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src={Instagram} alt="Instagram" />
+          </StyledAnchor>
+          <FBAnchor />
+          <StyledAnchor
+            href="https://twitter.com/LebReliefNet"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <StyledImage src={Twitter} alt="Twitter" />
+          </StyledAnchor>
           <Email href="mailto:contact@lebanonreliefnetwork.org" target="_blank">
-              contact@lebanonreliefnetwork.org
+            contact@lebanonreliefnetwork.org
           </Email>
-        </RightHandWrapper>
+        </CircularLinkWrapper>
       </CardWrapper>
     </StyledSection>
   );
@@ -102,18 +100,15 @@ const StyledImage = styled.img`
   height: auto;
 `;
 
-const RightHandWrapper = styled.div`
-    padding: 1rem 0;
-  margin: 2rem 0rem;
-`
-
 const CircularLinkWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
   @media (max-width: ${devices.mobile}) {
     padding: 0;
-    margin: 0;
+    margin: 1rem 0;
     order: 1;
   }
 `;
@@ -121,23 +116,12 @@ const CircularLinkWrapper = styled.div`
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
-  width:60%;
-  margin-left:20%;
-
-  @media (max-width: ${devices.ipad}) {
-    
-    width: 75%;
-    margin: 0% 12.5%;
-  }
+  justify-content: space-around;
 
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
     align-items: center;
   }
-
-  
 `;
 
 const StyledSection = styled.section`
