@@ -41,6 +41,9 @@ exports[`the HomePage component should match the snapshot 1`] = `
       <div>
         Help section
       </div>
+      <div>
+        Wellbeing section
+      </div>
     </div>
   </div>
 </div>

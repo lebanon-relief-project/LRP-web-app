@@ -61,8 +61,8 @@ const StyledLink = styled(Link)`
   justify-content: center;
   display: flex;
 
-  min-width: ${(props) => (props.secondary ? "45%" : "90%")};
-  max-width: ${(props) => (props.secondary ? "45%" : "90%")};
+  min-width: ${(props) => (props.secondary ? "25%" : "90%")};
+  max-width: ${(props) => (props.secondary ? "25%" : "90%")};
   @media (max-width: ${devices.mobile}) {
     width: ${(props) => (props.secondary ? "50%" : "90%")};
     max-width: ${(props) => (props.secondary ? "100%" : "90%")};

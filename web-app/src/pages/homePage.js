@@ -4,6 +4,7 @@ import devices from "../styles/Devices";
 import WhatHappened from "../components/WhatHappenedSection";
 import OurMission from "../components/OurMissionSection";
 import HelpSection from "../components/HelpSection";
+import WellbeingSection from "../components/WellbeingSection";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
           <WhatHappened />
           <OurMission />
           <HelpSection />
+          <WellbeingSection />
         </PageContainer>
       </StyledPage>
     </>

@@ -8,8 +8,7 @@ import {
   StyledSection,
   FlexContainer,
 } from "../styles/GlobalStyles";
-import Hands from "../assets/images/Hands.png";
-import Swirl from "../assets/images/Swirl.png";
+import Hands from "../assets/images/Hands.svg";
 
 const OurMission = () => {
   return (
@@ -28,14 +27,13 @@ const OurMission = () => {
         </StyledTextArea>
         <StyledHands src={Hands} alt="Hands" />
       </FlexContainer>
-      <StyledSwirl src={Swirl} alt="Swirl" />
     </StyledSection>
   );
 };
 
 const StyledTextArea = styled.div`
   position: relative;
-  margin-top: 2%;
+  margin: 2%;
   left: 12%;
   width: 50%;
   @media (max-width: ${devices.mobile}) {
@@ -44,6 +42,7 @@ const StyledTextArea = styled.div`
     left: 0;
     width: 100%;
     order: 2;
+    margin-bottom: 5%;
   }
 `;
 
@@ -51,7 +50,8 @@ const StyledHands = styled.img`
   object-fit: contain;
   position: relative;
   width: auto;
-  max-wodth: 100%;
+  max-width: 100%;
+  margin-top: 10%;
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;
   }
@@ -64,13 +64,6 @@ const StyledHands = styled.img`
     max-width: 100%;
     width: 100%;
     padding-left: 0rem;
-  }
-`;
-
-const StyledSwirl = styled.img`
-  margin: 40px 0;
-  @media (min-width: ${devices.mobile}) {
-    display: none;
   }
 `;
 
