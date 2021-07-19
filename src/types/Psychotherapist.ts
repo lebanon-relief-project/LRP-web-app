@@ -7,18 +7,18 @@ interface Psychotherapist {
   location: string;
   therapyServices: { [theraphyService: string]: boolean };
   licenseNumber: string;
-  emergencyPhoneNumber?: string;
+  emergencyPhoneNumber?: number;
   consentData: ConsentData;
   website: string;
   email: string;
   patientGroups: { [patientGroup: string]: boolean };
   supportedGenders: { [supportedGender: string]: boolean };
   legalPersonality: string;
-  phoneNumber: string;
+  phoneNumber: number;
   picture: string;
   therapistGender: string;
   languages: string[];
-  internationalPaymentsOnly: boolean;
-  freeService: boolean;
+  internationalPaymentsOnly: string;
+  freeService: string;
   bookingApp: string;
 }

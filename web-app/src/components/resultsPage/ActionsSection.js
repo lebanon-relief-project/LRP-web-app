@@ -66,10 +66,11 @@ const StyledParagraph = styled.p`
 
 const Wrapper = styled.div`
   width: 60%;
+  min-width: 960px;
 
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
+  margin: 0 16.7%;
   background: inherit;
 
   @media (max-width: ${devices.ipadpro}) {

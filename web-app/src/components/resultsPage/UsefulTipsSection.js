@@ -56,7 +56,7 @@ const ImageDiv = styled.div`
 const Wrapper = styled.div`
   width: 60%;
   padding-top: 2rem;
-  margin: 0 20%;
+  margin: 0 16.7%;
   background: inherit;
   background: ${colours.lightGrey};
 

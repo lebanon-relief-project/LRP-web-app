@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
+  margin: 0 16.7%;
   background: inherit;
 
   @media (max-width: ${devices.ipadpro}) {

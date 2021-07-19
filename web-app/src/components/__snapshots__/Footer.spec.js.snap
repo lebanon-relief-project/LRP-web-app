@@ -6,7 +6,7 @@ exports[`the Footer component should match the snapshot 1`] = `
 }
 
 .c2 {
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 2rem 0;
 }
 
@@ -20,33 +20,33 @@ exports[`the Footer component should match the snapshot 1`] = `
   text-decoration-line: underline;
 }
 
-.c10 {
+.c9 {
   color: #000000;
 }
 
-.c8 {
+.c7 {
   margin: 5%;
 }
 
-.c9 {
+.c8 {
   width: 100%;
   height: auto;
 }
 
 .c6 {
-  padding: 1rem 0;
-  margin: 2rem 0rem;
-}
-
-.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
 }
 
 .c1 {
@@ -57,12 +57,10 @@ exports[`the Footer component should match the snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 60%;
-  margin-left: 20%;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
 .c0 {
@@ -83,19 +81,12 @@ exports[`the Footer component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c6 {
     padding: 0;
-    margin: 0;
+    margin: 1rem 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
-  }
-}
-
-@media (max-width:768px) {
-  .c1 {
-    width: 75%;
-    margin: 0% 12.5%;
   }
 }
 
@@ -170,48 +161,44 @@ exports[`the Footer component should match the snapshot 1`] = `
       <div
         class="c6"
       >
-        <div
-          class="c7"
-        >
-          <a
-            class="c8"
-            href="https://www.instagram.com/lebanonreliefnetwork"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Instagram"
-              class="c9"
-              src="Instagram.svg"
-            />
-          </a>
-          <a
-            class="c8"
-            href="https://www.facebook.com/Lebanonreliefnetwork"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Facebook"
-              class="c9"
-              src="Facebook.svg"
-            />
-          </a>
-          <a
-            class="c8"
-            href="https://twitter.com/LebReliefNet"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <img
-              alt="Twitter"
-              class="c9"
-              src="Twitter.svg"
-            />
-          </a>
-        </div>
         <a
-          class="c10"
+          class="c7"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          class="c9"
           href="mailto:contact@lebanonreliefnetwork.org"
           target="_blank"
         >
