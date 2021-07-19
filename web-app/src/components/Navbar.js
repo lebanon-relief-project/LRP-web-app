@@ -54,8 +54,7 @@ const Navbar = ({ open }) => {
 const StyledNav = styled.nav`
   position: fixed;
   min-width: 100%;
-  max-height: 64px;
-  height: 64px;
+  height: 80px;
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
