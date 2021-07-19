@@ -131,7 +131,7 @@ exports[`the ResultsSection component should match the snapshot 1`] = `
   min-height: 730px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 16.7%;
+  margin: 0 20%;
   background: inherit;
 }
 

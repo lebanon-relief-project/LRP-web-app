@@ -88,7 +88,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
-  margin-left: 16.7%;
+  margin: 0 20%;
   max-width: 765px;
 }
 
@@ -198,13 +198,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c4 {
-    height: 366px;
+    min-height: 366px;
   }
 }
 
 @media (max-width:576px) {
   .c5 {
-    margin-left: 18px;
+    margin: 0 18px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c5 {
+    margin: 0 10%;
   }
 }
 
@@ -214,9 +220,21 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:1366px) {
+  .c2 {
+    opacity: 0.3;
+  }
+}
+
 @media (max-width:1025px) {
   .c3 {
     display: none;
+  }
+}
+
+@media (max-width:1366px) {
+  .c3 {
+    opacity: 0.3;
   }
 }
 
