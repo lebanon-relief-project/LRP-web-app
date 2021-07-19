@@ -13,21 +13,22 @@ const HelpSection = () => {
       <StyledSection>
         <PageContainer>
           <CardWrapper>
-            {/* I’m looking for help */}
+            {/* I'm looking for self-help */}
             <Card
-              title="I’m looking for help"
+              title="I'm looking for self-help"
               path={Routes.HELP}
               buttonText="Give me advice"
             >
               <StyledBody>
                 <Paragraph>
                   Everyone reacts differently to trauma, and not everyone
-                  recovers from a traumatic experience in the same way or time.
-                  There is no one solution to heal from it.
+                  recovers from a traumatic experience in the same way. There
+                  are countless ways to resolve trauma and overcome it.
                 </Paragraph>
                 <Paragraph>
-                  Here you can find personalized recommendations, tips and tools
-                  to help you cope with trauma.
+                  Here you can find personalized self-help recommendations,
+                  tips, and tools to help you cope with trauma in your own time
+                  and at your own pace.
                 </Paragraph>
               </StyledBody>
             </Card>
@@ -43,13 +44,13 @@ const HelpSection = () => {
             >
               <StyledBody>
                 <Paragraph>
-                  Do you have a close one who underwent trauma? Do you need
-                  direction on how to help, what to say, what to do, and how to
-                  protect yourself?
+                  Do you know someone who experienced or is experiencing trauma?
+                  Do you need direction on how to help, what to say, what to do,
+                  and how to protect yourself?
                 </Paragraph>
                 <Paragraph>
-                  Or do you want to help those who are dealing with trauma, and
-                  are looking for opportunities to do so?
+                  Or are you looking for volunteer opportunities in your
+                  community to help those impacted by a traumatic event?
                 </Paragraph>
               </StyledBody>
             </Card>
