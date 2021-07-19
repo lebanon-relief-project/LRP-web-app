@@ -73,9 +73,9 @@ exports[`the HelpSection component should match the snapshot 1`] = `
         class="c2"
       >
         <div
-          data-testid="I’m looking for help"
+          data-testid="I'm looking for self-help"
         >
-          I’m looking for help
+          I'm looking for self-help
         </div>
         <div
           data-testid="I’d like to help"

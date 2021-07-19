@@ -139,16 +139,16 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
           <h2
             class="c6"
           >
-            What happened
+            Lebanon Relief Network
           </h2>
           <p
             class="c7"
           >
-            On August 4th, 2020 a massive explosion shook the port of Beirut in Lebanon. 170 people died. Thousands were injured. Even more were traumatized. 
+            Lebanon’s troubled history has contributed to a growing mental health crisis in the country. 70% of Lebanon’s residents and diaspora community have experienced symptoms of trauma, at some point in their life. 
             <br />
              
             <br />
-             Lebanon Relief Network was founded in the aftermath of the explosion to improve the lives of people affected by all types of trauma.
+             Lebanon Relief Network provides a safe space for trauma-related dialogue, and offers tools and resources to improve the lives of people affected by all types of trauma – big or small.
           </p>
         </div>
       </div>
