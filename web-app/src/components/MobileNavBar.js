@@ -35,8 +35,7 @@ const StyledNav = styled.nav`
     display: none;
   }
 
-  height: 64px;
-  max-height: 64px;
+  height: 80px;
   width: 100%;
   z-index: 100;
 `;
