@@ -15,16 +15,25 @@ jest.mock("./LoadingSpinner", () => {
   return () => <div data-testid="spinner">Loading...</div>;
 });
 
+// jest.mock("../services/flashCards.service", () => {
+//   return {
+//     getFlashCards: jest.fn().mockResolvedValue({
+//       cards: [
+//         {
+//           _id: "random _id",
+//           title: "random title",
+//           body: "some card body",
+//         },
+//       ],
+//     }),
+//   };
+// });
+
 jest.mock("../services/flashCards.service", () => {
+  console.log("uses correct thing");
   return {
-    getFlashCards: jest.fn().mockResolvedValue({
-      cards: [
-        {
-          _id: "random _id",
-          title: "random title",
-          body: "some card body",
-        },
-      ],
+    getFlashCards: jest.fn().mockImplementation(() => {
+      throw new Error("ugly error");
     }),
   };
 });
@@ -66,6 +75,16 @@ describe("the FlashCardsSection component", () => {
     expect(queryByTestId("spinner")).toBeTruthy();
     await wait();
     expect(queryByTestId("spinner")).toBeFalsy();
+  });
+
+  fit("should throw an error when the flashcard service call fails", (done) => {
+    try {
+      renderWithRouter(<FlashCardsSection />);
+    } catch (error) {
+      console.log("catch block");
+      expect(error).toEqual(undefined);
+      // done();
+    }
   });
 
   it.todo("should not open Modal when a card is selected");

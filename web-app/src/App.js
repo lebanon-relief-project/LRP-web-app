@@ -6,6 +6,7 @@ import {
   Switch,
   Route,
   useLocation,
+  useHistory,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -16,6 +17,8 @@ import MobileNavbar from "./components/MobileNavBar";
 import ResultsPage from "./pages/resultsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import ErrorPage from "./pages/errorPage";
+import ErrorBoundary from "./components/errors/ErrorBoundary";
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -33,20 +36,23 @@ export const Routes = {
   HELP: "/help",
   RESULTS: "/results",
   PRIVACY: "/privacy",
-  TERMS: "/terms"
+  TERMS: "/terms",
 };
 
 export const Pages = () => {
+  let history = useHistory();
   return (
     <>
-      <Switch>
-        <Route path={Routes.ABOUT} component={AboutPage} />
-        <Route path={Routes.HELP} component={HelpPage} />
-        <Route path={Routes.RESULTS} component={ResultsPage} />
-        <Route path={Routes.PRIVACY} component={PrivacyPage} />
-        <Route path={Routes.TERMS} component={TermsPage} />
-        <Route path={Routes.HOME} component={HomePage} />
-      </Switch>
+      <ErrorBoundary history={history}>
+        <Switch>
+          <Route path={Routes.ABOUT} component={AboutPage} />
+          <Route path={Routes.HELP} component={HelpPage} />
+          <Route path={Routes.RESULTS} component={ResultsPage} />
+          <Route path={Routes.PRIVACY} component={PrivacyPage} />
+          <Route path={Routes.TERMS} component={TermsPage} />
+          <Route path={Routes.HOME} component={HomePage} />
+        </Switch>
+      </ErrorBoundary>
     </>
   );
 };
@@ -66,7 +72,7 @@ const App = () => {
         <Navbar open={open} setOpen={setOpen} />
         <Pages />
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

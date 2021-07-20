@@ -14,19 +14,34 @@ const FlashCardsSection = (props) => {
 
   const [loading, isLoading] = useState(true);
 
-  const [cardWrapperHeight, setCardWrapperHeight] = useState("100%")
-  const cardWrapperRef = useRef(null)
+  const [cardWrapperHeight, setCardWrapperHeight] = useState("100%");
+  const cardWrapperRef = useRef(null);
 
   let history = useHistory();
   const [flashCards, setFlashCards] = useState([]);
+
+  const [, /* state */ setState] = useState();
+
   const fetchFlashCards = async () => {
     let response = await getFlashCards();
+    console.log(response);
     isLoading(false);
     setFlashCards(response.cards);
   };
 
   useEffect(() => {
-    fetchFlashCards();
+    fetchFlashCards().catch(() => {
+      console.log("got error here");
+      // setState((error) => {
+      //   throw error;
+      // });
+
+      // setState(() => {
+      //   throw new Error("hi");
+      // });
+
+      throw new Error("hi");
+    });
   }, []);
 
   const handleClick = (e) => {
@@ -40,24 +55,25 @@ const FlashCardsSection = (props) => {
 
   //Calculate height of the card container div
   useEffect(() => {
-    function setHeight(){
+    function setHeight() {
       setCardWrapperHeight(undefined);
-      let height =  cardWrapperRef?.current?.getBoundingClientRect()?.height
+      let height = cardWrapperRef?.current?.getBoundingClientRect()?.height;
 
-      if(height > 0){
-        if(window.innerWidth >= devices.ipad.replace("px","") &&  window.innerWidth <= devices.ipadprolandscape.replace("px","") ){
-          console.log("2 Columns")
-          setCardWrapperHeight(height*0.6)
-        }else{
-          console.log("3 Columns")
-          setCardWrapperHeight(height*0.4)
+      if (height > 0) {
+        if (
+          window.innerWidth >= devices.ipad.replace("px", "") &&
+          window.innerWidth <= devices.ipadprolandscape.replace("px", "")
+        ) {
+          console.log("2 Columns");
+          setCardWrapperHeight(height * 0.6);
+        } else {
+          console.log("3 Columns");
+          setCardWrapperHeight(height * 0.4);
         }
-        
       }
-
     }
     setHeight();
-    window.addEventListener('resize',  setHeight);
+    window.addEventListener("resize", setHeight);
   }, [flashCards]);
 
   return (
@@ -66,7 +82,10 @@ const FlashCardsSection = (props) => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <Wrapper style={{maxHeight: cardWrapperHeight}} ref={cardWrapperRef}>
+          <Wrapper
+            style={{ maxHeight: cardWrapperHeight }}
+            ref={cardWrapperRef}
+          >
             {flashCards.map((flashCard, index) => {
               return (
                 <FlashCard
@@ -152,7 +171,7 @@ const Wrapper = styled.div`
   @media (max-width: ${devices.ipad}) {
     width: 100%;
     justify-content: center;
-    max-height:  unset !important
+    max-height: unset !important;
   }
 
   @media (max-width: ${devices.ipadpro}) {
