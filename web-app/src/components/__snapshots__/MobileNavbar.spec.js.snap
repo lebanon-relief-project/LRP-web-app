@@ -78,8 +78,7 @@ exports[`the MobileNavBar component should match the snapshot 1`] = `
   display: flex;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
-  height: 64px;
-  max-height: 64px;
+  height: 80px;
   width: 100%;
   z-index: 100;
 }
