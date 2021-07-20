@@ -7,4 +7,6 @@ const apiServer = Container.get(ApiServer);
 
 apiServer.start();
 
-scheduleJob();
+if (process.env.NODE_ENV === "production") {
+  scheduleJob();
+}
