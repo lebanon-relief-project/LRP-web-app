@@ -6,7 +6,7 @@ exports[`render about page 1`] = `
 }
 
 .c2 {
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 2rem 0;
 }
 
@@ -20,33 +20,33 @@ exports[`render about page 1`] = `
   text-decoration-line: underline;
 }
 
-.c9 {
+.c10 {
   color: #000000;
 }
 
-.c7 {
+.c8 {
   margin: 5%;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: auto;
 }
 
 .c6 {
+  padding: 1rem 0;
+  margin: 2rem 0rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  padding: 1rem 0;
-  margin: 2rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c1 {
@@ -57,10 +57,12 @@ exports[`render about page 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .c0 {
@@ -81,12 +83,19 @@ exports[`render about page 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    width: 75%;
+    margin: 0% 12.5%;
   }
 }
 
@@ -164,44 +173,48 @@ exports[`render about page 1`] = `
       <div
         class="c6"
       >
-        <a
+        <div
           class="c7"
-          href="https://www.instagram.com/lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
         >
-          <img
-            alt="Instagram"
+          <a
             class="c8"
-            src="Instagram.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Facebook"
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram"
+              class="c9"
+              src="Instagram.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Facebook.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://twitter.com/LebReliefNet"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Twitter"
+            href="https://www.facebook.com/Lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Facebook"
+              class="c9"
+              src="Facebook.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Twitter.svg"
-          />
-        </a>
+            href="https://twitter.com/LebReliefNet"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Twitter"
+              class="c9"
+              src="Twitter.svg"
+            />
+          </a>
+        </div>
         <a
-          class="c9"
+          class="c10"
           href="mailto:contact@lebanonreliefnetwork.org"
           target="_blank"
         >
@@ -219,7 +232,7 @@ exports[`render help page 1`] = `
 }
 
 .c2 {
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 2rem 0;
 }
 
@@ -233,33 +246,33 @@ exports[`render help page 1`] = `
   text-decoration-line: underline;
 }
 
-.c9 {
+.c10 {
   color: #000000;
 }
 
-.c7 {
+.c8 {
   margin: 5%;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: auto;
 }
 
 .c6 {
+  padding: 1rem 0;
+  margin: 2rem 0rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  padding: 1rem 0;
-  margin: 2rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c1 {
@@ -270,10 +283,12 @@ exports[`render help page 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .c0 {
@@ -294,12 +309,19 @@ exports[`render help page 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    width: 75%;
+    margin: 0% 12.5%;
   }
 }
 
@@ -377,44 +399,48 @@ exports[`render help page 1`] = `
       <div
         class="c6"
       >
-        <a
+        <div
           class="c7"
-          href="https://www.instagram.com/lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
         >
-          <img
-            alt="Instagram"
+          <a
             class="c8"
-            src="Instagram.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Facebook"
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram"
+              class="c9"
+              src="Instagram.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Facebook.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://twitter.com/LebReliefNet"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Twitter"
+            href="https://www.facebook.com/Lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Facebook"
+              class="c9"
+              src="Facebook.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Twitter.svg"
-          />
-        </a>
+            href="https://twitter.com/LebReliefNet"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Twitter"
+              class="c9"
+              src="Twitter.svg"
+            />
+          </a>
+        </div>
         <a
-          class="c9"
+          class="c10"
           href="mailto:contact@lebanonreliefnetwork.org"
           target="_blank"
         >
@@ -432,7 +458,7 @@ exports[`render home page 1`] = `
 }
 
 .c2 {
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 2rem 0;
 }
 
@@ -446,33 +472,33 @@ exports[`render home page 1`] = `
   text-decoration-line: underline;
 }
 
-.c9 {
+.c10 {
   color: #000000;
 }
 
-.c7 {
+.c8 {
   margin: 5%;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: auto;
 }
 
 .c6 {
+  padding: 1rem 0;
+  margin: 2rem 0rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  padding: 1rem 0;
-  margin: 2rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c1 {
@@ -483,10 +509,12 @@ exports[`render home page 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .c0 {
@@ -507,12 +535,19 @@ exports[`render home page 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    width: 75%;
+    margin: 0% 12.5%;
   }
 }
 
@@ -590,44 +625,48 @@ exports[`render home page 1`] = `
       <div
         class="c6"
       >
-        <a
+        <div
           class="c7"
-          href="https://www.instagram.com/lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
         >
-          <img
-            alt="Instagram"
+          <a
             class="c8"
-            src="Instagram.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Facebook"
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram"
+              class="c9"
+              src="Instagram.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Facebook.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://twitter.com/LebReliefNet"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Twitter"
+            href="https://www.facebook.com/Lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Facebook"
+              class="c9"
+              src="Facebook.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Twitter.svg"
-          />
-        </a>
+            href="https://twitter.com/LebReliefNet"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Twitter"
+              class="c9"
+              src="Twitter.svg"
+            />
+          </a>
+        </div>
         <a
-          class="c9"
+          class="c10"
           href="mailto:contact@lebanonreliefnetwork.org"
           target="_blank"
         >
@@ -645,7 +684,7 @@ exports[`render results page 1`] = `
 }
 
 .c2 {
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 2rem 0;
 }
 
@@ -659,33 +698,33 @@ exports[`render results page 1`] = `
   text-decoration-line: underline;
 }
 
-.c9 {
+.c10 {
   color: #000000;
 }
 
-.c7 {
+.c8 {
   margin: 5%;
 }
 
-.c8 {
+.c9 {
   width: 100%;
   height: auto;
 }
 
 .c6 {
+  padding: 1rem 0;
+  margin: 2rem 0rem;
+}
+
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  padding: 1rem 0;
-  margin: 2rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c1 {
@@ -696,10 +735,12 @@ exports[`render results page 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .c0 {
@@ -720,12 +761,19 @@ exports[`render results page 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    width: 75%;
+    margin: 0% 12.5%;
   }
 }
 
@@ -803,44 +851,48 @@ exports[`render results page 1`] = `
       <div
         class="c6"
       >
-        <a
+        <div
           class="c7"
-          href="https://www.instagram.com/lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
         >
-          <img
-            alt="Instagram"
+          <a
             class="c8"
-            src="Instagram.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://www.facebook.com/Lebanonreliefnetwork"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Facebook"
+            href="https://www.instagram.com/lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Instagram"
+              class="c9"
+              src="Instagram.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Facebook.svg"
-          />
-        </a>
-        <a
-          class="c7"
-          href="https://twitter.com/LebReliefNet"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Twitter"
+            href="https://www.facebook.com/Lebanonreliefnetwork"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Facebook"
+              class="c9"
+              src="Facebook.svg"
+            />
+          </a>
+          <a
             class="c8"
-            src="Twitter.svg"
-          />
-        </a>
+            href="https://twitter.com/LebReliefNet"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Twitter"
+              class="c9"
+              src="Twitter.svg"
+            />
+          </a>
+        </div>
         <a
-          class="c9"
+          class="c10"
           href="mailto:contact@lebanonreliefnetwork.org"
           target="_blank"
         >

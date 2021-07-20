@@ -662,8 +662,8 @@ const StyledPage = styled.div`
  */
 const StyledBodySection = styled.div`
   background-color: transparent;
-  margin-left: 16.7%;
-  margin-right: 16.7%;
+  margin-left: 20%;
+  margin-right: 20%;
   @media (max-width: ${devices.mobile}) {
     margin-left: 18px;
     margin-right: 18px;
@@ -705,7 +705,7 @@ const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin-left: 16.7%;
+  margin-left: 20%;
   margin-top: 41px;
   max-width: 632px;
 

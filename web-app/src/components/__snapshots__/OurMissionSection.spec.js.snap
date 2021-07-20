@@ -26,6 +26,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
 .c0 {
   background: #ffffff;
   margin: 0;
+  margin-bottom: 5%;
   padding: 0 3rem;
   max-width: 100%;
 }
@@ -42,7 +43,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 .c2 {
   position: relative;
-  margin-top: 2%;
+  margin: 2%;
   left: 12%;
   width: 50%;
 }
@@ -51,11 +52,8 @@ exports[`the OurMission component should match the snapshot 1`] = `
   object-fit: contain;
   position: relative;
   width: auto;
-  max-wodth: 100%;
-}
-
-.c6 {
-  margin: 40px 0;
+  max-width: 100%;
+  margin-top: 10%;
 }
 
 @media (max-width:576px) {
@@ -82,6 +80,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
+    margin-bottom: 5%;
   }
 }
 
@@ -103,12 +102,6 @@ exports[`the OurMission component should match the snapshot 1`] = `
     max-width: 100%;
     width: 100%;
     padding-left: 0rem;
-  }
-}
-
-@media (min-width:576px) {
-  .c6 {
-    display: none;
   }
 }
 
@@ -141,14 +134,9 @@ exports[`the OurMission component should match the snapshot 1`] = `
       <img
         alt="Hands"
         class="c5"
-        src="Hands.png"
+        src="Hands.svg"
       />
     </div>
-    <img
-      alt="Swirl"
-      class="c6"
-      src="Swirl.png"
-    />
   </section>
 </div>
 `;
