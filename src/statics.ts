@@ -1,9 +1,14 @@
 // DATABASE
-export const CLOUDANT_FLASHCARD_DB_DEV = "dev_flashcard";
-export const CLOUDANT_RESULTS_DB_DEV = "flashcard_results";
-export const CLOUDANT_PERCENTAGE_DB_DEV = "experience_percentages";
-export const CLOUDANT_USEFUL_TIPS_DB_DEV = "useful_tips";
-export const CLOUDANT_FLASHCARD_SELECT_DB_DEV = "dev_flashcard_select";
+export const CLOUDANT_FLASHCARD_DB_DEV =
+  process.env.CLOUDANT_FLASHCARD_DB || "dev_flashcard";
+export const CLOUDANT_RESULTS_DB_DEV =
+  process.env.RESULTS_DB || "flashcard_results";
+export const CLOUDANT_PERCENTAGE_DB_DEV =
+  process.env.CLOUDANT_PERCENTAGE || "experience_percentages";
+export const CLOUDANT_USEFUL_TIPS_DB_DEV =
+  process.env.CLOUDANT_USEFUL_TIPS_DB || "useful_tips";
+export const CLOUDANT_FLASHCARD_SELECT_DB_DEV =
+  process.env.CLOUDANT_FLASHCARD_SELECT_DB || "dev_flashcard_select";
 export const CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV =
   "dev_flashcard_select_counts";
 export const CLOUDANT_PSYCHOTHERAPISTS_DB_DEV = "dev_therapists";
