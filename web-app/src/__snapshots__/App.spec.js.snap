@@ -1,33 +1,853 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`render about page 1`] = `
+.c3 {
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c4 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c5 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.c9 {
+  color: #000000;
+}
+
+.c7 {
+  margin: 5%;
+}
+
+.c8 {
+  width: 100%;
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 {
+  background: #f0f0f0;
+  margin: 0;
+  min-height: 5%;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 75%;
+    padding: 0;
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    padding: 0;
+    margin: 1rem 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 <div>
   <div>
     About page
   </div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
+        >
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="c4"
+        >
+          <li
+            class="c5"
+          >
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c6"
+      >
+        <a
+          class="c7"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
+          contact@lebanonreliefnetwork.org
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
 `;
 
 exports[`render help page 1`] = `
+.c3 {
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c4 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c5 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.c9 {
+  color: #000000;
+}
+
+.c7 {
+  margin: 5%;
+}
+
+.c8 {
+  width: 100%;
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 {
+  background: #f0f0f0;
+  margin: 0;
+  min-height: 5%;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 75%;
+    padding: 0;
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    padding: 0;
+    margin: 1rem 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 <div>
   <div>
     Help page
   </div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
+        >
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="c4"
+        >
+          <li
+            class="c5"
+          >
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c6"
+      >
+        <a
+          class="c7"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
+          contact@lebanonreliefnetwork.org
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
 `;
 
 exports[`render home page 1`] = `
+.c3 {
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c4 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c5 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.c9 {
+  color: #000000;
+}
+
+.c7 {
+  margin: 5%;
+}
+
+.c8 {
+  width: 100%;
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 {
+  background: #f0f0f0;
+  margin: 0;
+  min-height: 5%;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 75%;
+    padding: 0;
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    padding: 0;
+    margin: 1rem 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 <div>
   <div>
     Home page
   </div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
+        >
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="c4"
+        >
+          <li
+            class="c5"
+          >
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c6"
+      >
+        <a
+          class="c7"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
+          contact@lebanonreliefnetwork.org
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
 `;
 
 exports[`render results page 1`] = `
+.c3 {
+  font-weight: bold;
+}
+
+.c2 {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.c4 {
+  list-style-type: none;
+  padding: 0;
+}
+
+.c5 {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.c9 {
+  color: #000000;
+}
+
+.c7 {
+  margin: 5%;
+}
+
+.c8 {
+  width: 100%;
+  height: auto;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin: 2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 {
+  background: #f0f0f0;
+  margin: 0;
+  min-height: 5%;
+}
+
+@media (max-width:576px) {
+  .c2 {
+    width: 75%;
+    padding: 0;
+    margin: 0;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    padding: 0;
+    margin: 1rem 0;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 <div>
   <div>
     Results page
   </div>
+  <section
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <h2
+          class="c3"
+        >
+          Lebanon Relief Network
+        </h2>
+        <ul
+          class="c4"
+        >
+          <li
+            class="c5"
+          >
+            <a
+              href="/terms"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="/privacy"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Privacy policy
+            </a>
+          </li>
+          <li
+            class="c5"
+          >
+            <a
+              href="https://github.com/lebanon-relief-project/LRP-web-app/blob/master/CONTRIBUTING.md"
+              rel="noopener noreferrer"
+              style="text-decoration: none;"
+              target="_blank"
+            >
+              Code Contribution
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="c6"
+      >
+        <a
+          class="c7"
+          href="https://www.instagram.com/lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Instagram"
+            class="c8"
+            src="Instagram.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://www.facebook.com/Lebanonreliefnetwork"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="c8"
+            src="Facebook.svg"
+          />
+        </a>
+        <a
+          class="c7"
+          href="https://twitter.com/LebReliefNet"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Twitter"
+            class="c8"
+            src="Twitter.svg"
+          />
+        </a>
+        <a
+          class="c9"
+          href="mailto:contact@lebanonreliefnetwork.org"
+          target="_blank"
+        >
+          contact@lebanonreliefnetwork.org
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
 `;

@@ -52,6 +52,7 @@ export const Pages = () => {
           <Route path={Routes.TERMS} component={TermsPage} />
           <Route path={Routes.HOME} component={HomePage} />
         </Switch>
+        <Footer />
       </ErrorBoundary>
     </>
   );
@@ -72,7 +73,6 @@ const App = () => {
         <Navbar open={open} setOpen={setOpen} />
         <Pages />
       </Router>
-      {/* <Footer /> */}
     </>
   );
 };
