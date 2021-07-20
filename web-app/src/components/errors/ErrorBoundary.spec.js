@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "jest-styled-components";
-import ErrorPage from "../../pages/errorPage";
 import ErrorBoundary from "./ErrorBoundary";
 
 jest.mock("../../pages/errorPage", (props) => {

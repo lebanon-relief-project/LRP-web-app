@@ -17,7 +17,6 @@ import MobileNavbar from "./components/MobileNavBar";
 import ResultsPage from "./pages/resultsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
-import ErrorPage from "./pages/errorPage";
 import ErrorBoundary from "./components/errors/ErrorBoundary";
 
 export function ScrollToTop() {

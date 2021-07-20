@@ -1,5 +1,5 @@
 import React from "react";
-import { wait, waitForElement } from "@testing-library/react";
+import { wait } from "@testing-library/react";
 import FlashCardsSection from "./FlashCardsSection";
 import "jest-styled-components";
 import { renderWithRouter } from "../util/testUtils";
@@ -7,8 +7,6 @@ import "jest-styled-components";
 import { fireEvent } from "@testing-library/dom";
 import { act } from "react-dom/test-utils";
 import { renderHook } from "@testing-library/react-hooks";
-import { render } from "@testing-library/react";
-import ErrorBoundary from "./errors/ErrorBoundary";
 
 jest.mock("./FlashCard", (props) => {
   return (props) => <div>flash card {props.card.title}</div>;
