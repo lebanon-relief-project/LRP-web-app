@@ -3,6 +3,7 @@ import { HelpController } from "./help.controller";
 import { ResultsController } from "./results.controller";
 import { PercentageController } from "./percentage.controller";
 import { UsefulTipsController } from "./usefulTips.controller";
+import { PsychotherapistController } from "./psychotherapist.controller";
 
 const controllers = [
   HealthController,
@@ -10,6 +11,7 @@ const controllers = [
   ResultsController,
   PercentageController,
   UsefulTipsController,
+  PsychotherapistController,
 ];
 
 export default controllers;
