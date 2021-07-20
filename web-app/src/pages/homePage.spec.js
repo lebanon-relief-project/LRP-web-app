@@ -15,6 +15,10 @@ jest.mock("../components/WhatHappenedSection", (props) => {
   return (props) => <div>What happened section</div>;
 });
 
+jest.mock("../components/WellbeingSection", (props) => {
+  return (props) => <div>Wellbeing section</div>;
+});
+
 describe("the HomePage component", () => {
   it("should match the snapshot", () => {
     const { container } = render(<HomePage />);

@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Card from "./Card";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
-import { ReactComponent as Illustration3 } from "../assets/images/Illustration3.svg";
-import { ReactComponent as Illustration4 } from "../assets/images/Illustration4.svg";
+import colours from "../styles/Colours";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
@@ -12,65 +11,72 @@ const HelpSection = () => {
   return (
     <>
       <StyledSection>
-        <CardWrapper>
-          <Card
-            title="I’m looking for help"
-            path={Routes.HELP}
-            buttonText="Give me advice"
-          >
-            <StyledBody>
-              <Paragraph>
-                Everyone reacts differently to trauma, and not everyone recovers
-                from a traumatic experience in the same way or time. There is no
-                one solution to heal from it.
-              </Paragraph>
-              <Paragraph>
-                Here you can find personalized recommendations, tips and tools
-                to help you cope with trauma.
-              </Paragraph>
-            </StyledBody>
-          </Card>
-          <Card
-            title="I’d like to help"
-            path={"#"}
-            buttonText="Contact me"
-            onClick={() => {
-              setLikeToHelpModalVisible(true);
-            }}
-          >
-            <StyledBody>
-              <Paragraph>
-                Do you have a close one who underwent trauma? Do you need
-                direction on how to help, what to say, what to do, and how to
-                protect yourself?
-              </Paragraph>
-              <Paragraph>
-                Or do you want to help those who are dealing with trauma, and
-                are looking for opportunities to do so?
-              </Paragraph>
-            </StyledBody>
-          </Card>
-        </CardWrapper>
-        <IllustrationAndCard>
-          <StyledIllustration3 />
-          <StyledIllustration4 />
-          <ChallengeCard>
+        <PageContainer>
+          <CardWrapper>
+            {/* I'm looking for self-help */}
             <Card
-              secondary="true"
-              disabled
-              title="Try our 14 days of wellbeing"
-              path={Routes.HOME}
-              buttonText="Coming soon"
+              title="I'm looking for self-help"
+              path={Routes.HELP}
+              buttonText="Give me advice"
             >
-              <Paragraph>
-                Keep your mind and body engaged by joining our 14 days of
-                wellbeing. Created by our team of mental health experts, these
-                exercises offer simple daily goals which will help you manage
-                negative emotions and reach a more relaxed and positive mindset.
-              </Paragraph>
+              <StyledBody>
+                <Paragraph>
+                  Everyone reacts differently to trauma, and not everyone
+                  recovers from a traumatic experience in the same way. There
+                  are countless ways to resolve trauma and overcome it.
+                </Paragraph>
+                <Paragraph>
+                  Here you can find personalized self-help recommendations,
+                  tips, and tools to help you cope with trauma in your own time
+                  and at your own pace.
+                </Paragraph>
+              </StyledBody>
             </Card>
-          </ChallengeCard>
-        </IllustrationAndCard>
+
+            {/* I'd like to help */}
+            <Card
+              title="I’d like to help"
+              path={"#"}
+              buttonText="Contact me"
+              onClick={() => {
+                setLikeToHelpModalVisible(true);
+              }}
+            >
+              <StyledBody>
+                <Paragraph>
+                  Do you know someone who experienced or is experiencing trauma?
+                  Do you need direction on how to help, what to say, what to do,
+                  and how to protect yourself?
+                </Paragraph>
+                <Paragraph>
+                  Or are you looking for volunteer opportunities in your
+                  community to help those impacted by a traumatic event?
+                </Paragraph>
+              </StyledBody>
+            </Card>
+
+            {/* I'd like to talk to someone */}
+            <Card
+              title="I'd like to talk to someone"
+              path={"#"}
+              buttonText="View directory"
+              onClick={() => {}}
+              disabled
+            >
+              <StyledBody>
+                <Paragraph>
+                  Sometimes, self-help is not enough, and you might prefer a
+                  professional hand to help you cope with trauma.
+                </Paragraph>
+                <Paragraph>
+                  We created a directory of mental health experts to help you
+                  find and connect to the therapist, counselling service, or
+                  organisation that resonates best with you.
+                </Paragraph>
+              </StyledBody>
+            </Card>
+          </CardWrapper>
+        </PageContainer>
       </StyledSection>
       {likeToHelpModalVisible && (
         <LikeToHelpModal
@@ -96,45 +102,6 @@ const Paragraph = styled.p`
   color: #262626;
 `;
 
-const StyledIllustration3 = styled(Illustration3)`
-  padding 0 3rem;
-  @media (max-width: ${devices.mobile}) {
-    display: none;
-  }
-`;
-
-const StyledIllustration4 = styled(Illustration4)`
-  max-width: 100%;
-  margin-left: 0rem;
-
-  @media (min-width: ${devices.mobile}) {
-    display: none;
-  }
-`;
-
-const ChallengeCard = styled.div`
-  position: absolute;
-  display: flex;
-  bottom: 2rem;
-  right: 23%;
-  width: 40%;
-  @media (max-width: ${devices.ipadpro}) {
-    width: 50%;
-    right: 0;
-  }
-  @media (max-width: ${devices.mobile}) {
-    position: static;
-    width: 100%;
-  }
-`;
-
-const IllustrationAndCard = styled.div`
-  @media (min-width: ${devices.mobile}) {
-    display: flex;
-    position: relative;
-  }
-`;
-
 const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -146,20 +113,31 @@ const CardWrapper = styled.div`
     pading: 0;
     margin: 0;
   }
-  position: absolute;
   z-index: 1;
-  margin-top: 8rem;
 `;
 
-const StyledSection = styled.section`
-  position: relative;
-  margin-top: -8%;
+// The width, margin-left and transform fields are to allow the background colour to escape the
+// page max-width of 1440px
+const StyledSection = styled.div`
+  display: flex;
+  justify-content: center;
+  background: ${colours.lightGrey};
+  margin: 0;
+  padding: 0 3rem;
+  width: calc(100vw - 20px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+
   @media (max-width: ${devices.mobile}) {
     margin-right: 0rem;
     max-width: 100%;
     order: 1;
     margin-top: 0;
   }
+`;
+
+const PageContainer = styled.div`
+  max-width: 1440px;
 `;
 
 export default HelpSection;
