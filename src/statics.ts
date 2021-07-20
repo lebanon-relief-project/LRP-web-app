@@ -6,6 +6,7 @@ export const CLOUDANT_USEFUL_TIPS_DB_DEV = "useful_tips";
 export const CLOUDANT_FLASHCARD_SELECT_DB_DEV = "dev_flashcard_select";
 export const CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV =
   "dev_flashcard_select_counts";
+export const CLOUDANT_PSYCHOTHERAPISTS_DB_DEV = "dev_therapists";
 
 // CONTENT
 export const COS_FLASHCARD_IMAGE_BUCKET = "lrn-flashcard-images";
