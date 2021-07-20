@@ -16,7 +16,7 @@ const WellbeingSection = () => {
         <IllustrationAndCard>
           <ChallengeCard>
             <Card
-              secondary
+              secondary="true"
               disabled
               title="Try our 14 days of wellbeing"
               path={Routes.HOME}

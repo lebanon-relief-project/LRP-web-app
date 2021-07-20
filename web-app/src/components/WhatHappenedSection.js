@@ -69,7 +69,7 @@ const StyledFlexContainer = styled(FlexContainer)`
     padding-top: 3rem;
   }
   @media (max-width: ${devices.mobile}) {
-    padding-top: 0;
+    padding-top: 25%;
   }
 `;
 

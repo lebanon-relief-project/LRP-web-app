@@ -100,7 +100,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c3 {
-    padding-top: 0;
+    padding-top: 25%;
   }
 }
 
