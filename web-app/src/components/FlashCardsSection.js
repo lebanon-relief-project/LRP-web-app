@@ -24,23 +24,16 @@ const FlashCardsSection = (props) => {
 
   const fetchFlashCards = async () => {
     let response = await getFlashCards();
-    console.log(response);
+
     isLoading(false);
     setFlashCards(response.cards);
   };
 
   useEffect(() => {
     fetchFlashCards().catch(() => {
-      console.log("got error here");
-      // setState((error) => {
-      //   throw error;
-      // });
-
-      // setState(() => {
-      //   throw new Error("hi");
-      // });
-
-      throw new Error("hi");
+      setState(() => {
+        throw new Error("failed to fetch flashCards");
+      });
     });
   }, []);
 
