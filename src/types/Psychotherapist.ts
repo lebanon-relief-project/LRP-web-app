@@ -1,4 +1,4 @@
-interface Psychotherapist {
+export interface Psychotherapist {
   firstName: string;
   lastName: string;
   bio: string;
@@ -21,4 +21,21 @@ interface Psychotherapist {
   internationalPaymentsOnly: boolean;
   freeService: boolean;
   bookingApp: string;
+}
+
+export interface PsychotherapistResponse {
+  psychotherapists: Psychotherapist[];
+}
+
+export interface PsychotherapistCloudant {
+  id: string;
+  key: string;
+  value: object;
+  doc: Psychotherapist;
+}
+
+export interface PsychotherapistCloudantResponse {
+  total_rows: number;
+  offset?: number;
+  rows: PsychotherapistCloudant[];
 }

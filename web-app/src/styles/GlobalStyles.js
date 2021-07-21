@@ -25,8 +25,9 @@ export const StyledParagraph = styled.p`
 `;
 
 export const StyledSection = styled.section`
-  background: ${colours.white};
+  background: ${(props) => (props.grey ? colours.lightGrey : colours.white)};
   margin: 0;
+  margin-bottom: 5%;
   padding: 0 3rem;
   max-width: 100%;
 
