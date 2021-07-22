@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ErrorPage component should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 64px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: inherit;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  height: 151px;
+  width: 140px;
+}
+
+.c3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.c4 {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.c5 {
+  width: 140px;
+  height: 40px;
+  background-color: #ffd666;
+  margin-top: 30px;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.043);
+  border-radius: 2px;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: black;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <img
+        alt="error icon"
+        class="c2"
+        src="Error.svg"
+      />
+      <h4
+        class="c3"
+      >
+        Oh no!
+      </h4>
+      <p
+        class="c4"
+      >
+        Looks like something went wrong, please try refreshing the page.
+      </p>
+      <button
+        class="c5"
+      >
+        Refresh page
+      </button>
+    </div>
+  </div>
+</div>
+`;

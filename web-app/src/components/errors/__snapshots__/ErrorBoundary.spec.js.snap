@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the ErrorPage component should render Error page when exception occurs 1`] = `
+<div>
+  <div>
+    Error page
+  </div>
+</div>
+`;
+
+exports[`the ErrorPage component should render children when no error happenned 1`] = `
+<div>
+  <div>
+    Regular child
+  </div>
+</div>
+`;

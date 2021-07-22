@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.1",
     "husky": "^4.3.0"
   },
   "husky": {
