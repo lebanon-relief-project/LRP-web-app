@@ -11,6 +11,7 @@ const Card = (props) => {
       <CardTitle {...rest}>{title}</CardTitle>
       {children}
 
+      <br />
       {props.externalPath ? (
         <StyledAnchor
           href={props.externalPath}
@@ -101,8 +102,8 @@ const StyledCard = styled.fieldset`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  min-width: 360px;
 
-  background-color: white;
   @media (max-width: ${devices.ipadpro}) {
     width: ${(props) => (props.secondary ? "100%" : "40%")};
   }

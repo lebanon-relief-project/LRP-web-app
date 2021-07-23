@@ -59,7 +59,7 @@ const HelpSection = () => {
             <Card
               title="I'd like to talk to someone"
               path={"#"}
-              buttonText="View directory"
+              buttonText="Coming soon"
               onClick={() => {}}
               disabled
             >
@@ -71,7 +71,7 @@ const HelpSection = () => {
                 <Paragraph>
                   We created a directory of mental health experts to help you
                   find and connect to the therapist, counselling service, or
-                  organisation that resonates best with you.
+                  organization that resonates best with you.
                 </Paragraph>
               </StyledBody>
             </Card>
