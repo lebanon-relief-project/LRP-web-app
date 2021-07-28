@@ -49,7 +49,7 @@ const StyledPeople = styled.img`
   max-width: 100%;
   object-fit: contain;
   width: auto;
-  margin: 2%;
+  padding: 2%;
 
   @media (max-width: ${devices.ipad}) {
     width: 80%;
