@@ -39,10 +39,9 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   background: ${colours.lightGrey};
-  margin: 0;
   padding: 0 3rem;
-  width: calc(100vw - 20px);
-  margin-left: 50%;
+  width: calc(100vw);
+  margin: 20px 0 0 50%;
   transform: translateX(-50%);
 `;
 
