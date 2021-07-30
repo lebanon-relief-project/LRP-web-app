@@ -118,6 +118,10 @@ const CardWrapper = styled.div`
 `;
 
 const StyledCard = styled(Card)`
+  legend {
+    width: auto;
+    margin: 0 auto;
+  }
   @media (max-width: ${devices.ipadpro}) {
     min-width: 75%;
   }
