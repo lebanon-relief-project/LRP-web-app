@@ -13,32 +13,34 @@ const Navbar = ({ open }) => {
   return (
     <>
       <StyledNav open={open}>
-        <LogoLink exact to={Routes.HOME}>
-          <LogoImage src={logo} alt="Logo" />
-        </LogoLink>
+        <StyledNavContentWrapper>
+          <LogoLink exact to={Routes.HOME}>
+            <LogoImage src={logo} alt="Logo" />
+          </LogoLink>
 
-        <StyledUl>
-          <StyledLi>
-            <StyledLink exact to={Routes.HOME}>
-              Home
-            </StyledLink>
-          </StyledLi>
-          <StyledLi>
-            <StyledLink exact to={Routes.HELP}>
-              I’m looking for help
-            </StyledLink>
-          </StyledLi>
-          <StyledLi>
-            <StyledButton
-              exact
-              to={"#"}
-              onClick={() => setLikeToHelpModalVisible(true)}
-              data-testid={"id-like-to-help"}
-            >
-              I’d like to help
-            </StyledButton>
-          </StyledLi>
-        </StyledUl>
+          <StyledUl>
+            <StyledLi>
+              <StyledLink exact to={Routes.HOME}>
+                Home
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink exact to={Routes.HELP}>
+                I’m looking for help
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledButton
+                exact
+                to={"#"}
+                onClick={() => setLikeToHelpModalVisible(true)}
+                data-testid={"id-like-to-help"}
+              >
+                I’d like to help
+              </StyledButton>
+            </StyledLi>
+          </StyledUl>
+        </StyledNavContentWrapper>
       </StyledNav>
       {likeToHelpModalVisible && (
         <LikeToHelpModal
@@ -59,6 +61,7 @@ const StyledNav = styled.nav`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   z-index: 100;
+  justify-content: center;
   @media (max-width: ${devices.ipad}) {
     padding: 1rem 0;
   }
@@ -89,15 +92,14 @@ const StyledNav = styled.nav`
 `;
 
 const LogoImage = styled.img`
-  width: 20%;
   height: 90%;
+  max-height: 68px;
   @media (max-width: ${devices.mobile}) {
     display: none;
   }
 `;
 
 const LogoLink = styled(NavLink)`
-  min-width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,12 +114,17 @@ const StyledUl = styled.ul`
   }
   list-style-type: none;
   padding: 0;
-  min-width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 `;
 
 const StyledLi = styled.li`
-  max-width: 100%;
-  min-width: 50%;
+
+  text-align: center;
+
   @media (max-width: ${devices.mobile}) {
     margin-bottom: 60px;
   }
@@ -131,9 +138,7 @@ const StyledButton = styled(NavLink)`
   border: none;
   background: none;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
+
   transform: translateY(-50%);
   color: ${colours.black};
   font-family: Raleway;
@@ -154,10 +159,7 @@ const StyledButton = styled(NavLink)`
 
 const StyledLink = styled(NavLink)`
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+
   color: ${colours.black};
   font-family: Raleway;
   font-style: normal;
@@ -180,6 +182,15 @@ const StyledLink = styled(NavLink)`
       font-weight: bold;
     }
   }
+
+  margin: 20px;
 `;
+
+const StyledNavContentWrapper = styled.div`
+  width: calc(100vw - 20px);
+  max-width: 960px;
+  display: flex;
+  min-width: ${devices.mobile};
+`
 
 export default Navbar;
