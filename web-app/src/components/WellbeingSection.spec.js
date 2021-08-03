@@ -1,17 +1,18 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import WellbeingSection from "./WhatHappenedSection";
+import WellbeingSection from "./WellbeingSection";
 import "jest-styled-components";
+import { renderWithRouter } from "../util/testUtils";
 
-describe("the WhatHappened component", () => {
+describe("the WellbeingSection component", () => {
   let container;
   it("should match the snapshot", () => {
-    ({ container } = renderWhatHappenedSection());
+    ({ container } = renderWellbeingSection());
 
     expect(container).toMatchSnapshot();
   });
 });
 
-const renderWhatHappenedSection = () => {
-  return render(<WellbeingSection />);
+const renderWellbeingSection = () => {
+  return renderWithRouter(<WellbeingSection />);
 };
