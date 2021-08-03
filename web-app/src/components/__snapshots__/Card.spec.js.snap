@@ -19,7 +19,7 @@ exports[`the Card component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-width: 90%;
-  max-width: 90%;
+  width: 50%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
@@ -52,7 +52,6 @@ exports[`the Card component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  background-color: white;
 }
 
 @media (max-width:576px) {
@@ -91,6 +90,7 @@ exports[`the Card component should match the snapshot 1`] = `
     >
       test title
     </legend>
+    <br />
     <a
       class="c2"
       href="/test"
