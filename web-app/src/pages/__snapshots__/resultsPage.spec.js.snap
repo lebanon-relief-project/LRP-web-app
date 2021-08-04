@@ -91,7 +91,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-width: 90%;
-  max-width: 90%;
+  width: 50%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
@@ -114,7 +114,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-width: 90%;
-  max-width: 90%;
+  width: 50%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
@@ -147,7 +147,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  background-color: white;
+  min-width: 360px;
 }
 
 .c13 {
@@ -379,6 +379,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             >
               Surround yourself with friends and family. And remember, you can always reach out…
             </p>
+            <br />
             <a
               class="c14 c11"
               href="/"
@@ -399,6 +400,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             >
               Here are some exercises to reduce stress and regain control over your actions and thoughts.
             </p>
+            <br />
             <a
               class="c15"
               href="Self-Help_Exercises.pdf"
@@ -423,6 +425,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
             >
               Keep your mind and body engaged by joining our 14 days of wellbeing.
             </p>
+            <br />
             <a
               class="c16 c11"
               disabled=""

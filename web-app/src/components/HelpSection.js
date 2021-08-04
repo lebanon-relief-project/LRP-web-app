@@ -14,7 +14,7 @@ const HelpSection = () => {
         <PageContainer>
           <CardWrapper>
             {/* I'm looking for self-help */}
-            <Card
+            <StyledCard
               title="I'm looking for self-help"
               path={Routes.HELP}
               buttonText="Give me advice"
@@ -31,10 +31,10 @@ const HelpSection = () => {
                   and at your own pace.
                 </Paragraph>
               </StyledBody>
-            </Card>
+            </StyledCard>
 
             {/* I'd like to help */}
-            <Card
+            <StyledCard
               title="I’d like to help"
               path={"#"}
               buttonText="Contact me"
@@ -53,13 +53,13 @@ const HelpSection = () => {
                   community to help those impacted by a traumatic event?
                 </Paragraph>
               </StyledBody>
-            </Card>
+            </StyledCard>
 
             {/* I'd like to talk to someone */}
-            <Card
+            <StyledCard
               title="I'd like to talk to someone"
               path={"#"}
-              buttonText="View directory"
+              buttonText="Coming soon"
               onClick={() => {}}
               disabled
             >
@@ -71,10 +71,10 @@ const HelpSection = () => {
                 <Paragraph>
                   We created a directory of mental health experts to help you
                   find and connect to the therapist, counselling service, or
-                  organisation that resonates best with you.
+                  organization that resonates best with you.
                 </Paragraph>
               </StyledBody>
-            </Card>
+            </StyledCard>
           </CardWrapper>
         </PageContainer>
       </StyledSection>
@@ -107,6 +107,7 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
     position: static;
@@ -114,6 +115,16 @@ const CardWrapper = styled.div`
     margin: 0;
   }
   z-index: 1;
+`;
+
+const StyledCard = styled(Card)`
+  legend {
+    width: auto;
+    margin: 0 auto;
+  }
+  @media (max-width: ${devices.ipadpro}) {
+    min-width: 75%;
+  }
 `;
 
 // The width, margin-left and transform fields are to allow the background colour to escape the
@@ -124,7 +135,7 @@ const StyledSection = styled.div`
   background: ${colours.lightGrey};
   margin: 0;
   padding: 0 3rem;
-  width: calc(100vw - 20px);
+  width: calc(100vw);
   margin-left: 50%;
   transform: translateX(-50%);
 
