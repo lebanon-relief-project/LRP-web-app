@@ -58,9 +58,9 @@ const OurValuesSection = (props) => {
           window.innerWidth >= devices.ipad.replace("px", "") &&
           window.innerWidth <= devices.ipadprolandscape.replace("px", "")
         ) {
-          setCardWrapperHeight(height * 0.6);
+          setCardWrapperHeight(height * 0.7);
         } else {
-          setCardWrapperHeight(height * 0.4);
+          setCardWrapperHeight(height * 0.5);
         }
       }
     }
@@ -74,7 +74,9 @@ const OurValuesSection = (props) => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <Wrapper ref={cardWrapperRef}>
+          <Wrapper 
+            style={{ maxHeight: cardWrapperHeight }}
+            ref={cardWrapperRef}>
             {flashCards.map((flashCard, index) => {
               return (
                 <FlashCard
@@ -102,12 +104,22 @@ const StyledSection = styled.section`
 const Wrapper = styled.div`
   width: 60%;
   margin: 0 20%;
+  max-width: 960px;
+  margin:auto;
   background: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: space-between;
+  flex-direction: column;
+
+  @media (max-width: ${devices.ipad}) {
+    width: 100%;
+    margin: 0 32px;
+    justify-content: center;
+    max-height: unset !important;
+  }
 `;
 
 export default OurValuesSection;

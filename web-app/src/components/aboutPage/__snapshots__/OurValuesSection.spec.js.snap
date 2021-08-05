@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the OurValuesSection component should match the snapshot 1`] = `
+.c1 {
+  heigth: auto;
+  width: 10%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c0 {
+  background: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    <img
+      alt="loading..."
+      class="c1"
+      src="LoadingSpinner.gif"
+    />
+  </section>
+</div>
+`;

@@ -72,6 +72,25 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   max-width: 60%;
 }
 
+.c10 {
+  heigth: auto;
+  width: 10%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c9 {
+  background: inherit;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width:576px) {
   .c2 {
     -webkit-flex-direction: column;
@@ -183,6 +202,15 @@ exports[`the AboutPage component should match the snapshot 1`] = `
       </div>
     </div>
   </div>
+  <section
+    class="c9"
+  >
+    <img
+      alt="loading..."
+      class="c10"
+      src="LoadingSpinner.gif"
+    />
+  </section>
   <div>
     Help section
   </div>
