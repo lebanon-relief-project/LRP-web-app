@@ -1,14 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the OurValuesSection component should match the snapshot 1`] = `
-.c1 {
-  heigth: auto;
-  width: 10%;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
 .c0 {
   background: inherit;
   margin: 0;
@@ -18,17 +10,72 @@ exports[`the OurValuesSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 240px;
+  background: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    padding: 0 18px;
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-height: unset !important;
+  }
 }
 
 <div>
   <section
     class="c0"
   >
-    <img
-      alt="loading..."
+    <div
       class="c1"
-      src="LoadingSpinner.gif"
-    />
+    >
+      <div>
+        flash card 
+        random title
+      </div>
+    </div>
   </section>
 </div>
 `;

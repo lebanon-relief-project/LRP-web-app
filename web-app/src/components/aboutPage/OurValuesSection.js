@@ -74,9 +74,10 @@ const OurValuesSection = (props) => {
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <Wrapper 
+          <Wrapper
             style={{ maxHeight: cardWrapperHeight }}
-            ref={cardWrapperRef}>
+            ref={cardWrapperRef}
+          >
             {flashCards.map((flashCard, index) => {
               return (
                 <FlashCard
@@ -99,13 +100,17 @@ const StyledSection = styled.section`
   padding: 0;
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
-  margin: 0 20%;
-  max-width: 960px;
-  margin:auto;
+  width: 100%;
+
+  max-width: 1440px;
+
+  padding: 0 240px;
+
   background: inherit;
   display: flex;
   flex-direction: row;
@@ -114,9 +119,12 @@ const Wrapper = styled.div`
   align-content: space-between;
   flex-direction: column;
 
-  @media (max-width: ${devices.ipad}) {
+  @media (max-width: ${devices.ipadpro}) {
+    padding: 0 18px;
     width: 100%;
-    margin: 0 32px;
+  }
+
+  @media (max-width: ${devices.ipad}) {
     justify-content: center;
     max-height: unset !important;
   }

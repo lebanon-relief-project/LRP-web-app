@@ -64,21 +64,26 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
-  width: calc(100vw - 20px);
+
+  width: calc(100vw);
   margin-left: 50%;
   transform: translateX(-50%);
 `;
 
 const PageContainer = styled.div`
   max-width: 1440px;
-  margin-top: 5%;
+  margin-top: 80px;
+
+  padding: 0 240px;
+
+  @media (max-width: ${devices.ipadpro}) {
+    padding: 0 18px;
+  }
 `;
 
 const StyledTextArea = styled.div`
   position: relative;
   width: 50%;
-  margin: 2%;
 
   @media (max-width: ${devices.mobile}) {
     right: 0;
@@ -87,14 +92,7 @@ const StyledTextArea = styled.div`
   }
 `;
 
-const StyledFlexContainer = styled(FlexContainer)`
-  @media (max-width: ${devices.ipad}) {
-    padding-top: 3rem;
-  }
-  @media (max-width: ${devices.mobile}) {
-    padding-top: 25%;
-  }
-`;
+const StyledFlexContainer = styled(FlexContainer)``;
 
 const StyledImage = styled.img`
   object-fit: contain;
