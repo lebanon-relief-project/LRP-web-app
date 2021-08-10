@@ -132,7 +132,7 @@ const StyledCard = styled(Card)`
 const StyledSection = styled.div`
   display: flex;
   justify-content: center;
-  background: ${colours.lightGrey};
+  background: inherit;
   margin: 0;
   padding: 0 3rem;
   width: calc(100vw);

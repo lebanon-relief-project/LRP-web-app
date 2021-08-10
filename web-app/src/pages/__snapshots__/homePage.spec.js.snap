@@ -16,6 +16,10 @@ exports[`the HomePage component should match the snapshot 1`] = `
   max-width: 1440px;
 }
 
+.c2 {
+  background-color: #fafafa;
+}
+
 @media (max-width:576px) {
   .c0 {
     -webkit-flex-direction: column;
@@ -37,8 +41,12 @@ exports[`the HomePage component should match the snapshot 1`] = `
       <div>
         Our Mission section
       </div>
-      <div>
-        Help section
+      <div
+        class="c2"
+      >
+        <div>
+          Help section
+        </div>
       </div>
       <div>
         Wellbeing section

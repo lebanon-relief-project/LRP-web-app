@@ -95,7 +95,7 @@ const OurValuesSection = (props) => {
 };
 
 const StyledSection = styled.section`
-  background: inherit;
+  background: ${colours.lightGrey};
   margin: 0;
   padding: 0;
   width: 100%;
