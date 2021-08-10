@@ -43,7 +43,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 .c2 {
   position: relative;
-  margin: 2%;
+  padding: 2%;
   left: 12%;
   width: 50%;
 }
@@ -58,7 +58,6 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c0 {
-    padding: 0;
     margin-top: 0;
   }
 }
@@ -73,7 +72,6 @@ exports[`the OurMission component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c2 {
-    position: relative;
     top: 0;
     left: 0;
     width: 100%;

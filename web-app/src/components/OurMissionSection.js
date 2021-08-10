@@ -33,11 +33,10 @@ const OurMission = () => {
 
 const StyledTextArea = styled.div`
   position: relative;
-  margin: 2%;
+  padding: 2%;
   left: 12%;
   width: 50%;
   @media (max-width: ${devices.mobile}) {
-    position: relative;
     top: 0;
     left: 0;
     width: 100%;

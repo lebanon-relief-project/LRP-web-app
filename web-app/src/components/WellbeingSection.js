@@ -49,7 +49,7 @@ const StyledPeople = styled.img`
   max-width: 100%;
   object-fit: contain;
   width: auto;
-  margin: 2%;
+  padding: 2%;
 
   @media (max-width: ${devices.ipad}) {
     width: 80%;
@@ -74,7 +74,6 @@ const ChallengeCard = styled.div`
   display: flex;
   width: 85%;
   @media (max-width: ${devices.ipadpro}) {
-    width: 50%;
     right: 0;
   }
   @media (max-width: ${devices.mobile}) {
