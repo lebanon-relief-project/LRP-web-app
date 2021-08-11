@@ -29,7 +29,7 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   background: #fafafa;
   margin: 0;
   padding: 0 3rem;
-  width: calc(100vw);
+  width: calc(100vw - 20px);
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -49,10 +49,6 @@ exports[`the HelpSection component should match the snapshot 1`] = `
     pading: 0;
     margin: 0;
   }
-}
-
-@media (max-width:1025px) {
-
 }
 
 @media (max-width:576px) {

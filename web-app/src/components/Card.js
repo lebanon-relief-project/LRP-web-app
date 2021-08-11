@@ -11,7 +11,6 @@ const Card = (props) => {
       <CardTitle {...rest}>{title}</CardTitle>
       {children}
 
-      <br />
       {props.externalPath ? (
         <StyledAnchor
           href={props.externalPath}
@@ -61,9 +60,9 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   justify-content: center;
   display: flex;
-  text-align: center;
+
   min-width: ${(props) => (props.secondary ? "25%" : "90%")};
-  width: 50%;
+  max-width: ${(props) => (props.secondary ? "25%" : "90%")};
   @media (max-width: ${devices.mobile}) {
     width: ${(props) => (props.secondary ? "50%" : "90%")};
     max-width: ${(props) => (props.secondary ? "100%" : "90%")};
@@ -103,6 +102,7 @@ const StyledCard = styled.fieldset`
   letter-spacing: 0em;
   text-align: left;
 
+  background-color: white;
   @media (max-width: ${devices.ipadpro}) {
     width: ${(props) => (props.secondary ? "100%" : "40%")};
   }

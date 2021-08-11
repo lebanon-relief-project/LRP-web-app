@@ -205,7 +205,7 @@ const StyledSection = styled.div`
   display: flex;
   background: ${colours.darkBlue};
   margin: 0;
-  margin-top: 80px;
+  margin-top: 64px;
   padding: 0;
   width: 100%;
   height: 363px;
