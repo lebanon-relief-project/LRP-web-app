@@ -61,7 +61,7 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   justify-content: center;
   display: flex;
-
+  text-align: center;
   min-width: ${(props) => (props.secondary ? "25%" : "90%")};
   width: 50%;
   @media (max-width: ${devices.mobile}) {
@@ -102,7 +102,6 @@ const StyledCard = styled.fieldset`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
 
   @media (max-width: ${devices.ipadpro}) {
     width: ${(props) => (props.secondary ? "100%" : "40%")};

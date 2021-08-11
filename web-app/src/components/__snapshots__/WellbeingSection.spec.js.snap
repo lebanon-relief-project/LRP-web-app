@@ -18,6 +18,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   min-width: 25%;
   width: 50%;
   margin-bottom: 5%;
@@ -52,7 +53,6 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
 }
 
 .c0 {
