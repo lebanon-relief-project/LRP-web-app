@@ -1,14 +1,12 @@
-import React from "react";
-import HelpSection from "../components/HelpSection";
-import AboutUsSection from "../components/aboutPage/AboutUsSection";
+import React from 'react'
 
 const AboutPage = () => {
-  return (
-    <>
-      <AboutUsSection />
-      <HelpSection />
-    </>
-  );
-};
+    return (
+        <div>
+            <h2>About Page</h2>
+        </div>
+    )
+}
+
 
 export default AboutPage;
