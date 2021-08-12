@@ -29,13 +29,8 @@ const Navbar = ({ open }) => {
             </StyledLink>
           </StyledLi>
           <StyledLi>
-            <StyledButton
-              exact
-              to={"#"}
-              onClick={() => setLikeToHelpModalVisible(true)}
-              data-testid={"id-like-to-help"}
-            >
-              I’d like to help
+            <StyledButton exact to={Routes.ABOUT}>
+              About Us
             </StyledButton>
           </StyledLi>
         </StyledUl>
