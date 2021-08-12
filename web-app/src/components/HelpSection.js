@@ -105,14 +105,24 @@ const Paragraph = styled.p`
 const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 960px;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
     position: static;
     pading: 0;
     margin: 0;
   }
+
+  @media (max-width: ${devices.ipadpro}) {
+    flex-direction: column;
+    position: static;
+    pading: 0;
+    margin: 0;
+    align-items: center;
+  }
+
   z-index: 1;
 `;
 

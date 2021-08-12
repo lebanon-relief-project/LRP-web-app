@@ -90,10 +90,10 @@ const StyledCard = styled.fieldset`
   position: relative;
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
-  width: ${(props) => (props.secondary ? "100%" : "25%")};
+  width: ${(props) => (props.secondary ? "100%" : "31.6%")};
   padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.2rem")};
-  margin: 3rem 1rem;
-  height: 20%;
+  margin: 3rem 0rem;
+
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -104,7 +104,7 @@ const StyledCard = styled.fieldset`
 
   background-color: white;
   @media (max-width: ${devices.ipadpro}) {
-    width: ${(props) => (props.secondary ? "100%" : "40%")};
+    width: 75%;
   }
   @media (max-width: ${devices.mobile}) {
     width: 90%;

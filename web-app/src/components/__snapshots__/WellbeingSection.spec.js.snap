@@ -40,8 +40,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   border: none;
   width: 100%;
   padding: 1rem 0;
-  margin: 3rem 1rem;
-  height: 20%;
+  margin: 3rem 0rem;
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -112,7 +111,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c5 {
-    width: 100%;
+    width: 75%;
   }
 }
 

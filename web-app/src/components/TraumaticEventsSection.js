@@ -17,30 +17,32 @@ const TraumaticEvents = () => {
           <img src={HelpPageRightBackground} alt={"background"} />
         </HeaderRightImageWrapper>
       </HeaderWrapper>
-
+      
       <CentralWrapper>
-        <CentralContentWrapper>
-          <StyledHeader>Traumatic Events</StyledHeader>
-          <TextWrapper>
-            <StyledParagraph>
-              Trauma derives from an exposure to an event resulting in changes
-              of feelings, thoughts or behaviors. These emotional and physical
-              changes accompanying the symptoms of a traumatic experience
-              constitute a normal reaction to an abnormal event.
-            </StyledParagraph>
-            <StyledParagraph>
-              Trauma is unique, and any distressing event can result in it. It
-              can be widespread, and it can be personal, varying from pandemics,
-              to economic crises, death and abuse.
-            </StyledParagraph>
-            <StyledParagraph>
-              Trauma can also be experienced by watching or helping someone who
-              has been affected by a traumatic event. Each person lives trauma
-              differently, and symptoms or modifications in thoughts, behaviors
-              and emotions vary from one person to another.
-            </StyledParagraph>
-          </TextWrapper>
-        </CentralContentWrapper>
+        <WidthConstraint>
+          <CentralContentWrapper>
+            <StyledHeader>Traumatic Events</StyledHeader>
+            <TextWrapper>
+              <StyledParagraph>
+                Trauma derives from an exposure to an event resulting in changes
+                of feelings, thoughts or behaviors. These emotional and physical
+                changes accompanying the symptoms of a traumatic experience
+                constitute a normal reaction to an abnormal event.
+              </StyledParagraph>
+              <StyledParagraph>
+                Trauma is unique, and any distressing event can result in it. It
+                can be widespread, and it can be personal, varying from pandemics,
+                to economic crises, death and abuse.
+              </StyledParagraph>
+              <StyledParagraph>
+                Trauma can also be experienced by watching or helping someone who
+                has been affected by a traumatic event. Each person lives trauma
+                differently, and symptoms or modifications in thoughts, behaviors
+                and emotions vary from one person to another.
+              </StyledParagraph>
+            </TextWrapper>
+          </CentralContentWrapper>
+        </WidthConstraint>
       </CentralWrapper>
     </StyledSection>
   );
@@ -55,6 +57,11 @@ const TextWrapper = styled.div`
   }
 `;
 
+const WidthConstraint = styled.div`
+  width: inherit;
+  max-width: 960px;
+`
+
 const CentralWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,7 +70,7 @@ const CentralWrapper = styled.div`
   background-color: transparent;
   justify-content: center;
   position: absolute;
-  align-items: flex-start;
+  align-items: center;
   height: 363px;
   width: 100%;
 
@@ -76,7 +83,7 @@ const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
+
   max-width: 632px;
 
   @media (max-width: ${devices.ipadpro}){
@@ -140,7 +147,7 @@ const StyledSection = styled.div`
   margin: 0;
   margin-top: 64px;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 363px;
   z-index: 0;
 

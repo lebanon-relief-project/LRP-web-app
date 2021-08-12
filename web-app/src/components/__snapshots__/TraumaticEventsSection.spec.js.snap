@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,6 +12,11 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.c5 {
+  width: inherit;
+  max-width: 960px;
 }
 
 .c4 {
@@ -32,15 +37,15 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 363px;
   width: 100%;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +54,6 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
   max-width: 632px;
 }
 
@@ -113,19 +117,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   margin: 0;
   margin-top: 64px;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   height: 363px;
   z-index: 0;
 }
 
-.c6 {
+.c7 {
   font-weight: bold;
   font-size: 38px;
   margin: 0;
   color: #ffffff;
 }
 
-.c8 {
+.c9 {
   margin: 0;
   margin-bottom: 1rem;
   font-size: 16px;
@@ -133,7 +137,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c8 {
     margin-top: 15px;
   }
 }
@@ -145,20 +149,20 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:1025px) {
-  .c5 {
+  .c6 {
     margin: 0 12.5%;
   }
 }
 
 @media (max-width:768px) {
-  .c5 {
+  .c6 {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media (max-width:576px) {
-  .c5 {
+  .c6 {
     margin-left: 18px;
     margin-right: 18px;
     -webkit-flex: 1;
@@ -199,7 +203,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     font-size: 30px;
     line-height: 38px;
   }
@@ -235,29 +239,33 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
       <div
         class="c5"
       >
-        <h2
+        <div
           class="c6"
         >
-          Traumatic Events
-        </h2>
-        <div
-          class="c7"
-        >
-          <p
+          <h2
+            class="c7"
+          >
+            Traumatic Events
+          </h2>
+          <div
             class="c8"
           >
-            Trauma derives from an exposure to an event resulting in changes of feelings, thoughts or behaviors. These emotional and physical changes accompanying the symptoms of a traumatic experience constitute a normal reaction to an abnormal event.
-          </p>
-          <p
-            class="c8"
-          >
-            Trauma is unique, and any distressing event can result in it. It can be widespread, and it can be personal, varying from pandemics, to economic crises, death and abuse.
-          </p>
-          <p
-            class="c8"
-          >
-            Trauma can also be experienced by watching or helping someone who has been affected by a traumatic event. Each person lives trauma differently, and symptoms or modifications in thoughts, behaviors and emotions vary from one person to another.
-          </p>
+            <p
+              class="c9"
+            >
+              Trauma derives from an exposure to an event resulting in changes of feelings, thoughts or behaviors. These emotional and physical changes accompanying the symptoms of a traumatic experience constitute a normal reaction to an abnormal event.
+            </p>
+            <p
+              class="c9"
+            >
+              Trauma is unique, and any distressing event can result in it. It can be widespread, and it can be personal, varying from pandemics, to economic crises, death and abuse.
+            </p>
+            <p
+              class="c9"
+            >
+              Trauma can also be experienced by watching or helping someone who has been affected by a traumatic event. Each person lives trauma differently, and symptoms or modifications in thoughts, behaviors and emotions vary from one person to another.
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
-.c9 {
+.c10 {
   margin-right: 20px;
 }
 
-.c11 {
+.c12 {
   font-family: Raleway;
   font-size: 60px;
   font-style: normal;
@@ -19,7 +19,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   margin-right: 2%;
 }
 
-.c12 {
+.c13 {
   width: 60%;
   font-family: Raleway;
   font-size: 16px;
@@ -33,14 +33,14 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   text-align: left;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,6 +80,12 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 .c5 {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -88,7 +94,6 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
   max-width: 765px;
 }
 
@@ -157,7 +162,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   z-index: 0;
 }
 
-.c6 {
+.c7 {
   font-weight: bold;
   font-size: 38px;
   margin: 0;
@@ -165,7 +170,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   color: #ffffff;
 }
 
-.c8 {
+.c9 {
   margin: 0;
   margin-bottom: 1rem;
   font-size: 16px;
@@ -173,14 +178,14 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c9 {
+  .c10 {
     margin-right: 0;
     width: 25px;
   }
 }
 
 @media (max-width:576px) {
-  .c11 {
+  .c12 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -189,7 +194,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c12 {
+  .c13 {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -203,13 +208,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c5 {
+  .c6 {
     margin: 0 18px;
   }
 }
 
 @media (max-width:1025px) {
-  .c5 {
+  .c6 {
     margin: 0 10%;
   }
 }
@@ -245,13 +250,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     font-size: 30px;
   }
 }
 
 @media (max-width:576px) {
-  .c8 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -293,99 +298,103 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
       <div
         class="c5"
       >
-        <h2
+        <div
           class="c6"
         >
-          From the experiences you've shared...
-        </h2>
-        <div
-          class="c7"
-        >
-          <div
-            class="c8"
+          <h2
+            class="c7"
           >
-            We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
-          </div>
-          <div
-            class="c8"
-          >
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_0"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_1"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_2"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_3"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_4"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_5"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_6"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Filled Person"
-              class="c9"
-              data-testid="resultsPercentage_image_7"
-              src="FilledPerson.svg"
-            />
-            <img
-              alt="Empty Person"
-              class="c9"
-              data-testid="resultsPercentage_image_8"
-              src="EmptyPerson.svg"
-            />
-            <img
-              alt="Empty Person"
-              class="c9"
-              data-testid="resultsPercentage_image_9"
-              src="EmptyPerson.svg"
-            />
-          </div>
+            From the experiences you've shared...
+          </h2>
           <div
             class="c8"
           >
             <div
-              class="c10"
+              class="c9"
+            >
+              We have pulled together some tailored advice and exercises to help you cope with trauma and how you are feeling.
+            </div>
+            <div
+              class="c9"
+            >
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_0"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_1"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_2"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_3"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_4"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_5"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_6"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Filled Person"
+                class="c10"
+                data-testid="resultsPercentage_image_7"
+                src="FilledPerson.svg"
+              />
+              <img
+                alt="Empty Person"
+                class="c10"
+                data-testid="resultsPercentage_image_8"
+                src="EmptyPerson.svg"
+              />
+              <img
+                alt="Empty Person"
+                class="c10"
+                data-testid="resultsPercentage_image_9"
+                src="EmptyPerson.svg"
+              />
+            </div>
+            <div
+              class="c9"
             >
               <div
                 class="c11"
               >
-                76
-                %
-              </div>
-              <div
-                class="c12"
-              >
-                of Lebanese residents and expatriates are estimated to have experienced traumatic symptoms after the 4th of August blast.
+                <div
+                  class="c12"
+                >
+                  76
+                  %
+                </div>
+                <div
+                  class="c13"
+                >
+                  of Lebanese residents and expatriates are estimated to have experienced traumatic symptoms after the 4th of August blast.
+                </div>
               </div>
             </div>
           </div>

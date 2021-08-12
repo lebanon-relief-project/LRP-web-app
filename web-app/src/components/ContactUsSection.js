@@ -47,7 +47,8 @@ const RightContainer = styled.div`
 `
 
 const StyledContactUs = styled.div`
-    width: 60%;
+    width: 100%;
+    max-width: 960px;
     background-color: ${colours.grey};
     //background-color: pink;
     display: flex;
