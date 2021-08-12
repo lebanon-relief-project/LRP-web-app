@@ -51,8 +51,8 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  background-color: white;
   min-width: 360px;
+  background-color: white;
 }
 
 .c0 {
@@ -112,6 +112,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c5 {
+    width: 75%;
     width: 100%;
     min-width: 0;
   }

@@ -117,7 +117,7 @@ const CardWrapper = styled.div`
     pading: 0;
     margin: 0;
   }
-
+`
 
 
 const StyledCard = styled(Card)`

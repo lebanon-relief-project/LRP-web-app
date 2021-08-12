@@ -51,8 +51,8 @@ exports[`the Card component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  background-color: white;
   min-width: 360px;
+  background-color: white;
 }
 
 @media (max-width:576px) {
