@@ -51,7 +51,6 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
   background-color: white;
 }
 
