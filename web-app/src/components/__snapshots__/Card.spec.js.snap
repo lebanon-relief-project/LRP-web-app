@@ -52,6 +52,7 @@ exports[`the Card component should match the snapshot 1`] = `
   letter-spacing: 0em;
   text-align: left;
   background-color: white;
+  min-width: 360px;
 }
 
 @media (max-width:576px) {
@@ -71,6 +72,8 @@ exports[`the Card component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c0 {
     width: 75%;
+    width: 40%;
+    min-width: 0;
   }
 }
 

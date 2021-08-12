@@ -91,6 +91,9 @@ const HelpSection = () => {
 
 const StyledBody = styled.div`
   min-height: 17rem;
+  @media (max-width: ${devices.ipadpro}) {
+    min-height: 13rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -115,6 +118,14 @@ const CardWrapper = styled.div`
     margin: 0;
   }
 
+
+
+const StyledCard = styled(Card)`
+  flex: 0 1 24%;
+  legend {
+    width: auto;
+    margin: 0 auto;
+  }
   @media (max-width: ${devices.ipadpro}) {
     flex-direction: column;
     position: static;

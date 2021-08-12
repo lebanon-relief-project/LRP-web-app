@@ -148,6 +148,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   letter-spacing: 0em;
   text-align: left;
   background-color: white;
+  min-width: 360px;
 }
 
 .c13 {
@@ -174,6 +175,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 .c11 {
   height: auto;
   width: 30%;
+  min-width: 160px;
   margin: 5% 0;
 }
 
@@ -265,6 +267,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c10 {
     width: 75%;
+    min-width: 0;
   }
 }
 

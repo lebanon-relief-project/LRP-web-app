@@ -53,7 +53,7 @@ exports[`the OurMission component should match the snapshot 1`] = `
   position: relative;
   width: auto;
   max-width: 100%;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 @media (max-width:576px) {

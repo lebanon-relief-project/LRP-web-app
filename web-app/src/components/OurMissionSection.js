@@ -50,7 +50,7 @@ const StyledHands = styled.img`
   position: relative;
   width: auto;
   max-width: 100%;
-  margin-top: 10%;
+  margin-top: 3%;
   @media (max-width: ${devices.ipadpro}) {
     top: 10%;
   }

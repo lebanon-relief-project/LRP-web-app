@@ -101,10 +101,13 @@ const StyledCard = styled.fieldset`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  min-width: 360px;
 
   background-color: white;
   @media (max-width: ${devices.ipadpro}) {
     width: 75%;
+    width: ${(props) => (props.secondary ? "100%" : "40%")};
+    min-width: 0;
   }
   @media (max-width: ${devices.mobile}) {
     width: 90%;
