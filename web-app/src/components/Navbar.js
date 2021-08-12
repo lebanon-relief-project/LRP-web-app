@@ -127,6 +127,8 @@ const StyledLi = styled.li`
 
   @media (max-width: ${devices.mobile}) {
     margin-bottom: 60px;
+    text-align: left;
+    width: 100%;
   }
 
   @media (max-width: ${devices.ipad}) {
@@ -181,6 +183,7 @@ const StyledLink = styled(NavLink)`
     &.active {
       font-weight: bold;
     }
+    margin-left: 0px;
   }
 
   margin: 20px;

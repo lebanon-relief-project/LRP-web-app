@@ -47,13 +47,13 @@ const StyledSection = styled.div`
 `;
 
 const PageContainer = styled.div`
-  max-width: 1440px;
+  max-width: 960px;
 `;
 
 const StyledTextArea = styled.div`
   position: relative;
   width: 50%;
-  margin: 2%;
+
   @media (max-width: ${devices.ipad}) {
     right: 10%;
   }
@@ -65,6 +65,7 @@ const StyledTextArea = styled.div`
 
 const StyledFlexContainer = styled(FlexContainer)`
   padding-top: 7rem;
+  justify-content: space-between;
   @media (max-width: ${devices.ipad}) {
     padding-top: 3rem;
   }
@@ -75,7 +76,7 @@ const StyledFlexContainer = styled(FlexContainer)`
 
 const StyledTree = styled.img`
   object-fit: contain;
-  margin: 2%;
+
   @media (max-width: ${devices.ipad}) {
     width: 80%;
   }

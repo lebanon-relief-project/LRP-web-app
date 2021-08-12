@@ -53,22 +53,24 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 }
 
 .c1 {
-  max-width: 1440px;
+  max-width: 960px;
 }
 
 .c5 {
   position: relative;
   width: 50%;
-  margin: 2%;
 }
 
 .c3 {
   padding-top: 7rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c4 {
   object-fit: contain;
-  margin: 2%;
 }
 
 @media (max-width:576px) {
