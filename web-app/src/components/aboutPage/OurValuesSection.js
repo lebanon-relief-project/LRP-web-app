@@ -12,7 +12,7 @@ const OurValuesSection = (props) => {
   const [cardWrapperHeight, setCardWrapperHeight] = useState("100%");
   const cardWrapperRef = useRef(null);
   const [valueCards, setValueCardsCards] = useState([]);
-  const [, /* state */ setState] = useState();
+  const [, /* state */ setError] = useState();
 
   const fetchValueCards = async () => {
     let response = await getOurValuesCards();
@@ -23,7 +23,7 @@ const OurValuesSection = (props) => {
 
   useEffect(() => {
     fetchValueCards().catch(() => {
-      setState(() => {
+      setError(() => {
         throw new Error("failed to fetch valueCards");
       });
     });
