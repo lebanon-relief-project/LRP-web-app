@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Card from "./Card";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
-import colours from "../styles/Colours";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {

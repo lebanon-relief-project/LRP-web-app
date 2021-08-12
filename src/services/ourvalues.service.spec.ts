@@ -6,7 +6,6 @@ import { MockLogger } from "../util/test-util";
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { InternalServerError } from "routing-controllers";
 import { CosService } from "./cos.service";
-import { help } from "yargs";
 
 const mockList = jest.fn();
 const mockGetPreSignedUrl = jest.fn();
@@ -17,7 +16,7 @@ class MockDb implements Partial<DocumentScope<any>> {
 Container.set("logger", new MockLogger());
 Container.set(CloudantService, { use: () => new MockDb() });
 Container.set(CosService, { getPreSignedUrl: mockGetPreSignedUrl });
-let helpService: OurValuesService = Container.get(OurValuesService);
+let ourValuesService: OurValuesService = Container.get(OurValuesService);
 
 describe("The our values service", () => {
   let result;
@@ -30,7 +29,7 @@ describe("The our values service", () => {
     beforeEach(async () => {
       mockList.mockResolvedValue(sampleFlashCardsCloudantResponse);
       mockGetPreSignedUrl.mockResolvedValue({ preSignedUrl: "sample image" });
-      result = await helpService.getOurValuesCards();
+      result = await ourValuesService.getOurValuesCards();
     });
 
     it("should call the cloudant service", () => {
@@ -64,12 +63,12 @@ describe("The our values service", () => {
 
     it("should return empty array if no flash cards are retrieved", async () => {
       mockList.mockResolvedValue({ total_rows: 0, rows: [] });
-      result = await helpService.getOurValuesCards();
+      result = await ourValuesService.getOurValuesCards();
 
       expect(result.cards).toEqual([]);
     });
 
-    it("should skip flashcard if the cloudant doc is undefined", async () => {
+    it("should skip valueCard if the cloudant doc is undefined", async () => {
       mockList.mockResolvedValue({
         total_rows: 2,
         offset: 0,
@@ -109,7 +108,7 @@ describe("The our values service", () => {
         ],
       };
 
-      return helpService.getOurValuesCards().then((data) => {
+      return ourValuesService.getOurValuesCards().then((data) => {
         expect(data).toEqual(expected);
       });
     });
@@ -119,10 +118,11 @@ describe("The our values service", () => {
         throw new Error("Ugly error");
       });
 
-      const functionToThrow = async () => await helpService.getOurValuesCards();
+      const functionToThrow = async () =>
+        await ourValuesService.getOurValuesCards();
 
       await expect(functionToThrow()).rejects.toThrow(
-        new InternalServerError(`getFlashCards: Failed to retrieve flash cards`)
+        new InternalServerError(`getValueCards: Failed to retrieve flash cards`)
       );
     });
 
@@ -131,10 +131,11 @@ describe("The our values service", () => {
         throw new Error("ERROR");
       });
 
-      const functionToThrow = async () => await helpService.getOurValuesCards();
+      const functionToThrow = async () =>
+        await ourValuesService.getOurValuesCards();
 
       await expect(functionToThrow()).rejects.toThrow(
-        new InternalServerError(`getFlashCards: Failed to retrieve flash cards`)
+        new InternalServerError(`getValueCards: Failed to retrieve flash cards`)
       );
     });
   });

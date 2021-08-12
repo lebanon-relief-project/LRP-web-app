@@ -3,49 +3,31 @@ import styled from "styled-components";
 import colours from "../../styles/Colours";
 import FlashCard from "../FlashCard";
 import LoadingSpinner from "../LoadingSpinner";
-import { getFlashCards } from "../../services/flashCards.service";
 import devices from "../../styles/Devices";
-import { useHistory } from "react-router-dom";
-import NoCardSelectedModal from "../NoCardSelectedModal";
 import { getOurValuesCards } from "../../services/ourValuesCards.service";
 
 const OurValuesSection = (props) => {
-  const [noCardSelectedModalVisible, setNoCardSelectedModalVisible] =
-    useState(false);
-
   const [loading, isLoading] = useState(true);
 
   const [cardWrapperHeight, setCardWrapperHeight] = useState("100%");
   const cardWrapperRef = useRef(null);
-
-  let history = useHistory();
-  const [flashCards, setFlashCards] = useState([]);
-
+  const [valueCards, setValueCardsCards] = useState([]);
   const [, /* state */ setState] = useState();
 
-  const fetchFlashCards = async () => {
+  const fetchValueCards = async () => {
     let response = await getOurValuesCards();
 
     isLoading(false);
-    setFlashCards(response.cards);
+    setValueCardsCards(response.cards);
   };
 
   useEffect(() => {
-    fetchFlashCards().catch(() => {
+    fetchValueCards().catch(() => {
       setState(() => {
-        throw new Error("failed to fetch flashCards");
+        throw new Error("failed to fetch valueCards");
       });
     });
   }, []);
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    if (sessionStorage.length === 0) {
-      setNoCardSelectedModalVisible(true);
-    } else {
-      history.push("/results");
-    }
-  };
 
   //Calculate height of the card container div
   useEffect(() => {
@@ -66,7 +48,7 @@ const OurValuesSection = (props) => {
     }
     setHeight();
     window.addEventListener("resize", setHeight);
-  }, [flashCards]);
+  }, [valueCards]);
 
   return (
     <>
@@ -78,12 +60,12 @@ const OurValuesSection = (props) => {
             style={{ maxHeight: cardWrapperHeight }}
             ref={cardWrapperRef}
           >
-            {flashCards.map((flashCard, index) => {
+            {valueCards.map((valueCard, index) => {
               return (
                 <FlashCard
-                  id={`${flashCard._id}`}
-                  key={`${flashCard._id}_${index}`}
-                  card={flashCard}
+                  id={`${valueCard._id}`}
+                  key={`${valueCard._id}_${index}`}
+                  card={valueCard}
                 />
               );
             })}
@@ -106,11 +88,8 @@ const StyledSection = styled.section`
 
 const Wrapper = styled.div`
   width: 100%;
-
   max-width: 1440px;
-
   padding: 0 240px;
-
   background: inherit;
   display: flex;
   flex-direction: row;

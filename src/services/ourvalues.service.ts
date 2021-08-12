@@ -1,14 +1,11 @@
 import { Inject, Service } from "typedi";
-import { HelpServiceApi } from "./help.service.api";
 import { LoggerApi } from "../logger";
-import { FlashCard, FlashCardsResponse } from "../types/FlashCard";
+import { FlashCard } from "../types/FlashCard";
 import { DocumentScope } from "@cloudant/cloudant/types";
 import { CloudantService } from ".";
 import { InternalServerError } from "routing-controllers";
 import {
-  CLOUDANT_FLASHCARD_DB_DEV,
   CLOUDANT_OURVALUESCARD_DB,
-  COS_FLASHCARD_IMAGE_BUCKET,
   COS_OURVALUESCARD_IMAGE_BUCKET,
 } from "../statics";
 import { CosService } from "./cos.service";
@@ -40,7 +37,7 @@ export class OurValuesService implements OurValuesServiceApi {
 
   async getOurValuesCards(): Promise<OurValuesCardsResponse> {
     let response;
-    this.logger.info(`getFlashCards(): Getting flashcards from cloudant`);
+    this.logger.info(`getValueCards(): Getting valueCards from cloudant`);
 
     // Get flashcards from Cloudant
     try {
@@ -69,7 +66,7 @@ export class OurValuesService implements OurValuesServiceApi {
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerError(
-        `getFlashCards: Failed to retrieve flash cards`
+        `getValueCards: Failed to retrieve flash cards`
       );
     }
   }

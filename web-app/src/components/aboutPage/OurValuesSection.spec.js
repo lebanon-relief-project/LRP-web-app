@@ -86,6 +86,6 @@ describe("the OurValuesSection component", () => {
 
     await wait();
 
-    expect(caughtError).toEqual(new Error("failed to fetch flashCards"));
+    expect(caughtError).toEqual(new Error("failed to fetch valueCards"));
   });
 });

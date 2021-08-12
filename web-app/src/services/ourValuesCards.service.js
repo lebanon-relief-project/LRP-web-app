@@ -6,6 +6,6 @@ export async function getOurValuesCards() {
 
     return response.data;
   } catch (error) {
-    throw new Error("Failed to fetch our values cards");
+    throw new Error("Failed to fetch values cards");
   }
 }

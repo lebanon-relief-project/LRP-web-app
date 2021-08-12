@@ -37,7 +37,7 @@ describe("The ourValues cards service", () => {
       server.resetHandlers(...newHandlers);
 
       await expect(getOurValuesCards()).rejects.toThrow(
-        "Failed to fetch our values card"
+        "Failed to fetch values card"
       );
     });
   });
