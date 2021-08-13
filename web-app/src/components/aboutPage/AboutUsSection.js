@@ -22,7 +22,7 @@ const AboutUsSection = () => {
               2020, Lebanon Relief Network was founded by six individuals who
               themselves were impacted by the incident and experienced signs of
               trauma. The founding members observed a lack of resources and
-              toolsfor the Lebanese community to use to recover from trauma.
+              tools for the Lebanese community to use to recover from trauma.
             </StyledParagraph>
           </StyledTextArea>
         </StyledFlexContainer>
@@ -39,9 +39,10 @@ const AboutUsSection = () => {
               network for support and healing. Through our digital platform, we
               produce content informed and validated by experts to offer a safe
               space for healing, offer tools and resources for self-help, and
-              foster trauma-related dialogue. The enthusiasm, commitment, and
-              resilience of our team is at the core of what Lebanon Relief
-              Network stands for.
+              foster trauma-related dialogue. <br />
+              <br />
+              The enthusiasm, commitment, and resilience of our team is at the
+              core of what Lebanon Relief Network stands for.
               <br /> <br /> <b>We are LRN.</b>
             </StyledParagraph>
           </StyledTextArea>
