@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the AboutPage component should match the snapshot 1`] = `
-.c6 {
+.c5 {
   display: block;
   font-family: Playfair Display;
   font-style: normal;
@@ -11,7 +11,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   color: #000000;
 }
 
-.c8 {
+.c7 {
   position: relative;
   margin: 0;
   font-family: Raleway;
@@ -33,7 +33,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   flex-direction: row;
 }
 
-.c7 {
+.c6 {
   padding-top: 10%;
 }
 
@@ -47,8 +47,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
-  width: calc(100vw - 20px);
+  width: calc(100vw);
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -57,19 +56,46 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 
 .c1 {
   max-width: 1440px;
-  margin-top: 5%;
-}
-
-.c5 {
-  position: relative;
-  width: 50%;
-  margin: 2%;
+  margin-top: 80px;
+  padding: 0 240px;
 }
 
 .c4 {
+  position: relative;
+  width: 50%;
+}
+
+.c3 {
   object-fit: contain;
   margin: 2%;
   max-width: 60%;
+}
+
+.c9 {
+  heigth: auto;
+  width: 10%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8 {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width:576px) {
@@ -81,13 +107,19 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c6 {
     padding-top: 0;
   }
 }
 
+@media (max-width:1025px) {
+  .c1 {
+    padding: 0 18px;
+  }
+}
+
 @media (max-width:576px) {
-  .c5 {
+  .c4 {
     right: 0;
     width: 100%;
     -webkit-order: 2;
@@ -98,24 +130,12 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c3 {
-    padding-top: 3rem;
-  }
-}
-
-@media (max-width:576px) {
-  .c3 {
-    padding-top: 25%;
-  }
-}
-
-@media (max-width:768px) {
-  .c4 {
     width: 80%;
   }
 }
 
 @media (max-width:576px) {
-  .c4 {
+  .c3 {
     width: 100%;
     max-width: 100%;
     padding-left: 0rem;
@@ -130,36 +150,36 @@ exports[`the AboutPage component should match the snapshot 1`] = `
       class="c1"
     >
       <div
-        class="c2 c3"
+        class="c2"
       >
         <img
           alt="City"
-          class="c4"
+          class="c3"
           src="City.svg"
         />
         <div
-          class="c5"
+          class="c4"
         >
           <h2
-            class="c6 c7"
+            class="c5 c6"
           >
             About us
           </h2>
           <p
-            class="c8"
+            class="c7"
           >
             Following the devastating explosion of Beirut’s port in August 2020, Lebanon Relief Network was founded by six individuals who themselves were impacted by the incident and experienced signs of trauma. The founding members observed a lack of resources and toolsfor the Lebanese community to use to recover from trauma.
           </p>
         </div>
       </div>
       <div
-        class="c2 c3"
+        class="c2"
       >
         <div
-          class="c5"
+          class="c4"
         >
           <p
-            class="c8"
+            class="c7"
           >
             Joined by volunteers across the world, they worked to fill this gap, educate the community, and aid in advancing mental well-being. Today, Lebanon Relief Network encompasses a team of over 50 volunteers spread all over the world who collectively possess a wide range of experiences in combating trauma. 
             <br />
@@ -177,12 +197,21 @@ exports[`the AboutPage component should match the snapshot 1`] = `
         </div>
         <img
           alt="Map"
-          class="c4"
+          class="c3"
           src="Map.svg"
         />
       </div>
     </div>
   </div>
+  <section
+    class="c8"
+  >
+    <img
+      alt="loading..."
+      class="c9"
+      src="LoadingSpinner.gif"
+    />
+  </section>
   <div>
     Help section
   </div>
