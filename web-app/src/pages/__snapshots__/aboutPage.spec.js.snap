@@ -76,7 +76,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   top: -150px;
 }
 
-.c10 {
+.c12 {
   heigth: auto;
   width: 10%;
   -webkit-align-self: center;
@@ -85,6 +85,17 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 }
 
 .c9 {
+  background: #fafafa;
+}
+
+.c10 {
+  background: #fafafa;
+  max-width: 1440px;
+  padding: 0 240px;
+  margin: auto;
+}
+
+.c11 {
   background: #fafafa;
   margin: 0;
   padding: 0;
@@ -153,6 +164,12 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c10 {
+    padding: 0 18px;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -217,11 +234,29 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   <section
     class="c9"
   >
-    <img
-      alt="loading..."
+    <div
       class="c10"
-      src="LoadingSpinner.gif"
-    />
+    >
+      <h2
+        class="c5"
+      >
+        Our values
+      </h2>
+      <p
+        class="c7"
+      >
+        We have developed a set of values that run through everything we do, from the way we provide support, to who we partner up with and how we grow and develop:
+      </p>
+    </div>
+    <div
+      class="c11"
+    >
+      <img
+        alt="loading..."
+        class="c12"
+        src="LoadingSpinner.gif"
+      />
+    </div>
   </section>
   <div>
     Help section

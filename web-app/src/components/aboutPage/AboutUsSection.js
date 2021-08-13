@@ -64,7 +64,6 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   margin: 0;
-
   width: calc(100vw);
   margin-left: 50%;
   transform: translateX(-50%);
@@ -73,9 +72,7 @@ const StyledSection = styled.div`
 const PageContainer = styled.div`
   max-width: 1440px;
   margin-top: 80px;
-
   padding: 0 240px;
-
   @media (max-width: ${devices.ipadpro}) {
     padding: 0 18px;
   }

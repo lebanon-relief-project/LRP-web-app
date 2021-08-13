@@ -5,6 +5,7 @@ import FlashCard from "../FlashCard";
 import LoadingSpinner from "../LoadingSpinner";
 import devices from "../../styles/Devices";
 import { getOurValuesCards } from "../../services/ourValuesCards.service";
+import { StyledHeader, StyledParagraph } from "../../styles/GlobalStyles";
 
 const OurValuesSection = (props) => {
   const [loading, isLoading] = useState(true);
@@ -53,30 +54,54 @@ const OurValuesSection = (props) => {
   return (
     <>
       <StyledSection>
-        {loading ? (
-          <LoadingSpinner />
-        ) : (
-          <Wrapper
-            style={{ maxHeight: cardWrapperHeight }}
-            ref={cardWrapperRef}
-          >
-            {valueCards.map((valueCard, index) => {
-              return (
-                <FlashCard
-                  id={`${valueCard._id}`}
-                  key={`${valueCard._id}_${index}`}
-                  card={valueCard}
-                />
-              );
-            })}
-          </Wrapper>
-        )}
+        <StyledDiv>
+          <StyledHeader>Our values</StyledHeader>
+          <StyledParagraph>
+            We have developed a set of values that run through everything we do,
+            from the way we provide support, to who we partner up with and how
+            we grow and develop:
+          </StyledParagraph>
+        </StyledDiv>
+        <ValueCards>
+          {loading ? (
+            <LoadingSpinner />
+          ) : (
+            <Wrapper
+              style={{ maxHeight: cardWrapperHeight }}
+              ref={cardWrapperRef}
+            >
+              {valueCards.map((valueCard, index) => {
+                return (
+                  <FlashCard
+                    id={`${valueCard._id}`}
+                    key={`${valueCard._id}_${index}`}
+                    card={valueCard}
+                  />
+                );
+              })}
+            </Wrapper>
+          )}
+        </ValueCards>
       </StyledSection>
     </>
   );
 };
 
 const StyledSection = styled.section`
+  background: ${colours.lightGrey};
+`;
+
+const StyledDiv = styled.div`
+  background: ${colours.lightGrey};
+  max-width: 1440px;
+  padding: 0 240px;
+  margin: auto;
+  @media (max-width: ${devices.ipad}) {
+    padding: 0 18px;
+  }
+`;
+
+const ValueCards = styled.div`
   background: ${colours.lightGrey};
   margin: 0;
   padding: 0;
