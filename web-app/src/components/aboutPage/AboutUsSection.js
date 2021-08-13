@@ -45,7 +45,7 @@ const AboutUsSection = () => {
               <br /> <br /> <b>We are LRN.</b>
             </StyledParagraph>
           </StyledTextArea>
-          <StyledImage src={Map} alt="Map" />
+          <StyledMap src={Map} alt="Map" />
         </StyledFlexContainer>
       </PageContainer>
     </StyledSection>
@@ -105,6 +105,14 @@ const StyledImage = styled.img`
     width: 100%;
     max-width: 100%;
     padding-left: 0rem;
+  }
+`;
+
+const StyledMap = styled(StyledImage)`
+  position: relative;
+  top: -150px;
+  @media (max-width: ${devices.mobile}) {
+    position: static;
   }
 `;
 

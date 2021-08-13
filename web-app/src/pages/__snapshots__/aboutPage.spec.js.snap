@@ -71,7 +71,12 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   max-width: 60%;
 }
 
-.c9 {
+.c8 {
+  position: relative;
+  top: -150px;
+}
+
+.c10 {
   heigth: auto;
   width: 10%;
   -webkit-align-self: center;
@@ -79,7 +84,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   align-self: center;
 }
 
-.c8 {
+.c9 {
   background: #fafafa;
   margin: 0;
   padding: 0;
@@ -142,6 +147,12 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:576px) {
+  .c8 {
+    position: static;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -197,18 +208,18 @@ exports[`the AboutPage component should match the snapshot 1`] = `
         </div>
         <img
           alt="Map"
-          class="c3"
+          class="c3 c8"
           src="Map.svg"
         />
       </div>
     </div>
   </div>
   <section
-    class="c8"
+    class="c9"
   >
     <img
       alt="loading..."
-      class="c9"
+      class="c10"
       src="LoadingSpinner.gif"
     />
   </section>

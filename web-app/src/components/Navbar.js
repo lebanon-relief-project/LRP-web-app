@@ -27,7 +27,7 @@ const Navbar = ({ open }) => {
           </StyledLi>
           <StyledLi>
             <StyledLink exact to={Routes.ABOUT}>
-              About Us
+              About us
             </StyledLink>
           </StyledLi>
         </StyledUl>
