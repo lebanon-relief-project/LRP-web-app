@@ -7,7 +7,7 @@ import { animated as a } from "react-spring";
 import devices from "../styles/Devices";
 import { checkIfCardIsInSessionStorage } from "../util/util";
 
-const FlashCard = ({ card, id }) => {
+const FlashCard = ({ card, id, clickable }) => {
   const [selected, setSelected] = useState(checkIfCardIsInSessionStorage(id));
 
   // This function is called when the user clicks the plus or tick button
@@ -27,27 +27,28 @@ const FlashCard = ({ card, id }) => {
         {/* Card title and button */}
         <StyledHeader>
           <FlashCardImage src={card.image} />
-          <FlashCardButton
-            data-testid={card.title}
-            onClick={() => cardSelectHandler()}
-          >
-            {selected ? (
-              <CircleIcon
-                height={32}
-                width={32}
-                src={TickCircleIcon}
-                alt="TickCircleIcon"
-              />
-            ) : (
-              <CircleIcon
-                height={32}
-                width={32}
-                src={PlusCircleIcon}
-                alt="PlusCircleIcon"
-              />
-            )}
-          </FlashCardButton>
-          
+          {clickable && (
+            <FlashCardButton
+              data-testid={card.title}
+              onClick={() => cardSelectHandler()}
+            >
+              {selected ? (
+                <CircleIcon
+                  height={32}
+                  width={32}
+                  src={TickCircleIcon}
+                  alt="TickCircleIcon"
+                />
+              ) : (
+                <CircleIcon
+                  height={32}
+                  width={32}
+                  src={PlusCircleIcon}
+                  alt="PlusCircleIcon"
+                />
+              )}
+            </FlashCardButton>
+          )}
         </StyledHeader>
 
         <a.div
@@ -57,7 +58,7 @@ const FlashCard = ({ card, id }) => {
           }}
         >
           <CardTitleWrapper>{card.title}</CardTitleWrapper>
-          <CardTextWrapper selected={selected}  cardText={card.body}>
+          <CardTextWrapper selected={selected} cardText={card.body}>
             <CardTextHolder>{card.body}</CardTextHolder>
           </CardTextWrapper>
         </a.div>
@@ -67,34 +68,32 @@ const FlashCard = ({ card, id }) => {
 
   return (
     <>
-      <Wrapper>
-        {renderCard()}
-      </Wrapper>
+      <Wrapper>{renderCard()}</Wrapper>
     </>
   );
 };
 
-const CardTextHolder =  styled.p`
-  height:  0px;
-`
+const CardTextHolder = styled.p`
+  height: 0px;
+`;
 
 const CardTextWrapper = styled.div`
   font-size: 16px;
 
-  font-weight: ${props => props.selected === true ? "600" : "initial"};
+  font-weight: ${(props) => (props.selected === true ? "600" : "initial")};
 
   /* Pseudo Div to take up  space of the bold text */
-  :after{
-    display:block;
-    content: "${props => props.cardText}";
+  :after {
+    display: block;
+    content: "${(props) => props.cardText}";
     font-weight: bold;
-    overflow:  visible;
+    overflow: visible;
     visibility: hidden;
   }
 `;
 
 const CardTitleWrapper = styled.h3`
-  font-size:  24px;
+  font-size: 24px;
   font-weight: 700;
 `;
 
@@ -121,11 +120,11 @@ const Wrapper = styled.div`
   margin: 12px 0px;
 
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  :hover{
+  :hover {
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   }
 
-  padding-bottom:30px;
+  padding-bottom: 30px;
 
   @media (max-width: ${devices.ipadpro}) {
     width: calc(50% - 12px);
@@ -139,7 +138,7 @@ const Wrapper = styled.div`
     width: unset;
   }
 
-  @media (max-width: ${devices.mobile}){
+  @media (max-width: ${devices.mobile}) {
     width: 100%;
   }
 `;
@@ -150,25 +149,24 @@ const FlashCardButton = styled.button`
   background: none;
   outline: none;
   margin-top: 20px;
-  margin-right:20px;
+  margin-right: 20px;
 `;
 const CircleIcon = styled.img`
   /*align-self: right;
   &:hover {
     opacity: 0.8;
-  }*/;
-  height:100%;
+  }*/
+  height: 100%;
 `;
 
 const FlashCardImage = styled.img`
   /*display: flex;
   flex: 1;*/
-  /*width: 100%;*/;
+  /*width: 100%;*/
   height: 100%;
   max-width: 80%;
   padding-left: 30px;
   padding-top: 30px;
-
 `;
 
 export default FlashCard;

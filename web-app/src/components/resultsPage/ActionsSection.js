@@ -92,6 +92,7 @@ const Title = styled.h2`
 const StyledCard = styled(Card)`
   height: auto;
   width: 30%;
+  min-width: 160px;
   margin: 5% 0;
   legend {
     width: auto;

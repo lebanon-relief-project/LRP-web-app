@@ -77,15 +77,8 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:768px) {
-  .c5 {
-    right: 10%;
-  }
-}
-
 @media (max-width:576px) {
   .c5 {
-    right: 0;
     width: 100%;
   }
 }
@@ -104,7 +97,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c4 {
-    width: 80%;
+    width: 50%;
   }
 }
 

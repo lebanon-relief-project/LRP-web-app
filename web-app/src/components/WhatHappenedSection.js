@@ -58,11 +58,7 @@ const StyledTextArea = styled.div`
   position: relative;
   width: 50%;
   margin: 2%;
-  @media (max-width: ${devices.ipad}) {
-    right: 10%;
-  }
   @media (max-width: ${devices.mobile}) {
-    right: 0;
     width: 100%;
   }
 `;
@@ -81,7 +77,7 @@ const StyledTree = styled.img`
   object-fit: contain;
   margin: 2%;
   @media (max-width: ${devices.ipad}) {
-    width: 80%;
+    width: 50%;
   }
   @media (max-width: ${devices.mobile}) {
     width: 100%;

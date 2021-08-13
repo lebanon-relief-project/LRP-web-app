@@ -22,7 +22,7 @@ const AboutUsSection = () => {
               2020, Lebanon Relief Network was founded by six individuals who
               themselves were impacted by the incident and experienced signs of
               trauma. The founding members observed a lack of resources and
-              toolsfor the Lebanese community to use to recover from trauma.
+              tools for the Lebanese community to use to recover from trauma.
             </StyledParagraph>
           </StyledTextArea>
         </StyledFlexContainer>
@@ -39,13 +39,14 @@ const AboutUsSection = () => {
               network for support and healing. Through our digital platform, we
               produce content informed and validated by experts to offer a safe
               space for healing, offer tools and resources for self-help, and
-              foster trauma-related dialogue. The enthusiasm, commitment, and
-              resilience of our team is at the core of what Lebanon Relief
-              Network stands for.
+              foster trauma-related dialogue. <br />
+              <br />
+              The enthusiasm, commitment, and resilience of our team is at the
+              core of what Lebanon Relief Network stands for.
               <br /> <br /> <b>We are LRN.</b>
             </StyledParagraph>
           </StyledTextArea>
-          <StyledImage src={Map} alt="Map" />
+          <StyledMap src={Map} alt="Map" />
         </StyledFlexContainer>
       </PageContainer>
     </StyledSection>
@@ -64,21 +65,23 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
-  width: calc(100vw - 20px);
+  width: calc(100vw);
   margin-left: 50%;
   transform: translateX(-50%);
 `;
 
 const PageContainer = styled.div`
   max-width: 1440px;
-  margin-top: 5%;
+  margin-top: 80px;
+  padding: 0 240px;
+  @media (max-width: ${devices.ipadpro}) {
+    padding: 0 18px;
+  }
 `;
 
 const StyledTextArea = styled.div`
   position: relative;
   width: 50%;
-  margin: 2%;
 
   @media (max-width: ${devices.mobile}) {
     right: 0;
@@ -87,14 +90,7 @@ const StyledTextArea = styled.div`
   }
 `;
 
-const StyledFlexContainer = styled(FlexContainer)`
-  @media (max-width: ${devices.ipad}) {
-    padding-top: 3rem;
-  }
-  @media (max-width: ${devices.mobile}) {
-    padding-top: 25%;
-  }
-`;
+const StyledFlexContainer = styled(FlexContainer)``;
 
 const StyledImage = styled.img`
   object-fit: contain;
@@ -107,6 +103,14 @@ const StyledImage = styled.img`
     width: 100%;
     max-width: 100%;
     padding-left: 0rem;
+  }
+`;
+
+const StyledMap = styled(StyledImage)`
+  position: relative;
+  top: -150px;
+  @media (max-width: ${devices.mobile}) {
+    position: static;
   }
 `;
 

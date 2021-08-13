@@ -106,14 +106,6 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 
 }
 
-@media (max-width:768px) {
-
-}
-
-@media (max-width:576px) {
-
-}
-
 <div>
   <nav
     class="c0"
@@ -142,7 +134,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
         class="c2"
       >
         <div
-          data-testid="navlink_#"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>
@@ -256,14 +248,6 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 
 }
 
-@media (max-width:768px) {
-
-}
-
-@media (max-width:576px) {
-
-}
-
 <div>
   <nav
     class="c0"
@@ -293,7 +277,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
         class="c2"
       >
         <div
-          data-testid="navlink_#"
+          data-testid="navlink_/about"
         />
       </li>
     </ul>

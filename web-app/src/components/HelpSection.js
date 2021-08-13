@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Card from "./Card";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
-import colours from "../styles/Colours";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
@@ -91,6 +90,9 @@ const HelpSection = () => {
 
 const StyledBody = styled.div`
   min-height: 17rem;
+  @media (max-width: ${devices.ipadpro}) {
+    min-height: 13rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -118,6 +120,7 @@ const CardWrapper = styled.div`
 `;
 
 const StyledCard = styled(Card)`
+  flex: 0 1 24%;
   legend {
     width: auto;
     margin: 0 auto;
@@ -132,7 +135,7 @@ const StyledCard = styled(Card)`
 const StyledSection = styled.div`
   display: flex;
   justify-content: center;
-  background: ${colours.lightGrey};
+  background: inherit;
   margin: 0;
   padding: 0 3rem;
   width: calc(100vw);
