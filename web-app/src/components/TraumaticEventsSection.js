@@ -23,21 +23,25 @@ const TraumaticEvents = () => {
           <StyledHeader>Traumatic Events</StyledHeader>
           <TextWrapper>
             <StyledParagraph>
-              Trauma derives from an exposure to an event resulting in changes
-              of feelings, thoughts or behaviors. These emotional and physical
-              changes accompanying the symptoms of a traumatic experience
-              constitute a normal reaction to an abnormal event.
+              Trauma usually occurs after a deeply distressing or disturbing
+              event, which may manifest as changes in feelings, thoughts, or
+              behaviors. Trauma may also be less obvious, manifesting as a
+              normal reaction to an abnormal event. One may also suffer from
+              trauma without having experienced an event first hand, but rather
+              by caring for someone who has or by simply watching the news. "
             </StyledParagraph>
             <StyledParagraph>
-              Trauma is unique, and any distressing event can result in it. It
-              can be widespread, and it can be personal, varying from pandemics,
-              to economic crises, death and abuse.
+              It is important to keep in mind that trauma is unique to each
+              individual. Any small or big distressing event can trigger it, and
+              everyone experiences trauma differently. It can be collective and
+              widespread, such as pandemics or economic crises, but it also can
+              be individual and specific, such as abuse or the death of a loved
+              one.
             </StyledParagraph>
             <StyledParagraph>
-              Trauma can also be experienced by watching or helping someone who
-              has been affected by a traumatic event. Each person lives trauma
-              differently, and symptoms or modifications in thoughts, behaviors
-              and emotions vary from one person to another.
+              One may also suffer from trauma without having experienced an
+              event first hand, but rather by caring for someone who has or by
+              simply watching the news.
             </StyledParagraph>
           </TextWrapper>
         </CentralContentWrapper>
@@ -64,11 +68,11 @@ const CentralWrapper = styled.div`
   justify-content: center;
   position: absolute;
   align-items: flex-start;
-  height: 363px;
+  height: 460px;
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    height: 542px;
+    height: 650px;
   }
 `;
 
@@ -79,7 +83,7 @@ const CentralContentWrapper = styled.div`
   margin: 0 20%;
   max-width: 632px;
 
-  @media (max-width: ${devices.ipadpro}){
+  @media (max-width: ${devices.ipadpro}) {
     margin: 0 12.5%;
   }
 
@@ -110,7 +114,7 @@ const HeaderLeftImageWrapper = styled.div`
   align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
-    display:none
+    display: none;
   }
 
   @media (max-width: ${devices.ipadprolandscape}) {
@@ -125,13 +129,12 @@ const HeaderRightImageWrapper = styled.div`
   align-items: center;
 
   @media (max-width: ${devices.ipadpro}) {
-    display:none
+    display: none;
   }
 
   @media (max-width: ${devices.ipadprolandscape}) {
     opacity: 0.3;
   }
-
 `;
 
 const StyledSection = styled.div`
@@ -141,11 +144,11 @@ const StyledSection = styled.div`
   margin-top: 64px;
   padding: 0;
   width: 100%;
-  height: 363px;
+  height: 460px;
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 542px;
+    height: 650px;
   }
 `;
 
