@@ -45,7 +45,7 @@ const AboutUsSection = () => {
               <br /> <br /> <b>We are LRN.</b>
             </StyledParagraph>
           </StyledTextArea>
-          <StyledImage src={Map} alt="Map" />
+          <StyledMap src={Map} alt="Map" />
         </StyledFlexContainer>
       </PageContainer>
     </StyledSection>
@@ -64,7 +64,6 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   margin: 0;
-
   width: calc(100vw);
   margin-left: 50%;
   transform: translateX(-50%);
@@ -73,9 +72,7 @@ const StyledSection = styled.div`
 const PageContainer = styled.div`
   max-width: 1440px;
   margin-top: 80px;
-
   padding: 0 240px;
-
   @media (max-width: ${devices.ipadpro}) {
     padding: 0 18px;
   }
@@ -105,6 +102,14 @@ const StyledImage = styled.img`
     width: 100%;
     max-width: 100%;
     padding-left: 0rem;
+  }
+`;
+
+const StyledMap = styled(StyledImage)`
+  position: relative;
+  top: -150px;
+  @media (max-width: ${devices.mobile}) {
+    position: static;
   }
 `;
 

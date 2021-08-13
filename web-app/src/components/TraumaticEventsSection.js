@@ -26,9 +26,7 @@ const TraumaticEvents = () => {
               Trauma usually occurs after a deeply distressing or disturbing
               event, which may manifest as changes in feelings, thoughts, or
               behaviors. Trauma may also be less obvious, manifesting as a
-              normal reaction to an abnormal event. One may also suffer from
-              trauma without having experienced an event first hand, but rather
-              by caring for someone who has or by simply watching the news. "
+              normal reaction to an abnormal event.
             </StyledParagraph>
             <StyledParagraph>
               It is important to keep in mind that trauma is unique to each
@@ -68,11 +66,11 @@ const CentralWrapper = styled.div`
   justify-content: center;
   position: absolute;
   align-items: flex-start;
-  height: 460px;
+  height: 410px;
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    height: 650px;
+    height: 560px;
   }
 `;
 
@@ -144,11 +142,11 @@ const StyledSection = styled.div`
   margin-top: 64px;
   padding: 0;
   width: 100%;
-  height: 460px;
+  height: 410px;
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 650px;
+    height: 560px;
   }
 `;
 
