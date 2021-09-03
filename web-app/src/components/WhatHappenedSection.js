@@ -3,7 +3,11 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import Tree from "../assets/images/Tree.svg";
 import colours from "../styles/Colours";
-import { StyledParagraph, FlexContainer } from "../styles/GlobalStyles";
+import {
+  StyledHeader,
+  StyledParagraph,
+  FlexContainer,
+} from "../styles/GlobalStyles";
 
 const WhatHappened = () => {
   return (
@@ -12,7 +16,7 @@ const WhatHappened = () => {
         <StyledFlexContainer>
           <StyledTree src={Tree} alt="Tree" />
           <StyledTextArea>
-            <Title>Lebanon Relief Network</Title>
+            <StyledHeader>Lebanon Relief Network</StyledHeader>
             <StyledParagraph>
               Lebanon’s troubled history has contributed to a growing mental
               health crisis in the country. 70% of Lebanon’s residents and
@@ -35,28 +39,24 @@ const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   background: ${colours.lightGrey};
+  margin: 0;
   padding: 0 3rem;
-  width: calc(100vw);
-  margin: 20px 0 0 50%;
+  width: calc(100vw - 20px);
+  margin-left: 50%;
   transform: translateX(-50%);
 `;
 
-const Title = styled.h2`
-  font-family: Raleway;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 45px;
-  color: ${colours.blue};
-`;
-
 const PageContainer = styled.div`
-  max-width: 1440px;
+  max-width: 960px;
 `;
 
 const StyledTextArea = styled.div`
   position: relative;
   width: 50%;
+
+  @media (max-width: ${devices.ipad}) {
+    right: 10%;
+  }
   margin: 2%;
   @media (max-width: ${devices.mobile}) {
     width: 100%;
@@ -65,6 +65,7 @@ const StyledTextArea = styled.div`
 
 const StyledFlexContainer = styled(FlexContainer)`
   padding-top: 7rem;
+  justify-content: space-between;
   @media (max-width: ${devices.ipad}) {
     padding-top: 3rem;
   }
@@ -75,7 +76,7 @@ const StyledFlexContainer = styled(FlexContainer)`
 
 const StyledTree = styled.img`
   object-fit: contain;
-  margin: 2%;
+
   @media (max-width: ${devices.ipad}) {
     width: 50%;
   }

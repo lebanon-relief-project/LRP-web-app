@@ -27,9 +27,10 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 .c1 {
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   padding-top: 2rem;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
   background: #fafafa;
 }
@@ -51,11 +52,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c15 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
+.c14 {
   background-color: #FFD666;
   color: black;
   font-style: normal;
@@ -73,11 +70,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   margin-bottom: 5%;
 }
 
-.c14 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
+.c13 {
   background-color: #FFD666;
   color: black;
   font-style: normal;
@@ -90,18 +83,13 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   min-width: 90%;
-  width: 50%;
+  max-width: 90%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
 
-.c16 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
+.c15 {
   background-color: #f0f0f0;
   color: black;
   font-style: normal;
@@ -114,9 +102,8 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   min-width: 90%;
-  width: 50%;
+  max-width: 90%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
@@ -135,10 +122,24 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 .c10 {
   position: relative;
   border: 1px solid #003A8C;
-  width: 25%;
+  width: 31.6%;
   padding: 1rem 1.2rem;
-  margin: 3rem 1rem;
-  height: 20%;
+  margin: 3rem 0rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -149,18 +150,15 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
-}
-
-.c13 {
-  min-height: 7rem;
+  background-color: white;
 }
 
 .c7 {
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
 }
 
@@ -238,20 +236,20 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c15 {
+  .c14 {
     width: 90%;
   }
 }
 
 @media (max-width:576px) {
-  .c14 {
+  .c13 {
     width: 90%;
     max-width: 90%;
   }
 }
 
 @media (max-width:576px) {
-  .c16 {
+  .c15 {
     width: 90%;
     max-width: 90%;
   }
@@ -266,6 +264,7 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c10 {
+    width: 75%;
     width: 40%;
     min-width: 0;
   }
@@ -385,13 +384,12 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               Support
             </legend>
             <p
-              class="c13"
+              class=""
             >
               Surround yourself with friends and family. And remember, you can always reach out…
             </p>
-            <br />
             <a
-              class="c14 c11"
+              class="c13 c11"
               href="/"
             >
               Reach Out
@@ -406,13 +404,12 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               Useful exercises
             </legend>
             <p
-              class="c13"
+              class=""
             >
               Here are some exercises to reduce stress and regain control over your actions and thoughts.
             </p>
-            <br />
             <a
-              class="c15"
+              class="c14"
               href="Self-Help_Exercises.pdf"
               rel="noopener noreferrer"
               target="_blank"
@@ -431,13 +428,12 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
               14 days of wellbeing
             </legend>
             <p
-              class="c13"
+              class=""
             >
               Keep your mind and body engaged by joining our 14 days of wellbeing.
             </p>
-            <br />
             <a
-              class="c16 c11"
+              class="c15 c11"
               disabled=""
               href="/help"
             >

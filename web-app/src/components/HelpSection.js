@@ -13,7 +13,7 @@ const HelpSection = () => {
         <PageContainer>
           <CardWrapper>
             {/* I'm looking for self-help */}
-            <StyledCard
+            <Card
               title="I'm looking for self-help"
               path={Routes.HELP}
               buttonText="Give me advice"
@@ -30,10 +30,10 @@ const HelpSection = () => {
                   and at your own pace.
                 </Paragraph>
               </StyledBody>
-            </StyledCard>
+            </Card>
 
             {/* I'd like to help */}
-            <StyledCard
+            <Card
               title="I’d like to help"
               path={"#"}
               buttonText="Contact me"
@@ -52,13 +52,13 @@ const HelpSection = () => {
                   community to help those impacted by a traumatic event?
                 </Paragraph>
               </StyledBody>
-            </StyledCard>
+            </Card>
 
             {/* I'd like to talk to someone */}
-            <StyledCard
+            <Card
               title="I'd like to talk to someone"
               path={"#"}
-              buttonText="Coming soon"
+              buttonText="View directory"
               onClick={() => {}}
               disabled
             >
@@ -70,10 +70,10 @@ const HelpSection = () => {
                 <Paragraph>
                   We created a directory of mental health experts to help you
                   find and connect to the therapist, counselling service, or
-                  organization that resonates best with you.
+                  organisation that resonates best with you.
                 </Paragraph>
               </StyledBody>
-            </StyledCard>
+            </Card>
           </CardWrapper>
         </PageContainer>
       </StyledSection>
@@ -107,17 +107,17 @@ const Paragraph = styled.p`
 const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
-
+  max-width: 960px;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
     position: static;
     pading: 0;
     margin: 0;
   }
-  z-index: 1;
-`;
+`
+
 
 const StyledCard = styled(Card)`
   flex: 0 1 24%;
@@ -126,8 +126,14 @@ const StyledCard = styled(Card)`
     margin: 0 auto;
   }
   @media (max-width: ${devices.ipadpro}) {
-    min-width: 75%;
+    flex-direction: column;
+    position: static;
+    pading: 0;
+    margin: 0;
+    align-items: center;
   }
+
+  z-index: 1;
 `;
 
 // The width, margin-left and transform fields are to allow the background colour to escape the
@@ -138,7 +144,7 @@ const StyledSection = styled.div`
   background: inherit;
   margin: 0;
   padding: 0 3rem;
-  width: calc(100vw);
+  width: calc(100vw - 20px);
   margin-left: 50%;
   transform: translateX(-50%);
 

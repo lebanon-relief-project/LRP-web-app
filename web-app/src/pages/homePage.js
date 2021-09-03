@@ -29,6 +29,7 @@ const StyledPage = styled.div`
   justify-content: center;
   @media (max-width: ${devices.mobile}) {
     flex-direction: column;
+    padding: 5%;
   }
 `;
 

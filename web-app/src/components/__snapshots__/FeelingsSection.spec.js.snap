@@ -15,11 +15,12 @@ exports[`the FeelingsSection component should match the snapshot 1`] = `
 }
 
 .c1 {
-  width: 60%;
+  width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
+  max-width: 960px;
 }
 
 .c0 {

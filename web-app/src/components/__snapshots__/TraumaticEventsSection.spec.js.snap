@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the TraumaticEvents component should match the snapshot 1`] = `
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,6 +12,11 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.c5 {
+  width: inherit;
+  max-width: 960px;
 }
 
 .c4 {
@@ -32,15 +37,16 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 363px;
   height: 410px;
   width: 100%;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,7 +55,6 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
   max-width: 632px;
 }
 
@@ -113,19 +118,19 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   margin: 0;
   margin-top: 64px;
   padding: 0;
-  width: 100%;
-  height: 410px;
+  width: 100vw;
+  height: 363px;
   z-index: 0;
 }
 
-.c6 {
+.c7 {
   font-weight: bold;
   font-size: 38px;
   margin: 0;
   color: #ffffff;
 }
 
-.c8 {
+.c9 {
   margin: 0;
   margin-bottom: 1rem;
   font-size: 16px;
@@ -133,7 +138,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c7 {
+  .c8 {
     margin-top: 15px;
   }
 }
@@ -145,20 +150,20 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:1025px) {
-  .c5 {
+  .c6 {
     margin: 0 12.5%;
   }
 }
 
 @media (max-width:768px) {
-  .c5 {
+  .c6 {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media (max-width:576px) {
-  .c5 {
+  .c6 {
     margin-left: 18px;
     margin-right: 18px;
     -webkit-flex: 1;
@@ -199,7 +204,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c6 {
+  .c7 {
     font-size: 30px;
     line-height: 38px;
   }
@@ -235,29 +240,33 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
       <div
         class="c5"
       >
-        <h2
+        <div
           class="c6"
         >
-          Traumatic Events
-        </h2>
-        <div
-          class="c7"
-        >
-          <p
+          <h2
+            class="c7"
+          >
+            Traumatic Events
+          </h2>
+          <div
             class="c8"
           >
-            Trauma usually occurs after a deeply distressing or disturbing event, which may manifest as changes in feelings, thoughts, or behaviors. Trauma may also be less obvious, manifesting as a normal reaction to an abnormal event.
-          </p>
-          <p
-            class="c8"
-          >
-            It is important to keep in mind that trauma is unique to each individual. Any small or big distressing event can trigger it, and everyone experiences trauma differently. It can be collective and widespread, such as pandemics or economic crises, but it also can be individual and specific, such as abuse or the death of a loved one.
-          </p>
-          <p
-            class="c8"
-          >
-            One may also suffer from trauma without having experienced an event first hand, but rather by caring for someone who has or by simply watching the news.
-          </p>
+            <p
+              class="c9"
+            >
+              Trauma usually occurs after a deeply distressing or disturbing event, which may manifest as changes in feelings, thoughts, or behaviors. Trauma may also be less obvious, manifesting as a normal reaction to an abnormal event.
+            </p>
+            <p
+              class="c9"
+            >
+              It is important to keep in mind that trauma is unique to each individual. Any small or big distressing event can trigger it, and everyone experiences trauma differently. It can be collective and widespread, such as pandemics or economic crises, but it also can be individual and specific, such as abuse or the death of a loved one.
+            </p>
+            <p
+              class="c9"
+            >
+              One may also suffer from trauma without having experienced an event first hand, but rather by caring for someone who has or by simply watching the news.
+            </p>
+          </div>
         </div>
       </div>
     </div>

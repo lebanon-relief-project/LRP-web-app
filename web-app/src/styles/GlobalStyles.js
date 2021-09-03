@@ -32,6 +32,7 @@ export const StyledSection = styled.section`
   max-width: 100%;
 
   @media (max-width: ${devices.mobile}) {
+    padding: 0;
     margin-top: ${(props) => (props.padded ? "5rem" : "0")};
   }
 `;

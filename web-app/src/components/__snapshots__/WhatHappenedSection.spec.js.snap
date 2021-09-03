@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
+.c6 {
+  display: block;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+}
+
 .c7 {
   position: relative;
   margin: 0;
@@ -33,25 +43,17 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   background: #fafafa;
+  margin: 0;
   padding: 0 3rem;
-  width: calc(100vw);
-  margin: 20px 0 0 50%;
+  width: calc(100vw - 20px);
+  margin-left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-.c6 {
-  font-family: Raleway;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 45px;
-  color: #003A8C;
-}
-
 .c1 {
-  max-width: 1440px;
+  max-width: 960px;
 }
 
 .c5 {
@@ -62,11 +64,14 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
 
 .c3 {
   padding-top: 7rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .c4 {
   object-fit: contain;
-  margin: 2%;
 }
 
 @media (max-width:576px) {
@@ -74,6 +79,12 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media (max-width:768px) {
+  .c5 {
+    right: 10%;
   }
 }
 

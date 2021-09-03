@@ -51,34 +51,36 @@ const ExperiencesSection = () => {
       </HeaderWrapper>
 
       <CentralWrapper>
-        <CentralContentWrapper>
-          <StyledHeader>From the experiences you've shared...</StyledHeader>
-          <TextWrapper>
-            <StyledDiv>
-              We have pulled together some tailored advice and exercises to help
-              you cope with trauma and how you are feeling.
-            </StyledDiv>
-            <StyledDiv>
-              {peopleData.map((person, i) => (
-                <Person
-                  key={i}
-                  src={person.src}
-                  alt={person.alt}
-                  data-testid={`resultsPercentage_image_${i}`}
-                />
-              ))}
-            </StyledDiv>
-            <StyledDiv>
-              <FlexBox>
-                <PercentageNumber>{percentage}%</PercentageNumber>
-                <PercentageText>
-                  of Lebanese residents and expatriates are estimated to have
-                  experienced traumatic symptoms after the 4th of August blast.
-                </PercentageText>
-              </FlexBox>
-            </StyledDiv>
-          </TextWrapper>
-        </CentralContentWrapper>
+        <WidthConstraint>
+          <CentralContentWrapper>
+            <StyledHeader>From the experiences you've shared...</StyledHeader>
+            <TextWrapper>
+              <StyledDiv>
+                We have pulled together some tailored advice and exercises to help
+                you cope with trauma and how you are feeling.
+              </StyledDiv>
+              <StyledDiv>
+                {peopleData.map((person, i) => (
+                  <Person
+                    key={i}
+                    src={person.src}
+                    alt={person.alt}
+                    data-testid={`resultsPercentage_image_${i}`}
+                  />
+                ))}
+              </StyledDiv>
+              <StyledDiv>
+                <FlexBox>
+                  <PercentageNumber>{percentage}%</PercentageNumber>
+                  <PercentageText>
+                    of Lebanese residents and expatriates are estimated to have
+                    experienced traumatic symptoms after the 4th of August blast.
+                  </PercentageText>
+                </FlexBox>
+              </StyledDiv>
+            </TextWrapper>
+          </CentralContentWrapper>
+        </WidthConstraint>
       </CentralWrapper>
     </StyledSection>
   );
@@ -148,11 +150,16 @@ const CentralWrapper = styled.div`
   }
 `;
 
+const WidthConstraint = styled.div`
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+`
+
 const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
   max-width: 765px;
 
   @media (max-width: ${devices.mobile}) {
@@ -205,7 +212,7 @@ const StyledSection = styled.div`
   display: flex;
   background: ${colours.darkBlue};
   margin: 0;
-  margin-top: 80px;
+  margin-top: 64px;
   padding: 0;
   width: 100%;
   height: 363px;

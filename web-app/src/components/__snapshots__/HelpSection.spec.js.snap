@@ -9,12 +9,12 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
-  z-index: 1;
+  max-width: 960px;
 }
 
 .c0 {
@@ -29,7 +29,7 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   background: inherit;
   margin: 0;
   padding: 0 3rem;
-  width: calc(100vw);
+  width: calc(100vw - 20px);
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -49,10 +49,6 @@ exports[`the HelpSection component should match the snapshot 1`] = `
     pading: 0;
     margin: 0;
   }
-}
-
-@media (max-width:1025px) {
-
 }
 
 @media (max-width:576px) {

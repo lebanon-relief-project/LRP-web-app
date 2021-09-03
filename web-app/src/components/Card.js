@@ -11,7 +11,6 @@ const Card = (props) => {
       <CardTitle {...rest}>{title}</CardTitle>
       {children}
 
-      <br />
       {props.externalPath ? (
         <StyledAnchor
           href={props.externalPath}
@@ -30,10 +29,7 @@ const Card = (props) => {
 };
 
 const StyledAnchor = styled.a`
-  position: ${(props) => (props.secondary ? "static" : "absolute")};
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
+  
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -50,10 +46,7 @@ const StyledAnchor = styled.a`
 `;
 
 const StyledLink = styled(Link)`
-  position: ${(props) => (props.secondary ? "static" : "absolute")};
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
+
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -61,9 +54,9 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   justify-content: center;
   display: flex;
-  text-align: center;
+
   min-width: ${(props) => (props.secondary ? "25%" : "90%")};
-  width: 50%;
+  max-width: ${(props) => (props.secondary ? "25%" : "90%")};
   @media (max-width: ${devices.mobile}) {
     width: ${(props) => (props.secondary ? "50%" : "90%")};
     max-width: ${(props) => (props.secondary ? "100%" : "90%")};
@@ -91,10 +84,16 @@ const StyledCard = styled.fieldset`
   position: relative;
   border: ${(props) =>
     props.secondary ? "none" : `1px solid ${colours.blue}`};
-  width: ${(props) => (props.secondary ? "100%" : "25%")};
+  width: ${(props) => (props.secondary ? "100%" : "31.6%")};
   padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.2rem")};
-  margin: 3rem 1rem;
-  height: 20%;
+  margin: 3rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -102,9 +101,10 @@ const StyledCard = styled.fieldset`
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
 
+  background-color: white;
   @media (max-width: ${devices.ipadpro}) {
+    width: 75%;
     width: ${(props) => (props.secondary ? "100%" : "40%")};
     min-width: 0;
   }

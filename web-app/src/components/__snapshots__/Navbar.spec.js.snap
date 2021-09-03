@@ -12,21 +12,44 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
   z-index: 100;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   padding: 0;
-  min-width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
-.c2 {
-  max-width: 100%;
-  min-width: 50%;
+.c3 {
+  text-align: center;
+}
+
+.c1 {
+  width: calc(100vw - 20px);
+  max-width: 960px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 576px;
 }
 
 @media (max-width:768px) {
@@ -77,7 +100,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:576px) {
-  .c1 {
+  .c2 {
     margin-top: 104px;
     margin-left: 20px;
     -webkit-flex-direction: column;
@@ -87,13 +110,15 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:576px) {
-  .c2 {
+  .c3 {
     margin-bottom: 60px;
+    text-align: left;
+    width: 100%;
   }
 }
 
 @media (max-width:768px) {
-  .c2 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
@@ -111,33 +136,37 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     class="c0"
   >
     <div
-      data-testid="navlink_/"
-    />
-    <ul
       class="c1"
     >
-      <li
+      <div
+        data-testid="navlink_/"
+      />
+      <ul
         class="c2"
       >
-        <div
-          data-testid="navlink_/"
-        />
-      </li>
-      <li
-        class="c2"
-      >
-        <div
-          data-testid="navlink_/help"
-        />
-      </li>
-      <li
-        class="c2"
-      >
-        <div
-          data-testid="navlink_/about"
-        />
-      </li>
-    </ul>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/help"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/about"
+          />
+        </li>
+      </ul>
+    </div>
   </nav>
 </div>
 `;
@@ -154,21 +183,44 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
   background-color: white;
   z-index: 100;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   padding: 0;
-  min-width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
-.c2 {
-  max-width: 100%;
-  min-width: 50%;
+.c3 {
+  text-align: center;
+}
+
+.c1 {
+  width: calc(100vw - 20px);
+  max-width: 960px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 576px;
 }
 
 @media (max-width:768px) {
@@ -219,7 +271,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:576px) {
-  .c1 {
+  .c2 {
     margin-top: 104px;
     margin-left: 20px;
     -webkit-flex-direction: column;
@@ -229,13 +281,15 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:576px) {
-  .c2 {
+  .c3 {
     margin-bottom: 60px;
+    text-align: left;
+    width: 100%;
   }
 }
 
 @media (max-width:768px) {
-  .c2 {
+  .c3 {
     padding: 0 0.5rem;
   }
 }
@@ -254,33 +308,37 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     open=""
   >
     <div
-      data-testid="navlink_/"
-    />
-    <ul
       class="c1"
     >
-      <li
+      <div
+        data-testid="navlink_/"
+      />
+      <ul
         class="c2"
       >
-        <div
-          data-testid="navlink_/"
-        />
-      </li>
-      <li
-        class="c2"
-      >
-        <div
-          data-testid="navlink_/help"
-        />
-      </li>
-      <li
-        class="c2"
-      >
-        <div
-          data-testid="navlink_/about"
-        />
-      </li>
-    </ul>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/help"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/about"
+          />
+        </li>
+      </ul>
+    </div>
   </nav>
 </div>
 `;
