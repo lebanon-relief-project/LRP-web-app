@@ -29,10 +29,7 @@ const Card = (props) => {
 };
 
 const StyledAnchor = styled.a`
-  position: ${(props) => (props.secondary ? "static" : "absolute")};
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
+  
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -49,10 +46,7 @@ const StyledAnchor = styled.a`
 `;
 
 const StyledLink = styled(Link)`
-  position: ${(props) => (props.secondary ? "static" : "absolute")};
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(${(props) => (props.secondary ? "0" : "-50%")});
+
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -93,6 +87,12 @@ const StyledCard = styled.fieldset`
   width: ${(props) => (props.secondary ? "100%" : "31.6%")};
   padding: ${(props) => (props.secondary ? "1rem 0" : "1rem 1.2rem")};
   margin: 3rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
 
   font-family: Raleway;
   font-size: 16px;

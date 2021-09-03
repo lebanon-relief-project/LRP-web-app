@@ -61,7 +61,7 @@ export const ActionSection = () => {
 };
 
 const StyledParagraph = styled.p`
-  min-height: 7rem;
+
 `;
 
 const Wrapper = styled.div`
