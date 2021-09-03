@@ -5,6 +5,7 @@ import WhatHappened from "../components/WhatHappenedSection";
 import OurMission from "../components/OurMissionSection";
 import HelpSection from "../components/HelpSection";
 import WellbeingSection from "../components/WellbeingSection";
+import colours from "../styles/Colours";
 
 const HomePage = () => {
   return (
@@ -13,7 +14,9 @@ const HomePage = () => {
         <PageContainer>
           <WhatHappened />
           <OurMission />
-          <HelpSection />
+          <HelpSectionWrapper>
+            <HelpSection />
+          </HelpSectionWrapper>
           <WellbeingSection />
         </PageContainer>
       </StyledPage>
@@ -32,6 +35,10 @@ const StyledPage = styled.div`
 
 const PageContainer = styled.div`
   max-width: 1440px;
+`;
+
+const HelpSectionWrapper = styled.div`
+  background-color: ${colours.lightGrey};
 `;
 
 export default HomePage;

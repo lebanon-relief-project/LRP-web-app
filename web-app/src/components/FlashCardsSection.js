@@ -83,6 +83,7 @@ const FlashCardsSection = (props) => {
                   id={`${flashCard._id}`}
                   key={`${flashCard._id}_${index}`}
                   card={flashCard}
+                  clickable={true}
                 />
               );
             })}

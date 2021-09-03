@@ -270,6 +270,12 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c10 {
+    margin: 3rem 1rem;
+  }
+}
+
 @media (max-width:576px) {
   .c10 {
     width: 90%;

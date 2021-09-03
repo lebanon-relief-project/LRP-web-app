@@ -17,6 +17,12 @@ describe("the FlashCard component", () => {
     expect(container).toMatchSnapshot();
   });
 
+  it("should match the snapshot when clickable is set to false", () => {
+    ({ container } = renderFlashCard(false));
+
+    expect(container).toMatchSnapshot();
+  });
+
   it("should call the setItem method of session function ", () => {
     ({ container, getByTestId } = renderFlashCard());
     let Button = getByTestId("title 1");
@@ -42,11 +48,11 @@ describe("the FlashCard component", () => {
   });
 });
 
-const renderFlashCard = () => {
+const renderFlashCard = (clickable = true) => {
   const flashCard1 = {
     title: "title 1",
     body: "text 1",
     image: "image url",
   };
-  return render(<FlashCard card={flashCard1} />);
+  return render(<FlashCard clickable={clickable} card={flashCard1} />);
 };

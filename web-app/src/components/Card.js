@@ -108,6 +108,9 @@ const StyledCard = styled.fieldset`
     width: ${(props) => (props.secondary ? "100%" : "40%")};
     min-width: 0;
   }
+  @media (max-width: ${devices.ipad}) {
+    margin: ${(props) => (props.secondary ? "3rem 0" : "3rem 1rem")};
+  }
   @media (max-width: ${devices.mobile}) {
     width: 90%;
     margin: 1rem auto;

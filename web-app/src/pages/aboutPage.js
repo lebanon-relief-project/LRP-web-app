@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
+import HelpSection from "../components/HelpSection";
+import AboutUsSection from "../components/aboutPage/AboutUsSection";
+import OurValuesSection from "../components/aboutPage/OurValuesSection";
 
 const AboutPage = () => {
-    return (
-        <div>
-            <h2>About Page</h2>
-        </div>
-    )
-}
+  return (
+    <>
+      <AboutUsSection />
+      <OurValuesSection />
+      <HelpSection />
+    </>
+  );
+};
 
 
 export default AboutPage;

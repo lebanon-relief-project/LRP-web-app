@@ -1,11 +1,571 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the AboutPage component should match the snapshot 1`] = `
+.c20 {
+  background-color: #FFD666;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 90%;
+  max-width: 90%;
+  margin-bottom: 5%;
+  padding: 0.5rem;
+}
+
+.c21 {
+  background-color: #f0f0f0;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 90%;
+  max-width: 90%;
+  margin-bottom: 5%;
+  padding: 0.5rem;
+}
+
+.c17 {
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 24px;
+  min-width: auto;
+  line-height: 100%;
+  padding: 0 0.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.c16 {
+  position: relative;
+  border: 1px solid #003A8C;
+  width: 31.6%;
+  padding: 1rem 1.2rem;
+  margin: 3rem 0rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-letter-spacing: 0em;
+  -moz-letter-spacing: 0em;
+  -ms-letter-spacing: 0em;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: white;
+}
+
+.c5 {
+  display: block;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #000000;
+}
+
+.c7 {
+  position: relative;
+  margin: 0;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  z-index: 1;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c12 {
+  heigth: auto;
+  width: 10%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c18 {
+  min-height: 17rem;
+}
+
+.c19 {
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #262626;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 960px;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: inherit;
+  margin: 0;
+  padding: 0 3rem;
+  width: calc(100vw - 20px);
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c14 {
+  max-width: 1440px;
+}
+
+.c6 {
+  padding-top: 10%;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  width: calc(100vw);
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c1 {
+  max-width: 1440px;
+  margin-top: 80px;
+  padding: 0 240px;
+}
+
+.c4 {
+  position: relative;
+  width: 50%;
+}
+
+.c3 {
+  object-fit: contain;
+  margin: 2%;
+  max-width: 60%;
+}
+
+.c8 {
+  position: relative;
+  top: -150px;
+}
+
+.c9 {
+  background: #fafafa;
+}
+
+.c10 {
+  background: #fafafa;
+  max-width: 1440px;
+  padding: 0 240px;
+  margin: auto;
+}
+
+.c11 {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width:576px) {
+  .c20 {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c21 {
+    width: 90%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width:576px) {
+  .c17 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width:1025px) {
+  .c16 {
+    width: 75%;
+    width: 40%;
+    min-width: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c16 {
+    margin: 3rem 1rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c16 {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1025px) {
+  .c18 {
+    min-height: 13rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c15 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: static;
+    pading: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width:576px) {
+  .c13 {
+    margin-right: 0rem;
+    max-width: 100%;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    margin-top: 0;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    padding-top: 0;
+  }
+}
+
+@media (max-width:1025px) {
+  .c1 {
+    padding: 0 18px;
+  }
+}
+
+@media (max-width:576px) {
+  .c4 {
+    right: 0;
+    width: 100%;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    width: 80%;
+  }
+}
+
+@media (max-width:576px) {
+  .c3 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+}
+
+@media (max-width:576px) {
+  .c8 {
+    position: static;
+  }
+}
+
+@media (max-width:768px) {
+  .c10 {
+    padding: 0 18px;
+  }
+}
+
 <div>
-  <div>
-    <h2>
-      About Page
-    </h2>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <img
+          alt="City"
+          class="c3"
+          src="City.svg"
+        />
+        <div
+          class="c4"
+        >
+          <h2
+            class="c5 c6"
+          >
+            About us
+          </h2>
+          <p
+            class="c7"
+          >
+            Following the devastating explosion of Beirut’s port in August 2020, Lebanon Relief Network was founded by six individuals who themselves were impacted by the incident and experienced signs of trauma. The founding members observed a lack of resources and tools for the Lebanese community to use to recover from trauma.
+          </p>
+        </div>
+      </div>
+      <div
+        class="c2"
+      >
+        <div
+          class="c4"
+        >
+          <p
+            class="c7"
+          >
+            Joined by volunteers across the world, they worked to fill this gap, educate the community, and aid in advancing mental well-being. Today, Lebanon Relief Network encompasses a team of over 50 volunteers spread all over the world who collectively possess a wide range of experiences in combating trauma. 
+            <br />
+             
+            <br />
+             We are continuously building valuable partnerships with volunteers and mental health professionals to create a powerful network for support and healing. Through our digital platform, we produce content informed and validated by experts to offer a safe space for healing, offer tools and resources for self-help, and foster trauma-related dialogue. 
+            <br />
+            <br />
+            The enthusiasm, commitment, and resilience of our team is at the core of what Lebanon Relief Network stands for.
+            <br />
+             
+            <br />
+             
+            <b>
+              We are LRN.
+            </b>
+          </p>
+        </div>
+        <img
+          alt="Map"
+          class="c3 c8"
+          src="Map.svg"
+        />
+      </div>
+    </div>
+  </div>
+  <section
+    class="c9"
+  >
+    <div
+      class="c10"
+    >
+      <h2
+        class="c5"
+      >
+        Our values
+      </h2>
+      <p
+        class="c7"
+      >
+        We have developed a set of values that run through everything we do, from the way we provide support, to who we partner up with and how we grow and develop:
+      </p>
+    </div>
+    <div
+      class="c11"
+    >
+      <img
+        alt="loading..."
+        class="c12"
+        src="LoadingSpinner.gif"
+      />
+    </div>
+  </section>
+  <div
+    class="c13"
+  >
+    <div
+      class="c14"
+    >
+      <div
+        class="c15"
+      >
+        <fieldset
+          class="c16"
+        >
+          <legend
+            class="c17"
+          >
+            I'm looking for self-help
+          </legend>
+          <div
+            class="c18"
+          >
+            <p
+              class="c19"
+            >
+              Everyone reacts differently to trauma, and not everyone recovers from a traumatic experience in the same way. There are countless ways to resolve trauma and overcome it.
+            </p>
+            <p
+              class="c19"
+            >
+              Here you can find personalized self-help recommendations, tips, and tools to help you cope with trauma in your own time and at your own pace.
+            </p>
+          </div>
+          <a
+            class="c20"
+            href="/help"
+          >
+            Give me advice
+          </a>
+        </fieldset>
+        <fieldset
+          class="c16"
+        >
+          <legend
+            class="c17"
+          >
+            I’d like to help
+          </legend>
+          <div
+            class="c18"
+          >
+            <p
+              class="c19"
+            >
+              Do you know someone who experienced or is experiencing trauma? Do you need direction on how to help, what to say, what to do, and how to protect yourself?
+            </p>
+            <p
+              class="c19"
+            >
+              Or are you looking for volunteer opportunities in your community to help those impacted by a traumatic event?
+            </p>
+          </div>
+          <a
+            class="c20"
+            href="/"
+          >
+            Contact me
+          </a>
+        </fieldset>
+        <fieldset
+          class="c16"
+          disabled=""
+        >
+          <legend
+            class="c17"
+            disabled=""
+          >
+            I'd like to talk to someone
+          </legend>
+          <div
+            class="c18"
+          >
+            <p
+              class="c19"
+            >
+              Sometimes, self-help is not enough, and you might prefer a professional hand to help you cope with trauma.
+            </p>
+            <p
+              class="c19"
+            >
+              We created a directory of mental health experts to help you find and connect to the therapist, counselling service, or organisation that resonates best with you.
+            </p>
+          </div>
+          <a
+            class="c21"
+            disabled=""
+            href="/"
+          >
+            View directory
+          </a>
+        </fieldset>
+      </div>
+    </div>
   </div>
 </div>
 `;

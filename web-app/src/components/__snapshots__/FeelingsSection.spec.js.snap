@@ -82,7 +82,10 @@ exports[`the FeelingsSection component should match the snapshot 1`] = `
         <p
           class="c4"
         >
-          If you feel that you are experiencing emotional and physical changes since a distressing event, know that you are not alone, and that it is normal to be wanting to understand your changes after a traumatic event. The cards below give you a brief description of what you may be experiencing. Please read them and select those that apply to you. Once you are done, and want to know more about why you are experiencing those feelings and how to cope with them, click on give me advice at the bottom of the page.
+          You are not alone, if you feel that you are experiencing changes after a traumatic event. The cards below will help you to better understand how you are feeling and why. Select the card or cards that applies best to your situation. Once you are done, you can click on "Give me advice" at the bottom of the page to access self-help information on how to cope with the feelings you may be experiencing.
+          <br />
+          <br />
+          Don’t worry, this bit is completely anonymous: your selections will not be recorded nor shared, and you will not be asked to talk to anyone.
         </p>
       </div>
     </div>

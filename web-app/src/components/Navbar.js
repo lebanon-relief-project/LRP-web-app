@@ -1,54 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
 import logo from "../assets/images/logo.svg";
 import { Routes } from "../App.js";
 import colours from "../styles/Colours";
 import devices from "../styles/Devices";
-import LikeToHelpModal from "./LikeToHelpModal";
 
 const Navbar = ({ open }) => {
-  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
     <>
       <StyledNav open={open}>
-        <StyledNavContentWrapper>
-          <LogoLink exact to={Routes.HOME}>
-            <LogoImage src={logo} alt="Logo" />
-          </LogoLink>
+        <LogoLink exact to={Routes.HOME}>
+          <LogoImage src={logo} alt="Logo" />
+        </LogoLink>
 
-          <StyledUl>
-            <StyledLi>
-              <StyledLink exact to={Routes.HOME}>
-                Home
-              </StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledLink exact to={Routes.HELP}>
-                I’m looking for help
-              </StyledLink>
-            </StyledLi>
-            <StyledLi>
-              <StyledButton
-                exact
-                to={"#"}
-                onClick={() => setLikeToHelpModalVisible(true)}
-                data-testid={"id-like-to-help"}
-              >
-                I’d like to help
-              </StyledButton>
-            </StyledLi>
-          </StyledUl>
-        </StyledNavContentWrapper>
+        <StyledUl>
+          <StyledLi>
+            <StyledLink exact to={Routes.HOME}>
+              Home
+            </StyledLink>
+          </StyledLi>
+          <StyledLi>
+            <StyledLink exact to={Routes.HELP}>
+              I’m looking for help
+            </StyledLink>
+          </StyledLi>
+          <StyledLi>
+            <StyledLink exact to={Routes.ABOUT}>
+              About us
+            </StyledLink>
+          </StyledLi>
+        </StyledUl>
       </StyledNav>
-      {likeToHelpModalVisible && (
-        <LikeToHelpModal
-          closeModal={() => {
-            setLikeToHelpModalVisible(false);
-          }}
-        />
-      )}
     </>
   );
 };

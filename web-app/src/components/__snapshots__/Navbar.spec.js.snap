@@ -18,7 +18,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   justify-content: center;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,18 +38,8 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
   height: 100%;
 }
 
-.c3 {
+.c2 {
   text-align: center;
-}
-
-.c1 {
-  width: calc(100vw - 20px);
-  max-width: 960px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 576px;
 }
 
 @media (max-width:768px) {
@@ -100,7 +90,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:576px) {
-  .c2 {
+  .c1 {
     margin-top: 104px;
     margin-left: 20px;
     -webkit-flex-direction: column;
@@ -110,7 +100,7 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:576px) {
-  .c3 {
+  .c2 {
     margin-bottom: 60px;
     text-align: left;
     width: 100%;
@@ -118,17 +108,9 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 }
 
 @media (max-width:768px) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
-}
-
-@media (max-width:768px) {
-
-}
-
-@media (max-width:576px) {
-
 }
 
 @media (max-width:768px) {
@@ -144,37 +126,33 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
     class="c0"
   >
     <div
+      data-testid="navlink_/"
+    />
+    <ul
       class="c1"
     >
-      <div
-        data-testid="navlink_/"
-      />
-      <ul
+      <li
         class="c2"
       >
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_/"
-          />
-        </li>
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_/help"
-          />
-        </li>
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_#"
-          />
-        </li>
-      </ul>
-    </div>
+        <div
+          data-testid="navlink_/"
+        />
+      </li>
+      <li
+        class="c2"
+      >
+        <div
+          data-testid="navlink_/help"
+        />
+      </li>
+      <li
+        class="c2"
+      >
+        <div
+          data-testid="navlink_/about"
+        />
+      </li>
+    </ul>
   </nav>
 </div>
 `;
@@ -197,7 +175,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   justify-content: center;
 }
 
-.c2 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -217,18 +195,8 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
   height: 100%;
 }
 
-.c3 {
+.c2 {
   text-align: center;
-}
-
-.c1 {
-  width: calc(100vw - 20px);
-  max-width: 960px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 576px;
 }
 
 @media (max-width:768px) {
@@ -279,7 +247,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:576px) {
-  .c2 {
+  .c1 {
     margin-top: 104px;
     margin-left: 20px;
     -webkit-flex-direction: column;
@@ -289,7 +257,7 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:576px) {
-  .c3 {
+  .c2 {
     margin-bottom: 60px;
     text-align: left;
     width: 100%;
@@ -297,17 +265,9 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 }
 
 @media (max-width:768px) {
-  .c3 {
+  .c2 {
     padding: 0 0.5rem;
   }
-}
-
-@media (max-width:768px) {
-
-}
-
-@media (max-width:576px) {
-
 }
 
 @media (max-width:768px) {
@@ -324,37 +284,33 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
     open=""
   >
     <div
+      data-testid="navlink_/"
+    />
+    <ul
       class="c1"
     >
-      <div
-        data-testid="navlink_/"
-      />
-      <ul
+      <li
         class="c2"
       >
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_/"
-          />
-        </li>
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_/help"
-          />
-        </li>
-        <li
-          class="c3"
-        >
-          <div
-            data-testid="navlink_#"
-          />
-        </li>
-      </ul>
-    </div>
+        <div
+          data-testid="navlink_/"
+        />
+      </li>
+      <li
+        class="c2"
+      >
+        <div
+          data-testid="navlink_/help"
+        />
+      </li>
+      <li
+        class="c2"
+      >
+        <div
+          data-testid="navlink_/about"
+        />
+      </li>
+    </ul>
   </nav>
 </div>
 `;
