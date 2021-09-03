@@ -10,27 +10,29 @@ const Navbar = ({ open }) => {
   return (
     <>
       <StyledNav open={open}>
-        <LogoLink exact to={Routes.HOME}>
-          <LogoImage src={logo} alt="Logo" />
-        </LogoLink>
+        <StyledNavContentWrapper>
+          <LogoLink exact to={Routes.HOME}>
+            <LogoImage src={logo} alt="Logo" />
+          </LogoLink>
 
-        <StyledUl>
-          <StyledLi>
-            <StyledLink exact to={Routes.HOME}>
-              Home
-            </StyledLink>
-          </StyledLi>
-          <StyledLi>
-            <StyledLink exact to={Routes.HELP}>
-              I’m looking for help
-            </StyledLink>
-          </StyledLi>
-          <StyledLi>
-            <StyledLink exact to={Routes.ABOUT}>
-              About us
-            </StyledLink>
-          </StyledLi>
-        </StyledUl>
+          <StyledUl>
+            <StyledLi>
+              <StyledLink exact to={Routes.HOME}>
+                Home
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink exact to={Routes.HELP}>
+                I’m looking for help
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink exact to={Routes.ABOUT}>
+                About us
+              </StyledLink>
+            </StyledLi>
+          </StyledUl>
+        </StyledNavContentWrapper>
       </StyledNav>
     </>
   );
