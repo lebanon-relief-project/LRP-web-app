@@ -3,7 +3,7 @@ applications:
 - name: LRN-Web-App
   instances: 1
   timeout: 180
-  buildpack: sdk-for-nodejs
+  buildpack: nodejs_buildpack
   disk_quota: 1G
   memory: 1024MB
   domain: eu-de.mybluemix.net
