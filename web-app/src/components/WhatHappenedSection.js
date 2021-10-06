@@ -16,7 +16,7 @@ const WhatHappened = () => {
         <StyledFlexContainer>
           <StyledTree src={Tree} alt="Tree" />
           <StyledTextArea>
-            <StyledHeader>Lebanon Relief Network</StyledHeader>
+            <StyledTitle>Lebanon Relief Network</StyledTitle>
             <StyledParagraph>
               Lebanon’s troubled history has contributed to a growing mental
               health crisis in the country. 70% of Lebanon’s residents and
@@ -32,6 +32,16 @@ const WhatHappened = () => {
     </StyledSection>
   );
 };
+
+const StyledTitle = styled.h2`
+  display: ${(props) => (props.mobile ? "none" : "block")};
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: ${colours.blue};
+`;
 
 // The width, margin-left and transform fields are to allow the background colour to escape the
 // page max-width of 1440px

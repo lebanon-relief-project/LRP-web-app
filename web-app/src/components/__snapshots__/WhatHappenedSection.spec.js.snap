@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the WhatHappened component should match the snapshot 1`] = `
-.c6 {
-  display: block;
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 38px;
-  line-height: 46px;
-  color: #000000;
-}
-
 .c7 {
   position: relative;
   margin: 0;
@@ -31,6 +21,16 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.c6 {
+  display: block;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  line-height: 46px;
+  color: #003A8C;
 }
 
 .c0 {
