@@ -4,86 +4,259 @@ import Card from "./Card";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
 import devices from "../styles/Devices";
+import { Link } from "react-router-dom";
 
 const HelpSection = () => {
   const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
   return (
     <>
-      <StyledSection>
-        <PageContainer>
-          <CardWrapper>
-            {/* I'm looking for self-help */}
-            <Card
-              title="I'm looking for self-help"
-              path={Routes.HELP}
-              buttonText="Give me advice"
-            >
-              <StyledBody>
-                <Paragraph>
-                  Everyone reacts differently to trauma, and not everyone
-                  recovers from a traumatic experience in the same way. There
-                  are countless ways to resolve trauma and overcome it.
-                </Paragraph>
-                <Paragraph>
-                  Here you can find personalized self-help recommendations,
-                  tips, and tools to help you cope with trauma in your own time
-                  and at your own pace.
-                </Paragraph>
-              </StyledBody>
-            </Card>
-
-            {/* I'd like to help */}
-            <Card
-              title="I’d like to help"
-              path={"#"}
-              buttonText="Contact me"
-              onClick={() => {
-                setLikeToHelpModalVisible(true);
+      <div
+        style={{
+          backgroundColor: "blue",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            backgroundColor: "red",
+            flex: 1,
+            maxWidth: 960,
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 24,
+          }}
+        >
+          <div
+            style={{
+              maxWidth: 304,
+              backgroundColor: "yellow",
+              display: "flex",
+              flex: 1,
+              border: "1px solid black",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              position: "relative",
+              minHeight: 317,
+              height: "100%",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "brown",
+                position: "absolute",
+                top: -16,
+                height: 32,
+                width: "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <StyledBody>
-                <Paragraph>
-                  Do you know someone who experienced or is experiencing trauma?
-                  Do you need direction on how to help, what to say, what to do,
-                  and how to protect yourself?
-                </Paragraph>
-                <Paragraph>
-                  Or are you looking for volunteer opportunities in your
-                  community to help those impacted by a traumatic event?
-                </Paragraph>
-              </StyledBody>
-            </Card>
-
-            {/* I'd like to talk to someone */}
-            <Card
-              title="I'd like to talk to someone"
-              path={"#"}
-              buttonText="View directory"
-              onClick={() => {}}
-              disabled
+              <span style={{ fontWeight: 700, fontSize: 24 }}>
+                I’m looking for help
+              </span>
+            </div>
+            <div
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                backgroundColor: "red",
+                marginTop: 26,
+                fontSize: 15,
+                fontWeight: 400,
+                height: 207,
+              }}
             >
-              <StyledBody>
-                <Paragraph>
-                  Sometimes, self-help is not enough, and you might prefer a
-                  professional hand to help you cope with trauma.
-                </Paragraph>
-                <Paragraph>
-                  We created a directory of mental health experts to help you
-                  find and connect to the therapist, counselling service, or
-                  organisation that resonates best with you.
-                </Paragraph>
-              </StyledBody>
-            </Card>
-          </CardWrapper>
-        </PageContainer>
-      </StyledSection>
-      {likeToHelpModalVisible && (
-        <LikeToHelpModal
-          closeModal={() => {
-            setLikeToHelpModalVisible(false);
-          }}
-        />
-      )}
+              Everyone reacts differently to trauma, and not everyone recovers
+              from a traumatic experience in the same way or time. There is no
+              one solution to heal from it.
+              <br /> <br />
+              Here you can find personalized recommendations, tips and tools to
+              help you cope with trauma.
+            </div>
+            <div
+              style={{
+                backgroundColor: "green",
+                display: "flex",
+                flex: 1,
+                alignItems: "flex-end",
+              }}
+            >
+              <Link
+                style={{
+                  height: 40,
+                  width: 264,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 20,
+                  marginTop: 24,
+                  backgroundColor: "blue",
+                }}
+                to={"/"}
+              >
+                Give me advice
+              </Link>
+            </div>
+          </div>
+          <div
+            style={{
+              maxWidth: 304,
+              backgroundColor: "yellow",
+              display: "flex",
+              flex: 1,
+              border: "1px solid black",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              position: "relative",
+              minHeight: 317,
+              height: "100%",
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "brown",
+                position: "absolute",
+                top: -16,
+                height: 32,
+                width: "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span style={{ fontWeight: 700, fontSize: 24 }}>
+                I’d like to help
+              </span>
+            </div>
+            <div
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                backgroundColor: "red",
+                marginTop: 26,
+                fontSize: 15,
+                fontWeight: 400,
+                height: 207,
+              }}
+            >
+              Do you have a close one who underwent trauma? Do you need
+              direction on how to help, what to say, what to do, and how to
+              protect yourself?
+              <br /> <br /> Or do you want to help those who are dealing with
+              trauma, and are looking for opportunities to do so?
+            </div>
+            <div
+              style={{
+                backgroundColor: "green",
+                display: "flex",
+                flex: 1,
+                alignItems: "flex-end",
+              }}
+            >
+              <Link
+                style={{
+                  height: 40,
+                  width: 264,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 20,
+                  marginTop: 24,
+                  backgroundColor: "blue",
+                }}
+                to={"/"}
+              >
+                Give me advice
+              </Link>
+            </div>
+          </div>
+          <div
+            style={{
+              maxWidth: 304,
+              backgroundColor: "yellow",
+              display: "flex",
+              flex: 1,
+              border: "1px solid black",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              position: "relative",
+              minHeight: 317,
+            }}
+          >
+            <div
+              style={{
+                backgroundColor: "brown",
+                position: "absolute",
+                top: -16,
+                height: 64,
+                width: "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                maxWidth: "50%",
+              }}
+            >
+              <span
+                style={{
+                  fontWeight: 700,
+                  fontSize: 24,
+                  textAlign: "center",
+                }}
+              >
+                I want to talk to someone
+              </span>
+            </div>
+            <div
+              style={{
+                paddingRight: 20,
+                paddingLeft: 20,
+                backgroundColor: "red",
+                marginTop: 58,
+                fontSize: 15,
+                fontWeight: 400,
+                height: 207,
+              }}
+            >
+              Everyone reacts differently to trauma, and not everyone recovers
+              from a traumatic experience in the same way or time. There is no
+              one solution to heal from it.
+              <br /> <br />
+              Here you can find personalized recommendations, tips and tools to
+              help you cope with trauma.
+            </div>
+            <div
+              style={{
+                backgroundColor: "green",
+                display: "flex",
+                flex: 1,
+                alignItems: "flex-end",
+              }}
+            >
+              <Link
+                style={{
+                  height: 40,
+                  width: 264,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 20,
+                  marginTop: 24,
+                  backgroundColor: "blue",
+                }}
+                to={"/"}
+              >
+                Give me advice
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -116,8 +289,7 @@ const CardWrapper = styled.div`
     pading: 0;
     margin: 0;
   }
-`
-
+`;
 
 const StyledCard = styled(Card)`
   flex: 0 1 24%;
