@@ -26,6 +26,7 @@ const HelpSection = () => {
             justifyContent: "center",
             alignItems: "center",
             gap: 24,
+            flexWrap: "wrap",
           }}
         >
           <div
@@ -55,7 +56,13 @@ const HelpSection = () => {
                 alignItems: "center",
               }}
             >
-              <span style={{ fontWeight: 700, fontSize: 24 }}>
+              <span
+                style={{
+                  fontWeight: 700,
+                  fontSize: 24,
+                  fontFamily: "Playfair Display",
+                }}
+              >
                 I’m looking for help
               </span>
             </div>
@@ -129,7 +136,13 @@ const HelpSection = () => {
                 alignItems: "center",
               }}
             >
-              <span style={{ fontWeight: 700, fontSize: 24 }}>
+              <span
+                style={{
+                  fontWeight: 700,
+                  fontSize: 24,
+                  fontFamily: "Playfair Display",
+                }}
+              >
                 I’d like to help
               </span>
             </div>
@@ -171,7 +184,7 @@ const HelpSection = () => {
                 }}
                 to={"/"}
               >
-                Give me advice
+                Contact me
               </Link>
             </div>
           </div>
@@ -207,6 +220,7 @@ const HelpSection = () => {
                   fontWeight: 700,
                   fontSize: 24,
                   textAlign: "center",
+                  fontFamily: "Playfair Display",
                 }}
               >
                 I want to talk to someone
@@ -223,12 +237,12 @@ const HelpSection = () => {
                 height: 207,
               }}
             >
-              Everyone reacts differently to trauma, and not everyone recovers
-              from a traumatic experience in the same way or time. There is no
-              one solution to heal from it.
+              Sometimes, self-help is not enough, and you might prefer a
+              professional hand to help you cope with trauma.
               <br /> <br />
-              Here you can find personalized recommendations, tips and tools to
-              help you cope with trauma.
+              We created a directory of mental health experts to help you find
+              and connect to the therapist, counselling service, or organisation
+              that resonates best with you.
             </div>
             <div
               style={{
@@ -251,7 +265,7 @@ const HelpSection = () => {
                 }}
                 to={"/"}
               >
-                Give me advice
+                View Directory
               </Link>
             </div>
           </div>
