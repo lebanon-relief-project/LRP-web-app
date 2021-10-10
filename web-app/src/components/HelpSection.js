@@ -1,349 +1,185 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
 import devices from "../styles/Devices";
 import { Link } from "react-router-dom";
+import colours from "../styles/Colours";
 
 const HelpSection = () => {
-  const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
+  const [height, setHeight] = useState(0);
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  console.log(height);
+
+  useEffect(() => {
+    let maxHeight = Math.max([
+      ref1.current.clientHeight,
+      ref2.current.clientHeight,
+      ref3.current.clientHeight,
+    ]);
+    if (!isNaN(maxHeight)) setHeight(maxHeight);
+    else setHeight(ref3.current.clientHeight);
+  }, []);
+
   return (
     <>
       <div
         style={{
-          backgroundColor: "blue",
+          backgroundColor: "inherit",
           display: "flex",
           justifyContent: "center",
         }}
       >
         <div
           style={{
-            display: "flex",
-            backgroundColor: "red",
-            flex: 1,
             maxWidth: 960,
-            justifyContent: "center",
-            alignItems: "center",
+            display: "flex",
+            backgroundColor: "inherit",
             gap: 24,
             flexWrap: "wrap",
+            justifyContent: "center",
+            paddingTop: 16,
           }}
         >
-          <div
+          <CardWrapper
+            ref={ref1}
             style={{
-              maxWidth: 304,
-              backgroundColor: "yellow",
-              display: "flex",
-              flex: 1,
-              border: "1px solid black",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              position: "relative",
-              minHeight: 317,
-              height: "100%",
+              height: height > 0 ? height : "auto",
             }}
           >
-            <div
-              style={{
-                backgroundColor: "brown",
-                position: "absolute",
-                top: -16,
-                height: 32,
-                width: "auto",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <span
-                style={{
-                  fontWeight: 700,
-                  fontSize: 24,
-                  fontFamily: "Playfair Display",
-                }}
-              >
-                I’m looking for help
-              </span>
+            <TitleWrapper>I’m looking for help</TitleWrapper>
+            <div style={{ marginTop: 10 }}>
+              <div>
+                Everyone reacts differently to trauma, and not everyone recovers
+                from a traumatic experience in the same way or time. There is no
+                one solution to heal from it.
+              </div>
+              <div style={{ marginTop: 16 }}>
+                Here you can find personalized recommendations, tips and tools
+                to help you cope with trauma.
+              </div>
             </div>
-            <div
-              style={{
-                paddingRight: 20,
-                paddingLeft: 20,
-                backgroundColor: "red",
-                marginTop: 26,
-                fontSize: 15,
-                fontWeight: 400,
-                height: 207,
-              }}
-            >
-              Everyone reacts differently to trauma, and not everyone recovers
-              from a traumatic experience in the same way or time. There is no
-              one solution to heal from it.
-              <br /> <br />
-              Here you can find personalized recommendations, tips and tools to
-              help you cope with trauma.
-            </div>
-            <div
-              style={{
-                backgroundColor: "green",
-                display: "flex",
-                flex: 1,
-                alignItems: "flex-end",
-              }}
-            >
-              <Link
-                style={{
-                  height: 40,
-                  width: 264,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 20,
-                  marginTop: 24,
-                  backgroundColor: "blue",
-                }}
-                to={"/"}
-              >
-                Give me advice
-              </Link>
-            </div>
-          </div>
-          <div
+
+            <LinkWrapper>
+              <StyledLink to={"/"}>Give me advice</StyledLink>
+            </LinkWrapper>
+          </CardWrapper>
+
+          <CardWrapper
+            ref={ref2}
             style={{
-              maxWidth: 304,
-              backgroundColor: "yellow",
-              display: "flex",
-              flex: 1,
-              border: "1px solid black",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              position: "relative",
-              minHeight: 317,
-              height: "100%",
+              height: height > 0 ? height : "auto",
             }}
           >
-            <div
-              style={{
-                backgroundColor: "brown",
-                position: "absolute",
-                top: -16,
-                height: 32,
-                width: "auto",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <span
-                style={{
-                  fontWeight: 700,
-                  fontSize: 24,
-                  fontFamily: "Playfair Display",
-                }}
-              >
-                I’d like to help
-              </span>
+            <TitleWrapper>I’d like to help</TitleWrapper>
+            <div style={{ marginTop: 10 }}>
+              <div>
+                Do you have a close one who underwent trauma? Do you need
+                direction on how to help, what to say, what to do, and how to
+                protect yourself?
+              </div>
+              <div style={{ marginTop: 16 }}>
+                Or do you want to help those who are dealing with trauma, and
+                are looking for opportunities to do so?
+              </div>
             </div>
-            <div
-              style={{
-                paddingRight: 20,
-                paddingLeft: 20,
-                backgroundColor: "red",
-                marginTop: 26,
-                fontSize: 15,
-                fontWeight: 400,
-                height: 207,
-              }}
-            >
-              Do you have a close one who underwent trauma? Do you need
-              direction on how to help, what to say, what to do, and how to
-              protect yourself?
-              <br /> <br /> Or do you want to help those who are dealing with
-              trauma, and are looking for opportunities to do so?
-            </div>
-            <div
-              style={{
-                backgroundColor: "green",
-                display: "flex",
-                flex: 1,
-                alignItems: "flex-end",
-              }}
-            >
-              <Link
-                style={{
-                  height: 40,
-                  width: 264,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 20,
-                  marginTop: 24,
-                  backgroundColor: "blue",
-                }}
-                to={"/"}
-              >
-                Contact me
-              </Link>
-            </div>
-          </div>
-          <div
+
+            <LinkWrapper>
+              <StyledLink to={"/"}>Contact me</StyledLink>
+            </LinkWrapper>
+          </CardWrapper>
+
+          <CardWrapper
+            ref={ref3}
             style={{
-              maxWidth: 304,
-              backgroundColor: "yellow",
-              display: "flex",
-              flex: 1,
-              border: "1px solid black",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              position: "relative",
-              minHeight: 317,
+              height: height > 0 ? height : "auto",
             }}
           >
-            <div
+            <TitleWrapper
               style={{
-                backgroundColor: "brown",
-                position: "absolute",
-                top: -16,
-                height: 64,
-                width: "auto",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                maxWidth: "50%",
+                width: "60%",
               }}
             >
-              <span
-                style={{
-                  fontWeight: 700,
-                  fontSize: 24,
-                  textAlign: "center",
-                  fontFamily: "Playfair Display",
-                }}
-              >
-                I want to talk to someone
-              </span>
+              I want to talk to someone
+            </TitleWrapper>
+            <div style={{ marginTop: 38 }}>
+              <div>
+                Sometimes, self-help is not enough, and you might prefer a
+                professional hand to help you cope with trauma.
+              </div>
+              <div style={{ marginTop: 16 }}>
+                We created a directory of mental health experts to help you find
+                and connect to the therapist, counselling service, or
+                organisation that resonates best with you.
+              </div>
             </div>
-            <div
-              style={{
-                paddingRight: 20,
-                paddingLeft: 20,
-                backgroundColor: "red",
-                marginTop: 58,
-                fontSize: 15,
-                fontWeight: 400,
-                height: 207,
-              }}
-            >
-              Sometimes, self-help is not enough, and you might prefer a
-              professional hand to help you cope with trauma.
-              <br /> <br />
-              We created a directory of mental health experts to help you find
-              and connect to the therapist, counselling service, or organisation
-              that resonates best with you.
-            </div>
-            <div
-              style={{
-                backgroundColor: "green",
-                display: "flex",
-                flex: 1,
-                alignItems: "flex-end",
-              }}
-            >
-              <Link
-                style={{
-                  height: 40,
-                  width: 264,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 20,
-                  marginTop: 24,
-                  backgroundColor: "blue",
-                }}
-                to={"/"}
-              >
-                View Directory
-              </Link>
-            </div>
-          </div>
+
+            <LinkWrapper>
+              <StyledLink to={"/"}>View directory</StyledLink>
+            </LinkWrapper>
+          </CardWrapper>
         </div>
       </div>
     </>
   );
 };
 
-const StyledBody = styled.div`
-  min-height: 17rem;
-  @media (max-width: ${devices.ipadpro}) {
-    min-height: 13rem;
-  }
-`;
-
-const Paragraph = styled.p`
-  font-family: Raleway;
-  font-style: normal;
-
-  font-size: 16px;
-  line-height: 150%;
-  color: #262626;
+const TitleWrapper = styled.div`
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -16px;
+  width: auto;
+  align-self: center;
+  font-size: 24px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 `;
 
 const CardWrapper = styled.div`
+  background-color: inherit;
+  width: 304px;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 960px;
-  @media (max-width: ${devices.mobile}) {
-    flex-direction: column;
-    position: static;
-    pading: 0;
-    margin: 0;
-  }
+  flex-direction: column;
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  border: 1px solid #003a8c;
+  position: relative;
 `;
 
-const StyledCard = styled(Card)`
-  flex: 0 1 24%;
-  legend {
-    width: auto;
-    margin: 0 auto;
-  }
-  @media (max-width: ${devices.ipadpro}) {
-    flex-direction: column;
-    position: static;
-    pading: 0;
-    margin: 0;
-    align-items: center;
-  }
+const LinkWrapper = styled.div`
+  display: flex;
 
-  z-index: 1;
+  flex: 1;
+  align-items: flex-end;
 `;
 
-// The width, margin-left and transform fields are to allow the background colour to escape the
-// page max-width of 1440px
-const StyledSection = styled.div`
-  display: flex;
+const StyledLink = styled(Link)`
+  background-color: ${colours.yellow};
+  color: black;
+  font-style: normal;
+  font-weight: bold;
   justify-content: center;
-  background: inherit;
-  margin: 0;
-  padding: 0 3rem;
-  width: calc(100vw - 20px);
-  margin-left: 50%;
-  transform: translateX(-50%);
-
-  @media (max-width: ${devices.mobile}) {
-    margin-right: 0rem;
-    max-width: 100%;
-    order: 1;
-    margin-top: 0;
-  }
-`;
-
-const PageContainer = styled.div`
-  max-width: 1440px;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  justify-self: flex-end;
 `;
 
 export default HelpSection;
