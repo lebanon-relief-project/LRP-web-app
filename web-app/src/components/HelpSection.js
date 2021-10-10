@@ -13,7 +13,15 @@ const HelpSection = () => {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
 
-  console.log(height);
+  let data = [
+    {
+      title: "I’m looking for help",
+      content: [
+        "Everyone reacts differently to trauma, and not everyone recovers from a traumatic experience in the same way or time. There is no one solution to heal from it.",
+        "Here you can find personalized recommendations, tips and tools to help you cope with trauma.",
+      ],
+    },
+  ];
 
   useEffect(() => {
     let maxHeight = Math.max([
@@ -27,13 +35,7 @@ const HelpSection = () => {
 
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "inherit",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <StyledSection>
         <div
           style={{
             maxWidth: 960,
@@ -123,10 +125,20 @@ const HelpSection = () => {
             </LinkWrapper>
           </CardWrapper>
         </div>
-      </div>
+      </StyledSection>
     </>
   );
 };
+
+const StyledSection = styled.div`
+  display: flex;
+  justify-content: center;
+  background: inherit;
+  margin: 0;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+`;
 
 const TitleWrapper = styled.div`
   background-color: inherit;
