@@ -20,10 +20,45 @@ const HelpSection = () => {
         "Everyone reacts differently to trauma, and not everyone recovers from a traumatic experience in the same way or time. There is no one solution to heal from it.",
         "Here you can find personalized recommendations, tips and tools to help you cope with trauma.",
       ],
+      actionButton: {
+        title: "Give me advice",
+        path: "/",
+      },
+    },
+
+    {
+      title: "I’d like to help",
+      content: [
+        "Do you have a close one who underwent trauma? Do you need direction on how to help, what to say, what to do, and how to protect yourself?",
+        "Or do you want to help those who are dealing with trauma, and are looking for opportunities to do so?",
+      ],
+      actionButton: {
+        title: "Contact me",
+        path: "/",
+      },
+    },
+
+    {
+      title: "I want to talk to someone",
+      content: [
+        "Sometimes, self-help is not enough, and you might prefer a professional hand to help you cope with trauma.",
+        "We created a directory of mental health experts to help you find and connect to the therapist, counselling service, or organisation that resonates best with you.",
+      ],
+      titleStyle: {
+        width: "60%",
+      },
+      contentStyle: {
+        marginTop: 38,
+      },
+      actionButton: {
+        title: "Contact me",
+        path: "/",
+      },
     },
   ];
 
   useEffect(() => {
+    if (!ref1.current || !ref2.current || !ref3.current) return;
     let maxHeight = Math.max([
       ref1.current.clientHeight,
       ref2.current.clientHeight,
@@ -47,83 +82,43 @@ const HelpSection = () => {
             paddingTop: 16,
           }}
         >
-          <CardWrapper
-            ref={ref1}
-            style={{
-              height: height > 0 ? height : "auto",
-            }}
-          >
-            <TitleWrapper>I’m looking for help</TitleWrapper>
-            <div style={{ marginTop: 10 }}>
-              <div>
-                Everyone reacts differently to trauma, and not everyone recovers
-                from a traumatic experience in the same way or time. There is no
-                one solution to heal from it.
-              </div>
-              <div style={{ marginTop: 16 }}>
-                Here you can find personalized recommendations, tips and tools
-                to help you cope with trauma.
-              </div>
-            </div>
+          {data.map((data, index) => {
+            return (
+              <CardWrapper
+                key={index}
+                ref={ref1}
+                style={{
+                  height: height > 0 ? height : "auto",
+                }}
+              >
+                <TitleWrapper style={data.titleStyle && data.titleStyle}>
+                  {data.title}
+                </TitleWrapper>
+                <div
+                  style={
+                    data.contentStyle ? data.contentStyle : { marginTop: 10 }
+                  }
+                >
+                  {data.content.map((content, contentIndex) => {
+                    return (
+                      <div
+                        style={{ marginTop: contentIndex > 0 ? 16 : 0 }}
+                        key={content}
+                      >
+                        {content}
+                      </div>
+                    );
+                  })}
+                </div>
 
-            <LinkWrapper>
-              <StyledLink to={"/"}>Give me advice</StyledLink>
-            </LinkWrapper>
-          </CardWrapper>
-
-          <CardWrapper
-            ref={ref2}
-            style={{
-              height: height > 0 ? height : "auto",
-            }}
-          >
-            <TitleWrapper>I’d like to help</TitleWrapper>
-            <div style={{ marginTop: 10 }}>
-              <div>
-                Do you have a close one who underwent trauma? Do you need
-                direction on how to help, what to say, what to do, and how to
-                protect yourself?
-              </div>
-              <div style={{ marginTop: 16 }}>
-                Or do you want to help those who are dealing with trauma, and
-                are looking for opportunities to do so?
-              </div>
-            </div>
-
-            <LinkWrapper>
-              <StyledLink to={"/"}>Contact me</StyledLink>
-            </LinkWrapper>
-          </CardWrapper>
-
-          <CardWrapper
-            ref={ref3}
-            style={{
-              height: height > 0 ? height : "auto",
-            }}
-          >
-            <TitleWrapper
-              style={{
-                width: "60%",
-              }}
-            >
-              I want to talk to someone
-            </TitleWrapper>
-            <div style={{ marginTop: 38 }}>
-              <div>
-                Sometimes, self-help is not enough, and you might prefer a
-                professional hand to help you cope with trauma.
-              </div>
-              <div style={{ marginTop: 16 }}>
-                We created a directory of mental health experts to help you find
-                and connect to the therapist, counselling service, or
-                organisation that resonates best with you.
-              </div>
-            </div>
-
-            <LinkWrapper>
-              <StyledLink to={"/"}>View directory</StyledLink>
-            </LinkWrapper>
-          </CardWrapper>
+                <LinkWrapper>
+                  <StyledLink to={data.actionButton.path}>
+                    {data.actionButton.title}
+                  </StyledLink>
+                </LinkWrapper>
+              </CardWrapper>
+            );
+          })}
         </div>
       </StyledSection>
     </>
