@@ -14,11 +14,12 @@ const CardGroup = ({ data }) => {
     let ref2 = refs[1];
     let ref3 = refs[2];
     if (!ref1.current || !ref2.current || !ref3.current) return;
-    let maxHeight = Math.max([
+    let maxHeight = Math.max(
       ref1.current.clientHeight,
       ref2.current.clientHeight,
-      ref3.current.clientHeight,
-    ]);
+      ref3.current.clientHeight
+    );
+
     if (!isNaN(maxHeight)) setHeight(maxHeight);
     else setHeight(ref3.current.clientHeight);
   }, []);
