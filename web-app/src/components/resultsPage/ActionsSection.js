@@ -35,7 +35,7 @@ export const ActionSection = () => {
               ],
               actionButton: {
                 title: "View exercises",
-                path: "#",
+                externalPath: PDF,
               },
             },
 
@@ -48,6 +48,7 @@ export const ActionSection = () => {
               actionButton: {
                 title: "Coming soon",
                 path: Routes.HELP,
+                disabled: true,
               },
             },
           ]}

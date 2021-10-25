@@ -32,7 +32,7 @@ const HelpSection = () => {
               ],
               actionButton: {
                 title: "Contact me",
-                path: "/",
+                path: "#",
                 action: () => {
                   setLikeToHelpModalVisible(true);
                 },
@@ -52,8 +52,9 @@ const HelpSection = () => {
                 marginTop: 38,
               },
               actionButton: {
-                title: "View directory",
+                title: "Coming soon",
                 path: "/",
+                disabled: true,
               },
             },
           ]}

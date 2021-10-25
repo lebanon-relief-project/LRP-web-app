@@ -43,7 +43,7 @@ const CardGroup = ({ data }) => {
               key={index}
               ref={refs[index]}
               style={{
-                height: height > 0 ? height : "auto",
+                minHeight: height > 0 ? height : "auto",
               }}
             >
               <TitleWrapper style={data.titleStyle && data.titleStyle}>
@@ -67,16 +67,27 @@ const CardGroup = ({ data }) => {
               </div>
 
               <LinkWrapper>
-                <StyledLink
-                  onClick={
-                    data.actionButton.action
-                      ? data.actionButton.action
-                      : () => {}
-                  }
-                  to={data.actionButton.path}
-                >
-                  {data.actionButton.title}
-                </StyledLink>
+                {data.actionButton.externalPath ? (
+                  <StyledAnchor
+                    href={data.actionButton.externalPath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {data.actionButton.title}
+                  </StyledAnchor>
+                ) : (
+                  <StyledLink
+                    disabled={data.actionButton.disabled}
+                    onClick={
+                      data.actionButton.action
+                        ? data.actionButton.action
+                        : () => {}
+                    }
+                    to={data.actionButton.path}
+                  >
+                    {data.actionButton.title}
+                  </StyledLink>
+                )}
               </LinkWrapper>
             </CardWrapper>
           );
@@ -132,7 +143,23 @@ const LinkWrapper = styled.div`
 `;
 
 const StyledLink = styled(Link)`
-  background-color: ${colours.yellow};
+  background-color: ${(props) =>
+    props.disabled ? `${colours.grey}` : `${colours.yellow}`};
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  justify-self: flex-end;
+`;
+
+const StyledAnchor = styled.a`
+  background-color: ${(props) =>
+    props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
   font-style: normal;
   font-weight: bold;
