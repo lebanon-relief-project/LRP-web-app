@@ -17,6 +17,10 @@ jest.mock("../components/resultsPage/ResultsSection", () => {
   return () => <div data-testid="results_section">Results Section</div>;
 });
 
+jest.mock("../components/resultsPage/ActionsSection", () => {
+  return () => <div data-testid="actions_section">Actions Section</div>;
+});
+
 const getResultsSpy = jest.spyOn(resultsService, "getResults");
 const getCardIdsFromSessionStorageSpy = jest.spyOn(
   util,

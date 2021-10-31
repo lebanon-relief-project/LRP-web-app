@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import colours from "../../styles/Colours";
@@ -9,7 +9,18 @@ const CardGroup = ({ data }) => {
 
   const refs = [useRef(null), useRef(null), useRef(null)];
 
-  useEffect(() => {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
+  const normalizeHeights = () => {
     let ref1 = refs[0];
     let ref2 = refs[1];
     let ref3 = refs[2];
@@ -20,23 +31,19 @@ const CardGroup = ({ data }) => {
       ref3.current.clientHeight
     );
 
-    if (!isNaN(maxHeight)) setHeight(maxHeight);
-    else setHeight(ref3.current.clientHeight);
-  }, []);
+    if (maxHeight > height) {
+      if (!isNaN(maxHeight)) setHeight(maxHeight);
+      else setHeight(ref3.current.clientHeight);
+    }
+  };
+
+  useEffect(() => {
+    normalizeHeights();
+  }, [windowWidth]);
 
   return (
     <>
-      <div
-        style={{
-          maxWidth: 960,
-          display: "flex",
-          backgroundColor: "inherit",
-          gap: 24,
-          flexWrap: "wrap",
-          justifyContent: "center",
-          paddingTop: 16,
-        }}
-      >
+      <Container>
         {data.map((data, index) => {
           return (
             <CardWrapper
@@ -92,10 +99,20 @@ const CardGroup = ({ data }) => {
             </CardWrapper>
           );
         })}
-      </div>
+      </Container>
     </>
   );
 };
+
+const Container = styled.div`
+  max-width: 960px;
+  display: flex;
+  background-color: inherit;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 16px;
+`;
 
 const TitleWrapper = styled.div`
   background-color: inherit;

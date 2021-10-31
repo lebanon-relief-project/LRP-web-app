@@ -4,6 +4,7 @@ import HelpSection from "./HelpSection";
 import "jest-styled-components";
 import { fireEvent } from "@testing-library/dom";
 import { act } from "react-dom/test-utils";
+import { BrowserRouter } from "react-router-dom";
 
 jest.mock("./Card", (props) => {
   return (props) => (
@@ -17,6 +18,10 @@ jest.mock("./LikeToHelpModal", () => {
   return () => <div data-testid="modal">Our Modal</div>;
 });
 
+jest.mock("./core/CardGroup", () => {
+  return () => <div>CardGroup</div>;
+});
+
 beforeEach(() => {
   jest.clearAllMocks();
 });
@@ -28,25 +33,12 @@ describe("the HelpSection component", () => {
 
     expect(container).toMatchSnapshot();
   });
-  it("should open Modal when Contact me button is clicked", () => {
-    let getByTestId, queryByTestId, getByAltText;
-    ({
-      container,
-      getByTestId,
-      queryByTestId,
-      getByAltText,
-    } = renderHelpSection());
-
-    expect(queryByTestId("modal")).toBeFalsy();
-
-    act(() => {
-      fireEvent.click(getByTestId("I’d like to help"));
-    });
-
-    expect(queryByTestId("modal")).toBeTruthy();
-  });
 });
 
 const renderHelpSection = () => {
-  return render(<HelpSection />);
+  return render(
+    <BrowserRouter>
+      <HelpSection />
+    </BrowserRouter>
+  );
 };

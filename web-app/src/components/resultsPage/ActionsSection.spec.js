@@ -13,6 +13,10 @@ jest.mock("../Card", (props) => {
   );
 });
 
+jest.mock("../core/CardGroup", () => {
+  return () => <div>CardGroup</div>;
+});
+
 jest.mock("./ReachOutModal", () => {
   return () => <div data-testid="modal">Reach Out Modal</div>;
 });
@@ -24,18 +28,5 @@ describe("the ActionsSection component", () => {
     ({ container } = render(<ActionsSection />));
 
     expect(container).toMatchSnapshot();
-  });
-
-  it("should open Modal when Reach Out button is clicked", () => {
-    let getByTestId, queryByTestId;
-    ({ container, getByTestId, queryByTestId } = render(<ActionsSection />));
-
-    expect(queryByTestId("modal")).toBeFalsy();
-
-    act(() => {
-      fireEvent.click(getByTestId("Support"));
-    });
-
-    expect(queryByTestId("modal")).toBeTruthy();
   });
 });
