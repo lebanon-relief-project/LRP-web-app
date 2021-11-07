@@ -220,6 +220,8 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 
 .c9 {
   background: #fafafa;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .c10 {
@@ -335,6 +337,12 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 @media (max-width:1025px) {
   .c1 {
     padding: 0 18px;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    padding-bottom: 40px;
   }
 }
 

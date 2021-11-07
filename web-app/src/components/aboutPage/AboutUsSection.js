@@ -77,6 +77,9 @@ const PageContainer = styled.div`
   @media (max-width: ${devices.ipadpro}) {
     padding: 0 18px;
   }
+  @media (max-width: ${devices.ipad}) {
+    padding-bottom: 40px;
+  }
 `;
 
 const StyledTextArea = styled.div`

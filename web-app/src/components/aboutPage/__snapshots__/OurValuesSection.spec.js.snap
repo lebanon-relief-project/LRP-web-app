@@ -25,6 +25,8 @@ exports[`the OurValuesSection component should match the snapshot 1`] = `
 
 .c0 {
   background: #fafafa;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .c1 {

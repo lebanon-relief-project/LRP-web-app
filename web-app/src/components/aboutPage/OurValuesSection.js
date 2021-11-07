@@ -89,6 +89,8 @@ const OurValuesSection = (props) => {
 
 const StyledSection = styled.section`
   background: ${colours.lightGrey};
+  padding-top: 40px;
+  padding-bottom: 40px;
 `;
 
 const StyledDiv = styled.div`
