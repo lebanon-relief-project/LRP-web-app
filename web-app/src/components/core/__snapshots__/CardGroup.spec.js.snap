@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the CardGroup component should match the snapshot 1`] = `
+.c0 {
+  max-width: 960px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: inherit;
+  gap: 24px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.c2 {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -16px;
+  width: auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 24px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c1 {
+  background-color: inherit;
+  width: 304px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Raleway";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  border: 1px solid #003a8c;
+  position: relative;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c4 {
+  background-color: #FFD666;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  justify-self: flex-end;
+}
+
+.c5 {
+  background-color: #f0f0f0;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  margin-top: 24px;
+  justify-self: flex-end;
+}
+
+@media (max-width:576px) {
+  .c1 {
+    width: 100%;
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      style="min-height: auto;"
+    >
+      <div
+        class="c2"
+      >
+        I’m looking for help
+      </div>
+      <div
+        style="margin-top: 10px;"
+      >
+        <div
+          style="margin-top: 0px;"
+        >
+          Everyone reacts differently to trauma, and not everyone recovers from a traumatic experience in the same way or time. There is no one solution to heal from it.
+        </div>
+        <div
+          style="margin-top: 16px;"
+        >
+          Here you can find personalized recommendations, tips and tools to help you cope with trauma.
+        </div>
+      </div>
+      <div
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="/help"
+        >
+          Give me advice
+        </a>
+      </div>
+    </div>
+    <div
+      class="c1"
+      style="min-height: auto;"
+    >
+      <div
+        class="c2"
+      >
+        I’d like to help
+      </div>
+      <div
+        style="margin-top: 10px;"
+      >
+        <div
+          style="margin-top: 0px;"
+        >
+          Do you have a close one who underwent trauma? Do you need direction on how to help, what to say, what to do, and how to protect yourself?
+        </div>
+        <div
+          style="margin-top: 16px;"
+        >
+          Or do you want to help those who are dealing with trauma, and are looking for opportunities to do so?
+        </div>
+      </div>
+      <div
+        class="c3"
+      >
+        <a
+          class="c4"
+          href="/"
+        >
+          Contact me
+        </a>
+      </div>
+    </div>
+    <div
+      class="c1"
+      style="min-height: auto;"
+    >
+      <div
+        class="c2"
+        style="width: 60%;"
+      >
+        I want to talk to someone
+      </div>
+      <div
+        style="margin-top: 38px;"
+      >
+        <div
+          style="margin-top: 0px;"
+        >
+          Sometimes, self-help is not enough, and you might prefer a professional hand to help you cope with trauma.
+        </div>
+        <div
+          style="margin-top: 16px;"
+        >
+          We created a directory of mental health experts to help you find and connect to the therapist, counselling service, or organisation that resonates best with you.
+        </div>
+      </div>
+      <div
+        class="c3"
+      >
+        <a
+          class="c5"
+          disabled=""
+          href="/"
+        >
+          Coming soon
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
