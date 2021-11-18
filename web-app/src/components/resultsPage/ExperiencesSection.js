@@ -147,6 +147,7 @@ const CentralWrapper = styled.div`
 
   @media (max-width: ${devices.mobile}) {
     min-height: 366px;
+    margin-top: 20px;
   }
 `;
 
@@ -219,7 +220,7 @@ const StyledSection = styled.div`
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 366px;
+    height: 386px;
   }
 `;
 

@@ -204,6 +204,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c4 {
     min-height: 366px;
+    margin-top: 20px;
   }
 }
 
@@ -245,7 +246,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c0 {
-    height: 366px;
+    height: 386px;
   }
 }
 
