@@ -57,7 +57,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 .c1 {
   max-width: 1440px;
   margin-top: 80px;
-  padding: 0 240px;
+  padding: 20px 240px;
 }
 
 .c4 {
@@ -91,7 +91,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 .c10 {
   background: #fafafa;
   max-width: 1440px;
-  padding: 0 240px;
+  padding: 20px 240px;
   margin: auto;
 }
 
@@ -134,7 +134,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c1 {
-    padding: 0 18px;
+    padding: 20px 18px;
   }
 }
 
@@ -170,7 +170,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c10 {
-    padding: 0 18px;
+    padding: 20px 18px;
   }
 }
 

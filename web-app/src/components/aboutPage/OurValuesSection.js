@@ -94,10 +94,10 @@ const StyledSection = styled.section`
 const StyledDiv = styled.div`
   background: ${colours.lightGrey};
   max-width: 1440px;
-  padding: 0 240px;
+  padding: 20px 240px;
   margin: auto;
   @media (max-width: ${devices.ipad}) {
-    padding: 0 18px;
+    padding: 20px 18px;
   }
 `;
 

@@ -30,7 +30,7 @@ exports[`the OurValuesSection component should match the snapshot 1`] = `
 .c1 {
   background: #fafafa;
   max-width: 1440px;
-  padding: 0 240px;
+  padding: 20px 240px;
   margin: auto;
 }
 
@@ -82,7 +82,7 @@ exports[`the OurValuesSection component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c1 {
-    padding: 0 18px;
+    padding: 20px 18px;
   }
 }
 
