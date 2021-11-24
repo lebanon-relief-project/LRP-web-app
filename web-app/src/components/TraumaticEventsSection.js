@@ -17,32 +17,34 @@ const TraumaticEvents = () => {
           <img src={HelpPageRightBackground} alt={"background"} />
         </HeaderRightImageWrapper>
       </HeaderWrapper>
-
+      
       <CentralWrapper>
-        <CentralContentWrapper>
-          <StyledHeader>Traumatic Events</StyledHeader>
-          <TextWrapper>
-            <StyledParagraph>
-              Trauma usually occurs after a deeply distressing or disturbing
-              event, which may manifest as changes in feelings, thoughts, or
-              behaviors. Trauma may also be less obvious, manifesting as a
-              normal reaction to an abnormal event.
-            </StyledParagraph>
-            <StyledParagraph>
-              It is important to keep in mind that trauma is unique to each
-              individual. Any small or big distressing event can trigger it, and
-              everyone experiences trauma differently. It can be collective and
-              widespread, such as pandemics or economic crises, but it also can
-              be individual and specific, such as abuse or the death of a loved
-              one.
-            </StyledParagraph>
-            <StyledParagraph>
-              One may also suffer from trauma without having experienced an
-              event first hand, but rather by caring for someone who has or by
-              simply watching the news.
-            </StyledParagraph>
-          </TextWrapper>
-        </CentralContentWrapper>
+        <WidthConstraint>
+          <CentralContentWrapper>
+            <StyledHeader>Traumatic Events</StyledHeader>
+            <TextWrapper>
+              <StyledParagraph>
+                Trauma usually occurs after a deeply distressing or disturbing
+                event, which may manifest as changes in feelings, thoughts, or
+                behaviors. Trauma may also be less obvious, manifesting as a
+                normal reaction to an abnormal event.
+              </StyledParagraph>
+              <StyledParagraph>
+                It is important to keep in mind that trauma is unique to each
+                individual. Any small or big distressing event can trigger it, and
+                everyone experiences trauma differently. It can be collective and
+                widespread, such as pandemics or economic crises, but it also can
+                be individual and specific, such as abuse or the death of a loved
+                one.
+              </StyledParagraph>
+              <StyledParagraph>
+                One may also suffer from trauma without having experienced an
+                event first hand, but rather by caring for someone who has or by
+                simply watching the news.
+              </StyledParagraph>
+            </TextWrapper>
+          </CentralContentWrapper>
+        </WidthConstraint>
       </CentralWrapper>
     </StyledSection>
   );
@@ -57,6 +59,11 @@ const TextWrapper = styled.div`
   }
 `;
 
+const WidthConstraint = styled.div`
+  width: inherit;
+  max-width: 960px;
+`
+
 const CentralWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,7 +72,8 @@ const CentralWrapper = styled.div`
   background-color: transparent;
   justify-content: center;
   position: absolute;
-  align-items: flex-start;
+  align-items: center;
+  height: 363px;
   height: 410px;
   width: 100%;
 
@@ -78,7 +86,7 @@ const CentralContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 20%;
+
   max-width: 632px;
 
   @media (max-width: ${devices.ipadpro}) {
@@ -141,8 +149,8 @@ const StyledSection = styled.div`
   margin: 0;
   margin-top: 64px;
   padding: 0;
-  width: 100%;
-  height: 410px;
+  width: 100vw;
+  height: 363px;
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {

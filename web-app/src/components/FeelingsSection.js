@@ -36,11 +36,12 @@ const TextWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
+  width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
+  max-width: 960px;
 
   @media (max-width: ${devices.ipadpro}) {
     width: auto;

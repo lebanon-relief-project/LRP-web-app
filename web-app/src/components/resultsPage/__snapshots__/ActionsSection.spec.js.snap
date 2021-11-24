@@ -2,11 +2,12 @@
 
 exports[`the ActionsSection component should match the snapshot 1`] = `
 .c0 {
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin: 0 20%;
-  background: inherit;
+  margin: auto;
+  background: white;
 }
 
 .c1 {
@@ -17,20 +18,9 @@ exports[`the ActionsSection component should match the snapshot 1`] = `
   line-height: 38px;
 }
 
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
 @media (max-width:1025px) {
   .c0 {
-    margin: 25px 18px;
+    margin: 25px 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     width: auto;
@@ -38,15 +28,9 @@ exports[`the ActionsSection component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:576px) {
-
-}
-
-@media (max-width:576px) {
-  .c2 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
+@media (max-width:1025px) {
+  .c1 {
+    margin: 0px 18px;
   }
 }
 
@@ -59,24 +43,8 @@ exports[`the ActionsSection component should match the snapshot 1`] = `
     >
       Some actions you can take
     </h2>
-    <div
-      class="c2"
-    >
-      <div
-        data-testid="Support"
-      >
-        Support
-      </div>
-      <div
-        data-testid="Useful exercises"
-      >
-        Useful exercises
-      </div>
-      <div
-        data-testid="14 days of wellbeing"
-      >
-        14 days of wellbeing
-      </div>
+    <div>
+      CardGroup
     </div>
   </div>
 </div>

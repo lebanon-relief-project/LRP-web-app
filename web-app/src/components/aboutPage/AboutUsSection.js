@@ -73,9 +73,9 @@ const StyledSection = styled.div`
 const PageContainer = styled.div`
   max-width: 1440px;
   margin-top: 80px;
-  padding: 0 240px;
+  padding: 20px 240px;
   @media (max-width: ${devices.ipadpro}) {
-    padding: 0 18px;
+    padding: 20px 18px;
   }
 `;
 

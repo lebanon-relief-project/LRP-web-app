@@ -1,81 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import Card from "./Card";
+import CardGroup from "./core/CardGroup";
 import LikeToHelpModal from "./LikeToHelpModal";
 import { Routes } from "../App.js";
 import devices from "../styles/Devices";
 
 const HelpSection = () => {
   const [likeToHelpModalVisible, setLikeToHelpModalVisible] = useState(false);
+
   return (
     <>
       <StyledSection>
-        <PageContainer>
-          <CardWrapper>
-            {/* I'm looking for self-help */}
-            <StyledCard
-              title="I'm looking for self-help"
-              path={Routes.HELP}
-              buttonText="Give me advice"
-            >
-              <StyledBody>
-                <Paragraph>
-                  Everyone reacts differently to trauma, and not everyone
-                  recovers from a traumatic experience in the same way. There
-                  are countless ways to resolve trauma and overcome it.
-                </Paragraph>
-                <Paragraph>
-                  Here you can find personalized self-help recommendations,
-                  tips, and tools to help you cope with trauma in your own time
-                  and at your own pace.
-                </Paragraph>
-              </StyledBody>
-            </StyledCard>
+        <CardGroup
+          data={[
+            {
+              title: "I’m looking for help",
+              content: [
+                "Everyone reacts differently to trauma, and not everyone recovers from a traumatic experience in the same way or time. There is no one solution to heal from it.",
+                "Here you can find personalized recommendations, tips and tools to help you cope with trauma.",
+              ],
+              actionButton: {
+                title: "Give me advice",
+                path: Routes.HELP,
+              },
+            },
 
-            {/* I'd like to help */}
-            <StyledCard
-              title="I’d like to help"
-              path={"#"}
-              buttonText="Contact me"
-              onClick={() => {
-                setLikeToHelpModalVisible(true);
-              }}
-            >
-              <StyledBody>
-                <Paragraph>
-                  Do you know someone who experienced or is experiencing trauma?
-                  Do you need direction on how to help, what to say, what to do,
-                  and how to protect yourself?
-                </Paragraph>
-                <Paragraph>
-                  Or are you looking for volunteer opportunities in your
-                  community to help those impacted by a traumatic event?
-                </Paragraph>
-              </StyledBody>
-            </StyledCard>
+            {
+              title: "I’d like to help",
+              content: [
+                "Do you have a close one who underwent trauma? Do you need direction on how to help, what to say, what to do, and how to protect yourself?",
+                "Or do you want to help those who are dealing with trauma, and are looking for opportunities to do so?",
+              ],
+              actionButton: {
+                title: "Contact me",
+                path: "#",
+                action: () => {
+                  setLikeToHelpModalVisible(true);
+                },
+              },
+            },
 
-            {/* I'd like to talk to someone */}
-            <StyledCard
-              title="I'd like to talk to someone"
-              path={"#"}
-              buttonText="Coming soon"
-              onClick={() => {}}
-              disabled
-            >
-              <StyledBody>
-                <Paragraph>
-                  Sometimes, self-help is not enough, and you might prefer a
-                  professional hand to help you cope with trauma.
-                </Paragraph>
-                <Paragraph>
-                  We created a directory of mental health experts to help you
-                  find and connect to the therapist, counselling service, or
-                  organization that resonates best with you.
-                </Paragraph>
-              </StyledBody>
-            </StyledCard>
-          </CardWrapper>
-        </PageContainer>
+            {
+              title: "I want to talk to someone",
+              content: [
+                "Sometimes, self-help is not enough, and you might prefer a professional hand to help you cope with trauma.",
+                "We created a directory of mental health experts to help you find and connect to the therapist, counselling service, or organisation that resonates best with you.",
+              ],
+              titleStyle: {
+                width: "60%",
+              },
+              contentStyle: {
+                marginTop: 38,
+              },
+              actionButton: {
+                title: "Coming soon",
+                path: "/",
+                disabled: true,
+              },
+            },
+          ]}
+        />
       </StyledSection>
       {likeToHelpModalVisible && (
         <LikeToHelpModal
@@ -88,70 +72,19 @@ const HelpSection = () => {
   );
 };
 
-const StyledBody = styled.div`
-  min-height: 17rem;
-  @media (max-width: ${devices.ipadpro}) {
-    min-height: 13rem;
-  }
-`;
-
-const Paragraph = styled.p`
-  font-family: Raleway;
-  font-style: normal;
-
-  font-size: 16px;
-  line-height: 150%;
-  color: #262626;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-
-  @media (max-width: ${devices.mobile}) {
-    flex-direction: column;
-    position: static;
-    pading: 0;
-    margin: 0;
-  }
-  z-index: 1;
-`;
-
-const StyledCard = styled(Card)`
-  flex: 0 1 24%;
-  legend {
-    width: auto;
-    margin: 0 auto;
-  }
-  @media (max-width: ${devices.ipadpro}) {
-    min-width: 75%;
-  }
-`;
-
-// The width, margin-left and transform fields are to allow the background colour to escape the
-// page max-width of 1440px
 const StyledSection = styled.div`
   display: flex;
   justify-content: center;
   background: inherit;
   margin: 0;
-  padding: 0 3rem;
-  width: calc(100vw);
+  width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-
+  padding-bottom: 20px;
+  padding-top: 79px;
   @media (max-width: ${devices.mobile}) {
-    margin-right: 0rem;
-    max-width: 100%;
-    order: 1;
-    margin-top: 0;
+    padding-top: 20px;
   }
-`;
-
-const PageContainer = styled.div`
-  max-width: 1440px;
 `;
 
 export default HelpSection;

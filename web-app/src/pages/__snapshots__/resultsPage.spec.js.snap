@@ -27,9 +27,10 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 }
 
 .c1 {
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   padding-top: 2rem;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
   background: #fafafa;
 }
@@ -49,150 +50,6 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
   font-weight: bold;
   font-size: 30px;
   line-height: 38px;
-}
-
-.c15 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  background-color: #FFD666;
-  color: black;
-  font-style: normal;
-  font-weight: bold;
-  padding: 0.5rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 90%;
-  margin-bottom: 5%;
-}
-
-.c14 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  background-color: #FFD666;
-  color: black;
-  font-style: normal;
-  font-weight: bold;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  min-width: 90%;
-  width: 50%;
-  margin-bottom: 5%;
-  padding: 0.5rem;
-}
-
-.c16 {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  background-color: #f0f0f0;
-  color: black;
-  font-style: normal;
-  font-weight: bold;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  min-width: 90%;
-  width: 50%;
-  margin-bottom: 5%;
-  padding: 0.5rem;
-}
-
-.c12 {
-  font-family: Playfair Display;
-  font-weight: bold;
-  font-size: 24px;
-  min-width: auto;
-  line-height: 100%;
-  padding: 0 0.5rem;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.c10 {
-  position: relative;
-  border: 1px solid #003A8C;
-  width: 25%;
-  padding: 1rem 1.2rem;
-  margin: 3rem 1rem;
-  height: 20%;
-  font-family: Raleway;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  -webkit-letter-spacing: 0em;
-  -moz-letter-spacing: 0em;
-  -ms-letter-spacing: 0em;
-  letter-spacing: 0em;
-  text-align: left;
-  min-width: 360px;
-}
-
-.c13 {
-  min-height: 7rem;
-}
-
-.c7 {
-  width: 60%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin: 0 20%;
-  background: inherit;
-}
-
-.c8 {
-  font-family: Playfair Display;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 38px;
-}
-
-.c11 {
-  height: auto;
-  width: 30%;
-  min-width: 160px;
-  margin: 5% 0;
-}
-
-.c11 legend {
-  width: auto;
-  margin: 0 auto;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .c0 {
@@ -234,77 +91,6 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
 @media (max-width:576px) {
   .c2 {
     width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c15 {
-    width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c14 {
-    width: 90%;
-    max-width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c16 {
-    width: 90%;
-    max-width: 90%;
-  }
-}
-
-@media (max-width:576px) {
-  .c12 {
-    font-size: 30px;
-    line-height: 38px;
-  }
-}
-
-@media (max-width:1025px) {
-  .c10 {
-    width: 40%;
-    min-width: 0;
-  }
-}
-
-@media (max-width:768px) {
-  .c10 {
-    margin: 3rem 1rem;
-  }
-}
-
-@media (max-width:576px) {
-  .c10 {
-    width: 90%;
-    margin: 1rem auto;
-  }
-}
-
-@media (max-width:1025px) {
-  .c7 {
-    margin: 25px 18px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    width: auto;
-    min-width: 0;
-  }
-}
-
-@media (max-width:576px) {
-  .c11 {
-    width: 100%;
-  }
-}
-
-@media (max-width:576px) {
-  .c9 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
   }
 }
 
@@ -366,85 +152,9 @@ exports[`the ResultsPage component should match the snapshot 1`] = `
         </div>
       </div>
       <div
-        class="c7"
+        data-testid="actions_section"
       >
-        <h2
-          class="c8"
-        >
-          Some actions you can take
-        </h2>
-        <div
-          class="c9"
-        >
-          <fieldset
-            class="c10 c11"
-          >
-            <legend
-              class="c12 c11"
-            >
-              Support
-            </legend>
-            <p
-              class="c13"
-            >
-              Surround yourself with friends and family. And remember, you can always reach out…
-            </p>
-            <br />
-            <a
-              class="c14 c11"
-              href="/"
-            >
-              Reach Out
-            </a>
-          </fieldset>
-          <fieldset
-            class="c10 c11"
-          >
-            <legend
-              class="c12 c11"
-            >
-              Useful exercises
-            </legend>
-            <p
-              class="c13"
-            >
-              Here are some exercises to reduce stress and regain control over your actions and thoughts.
-            </p>
-            <br />
-            <a
-              class="c15"
-              href="Self-Help_Exercises.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              View exercises
-            </a>
-          </fieldset>
-          <fieldset
-            class="c10 c11"
-            disabled=""
-          >
-            <legend
-              class="c12 c11"
-              disabled=""
-            >
-              14 days of wellbeing
-            </legend>
-            <p
-              class="c13"
-            >
-              Keep your mind and body engaged by joining our 14 days of wellbeing.
-            </p>
-            <br />
-            <a
-              class="c16 c11"
-              disabled=""
-              href="/help"
-            >
-              Coming Soon
-            </a>
-          </fieldset>
-        </div>
+        Actions Section
       </div>
     </div>
   </div>

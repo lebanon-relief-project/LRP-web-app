@@ -117,7 +117,8 @@ const StyledLink = styled.button`
   justify-content: center;
   display: flex;
   background-color: ${colours.yellow};
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   height: 2.625rem;
   font-size: 1rem;
   align-self: center;
@@ -146,9 +147,10 @@ const StyledLink = styled.button`
 
 const StyledSection = styled.section`
   background: inherit;
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: 100%;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,8 +158,7 @@ const StyledSection = styled.section`
 `;
 
 const Wrapper = styled.div`
-  width: 60%;
-  margin: 0 20%;
+  margin: auto;
   background: inherit;
   display: flex;
   flex-direction: column;

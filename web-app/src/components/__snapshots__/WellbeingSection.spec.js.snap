@@ -2,10 +2,6 @@
 
 exports[`the WellbeingSection component should match the snapshot 1`] = `
 .c8 {
-  position: static;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(0);
   background-color: #f0f0f0;
   color: black;
   font-style: normal;
@@ -18,9 +14,8 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   min-width: 25%;
-  width: 50%;
+  max-width: 25%;
   margin-bottom: 5%;
   padding: 0.5rem;
 }
@@ -41,8 +36,22 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   border: none;
   width: 100%;
   padding: 1rem 0;
-  margin: 3rem 1rem;
-  height: 20%;
+  margin: 3rem 0rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: Raleway;
   font-size: 16px;
   font-style: normal;
@@ -53,7 +62,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   -ms-letter-spacing: 0em;
   letter-spacing: 0em;
   text-align: left;
-  min-width: 360px;
+  background-color: white;
 }
 
 .c0 {
@@ -78,7 +87,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
   max-width: 100%;
   object-fit: contain;
   width: auto;
-  padding: 2%;
+  margin: 2%;
 }
 
 .c7 {
@@ -113,6 +122,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c5 {
+    width: 75%;
     width: 100%;
     min-width: 0;
   }
@@ -133,6 +143,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c0 {
+    padding: 0;
     margin-top: 0;
   }
 }
@@ -161,6 +172,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 
 @media (max-width:1025px) {
   .c4 {
+    width: 50%;
     right: 0;
   }
 }
@@ -214,7 +226,6 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
             >
               Keep your mind and body engaged by joining our 14 days of wellbeing. Created by our team of mental health experts, these exercises offer simple daily tasks which will help you manage negative emotions and reach a more positive and calmer mindset.
             </p>
-            <br />
             <a
               class="c8"
               disabled=""

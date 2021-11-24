@@ -25,7 +25,8 @@ exports[`the ContactUsSection component should match the snapshot 1`] = `
 }
 
 .c1 {
-  width: 60%;
+  width: 100%;
+  max-width: 960px;
   background-color: #f0f0f0;
   display: -webkit-box;
   display: -webkit-flex;
