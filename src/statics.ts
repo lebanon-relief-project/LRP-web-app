@@ -16,8 +16,8 @@ export const CLOUDANT_PSYCHOTHERAPISTS_DB_DEV = "dev_therapists";
 export const CLOUDANT_OURVALUESCARD_DB = "ourvaluescard";
 
 // CONTENT
-export const COS_FLASHCARD_IMAGE_BUCKET = "lrn-flashcard-images";
-export const COS_FLASHCARD_RESULT_IMAGE_BUCKET = "lrn-flashcard-images-results";
+export const COS_FLASHCARD_IMAGE_BUCKET = process.env.COS_FLASHCARD_IMAGE_BUCKET || "lrn-flashcard-images";
+export const COS_FLASHCARD_RESULT_IMAGE_BUCKET = process.env.COS_FLASHCARD_RESULT_IMAGE_BUCKET || "lrn-flashcard-images-results";
 export const COS_URL = "s3.eu-de.cloud-object-storage.appdomain.cloud";
 export const PRESIGNED_URL_EXPIRY = 3600; // 1 hour
-export const COS_OURVALUESCARD_IMAGE_BUCKET = "lrn-ourvaluecard-images";
+export const COS_OURVALUESCARD_IMAGE_BUCKET =  process.env.COS_OURVALUESCARD_IMAGE_BUCKET || "lrn-ourvaluecard-images";
