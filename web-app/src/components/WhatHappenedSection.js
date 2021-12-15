@@ -18,13 +18,15 @@ const WhatHappened = () => {
           <StyledTextArea>
             <StyledTitle>Lebanon Relief Network</StyledTitle>
             <StyledParagraph>
-              Lebanon’s troubled history has contributed to a growing mental
-              health crisis in the country. 70% of Lebanon’s residents and
-              diaspora community have experienced symptoms of trauma, at some
-              point in their life. <br /> <br /> Lebanon Relief Network provides
-              a safe space for trauma-related dialogue, and offers tools and
-              resources to improve the lives of people affected by all types of
-              trauma – big or small.
+              On August 4th, 2020 a massive explosion shook the port of Beirut
+              in Lebanon. 170 people died. Thousands were injured. Even more
+              were traumatized.
+            </StyledParagraph>
+            <br />
+            <StyledParagraph>
+              Lebanon Relief Network was founded in the aftermath of the
+              explosion to improve the lives of people affected by all type of
+              trauma.
             </StyledParagraph>
           </StyledTextArea>
         </StyledFlexContainer>
@@ -35,7 +37,7 @@ const WhatHappened = () => {
 
 const StyledTitle = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
-  font-family: Playfair Display;
+  font-family: Raleway;
   font-style: normal;
   font-weight: 900;
   font-size: 38px;
@@ -62,7 +64,8 @@ const PageContainer = styled.div`
 
 const StyledTextArea = styled.div`
   position: relative;
-  width: 50%;
+  min-width: 70%;
+  right: 150px;
 
   @media (max-width: ${devices.ipad}) {
     right: 10%;
@@ -86,7 +89,8 @@ const StyledFlexContainer = styled(FlexContainer)`
 
 const StyledTree = styled.img`
   object-fit: contain;
-
+  position: relative;
+  right: 150px;
   @media (max-width: ${devices.ipad}) {
     width: 50%;
   }
