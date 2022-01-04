@@ -27,7 +27,7 @@ exports[`the WhatHappened component should match the snapshot 1`] = `
   display: block;
   font-family: Raleway;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 38px;
   line-height: 46px;
   color: #003A8C;

@@ -39,7 +39,7 @@ const StyledTitle = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
   font-family: Raleway;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 38px;
   line-height: 46px;
   color: ${colours.blue};
