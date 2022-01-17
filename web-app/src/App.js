@@ -18,6 +18,7 @@ import ResultsPage from "./pages/resultsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import ErrorBoundary from "./components/errors/ErrorBoundary";
+import DirectoryPage from "./pages/directory/directoryPage";
 
 export function ScrollToTop() {
   const { pathname } = useLocation();
@@ -36,6 +37,7 @@ export const Routes = {
   RESULTS: "/results",
   PRIVACY: "/privacy",
   TERMS: "/terms",
+  DIRECTORY: "/directory",
 };
 
 export const Pages = () => {
@@ -44,6 +46,7 @@ export const Pages = () => {
     <>
       <ErrorBoundary history={history}>
         <Switch>
+          <Route path={Routes.DIRECTORY} component={DirectoryPage} />
           <Route path={Routes.ABOUT} component={AboutPage} />
           <Route path={Routes.HELP} component={HelpPage} />
           <Route path={Routes.RESULTS} component={ResultsPage} />

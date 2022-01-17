@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Banner component should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #002766;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 276px;
+  margin-top: 80px;
+  color: white;
+}
+
+.c1 {
+  max-width: 960px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  color: white;
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.c3 {
+  max-width: 632px;
+  width: 100%;
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+}
+
+@media (max-width:576px) {
+  .c0 {
+    height: auto;
+  }
+}
+
+@media (max-width:576px) {
+  .c1 {
+    padding: 18px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width:576px) {
+  .c2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        Directory of Mental Health Experts
+      </h1>
+      <p
+        class="c3"
+      >
+        The DMHE is a service provided by Lebanon Relief Network. In Lebanon, there are many dedicated psychotrauma experts and services available. Please use one or more of the following fields to search for the mental health expert offering the service you require. NB. The information is up to date but not updated regularly.
+      </p>
+      <p
+        class="c3"
+      >
+        NB. The information is up to date but not updated regularly.
+      </p>
+    </div>
+  </div>
+</div>
+`;
