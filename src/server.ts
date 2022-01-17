@@ -70,12 +70,12 @@ export class ApiServer {
    */
   public async start(): Promise<ApiServer> {
     return new Promise<ApiServer>((resolve, reject) => {
-      this.server = this.app.listen(this.PORT, (err: any) => {
+      this.server = this.app.listen(this.PORT, (err) => {
+
         if (err) {
           return reject(err);
         }
-
-        const addressInfo = this.server.address() as AddressInfo;
+         const addressInfo = this.server.address() as AddressInfo;
 
         const address =
           addressInfo.address === "::" ? "localhost" : addressInfo.address;
