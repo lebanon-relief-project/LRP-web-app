@@ -70,18 +70,21 @@ export class ApiServer {
    */
   public async start(): Promise<ApiServer> {
     return new Promise<ApiServer>((resolve, reject) => {
-      this.server = this.app.listen(this.PORT, () => {
+      try {
+        this.server = this.app.listen(this.PORT, () => {
+          const addressInfo = this.server.address() as AddressInfo;
 
-         const addressInfo = this.server.address() as AddressInfo;
+          const address =
+            addressInfo.address === "::" ? "localhost" : addressInfo.address;
 
-        const address =
-          addressInfo.address === "::" ? "localhost" : addressInfo.address;
+          // tslint:disable-next-line:no-console
+          console.log(`Listening to http://${address}:${addressInfo.port}`);
 
-        // tslint:disable-next-line:no-console
-        console.log(`Listening to http://${address}:${addressInfo.port}`);
-
-        return resolve(this);
-      });
+          return resolve(this);
+        });
+      } catch (err) {
+        return reject(err);
+      }
     });
   }
 
