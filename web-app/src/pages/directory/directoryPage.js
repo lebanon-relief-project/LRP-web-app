@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import devices from "../../styles/Devices";
 import Banner from "./components/Banner";
 import Collapsible from "react-collapsible";
-
-// import fontawesome from "@fortawesome/fontawesome";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
-// import "font-awesome/css//font-awesome.min.css";
+import { collapsiblesInitial } from "../../constants/directory";
 
 const DirectoryPage = () => {
+  const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
+
   return (
     <>
       <StyledPage>
@@ -19,17 +18,31 @@ const DirectoryPage = () => {
               <TitleWrapper>Test</TitleWrapper>
               {/* bunch of collapsibles */}
               <form>
-                <Collapsible trigger="Are you looking for a centre or individual?">
-                  <label>
-                    <input
-                      name="isGoing"
-                      type="checkbox"
-                      checked={false}
-                      onChange={() => {}}
-                    />
-                    Test
-                  </label>
-                </Collapsible>
+                {Object.keys(collapsibles).map((key, index) => {
+                  return (
+                    <Collapsible key={`${key}_${index}`} trigger={key}>
+                      {Object.keys(collapsibles[key]).map((value, index2) => {
+                        return (
+                          <label key={`${value}_${index}`}>
+                            <input
+                              data-testid={value}
+                              name={`${value}`}
+                              type="checkbox"
+                              checked={collapsibles[key][value]}
+                              onChange={() => {
+                                let collapsiblesCopy = { ...collapsibles };
+                                collapsiblesCopy[key][value] =
+                                  !collapsiblesCopy[key][value];
+                                setCollapsibles({ ...collapsiblesCopy });
+                              }}
+                            />
+                            {value}
+                          </label>
+                        );
+                      })}
+                    </Collapsible>
+                  );
+                })}
               </form>
             </SideBarWrapper>
           </StyledSideBar>
@@ -49,8 +62,23 @@ const SideBarWrapper = styled.div`
   border: 1px solid #003a8c;
   position: relative;
 
+  ${"" /* possibly move this to the contentInner */}
+  .Collapsible {
+    margin-bottom: 20px;
+  }
+
   .Collapsible__contentInner {
-    background-color: white;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 10px;
+    padding-bottom: 20px;
+
+    input {
+      margin-right: 8px;
+    }
   }
 
   .Collapsible__trigger {
@@ -58,17 +86,19 @@ const SideBarWrapper = styled.div`
     font-weight: 400;
     text-decoration: none;
     position: relative;
-    padding: 10px;
+
     color: black;
     font-size: 16px;
+
+    cursor: pointer;
 
     &:after {
       font-weight: 900;
       font-family: "Font Awesome 5 Free";
-      content: "\f0d8";
+      content: "\f0d7";
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 0px;
+      top: 0px;
       display: block;
       transition: transform 300ms;
     }
