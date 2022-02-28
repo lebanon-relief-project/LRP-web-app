@@ -60,6 +60,8 @@ const SideBarWrapper = styled.div`
   ${"" /* possibly move this to the contentInner */}
   .Collapsible {
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
   }
 
   .Collapsible__contentInner {
@@ -67,9 +69,8 @@ const SideBarWrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    border-bottom: 1px solid #d9d9d9;
     margin-top: 10px;
-    padding-bottom: 20px;
+    ${"" /* padding-bottom: 20px; */}
 
     input {
       margin-right: 8px;

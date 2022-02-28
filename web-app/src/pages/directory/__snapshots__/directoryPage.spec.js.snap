@@ -34,6 +34,13 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
   background-color: green;
 }
 
+@media (max-width:768px) {
+  .c2 {
+    grid-row: 2;
+    grid-column: col-start 1 / span 12;
+  }
+}
+
 <div>
   <div
     class="c0"

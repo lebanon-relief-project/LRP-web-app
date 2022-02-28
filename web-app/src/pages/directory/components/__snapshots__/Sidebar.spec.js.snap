@@ -18,6 +18,8 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
 
 .c1 .Collapsible {
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .c1 .Collapsible__contentInner {
@@ -29,9 +31,7 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-bottom: 1px solid #d9d9d9;
   margin-top: 10px;
-  padding-bottom: 20px;
 }
 
 .c1 .Collapsible__contentInner input {
@@ -106,6 +106,13 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
 .c0 {
   grid-column: col-start / span 4;
   background-color: white;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
 }
 
 <div>
@@ -605,6 +612,8 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 
 .c1 .Collapsible {
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .c1 .Collapsible__contentInner {
@@ -616,9 +625,7 @@ exports[`the Sidebar component should match the snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-bottom: 1px solid #d9d9d9;
   margin-top: 10px;
-  padding-bottom: 20px;
 }
 
 .c1 .Collapsible__contentInner input {
@@ -693,6 +700,13 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 .c0 {
   grid-column: col-start / span 4;
   background-color: white;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
 }
 
 <div>
