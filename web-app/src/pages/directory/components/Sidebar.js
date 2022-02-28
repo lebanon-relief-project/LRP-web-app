@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Collapsible from "react-collapsible";
 import styled from "styled-components";
+import devices from "../../../styles/Devices";
 
 import { collapsiblesInitial } from "../../../constants/directory";
 
@@ -132,6 +133,11 @@ const TitleWrapper = styled.div`
 const StyledSideBar = styled.div`
   grid-column: col-start / span 4;
   background-color: white;
+
+  @media (max-width: ${devices.ipad}) {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
 `;
 
 export default Sidebar;
