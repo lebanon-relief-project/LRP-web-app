@@ -29,7 +29,6 @@ export const StyledSection = styled.section`
   margin: 0;
   margin-bottom: 5%;
   padding: 0 3rem;
-  max-width: 100%;
 
   @media (max-width: ${devices.mobile}) {
     padding: 0;
@@ -37,10 +36,14 @@ export const StyledSection = styled.section`
   }
 `;
 
+export const PageContainer = styled.div`
+  max-width: 960px;
+`;
+
 export const FlexContainer = styled.div`
   display: flex;
   flex-direction: row;
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipad}) {
     flex-direction: column;
   }
 `;

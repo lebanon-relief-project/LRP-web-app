@@ -29,7 +29,6 @@ const Card = (props) => {
 };
 
 const StyledAnchor = styled.a`
-  
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -46,7 +45,6 @@ const StyledAnchor = styled.a`
 `;
 
 const StyledLink = styled(Link)`
-
   background-color: ${(props) =>
     props.disabled ? `${colours.grey}` : `${colours.yellow}`};
   color: black;
@@ -92,7 +90,6 @@ const StyledCard = styled.fieldset`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 
   font-family: Raleway;
   font-size: 16px;
