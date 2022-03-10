@@ -13,7 +13,7 @@ const Sidebar = () => {
     <>
       <StyledSideBar>
         <SideBarWrapper>
-          <TitleWrapper>Test</TitleWrapper>
+          <TitleWrapper>Filters</TitleWrapper>
           {/* bunch of collapsibles */}
           <form>
             {Object.keys(collapsibles).map((key, index) => {

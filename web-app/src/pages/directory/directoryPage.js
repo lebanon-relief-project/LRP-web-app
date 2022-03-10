@@ -30,7 +30,7 @@ const StyledContent = styled.div`
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   gap: 24px;
-  background-color: yellow;
+  background-color: inherit;
   max-width: 960px;
   width: 100%;
   align-self: center;
