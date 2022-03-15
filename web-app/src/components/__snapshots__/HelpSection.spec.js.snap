@@ -17,13 +17,12 @@ exports[`the HelpSection component should match the snapshot 1`] = `
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  padding-bottom: 20px;
-  padding-top: 79px;
+  padding: 4rem 0rem;
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c0 {
-    padding-top: 20px;
+    padding: 4rem 2rem;
   }
 }
 
