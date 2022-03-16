@@ -39,7 +39,6 @@ const StyledContent = styled.div`
 
 const StyledMainArea = styled.div`
   grid-column: col-start 5 / span 8;
-  background-color: green;
 
   @media (max-width: ${devices.ipad}) {
     grid-row: 2;
