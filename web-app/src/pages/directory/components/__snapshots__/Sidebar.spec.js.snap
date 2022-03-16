@@ -65,6 +65,12 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
   border-bottom: 1px solid #d9d9d9;
 }
 
+.c1 .Collapsible:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .c1 .Collapsible__contentInner {
   background-color: inherit;
   display: -webkit-box;
@@ -858,6 +864,12 @@ exports[`the Sidebar component should match the snapshot 1`] = `
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
+}
+
+.c1 .Collapsible:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .c1 .Collapsible__contentInner {

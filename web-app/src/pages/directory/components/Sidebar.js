@@ -129,6 +129,12 @@ const SideBarWrapper = styled.div`
     border-bottom: 1px solid #d9d9d9;
   }
 
+  .Collapsible:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .Collapsible__contentInner {
     background-color: inherit;
     display: flex;
