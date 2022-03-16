@@ -5,6 +5,8 @@ import styled from "styled-components";
 import devices from "../../../styles/Devices";
 
 import { collapsiblesInitial } from "../../../constants/directory";
+import SearchIcon from "../../../assets/images/Search.svg";
+import Select from "react-select";
 
 const Sidebar = () => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
@@ -20,6 +22,43 @@ const Sidebar = () => {
               return (
                 <Collapsible key={`${key}_${index}`} trigger={key}>
                   {Object.keys(collapsibles[key]).map((value, index2) => {
+                    if (value === "options") {
+                      return (
+                        <div key={`${value}-${index2}`}>
+                          <Select
+                            isSearchable={true}
+                            isClearable={true}
+                            placeholder="Select location"
+                            options={collapsibles[key][value].map((item) => {
+                              let val = Object.keys(item)[0];
+                              return { value: val, label: val };
+                            })}
+                          />
+                        </div>
+                      );
+                    }
+                    if (value === "text") {
+                      return (
+                        <SearchBox key={`${value}_${index}`}>
+                          <SearchInputContainer>
+                            <SearchInput
+                              data-testid={value}
+                              name={`${value}`}
+                              type="text"
+                              placeholder="Search by name"
+                              onChange={(evt) => {
+                                let collapsiblesCopy = { ...collapsibles };
+                                collapsiblesCopy[key][value] = evt.target.value;
+                                setCollapsibles({ ...collapsiblesCopy });
+                              }}
+                            />
+                          </SearchInputContainer>
+                          <SearchIconContainer>
+                            <img width={12.5} height={12.5} src={SearchIcon} />
+                          </SearchIconContainer>
+                        </SearchBox>
+                      );
+                    }
                     return (
                       <label key={`${value}_${index}`}>
                         <input
@@ -47,6 +86,32 @@ const Sidebar = () => {
     </>
   );
 };
+
+const SearchBox = styled.div`
+  display: flex;
+  height: 32px;
+  border: 1px solid #d9d9d9;
+`;
+
+const SearchInputContainer = styled.div`
+  display: flex;
+  flex: 1;
+`;
+
+const SearchInput = styled.input`
+  fontsize: 14px;
+  width: 100%;
+  margin: 0;
+  border: none;
+`;
+
+const SearchIconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  border-left: 1px solid #d9d9d9;
+`;
 
 const SideBarWrapper = styled.div`
   background-color: inherit;
@@ -132,6 +197,9 @@ const TitleWrapper = styled.div`
 `;
 
 const StyledSideBar = styled.div`
+  .css-26l3qy-menu {
+    position: static;
+  }
   grid-column: col-start / span 4;
   background-color: white;
 

@@ -3,6 +3,33 @@ export const collapsiblesInitial = {
     NGO: false,
     "Licensed Psychologist": false,
   },
+  Location: {
+    options: [
+      { Akkar: false },
+      { Aley: false },
+      { Baabda: false },
+      { Baalbek: false },
+      { Batroun: false },
+      { Beirut: false },
+      { "Bint Jbeil": false },
+      { Bsharri: false },
+      { Byblos: false },
+      { Chouf: false },
+      { Hermel: false },
+      { Keserwan: false },
+      { "Miniyeh-Danniyeh": false },
+      { Nabatieh: false },
+      { Rashaya: false },
+      { Sidon: false },
+      { Tripoli: false },
+      { Tyre: false },
+      { "Western Beqaa": false },
+      { Zahlé: false },
+      { Zgharta: false },
+      { "Across Lebanon": false },
+      { Online: false },
+    ],
+  },
   "Who is this for? ": {
     "Toddlers / Preschoolers (0-6 years)": false,
     "Children (6-12 years)": false,
@@ -49,5 +76,8 @@ export const collapsiblesInitial = {
   },
   Price: {
     "Free service": false,
+  },
+  "Name of mental health professional or organization": {
+    text: "",
   },
 };
