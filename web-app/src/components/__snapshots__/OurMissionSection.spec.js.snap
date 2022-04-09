@@ -23,90 +23,51 @@ exports[`the OurMission component should match the snapshot 1`] = `
   z-index: 1;
 }
 
-.c0 {
-  background: #ffffff;
-  margin: 0;
-  margin-bottom: 5%;
-  padding: 0 3rem;
-  max-width: 100%;
+.c1 {
+  max-width: 960px;
 }
 
-.c1 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #ffffff;
+  margin: 0;
+  padding: 0rem 3rem 3rem 3rem;
 }
 
 .c2 {
-  position: relative;
-  margin: 2%;
-  left: 12%;
-  width: 50%;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 25vw;
+  grid-gap: 1rem;
 }
 
 .c5 {
-  object-fit: contain;
-  position: relative;
-  width: auto;
-  max-width: 100%;
-  margin-top: 3%;
+  width: 100%;
+  margin: auto;
 }
 
-@media (max-width:576px) {
-  .c0 {
-    padding: 0;
-    margin-top: 0;
-  }
-}
-
-@media (max-width:576px) {
-  .c1 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
-    margin-bottom: 5%;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width:1025px) {
   .c5 {
-    top: 10%;
-  }
-}
-
-@media (max-width:768px) {
-  .c5 {
-    width: 60%;
-  }
-}
-
-@media (max-width:576px) {
-  .c5 {
-    margin-right: 0rem;
-    max-width: 100%;
-    width: 100%;
-    padding-left: 0rem;
+    width: 50%;
+    min-width: 400px;
   }
 }
 
 <div>
-  <section
+  <div
     class="c0"
   >
     <div
@@ -115,28 +76,31 @@ exports[`the OurMission component should match the snapshot 1`] = `
       <div
         class="c2"
       >
-        <h2
-          class="c3"
+        <div
+          class=""
         >
-          Our mission
-        </h2>
-        <p
-          class="c4"
-        >
-          Our mission is to support the residents of Lebanon and individuals from the Lebanese diaspora who experienced a traumatic event by connecting them to professionals, to volunteers and to each other, while helping them get the support and care they need. 
-          <br />
-           
-          <br />
-           
-          Our dream is to help build a healthier, more resilient and trauma-aware Lebanese community.
-        </p>
+          <h2
+            class="c3"
+          >
+            Our mission
+          </h2>
+          <p
+            class="c4"
+          >
+            Our mission is to support the residents of Lebanon and individuals from the Lebanese diaspora who experienced a traumatic event by connecting them to professionals, to volunteers and to each other, while helping them get the support and care they need. 
+            <br />
+             
+            <br />
+             Our dream is to help build a healthier, more resilient and trauma-aware Lebanese community.
+          </p>
+        </div>
+        <img
+          alt="Hands"
+          class="c5"
+          src="Hands.svg"
+        />
       </div>
-      <img
-        alt="Hands"
-        class="c5"
-        src="Hands.svg"
-      />
     </div>
-  </section>
+  </div>
 </div>
 `;

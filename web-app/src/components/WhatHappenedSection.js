@@ -4,16 +4,15 @@ import devices from "../styles/Devices";
 import Tree from "../assets/images/Tree.svg";
 import colours from "../styles/Colours";
 import {
-  StyledHeader,
   StyledParagraph,
-  FlexContainer,
+  PageContainer
 } from "../styles/GlobalStyles";
 
 const WhatHappened = () => {
   return (
-    <StyledSection padded grey>
+    <StyledSection>
       <PageContainer>
-        <StyledFlexContainer>
+        <StyledGridContainer>
           <StyledTree src={Tree} alt="Tree" />
           <StyledTextArea>
             <StyledTitle>Lebanon Relief Network</StyledTitle>
@@ -29,11 +28,35 @@ const WhatHappened = () => {
               trauma.
             </StyledParagraph>
           </StyledTextArea>
-        </StyledFlexContainer>
+        </StyledGridContainer>
       </PageContainer>
     </StyledSection>
   );
 };
+
+// The width, margin-left and transform fields are to allow the background colour to escape the
+// page max-width of 1440px
+const StyledSection = styled.div`
+  display: flex;
+  justify-content: center;
+  background: ${colours.lightGrey};
+  margin: 0;
+  padding: 0rem 3rem 3rem 3rem;
+`;
+
+const StyledGridContainer = styled.div`
+  padding-top: 8rem;
+  display: grid;
+  grid-template-columns: 25vw 1fr;
+  grid-gap: 16px;
+
+  @media (max-width: ${devices.ipadpro}) {
+    grid-template-columns: 1fr;
+  }  
+`;
+
+const StyledTextArea = styled.div`
+`;
 
 const StyledTitle = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
@@ -45,59 +68,15 @@ const StyledTitle = styled.h2`
   color: ${colours.blue};
 `;
 
-// The width, margin-left and transform fields are to allow the background colour to escape the
-// page max-width of 1440px
-const StyledSection = styled.div`
-  display: flex;
-  justify-content: center;
-  background: ${colours.lightGrey};
-  margin: 0;
-  padding: 0 3rem;
-  width: calc(100vw - 20px);
-  margin-left: 50%;
-  transform: translateX(-50%);
-`;
-
-const PageContainer = styled.div`
-  max-width: 960px;
-`;
-
-const StyledTextArea = styled.div`
-  position: relative;
-  min-width: 70%;
-  right: 150px;
-
-  @media (max-width: ${devices.ipad}) {
-    right: 10%;
-  }
-  margin: 2%;
-  @media (max-width: ${devices.mobile}) {
-    width: 100%;
-  }
-`;
-
-const StyledFlexContainer = styled(FlexContainer)`
-  padding-top: 7rem;
-  justify-content: space-between;
-  @media (max-width: ${devices.ipad}) {
-    padding-top: 3rem;
-  }
-  @media (max-width: ${devices.mobile}) {
-    padding-top: 25%;
-  }
-`;
 
 const StyledTree = styled.img`
-  object-fit: contain;
-  position: relative;
-  right: 150px;
-  @media (max-width: ${devices.ipad}) {
+  max-width: 90%;
+  margin: auto;
+
+  @media (max-width: ${devices.ipadpro}) {
+    
     width: 50%;
-  }
-  @media (max-width: ${devices.mobile}) {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0rem;
+    min-width: 400px;
   }
 `;
 
