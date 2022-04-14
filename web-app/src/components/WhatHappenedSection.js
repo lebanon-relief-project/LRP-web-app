@@ -3,10 +3,7 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import Tree from "../assets/images/Tree.svg";
 import colours from "../styles/Colours";
-import {
-  StyledParagraph,
-  PageContainer
-} from "../styles/GlobalStyles";
+import { StyledParagraph, PageContainer } from "../styles/GlobalStyles";
 
 const WhatHappened = () => {
   return (
@@ -17,15 +14,16 @@ const WhatHappened = () => {
           <StyledTextArea>
             <StyledTitle>Lebanon Relief Network</StyledTitle>
             <StyledParagraph>
-              On August 4th, 2020 a massive explosion shook the port of Beirut
-              in Lebanon. 170 people died. Thousands were injured. Even more
-              were traumatized.
+              Lebanon’s troubled history has contributed to a growing mental
+              health crisis in the country. 70% of Lebanon’s residents and
+              diaspora community have experienced symptoms of trauma, at some
+              point in their life.
             </StyledParagraph>
             <br />
             <StyledParagraph>
-              Lebanon Relief Network was founded in the aftermath of the
-              explosion to improve the lives of people affected by all type of
-              trauma.
+              Lebanon Relief Network provides a safe space for trauma-related
+              dialogue, and offers tools and resources to improve the lives of
+              people affected by all types of trauma – big or small.
             </StyledParagraph>
           </StyledTextArea>
         </StyledGridContainer>
@@ -52,11 +50,10 @@ const StyledGridContainer = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     grid-template-columns: 1fr;
-  }  
+  }
 `;
 
-const StyledTextArea = styled.div`
-`;
+const StyledTextArea = styled.div``;
 
 const StyledTitle = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
@@ -68,13 +65,11 @@ const StyledTitle = styled.h2`
   color: ${colours.blue};
 `;
 
-
 const StyledTree = styled.img`
-  max-width: 90%;
+  max-width: 95%;
   margin: auto;
 
   @media (max-width: ${devices.ipadpro}) {
-    
     width: 50%;
     min-width: 400px;
   }

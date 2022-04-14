@@ -54,7 +54,7 @@ const StyledGridContainer = styled.div`
 `;
 
 const StyledPeople = styled.img`
-  max-width: 19rem;
+  max-width: 80%;
   margin: auto;
 
   @media (max-width: ${devices.ipadpro}) {
