@@ -3,10 +3,7 @@ import styled from "styled-components";
 import devices from "../styles/Devices";
 import Tree from "../assets/images/Tree.svg";
 import colours from "../styles/Colours";
-import {
-  StyledParagraph,
-  PageContainer
-} from "../styles/GlobalStyles";
+import { StyledParagraph, PageContainer } from "../styles/GlobalStyles";
 
 const WhatHappened = () => {
   return (
@@ -52,11 +49,10 @@ const StyledGridContainer = styled.div`
 
   @media (max-width: ${devices.ipadpro}) {
     grid-template-columns: 1fr;
-  }  
+  }
 `;
 
-const StyledTextArea = styled.div`
-`;
+const StyledTextArea = styled.div``;
 
 const StyledTitle = styled.h2`
   display: ${(props) => (props.mobile ? "none" : "block")};
@@ -68,13 +64,11 @@ const StyledTitle = styled.h2`
   color: ${colours.blue};
 `;
 
-
 const StyledTree = styled.img`
   max-width: 90%;
   margin: auto;
 
   @media (max-width: ${devices.ipadpro}) {
-    
     width: 50%;
     min-width: 400px;
   }
