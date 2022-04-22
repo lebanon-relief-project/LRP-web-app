@@ -65,4 +65,4 @@ jobs:
         run: |
           ibmcloud target -r eu-de
           ibmcloud ce project select -n LRN-web-app
-          ibmcloud ce application update --name=lrn-dev-icr-test --image=de.icr.io/lrn-registry/lrn-dev:builder
+          ibmcloud ce application update --name=lrn-dev-icr-test --image=$REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$GITHUB_SHA
