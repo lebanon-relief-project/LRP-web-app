@@ -63,4 +63,6 @@ jobs:
       # Deploy to Code Engine
       - name: Deploy to Code Engine
         run: |
+          ibmcloud target -r eu-de
+          ibmcloud ce project select -n LRN-web-app
           ibmcloud ce application update --name=lrn-dev-icr-test --image=de.icr.io/lrn-registry/lrn-dev:builder
