@@ -6,7 +6,7 @@
 # 2. Setup secrets in your repository by going to settings: Create ICR_NAMESPACE and IBM_CLOUD_API_KEY
 # 3. Change the values for the IBM_CLOUD_REGION, REGISTRY_HOSTNAME, IMAGE_NAME, IKS_CLUSTER, DEPLOYMENT_NAME, and PORT
 
-name: Build and Deploy to IKS
+name: Build and Deploy
 
 on:
   push:
@@ -22,8 +22,6 @@ env:
   ICR_NAMESPACE: lrn-registry
   REGISTRY_HOSTNAME: de.icr.io
   IMAGE_NAME: lrn-dev
-  # IKS_CLUSTER: bq1sm2gd0sjtps7ajoa0 # name or id of cluster
-  DEPLOYMENT_NAME: hello-python
   PORT: 3000
 
 jobs:
