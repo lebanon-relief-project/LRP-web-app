@@ -20,7 +20,7 @@ env:
   IBM_CLOUD_REGION: eu-de
   ICR_NAMESPACE: lrn-registry
   REGISTRY_HOSTNAME: de.icr.io
-  IMAGE_NAME: lrn-app
+  IMAGE_NAME: lrn-dev
   PORT: 3000
 
 jobs:
