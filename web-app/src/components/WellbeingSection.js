@@ -4,90 +4,79 @@ import devices from "../styles/Devices";
 
 import Card from "../components/Card";
 import { Routes } from "../App.js";
-import { StyledSection } from "../styles/GlobalStyles";
+import { PageContainer } from "../styles/GlobalStyles";
 import People from "../assets/images/People.svg";
 
 const WellbeingSection = () => {
   return (
     <StyledSection>
-      <FlexContainer>
-        <StyledPeople src={People} />
+      <PageContainer>
+        <StyledGridContainer>
+          <StyledPeople src={People} />
 
-        <IllustrationAndCard>
           <ChallengeCard>
             <Card
-              secondary="true"
+              secondary="false"
               disabled
               title="Try our 14 days of wellbeing"
               path={Routes.HOME}
               buttonText="Coming soon"
             >
-              <Paragraph>
+              <StyledParagraph>
                 Keep your mind and body engaged by joining our 14 days of
                 wellbeing. Created by our team of mental health experts, these
                 exercises offer simple daily tasks which will help you manage
                 negative emotions and reach a more positive and calmer mindset.
-              </Paragraph>
+              </StyledParagraph>
             </Card>
           </ChallengeCard>
-        </IllustrationAndCard>
-      </FlexContainer>
+        </StyledGridContainer>
+      </PageContainer>
     </StyledSection>
   );
 };
 
-const FlexContainer = styled.div`
+const StyledSection = styled.div`
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 2rem 3rem 0rem 3rem;
+`;
 
-  @media (max-width: ${devices.mobile}) {
-    flex-direction: column;
+const StyledGridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 25vw 1fr;
+  grid-gap: 1rem;
+
+  @media (max-width: ${devices.ipadpro}) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const StyledPeople = styled.img`
-  max-width: 100%;
-  object-fit: contain;
-  width: auto;
-  margin: 2%;
+  max-width: 80%;
+  margin: auto;
 
-  @media (max-width: ${devices.ipad}) {
-    width: 80%;
+  @media (max-width: ${devices.ipadpro}) {
+    max-width: 40%;
+    margin-top: 1rem;
+    max-height: 100%;
   }
-  @media (max-width: ${devices.mobile}) {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0rem;
-  }
-`;
-
-const Paragraph = styled.p`
-  font-family: Raleway;
-  font-style: normal;
-
-  font-size: 16px;
-  line-height: 150%;
-  color: #262626;
 `;
 
 const ChallengeCard = styled.div`
   display: flex;
-  width: 85%;
-  @media (max-width: ${devices.ipadpro}) {
-    width: 50%;
-    right: 0;
-  }
-  @media (max-width: ${devices.mobile}) {
-    position: static;
-    width: 100%;
-  }
 `;
 
-const IllustrationAndCard = styled.div`
-  @media (min-width: ${devices.mobile}) {
-    display: flex;
-    position: relative;
-  }
+const StyledParagraph = styled.p`
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  margin: 0.75rem 0rem 2rem 0;
+  color: black;
+  z-index: 1;
 `;
 
 export default WellbeingSection;

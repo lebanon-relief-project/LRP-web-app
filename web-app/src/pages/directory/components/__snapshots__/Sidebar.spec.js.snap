@@ -1,0 +1,1603 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Sidebar component should be able to click on collapsible to show more options 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  border: 1px solid #d9d9d9;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c5 {
+  fontsize: 14px;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  border-left: 1px solid #d9d9d9;
+}
+
+.c1 {
+  background-color: inherit;
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #003a8c;
+  position: relative;
+}
+
+.c1 .Collapsible {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.c1 .Collapsible:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.c1 .Collapsible__contentInner {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.c1 .Collapsible__contentInner input {
+  margin-right: 8px;
+}
+
+.c1 .Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.c1 .Collapsible__trigger:after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  content: "\\f0d7";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  -webkit-transition: -webkit-transform 300ms;
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
+}
+
+.c1 .Collapsible__trigger.is-open:after {
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+.c1 .Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.c2 {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -16px;
+  width: auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 24px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c0 {
+  grid-column: col-start / span 4;
+  background-color: white;
+}
+
+.c0 .css-26l3qy-menu {
+  position: static;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        Filters
+      </div>
+      <form>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="true"
+            class="Collapsible__trigger is-open"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Are you looking for a centre or individual?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="NGO"
+                  name="NGO"
+                  type="checkbox"
+                />
+                NGO
+              </label>
+              <label>
+                <input
+                  data-testid="Licensed Psychologist"
+                  name="Licensed Psychologist"
+                  type="checkbox"
+                />
+                Licensed Psychologist
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Location
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <div>
+                <div
+                  class=" css-b62m3t-container"
+                >
+                  <span
+                    class="css-1f43avz-a11yText-A11yText"
+                    id="react-select-3-live-region"
+                  />
+                  <span
+                    aria-atomic="false"
+                    aria-live="polite"
+                    aria-relevant="additions text"
+                    class="css-1f43avz-a11yText-A11yText"
+                  />
+                  <div
+                    class=" css-1s2u09g-control"
+                  >
+                    <div
+                      class=" css-319lph-ValueContainer"
+                    >
+                      <div
+                        class=" css-14el2xx-placeholder"
+                        id="react-select-3-placeholder"
+                      >
+                        Select location
+                      </div>
+                      <div
+                        class=" css-6j8wv5-Input"
+                        data-value=""
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="react-select-3-listbox"
+                          aria-describedby="react-select-3-placeholder"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-owns="react-select-3-listbox"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class=""
+                          id="react-select-3-input"
+                          role="combobox"
+                          spellcheck="false"
+                          style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class=" css-1hb7zxy-IndicatorsContainer"
+                    >
+                      <span
+                        class=" css-1okebmr-indicatorSeparator"
+                      />
+                      <div
+                        aria-hidden="true"
+                        class=" css-tlfecz-indicatorContainer"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-tj5bde-Svg"
+                          focusable="false"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                        >
+                          <path
+                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Who is this for? 
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Toddlers / Preschoolers (0-6 years)"
+                  name="Toddlers / Preschoolers (0-6 years)"
+                  type="checkbox"
+                />
+                Toddlers / Preschoolers (0-6 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Children (6-12 years)"
+                  name="Children (6-12 years)"
+                  type="checkbox"
+                />
+                Children (6-12 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Teenagers / Adolescents (13-19 years)"
+                  name="Teenagers / Adolescents (13-19 years)"
+                  type="checkbox"
+                />
+                Teenagers / Adolescents (13-19 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Adults"
+                  name="Adults"
+                  type="checkbox"
+                />
+                Adults
+              </label>
+              <label>
+                <input
+                  data-testid="Elders (65+)"
+                  name="Elders (65+)"
+                  type="checkbox"
+                />
+                Elders (65+)
+              </label>
+              <label>
+                <input
+                  data-testid="Couples"
+                  name="Couples"
+                  type="checkbox"
+                />
+                Couples
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            What can we help you with?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Anxiety"
+                  name="Anxiety"
+                  type="checkbox"
+                />
+                Anxiety
+              </label>
+              <label>
+                <input
+                  data-testid="Childhood Trauma Therapy"
+                  name="Childhood Trauma Therapy"
+                  type="checkbox"
+                />
+                Childhood Trauma Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Depression"
+                  name="Depression"
+                  type="checkbox"
+                />
+                Depression
+              </label>
+              <label>
+                <input
+                  data-testid="Disaster / Terrorism"
+                  name="Disaster / Terrorism"
+                  type="checkbox"
+                />
+                Disaster / Terrorism
+              </label>
+              <label>
+                <input
+                  data-testid="Domestic Violence"
+                  name="Domestic Violence"
+                  type="checkbox"
+                />
+                Domestic Violence
+              </label>
+              <label>
+                <input
+                  data-testid="Expressive Trauma Therapy"
+                  name="Expressive Trauma Therapy"
+                  type="checkbox"
+                />
+                Expressive Trauma Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Hypnotherapy"
+                  name="Hypnotherapy"
+                  type="checkbox"
+                />
+                Hypnotherapy
+              </label>
+              <label>
+                <input
+                  data-testid="Life / Personal Coaching"
+                  name="Life / Personal Coaching"
+                  type="checkbox"
+                />
+                Life / Personal Coaching
+              </label>
+              <label>
+                <input
+                  data-testid="Life Transition & Adjustment Issues"
+                  name="Life Transition & Adjustment Issues"
+                  type="checkbox"
+                />
+                Life Transition & Adjustment Issues
+              </label>
+              <label>
+                <input
+                  data-testid="Memory loss Therapy"
+                  name="Memory loss Therapy"
+                  type="checkbox"
+                />
+                Memory loss Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Pain Management"
+                  name="Pain Management"
+                  type="checkbox"
+                />
+                Pain Management
+              </label>
+              <label>
+                <input
+                  data-testid="Parenting during Trauma"
+                  name="Parenting during Trauma"
+                  type="checkbox"
+                />
+                Parenting during Trauma
+              </label>
+              <label>
+                <input
+                  data-testid="Pharmacotherapy (medication)"
+                  name="Pharmacotherapy (medication)"
+                  type="checkbox"
+                />
+                Pharmacotherapy (medication)
+              </label>
+              <label>
+                <input
+                  data-testid="Psychoeducation"
+                  name="Psychoeducation"
+                  type="checkbox"
+                />
+                Psychoeducation
+              </label>
+              <label>
+                <input
+                  data-testid="PTSD"
+                  name="PTSD"
+                  type="checkbox"
+                />
+                PTSD
+              </label>
+              <label>
+                <input
+                  data-testid="Sexual Abuse"
+                  name="Sexual Abuse"
+                  type="checkbox"
+                />
+                Sexual Abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Sleeping Disorders"
+                  name="Sleeping Disorders"
+                  type="checkbox"
+                />
+                Sleeping Disorders
+              </label>
+              <label>
+                <input
+                  data-testid="Stress Management"
+                  name="Stress Management"
+                  type="checkbox"
+                />
+                Stress Management
+              </label>
+              <label>
+                <input
+                  data-testid="Substance Abuse"
+                  name="Substance Abuse"
+                  type="checkbox"
+                />
+                Substance Abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Suicide"
+                  name="Suicide"
+                  type="checkbox"
+                />
+                Suicide
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma Group support"
+                  name="Trauma Group support"
+                  type="checkbox"
+                />
+                Trauma Group support
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma-focused cognitive behavioral therapy"
+                  name="Trauma-focused cognitive behavioral therapy"
+                  type="checkbox"
+                />
+                Trauma-focused cognitive behavioral therapy
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Preferred langauges
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Arabic"
+                  name="Arabic"
+                  type="checkbox"
+                />
+                Arabic
+              </label>
+              <label>
+                <input
+                  data-testid="French"
+                  name="French"
+                  type="checkbox"
+                />
+                French
+              </label>
+              <label>
+                <input
+                  data-testid="English"
+                  name="English"
+                  type="checkbox"
+                />
+                English
+              </label>
+              <label>
+                <input
+                  data-testid="Spanish"
+                  name="Spanish"
+                  type="checkbox"
+                />
+                Spanish
+              </label>
+              <label>
+                <input
+                  data-testid="Sign language"
+                  name="Sign language"
+                  type="checkbox"
+                />
+                Sign language
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Appointments
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Virtual"
+                  name="Virtual"
+                  type="checkbox"
+                />
+                Virtual
+              </label>
+              <label>
+                <input
+                  data-testid="In person"
+                  name="In person"
+                  type="checkbox"
+                />
+                In person
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Price
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Free service"
+                  name="Free service"
+                  type="checkbox"
+                />
+                Free service
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Name of mental health professional or organization
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <div
+                class="c3"
+              >
+                <div
+                  class="c4"
+                >
+                  <input
+                    class="c5"
+                    data-testid="text"
+                    name="text"
+                    placeholder="Search by name"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="c6"
+                >
+                  <img
+                    height="12.5"
+                    src="Search.svg"
+                    width="12.5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`the Sidebar component should match the snapshot 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  border: 1px solid #d9d9d9;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c5 {
+  fontsize: 14px;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  border-left: 1px solid #d9d9d9;
+}
+
+.c1 {
+  background-color: inherit;
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #003a8c;
+  position: relative;
+}
+
+.c1 .Collapsible {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.c1 .Collapsible:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.c1 .Collapsible__contentInner {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.c1 .Collapsible__contentInner input {
+  margin-right: 8px;
+}
+
+.c1 .Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.c1 .Collapsible__trigger:after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  content: "\\f0d7";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: block;
+  -webkit-transition: -webkit-transform 300ms;
+  -webkit-transition: transform 300ms;
+  transition: transform 300ms;
+}
+
+.c1 .Collapsible__trigger.is-open:after {
+  -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+
+.c1 .Collapsible__trigger.is-disabled {
+  opacity: 0.5;
+  background-color: grey;
+}
+
+.c2 {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: -16px;
+  width: auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 24px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  height: auto;
+  line-height: 32px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.c0 {
+  grid-column: col-start / span 4;
+  background-color: white;
+}
+
+.c0 .css-26l3qy-menu {
+  position: static;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        Filters
+      </div>
+      <form>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Are you looking for a centre or individual?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="NGO"
+                  name="NGO"
+                  type="checkbox"
+                />
+                NGO
+              </label>
+              <label>
+                <input
+                  data-testid="Licensed Psychologist"
+                  name="Licensed Psychologist"
+                  type="checkbox"
+                />
+                Licensed Psychologist
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Location
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <div>
+                <div
+                  class=" css-b62m3t-container"
+                >
+                  <span
+                    class="css-1f43avz-a11yText-A11yText"
+                    id="react-select-2-live-region"
+                  />
+                  <span
+                    aria-atomic="false"
+                    aria-live="polite"
+                    aria-relevant="additions text"
+                    class="css-1f43avz-a11yText-A11yText"
+                  />
+                  <div
+                    class=" css-1s2u09g-control"
+                  >
+                    <div
+                      class=" css-319lph-ValueContainer"
+                    >
+                      <div
+                        class=" css-14el2xx-placeholder"
+                        id="react-select-2-placeholder"
+                      >
+                        Select location
+                      </div>
+                      <div
+                        class=" css-6j8wv5-Input"
+                        data-value=""
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-controls="react-select-2-listbox"
+                          aria-describedby="react-select-2-placeholder"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-owns="react-select-2-listbox"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class=""
+                          id="react-select-2-input"
+                          role="combobox"
+                          spellcheck="false"
+                          style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class=" css-1hb7zxy-IndicatorsContainer"
+                    >
+                      <span
+                        class=" css-1okebmr-indicatorSeparator"
+                      />
+                      <div
+                        aria-hidden="true"
+                        class=" css-tlfecz-indicatorContainer"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-tj5bde-Svg"
+                          focusable="false"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                        >
+                          <path
+                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Who is this for? 
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Toddlers / Preschoolers (0-6 years)"
+                  name="Toddlers / Preschoolers (0-6 years)"
+                  type="checkbox"
+                />
+                Toddlers / Preschoolers (0-6 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Children (6-12 years)"
+                  name="Children (6-12 years)"
+                  type="checkbox"
+                />
+                Children (6-12 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Teenagers / Adolescents (13-19 years)"
+                  name="Teenagers / Adolescents (13-19 years)"
+                  type="checkbox"
+                />
+                Teenagers / Adolescents (13-19 years)
+              </label>
+              <label>
+                <input
+                  data-testid="Adults"
+                  name="Adults"
+                  type="checkbox"
+                />
+                Adults
+              </label>
+              <label>
+                <input
+                  data-testid="Elders (65+)"
+                  name="Elders (65+)"
+                  type="checkbox"
+                />
+                Elders (65+)
+              </label>
+              <label>
+                <input
+                  data-testid="Couples"
+                  name="Couples"
+                  type="checkbox"
+                />
+                Couples
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            What can we help you with?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Anxiety"
+                  name="Anxiety"
+                  type="checkbox"
+                />
+                Anxiety
+              </label>
+              <label>
+                <input
+                  data-testid="Childhood Trauma Therapy"
+                  name="Childhood Trauma Therapy"
+                  type="checkbox"
+                />
+                Childhood Trauma Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Depression"
+                  name="Depression"
+                  type="checkbox"
+                />
+                Depression
+              </label>
+              <label>
+                <input
+                  data-testid="Disaster / Terrorism"
+                  name="Disaster / Terrorism"
+                  type="checkbox"
+                />
+                Disaster / Terrorism
+              </label>
+              <label>
+                <input
+                  data-testid="Domestic Violence"
+                  name="Domestic Violence"
+                  type="checkbox"
+                />
+                Domestic Violence
+              </label>
+              <label>
+                <input
+                  data-testid="Expressive Trauma Therapy"
+                  name="Expressive Trauma Therapy"
+                  type="checkbox"
+                />
+                Expressive Trauma Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Hypnotherapy"
+                  name="Hypnotherapy"
+                  type="checkbox"
+                />
+                Hypnotherapy
+              </label>
+              <label>
+                <input
+                  data-testid="Life / Personal Coaching"
+                  name="Life / Personal Coaching"
+                  type="checkbox"
+                />
+                Life / Personal Coaching
+              </label>
+              <label>
+                <input
+                  data-testid="Life Transition & Adjustment Issues"
+                  name="Life Transition & Adjustment Issues"
+                  type="checkbox"
+                />
+                Life Transition & Adjustment Issues
+              </label>
+              <label>
+                <input
+                  data-testid="Memory loss Therapy"
+                  name="Memory loss Therapy"
+                  type="checkbox"
+                />
+                Memory loss Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Pain Management"
+                  name="Pain Management"
+                  type="checkbox"
+                />
+                Pain Management
+              </label>
+              <label>
+                <input
+                  data-testid="Parenting during Trauma"
+                  name="Parenting during Trauma"
+                  type="checkbox"
+                />
+                Parenting during Trauma
+              </label>
+              <label>
+                <input
+                  data-testid="Pharmacotherapy (medication)"
+                  name="Pharmacotherapy (medication)"
+                  type="checkbox"
+                />
+                Pharmacotherapy (medication)
+              </label>
+              <label>
+                <input
+                  data-testid="Psychoeducation"
+                  name="Psychoeducation"
+                  type="checkbox"
+                />
+                Psychoeducation
+              </label>
+              <label>
+                <input
+                  data-testid="PTSD"
+                  name="PTSD"
+                  type="checkbox"
+                />
+                PTSD
+              </label>
+              <label>
+                <input
+                  data-testid="Sexual Abuse"
+                  name="Sexual Abuse"
+                  type="checkbox"
+                />
+                Sexual Abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Sleeping Disorders"
+                  name="Sleeping Disorders"
+                  type="checkbox"
+                />
+                Sleeping Disorders
+              </label>
+              <label>
+                <input
+                  data-testid="Stress Management"
+                  name="Stress Management"
+                  type="checkbox"
+                />
+                Stress Management
+              </label>
+              <label>
+                <input
+                  data-testid="Substance Abuse"
+                  name="Substance Abuse"
+                  type="checkbox"
+                />
+                Substance Abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Suicide"
+                  name="Suicide"
+                  type="checkbox"
+                />
+                Suicide
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma Group support"
+                  name="Trauma Group support"
+                  type="checkbox"
+                />
+                Trauma Group support
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma-focused cognitive behavioral therapy"
+                  name="Trauma-focused cognitive behavioral therapy"
+                  type="checkbox"
+                />
+                Trauma-focused cognitive behavioral therapy
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Preferred langauges
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Arabic"
+                  name="Arabic"
+                  type="checkbox"
+                />
+                Arabic
+              </label>
+              <label>
+                <input
+                  data-testid="French"
+                  name="French"
+                  type="checkbox"
+                />
+                French
+              </label>
+              <label>
+                <input
+                  data-testid="English"
+                  name="English"
+                  type="checkbox"
+                />
+                English
+              </label>
+              <label>
+                <input
+                  data-testid="Spanish"
+                  name="Spanish"
+                  type="checkbox"
+                />
+                Spanish
+              </label>
+              <label>
+                <input
+                  data-testid="Sign language"
+                  name="Sign language"
+                  type="checkbox"
+                />
+                Sign language
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Appointments
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Virtual"
+                  name="Virtual"
+                  type="checkbox"
+                />
+                Virtual
+              </label>
+              <label>
+                <input
+                  data-testid="In person"
+                  name="In person"
+                  type="checkbox"
+                />
+                In person
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Price
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Free service"
+                  name="Free service"
+                  type="checkbox"
+                />
+                Free service
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Name of mental health professional or organization
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <div
+                class="c3"
+              >
+                <div
+                  class="c4"
+                >
+                  <input
+                    class="c5"
+                    data-testid="text"
+                    name="text"
+                    placeholder="Search by name"
+                    type="text"
+                  />
+                </div>
+                <div
+                  class="c6"
+                >
+                  <img
+                    height="12.5"
+                    src="Search.svg"
+                    width="12.5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

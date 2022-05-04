@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the DirectoryPage component should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  display: grid;
+  grid-template-columns: repeat(12,[col-start] 1fr);
+  gap: 24px;
+  background-color: inherit;
+  max-width: 960px;
+  width: 100%;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-top: 40px;
+}
+
+.c2 {
+  grid-column: col-start 5 / span 8;
+}
+
+@media (max-width:768px) {
+  .c2 {
+    grid-row: 2;
+    grid-column: col-start 1 / span 12;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div>
+      Banner
+    </div>
+    <div
+      class="c1"
+    >
+      <div>
+        Sidebar
+      </div>
+      <div
+        class="c2"
+      >
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;

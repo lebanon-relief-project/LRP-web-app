@@ -13,10 +13,6 @@ exports[`the HomePage component should match the snapshot 1`] = `
 }
 
 .c1 {
-  max-width: 1440px;
-}
-
-.c2 {
   background-color: #fafafa;
 }
 
@@ -25,7 +21,6 @@ exports[`the HomePage component should match the snapshot 1`] = `
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 5%;
   }
 }
 
@@ -34,7 +29,7 @@ exports[`the HomePage component should match the snapshot 1`] = `
     class="c0"
   >
     <div
-      class="c1"
+      class=""
     >
       <div>
         What happened section
@@ -43,7 +38,7 @@ exports[`the HomePage component should match the snapshot 1`] = `
         Our Mission section
       </div>
       <div
-        class="c2"
+        class="c1"
       >
         <div>
           Help section
