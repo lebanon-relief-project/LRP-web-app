@@ -48,7 +48,7 @@ jobs:
       # Push the image to IBM Container Registry
       - name: Push the image to ICR
         run: |
-          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$GITHUB_SHA
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${GITHUB_REF##*/}
 
       # Deploy to Code Engine
       # - name: Deploy to Code Engine
