@@ -13,7 +13,6 @@ env:
   REGISTRY_HOSTNAME: de.icr.io
   IMAGE_NAME: lrn-app-prod
   PORT: 3000
-  GITHUB_REF: ${{github.ref}}
 
 jobs:
   setup-build-publish-deploy:
