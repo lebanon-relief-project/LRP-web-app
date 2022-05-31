@@ -9,9 +9,11 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
   IBM_CLOUD_REGION: eu-de
-  ICR_NAMESPACE: lrn-registry-prod
+  ICR_NAMESPACE_PROD: lrn-registry-prod
+  ICR_NAMESPACE_TEST: lrn-registry-test
   REGISTRY_HOSTNAME: de.icr.io
-  IMAGE_NAME: lrn-app-prod
+  IMAGE_NAME_PROD: lrn-app-prod
+  IMAGE_NAME_TEST: lrn-app-test
   PORT: 3000
 
 jobs:
@@ -38,17 +40,20 @@ jobs:
           ibmcloud cr region-set "${IBM_CLOUD_REGION}"
           ibmcloud cr login
 
-      # Build the Docker image
-      - name: Build with Docker
+      # Pull the candidate image from test
+      - name: Pull the image from test ICR
         run: |
-          docker build -t "$REGISTRY_HOSTNAME"/"$ICR_NAMESPACE"/"$IMAGE_NAME":"${GITHUB_REF##*/}" \
-            --build-arg GITHUB_SHA="$GITHUB_SHA" \
-            --build-arg GITHUB_REF="$GITHUB_REF" .
-
+          docker pull $REGISTRY_HOSTNAME/$ICR_NAMESPACE_TEST/$IMAGE_NAME_TEST:$GITHUB_SHA
+          
+      # Tag the candidate image to be ready for prod
+      - name: Tag the image from test to be ready for prod
+        run: |
+          docker tag $REGISTRY_HOSTNAME/$ICR_NAMESPACE_TEST/$IMAGE_NAME_TEST:$GITHUB_SHA $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
+      
       # Push the image to IBM Container Registry
-      - name: Push the image to ICR
+      - name: Push the image to prod ICR
         run: |
-          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:${GITHUB_REF##*/}
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
 
       # Deploy to Code Engine
       # - name: Deploy to Code Engine
