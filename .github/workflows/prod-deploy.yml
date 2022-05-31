@@ -13,7 +13,7 @@ env:
   ICR_NAMESPACE_TEST: lrn-registry-test
   REGISTRY_HOSTNAME: de.icr.io
   IMAGE_NAME_PROD: lrn-app-prod
-  IMAGE_NAME_TEST: lrn-app-test
+  IMAGE_NAME_TEST: lrn-app
   PORT: 3000
 
 jobs:
