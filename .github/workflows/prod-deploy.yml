@@ -56,8 +56,8 @@ jobs:
           docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
 
       # Deploy to Code Engine
-      # - name: Deploy to Code Engine
-      #   run: |
-      #     ibmcloud target -r eu-de
-      #     ibmcloud ce project select -n LRN-web-app
-      #     ibmcloud ce application update --name=lrn-test --image=$REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$GITHUB_SHA
+      - name: Deploy to Code Engine
+        run: |
+          ibmcloud target -r eu-de
+          ibmcloud ce project select -n LRN-web-app
+          ibmcloud ce application update --name=lrn-prod --image=$REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
