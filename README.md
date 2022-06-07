@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Welcome to Lebanon Relief Network. This README will serve as a high level guide for how to contribute to the project
+Welcome to Lebanon Relief Network. This README will serve as a high level guide for how to contribute to the project.
 
 1. [Introduction](#introduction)
 1. [Project Description](#project-description)
