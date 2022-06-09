@@ -16,10 +16,10 @@ export function getCosCredentials(): CosCredentials {
 
   try {
     endpoint = COS_URL; 
-    apikey = VCAP["cloud-object-storage"][0].credentials.apikey;
-    resourceInstanceId = VCAP["cloud-object-storage"][0].credentials.resource_instance_id;
-    accessKeyId = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.access_key_id;
-    secretAccessKey = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.secret_access_key;
+    apikey = VCAP["cloud-object-storage"][0].credentials.apikey.trim();
+    resourceInstanceId = VCAP["cloud-object-storage"][0].credentials.resource_instance_id.trim();
+    accessKeyId = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.access_key_id.trim();
+    secretAccessKey = VCAP["cloud-object-storage"][0].credentials.cos_hmac_keys.secret_access_key.trim();
   } catch (error) {
     console.error(error);
   }
