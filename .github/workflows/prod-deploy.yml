@@ -48,16 +48,16 @@ jobs:
       # Tag the candidate image to be ready for prod
       - name: Tag the image from test to be ready for prod
         run: |
-          docker tag $REGISTRY_HOSTNAME/$ICR_NAMESPACE_TEST/$IMAGE_NAME_TEST:$GITHUB_SHA $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
+          docker tag $REGISTRY_HOSTNAME/$ICR_NAMESPACE_TEST/$IMAGE_NAME_TEST:$GITHUB_SHA $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${{ github.event.release.name }}
       
       # Push the image to IBM Container Registry
       - name: Push the image to prod ICR
         run: |
-          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
+          docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${{ github.event.release.name }}
 
       # Deploy to Code Engine
       - name: Deploy to Code Engine
         run: |
           ibmcloud target -r eu-de
           ibmcloud ce project select -n LRN-web-app
-          ibmcloud ce application update --name=lrn-prod --image=$REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${GITHUB_REF##*/}
+          ibmcloud ce application update --name=lrn-prod --image=$REGISTRY_HOSTNAME/$ICR_NAMESPACE_PROD/$IMAGE_NAME_PROD:${{ github.event.release.name }}
