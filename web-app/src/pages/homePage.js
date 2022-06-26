@@ -28,12 +28,11 @@ const StyledPage = styled.div`
   display: flex;
   justify-content: center;
   @media (max-width: ${devices.mobile}) {
-    flex-direction: column;c
+    flex-direction: column;
   }
 `;
 
-const PageContainer = styled.div`
-`;
+const PageContainer = styled.div``;
 
 const HelpSectionWrapper = styled.div`
   background-color: ${colours.lightGrey};
