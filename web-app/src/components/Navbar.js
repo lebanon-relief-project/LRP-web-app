@@ -107,7 +107,6 @@ const StyledUl = styled.ul`
 `;
 
 const StyledLi = styled.li`
-
   text-align: center;
 
   @media (max-width: ${devices.mobile}) {
@@ -179,6 +178,10 @@ const StyledNavContentWrapper = styled.div`
   max-width: 960px;
   display: flex;
   min-width: ${devices.mobile};
-`
+
+  @media (max-width: ${devices.mobile}) {
+    min-width: 0px;
+  }
+`;
 
 export default Navbar;
