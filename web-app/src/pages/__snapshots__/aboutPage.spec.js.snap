@@ -118,7 +118,7 @@ exports[`the AboutPage component should match the snapshot 1`] = `
   background-color: #ffffff;
 }
 
-@media (max-width:576px) {
+@media (max-width:768px) {
   .c2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;

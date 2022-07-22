@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import CardGroup from "./core/CardGroup";
 import LikeToHelpModal from "./LikeToHelpModal";
@@ -80,10 +80,10 @@ const StyledSection = styled.div`
   width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding-bottom: 20px;
-  padding-top: 79px;
-  @media (max-width: ${devices.mobile}) {
-    padding-top: 20px;
+  padding: 4rem 0rem;
+
+  @media (max-width: ${devices.ipadpro}) {
+    padding: 4rem 2rem;
   }
 `;
 
