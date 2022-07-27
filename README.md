@@ -62,6 +62,7 @@ We are a group international volunteers, working in design and development.
 ### Developers
 
 - [Antonio D'aria](https://www.linkedin.com/in/antonio-d-aria-59383046/)
+- [Emily Ransley](https://www.linkedin.com/in/emily-ransley-77bb54b7/)
 - [Matej Ocovsky](https://www.linkedin.com/in/matej-ocovsky-63322ab5/)
 - [Nick Morgan](https://www.linkedin.com/in/nick-morgan-30301a82/)
 - [Piers Walter](https://www.linkedin.com/in/piers-walter/)
@@ -77,8 +78,8 @@ We are a group international volunteers, working in design and development.
 
 ## Live site URLs
 
-- Dev app: https://lrn-dev.eu-de.mybluemix.net/
-- Test app: https://lrn-test.eu-de.mybluemix.net/
+- Dev app: https://lrn-dev-2.eu-de.mybluemix.net/
+- Test app: https://lrn-test-2.eu-de.mybluemix.net/
 
 ## Cloud Architecture
 
