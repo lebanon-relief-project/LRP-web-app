@@ -131,6 +131,12 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
 
 }
 
+@media (max-width:576px) {
+  .c1 {
+    min-width: 0px;
+  }
+}
+
 <div>
   <nav
     class="c0"
@@ -300,6 +306,12 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
 
 @media (max-width:576px) {
 
+}
+
+@media (max-width:576px) {
+  .c1 {
+    min-width: 0px;
+  }
 }
 
 <div>
