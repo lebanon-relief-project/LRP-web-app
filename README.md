@@ -78,8 +78,8 @@ We are a group international volunteers, working in design and development.
 
 ## Live site URLs
 
-- Dev app: https://lrn-dev-2.eu-de.mybluemix.net/
-- Test app: https://lrn-test-2.eu-de.mybluemix.net/
+- Dev app: https://lrn-dev.ms8hqls2o6p.eu-de.codeengine.appdomain.cloud/
+- Test app: https://lrn-test.ms8hqls2o6p.eu-de.codeengine.appdomain.cloud/
 
 ## Cloud Architecture
 

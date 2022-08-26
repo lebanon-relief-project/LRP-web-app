@@ -62,6 +62,11 @@ const StyledHands = styled.img`
     width: 50%;
     min-width: 400px;
   }
+
+  @media (max-width: ${devices.mobile}) {
+    width: 100%;
+    min-width: 0px;
+  }
 `;
 
 export default OurMission;

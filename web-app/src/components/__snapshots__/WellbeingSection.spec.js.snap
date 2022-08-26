@@ -89,7 +89,7 @@ exports[`the WellbeingSection component should match the snapshot 1`] = `
 }
 
 .c3 {
-  max-width: 19rem;
+  max-width: 80%;
   margin: auto;
 }
 
