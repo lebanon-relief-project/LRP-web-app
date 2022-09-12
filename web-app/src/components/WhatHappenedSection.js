@@ -14,8 +14,8 @@ const WhatHappened = () => {
           <StyledTextArea>
             <StyledTitle>Lebanon Relief Network</StyledTitle>
             <StyledParagraph>
-              Lebanon’s troubled history has contributed to a growing mental
-              health crisis in the country. 70% of Lebanon’s residents and
+              Lebanon's troubled history has contributed to a growing mental
+              health crisis in the country. 70% of Lebanon's residents and
               diaspora community have experienced symptoms of trauma, at some
               point in their life.
             </StyledParagraph>
