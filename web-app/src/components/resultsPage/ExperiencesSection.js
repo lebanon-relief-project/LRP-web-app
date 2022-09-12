@@ -56,8 +56,8 @@ const ExperiencesSection = () => {
             <StyledHeader>From the experiences you've shared...</StyledHeader>
             <TextWrapper>
               <StyledDiv>
-                We have pulled together some tailored advice and exercises to help
-                you cope with trauma and how you are feeling.
+                We have pulled together some tailored advice and exercises to
+                help you cope with trauma and how you are feeling.
               </StyledDiv>
               <StyledDiv>
                 {peopleData.map((person, i) => (
@@ -74,7 +74,8 @@ const ExperiencesSection = () => {
                   <PercentageNumber>{percentage}%</PercentageNumber>
                   <PercentageText>
                     of Lebanese residents and expatriates are estimated to have
-                    experienced traumatic symptoms after the 4th of August blast.
+                    experienced traumatic symptoms after the 4th of August
+                    blast.
                   </PercentageText>
                 </FlexBox>
               </StyledDiv>
@@ -133,6 +134,18 @@ const TextWrapper = styled.div`
   flex-wrap: wrap;
 `;
 
+const StyledDiv = styled.div`
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: ${colours.white};
+
+  @media (max-width: ${devices.mobile}) {
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
 const CentralWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -146,8 +159,13 @@ const CentralWrapper = styled.div`
   width: 100%;
 
   @media (max-width: ${devices.mobile}) {
-    min-height: 366px;
-    margin-top: 20px;
+    height: 393px;
+
+    ${
+      "" /* ${StyledDiv}:last-child {
+      margin-bottom: 25px;
+    } */
+    }
   }
 `;
 
@@ -155,7 +173,7 @@ const WidthConstraint = styled.div`
   width: 100%;
   max-width: 960px;
   margin: auto;
-`
+`;
 
 const CentralContentWrapper = styled.div`
   display: flex;
@@ -163,12 +181,12 @@ const CentralContentWrapper = styled.div`
   background-color: transparent;
   max-width: 765px;
 
-  @media (max-width: ${devices.mobile}) {
-    margin: 0 18px;
-  }
-
   @media (max-width: ${devices.ipadpro}) {
     margin: 0 10%;
+  }
+
+  @media (max-width: ${devices.mobile}) {
+    margin: 0 18px;
   }
 `;
 
@@ -213,14 +231,14 @@ const StyledSection = styled.div`
   display: flex;
   background: ${colours.darkBlue};
   margin: 0;
-  margin-top: 64px;
+  margin-top: 80px;
   padding: 0;
   width: 100%;
   height: 363px;
   z-index: 0;
 
   @media (max-width: ${devices.mobile}) {
-    height: 386px;
+    height: 393px;
   }
 `;
 
@@ -233,18 +251,6 @@ const StyledHeader = styled.h2`
 
   @media (max-width: ${devices.mobile}) {
     font-size: 30px;
-  }
-`;
-
-const StyledDiv = styled.div`
-  margin: 0;
-  margin-bottom: 1rem;
-  font-size: 16px;
-  color: ${colours.white};
-
-  @media (max-width: ${devices.mobile}) {
-    display: flex;
-    justify-content: space-around;
   }
 `;
 
