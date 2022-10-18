@@ -46,7 +46,7 @@ const BannerContent = styled.div`
   padding-bottom: 40px;
   flex-direction: column;
 
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipadpro}) {
     padding: 18px;
     padding-top: 20px;
     padding-bottom: 25px;

@@ -57,7 +57,7 @@ exports[`the Banner component should match the snapshot 1`] = `
   }
 }
 
-@media (max-width:576px) {
+@media (max-width:1025px) {
   .c1 {
     padding: 18px;
     padding-top: 20px;
