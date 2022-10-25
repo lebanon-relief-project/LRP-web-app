@@ -87,7 +87,7 @@ exports[`the Banner component should match the snapshot 1`] = `
       <p
         class="c3"
       >
-        The DMHE is a service provided by Lebanon Relief Network. In Lebanon, there are many dedicated psychotrauma experts and services available. Please use one or more of the following fields to search for the mental health expert offering the service you require. NB. The information is up to date but not updated regularly.
+        The DMHE is a service provided by Lebanon Relief Network. In Lebanon, there are many dedicated psychotrauma experts and services available. Please use one or more of the following fields to search for the mental health expert offering the service you require.
       </p>
       <p
         class="c3"
