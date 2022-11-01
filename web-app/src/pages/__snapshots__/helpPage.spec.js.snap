@@ -117,7 +117,7 @@ exports[`the HelpPage component should match the snapshot 1`] = `
   display: flex;
   background: #002766;
   margin: 0;
-  margin-top: 64px;
+  margin-top: 80px;
   padding: 0;
   width: 100vw;
   height: 410px;
