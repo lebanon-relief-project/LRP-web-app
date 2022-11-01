@@ -27,14 +27,19 @@ const TraumaticEvents = () => {
                 Trauma usually occurs after a deeply distressing or disturbing
                 event, which may manifest as changes in feelings, thoughts, or
                 behaviors. Trauma may also be less obvious, manifesting as a
-                normal reaction to an abnormal event. It is important to keep in
-                mind that trauma is unique to each individual. Any small or big
-                distressing event can trigger it, and everyone experiences
-                trauma differently. It can be collective and widespread, such as
-                pandemics or economic crises, but it also can be individual and
-                specific, such as abuse or the death of a loved one. One may
-                also suffer from trauma without having experienced an event
-                first hand, but rather by caring for someone who has or by
+                normal reaction to an abnormal event.
+              </StyledParagraph>
+              <StyledParagraph>
+                It is important to keep in mind that trauma is unique to each
+                individual. Any small or big distressing event can trigger it,
+                and everyone experiences trauma differently. It can be
+                collective and widespread, such as pandemics or economic crises,
+                but it also can be individual and specific, such as abuse or the
+                death of a loved one.
+              </StyledParagraph>
+              <StyledParagraph>
+                One may also suffer from trauma without having experienced an
+                event first hand, but rather by caring for someone who has or by
                 simply watching the news.
               </StyledParagraph>
             </TextWrapper>
@@ -146,10 +151,16 @@ const StyledSection = styled.div`
   margin-top: 64px;
   padding: 0;
   width: 100vw;
-  height: 363px;
+  height: 410px;
   z-index: 0;
 
+  @media (max-width: ${devices.ipad}) {
+    margin-top: 80px;
+    ${"" /* height: 560px */}
+  }
+
   @media (max-width: ${devices.mobile}) {
+    margin-top: 80px;
     height: 560px;
   }
 `;
