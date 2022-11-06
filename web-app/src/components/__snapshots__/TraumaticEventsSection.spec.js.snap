@@ -12,7 +12,6 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 25px;
 }
 
 .c5 {
@@ -140,6 +139,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c8 {
+    margin-bottom: 25px;
     margin-top: 15px;
   }
 }

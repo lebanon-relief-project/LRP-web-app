@@ -54,8 +54,9 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+
   @media (max-width: ${devices.mobile}) {
+    margin-bottom: 25px;
     margin-top: 15px;
   }
 `;
