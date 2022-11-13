@@ -11,6 +11,9 @@ import MessageIcon from "../../assets/images/Message.svg";
 import MailIcon from "../../assets/images/Mail.png";
 import GlobeIcon from "../../assets/images/Globe.svg";
 import PhoneIcon from "../../assets/images/Phone.svg";
+import FreeIcon from "../../assets/images/Free.svg";
+import GlobalIcon from "../../assets/images/Global.svg";
+import VirtualIcon from "../../assets/images/Virtual.svg";
 
 const DirectoryPage = () => {
   return (
@@ -142,13 +145,41 @@ const DirectoryPage = () => {
                   style={{ display: "flex", flexDirection: "column", gap: 10 }}
                 >
                   <h4>Services offered</h4>
-                  <div style={{ display: "flex", flexFlow: "wrap", gap: 8 }}>
-                    <Tag>Therapy one</Tag>
-                    <Tag>Therapy two</Tag>
-                    <Tag>Therapy three</Tag>
-                    <Tag>Therapy four</Tag>
-                    <Tag>Therapy five</Tag>
-                    <Tag>Therapy six</Tag>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 24,
+                    }}
+                  >
+                    <div style={{ display: "flex", flexFlow: "wrap", gap: 8 }}>
+                      <Tag>Therapy one</Tag>
+                      <Tag>Therapy two</Tag>
+                      <Tag>Therapy three</Tag>
+                      <Tag>Therapy four</Tag>
+                      <Tag>Therapy five</Tag>
+                      <Tag>Therapy six</Tag>
+                    </div>
+                    <div style={{ display: "flex", flexFlow: "wrap", gap: 15 }}>
+                      <img
+                        src={FreeIcon}
+                        height={36}
+                        width={36}
+                        alt="free_icon"
+                      />
+                      <img
+                        src={GlobalIcon}
+                        height={36}
+                        width={36}
+                        alt="global_icon"
+                      />
+                      <img
+                        src={VirtualIcon}
+                        height={36}
+                        width={36}
+                        alt="virtual_icon"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
