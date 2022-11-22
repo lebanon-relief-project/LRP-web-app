@@ -33,6 +33,35 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
   grid-column: col-start 5 / span 8;
 }
 
+.c2 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c2 h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0px;
+}
+
+.c2 h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0px;
+}
+
+.c2 p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px;
+}
+
 @media (max-width:768px) {
   .c2 {
     grid-row: 2;
@@ -56,7 +85,9 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
       <div
         class="c2"
       >
-        Test
+        <div>
+          No therapists found
+        </div>
       </div>
     </div>
   </div>

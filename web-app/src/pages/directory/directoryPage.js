@@ -1,18 +1,185 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 
 import Banner from "./components/Banner";
 import Sidebar from "./components/Sidebar";
 import devices from "../../styles/Devices";
 
+import TherapistIcon from "../../assets/images/TherapistIcon.svg";
+import LocationIcon from "../../assets/images/Location.svg";
+import MessageIcon from "../../assets/images/Message.svg";
+import MailIcon from "../../assets/images/Mail.png";
+import GlobeIcon from "../../assets/images/Globe.svg";
+import PhoneIcon from "../../assets/images/Phone.svg";
+import FreeIcon from "../../assets/images/Free.svg";
+import GlobalIcon from "../../assets/images/Global.svg";
+import VirtualIcon from "../../assets/images/Virtual.svg";
+import { getTherapists } from "../../services/therapists.service";
+
+const TherapistCard = (props) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flex: 1,
+        flexDirection: "column",
+        gap: 20,
+        // backgroundColor: "yellow",
+        boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.25)",
+        borderRadius: 6,
+        padding: 30,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+
+          borderBottom: "1px solid #003A8C",
+          paddingBottom: 20,
+          // backgroundColor: "green",
+          gap: 24,
+        }}
+      >
+        <img src={props.avatar} width={110} height={110} alt="therapist_icon" />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+          }}
+        >
+          <h3>{props.name}</h3>
+          <div
+            style={{
+              display: "flex",
+              marginTop: 10,
+              // backgroundColor: "red",
+              columnGap: "20px",
+              rowGap: 10,
+              flexFlow: "wrap",
+              width: "100%",
+            }}
+          >
+            <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
+              <img
+                src={LocationIcon}
+                alt="location_icon"
+                width={20}
+                height={20}
+              />
+              {props.location}
+            </div>
+            <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
+              <img
+                src={MessageIcon}
+                alt="location_icon"
+                width={20}
+                height={20}
+              />
+              {props.languages && props.languages.join(", ")}
+            </div>
+            <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
+              <img src={GlobeIcon} alt="location_icon" width={20} height={20} />
+              {props.website}
+            </div>
+            <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
+              <img src={MailIcon} alt="location_icon" width={20} height={20} />
+              {props.email}
+            </div>
+            <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
+              <img src={PhoneIcon} alt="location_icon" width={20} height={20} />
+              {props.phoneNumber}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <h4>Bio</h4>
+          <p>{props.bio}</p>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <h4>Services offered</h4>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 24,
+            }}
+          >
+            <div style={{ display: "flex", flexFlow: "wrap", gap: 8 }}>
+              {Object.keys(props.therapyServices).map((key, index) => {
+                if (props.therapyServices[key] === true) {
+                  return <Tag key={index}>{key}</Tag>;
+                }
+              })}
+            </div>
+            <div style={{ display: "flex", flexFlow: "wrap", gap: 15 }}>
+              <img src={FreeIcon} height={36} width={36} alt="free_icon" />
+              <img src={GlobalIcon} height={36} width={36} alt="global_icon" />
+              <img
+                src={VirtualIcon}
+                height={36}
+                width={36}
+                alt="virtual_icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const DirectoryPage = () => {
+  const [therapists, setTherapists] = useState([]);
+
+  const retrieveTherapists = async () => {
+    const result = await getTherapists();
+
+    setTherapists(result);
+  };
+
+  useEffect(() => {
+    retrieveTherapists();
+  }, []);
+
+  const TherapistsList = useCallback(() => {
+    if (therapists && therapists.length > 0) {
+      return (
+        <>
+          {therapists.map((therapistData) => {
+            return (
+              <TherapistCard
+                name={therapistData.firstName + " " + therapistData.lastName}
+                bio={therapistData.bio}
+                location={therapistData.location}
+                languages={therapistData.languages}
+                website={therapistData.website}
+                email={therapistData.email}
+                phoneNumber={therapistData.phoneNumber}
+                therapyServices={therapistData.therapyServices}
+                avatar={therapistData.picture}
+              />
+            );
+          })}
+        </>
+      );
+    } else {
+      return <div>No therapists found</div>;
+    }
+  }, [therapists]);
+
   return (
     <>
       <StyledPage>
         <Banner />
         <StyledContent>
           <Sidebar />
-          <StyledMainArea>Test</StyledMainArea>
+          <StyledMainArea>
+            <TherapistsList />
+          </StyledMainArea>
         </StyledContent>
       </StyledPage>
     </>
@@ -24,6 +191,17 @@ const StyledPage = styled.div`
   justify-content: center;
   height: auto;
   flex-direction: column;
+`;
+
+const Tag = styled.div`
+  background: #fff2e8;
+  border-radius: 6px;
+  padding: 10px 3px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 `;
 
 const StyledContent = styled.div`
@@ -39,6 +217,35 @@ const StyledContent = styled.div`
 
 const StyledMainArea = styled.div`
   grid-column: col-start 5 / span 8;
+
+  div {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0px;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0px;
+  }
+
+  p {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px;
+  }
 
   @media (max-width: ${devices.ipad}) {
     grid-row: 2;
