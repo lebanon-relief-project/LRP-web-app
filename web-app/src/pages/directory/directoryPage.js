@@ -41,7 +41,12 @@ const TherapistCard = (props) => {
           gap: 24,
         }}
       >
-        <img src={props.avatar} width={110} height={110} alt="therapist_icon" />
+        <img
+          src={props.avatar}
+          width={110}
+          style={{ objectFit: "contain" }}
+          alt="therapist_icon"
+        />
         <div
           style={{
             display: "flex",
@@ -81,20 +86,27 @@ const TherapistCard = (props) => {
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={GlobeIcon} alt="location_icon" width={20} height={20} />
-              {props.website}
+              <a href={props.website}>{props.website}</a>
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={MailIcon} alt="location_icon" width={20} height={20} />
-              {props.email}
+
+              <a href={`mailto: ${props.email}`}>{props.email}</a>
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={PhoneIcon} alt="location_icon" width={20} height={20} />
-              {props.phoneNumber}
+              <a href={`tel: ${props.phoneNumber}`}>{props.phoneNumber}</a>
             </div>
           </div>
         </div>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          columnGap: 10,
+        }}
+      >
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <h4>Bio</h4>
           <p>{props.bio}</p>
@@ -243,7 +255,7 @@ const StyledMainArea = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 18px;
     margin: 0px;
   }
 
