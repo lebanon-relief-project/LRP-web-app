@@ -15,6 +15,7 @@ import FreeIcon from "../../assets/images/Free.svg";
 import GlobalIcon from "../../assets/images/Global.svg";
 import VirtualIcon from "../../assets/images/Virtual.svg";
 import { getTherapists } from "../../services/therapists.service";
+import { relative } from "path";
 
 const TherapistCard = (props) => {
   return (
@@ -28,8 +29,41 @@ const TherapistCard = (props) => {
         boxShadow: "0px 1px 3px rgba(0, 0, 0, 0.25)",
         borderRadius: 6,
         padding: 30,
+        position: "relative",
       }}
     >
+      <div
+        style={{
+          position: "absolute",
+          right: 0,
+          backgroundColor: "#BAE7FF",
+          padding: "0px 10px 0px 0px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 5,
+        }}
+      >
+        <div
+          style={{
+            width: 0,
+            height: 0,
+            borderTop: "15px solid transparent",
+            borderLeft: "10px solid #FFFFFF",
+            borderBottom: "15px solid transparent",
+          }}
+        ></div>
+        <div
+          style={{
+            fontFamily: "Playfair Display",
+            fontWeight: 700,
+            fontSize: 16,
+            lineHeight: "24px",
+          }}
+        >
+          {props.legalPersonality}{" "}
+        </div>
+      </div>
       <div
         style={{
           display: "flex",
@@ -150,6 +184,8 @@ const DirectoryPage = () => {
   const retrieveTherapists = async () => {
     const result = await getTherapists();
 
+    console.log(result);
+
     setTherapists(result);
   };
 
@@ -173,6 +209,7 @@ const DirectoryPage = () => {
                 phoneNumber={therapistData.phoneNumber}
                 therapyServices={therapistData.therapyServices}
                 avatar={therapistData.picture}
+                legalPersonality={therapistData.legalPersonality}
               />
             );
           })}
@@ -212,8 +249,8 @@ const Tag = styled.div`
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 16px;
 `;
 
 const StyledContent = styled.div`
@@ -255,7 +292,7 @@ const StyledMainArea = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
     margin: 0px;
   }
 
