@@ -120,7 +120,9 @@ const TherapistCard = (props) => {
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={GlobeIcon} alt="location_icon" width={20} height={20} />
-              <a href={props.website}>{props.website}</a>
+              <a target="_blank" href={props.website}>
+                {props.website}
+              </a>
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={MailIcon} alt="location_icon" width={20} height={20} />
@@ -162,14 +164,33 @@ const TherapistCard = (props) => {
               })}
             </div>
             <div style={{ display: "flex", flexFlow: "wrap", gap: 15 }}>
-              <img src={FreeIcon} height={36} width={36} alt="free_icon" />
-              <img src={GlobalIcon} height={36} width={36} alt="global_icon" />
-              <img
-                src={VirtualIcon}
-                height={36}
-                width={36}
-                alt="virtual_icon"
-              />
+              {props.freeService && (
+                <img
+                  src={FreeIcon}
+                  height={36}
+                  width={36}
+                  alt="free_icon"
+                  title="Free service"
+                />
+              )}
+              {props.internationalPaymentsOnly && (
+                <img
+                  src={GlobalIcon}
+                  height={36}
+                  width={36}
+                  alt="global_icon"
+                  title="Internation payments only"
+                />
+              )}
+              {props.f2fSession === false && (
+                <img
+                  src={VirtualIcon}
+                  height={36}
+                  width={36}
+                  alt="virtual_icon"
+                  title="Remote sessions"
+                />
+              )}
             </div>
           </div>
         </div>
@@ -184,8 +205,6 @@ const DirectoryPage = () => {
   const retrieveTherapists = async () => {
     const result = await getTherapists();
 
-    console.log(result);
-
     setTherapists(result);
   };
 
@@ -196,7 +215,7 @@ const DirectoryPage = () => {
   const TherapistsList = useCallback(() => {
     if (therapists && therapists.length > 0) {
       return (
-        <>
+        <div style={{ display: "flex", flexDirection: "column", rowGap: 24 }}>
           {therapists.map((therapistData) => {
             return (
               <TherapistCard
@@ -210,10 +229,15 @@ const DirectoryPage = () => {
                 therapyServices={therapistData.therapyServices}
                 avatar={therapistData.picture}
                 legalPersonality={therapistData.legalPersonality}
+                freeService={therapistData.freeService}
+                internationalPaymentsOnly={
+                  therapistData.internationalPaymentsOnly
+                }
+                f2fSession={therapistData.f2fSession}
               />
             );
           })}
-        </>
+        </div>
       );
     } else {
       return <div>No therapists found</div>;
