@@ -53,6 +53,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   flex-wrap: wrap;
 }
 
+.c9 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: #ffffff;
+}
+
 .c4 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -155,7 +162,7 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   display: flex;
   background: #002766;
   margin: 0;
-  margin-top: 64px;
+  margin-top: 80px;
   padding: 0;
   width: 100%;
   height: 363px;
@@ -167,13 +174,6 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
   font-size: 38px;
   margin: 0;
   width: inherit;
-  color: #ffffff;
-}
-
-.c9 {
-  margin: 0;
-  margin-bottom: 1rem;
-  font-size: 16px;
   color: #ffffff;
 }
 
@@ -202,21 +202,33 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 }
 
 @media (max-width:576px) {
-  .c4 {
-    min-height: 366px;
-    margin-top: 20px;
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
   }
 }
 
 @media (max-width:576px) {
-  .c6 {
-    margin: 0 18px;
+  .c4 {
+    height: 393px;
   }
 }
 
 @media (max-width:1025px) {
   .c6 {
     margin: 0 10%;
+  }
+}
+
+@media (max-width:576px) {
+  .c6 {
+    margin: 0 18px;
   }
 }
 
@@ -246,26 +258,13 @@ exports[`the TraumaticEvents component should match the snapshot 1`] = `
 
 @media (max-width:576px) {
   .c0 {
-    height: 386px;
+    height: 393px;
   }
 }
 
 @media (max-width:576px) {
   .c7 {
     font-size: 30px;
-  }
-}
-
-@media (max-width:576px) {
-  .c9 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
-    justify-content: space-around;
   }
 }
 
