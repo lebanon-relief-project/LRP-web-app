@@ -12,7 +12,7 @@ export const CLOUDANT_FLASHCARD_SELECT_DB_DEV =
 export const CLOUDANT_FLASHCARD_SELECT_COUNTS_DB_DEV =
   process.env.CLOUDANT_FLASHCARD_SELECT_COUNTS_DB ||
   "dev_flashcard_select_counts";
-export const CLOUDANT_PSYCHOTHERAPISTS_DB_DEV = "dev_therapists";
+export const CLOUDANT_PSYCHOTHERAPISTS_DB_DEV = process.env.CLOUDANT_THERAPISTS_DB || "dev_therapists";
 export const CLOUDANT_OURVALUESCARD_DB = "ourvaluescard";
 
 // CONTENT
