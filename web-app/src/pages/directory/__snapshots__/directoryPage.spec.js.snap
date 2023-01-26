@@ -181,7 +181,7 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
                       width="20"
                     />
                     <a
-                      href="mailto: string"
+                      href="mailto:string"
                     >
                       string
                     </a>

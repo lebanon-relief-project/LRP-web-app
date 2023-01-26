@@ -127,7 +127,7 @@ const TherapistCard = (props) => {
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={MailIcon} alt="location_icon" width={20} height={20} />
 
-              <a href={`mailto: ${props.email}`}>{props.email}</a>
+              <a href={`mailto:${props.email}`}>{props.email}</a>
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={PhoneIcon} alt="location_icon" width={20} height={20} />
