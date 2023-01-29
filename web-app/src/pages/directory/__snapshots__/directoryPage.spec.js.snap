@@ -245,6 +245,13 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
                       title="Free service"
                       width="36"
                     />
+                    <img
+                      alt="virtual_icon"
+                      height="36"
+                      src="Virtual.svg"
+                      title="Remote sessions"
+                      width="36"
+                    />
                   </div>
                 </div>
               </div>

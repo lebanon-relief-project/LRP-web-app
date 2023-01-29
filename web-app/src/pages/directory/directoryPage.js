@@ -182,7 +182,7 @@ const TherapistCard = (props) => {
                   title="Internation payments only"
                 />
               )}
-              {props.f2fSession === false && (
+              {props.remoteSession && (
                 <img
                   src={VirtualIcon}
                   height={36}
@@ -234,6 +234,7 @@ const DirectoryPage = () => {
                   therapistData.internationalPaymentsOnly
                 }
                 f2fSession={therapistData.f2fSession}
+                remoteSession={therapistData.remoteSession}
               />
             );
           })}
