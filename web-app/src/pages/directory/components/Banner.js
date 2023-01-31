@@ -12,8 +12,7 @@ const Banner = () => {
             The DMHE is a service provided by Lebanon Relief Network. In
             Lebanon, there are many dedicated psychotrauma experts and services
             available. Please use one or more of the following fields to search
-            for the mental health expert offering the service you require. NB.
-            The information is up to date but not updated regularly.
+            for the mental health expert offering the service you require.
           </BannerText>
           <BannerText>
             NB. The information is up to date but not updated regularly.
@@ -46,7 +45,7 @@ const BannerContent = styled.div`
   padding-bottom: 40px;
   flex-direction: column;
 
-  @media (max-width: ${devices.mobile}) {
+  @media (max-width: ${devices.ipadpro}) {
     padding: 18px;
     padding-top: 20px;
     padding-bottom: 25px;

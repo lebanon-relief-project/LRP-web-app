@@ -1,5 +1,5 @@
 # Build Stage
-FROM node:14-slim AS builder
+FROM node:16.16.0-slim AS builder
 
 WORKDIR /opt/app-root/src
 
@@ -9,7 +9,7 @@ RUN npm run install_all
 
 RUN npm run build
 
-FROM node:14-slim
+FROM node:16.16.0-slim
 
 COPY --from=builder /opt/app-root/src/dist dist
 COPY --from=builder /opt/app-root/src/public public

@@ -17,7 +17,7 @@ const TraumaticEvents = () => {
           <img src={HelpPageRightBackground} alt={"background"} />
         </HeaderRightImageWrapper>
       </HeaderWrapper>
-      
+
       <CentralWrapper>
         <WidthConstraint>
           <CentralContentWrapper>
@@ -31,11 +31,11 @@ const TraumaticEvents = () => {
               </StyledParagraph>
               <StyledParagraph>
                 It is important to keep in mind that trauma is unique to each
-                individual. Any small or big distressing event can trigger it, and
-                everyone experiences trauma differently. It can be collective and
-                widespread, such as pandemics or economic crises, but it also can
-                be individual and specific, such as abuse or the death of a loved
-                one.
+                individual. Any small or big distressing event can trigger it,
+                and everyone experiences trauma differently. It can be
+                collective and widespread, such as pandemics or economic crises,
+                but it also can be individual and specific, such as abuse or the
+                death of a loved one.
               </StyledParagraph>
               <StyledParagraph>
                 One may also suffer from trauma without having experienced an
@@ -54,7 +54,9 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   @media (max-width: ${devices.mobile}) {
+    margin-bottom: 25px;
     margin-top: 15px;
   }
 `;
@@ -62,7 +64,7 @@ const TextWrapper = styled.div`
 const WidthConstraint = styled.div`
   width: inherit;
   max-width: 960px;
-`
+`;
 
 const CentralWrapper = styled.div`
   display: flex;
@@ -147,13 +149,19 @@ const StyledSection = styled.div`
   display: flex;
   background: ${colours.darkBlue};
   margin: 0;
-  margin-top: 64px;
+  margin-top: 80px;
   padding: 0;
   width: 100vw;
-  height: 363px;
+  height: 410px;
   z-index: 0;
 
+  @media (max-width: ${devices.ipad}) {
+    margin-top: 80px;
+    ${"" /* height: 560px */}
+  }
+
   @media (max-width: ${devices.mobile}) {
+    margin-top: 80px;
     height: 560px;
   }
 `;

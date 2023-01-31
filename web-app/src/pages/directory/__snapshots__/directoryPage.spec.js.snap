@@ -16,6 +16,17 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
   flex-direction: column;
 }
 
+.c3 {
+  background: #fff2e8;
+  border-radius: 6px;
+  padding: 10px 3px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 .c1 {
   display: grid;
   grid-template-columns: repeat(12,[col-start] 1fr);
@@ -31,6 +42,35 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
 
 .c2 {
   grid-column: col-start 5 / span 8;
+}
+
+.c2 div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.c2 h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0px;
+}
+
+.c2 h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0px;
+}
+
+.c2 p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0px;
 }
 
 @media (max-width:768px) {
@@ -56,7 +96,169 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
       <div
         class="c2"
       >
-        Test
+        <div
+          style="display: flex; flex-direction: column; row-gap: 24px;"
+        >
+          <div
+            style="display: flex; flex: 1; flex-direction: column; gap: 20px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); border-radius: 6px; padding: 30px; position: relative;"
+          >
+            <div
+              style="position: absolute; right: 0px; background-color: rgb(186, 231, 255); padding: 0px 10px 0px 0px; display: flex; align-items: center; justify-content: center; gap: 5px;"
+            >
+              <div
+                style="width: 0px; height: 0px; border-top: 15px solid transparent; border-left: 10px solid #FFFFFF; border-bottom: 15px solid transparent;"
+              />
+              <div
+                style="font-family: Playfair Display; font-weight: 700; font-size: 16px; line-height: 24px;"
+              >
+                string
+                 
+              </div>
+            </div>
+            <div
+              style="display: flex; flex: 1; border-bottom: 1px solid #003A8C; padding-bottom: 20px; gap: 24px;"
+            >
+              <img
+                alt="therapist_icon"
+                src="string"
+                style="object-fit: contain;"
+                width="110"
+              />
+              <div
+                style="display: flex; flex-direction: column; width: 100%;"
+              >
+                <h3>
+                  test string
+                </h3>
+                <div
+                  style="display: flex; margin-top: 10px; column-gap: 20px; row-gap: 10px; flex-flow: wrap; width: 100%;"
+                >
+                  <div
+                    style="display: flex; gap: 5px;"
+                  >
+                    <img
+                      alt="location_icon"
+                      height="20"
+                      src="Location.svg"
+                      width="20"
+                    />
+                    string
+                  </div>
+                  <div
+                    style="display: flex; gap: 5px;"
+                  >
+                    <img
+                      alt="location_icon"
+                      height="20"
+                      src="Message.svg"
+                      width="20"
+                    />
+                    test
+                  </div>
+                  <div
+                    style="display: flex; gap: 5px;"
+                  >
+                    <img
+                      alt="location_icon"
+                      height="20"
+                      src="Globe.svg"
+                      width="20"
+                    />
+                    <a
+                      href="string"
+                      target="_blank"
+                    >
+                      string
+                    </a>
+                  </div>
+                  <div
+                    style="display: flex; gap: 5px;"
+                  >
+                    <img
+                      alt="location_icon"
+                      height="20"
+                      src="Mail.png"
+                      width="20"
+                    />
+                    <a
+                      href="mailto:string"
+                      target="_blank"
+                    >
+                      string
+                    </a>
+                  </div>
+                  <div
+                    style="display: flex; gap: 5px;"
+                  >
+                    <img
+                      alt="location_icon"
+                      height="20"
+                      src="Phone.svg"
+                      width="20"
+                    />
+                    <a
+                      href="tel: string"
+                    >
+                      string
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 10px;"
+            >
+              <div
+                style="display: flex; flex-direction: column; gap: 10px;"
+              >
+                <h4>
+                  Bio
+                </h4>
+                <p>
+                  string
+                </p>
+              </div>
+              <div
+                style="display: flex; flex-direction: column; gap: 10px;"
+              >
+                <h4>
+                  Services offered
+                </h4>
+                <div
+                  style="display: flex; flex-direction: column; gap: 24px;"
+                >
+                  <div
+                    style="display: flex; flex-flow: wrap; gap: 8px;"
+                  >
+                    <div
+                      class="c3"
+                    >
+                      string
+                    </div>
+                  </div>
+                  <div
+                    style="display: flex; flex-flow: wrap; gap: 15px;"
+                  >
+                    <img
+                      alt="free_icon"
+                      height="36"
+                      src="Free.svg"
+                      title="Free service"
+                      width="36"
+                    />
+                    <img
+                      alt="virtual_icon"
+                      height="36"
+                      src="Virtual.svg"
+                      title="Remote sessions"
+                      width="36"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
