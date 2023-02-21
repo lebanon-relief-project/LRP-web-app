@@ -139,22 +139,24 @@ const SideBarWrapper = styled.div`
     background-color: inherit;
     display: flex;
     flex-direction: column;
-
+    font-size: 14px;
+    color: #262626;
     margin-top: 10px;
     ${"" /* padding-bottom: 20px; */}
 
     input {
       margin-right: 8px;
+      margin-bottom: 8px;
     }
   }
 
   .Collapsible__trigger {
     display: block;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     position: relative;
 
-    color: black;
+    color: #262626;
     font-size: 16px;
 
     cursor: pointer;

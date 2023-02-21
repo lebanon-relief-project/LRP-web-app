@@ -80,20 +80,23 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-size: 14px;
+  color: #262626;
   margin-top: 10px;
 }
 
 .c1 .Collapsible__contentInner input {
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .c1 .Collapsible__trigger {
   display: block;
-  font-weight: 400;
+  font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
-  color: black;
+  color: #262626;
   font-size: 16px;
   cursor: pointer;
 }
@@ -881,20 +884,23 @@ exports[`the Sidebar component should match the snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  font-size: 14px;
+  color: #262626;
   margin-top: 10px;
 }
 
 .c1 .Collapsible__contentInner input {
   margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 .c1 .Collapsible__trigger {
   display: block;
-  font-weight: 400;
+  font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
-  color: black;
+  color: #262626;
   font-size: 16px;
   cursor: pointer;
 }
