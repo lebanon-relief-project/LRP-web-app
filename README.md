@@ -95,13 +95,11 @@ The solution is a web-based platform.
 
 ### IBM Cloud Services
 
-- [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview)
-- [IBM Toolchain](https://cloud.ibm.com/devops/create)
+- [IBM Code Engine](https://cloud.ibm.com/codeengine/overview)
 - [IBM Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
 - [IBM Cloud Object Storage](https://cloud.ibm.com/catalog/services/cloud-object-storage)
-- [IBM Watson Discovery](https://cloud.ibm.com/catalog/services/discovery)
-- [IBM Key Protect](https://cloud.ibm.com/catalog/services/key-protect)
-- [Sendgrid](https://cloud.ibm.com/catalog/infrastructure/email-delivery)
+- [IBM Container Registry](https://cloud.ibm.com/registry/catalog)
+- [GitHub Actions](https://github.com/features/actions)
 
 ## Available Scripts
 
@@ -146,7 +144,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Version
 
-v0.1
+v1.0
 
 ## License
 
