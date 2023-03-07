@@ -94,3 +94,95 @@ export const samplePsychotherapistCloudantResponse: PsychotherapistCloudantRespo
       },
     ],
   };
+
+export const samplePsychotherapistCloudantResponseDuplicated: PsychotherapistCloudantResponse =
+  {
+    total_rows: 2,
+    offset: 0,
+    rows: [
+      {
+        id: "test_id_1",
+        key: "test key",
+        value: {},
+        doc: {
+          firstName: "string",
+          lastName: "string",
+          bio: "string",
+          remoteSession: true,
+          f2fSession: true,
+          location: "string",
+          therapyServices: {
+            theraphyService: true,
+          },
+          licenseNumber: "string",
+          emergencyPhoneNumber: "string",
+          consentData: {
+            name: "string",
+            data: "string",
+            dateOfConsent: new Date(2021, 11, 17),
+            deletionRequest: true,
+            dateOfDeletionRequest: new Date(2022, 11, 17),
+          },
+          website: "string",
+          email: "string",
+          patientGroups: {
+            patientGroup: true,
+          },
+          supportedGenders: {
+            Male: true,
+            Female: true,
+          },
+          legalPersonality: "string",
+          phoneNumber: "string",
+          picture: "string",
+          therapistGender: "string",
+          languages: ["English"],
+          internationalPaymentsOnly: true,
+          freeService: true,
+          bookingApp: "string",
+        },
+      },
+      {
+        id: "test_id_1",
+        key: "test key",
+        value: {},
+        doc: {
+          firstName: "string",
+          lastName: "string",
+          bio: "string",
+          remoteSession: true,
+          f2fSession: true,
+          location: "string",
+          therapyServices: {
+            theraphyService: true,
+          },
+          licenseNumber: "string",
+          emergencyPhoneNumber: "string",
+          consentData: {
+            name: "string",
+            data: "string",
+            dateOfConsent: new Date(2021, 11, 17),
+            deletionRequest: true,
+            dateOfDeletionRequest: new Date(2022, 11, 17),
+          },
+          website: "string",
+          email: "string",
+          patientGroups: {
+            patientGroup: true,
+          },
+          supportedGenders: {
+            Male: true,
+            Female: true,
+          },
+          legalPersonality: "string",
+          phoneNumber: "string",
+          picture: "string",
+          therapistGender: "string",
+          languages: ["English"],
+          internationalPaymentsOnly: true,
+          freeService: true,
+          bookingApp: "string",
+        },
+      },
+    ],
+  };
