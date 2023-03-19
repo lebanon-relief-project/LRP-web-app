@@ -231,6 +231,17 @@ describe("The psychotherapist service", () => {
       );
     });
 
+    it("should return empty array if the view has returned no rows matching our filter", async () => {
+      mockView.mockResolvedValue({ rows: [] });
+      const mockFilter: FilterType = {
+        languages: ["test"],
+      };
+
+      result = await psychotherapistService.getPsychotherapists(mockFilter);
+
+      expect(result).toEqual({ psychotherapists: [] });
+    });
+
     it("should return a psythotherapist from the cloudant database that matches the filter and no duplicated records", async () => {
       expect(result.psychotherapists.length).toBe(1);
 
