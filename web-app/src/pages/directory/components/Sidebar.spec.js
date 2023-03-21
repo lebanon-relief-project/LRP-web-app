@@ -58,4 +58,32 @@ describe("the Sidebar component", () => {
 
     expect(checkbox).toHaveProperty("checked", false);
   });
+
+  it("should call onFilterChange when filter is changed", () => {
+    let mockOnFilterChange = jest.fn();
+    const { container, getByText, getByTestId } = render(
+      <Sidebar onFilterChange={mockOnFilterChange} />
+    );
+
+    let clickable = getByText("Are you looking for a centre or individual?");
+
+    act(() => {
+      fireEvent.click(clickable);
+    });
+
+    let checkbox = getByTestId("NGO");
+
+    act(() => {
+      fireEvent.click(checkbox);
+    });
+
+    expect(mockOnFilterChange).toHaveBeenCalledWith(
+      expect.objectContaining({
+        "Are you looking for a centre or individual?": {
+          "Licensed Psychologist": false,
+          NGO: true,
+        },
+      })
+    );
+  });
 });

@@ -617,7 +617,7 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
             id="collapsible-trigger-1482363367071"
             role="button"
           >
-            Preferred langauges
+            Preferred languages
           </span>
           <div
             aria-labelledby="collapsible-trigger-1482363367071"
@@ -1421,7 +1421,7 @@ exports[`the Sidebar component should match the snapshot 1`] = `
             id="collapsible-trigger-1482363367071"
             role="button"
           >
-            Preferred langauges
+            Preferred languages
           </span>
           <div
             aria-labelledby="collapsible-trigger-1482363367071"

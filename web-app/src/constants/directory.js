@@ -63,7 +63,7 @@ export const collapsiblesInitial = {
     "Trauma Group support": false,
     "Trauma-focused cognitive behavioral therapy": false,
   },
-  "Preferred langauges": {
+  "Preferred languages": {
     Arabic: false,
     French: false,
     English: false,

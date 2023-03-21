@@ -84,8 +84,8 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
           const seen = new Set();
 
           response.psychotherapists = response.psychotherapists.filter((el) => {
-            const duplicate = seen.has(el.id);
-            seen.add(el.id);
+            const duplicate = seen.has(el._id);
+            seen.add(el._id);
             return !duplicate;
           });
 
