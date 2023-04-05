@@ -1,8 +1,15 @@
-import { Get, InternalServerError, JsonController } from "routing-controllers";
+import {
+  Get,
+  InternalServerError,
+  JsonController,
+  QueryParam,
+} from "routing-controllers";
 import { LoggerApi } from "../logger";
 import { PsychotherapistService } from "../services";
 import { Inject } from "typedi";
 import { PsychotherapistResponse } from "src/types/Psychotherapist";
+import { FilterQueryParam, FilterType } from "src/types/Filter";
+import { sanitizeFilter } from "../util/filter-util";
 
 @JsonController("/api/psychotherapists")
 export class PsychotherapistController {
@@ -17,9 +24,13 @@ export class PsychotherapistController {
   }
 
   @Get()
-  async getPsychotherapists(): Promise<PsychotherapistResponse> {
+  async getPsychotherapists(
+    @QueryParam("filter") filter?: FilterQueryParam
+  ): Promise<PsychotherapistResponse> {
     try {
-      return this.service.getPsychotherapists();
+      if (filter)
+        return this.service.getPsychotherapists(sanitizeFilter(filter));
+      else return this.service.getPsychotherapists();
     } catch (exception) {
       throw new InternalServerError(`failed to get Psychotherapists`);
     }

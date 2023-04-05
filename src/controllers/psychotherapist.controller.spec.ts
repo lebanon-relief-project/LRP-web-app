@@ -2,6 +2,7 @@ import { InternalServerError } from "routing-controllers";
 import Container from "typedi";
 import { PsychotherapistService } from "../services";
 import { samplePsychotherapistsResponse } from "../types/sampleData/PsychotherapistData";
+import * as FilterUtil from "../util/filter-util";
 import { MockLogger } from "../util/test-util";
 import { PsychotherapistController } from "./psychotherapist.controller";
 
@@ -13,6 +14,8 @@ class MockPsychotherapistService {
 }
 
 Container.set(PsychotherapistService, new MockPsychotherapistService());
+
+const sanitizeSpy = jest.spyOn(FilterUtil, "sanitizeFilter");
 
 describe("The Psychotherapist Controller", () => {
   let controller: PsychotherapistController;
@@ -26,6 +29,21 @@ describe("The Psychotherapist Controller", () => {
     let response = await controller.getPsychotherapists();
 
     expect(mockGetPsychotherapists).toHaveBeenCalledTimes(1);
+
+    expect(response).toEqual(samplePsychotherapistsResponse);
+  });
+
+  it("should call to sanitizeFilter function when filter is supplied", async () => {
+    mockGetPsychotherapists.mockResolvedValue(samplePsychotherapistsResponse);
+    let response = await controller.getPsychotherapists({
+      languages: ["english"],
+    });
+
+    expect(sanitizeSpy).toHaveBeenCalledTimes(1);
+    expect(sanitizeSpy).toHaveBeenCalledWith({
+      languages: ["english"],
+    });
+
     expect(response).toEqual(samplePsychotherapistsResponse);
   });
 

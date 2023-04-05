@@ -7,9 +7,14 @@ import devices from "../../../styles/Devices";
 import { collapsiblesInitial } from "../../../constants/directory";
 import SearchIcon from "../../../assets/images/Search.svg";
 import Select from "react-select";
+import { useEffect } from "react";
 
-const Sidebar = () => {
+const Sidebar = ({ onFilterChange }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
+
+  useEffect(() => {
+    if (onFilterChange) onFilterChange(collapsibles);
+  }, [collapsibles]);
 
   return (
     <>

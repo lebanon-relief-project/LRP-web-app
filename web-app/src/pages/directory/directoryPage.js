@@ -205,10 +205,23 @@ const TherapistCard = (props) => {
 const DirectoryPage = () => {
   const [therapists, setTherapists] = useState([]);
 
-  const retrieveTherapists = async () => {
-    const result = await getTherapists();
+  const retrieveTherapists = async (filter) => {
+    if (filter) {
+      let adaptedFilter = {
+        languages: Object.keys(filter["Preferred languages"]).filter(
+          (value) => {
+            return filter["Preferred languages"][value] === true;
+          }
+        ),
+      };
 
-    setTherapists(result);
+      const result = await getTherapists(adaptedFilter);
+      setTherapists(result);
+    } else {
+      const result = await getTherapists();
+
+      setTherapists(result);
+    }
   };
 
   useEffect(() => {
@@ -253,7 +266,12 @@ const DirectoryPage = () => {
       <StyledPage>
         <Banner />
         <StyledContent>
-          <Sidebar />
+          <Sidebar
+            onFilterChange={(filter) => {
+              console.log(filter);
+              retrieveTherapists(filter);
+            }}
+          />
           <StyledMainArea>
             <TherapistsList />
           </StyledMainArea>

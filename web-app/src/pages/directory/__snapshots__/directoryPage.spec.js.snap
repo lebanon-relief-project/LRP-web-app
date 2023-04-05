@@ -90,7 +90,9 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
     <div
       class="c1"
     >
-      <div>
+      <div
+        data-testid="sidebar"
+      >
         Sidebar
       </div>
       <div
