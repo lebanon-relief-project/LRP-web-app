@@ -12,7 +12,18 @@ jest.mock("./components/Banner", (props) => {
 });
 
 jest.mock("./components/Sidebar", () => {
-  return () => <div>Sidebar</div>;
+  return (props) => {
+    return (
+      <div
+        data-testid="sidebar"
+        onClick={() => {
+          props.onFilterChange({ "Preferred languages": { English: true } });
+        }}
+      >
+        Sidebar
+      </div>
+    );
+  };
 });
 
 jest.mock("../../services/therapists.service");
@@ -20,8 +31,6 @@ jest.mock("../../services/therapists.service");
 const getTherapistsSpy = jest.spyOn(therapistService, "getTherapists");
 
 Date.now = jest.fn(() => 1482363367071);
-
-// jest.useFakeTimers();
 
 const mockTherapistsResponse = [
   {
@@ -66,5 +75,17 @@ describe("the DirectoryPage component", () => {
 
     await wait();
     expect(container).toMatchSnapshot();
+  });
+
+  it("should retrieve therapists when filter executes onFilterChange", async () => {
+    getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
+    const { container, getByTestId } = render(<DirectoryPage />);
+
+    fireEvent.click(getByTestId("sidebar"));
+
+    await wait();
+    expect(getTherapistsSpy).toHaveBeenNthCalledWith(2, {
+      languages: ["English"],
+    });
   });
 });

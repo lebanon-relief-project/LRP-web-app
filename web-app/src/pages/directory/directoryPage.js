@@ -127,7 +127,9 @@ const TherapistCard = (props) => {
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={MailIcon} alt="location_icon" width={20} height={20} />
 
-              <a href={`mailto:${props.email}`} target="_blank">{props.email}</a>
+              <a href={`mailto:${props.email}`} target="_blank">
+                {props.email}
+              </a>
             </div>
             <div style={{ display: "flex", gap: 5, height: "fit-content" }}>
               <img src={PhoneIcon} alt="location_icon" width={20} height={20} />
@@ -157,11 +159,12 @@ const TherapistCard = (props) => {
             }}
           >
             <div style={{ display: "flex", flexFlow: "wrap", gap: 8 }}>
-              {Object.keys(props.therapyServices).map((key, index) => {
-                if (props.therapyServices[key] === true) {
-                  return <Tag key={index}>{key}</Tag>;
-                }
-              })}
+              {props.therapyServices &&
+                Object.keys(props.therapyServices).map((key, index) => {
+                  if (props.therapyServices[key] === true) {
+                    return <Tag key={index}>{key}</Tag>;
+                  }
+                })}
             </div>
             <div style={{ display: "flex", flexFlow: "wrap", gap: 15 }}>
               {props.freeService && (
@@ -202,10 +205,23 @@ const TherapistCard = (props) => {
 const DirectoryPage = () => {
   const [therapists, setTherapists] = useState([]);
 
-  const retrieveTherapists = async () => {
-    const result = await getTherapists();
+  const retrieveTherapists = async (filter) => {
+    if (filter) {
+      let adaptedFilter = {
+        languages: Object.keys(filter["Preferred languages"]).filter(
+          (value) => {
+            return filter["Preferred languages"][value] === true;
+          }
+        ),
+      };
 
-    setTherapists(result);
+      const result = await getTherapists(adaptedFilter);
+      setTherapists(result);
+    } else {
+      const result = await getTherapists();
+
+      setTherapists(result);
+    }
   };
 
   useEffect(() => {
@@ -250,7 +266,12 @@ const DirectoryPage = () => {
       <StyledPage>
         <Banner />
         <StyledContent>
-          <Sidebar />
+          <Sidebar
+            onFilterChange={(filter) => {
+              console.log(filter);
+              retrieveTherapists(filter);
+            }}
+          />
           <StyledMainArea>
             <TherapistsList />
           </StyledMainArea>
