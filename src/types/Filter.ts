@@ -1,5 +1,8 @@
 export interface FilterType {
+  services?: string[];
+  appointments?: string[];
   languages?: string[];
+  patientgroups?: string[];
 }
 
 export interface FilterQueryParam {

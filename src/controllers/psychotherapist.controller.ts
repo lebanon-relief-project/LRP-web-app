@@ -28,6 +28,7 @@ export class PsychotherapistController {
     @QueryParam("filter") filter?: FilterQueryParam
   ): Promise<PsychotherapistResponse> {
     try {
+      console.log(filter);
       if (filter)
         return this.service.getPsychotherapists(sanitizeFilter(filter));
       else return this.service.getPsychotherapists();

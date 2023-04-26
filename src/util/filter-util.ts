@@ -3,6 +3,9 @@ import { FilterType } from "src/types/Filter";
 export function sanitizeFilter(unSafeFilter: any): FilterType {
   const schema: Record<keyof FilterType, string> = {
     languages: "string",
+    services: "string",
+    appointments: "string",
+    patientgroups: "string",
   };
 
   let cleanFilter: FilterType = {};
@@ -24,6 +27,8 @@ export function sanitizeFilter(unSafeFilter: any): FilterType {
       }
     }
   });
+
+  console.log(cleanFilter);
 
   return cleanFilter;
 }

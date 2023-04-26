@@ -30,10 +30,10 @@ export const collapsiblesInitial = {
       { Online: false },
     ],
   },
-  "Who is this for? ": {
-    "Toddlers / Preschoolers (0-6 years)": false,
+  "Who is this for?": {
+    "Toddlers and Preschoolers (0 to 6 years)": false,
     "Children (6-12 years)": false,
-    "Teenagers / Adolescents (13-19 years)": false,
+    "Adolescents and Young Adults (13-19 years)": false,
     Adults: false,
     "Elders (65+)": false,
     Couples: false,

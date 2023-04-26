@@ -213,6 +213,19 @@ const DirectoryPage = () => {
             return filter["Preferred languages"][value] === true;
           }
         ),
+        services: Object.keys(filter["What can we help you with?"]).filter(
+          (value) => {
+            return filter["What can we help you with?"][value] === true;
+          }
+        ),
+        appointments: Object.keys(filter["Appointments"]).filter((value) => {
+          return filter["Appointments"][value] === true;
+        }),
+        patientgroups: Object.keys(filter["Who is this for?"]).filter(
+          (value) => {
+            return filter["Who is this for?"][value] === true;
+          }
+        ),
       };
 
       const result = await getTherapists(adaptedFilter);
@@ -268,7 +281,6 @@ const DirectoryPage = () => {
         <StyledContent>
           <Sidebar
             onFilterChange={(filter) => {
-              console.log(filter);
               retrieveTherapists(filter);
             }}
           />
