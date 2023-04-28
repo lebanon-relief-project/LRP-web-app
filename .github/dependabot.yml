@@ -5,6 +5,3 @@ updates:
     target-branch: "dev"
     schedule:
       interval: "daily"
-    # Labels on pull requests for security and version updates
-    labels:
-      - "npm dependencies"
