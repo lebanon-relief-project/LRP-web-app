@@ -15,7 +15,6 @@ import FreeIcon from "../../assets/images/Free.svg";
 import GlobalIcon from "../../assets/images/Global.svg";
 import VirtualIcon from "../../assets/images/Virtual.svg";
 import { getTherapists } from "../../services/therapists.service";
-import { relative } from "path";
 
 const TherapistCard = (props) => {
   return (
