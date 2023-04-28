@@ -11,6 +11,27 @@ import { InternalServerError } from "routing-controllers";
 import { CLOUDANT_PSYCHOTHERAPISTS_DB_DEV } from "../statics";
 import { FilterType } from "src/types/Filter";
 
+async function getTherapistsFromView(
+  viewName: string,
+  keys: any = [],
+  dbInstance: DocumentScope<Psychotherapist>
+) {
+  const psychotherapists = [];
+
+  const viewResponse = await dbInstance.view("therapistsDesignDoc", viewName, {
+    keys: keys,
+    include_docs: true,
+  });
+
+  viewResponse.rows.map((row) => {
+    if (row.doc) {
+      psychotherapists.push(row.doc);
+    }
+  });
+
+  return psychotherapists;
+}
+
 @Service()
 export class PsychotherapistService implements PsychotherapistServiceApi {
   private logger: LoggerApi;
@@ -67,29 +88,75 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         );
       }
     } else {
-      if (filter.languages) {
+      const availableViews = {
+        languages: "therapistsByLanguages",
+        appointments: "therapistsByAppointments",
+        services: "therapistsByServices",
+        patientgroups: "therapistsByPatientGroups",
+      };
+
+      const allPsychotherapists = [];
+
+      if (filter.patientgroups) {
         try {
-          const viewResponse = await this.psychotherapistDb.view(
-            "therapistsDesignDoc",
-            "therapistsByLanguages",
-            { keys: filter.languages, include_docs: true }
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.patientgroups,
+            filter.patientgroups,
+            this.psychotherapistDb
           );
 
-          viewResponse.rows.map((row) => {
-            if (row.doc) {
-              response.psychotherapists.push(row.doc);
-            }
-          });
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            "getPsychotherapists: Failed to retrieve psychotherapists"
+          );
+        }
+      }
 
-          const seen = new Set();
+      if (filter.appointments) {
+        try {
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.appointments,
+            filter.appointments,
+            this.psychotherapistDb
+          );
 
-          response.psychotherapists = response.psychotherapists.filter((el) => {
-            const duplicate = seen.has(el._id);
-            seen.add(el._id);
-            return !duplicate;
-          });
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            "getPsychotherapists: Failed to retrieve psychotherapists"
+          );
+        }
+      }
 
-          return response;
+      if (filter.services) {
+        try {
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.services,
+            filter.services,
+            this.psychotherapistDb
+          );
+
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            "getPsychotherapists: Failed to retrieve psychotherapists"
+          );
+        }
+      }
+
+      if (filter.languages) {
+        try {
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.languages,
+            filter.languages,
+            this.psychotherapistDb
+          );
+
+          allPsychotherapists.push(...psychotherapists);
         } catch (error) {
           this.logger.error(error);
           throw new InternalServerError(
@@ -98,7 +165,15 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         }
       }
 
-      return { psychotherapists: [] };
+      const seen = new Set();
+
+      response.psychotherapists = allPsychotherapists.filter((el) => {
+        const duplicate = seen.has(el._id);
+        seen.add(el._id);
+        return !duplicate;
+      });
+
+      return response;
     }
   }
 }

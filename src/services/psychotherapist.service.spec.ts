@@ -219,16 +219,96 @@ describe("The psychotherapist service", () => {
       mockView.mockResolvedValue(
         samplePsychotherapistCloudantResponseDuplicated
       );
-
-      result = await psychotherapistService.getPsychotherapists(mockFilter);
     });
 
-    it("should call the cloudant service with correct arguments", () => {
+    it("should call the cloudant service with correct arguments", async () => {
+      result = await psychotherapistService.getPsychotherapists(mockFilter);
       expect(mockView).toHaveBeenCalledWith(
         "therapistsDesignDoc",
         "therapistsByLanguages",
         { keys: ["english"], include_docs: true }
       );
+    });
+
+    it("should call cloudant service with correct arguments when filter for services is supplied", async () => {
+      const mockFilter: FilterType = {
+        services: ["service"],
+      };
+
+      await psychotherapistService.getPsychotherapists(mockFilter);
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByServices",
+        { keys: ["service"], include_docs: true }
+      );
+    });
+
+    it("should call cloudant service with correct arguments when filter for appointment type is supplied", async () => {
+      const mockFilter: FilterType = {
+        appointments: ["f2fSession"],
+      };
+
+      await psychotherapistService.getPsychotherapists(mockFilter);
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByAppointments",
+        { keys: ["f2fSession"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledTimes(1);
+    });
+
+    it("should call cloudant service with correct arguments when filter for patient groups is supplied", async () => {
+      const mockFilter: FilterType = {
+        patientgroups: ["patientGroup"],
+      };
+
+      await psychotherapistService.getPsychotherapists(mockFilter);
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByPatientGroups",
+        { keys: ["patientGroup"], include_docs: true }
+      );
+    });
+
+    it("should call cloudant service with correct arguments when all filters are supplied", async () => {
+      const mockFilter: FilterType = {
+        languages: ["english"],
+        services: ["service"],
+        appointments: ["f2fSession"],
+        patientgroups: ["patientGroup"],
+      };
+
+      await psychotherapistService.getPsychotherapists(mockFilter);
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByLanguages",
+        { keys: ["english"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByServices",
+        { keys: ["service"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByAppointments",
+        { keys: ["f2fSession"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByPatientGroups",
+        { keys: ["patientGroup"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledTimes(4);
     });
 
     it("should return empty array if the view has returned no rows matching our filter", async () => {
@@ -243,6 +323,8 @@ describe("The psychotherapist service", () => {
     });
 
     it("should return a psythotherapist from the cloudant database that matches the filter and no duplicated records", async () => {
+      result = await psychotherapistService.getPsychotherapists(mockFilter);
+
       expect(result.psychotherapists.length).toBe(1);
 
       expect(result).toEqual({

@@ -17,7 +17,12 @@ jest.mock("./components/Sidebar", () => {
       <div
         data-testid="sidebar"
         onClick={() => {
-          props.onFilterChange({ "Preferred languages": { English: true } });
+          props.onFilterChange({
+            "Preferred languages": { English: true },
+            "What can we help you with?": { Anxiety: true },
+            Appointments: { Virtual: true },
+            "Who is this for?": { Adults: true },
+          });
         }}
       >
         Sidebar
@@ -69,7 +74,7 @@ afterEach(() => {
 });
 
 describe("the DirectoryPage component", () => {
-  it("should match the snapshot", async () => {
+  fit("should match the snapshot", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
     const { container } = render(<DirectoryPage />);
 
@@ -77,15 +82,18 @@ describe("the DirectoryPage component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("should retrieve therapists when filter executes onFilterChange", async () => {
+  fit("should retrieve therapists when filter executes onFilterChange", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
-    const { container, getByTestId } = render(<DirectoryPage />);
+    const { getByTestId } = render(<DirectoryPage />);
 
     fireEvent.click(getByTestId("sidebar"));
 
     await wait();
     expect(getTherapistsSpy).toHaveBeenNthCalledWith(2, {
       languages: ["English"],
+      services: ["Anxiety"],
+      appointments: ["Virtual"],
+      patientgroups: ["Adults"],
     });
   });
 });
