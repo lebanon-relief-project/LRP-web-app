@@ -64,7 +64,7 @@
     "@types/supertest": "^2.0.8",
     "@types/yargs": "^15.0.4",
     "babel-jest": "^25.2.4",
-    "husky": "^4.3.0",
+    "husky": "^8.0.3",
     "jest": "^25.2.4",
     "jest-localstorage-mock": "^2.4.6",
     "jest-plugin-context": "^2.9.0",
