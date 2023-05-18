@@ -25,60 +25,26 @@ const Sidebar = ({ onFilterChange }) => {
           <form>
             {Object.keys(collapsibles).map((key, index) => {
               return (
-                <Collapsible key={`${key}_${index}`} trigger={key}>
-                  {Object.keys(collapsibles[key]).map((value, index2) => {
-                    if (value === "options") {
-                      return (
-                        <div key={`${value}-${index2}`}>
-                          <Select
-                            isSearchable={true}
-                            isClearable={true}
-                            placeholder="Select location"
-                            options={collapsibles[key][value].map((item) => {
-                              let val = Object.keys(item)[0];
-                              return { value: val, label: val };
-                            })}
-                          />
-                        </div>
-                      );
-                    }
-                    if (value === "text") {
-                      return (
-                        <SearchBox key={`${value}_${index}`}>
-                          <SearchInputContainer>
-                            <SearchInput
-                              data-testid={value}
-                              name={`${value}`}
-                              type="text"
-                              placeholder="Search by name"
-                              onChange={(evt) => {
-                                let collapsiblesCopy = { ...collapsibles };
-                                collapsiblesCopy[key][value] = evt.target.value;
-                                setCollapsibles({ ...collapsiblesCopy });
-                              }}
-                            />
-                          </SearchInputContainer>
-                          <SearchIconContainer>
-                            <img width={12.5} height={12.5} src={SearchIcon} />
-                          </SearchIconContainer>
-                        </SearchBox>
-                      );
-                    }
+                <Collapsible
+                  key={`${key}_${index}`}
+                  trigger={collapsibles[key].label}
+                >
+                  {collapsibles[key].options.map((option, index2) => {
                     return (
-                      <label key={`${value}_${index}`}>
+                      <label key={`${option.label}_${index}`}>
                         <input
-                          data-testid={value}
-                          name={`${value}`}
+                          data-testid={option.label}
+                          name={`${option.label}`}
                           type="checkbox"
-                          checked={collapsibles[key][value]}
+                          checked={option.selected}
                           onChange={() => {
                             let collapsiblesCopy = { ...collapsibles };
-                            collapsiblesCopy[key][value] =
-                              !collapsiblesCopy[key][value];
+                            collapsiblesCopy[key].options[index2].selected =
+                              !collapsiblesCopy[key].options[index2].selected;
                             setCollapsibles({ ...collapsiblesCopy });
                           }}
                         />
-                        {value}
+                        {option.label}
                       </label>
                     );
                   })}

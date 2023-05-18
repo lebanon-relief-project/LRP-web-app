@@ -206,32 +206,18 @@ const DirectoryPage = () => {
 
   const retrieveTherapists = async (filter) => {
     if (filter) {
-      let adaptedFilter = {
-        languages: Object.keys(filter["Preferred languages"]).filter(
-          (value) => {
-            return filter["Preferred languages"][value] === true;
-          }
-        ),
-        services: Object.keys(filter["What can we help you with?"]).filter(
-          (value) => {
-            return filter["What can we help you with?"][value] === true;
-          }
-        ),
-        appointments: Object.keys(filter["Appointments"]).filter((value) => {
-          return filter["Appointments"][value] === true;
-        }),
-        patientgroups: Object.keys(filter["Who is this for?"]).filter(
-          (value) => {
-            return filter["Who is this for?"][value] === true;
-          }
-        ),
-      };
+      let adaptedFilter = {};
+
+      for (let filterKey in filter) {
+        adaptedFilter[filterKey] = filter[filterKey].options
+          .filter((option) => option.selected === true)
+          .map((option) => option.value);
+      }
 
       const result = await getTherapists(adaptedFilter);
       setTherapists(result);
     } else {
       const result = await getTherapists();
-
       setTherapists(result);
     }
   };

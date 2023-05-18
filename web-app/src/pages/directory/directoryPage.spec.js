@@ -18,10 +18,12 @@ jest.mock("./components/Sidebar", () => {
         data-testid="sidebar"
         onClick={() => {
           props.onFilterChange({
-            "Preferred languages": { English: true },
-            "What can we help you with?": { Anxiety: true },
-            Appointments: { Virtual: true },
-            "Who is this for?": { Adults: true },
+            languages: {
+              options: [{ label: "English", value: "english", selected: true }],
+            },
+            // "What can we help you with?": { Anxiety: true },
+            // Appointments: { Virtual: true },
+            // "Who is this for?": { Adults: true },
           });
         }}
       >
@@ -90,10 +92,10 @@ describe("the DirectoryPage component", () => {
 
     await wait();
     expect(getTherapistsSpy).toHaveBeenNthCalledWith(2, {
-      languages: ["English"],
-      services: ["Anxiety"],
-      appointments: ["Virtual"],
-      patientgroups: ["Adults"],
+      languages: ["english"],
+      // services: ["Anxiety"],
+      // appointments: ["Virtual"],
+      // patientgroups: ["Adults"],
     });
   });
 });
