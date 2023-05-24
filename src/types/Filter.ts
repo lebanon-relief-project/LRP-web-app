@@ -7,4 +7,5 @@ export interface FilterType {
 
 export interface FilterQueryParam {
   languages?: string[] | string;
+  patientgroups?: string[] | string;
 }

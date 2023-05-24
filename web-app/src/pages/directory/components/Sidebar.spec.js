@@ -3,6 +3,7 @@ import { fireEvent, render, wait } from "@testing-library/react";
 import "jest-styled-components";
 import { act } from "react-dom/test-utils";
 import Sidebar from "./Sidebar";
+import { collapsiblesInitial } from "../../../constants/directory";
 
 Date.now = jest.fn(() => 1482363367071);
 
@@ -16,6 +17,34 @@ describe("the Sidebar component", () => {
   it("should match the snapshot", () => {
     const { container } = render(<Sidebar />);
     expect(container).toMatchSnapshot();
+  });
+
+  it("should be able to select all language options", () => {
+    const { getByText, getByLabelText } = render(<Sidebar />);
+    const languagesCollapsible = getByText(collapsiblesInitial.languages.label);
+    fireEvent.click(languagesCollapsible);
+
+    for (const language of collapsiblesInitial.languages.options) {
+      const languageCheckbox = getByLabelText(language.label);
+      fireEvent.click(languageCheckbox);
+
+      expect(languageCheckbox.checked).toBe(true);
+    }
+  });
+
+  it("should be able to select all patient groups", () => {
+    const { getByText, getByLabelText } = render(<Sidebar />);
+    const patientGroupCollapsible = getByText(
+      collapsiblesInitial.patientgroups.label
+    );
+    fireEvent.click(patientGroupCollapsible);
+
+    for (const patientGroup of collapsiblesInitial.patientgroups.options) {
+      const patientGroupCheckbox = getByLabelText(patientGroup.label);
+      fireEvent.click(patientGroupCheckbox);
+
+      expect(patientGroupCheckbox.checked).toBe(true);
+    }
   });
 
   xit("should be able to click on collapsible to show more options", async () => {
