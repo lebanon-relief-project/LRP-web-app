@@ -64,6 +64,7 @@ export const collapsiblesInitial = {
       },
     ],
   },
+
   services: {
     label: "What can we help you with?",
     options: [
@@ -163,6 +164,21 @@ export const collapsiblesInitial = {
       {
         label: "Trauma-focused cognitive behavioral therapy",
         value: "trauma-focused cognitive behavioral therapy",
+        selected: false,
+      },
+    ],
+  },
+  appointments: {
+    label: "Appointments",
+    options: [
+      {
+        label: "Virtual",
+        value: "remotesession",
+        selected: false,
+      },
+      {
+        label: "In person",
+        value: "f2fsession",
         selected: false,
       },
     ],

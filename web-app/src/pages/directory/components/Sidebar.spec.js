@@ -79,6 +79,26 @@ describe("the Sidebar component", () => {
     }
   });
 
+  it("should be able to select all appointments", () => {
+    const appointmentsCollapsible = getByText(
+      collapsiblesInitial.appointments.label
+    );
+
+    act(() => {
+      fireEvent.click(appointmentsCollapsible);
+    });
+
+    for (const appointment of collapsiblesInitial.appointments.options) {
+      const appointmentCheckbox = getByLabelText(appointment.label);
+
+      act(() => {
+        fireEvent.click(appointmentCheckbox);
+      });
+
+      expect(appointmentCheckbox.checked).toBe(true);
+    }
+  });
+
   xit("should be able to click on collapsible to show more options", async () => {
     const { container, getByText } = render(<Sidebar />);
     let clickable = getByText("Are you looking for a centre or individual?");
