@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, wait } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import "jest-styled-components";
 import { act } from "react-dom/test-utils";
 import Sidebar from "./Sidebar";
@@ -9,8 +9,12 @@ Date.now = jest.fn(() => 1482363367071);
 
 // jest.useFakeTimers();
 
-afterEach(() => {
+let getByText, getByLabelText;
+
+beforeEach(() => {
   jest.clearAllMocks();
+
+  ({ getByText, getByLabelText } = render(<Sidebar />));
 });
 
 describe("the Sidebar component", () => {
@@ -20,30 +24,58 @@ describe("the Sidebar component", () => {
   });
 
   it("should be able to select all language options", () => {
-    const { getByText, getByLabelText } = render(<Sidebar />);
     const languagesCollapsible = getByText(collapsiblesInitial.languages.label);
-    fireEvent.click(languagesCollapsible);
+
+    act(() => {
+      fireEvent.click(languagesCollapsible);
+    });
 
     for (const language of collapsiblesInitial.languages.options) {
       const languageCheckbox = getByLabelText(language.label);
-      fireEvent.click(languageCheckbox);
+
+      act(() => {
+        fireEvent.click(languageCheckbox);
+      });
 
       expect(languageCheckbox.checked).toBe(true);
     }
   });
 
   it("should be able to select all patient groups", () => {
-    const { getByText, getByLabelText } = render(<Sidebar />);
     const patientGroupCollapsible = getByText(
       collapsiblesInitial.patientgroups.label
     );
-    fireEvent.click(patientGroupCollapsible);
+
+    act(() => {
+      fireEvent.click(patientGroupCollapsible);
+    });
 
     for (const patientGroup of collapsiblesInitial.patientgroups.options) {
       const patientGroupCheckbox = getByLabelText(patientGroup.label);
-      fireEvent.click(patientGroupCheckbox);
+
+      act(() => {
+        fireEvent.click(patientGroupCheckbox);
+      });
 
       expect(patientGroupCheckbox.checked).toBe(true);
+    }
+  });
+
+  it("should be able to select all services", () => {
+    const servicesCollapsible = getByText(collapsiblesInitial.services.label);
+
+    act(() => {
+      fireEvent.click(servicesCollapsible);
+    });
+
+    for (const service of collapsiblesInitial.services.options) {
+      const serviceCheckbox = getByLabelText(service.label);
+
+      act(() => {
+        fireEvent.click(serviceCheckbox);
+      });
+
+      expect(serviceCheckbox.checked).toBe(true);
     }
   });
 

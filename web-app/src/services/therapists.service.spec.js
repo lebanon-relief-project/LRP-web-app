@@ -1,9 +1,5 @@
-import { rest } from "msw";
-import { setupServer } from "msw/node";
-
 import { getTherapists } from "./therapists.service";
-
-import * as axios from "axios";
+import axios from "axios";
 
 jest.mock("axios");
 
@@ -39,59 +35,59 @@ const mockTherapistsResponse = [
   },
 ];
 
-const paramsSpy = jest
-  .spyOn(URLSearchParams.prototype, "append")
-  .mockImplementation();
+describe("getTherapists", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-afterEach(() => {
-  jest.clearAllMocks();
-  // dont know why above does not clear the spy too
-  paramsSpy.mockClear();
-});
-
-describe("The therapists service", () => {
-  describe("getTherapists", () => {
-    it("should return therapists", async () => {
-      axios.get.mockImplementationOnce(() =>
-        Promise.resolve({ data: { psychotherapists: mockTherapistsResponse } })
-      );
-      let response = await getTherapists();
-
-      expect(response).toEqual(mockTherapistsResponse);
+  it("should return therapists", async () => {
+    axios.get.mockResolvedValueOnce({
+      data: { psychotherapists: mockTherapistsResponse },
     });
+    const response = await getTherapists();
 
-    it("should throw nice error message when getting therapists fails", async () => {
-      axios.get.mockImplementationOnce(() => Promise.reject("something ugly"));
+    expect(response).toEqual(mockTherapistsResponse);
+  });
 
-      await expect(getTherapists()).rejects.toThrow(
-        "Failed to fetch therapists"
-      );
+  it("should throw an error when getting therapists fails", async () => {
+    axios.get.mockRejectedValueOnce("something ugly");
+
+    await expect(getTherapists()).rejects.toThrow("Failed to fetch therapists");
+  });
+
+  it("should return filtered list of therapists when filter is supplied", async () => {
+    axios.get.mockResolvedValueOnce({
+      data: { psychotherapists: mockTherapistsResponse },
     });
+    const mockFilter = { languages: ["test"] };
+    const response = await getTherapists(mockFilter);
 
-    it("should return filtered list of therapists when filter is supplied", async () => {
-      axios.get.mockImplementationOnce(() =>
-        Promise.resolve({ data: { psychotherapists: mockTherapistsResponse } })
-      );
-      const mockFilter = { languages: ["test"] };
-      let response = await getTherapists(mockFilter);
+    expect(response).toEqual(mockTherapistsResponse);
 
-      expect(response).toEqual(mockTherapistsResponse);
-      expect(axios.get).toHaveBeenCalledWith("/api/psychotherapists", {
-        params: expect.any(Object),
-      });
-      expect(paramsSpy).toHaveBeenNthCalledWith(1, "filter[languages]", "test");
+    const expectedParams = new URLSearchParams({ "filter[languages]": "test" });
+    expect(axios.get).toHaveBeenCalledWith("/api/psychotherapists", {
+      params: expectedParams,
     });
+  });
 
-    it("should not attempt to call api with params when undefined filter is supplied", async () => {
-      axios.get.mockImplementationOnce(() =>
-        Promise.resolve({ data: { psychotherapists: mockTherapistsResponse } })
-      );
-      const mockFilter = undefined;
-      let response = await getTherapists(mockFilter);
-
-      expect(response).toEqual(mockTherapistsResponse);
-      expect(axios.get).toHaveBeenCalledWith("/api/psychotherapists");
-      expect(paramsSpy).not.toHaveBeenCalled();
+  it("should call api with empty params when undefined filter is supplied", async () => {
+    axios.get.mockResolvedValueOnce({
+      data: { psychotherapists: mockTherapistsResponse },
     });
+    const mockFilter = undefined;
+    const response = await getTherapists(mockFilter);
+
+    expect(response).toEqual(mockTherapistsResponse);
+    expect(axios.get).toHaveBeenCalledWith("/api/psychotherapists", {
+      params: expect.any(Object),
+    });
+  });
+
+  it("should return empty list when api returns empty list", async () => {
+    axios.get.mockResolvedValueOnce({ data: { psychotherapists: [] } });
+    const mockFilter = {};
+    const response = await getTherapists(mockFilter);
+
+    expect(response).toEqual([]);
   });
 });
