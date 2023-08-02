@@ -3,6 +3,7 @@ export interface FilterType {
   appointments?: string[];
   languages?: string[];
   patientgroups?: string[];
+  price?: string[];
 }
 
 export interface FilterQueryParam {

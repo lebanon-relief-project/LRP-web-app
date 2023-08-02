@@ -1,4 +1,19 @@
 export const collapsiblesInitial = {
+  legalpersonality: {
+    label: "Are you looking for a centre or individual?",
+    options: [
+      {
+        label: "NGO",
+        value: "NGO",
+        selected: false,
+      },
+      {
+        label: "Licensed psychologist",
+        value: "Licensed psychologist",
+        selected: false,
+      },
+    ],
+  },
   patientgroups: {
     label: "Who is this for?",
     options: [
@@ -180,6 +195,15 @@ export const collapsiblesInitial = {
         label: "In person",
         value: "f2fsession",
         selected: false,
+      },
+    ],
+  },
+  price: {
+    label: "Price",
+    options: [
+      {
+        label: "Free service",
+        value: "freeservice",
       },
     ],
   },

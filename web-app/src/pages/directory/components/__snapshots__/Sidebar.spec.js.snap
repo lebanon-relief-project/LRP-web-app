@@ -956,6 +956,48 @@ exports[`the Sidebar component should match the snapshot 1`] = `
             id="collapsible-trigger-1482363367071"
             role="button"
           >
+            Are you looking for a centre or individual?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="NGO"
+                  name="NGO"
+                  type="checkbox"
+                />
+                NGO
+              </label>
+              <label>
+                <input
+                  data-testid="Licensed psychologist"
+                  name="Licensed psychologist"
+                  type="checkbox"
+                />
+                Licensed psychologist
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
             Who is this for?
           </span>
           <div
@@ -1349,6 +1391,40 @@ exports[`the Sidebar component should match the snapshot 1`] = `
                   type="checkbox"
                 />
                 In person
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Price
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Free service"
+                  name="Free service"
+                  type="checkbox"
+                />
+                Free service
               </label>
             </div>
           </div>
