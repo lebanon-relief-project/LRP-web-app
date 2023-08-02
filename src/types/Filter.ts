@@ -4,6 +4,7 @@ export interface FilterType {
   languages?: string[];
   patientgroups?: string[];
   price?: string[];
+  legalpersonality?: string[];
 }
 
 export interface FilterQueryParam {

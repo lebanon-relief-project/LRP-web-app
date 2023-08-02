@@ -4,12 +4,12 @@ export const collapsiblesInitial = {
     options: [
       {
         label: "NGO",
-        value: "NGO",
+        value: "ngo",
         selected: false,
       },
       {
         label: "Licensed psychologist",
-        value: "Licensed psychologist",
+        value: "licensed psychologist",
         selected: false,
       },
     ],

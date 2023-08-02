@@ -94,9 +94,27 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         services: "therapistsByServices",
         patientgroups: "therapistsByPatientGroups",
         price: "therapistsByPrice",
+        legalpersonality: "therapistsByLegalPersonality",
       };
 
       const allPsychotherapists = [];
+
+      if (filter.legalpersonality) {
+        try {
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.legalpersonality,
+            filter.legalpersonality,
+            this.psychotherapistDb
+          );
+
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            "getPsychotherapists: Failed to retrieve psychotherapists"
+          );
+        }
+      }
 
       if (filter.price) {
         try {

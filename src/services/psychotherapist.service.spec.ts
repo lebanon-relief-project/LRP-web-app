@@ -281,6 +281,7 @@ describe("The psychotherapist service", () => {
         appointments: ["f2fSession"],
         patientgroups: ["patientGroup"],
         price: ["price"],
+        legalpersonality: ["legalpersonality"],
       };
 
       await psychotherapistService.getPsychotherapists(mockFilter);
@@ -315,7 +316,13 @@ describe("The psychotherapist service", () => {
         { keys: ["price"], include_docs: true }
       );
 
-      expect(mockView).toHaveBeenCalledTimes(5);
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByLegalPersonality",
+        { keys: ["legalpersonality"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledTimes(6);
     });
 
     it("should return empty array if the view has returned no rows matching our filter", async () => {
