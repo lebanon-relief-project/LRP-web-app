@@ -11,6 +11,32 @@ import { InternalServerError } from "routing-controllers";
 import { CLOUDANT_PSYCHOTHERAPISTS_DB_DEV } from "../statics";
 import { FilterType } from "src/types/Filter";
 
+async function getTherapistsByName(
+  name: string,
+  dbInstance: DocumentScope<Psychotherapist>
+) {
+  const psychotherapists = [];
+  console.log(name);
+
+  const viewResponse = await dbInstance.view(
+    "therapistsDesignDoc",
+    "therapistsByName",
+    {
+      startkey: name,
+      endkey: name + "\ufff0",
+      include_docs: true,
+    }
+  );
+
+  viewResponse.rows.map((row) => {
+    if (row.doc) {
+      psychotherapists.push(row.doc);
+    }
+  });
+
+  return psychotherapists;
+}
+
 async function getTherapistsFromView(
   viewName: string,
   keys: any = [],
@@ -189,6 +215,22 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
           let psychotherapists = await getTherapistsFromView(
             availableViews.languages,
             filter.languages,
+            this.psychotherapistDb
+          );
+
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            `getPsychotherapists: Failed to retrieve psychotherapists`
+          );
+        }
+      }
+
+      if (filter.name) {
+        try {
+          let psychotherapists = await getTherapistsByName(
+            filter.name[0],
             this.psychotherapistDb
           );
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import Collapsible from "react-collapsible";
 import styled from "styled-components";
@@ -16,42 +16,71 @@ const Sidebar = ({ onFilterChange }) => {
     if (onFilterChange) onFilterChange(collapsibles);
   }, [collapsibles]);
 
+  const renderCollapsibles = useCallback(() => {
+    return Object.keys(collapsibles).map((key, index) => {
+      if (collapsibles[key].options) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            {collapsibles[key].options.map((option, index2) => {
+              return (
+                <label key={`${option.label}_${index}`}>
+                  <input
+                    data-testid={option.label}
+                    name={`${option.label}`}
+                    type="checkbox"
+                    checked={option.selected}
+                    onChange={() => {
+                      let collapsiblesCopy = { ...collapsibles };
+                      collapsiblesCopy[key].options[index2].selected =
+                        !collapsiblesCopy[key].options[index2].selected;
+                      setCollapsibles({ ...collapsiblesCopy });
+                    }}
+                  />
+                  {option.label}
+                </label>
+              );
+            })}
+          </Collapsible>
+        );
+      } else if (collapsibles[key].value !== undefined) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            <SearchInputContainer>
+              <SearchBox>
+                <SearchInput
+                  type="text"
+                  value={collapsibles[key].value}
+                  onChange={(e) => {
+                    let collapsiblesCopy = { ...collapsibles };
+                    collapsiblesCopy[key].value = e.target.value;
+                    setCollapsibles({ ...collapsiblesCopy });
+                  }}
+                />
+                <SearchIconContainer>
+                  <img src={SearchIcon} />
+                </SearchIconContainer>
+              </SearchBox>
+            </SearchInputContainer>
+          </Collapsible>
+        );
+      }
+      return null;
+    });
+  }, [collapsibles, setCollapsibles]);
+
   return (
     <>
       <StyledSideBar>
         <SideBarWrapper>
           <TitleWrapper>Filters</TitleWrapper>
           {/* bunch of collapsibles */}
-          <form>
-            {Object.keys(collapsibles).map((key, index) => {
-              return (
-                <Collapsible
-                  key={`${key}_${index}`}
-                  trigger={collapsibles[key].label}
-                >
-                  {collapsibles[key].options.map((option, index2) => {
-                    return (
-                      <label key={`${option.label}_${index}`}>
-                        <input
-                          data-testid={option.label}
-                          name={`${option.label}`}
-                          type="checkbox"
-                          checked={option.selected}
-                          onChange={() => {
-                            let collapsiblesCopy = { ...collapsibles };
-                            collapsiblesCopy[key].options[index2].selected =
-                              !collapsiblesCopy[key].options[index2].selected;
-                            setCollapsibles({ ...collapsiblesCopy });
-                          }}
-                        />
-                        {option.label}
-                      </label>
-                    );
-                  })}
-                </Collapsible>
-              );
-            })}
-          </form>
+          <form>{renderCollapsibles()}</form>
         </SideBarWrapper>
       </StyledSideBar>
     </>
@@ -71,6 +100,8 @@ const SearchInputContainer = styled.div`
 
 const SearchInput = styled.input`
   fontsize: 14px;
+  height: 100%;
+  outline: none;
   width: 100%;
   margin: 0;
   border: none;

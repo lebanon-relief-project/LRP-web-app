@@ -8,6 +8,7 @@ export function sanitizeFilter(unSafeFilter: any): FilterType {
     patientgroups: "string",
     price: "string",
     legalpersonality: "string",
+    name: "string",
   };
 
   let cleanFilter: FilterType = {};

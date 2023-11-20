@@ -207,4 +207,8 @@ export const collapsiblesInitial = {
       },
     ],
   },
+  name: {
+    label: "Name of mental health professional or organization",
+    value: "",
+  },
 };

@@ -209,9 +209,13 @@ const DirectoryPage = () => {
       let adaptedFilter = {};
 
       for (let filterKey in filter) {
-        adaptedFilter[filterKey] = filter[filterKey].options
-          .filter((option) => option.selected === true)
-          .map((option) => option.value);
+        if (filter[filterKey].options) {
+          adaptedFilter[filterKey] = filter[filterKey].options
+            .filter((option) => option.selected === true)
+            .map((option) => option.value);
+        } else if (filter[filterKey].value) {
+          adaptedFilter[filterKey] = [filter[filterKey].value];
+        }
       }
 
       const result = await getTherapists(adaptedFilter);

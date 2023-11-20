@@ -5,9 +5,11 @@ export interface FilterType {
   patientgroups?: string[];
   price?: string[];
   legalpersonality?: string[];
+  name?: string[];
 }
 
 export interface FilterQueryParam {
   languages?: string[] | string;
   patientgroups?: string[] | string;
+  name?: string[] | string;
 }
