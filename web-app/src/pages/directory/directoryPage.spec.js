@@ -38,7 +38,7 @@ jest.mock("../../services/therapists.service");
 const getTherapistsSpy = jest.spyOn(therapistService, "getTherapists");
 const getTherapistsLocationsSpy = jest.spyOn(
   therapistService,
-  "getTherapistsLocations"
+  "getTherapistLocations"
 );
 
 Date.now = jest.fn(() => 1482363367071);
@@ -96,6 +96,7 @@ describe("the DirectoryPage component", () => {
     getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { getByTestId } = render(<DirectoryPage />);
 
+    await wait();
     fireEvent.click(getByTestId("sidebar"));
 
     await wait();
