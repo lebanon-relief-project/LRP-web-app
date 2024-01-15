@@ -21,3 +21,17 @@ export async function getTherapists(filter) {
     throw new Error("Failed to fetch therapists");
   }
 }
+
+export async function getTherapistLocations() {
+  try {
+    const response = await axios.get("/api/psychotherapists/locations");
+
+    if (!Array.isArray(response.data)) {
+      throw new Error("Invalid response");
+    }
+
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to fetch therapist locations");
+  }
+}

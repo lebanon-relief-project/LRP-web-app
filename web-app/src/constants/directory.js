@@ -211,4 +211,8 @@ export const collapsiblesInitial = {
     label: "Name of mental health professional or organization",
     value: "",
   },
+  location: {
+    label: "Location",
+    selectValue: "",
+  },
 };

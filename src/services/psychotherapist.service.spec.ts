@@ -283,6 +283,7 @@ describe("The psychotherapist service", () => {
         price: ["price"],
         legalpersonality: ["legalpersonality"],
         name: ["name"],
+        location: ["location"],
       };
 
       await psychotherapistService.getPsychotherapists(mockFilter);
@@ -333,7 +334,13 @@ describe("The psychotherapist service", () => {
         }
       );
 
-      expect(mockView).toHaveBeenCalledTimes(7);
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByLocation",
+        { keys: ["location"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledTimes(8);
     });
 
     it("should return empty array if the view has returned no rows matching our filter", async () => {

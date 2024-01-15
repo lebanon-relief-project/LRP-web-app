@@ -78,6 +78,30 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
     }
   }
 
+  async getTherapistsLocations(): Promise<string[]> {
+    try {
+      const response = await this.psychotherapistDb.view(
+        "therapistsDesignDoc",
+        "therapistsByLocation",
+        {
+          include_docs: true,
+        }
+      );
+
+      const locations = response.rows.map((row) => {
+        return row.key;
+      });
+
+      // Use Set to remove duplicates and then convert it back to an array
+      const uniqueLocations = Array.from(new Set(locations));
+
+      return uniqueLocations;
+    } catch (error) {
+      console.log(error);
+      throw new InternalServerError(error.message);
+    }
+  }
+
   async getPsychotherapists(
     filter?: FilterType
   ): Promise<PsychotherapistResponse> {
@@ -121,6 +145,7 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         patientgroups: "therapistsByPatientGroups",
         price: "therapistsByPrice",
         legalpersonality: "therapistsByLegalPersonality",
+        location: "therapistsByLocation",
       };
 
       const allPsychotherapists = [];
@@ -231,6 +256,23 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         try {
           let psychotherapists = await getTherapistsByName(
             filter.name[0],
+            this.psychotherapistDb
+          );
+
+          allPsychotherapists.push(...psychotherapists);
+        } catch (error) {
+          this.logger.error(error);
+          throw new InternalServerError(
+            `getPsychotherapists: Failed to retrieve psychotherapists`
+          );
+        }
+      }
+
+      if (filter.location) {
+        try {
+          let psychotherapists = await getTherapistsFromView(
+            availableViews.location,
+            filter.location,
             this.psychotherapistDb
           );
 

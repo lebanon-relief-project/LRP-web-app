@@ -36,6 +36,10 @@ jest.mock("./components/Sidebar", () => {
 jest.mock("../../services/therapists.service");
 
 const getTherapistsSpy = jest.spyOn(therapistService, "getTherapists");
+const getTherapistsLocationsSpy = jest.spyOn(
+  therapistService,
+  "getTherapistsLocations"
+);
 
 Date.now = jest.fn(() => 1482363367071);
 
@@ -71,6 +75,8 @@ const mockTherapistsResponse = [
   },
 ];
 
+const mockLocationsResponse = ["beirut", "england"];
+
 afterEach(() => {
   jest.clearAllMocks();
 });
@@ -78,6 +84,7 @@ afterEach(() => {
 describe("the DirectoryPage component", () => {
   fit("should match the snapshot", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
+    getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { container } = render(<DirectoryPage />);
 
     await wait();
@@ -86,6 +93,7 @@ describe("the DirectoryPage component", () => {
 
   fit("should retrieve therapists when filter executes onFilterChange", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
+    getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { getByTestId } = render(<DirectoryPage />);
 
     fireEvent.click(getByTestId("sidebar"));

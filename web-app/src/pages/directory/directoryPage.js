@@ -14,7 +14,10 @@ import PhoneIcon from "../../assets/images/Phone.svg";
 import FreeIcon from "../../assets/images/Free.svg";
 import GlobalIcon from "../../assets/images/Global.svg";
 import VirtualIcon from "../../assets/images/Virtual.svg";
-import { getTherapists } from "../../services/therapists.service";
+import {
+  getTherapists,
+  getTherapistLocations,
+} from "../../services/therapists.service";
 
 const TherapistCard = (props) => {
   return (
@@ -203,6 +206,7 @@ const TherapistCard = (props) => {
 
 const DirectoryPage = () => {
   const [therapists, setTherapists] = useState([]);
+  const [therapistLocations, setTherapistLocations] = useState([]);
 
   const retrieveTherapists = async (filter) => {
     if (filter) {
@@ -215,6 +219,8 @@ const DirectoryPage = () => {
             .map((option) => option.value);
         } else if (filter[filterKey].value) {
           adaptedFilter[filterKey] = [filter[filterKey].value];
+        } else if (filter[filterKey].selectValue) {
+          adaptedFilter[filterKey] = [filter[filterKey].selectValue];
         }
       }
 
@@ -226,8 +232,19 @@ const DirectoryPage = () => {
     }
   };
 
+  const retrieveTherapistLocations = async () => {
+    try {
+      const result = await getTherapistLocations();
+      setTherapistLocations(result);
+    } catch (error) {
+      console.error("Failed to retrieve therapist locations:", error);
+      setTherapistLocations([]);
+    }
+  };
+
   useEffect(() => {
     retrieveTherapists();
+    retrieveTherapistLocations();
   }, []);
 
   const TherapistsList = useCallback(() => {
@@ -268,11 +285,14 @@ const DirectoryPage = () => {
       <StyledPage>
         <Banner />
         <StyledContent>
-          <Sidebar
-            onFilterChange={(filter) => {
-              retrieveTherapists(filter);
-            }}
-          />
+          {therapistLocations.length > 0 && (
+            <Sidebar
+              onFilterChange={(filter) => {
+                retrieveTherapists(filter);
+              }}
+              locations={therapistLocations}
+            />
+          )}
           <StyledMainArea>
             <TherapistsList />
           </StyledMainArea>

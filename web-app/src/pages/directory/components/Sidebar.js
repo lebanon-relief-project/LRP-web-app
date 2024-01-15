@@ -9,7 +9,7 @@ import SearchIcon from "../../../assets/images/Search.svg";
 import Select from "react-select";
 import { useEffect } from "react";
 
-const Sidebar = ({ onFilterChange }) => {
+const Sidebar = ({ onFilterChange, locations }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
 
   useEffect(() => {
@@ -67,6 +67,40 @@ const Sidebar = ({ onFilterChange }) => {
                 </SearchIconContainer>
               </SearchBox>
             </SearchInputContainer>
+          </Collapsible>
+        );
+      } else if (collapsibles[key].selectValue !== undefined) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            <Select
+              isSearchable={true}
+              isClearable={true}
+              placeholder="Select location"
+              onChange={(e) => {
+                if (e === null) {
+                  let collapsiblesCopy = { ...collapsibles };
+                  collapsiblesCopy[key].selectValue = "";
+                  setCollapsibles({ ...collapsiblesCopy });
+                  return;
+                }
+                let collapsiblesCopy = { ...collapsibles };
+                collapsiblesCopy[key].selectValue = e.value;
+                setCollapsibles({ ...collapsiblesCopy });
+              }}
+              options={locations.map((location) => {
+                return {
+                  value: location,
+                  label: location
+                    .split("-")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" "),
+                };
+              })}
+            />
+            {/* </div> */}
           </Collapsible>
         );
       }

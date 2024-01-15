@@ -14,12 +14,14 @@ let getByText, getByLabelText;
 beforeEach(() => {
   jest.clearAllMocks();
 
-  ({ getByText, getByLabelText } = render(<Sidebar />));
+  ({ getByText, getByLabelText } = render(
+    <Sidebar locations={["beirut", "england"]} />
+  ));
 });
 
 describe("the Sidebar component", () => {
   it("should match the snapshot", () => {
-    const { container } = render(<Sidebar />);
+    const { container } = render(<Sidebar locations={["beirut", "england"]} />);
     expect(container).toMatchSnapshot();
   });
 
@@ -99,8 +101,26 @@ describe("the Sidebar component", () => {
     }
   });
 
+  // it("should be able to select location", () => {
+  //   const locationCollapsible = getByText(collapsiblesInitial.location.label);
+
+  //   act(() => {
+  //     fireEvent.click(locationCollapsible);
+  //   });
+
+  //   const locationCheckbox = getByLabelText("Beirut");
+
+  //   act(() => {
+  //     fireEvent.click(locationCheckbox);
+  //   });
+
+  //   expect(locationCheckbox.checked).toBe(true);
+  // });
+
   xit("should be able to click on collapsible to show more options", async () => {
-    const { container, getByText } = render(<Sidebar />);
+    const { container, getByText } = render(
+      <Sidebar locations={["beirut", "england"]} />
+    );
     let clickable = getByText("Are you looking for a centre or individual?");
 
     act(() => {
@@ -114,7 +134,9 @@ describe("the Sidebar component", () => {
   });
 
   xit("should be able to select/deselect option from the list", () => {
-    const { container, getByText, getByTestId } = render(<Sidebar />);
+    const { container, getByText, getByTestId } = render(
+      <Sidebar locations={["beirut", "england"]} />
+    );
     let clickable = getByText("Are you looking for a centre or individual?");
 
     act(() => {

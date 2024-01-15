@@ -36,4 +36,14 @@ export class PsychotherapistController {
       throw new InternalServerError(`failed to get Psychotherapists`);
     }
   }
+
+  @Get("/locations")
+  async getTherapistsLocations(): Promise<string[]> {
+    try {
+      return this.service.getTherapistsLocations();
+    } catch (exception) {
+      console.error(exception);
+      throw new InternalServerError(`failed to get locations`);
+    }
+  }
 }
