@@ -152,6 +152,7 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
       const allPsychotherapists = {};
 
       for (const key in filter) {
+        if (key === "name") continue;
         if (filter[key]) {
           try {
             let psychotherapists = await getTherapistsFromView(
