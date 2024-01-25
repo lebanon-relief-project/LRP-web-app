@@ -11,6 +11,8 @@ import { InternalServerError } from "routing-controllers";
 import { CLOUDANT_PSYCHOTHERAPISTS_DB_DEV } from "../statics";
 import { FilterType } from "src/types/Filter";
 
+var _ = require("lodash");
+
 async function getTherapistsByName(
   name: string,
   dbInstance: DocumentScope<Psychotherapist>
@@ -109,7 +111,6 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
     this.logger.info(
       `getPsychotherapists(): Getting psychotherapists from cloudant`
     );
-
     this.logger.info(filter);
 
     response = { psychotherapists: [] };
@@ -148,107 +149,24 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         location: "therapistsByLocation",
       };
 
-      const allPsychotherapists = [];
+      const allPsychotherapists = {};
 
-      if (filter.legalpersonality) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.legalpersonality,
-            filter.legalpersonality,
-            this.psychotherapistDb
-          );
+      for (const key in filter) {
+        if (filter[key]) {
+          try {
+            let psychotherapists = await getTherapistsFromView(
+              availableViews[key],
+              filter[key],
+              this.psychotherapistDb
+            );
 
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.price) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.price,
-            filter.price,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.patientgroups) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.patientgroups,
-            filter.patientgroups,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.appointments) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.appointments,
-            filter.appointments,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.services) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.services,
-            filter.services,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.languages) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.languages,
-            filter.languages,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            `getPsychotherapists: Failed to retrieve psychotherapists`
-          );
+            allPsychotherapists[key] = psychotherapists;
+          } catch (error) {
+            this.logger.error(error);
+            throw new InternalServerError(
+              "getPsychotherapists: Failed to retrieve psychotherapists"
+            );
+          }
         }
       }
 
@@ -259,7 +177,7 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
             this.psychotherapistDb
           );
 
-          allPsychotherapists.push(...psychotherapists);
+          allPsychotherapists["name"] = psychotherapists;
         } catch (error) {
           this.logger.error(error);
           throw new InternalServerError(
@@ -268,30 +186,36 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         }
       }
 
-      if (filter.location) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.location,
-            filter.location,
-            this.psychotherapistDb
-          );
+      // Find intersection of all arrays
 
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            `getPsychotherapists: Failed to retrieve psychotherapists`
-          );
-        }
+      // const keys = Object.keys(allPsychotherapists);
+      // console.log(keys);
+      // if (keys.length > 0) {
+      //   response.psychotherapists = keys.reduce((acc, key) => {
+      //     return acc.filter((value) =>
+      //       allPsychotherapists[key].includes(value)
+      //     );
+      //   }, allPsychotherapists[keys[0]]);
+      // }
+
+      // const keys = Object.keys(allPsychotherapists);
+      // if (keys.length > 0) {
+      //   response.psychotherapists = allPsychotherapists[keys[0]];
+
+      //   for (let i = 1; i < keys.length; i++) {
+      //     response.psychotherapists = response.psychotherapists.filter(
+      //       (value) => -1 !== allPsychotherapists[keys[i]].indexOf(value)
+      //     );
+      //   }
+      // }
+
+      const keys = Object.keys(allPsychotherapists);
+      if (keys.length > 0) {
+        response.psychotherapists = _.intersectionWith(
+          ...keys.map((key) => allPsychotherapists[key]),
+          _.isEqual
+        );
       }
-
-      const seen = new Set();
-
-      response.psychotherapists = allPsychotherapists.filter((el) => {
-        const duplicate = seen.has(el._id);
-        seen.add(el._id);
-        return !duplicate;
-      });
 
       return response;
     }
