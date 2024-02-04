@@ -155,11 +155,32 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         if (key === "name") continue;
         if (filter[key]) {
           try {
-            let psychotherapists = await getTherapistsFromView(
-              availableViews[key],
-              filter[key],
-              this.psychotherapistDb
-            );
+            let psychotherapists;
+            if (
+              key === "location" &&
+              Array.isArray(filter[key]) &&
+              filter[key].includes("across-lebanon")
+            ) {
+              console.log("Fetching all therapists");
+              // Fetch all location keys
+              const allLocations = await this.getTherapistsLocations();
+              // Remove 'online' from the location keys
+              const locationKeys = allLocations.filter(
+                (location) => location !== "online"
+              );
+              // Fetch therapists for all locations except 'online'
+              psychotherapists = await getTherapistsFromView(
+                availableViews[key],
+                locationKeys,
+                this.psychotherapistDb
+              );
+            } else {
+              psychotherapists = await getTherapistsFromView(
+                availableViews[key],
+                filter[key],
+                this.psychotherapistDb
+              );
+            }
 
             allPsychotherapists[key] = psychotherapists;
           } catch (error) {
@@ -186,29 +207,6 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
           );
         }
       }
-
-      // Find intersection of all arrays
-
-      // const keys = Object.keys(allPsychotherapists);
-      // console.log(keys);
-      // if (keys.length > 0) {
-      //   response.psychotherapists = keys.reduce((acc, key) => {
-      //     return acc.filter((value) =>
-      //       allPsychotherapists[key].includes(value)
-      //     );
-      //   }, allPsychotherapists[keys[0]]);
-      // }
-
-      // const keys = Object.keys(allPsychotherapists);
-      // if (keys.length > 0) {
-      //   response.psychotherapists = allPsychotherapists[keys[0]];
-
-      //   for (let i = 1; i < keys.length; i++) {
-      //     response.psychotherapists = response.psychotherapists.filter(
-      //       (value) => -1 !== allPsychotherapists[keys[i]].indexOf(value)
-      //     );
-      //   }
-      // }
 
       const keys = Object.keys(allPsychotherapists);
       if (keys.length > 0) {

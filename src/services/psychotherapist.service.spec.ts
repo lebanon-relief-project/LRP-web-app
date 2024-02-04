@@ -1,5 +1,6 @@
 import {
   samplePsychotherapistCloudantResponse,
+  samplePsychotherapistCloudantResponse2withOnlineLocation,
   samplePsychotherapistCloudantResponseDuplicated,
 } from "../types/sampleData/PsychotherapistData";
 import Container from "typedi";
@@ -272,6 +273,24 @@ describe("The psychotherapist service", () => {
         "therapistsByPatientGroups",
         { keys: ["patientGroup"], include_docs: true }
       );
+    });
+
+    xit("getPsychotherapists returns all therapists with location != online when filter is set to across-lebanon", async () => {
+      mockView.mockResolvedValue(
+        samplePsychotherapistCloudantResponse2withOnlineLocation
+      );
+
+      const filter = { location: ["across-lebanon"] };
+      const therapists = (
+        await psychotherapistService.getPsychotherapists(filter)
+      ).psychotherapists;
+
+      console.log(therapists);
+
+      // Check that all returned therapists have a location that is not 'online'
+      for (let therapist of therapists) {
+        expect(therapist.location).not.toBe("online");
+      }
     });
 
     it("should call cloudant service with correct arguments when all filters are supplied", async () => {
