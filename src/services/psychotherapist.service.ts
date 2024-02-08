@@ -125,7 +125,7 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         await Promise.all(
           dbResponse.rows.map(async (row) => {
             // use Promise.all() with map to wait for all async before moving on
-            if (row.doc) {
+            if (row.doc && row.doc._id !== "_design/therapistsDesignDoc") {
               response.psychotherapists.push(row.doc);
             }
           })
