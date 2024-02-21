@@ -805,7 +805,7 @@ exports[`the Sidebar component should be able to click on collapsible to show mo
 `;
 
 exports[`the Sidebar component should match the snapshot 1`] = `
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -814,7 +814,7 @@ exports[`the Sidebar component should match the snapshot 1`] = `
   border: 1px solid #d9d9d9;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -826,6 +826,8 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 
 .c5 {
   fontsize: 14px;
+  height: 100%;
+  outline: none;
   width: 100%;
   margin: 0;
   border: none;
@@ -1021,116 +1023,12 @@ exports[`the Sidebar component should match the snapshot 1`] = `
               </label>
               <label>
                 <input
-                  data-testid="Licensed Psychologist"
-                  name="Licensed Psychologist"
+                  data-testid="Licensed psychologist"
+                  name="Licensed psychologist"
                   type="checkbox"
                 />
-                Licensed Psychologist
+                Licensed psychologist
               </label>
-            </div>
-          </div>
-        </div>
-        <div
-          class="Collapsible"
-        >
-          <span
-            aria-controls="collapsible-content-1482363367071"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="Collapsible__trigger is-closed"
-            id="collapsible-trigger-1482363367071"
-            role="button"
-          >
-            Location
-          </span>
-          <div
-            aria-labelledby="collapsible-trigger-1482363367071"
-            class="Collapsible__contentOuter"
-            id="collapsible-content-1482363367071"
-            role="region"
-            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
-          >
-            <div
-              class="Collapsible__contentInner"
-            >
-              <div>
-                <div
-                  class=" css-b62m3t-container"
-                >
-                  <span
-                    class="css-1f43avz-a11yText-A11yText"
-                    id="react-select-2-live-region"
-                  />
-                  <span
-                    aria-atomic="false"
-                    aria-live="polite"
-                    aria-relevant="additions text"
-                    class="css-1f43avz-a11yText-A11yText"
-                  />
-                  <div
-                    class=" css-1s2u09g-control"
-                  >
-                    <div
-                      class=" css-319lph-ValueContainer"
-                    >
-                      <div
-                        class=" css-14el2xx-placeholder"
-                        id="react-select-2-placeholder"
-                      >
-                        Select location
-                      </div>
-                      <div
-                        class=" css-6j8wv5-Input"
-                        data-value=""
-                      >
-                        <input
-                          aria-autocomplete="list"
-                          aria-controls="react-select-2-listbox"
-                          aria-describedby="react-select-2-placeholder"
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          aria-owns="react-select-2-listbox"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          class=""
-                          id="react-select-2-input"
-                          role="combobox"
-                          spellcheck="false"
-                          style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                          tabindex="0"
-                          type="text"
-                          value=""
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class=" css-1hb7zxy-IndicatorsContainer"
-                    >
-                      <span
-                        class=" css-1okebmr-indicatorSeparator"
-                      />
-                      <div
-                        aria-hidden="true"
-                        class=" css-tlfecz-indicatorContainer"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          class="css-tj5bde-Svg"
-                          focusable="false"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          width="20"
-                        >
-                          <path
-                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1159,11 +1057,11 @@ exports[`the Sidebar component should match the snapshot 1`] = `
             >
               <label>
                 <input
-                  data-testid="Toddlers and Preschoolers (0 to 6 years)"
-                  name="Toddlers and Preschoolers (0 to 6 years)"
+                  data-testid="Toddlers / Preschoolers (0-6 years)"
+                  name="Toddlers / Preschoolers (0-6 years)"
                   type="checkbox"
                 />
-                Toddlers and Preschoolers (0 to 6 years)
+                Toddlers / Preschoolers (0-6 years)
               </label>
               <label>
                 <input
@@ -1175,11 +1073,11 @@ exports[`the Sidebar component should match the snapshot 1`] = `
               </label>
               <label>
                 <input
-                  data-testid="Adolescents and Young Adults (13-19 years)"
-                  name="Adolescents and Young Adults (13-19 years)"
+                  data-testid="Teenagers / Adolescents (13-19 years)"
+                  name="Teenagers / Adolescents (13-19 years)"
                   type="checkbox"
                 />
-                Adolescents and Young Adults (13-19 years)
+                Teenagers / Adolescents (13-19 years)
               </label>
               <label>
                 <input
@@ -1204,208 +1102,6 @@ exports[`the Sidebar component should match the snapshot 1`] = `
                   type="checkbox"
                 />
                 Couples
-              </label>
-            </div>
-          </div>
-        </div>
-        <div
-          class="Collapsible"
-        >
-          <span
-            aria-controls="collapsible-content-1482363367071"
-            aria-disabled="false"
-            aria-expanded="false"
-            class="Collapsible__trigger is-closed"
-            id="collapsible-trigger-1482363367071"
-            role="button"
-          >
-            What can we help you with?
-          </span>
-          <div
-            aria-labelledby="collapsible-trigger-1482363367071"
-            class="Collapsible__contentOuter"
-            id="collapsible-content-1482363367071"
-            role="region"
-            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
-          >
-            <div
-              class="Collapsible__contentInner"
-            >
-              <label>
-                <input
-                  data-testid="Anxiety"
-                  name="Anxiety"
-                  type="checkbox"
-                />
-                Anxiety
-              </label>
-              <label>
-                <input
-                  data-testid="Childhood Trauma Therapy"
-                  name="Childhood Trauma Therapy"
-                  type="checkbox"
-                />
-                Childhood Trauma Therapy
-              </label>
-              <label>
-                <input
-                  data-testid="Depression"
-                  name="Depression"
-                  type="checkbox"
-                />
-                Depression
-              </label>
-              <label>
-                <input
-                  data-testid="Disaster / Terrorism"
-                  name="Disaster / Terrorism"
-                  type="checkbox"
-                />
-                Disaster / Terrorism
-              </label>
-              <label>
-                <input
-                  data-testid="Domestic Violence"
-                  name="Domestic Violence"
-                  type="checkbox"
-                />
-                Domestic Violence
-              </label>
-              <label>
-                <input
-                  data-testid="Expressive Trauma Therapy"
-                  name="Expressive Trauma Therapy"
-                  type="checkbox"
-                />
-                Expressive Trauma Therapy
-              </label>
-              <label>
-                <input
-                  data-testid="Hypnotherapy"
-                  name="Hypnotherapy"
-                  type="checkbox"
-                />
-                Hypnotherapy
-              </label>
-              <label>
-                <input
-                  data-testid="Life / Personal Coaching"
-                  name="Life / Personal Coaching"
-                  type="checkbox"
-                />
-                Life / Personal Coaching
-              </label>
-              <label>
-                <input
-                  data-testid="Life Transition & Adjustment Issues"
-                  name="Life Transition & Adjustment Issues"
-                  type="checkbox"
-                />
-                Life Transition & Adjustment Issues
-              </label>
-              <label>
-                <input
-                  data-testid="Memory loss Therapy"
-                  name="Memory loss Therapy"
-                  type="checkbox"
-                />
-                Memory loss Therapy
-              </label>
-              <label>
-                <input
-                  data-testid="Pain Management"
-                  name="Pain Management"
-                  type="checkbox"
-                />
-                Pain Management
-              </label>
-              <label>
-                <input
-                  data-testid="Parenting during Trauma"
-                  name="Parenting during Trauma"
-                  type="checkbox"
-                />
-                Parenting during Trauma
-              </label>
-              <label>
-                <input
-                  data-testid="Pharmacotherapy (medication)"
-                  name="Pharmacotherapy (medication)"
-                  type="checkbox"
-                />
-                Pharmacotherapy (medication)
-              </label>
-              <label>
-                <input
-                  data-testid="Psychoeducation"
-                  name="Psychoeducation"
-                  type="checkbox"
-                />
-                Psychoeducation
-              </label>
-              <label>
-                <input
-                  data-testid="PTSD"
-                  name="PTSD"
-                  type="checkbox"
-                />
-                PTSD
-              </label>
-              <label>
-                <input
-                  data-testid="Sexual Abuse"
-                  name="Sexual Abuse"
-                  type="checkbox"
-                />
-                Sexual Abuse
-              </label>
-              <label>
-                <input
-                  data-testid="Sleeping Disorders"
-                  name="Sleeping Disorders"
-                  type="checkbox"
-                />
-                Sleeping Disorders
-              </label>
-              <label>
-                <input
-                  data-testid="Stress Management"
-                  name="Stress Management"
-                  type="checkbox"
-                />
-                Stress Management
-              </label>
-              <label>
-                <input
-                  data-testid="Substance Abuse"
-                  name="Substance Abuse"
-                  type="checkbox"
-                />
-                Substance Abuse
-              </label>
-              <label>
-                <input
-                  data-testid="Suicide"
-                  name="Suicide"
-                  type="checkbox"
-                />
-                Suicide
-              </label>
-              <label>
-                <input
-                  data-testid="Trauma Group support"
-                  name="Trauma Group support"
-                  type="checkbox"
-                />
-                Trauma Group support
-              </label>
-              <label>
-                <input
-                  data-testid="Trauma-focused cognitive behavioral therapy"
-                  name="Trauma-focused cognitive behavioral therapy"
-                  type="checkbox"
-                />
-                Trauma-focused cognitive behavioral therapy
               </label>
             </div>
           </div>
@@ -1472,6 +1168,232 @@ exports[`the Sidebar component should match the snapshot 1`] = `
                   type="checkbox"
                 />
                 Sign language
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            What can we help you with?
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <label>
+                <input
+                  data-testid="Anxiety disorders"
+                  name="Anxiety disorders"
+                  type="checkbox"
+                />
+                Anxiety disorders
+              </label>
+              <label>
+                <input
+                  data-testid="Childhood trauma therapy"
+                  name="Childhood trauma therapy"
+                  type="checkbox"
+                />
+                Childhood trauma therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Depression"
+                  name="Depression"
+                  type="checkbox"
+                />
+                Depression
+              </label>
+              <label>
+                <input
+                  data-testid="Disaster / Terrorism"
+                  name="Disaster / Terrorism"
+                  type="checkbox"
+                />
+                Disaster / Terrorism
+              </label>
+              <label>
+                <input
+                  data-testid="Domestic Violence"
+                  name="Domestic Violence"
+                  type="checkbox"
+                />
+                Domestic Violence
+              </label>
+              <label>
+                <input
+                  data-testid="Expressive Trauma Therapy"
+                  name="Expressive Trauma Therapy"
+                  type="checkbox"
+                />
+                Expressive Trauma Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Eye Movement Desensitization Reprocessing (EMDR) therapy"
+                  name="Eye Movement Desensitization Reprocessing (EMDR) therapy"
+                  type="checkbox"
+                />
+                Eye Movement Desensitization Reprocessing (EMDR) therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Grief and Loss counseling"
+                  name="Grief and Loss counseling"
+                  type="checkbox"
+                />
+                Grief and Loss counseling
+              </label>
+              <label>
+                <input
+                  data-testid="Hypnotherapy"
+                  name="Hypnotherapy"
+                  type="checkbox"
+                />
+                Hypnotherapy
+              </label>
+              <label>
+                <input
+                  data-testid="Life / Personal Coaching"
+                  name="Life / Personal Coaching"
+                  type="checkbox"
+                />
+                Life / Personal Coaching
+              </label>
+              <label>
+                <input
+                  data-testid="Memory Loss Therapy"
+                  name="Memory Loss Therapy"
+                  type="checkbox"
+                />
+                Memory Loss Therapy
+              </label>
+              <label>
+                <input
+                  data-testid="Pain management"
+                  name="Pain management"
+                  type="checkbox"
+                />
+                Pain management
+              </label>
+              <label>
+                <input
+                  data-testid="Parenting during trauma"
+                  name="Parenting during trauma"
+                  type="checkbox"
+                />
+                Parenting during trauma
+              </label>
+              <label>
+                <input
+                  data-testid="Pharmacotherapy (medication)"
+                  name="Pharmacotherapy (medication)"
+                  type="checkbox"
+                />
+                Pharmacotherapy (medication)
+              </label>
+              <label>
+                <input
+                  data-testid="Psychoeducation groups"
+                  name="Psychoeducation groups"
+                  type="checkbox"
+                />
+                Psychoeducation groups
+              </label>
+              <label>
+                <input
+                  data-testid="Psychoteraphy"
+                  name="Psychoteraphy"
+                  type="checkbox"
+                />
+                Psychoteraphy
+              </label>
+              <label>
+                <input
+                  data-testid="PTSD"
+                  name="PTSD"
+                  type="checkbox"
+                />
+                PTSD
+              </label>
+              <label>
+                <input
+                  data-testid="Sexual abuse"
+                  name="Sexual abuse"
+                  type="checkbox"
+                />
+                Sexual abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Sleeping disorders"
+                  name="Sleeping disorders"
+                  type="checkbox"
+                />
+                Sleeping disorders
+              </label>
+              <label>
+                <input
+                  data-testid="Stress management"
+                  name="Stress management"
+                  type="checkbox"
+                />
+                Stress management
+              </label>
+              <label>
+                <input
+                  data-testid="Substance abuse"
+                  name="Substance abuse"
+                  type="checkbox"
+                />
+                Substance abuse
+              </label>
+              <label>
+                <input
+                  data-testid="Suicide support"
+                  name="Suicide support"
+                  type="checkbox"
+                />
+                Suicide support
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma crisis services"
+                  name="Trauma crisis services"
+                  type="checkbox"
+                />
+                Trauma crisis services
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma group support"
+                  name="Trauma group support"
+                  type="checkbox"
+                />
+                Trauma group support
+              </label>
+              <label>
+                <input
+                  data-testid="Trauma-focused cognitive behavioral therapy"
+                  name="Trauma-focused cognitive behavioral therapy"
+                  type="checkbox"
+                />
+                Trauma-focused cognitive behavioral therapy
               </label>
             </div>
           </div>
@@ -1583,20 +1505,118 @@ exports[`the Sidebar component should match the snapshot 1`] = `
                 >
                   <input
                     class="c5"
-                    data-testid="text"
-                    name="text"
-                    placeholder="Search by name"
                     type="text"
+                    value=""
                   />
+                  <div
+                    class="c6"
+                  >
+                    <img
+                      src="Search.svg"
+                    />
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Collapsible"
+        >
+          <span
+            aria-controls="collapsible-content-1482363367071"
+            aria-disabled="false"
+            aria-expanded="false"
+            class="Collapsible__trigger is-closed"
+            id="collapsible-trigger-1482363367071"
+            role="button"
+          >
+            Location
+          </span>
+          <div
+            aria-labelledby="collapsible-trigger-1482363367071"
+            class="Collapsible__contentOuter"
+            id="collapsible-content-1482363367071"
+            role="region"
+            style="height: 0px; transition: height 400ms linear; overflow: hidden;"
+          >
+            <div
+              class="Collapsible__contentInner"
+            >
+              <div
+                class=" css-b62m3t-container"
+              >
+                <span
+                  class="css-1f43avz-a11yText-A11yText"
+                  id="react-select-3-live-region"
+                />
+                <span
+                  aria-atomic="false"
+                  aria-live="polite"
+                  aria-relevant="additions text"
+                  class="css-1f43avz-a11yText-A11yText"
+                />
                 <div
-                  class="c6"
+                  class=" css-1s2u09g-control"
                 >
-                  <img
-                    height="12.5"
-                    src="Search.svg"
-                    width="12.5"
-                  />
+                  <div
+                    class=" css-319lph-ValueContainer"
+                  >
+                    <div
+                      class=" css-14el2xx-placeholder"
+                      id="react-select-3-placeholder"
+                    >
+                      Select location
+                    </div>
+                    <div
+                      class=" css-6j8wv5-Input"
+                      data-value=""
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        aria-controls="react-select-3-listbox"
+                        aria-describedby="react-select-3-placeholder"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-owns="react-select-3-listbox"
+                        autocapitalize="none"
+                        autocomplete="off"
+                        autocorrect="off"
+                        class=""
+                        id="react-select-3-input"
+                        role="combobox"
+                        spellcheck="false"
+                        style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                        tabindex="0"
+                        type="text"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      class=" css-1okebmr-indicatorSeparator"
+                    />
+                    <div
+                      aria-hidden="true"
+                      class=" css-tlfecz-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

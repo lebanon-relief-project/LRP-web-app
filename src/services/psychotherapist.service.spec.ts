@@ -1,5 +1,6 @@
 import {
   samplePsychotherapistCloudantResponse,
+  samplePsychotherapistCloudantResponse2withOnlineLocation,
   samplePsychotherapistCloudantResponseDuplicated,
 } from "../types/sampleData/PsychotherapistData";
 import Container from "typedi";
@@ -274,12 +275,34 @@ describe("The psychotherapist service", () => {
       );
     });
 
+    xit("getPsychotherapists returns all therapists with location != online when filter is set to across-lebanon", async () => {
+      mockView.mockResolvedValue(
+        samplePsychotherapistCloudantResponse2withOnlineLocation
+      );
+
+      const filter = { location: ["across-lebanon"] };
+      const therapists = (
+        await psychotherapistService.getPsychotherapists(filter)
+      ).psychotherapists;
+
+      console.log(therapists);
+
+      // Check that all returned therapists have a location that is not 'online'
+      for (let therapist of therapists) {
+        expect(therapist.location).not.toBe("online");
+      }
+    });
+
     it("should call cloudant service with correct arguments when all filters are supplied", async () => {
       const mockFilter: FilterType = {
         languages: ["english"],
         services: ["service"],
         appointments: ["f2fSession"],
         patientgroups: ["patientGroup"],
+        price: ["price"],
+        legalpersonality: ["legalpersonality"],
+        name: ["name"],
+        location: ["location"],
       };
 
       await psychotherapistService.getPsychotherapists(mockFilter);
@@ -308,7 +331,35 @@ describe("The psychotherapist service", () => {
         { keys: ["patientGroup"], include_docs: true }
       );
 
-      expect(mockView).toHaveBeenCalledTimes(4);
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByPrice",
+        { keys: ["price"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByLegalPersonality",
+        { keys: ["legalpersonality"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByName",
+        {
+          startkey: "name",
+          endkey: "name" + "\ufff0",
+          include_docs: true,
+        }
+      );
+
+      expect(mockView).toHaveBeenCalledWith(
+        "therapistsDesignDoc",
+        "therapistsByLocation",
+        { keys: ["location"], include_docs: true }
+      );
+
+      expect(mockView).toHaveBeenCalledTimes(8);
     });
 
     it("should return empty array if the view has returned no rows matching our filter", async () => {

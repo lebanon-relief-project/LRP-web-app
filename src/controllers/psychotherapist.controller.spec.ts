@@ -9,8 +9,10 @@ import { PsychotherapistController } from "./psychotherapist.controller";
 Container.set("logger", new MockLogger());
 
 const mockGetPsychotherapists = jest.fn();
+const mockGePsychoTherapistsLocations = jest.fn();
 class MockPsychotherapistService {
   getPsychotherapists = mockGetPsychotherapists;
+  getTherapistsLocations = mockGePsychoTherapistsLocations;
 }
 
 Container.set(PsychotherapistService, new MockPsychotherapistService());
@@ -56,6 +58,32 @@ describe("The Psychotherapist Controller", () => {
 
     await expect(functionToThrow()).rejects.toThrow(
       new InternalServerError(`failed to get Psychotherapists`)
+    );
+  });
+
+  it("should call getTherapistsLocations function", async () => {
+    mockGePsychoTherapistsLocations.mockResolvedValue([
+      "location1",
+      "location2",
+    ]);
+
+    let response = await controller.getTherapistsLocations();
+
+    expect(mockGePsychoTherapistsLocations).toHaveBeenCalledTimes(1);
+
+    expect(response).toEqual(["location1", "location2"]);
+  });
+
+  it("should throw an error if getTherapistsLocations throws an error", async () => {
+    mockGePsychoTherapistsLocations.mockImplementation(() => {
+      throw new Error("Ugly error");
+    });
+
+    const functionToThrow = async () =>
+      await controller.getTherapistsLocations();
+
+    await expect(functionToThrow()).rejects.toThrow(
+      new InternalServerError(`failed to get locations`)
     );
   });
 });

@@ -1,83 +1,218 @@
 export const collapsiblesInitial = {
-  "Are you looking for a centre or individual?": {
-    NGO: false,
-    "Licensed Psychologist": false,
-  },
-  Location: {
+  legalpersonality: {
+    label: "Are you looking for a centre or individual?",
     options: [
-      { Akkar: false },
-      { Aley: false },
-      { Baabda: false },
-      { Baalbek: false },
-      { Batroun: false },
-      { Beirut: false },
-      { "Bint Jbeil": false },
-      { Bsharri: false },
-      { Byblos: false },
-      { Chouf: false },
-      { Hermel: false },
-      { Keserwan: false },
-      { "Miniyeh-Danniyeh": false },
-      { Nabatieh: false },
-      { Rashaya: false },
-      { Sidon: false },
-      { Tripoli: false },
-      { Tyre: false },
-      { "Western Beqaa": false },
-      { Zahlé: false },
-      { Zgharta: false },
-      { "Across Lebanon": false },
-      { Online: false },
+      {
+        label: "NGO",
+        value: "ngo",
+        selected: false,
+      },
+      {
+        label: "Licensed psychologist",
+        value: "licensed psychologist",
+        selected: false,
+      },
     ],
   },
-  "Who is this for?": {
-    "Toddlers and Preschoolers (0 to 6 years)": false,
-    "Children (6-12 years)": false,
-    "Adolescents and Young Adults (13-19 years)": false,
-    Adults: false,
-    "Elders (65+)": false,
-    Couples: false,
+  patientgroups: {
+    label: "Who is this for?",
+    options: [
+      {
+        label: "Toddlers / Preschoolers (0-6 years)",
+        value: "toddlers and preschoolers (0 to 6 years)",
+        selected: false,
+      },
+      {
+        label: "Children (6-12 years)",
+        value: "children (6-12 years)",
+        selected: false,
+      },
+      {
+        label: "Teenagers / Adolescents (13-19 years)",
+        value: "Adolescents and young adults (13-19 years)",
+        selected: false,
+      },
+      {
+        label: "Adults",
+        value: "adults",
+        selected: false,
+      },
+      {
+        label: "Elders (65+)",
+        value: "elders (65+)",
+        selected: false,
+      },
+      {
+        label: "Couples",
+        value: "couples",
+        selected: false,
+      },
+    ],
   },
-  "What can we help you with?": {
-    Anxiety: false,
-    "Childhood Trauma Therapy": false,
-    Depression: false,
-    "Disaster / Terrorism": false,
-    "Domestic Violence": false,
-    "Expressive Trauma Therapy": false,
-    "Expressive Trauma Therapy": false,
-    Hypnotherapy: false,
-    "Life / Personal Coaching": false,
-    "Life Transition & Adjustment Issues": false,
-    "Memory loss Therapy": false,
-    "Pain Management": false,
-    "Parenting during Trauma": false,
-    "Pharmacotherapy (medication)": false,
-    Psychoeducation: false,
-    PTSD: false,
-    "Sexual Abuse": false,
-    "Sleeping Disorders": false,
-    "Stress Management": false,
-    "Substance Abuse": false,
-    Suicide: false,
-    "Trauma Group support": false,
-    "Trauma-focused cognitive behavioral therapy": false,
+  languages: {
+    label: "Preferred languages",
+    options: [
+      {
+        label: "Arabic",
+        value: "arabic",
+        selected: false,
+      },
+      {
+        label: "French",
+        value: "french",
+        selected: false,
+      },
+      {
+        label: "English",
+        value: "english",
+        selected: false,
+      },
+      {
+        label: "Spanish",
+        value: "spanish",
+        selected: false,
+      },
+      {
+        label: "Sign language",
+        value: "sign language",
+        selected: false,
+      },
+    ],
   },
-  "Preferred languages": {
-    Arabic: false,
-    French: false,
-    English: false,
-    Spanish: false,
-    "Sign language": false,
+
+  services: {
+    label: "What can we help you with?",
+    options: [
+      {
+        label: "Anxiety disorders",
+        value: "anxiety disorders",
+        selected: false,
+      },
+      {
+        label: "Childhood trauma therapy",
+        value: "childhood trauma therapy",
+        selected: false,
+      },
+      {
+        label: "Depression",
+        value: "depression",
+        selected: false,
+      },
+      {
+        label: "Disaster / Terrorism",
+        value: "disaster/ terrorism",
+        selected: false,
+      },
+      {
+        label: "Domestic Violence",
+        value: "domestic violence",
+        selected: false,
+      },
+      {
+        label: "Expressive Trauma Therapy",
+        value: "Expressive trauma therapy (arts)",
+        selected: false,
+      },
+      {
+        label: "Eye Movement Desensitization Reprocessing (EMDR) therapy",
+        value: "eye movement desensitization reprocessing (emdr) therapy",
+        selected: false,
+      },
+
+      {
+        label: "Grief and Loss counseling",
+        value: "grief and loss counseling",
+        selected: false,
+      },
+      { label: "Hypnotherapy", value: "hypnotherapy", selected: false },
+      {
+        label: "Life / Personal Coaching",
+        value: "life / personal coaching",
+        selected: false,
+      },
+      {
+        label: "Memory Loss Therapy",
+        value: "memory loss therapy",
+        selected: false,
+      },
+      { label: "Pain management", value: "pain management", selected: false },
+      {
+        label: "Parenting during trauma",
+        value: "parenting during trauma",
+        selected: false,
+      },
+      {
+        label: "Pharmacotherapy (medication)",
+        value: "pharmacotherapy (medication)",
+        selected: false,
+      },
+      {
+        label: "Psychoeducation groups",
+        value: "psychoeducation groups",
+        selected: false,
+      },
+      { label: "Psychoteraphy", value: "psychoteraphy", selected: false },
+      { label: "PTSD", value: "ptsd", selected: false },
+      { label: "Sexual abuse", value: "sexual abuse", selected: false },
+      {
+        label: "Sleeping disorders",
+        value: "sleeping disorders",
+        selected: false,
+      },
+      {
+        label: "Stress management",
+        value: "stress management",
+        selected: false,
+      },
+      { label: "Substance abuse", value: "substance abuse", selected: false },
+      { label: "Suicide support", value: "suicide support", selected: false },
+      {
+        label: "Trauma crisis services",
+        value: "trauma crisis services",
+        selected: false,
+      },
+      {
+        label: "Trauma group support",
+        value: "trauma group support",
+        selected: false,
+      },
+      {
+        label: "Trauma-focused cognitive behavioral therapy",
+        value: "trauma-focused cognitive behavioral therapy",
+        selected: false,
+      },
+    ],
   },
-  Appointments: {
-    Virtual: false,
-    "In person": false,
+  appointments: {
+    label: "Appointments",
+    options: [
+      {
+        label: "Virtual",
+        value: "remotesession",
+        selected: false,
+      },
+      {
+        label: "In person",
+        value: "f2fsession",
+        selected: false,
+      },
+    ],
   },
-  Price: {
-    "Free service": false,
+  price: {
+    label: "Price",
+    options: [
+      {
+        label: "Free service",
+        value: "freeservice",
+      },
+    ],
   },
-  "Name of mental health professional or organization": {
-    text: "",
+  name: {
+    label: "Name of mental health professional or organization",
+    value: "",
+  },
+  location: {
+    label: "Location",
+    selectValue: "",
   },
 };

@@ -11,6 +11,34 @@ import { InternalServerError } from "routing-controllers";
 import { CLOUDANT_PSYCHOTHERAPISTS_DB_DEV } from "../statics";
 import { FilterType } from "src/types/Filter";
 
+var _ = require("lodash");
+
+async function getTherapistsByName(
+  name: string,
+  dbInstance: DocumentScope<Psychotherapist>
+) {
+  const psychotherapists = [];
+  console.log(name);
+
+  const viewResponse = await dbInstance.view(
+    "therapistsDesignDoc",
+    "therapistsByName",
+    {
+      startkey: name,
+      endkey: name + "\ufff0",
+      include_docs: true,
+    }
+  );
+
+  viewResponse.rows.map((row) => {
+    if (row.doc) {
+      psychotherapists.push(row.doc);
+    }
+  });
+
+  return psychotherapists;
+}
+
 async function getTherapistsFromView(
   viewName: string,
   keys: any = [],
@@ -52,6 +80,30 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
     }
   }
 
+  async getTherapistsLocations(): Promise<string[]> {
+    try {
+      const response = await this.psychotherapistDb.view(
+        "therapistsDesignDoc",
+        "therapistsByLocation",
+        {
+          include_docs: true,
+        }
+      );
+
+      const locations = response.rows.map((row) => {
+        return row.key;
+      });
+
+      // Use Set to remove duplicates and then convert it back to an array
+      const uniqueLocations = Array.from(new Set(locations));
+
+      return uniqueLocations;
+    } catch (error) {
+      console.log(error);
+      throw new InternalServerError(error.message);
+    }
+  }
+
   async getPsychotherapists(
     filter?: FilterType
   ): Promise<PsychotherapistResponse> {
@@ -59,7 +111,6 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
     this.logger.info(
       `getPsychotherapists(): Getting psychotherapists from cloudant`
     );
-
     this.logger.info(filter);
 
     response = { psychotherapists: [] };
@@ -74,7 +125,7 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         await Promise.all(
           dbResponse.rows.map(async (row) => {
             // use Promise.all() with map to wait for all async before moving on
-            if (row.doc) {
+            if (row.doc && row.doc._id !== "_design/therapistsDesignDoc") {
               response.psychotherapists.push(row.doc);
             }
           })
@@ -93,70 +144,62 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         appointments: "therapistsByAppointments",
         services: "therapistsByServices",
         patientgroups: "therapistsByPatientGroups",
+        price: "therapistsByPrice",
+        legalpersonality: "therapistsByLegalPersonality",
+        location: "therapistsByLocation",
       };
 
-      const allPsychotherapists = [];
+      const allPsychotherapists = {};
 
-      if (filter.patientgroups) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.patientgroups,
-            filter.patientgroups,
-            this.psychotherapistDb
-          );
+      for (const key in filter) {
+        if (key === "name") continue;
+        if (filter[key]) {
+          try {
+            let psychotherapists;
+            if (
+              key === "location" &&
+              Array.isArray(filter[key]) &&
+              filter[key].includes("across-lebanon")
+            ) {
+              console.log("Fetching all therapists");
+              // Fetch all location keys
+              const allLocations = await this.getTherapistsLocations();
+              // Remove 'online' from the location keys
+              const locationKeys = allLocations.filter(
+                (location) => location !== "online"
+              );
+              // Fetch therapists for all locations except 'online'
+              psychotherapists = await getTherapistsFromView(
+                availableViews[key],
+                locationKeys,
+                this.psychotherapistDb
+              );
+            } else {
+              psychotherapists = await getTherapistsFromView(
+                availableViews[key],
+                filter[key],
+                this.psychotherapistDb
+              );
+            }
 
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
+            allPsychotherapists[key] = psychotherapists;
+          } catch (error) {
+            this.logger.error(error);
+            throw new InternalServerError(
+              "getPsychotherapists: Failed to retrieve psychotherapists"
+            );
+          }
         }
       }
 
-      if (filter.appointments) {
+      if (filter.name) {
         try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.appointments,
-            filter.appointments,
+          let psychotherapists = await getTherapistsByName(
+            filter.name[0],
             this.psychotherapistDb
           );
 
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.services) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.services,
-            filter.services,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
-        } catch (error) {
-          this.logger.error(error);
-          throw new InternalServerError(
-            "getPsychotherapists: Failed to retrieve psychotherapists"
-          );
-        }
-      }
-
-      if (filter.languages) {
-        try {
-          let psychotherapists = await getTherapistsFromView(
-            availableViews.languages,
-            filter.languages,
-            this.psychotherapistDb
-          );
-
-          allPsychotherapists.push(...psychotherapists);
+          allPsychotherapists["name"] = psychotherapists;
         } catch (error) {
           this.logger.error(error);
           throw new InternalServerError(
@@ -165,13 +208,13 @@ export class PsychotherapistService implements PsychotherapistServiceApi {
         }
       }
 
-      const seen = new Set();
-
-      response.psychotherapists = allPsychotherapists.filter((el) => {
-        const duplicate = seen.has(el._id);
-        seen.add(el._id);
-        return !duplicate;
-      });
+      const keys = Object.keys(allPsychotherapists);
+      if (keys.length > 0) {
+        response.psychotherapists = _.intersectionWith(
+          ...keys.map((key) => allPsychotherapists[key]),
+          _.isEqual
+        );
+      }
 
       return response;
     }

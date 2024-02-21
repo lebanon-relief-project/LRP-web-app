@@ -4,7 +4,7 @@
     "baseUrl": "./",
     "outDir": "./dist",
     "noImplicitAny": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": false,
     "module": "commonjs",
     "moduleResolution": "node",
@@ -13,20 +13,14 @@
     "importHelpers": true,
     "target": "es6",
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es6",
-      "dom"
-    ]
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es6", "dom"]
   },
   "include": [
     "src/**/*",
-    "test/**/*", "web-app/styles", "web-app/src/styles/Devices.js"
+    "test/**/*",
+    "web-app/styles",
+    "web-app/src/styles/Devices.js"
   ],
-  "exclude": [
-    "node_modules",
-    "src/**/*.spec.ts"
-  ]
+  "exclude": ["node_modules", "src/**/*.spec.ts"]
 }

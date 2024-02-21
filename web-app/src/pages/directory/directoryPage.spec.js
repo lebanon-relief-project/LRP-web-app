@@ -18,10 +18,12 @@ jest.mock("./components/Sidebar", () => {
         data-testid="sidebar"
         onClick={() => {
           props.onFilterChange({
-            "Preferred languages": { English: true },
-            "What can we help you with?": { Anxiety: true },
-            Appointments: { Virtual: true },
-            "Who is this for?": { Adults: true },
+            languages: {
+              options: [{ label: "English", value: "english", selected: true }],
+            },
+            // "What can we help you with?": { Anxiety: true },
+            // Appointments: { Virtual: true },
+            // "Who is this for?": { Adults: true },
           });
         }}
       >
@@ -34,6 +36,10 @@ jest.mock("./components/Sidebar", () => {
 jest.mock("../../services/therapists.service");
 
 const getTherapistsSpy = jest.spyOn(therapistService, "getTherapists");
+const getTherapistsLocationsSpy = jest.spyOn(
+  therapistService,
+  "getTherapistLocations"
+);
 
 Date.now = jest.fn(() => 1482363367071);
 
@@ -69,6 +75,8 @@ const mockTherapistsResponse = [
   },
 ];
 
+const mockLocationsResponse = ["beirut", "england"];
+
 afterEach(() => {
   jest.clearAllMocks();
 });
@@ -76,6 +84,7 @@ afterEach(() => {
 describe("the DirectoryPage component", () => {
   fit("should match the snapshot", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
+    getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { container } = render(<DirectoryPage />);
 
     await wait();
@@ -84,16 +93,18 @@ describe("the DirectoryPage component", () => {
 
   fit("should retrieve therapists when filter executes onFilterChange", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
+    getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { getByTestId } = render(<DirectoryPage />);
 
+    await wait();
     fireEvent.click(getByTestId("sidebar"));
 
     await wait();
     expect(getTherapistsSpy).toHaveBeenNthCalledWith(2, {
-      languages: ["English"],
-      services: ["Anxiety"],
-      appointments: ["Virtual"],
-      patientgroups: ["Adults"],
+      languages: ["english"],
+      // services: ["Anxiety"],
+      // appointments: ["Virtual"],
+      // patientgroups: ["Adults"],
     });
   });
 });

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import Collapsible from "react-collapsible";
 import styled from "styled-components";
@@ -9,12 +9,104 @@ import SearchIcon from "../../../assets/images/Search.svg";
 import Select from "react-select";
 import { useEffect } from "react";
 
-const Sidebar = ({ onFilterChange }) => {
+const Sidebar = ({ onFilterChange, locations }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
 
   useEffect(() => {
     if (onFilterChange) onFilterChange(collapsibles);
   }, [collapsibles]);
+
+  const renderCollapsibles = useCallback(() => {
+    return Object.keys(collapsibles).map((key, index) => {
+      if (collapsibles[key].options) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            {collapsibles[key].options.map((option, index2) => {
+              return (
+                <label key={`${option.label}_${index}`}>
+                  <input
+                    data-testid={option.label}
+                    name={`${option.label}`}
+                    type="checkbox"
+                    checked={option.selected}
+                    onChange={() => {
+                      let collapsiblesCopy = { ...collapsibles };
+                      collapsiblesCopy[key].options[index2].selected =
+                        !collapsiblesCopy[key].options[index2].selected;
+                      setCollapsibles({ ...collapsiblesCopy });
+                    }}
+                  />
+                  {option.label}
+                </label>
+              );
+            })}
+          </Collapsible>
+        );
+      } else if (collapsibles[key].value !== undefined) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            <SearchInputContainer>
+              <SearchBox>
+                <SearchInput
+                  type="text"
+                  value={collapsibles[key].value}
+                  onChange={(e) => {
+                    let collapsiblesCopy = { ...collapsibles };
+                    collapsiblesCopy[key].value = e.target.value;
+                    setCollapsibles({ ...collapsiblesCopy });
+                  }}
+                />
+                <SearchIconContainer>
+                  <img src={SearchIcon} />
+                </SearchIconContainer>
+              </SearchBox>
+            </SearchInputContainer>
+          </Collapsible>
+        );
+      } else if (collapsibles[key].selectValue !== undefined) {
+        return (
+          <Collapsible
+            key={`${key}_${index}`}
+            trigger={collapsibles[key].label}
+          >
+            <Select
+              isSearchable={true}
+              isClearable={true}
+              placeholder="Select location"
+              onChange={(e) => {
+                if (e === null) {
+                  let collapsiblesCopy = { ...collapsibles };
+                  collapsiblesCopy[key].selectValue = "";
+                  setCollapsibles({ ...collapsiblesCopy });
+                  return;
+                }
+                let collapsiblesCopy = { ...collapsibles };
+                collapsiblesCopy[key].selectValue = e.value;
+                setCollapsibles({ ...collapsiblesCopy });
+              }}
+              options={locations.map((location) => {
+                return {
+                  value: location,
+                  label: location
+                    .split("-")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" "),
+                };
+              })}
+            />
+            {/* </div> */}
+          </Collapsible>
+        );
+      }
+      return null;
+    });
+  }, [collapsibles, setCollapsibles]);
 
   return (
     <>
@@ -22,70 +114,7 @@ const Sidebar = ({ onFilterChange }) => {
         <SideBarWrapper>
           <TitleWrapper>Filters</TitleWrapper>
           {/* bunch of collapsibles */}
-          <form>
-            {Object.keys(collapsibles).map((key, index) => {
-              return (
-                <Collapsible key={`${key}_${index}`} trigger={key}>
-                  {Object.keys(collapsibles[key]).map((value, index2) => {
-                    if (value === "options") {
-                      return (
-                        <div key={`${value}-${index2}`}>
-                          <Select
-                            isSearchable={true}
-                            isClearable={true}
-                            placeholder="Select location"
-                            options={collapsibles[key][value].map((item) => {
-                              let val = Object.keys(item)[0];
-                              return { value: val, label: val };
-                            })}
-                          />
-                        </div>
-                      );
-                    }
-                    if (value === "text") {
-                      return (
-                        <SearchBox key={`${value}_${index}`}>
-                          <SearchInputContainer>
-                            <SearchInput
-                              data-testid={value}
-                              name={`${value}`}
-                              type="text"
-                              placeholder="Search by name"
-                              onChange={(evt) => {
-                                let collapsiblesCopy = { ...collapsibles };
-                                collapsiblesCopy[key][value] = evt.target.value;
-                                setCollapsibles({ ...collapsiblesCopy });
-                              }}
-                            />
-                          </SearchInputContainer>
-                          <SearchIconContainer>
-                            <img width={12.5} height={12.5} src={SearchIcon} />
-                          </SearchIconContainer>
-                        </SearchBox>
-                      );
-                    }
-                    return (
-                      <label key={`${value}_${index}`}>
-                        <input
-                          data-testid={value}
-                          name={`${value}`}
-                          type="checkbox"
-                          checked={collapsibles[key][value]}
-                          onChange={() => {
-                            let collapsiblesCopy = { ...collapsibles };
-                            collapsiblesCopy[key][value] =
-                              !collapsiblesCopy[key][value];
-                            setCollapsibles({ ...collapsiblesCopy });
-                          }}
-                        />
-                        {value}
-                      </label>
-                    );
-                  })}
-                </Collapsible>
-              );
-            })}
-          </form>
+          <form>{renderCollapsibles()}</form>
         </SideBarWrapper>
       </StyledSideBar>
     </>
@@ -105,6 +134,8 @@ const SearchInputContainer = styled.div`
 
 const SearchInput = styled.input`
   fontsize: 14px;
+  height: 100%;
+  outline: none;
   width: 100%;
   margin: 0;
   border: none;
