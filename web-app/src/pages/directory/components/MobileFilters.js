@@ -9,12 +9,8 @@ import SearchIcon from "../../../assets/images/Search.svg";
 import Select from "react-select";
 import { useEffect } from "react";
 
-import { useMediaQuery } from "react-responsive";
-
 const Sidebar = ({ onFilterChange, locations }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
-
-  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
     if (onFilterChange) onFilterChange(collapsibles);
@@ -112,24 +108,10 @@ const Sidebar = ({ onFilterChange, locations }) => {
     });
   }, [collapsibles, setCollapsibles]);
 
-  if (isTabletOrMobile) {
-    return (
-      <>
-        <StyledSideBar>
-          <SideBarWrapper>
-            {/* bunch of collapsibles */}
-            <form>{renderCollapsibles()}</form>
-          </SideBarWrapper>
-        </StyledSideBar>
-      </>
-    );
-  }
-
   return (
     <>
       <StyledSideBar>
         <SideBarWrapper>
-          <TitleWrapper>Filters</TitleWrapper>
           {/* bunch of collapsibles */}
           <form>{renderCollapsibles()}</form>
         </SideBarWrapper>
@@ -238,31 +220,17 @@ const SideBarWrapper = styled.div`
   }
 `;
 
-const TitleWrapper = styled.div`
-  background-color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -16px;
-  width: auto;
-  align-self: center;
-  font-size: 24px;
-  font-family: Playfair Display;
-  font-weight: 700;
-  height: auto;
-  line-height: 32px;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-`;
-
 const StyledSideBar = styled.div`
   .css-26l3qy-menu {
     position: static;
   }
-
+  grid-column: col-start / span 4;
   background-color: white;
+
+  @media (max-width: ${devices.ipad}) {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
 `;
 
 export default Sidebar;

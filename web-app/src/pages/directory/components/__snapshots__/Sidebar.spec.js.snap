@@ -962,19 +962,11 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 }
 
 .c0 {
-  grid-column: col-start / span 4;
   background-color: white;
 }
 
 .c0 .css-26l3qy-menu {
   position: static;
-}
-
-@media (max-width:768px) {
-  .c0 {
-    grid-row: 1;
-    grid-column: col-start 1 / span 12;
-  }
 }
 
 <div>
