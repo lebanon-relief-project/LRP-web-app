@@ -75,7 +75,6 @@ const TherapistCard = (props) => {
           style={{
             display: "flex",
             flex: 1,
-
             borderBottom: "1px solid #003A8C",
             paddingBottom: 20,
             // backgroundColor: "green",
@@ -88,8 +87,15 @@ const TherapistCard = (props) => {
               display: "flex",
               flexDirection: "column",
               width: "100%",
+              gap: 8,
             }}
           >
+            <img
+              src={props.avatar}
+              width={110}
+              style={{ objectFit: "contain", alignSelf: "center" }}
+              alt="therapist_icon"
+            />
             <h3>{props.name}</h3>
             <div
               style={{
@@ -154,12 +160,6 @@ const TherapistCard = (props) => {
               </div>
             </div>
           </div>
-          <img
-            src={props.avatar}
-            width={110}
-            style={{ objectFit: "contain", alignSelf: "flex-start" }}
-            alt="therapist_icon"
-          />
         </div>
         <div
           style={{
