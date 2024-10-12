@@ -526,7 +526,6 @@ const DirectoryPage = () => {
 };
 
 const FiltersContainer = styled.div`
-  background-color: blue;
   grid-column: col-start / span 4;
 
   @media (max-width: ${devices.ipad}) {

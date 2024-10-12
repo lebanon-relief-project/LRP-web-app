@@ -2,7 +2,6 @@
 
 exports[`the DirectoryPage component should match the snapshot 1`] = `
 .c2 {
-  background-color: blue;
   grid-column: col-start / span 4;
 }
 

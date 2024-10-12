@@ -10,9 +10,11 @@ import Select from "react-select";
 import { useEffect } from "react";
 
 import { useMediaQuery } from "react-responsive";
+import { ReactComponent as CloseButton } from "../../../assets/images/CloseButtonBlue.svg";
 
 const Sidebar = ({ onFilterChange, locations }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
+  const [isOpened, setIsOpened] = useState(false);
 
   const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
 
@@ -115,7 +117,56 @@ const Sidebar = ({ onFilterChange, locations }) => {
   if (isTabletOrMobile) {
     return (
       <>
-        <StyledSideBar>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            paddingLeft: 18,
+            paddingRight: 18,
+          }}
+        >
+          <div>Results</div>
+          <button
+            style={{
+              // position: "fixed",
+              // top: "20px",
+              // left: "20px",
+              // zIndex: 10001,
+              backgroundColor: "#002766",
+              color: "white",
+              border: "none",
+              padding: "10px 20px",
+              cursor: "pointer",
+              borderRadius: "5px",
+            }}
+            onClick={() => setIsOpened(true)}
+          >
+            Open Sidebar
+          </button>
+        </div>
+
+        <StyledSideBar isOpened={isOpened}>
+          <Header>
+            <CloseButton
+              style={{ width: "30px", height: "30px", cursor: "pointer" }}
+              onClick={() => {
+                setIsOpened(false);
+              }}
+            />
+            <div
+              style={{
+                textDecoration: "underline",
+                cursor: "pointer",
+                fontFamily: "Raleway",
+                fontWeight: 700,
+                fontSize: 16,
+                color: "#002766",
+              }}
+            >
+              Clear filters
+            </div>
+          </Header>
           <SideBarWrapper>
             {/* bunch of collapsibles */}
             <form>{renderCollapsibles()}</form>
@@ -137,6 +188,13 @@ const Sidebar = ({ onFilterChange, locations }) => {
     </>
   );
 };
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 18px;
+`;
 
 const SearchBox = styled.div`
   display: flex;
@@ -174,6 +232,12 @@ const SideBarWrapper = styled.div`
   flex-direction: column;
   border: 1px solid #003a8c;
   position: relative;
+
+  @media (max-width: ${devices.ipad}) {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    padding: 18px;
+  }
 
   ${"" /* possibly move this to the contentInner */}
   .Collapsible {
@@ -263,6 +327,15 @@ const StyledSideBar = styled.div`
   }
 
   background-color: white;
+
+  @media (max-width: ${devices.ipad}) {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: ${(props) => (props.isOpened ? "0" : "-200%")};
+    transition: left 1s ease-in-out;
+  }
 `;
 
 export default Sidebar;
