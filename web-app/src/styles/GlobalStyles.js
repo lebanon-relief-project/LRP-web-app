@@ -47,3 +47,11 @@ export const FlexContainer = styled.div`
     flex-direction: column;
   }
 `;
+
+export const PrimaryButton = styled.button`
+  background: ${colours.darkBlue};
+  border-radius: 2px;
+  color: ${colours.white};
+  font-family: Raleway;
+  font-weight: 700;
+`;

@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { ReactComponent as CloseButton } from "../../../assets/images/CloseButtonBlue.svg";
 
-const Sidebar = ({ onFilterChange, locations }) => {
+const Sidebar = ({ onFilterChange, locations, resultsCount }) => {
   const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
   const [isOpened, setIsOpened] = useState(false);
 
@@ -126,7 +126,17 @@ const Sidebar = ({ onFilterChange, locations }) => {
             paddingRight: 18,
           }}
         >
-          <div>Results</div>
+          <div
+            style={{
+              fontFamily: "Playfair Display",
+              fontWeight: 700,
+              fontSize: 24,
+            }}
+          >
+            {resultsCount !== undefined
+              ? `${resultsCount} results`
+              : "0 results"}
+          </div>
           <button
             style={{
               // position: "fixed",
@@ -142,7 +152,7 @@ const Sidebar = ({ onFilterChange, locations }) => {
             }}
             onClick={() => setIsOpened(true)}
           >
-            Open Sidebar
+            Filters
           </button>
         </div>
 
@@ -334,7 +344,7 @@ const StyledSideBar = styled.div`
     top: 0;
     bottom: 0;
     left: ${(props) => (props.isOpened ? "0" : "-200%")};
-    transition: left 1s ease-in-out;
+    transition: left 0.75s ease-in-out;
   }
 `;
 

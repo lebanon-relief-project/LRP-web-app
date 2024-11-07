@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import styled from "styled-components";
 
 import Banner from "./components/Banner";
@@ -429,6 +429,8 @@ const DirectoryPage = () => {
   const [therapists, setTherapists] = useState([]);
   const [therapistLocations, setTherapistLocations] = useState([]);
 
+  const therapistsResultsCount = useMemo(() => therapists.length, [therapists]);
+
   const retrieveTherapists = async (filter) => {
     if (filter) {
       let adaptedFilter = {};
@@ -509,6 +511,7 @@ const DirectoryPage = () => {
           {therapistLocations.length > 0 && (
             <FiltersContainer>
               <Sidebar
+                resultsCount={therapistsResultsCount}
                 onFilterChange={(filter) => {
                   retrieveTherapists(filter);
                 }}
