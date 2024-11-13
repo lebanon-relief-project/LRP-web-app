@@ -22,6 +22,17 @@ const Sidebar = ({ onFilterChange, locations, resultsCount }) => {
     if (onFilterChange) onFilterChange(collapsibles);
   }, [collapsibles]);
 
+  // Add this effect to handle body scroll
+  useEffect(() => {
+    if (!isTabletOrMobile) return;
+
+    if (isOpened) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpened]);
+
   const renderCollapsibles = useCallback(() => {
     return Object.keys(collapsibles).map((key, index) => {
       if (collapsibles[key].options) {
@@ -345,6 +356,7 @@ const StyledSideBar = styled.div`
     bottom: 0;
     left: ${(props) => (props.isOpened ? "0" : "-200%")};
     transition: left 0.75s ease-in-out;
+    overflow: scroll;
   }
 `;
 

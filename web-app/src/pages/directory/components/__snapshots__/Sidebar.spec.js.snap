@@ -986,6 +986,7 @@ exports[`the Sidebar component should match the snapshot 1`] = `
     left: -200%;
     -webkit-transition: left 0.75s ease-in-out;
     transition: left 0.75s ease-in-out;
+    overflow: scroll;
   }
 }
 
