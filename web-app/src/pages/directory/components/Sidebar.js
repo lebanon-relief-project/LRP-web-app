@@ -11,16 +11,27 @@ import { useEffect } from "react";
 
 import { useMediaQuery } from "react-responsive";
 import { ReactComponent as CloseButton } from "../../../assets/images/CloseButtonBlue.svg";
+import cloneDeep from "lodash/cloneDeep";
 
 const Sidebar = ({ onFilterChange, locations, resultsCount }) => {
-  const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
+  const [collapsibles, setCollapsibles] = useState(
+    cloneDeep(collapsiblesInitial)
+  );
   const [isOpened, setIsOpened] = useState(false);
 
   const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
+    console.log("collapsibles", collapsibles);
     if (onFilterChange) onFilterChange(collapsibles);
   }, [collapsibles]);
+
+  const resetFilters = (evt) => {
+    console.log("resetting filters");
+    evt.preventDefault();
+    console.log(collapsiblesInitial);
+    setCollapsibles(cloneDeep(collapsiblesInitial));
+  };
 
   // Add this effect to handle body scroll
   useEffect(() => {
@@ -184,6 +195,7 @@ const Sidebar = ({ onFilterChange, locations, resultsCount }) => {
                 fontSize: 16,
                 color: "#002766",
               }}
+              onClick={resetFilters}
             >
               Clear filters
             </div>
@@ -357,6 +369,7 @@ const StyledSideBar = styled.div`
     left: ${(props) => (props.isOpened ? "0" : "-200%")};
     transition: left 0.75s ease-in-out;
     overflow: scroll;
+    width: 100%;
   }
 `;
 
