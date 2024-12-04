@@ -38,7 +38,7 @@
     "lodash": "^4.17.21",
     "multer": "^1.4.2",
     "opentracing": "^0.14.4",
-    "pino": "^6.0.0",
+    "pino": "^9.5.0",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.10.1",
     "rxjs": "^6.5.2",
