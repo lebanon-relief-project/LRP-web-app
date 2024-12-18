@@ -9,12 +9,40 @@ import SearchIcon from "../../../assets/images/Search.svg";
 import Select from "react-select";
 import { useEffect } from "react";
 
-const Sidebar = ({ onFilterChange, locations }) => {
-  const [collapsibles, setCollapsibles] = useState(collapsiblesInitial);
+import { useMediaQuery } from "react-responsive";
+import { ReactComponent as CloseButton } from "../../../assets/images/CloseButtonBlue.svg";
+import cloneDeep from "lodash/cloneDeep";
+
+const Sidebar = ({ onFilterChange, locations, resultsCount }) => {
+  const [collapsibles, setCollapsibles] = useState(
+    cloneDeep(collapsiblesInitial)
+  );
+  const [isOpened, setIsOpened] = useState(false);
+
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
+    console.log("collapsibles", collapsibles);
     if (onFilterChange) onFilterChange(collapsibles);
   }, [collapsibles]);
+
+  const resetFilters = (evt) => {
+    console.log("resetting filters");
+    evt.preventDefault();
+    console.log(collapsiblesInitial);
+    setCollapsibles(cloneDeep(collapsiblesInitial));
+  };
+
+  // Add this effect to handle body scroll
+  useEffect(() => {
+    if (!isTabletOrMobile) return;
+
+    if (isOpened) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpened]);
 
   const renderCollapsibles = useCallback(() => {
     return Object.keys(collapsibles).map((key, index) => {
@@ -108,6 +136,79 @@ const Sidebar = ({ onFilterChange, locations }) => {
     });
   }, [collapsibles, setCollapsibles]);
 
+  if (isTabletOrMobile) {
+    return (
+      <>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            paddingLeft: 18,
+            paddingRight: 18,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Playfair Display",
+              fontWeight: 700,
+              fontSize: 24,
+            }}
+          >
+            {resultsCount !== undefined
+              ? `${resultsCount} results`
+              : "0 results"}
+          </div>
+          <button
+            style={{
+              // position: "fixed",
+              // top: "20px",
+              // left: "20px",
+              // zIndex: 10001,
+              backgroundColor: "#002766",
+              color: "white",
+              border: "none",
+              padding: "10px 20px",
+              cursor: "pointer",
+              borderRadius: "5px",
+            }}
+            onClick={() => setIsOpened(true)}
+          >
+            Filters
+          </button>
+        </div>
+
+        <StyledSideBar isOpened={isOpened}>
+          <Header>
+            <CloseButton
+              style={{ width: "30px", height: "30px", cursor: "pointer" }}
+              onClick={() => {
+                setIsOpened(false);
+              }}
+            />
+            <div
+              style={{
+                textDecoration: "underline",
+                cursor: "pointer",
+                fontFamily: "Raleway",
+                fontWeight: 700,
+                fontSize: 16,
+                color: "#002766",
+              }}
+              onClick={resetFilters}
+            >
+              Clear filters
+            </div>
+          </Header>
+          <SideBarWrapper>
+            {/* bunch of collapsibles */}
+            <form>{renderCollapsibles()}</form>
+          </SideBarWrapper>
+        </StyledSideBar>
+      </>
+    );
+  }
+
   return (
     <>
       <StyledSideBar>
@@ -120,6 +221,13 @@ const Sidebar = ({ onFilterChange, locations }) => {
     </>
   );
 };
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 18px;
+`;
 
 const SearchBox = styled.div`
   display: flex;
@@ -157,6 +265,12 @@ const SideBarWrapper = styled.div`
   flex-direction: column;
   border: 1px solid #003a8c;
   position: relative;
+
+  @media (max-width: ${devices.ipad}) {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    padding: 18px;
+  }
 
   ${"" /* possibly move this to the contentInner */}
   .Collapsible {
@@ -244,12 +358,18 @@ const StyledSideBar = styled.div`
   .css-26l3qy-menu {
     position: static;
   }
-  grid-column: col-start / span 4;
+
   background-color: white;
 
   @media (max-width: ${devices.ipad}) {
-    grid-row: 1;
-    grid-column: col-start 1 / span 12;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: ${(props) => (props.isOpened ? "0" : "-200%")};
+    transition: left 0.75s ease-in-out;
+    overflow: scroll;
+    width: 100%;
   }
 `;
 

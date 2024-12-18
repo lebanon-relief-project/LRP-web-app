@@ -82,7 +82,7 @@ afterEach(() => {
 });
 
 describe("the DirectoryPage component", () => {
-  fit("should match the snapshot", async () => {
+  it("should match the snapshot", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
     getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { container } = render(<DirectoryPage />);
@@ -91,7 +91,7 @@ describe("the DirectoryPage component", () => {
     expect(container).toMatchSnapshot();
   });
 
-  fit("should retrieve therapists when filter executes onFilterChange", async () => {
+  it("should retrieve therapists when filter executes onFilterChange", async () => {
     getTherapistsSpy.mockResolvedValue(mockTherapistsResponse);
     getTherapistsLocationsSpy.mockResolvedValue(mockLocationsResponse);
     const { getByTestId } = render(<DirectoryPage />);

@@ -962,7 +962,6 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 }
 
 .c0 {
-  grid-column: col-start / span 4;
   background-color: white;
 }
 
@@ -971,9 +970,24 @@ exports[`the Sidebar component should match the snapshot 1`] = `
 }
 
 @media (max-width:768px) {
+  .c1 {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    padding: 18px;
+  }
+}
+
+@media (max-width:768px) {
   .c0 {
-    grid-row: 1;
-    grid-column: col-start 1 / span 12;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: -200%;
+    -webkit-transition: left 0.75s ease-in-out;
+    transition: left 0.75s ease-in-out;
+    overflow: scroll;
+    width: 100%;
   }
 }
 

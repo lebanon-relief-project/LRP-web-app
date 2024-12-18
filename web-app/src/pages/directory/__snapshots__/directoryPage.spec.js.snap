@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the DirectoryPage component should match the snapshot 1`] = `
+.c2 {
+  grid-column: col-start / span 4;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,7 +20,7 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
   flex-direction: column;
 }
 
-.c3 {
+.c4 {
   background: #fff2e8;
   border-radius: 6px;
   padding: 10px 3px;
@@ -40,31 +44,31 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
   padding-top: 40px;
 }
 
-.c2 {
+.c3 {
   grid-column: col-start 5 / span 8;
 }
 
-.c2 div {
+.c3 div {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.c2 h3 {
+.c3 h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   margin: 0px;
 }
 
-.c2 h4 {
+.c3 h4 {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
   margin: 0px;
 }
 
-.c2 p {
+.c3 p {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
@@ -75,8 +79,17 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
 
 @media (max-width:768px) {
   .c2 {
+    grid-row: 1;
+    grid-column: col-start 1 / span 12;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
     grid-row: 2;
     grid-column: col-start 1 / span 12;
+    margin-left: 18px;
+    margin-right: 18px;
   }
 }
 
@@ -91,12 +104,16 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
       class="c1"
     >
       <div
-        data-testid="sidebar"
+        class="c2"
       >
-        Sidebar
+        <div
+          data-testid="sidebar"
+        >
+          Sidebar
+        </div>
       </div>
       <div
-        class="c2"
+        class="c3"
       >
         <div
           style="display: flex; flex-direction: column; row-gap: 24px;"
@@ -233,7 +250,7 @@ exports[`the DirectoryPage component should match the snapshot 1`] = `
                     style="display: flex; flex-flow: wrap; gap: 8px;"
                   >
                     <div
-                      class="c3"
+                      class="c4"
                     >
                       string
                     </div>
