@@ -22,10 +22,7 @@ export const ActionSection = () => {
               ],
               actionButton: {
                 title: "Reach out",
-                path: "#",
-                action: () => {
-                  setReachOutModalVisible(true);
-                },
+                path: Routes.DIRECTORY,
               },
             },
             {

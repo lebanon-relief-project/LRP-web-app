@@ -53,9 +53,8 @@ const HelpSection = () => {
                 marginTop: 38,
               },
               actionButton: {
-                title: "Coming soon",
-                path: "/",
-                disabled: true,
+                title: "Reach out",
+                path: Routes.DIRECTORY,
               },
             },
           ]}

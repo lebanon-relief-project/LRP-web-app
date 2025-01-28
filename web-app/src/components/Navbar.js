@@ -23,7 +23,12 @@ const Navbar = ({ open }) => {
             </StyledLi>
             <StyledLi>
               <StyledLink exact to={Routes.HELP}>
-                I’m looking for help
+                Self help
+              </StyledLink>
+            </StyledLi>
+            <StyledLi>
+              <StyledLink exact to={Routes.DIRECTORY}>
+                Talk to someone
               </StyledLink>
             </StyledLi>
             <StyledLi>

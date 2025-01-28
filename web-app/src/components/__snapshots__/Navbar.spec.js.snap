@@ -168,6 +168,13 @@ exports[`the Navbar component should match the snapshot when open is false 1`] =
           class="c3"
         >
           <div
+            data-testid="navlink_/directory"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
             data-testid="navlink_/about"
           />
         </li>
@@ -340,6 +347,13 @@ exports[`the Navbar component should match the snapshot when open is true 1`] = 
         >
           <div
             data-testid="navlink_/help"
+          />
+        </li>
+        <li
+          class="c3"
+        >
+          <div
+            data-testid="navlink_/directory"
           />
         </li>
         <li
